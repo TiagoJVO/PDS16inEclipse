@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<?eclipse version="3.0"?>
+<plugin>
+	<extension point="org.eclipse.emf.ecore.generated_package">
+		<package 
+			uri = "http://www.pds16.org/Pds16asm"
+			class = "org.pds16.pds16asm.Pds16asmPackage"
+			genModel = "model/generated/Pds16asm.genmodel" />
+	</extension>
+</plugin>

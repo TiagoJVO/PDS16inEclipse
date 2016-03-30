@@ -1,0 +1,9 @@
+INDEX VERSION 1.127+D:\PDS16ASM\.metadata\.plugins\org.eclipse.jdt.core
+3900774921.index
+3160942113.index
+1364926667.index
+3521529020.index
+3229784293.index
+311206034.index
+3830311761.index
+2163154709.index

@@ -1,0 +1,33 @@
+grammar org.pds16.Pds16asm with org.eclipse.xtext.common.Terminals
+
+generate pds16asm "http://www.pds16.org/Pds16asm"
+
+PDS16ASM:
+	instuctions+=Instructions*;
+
+Instructions:
+	InstructionsLDI | InstructionsLD2 | COMMENT ;
+
+InstructionsLDI: /*LDI ex: LDI r1,#0x2f */
+	'LDI' register=Registers ',' immediate8=HexaDecimal ';' ;
+
+InstructionsLD2: /*LD RD,[RBX,#idx3]*/
+	'LD' register=Registers ',' indexed=Indexed ';';
+
+Indexed: //Ou seja podemos aproveitar isto tanto para LD e ST!!
+	'[' reg=Registers ',' imediate8=HexaDecimal ']' ;
+
+HexaDecimal: 
+	'#' number=HEX;
+
+Registers:
+	R1 | R2;
+
+R1:
+	value='R1';
+R2:
+	value='R2';
+	
+terminal HEX : '0' ('x'|'X')(('0'..'9')|('a'..'f')|('A'..'F'))+ ;
+
+terminal COMMENT : ';' -> '\n';
