@@ -24,40 +24,85 @@ public interface Pds16asmFactory extends EFactory
   Pds16asmFactory eINSTANCE = org.pds16.pds16asm.impl.Pds16asmFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>Model</em>'.
+   * Returns a new object of class '<em>PDS16ASM</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Model</em>'.
+   * @return a new object of class '<em>PDS16ASM</em>'.
    * @generated
    */
-  Model createModel();
+  PDS16ASM createPDS16ASM();
 
   /**
-   * Returns a new object of class '<em>Operations</em>'.
+   * Returns a new object of class '<em>Instructions</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Operations</em>'.
+   * @return a new object of class '<em>Instructions</em>'.
    * @generated
    */
-  Operations createOperations();
+  Instructions createInstructions();
 
   /**
-   * Returns a new object of class '<em>Operation LDI</em>'.
+   * Returns a new object of class '<em>Load</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Operation LDI</em>'.
+   * @return a new object of class '<em>Load</em>'.
    * @generated
    */
-  OperationLDI createOperationLDI();
+  Load createLoad();
 
   /**
-   * Returns a new object of class '<em>Operation LD2</em>'.
+   * Returns a new object of class '<em>Ld Immediate</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Operation LD2</em>'.
+   * @return a new object of class '<em>Ld Immediate</em>'.
    * @generated
    */
-  OperationLD2 createOperationLD2();
+  LdImmediate createLdImmediate();
+
+  /**
+   * Returns a new object of class '<em>Ld Direct</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Ld Direct</em>'.
+   * @generated
+   */
+  LdDirect createLdDirect();
+
+  /**
+   * Returns a new object of class '<em>Ld Indexed</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Ld Indexed</em>'.
+   * @generated
+   */
+  LdIndexed createLdIndexed();
+
+  /**
+   * Returns a new object of class '<em>Ld Based Indexed</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Ld Based Indexed</em>'.
+   * @generated
+   */
+  LdBasedIndexed createLdBasedIndexed();
+
+  /**
+   * Returns a new object of class '<em>Immediate</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Immediate</em>'.
+   * @generated
+   */
+  Immediate createImmediate();
+
+  /**
+   * Returns a new object of class '<em>Direct</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Direct</em>'.
+   * @generated
+   */
+  Direct createDirect();
 
   /**
    * Returns a new object of class '<em>Indexed</em>'.
@@ -69,6 +114,15 @@ public interface Pds16asmFactory extends EFactory
   Indexed createIndexed();
 
   /**
+   * Returns a new object of class '<em>Based Indexed</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Based Indexed</em>'.
+   * @generated
+   */
+  BasedIndexed createBasedIndexed();
+
+  /**
    * Returns a new object of class '<em>Hexa Decimal</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -78,6 +132,15 @@ public interface Pds16asmFactory extends EFactory
   HexaDecimal createHexaDecimal();
 
   /**
+   * Returns a new object of class '<em>Comment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Comment</em>'.
+   * @generated
+   */
+  Comment createComment();
+
+  /**
    * Returns a new object of class '<em>Registers</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -85,24 +148,6 @@ public interface Pds16asmFactory extends EFactory
    * @generated
    */
   Registers createRegisters();
-
-  /**
-   * Returns a new object of class '<em>R1</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>R1</em>'.
-   * @generated
-   */
-  R1 createR1();
-
-  /**
-   * Returns a new object of class '<em>R2</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>R2</em>'.
-   * @generated
-   */
-  R2 createR2();
 
   /**
    * Returns the package supported by this factory.

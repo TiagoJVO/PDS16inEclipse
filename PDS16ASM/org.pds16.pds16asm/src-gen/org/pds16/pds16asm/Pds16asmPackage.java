@@ -58,42 +58,156 @@ public interface Pds16asmPackage extends EPackage
   Pds16asmPackage eINSTANCE = org.pds16.pds16asm.impl.Pds16asmPackageImpl.init();
 
   /**
-   * The meta object id for the '{@link org.pds16.pds16asm.impl.ModelImpl <em>Model</em>}' class.
+   * The meta object id for the '{@link org.pds16.pds16asm.impl.PDS16ASMImpl <em>PDS16ASM</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.pds16.pds16asm.impl.ModelImpl
-   * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getModel()
+   * @see org.pds16.pds16asm.impl.PDS16ASMImpl
+   * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getPDS16ASM()
    * @generated
    */
-  int MODEL = 0;
+  int PDS16ASM = 0;
 
   /**
-   * The feature id for the '<em><b>Operations</b></em>' containment reference list.
+   * The feature id for the '<em><b>Instuctions</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL__OPERATIONS = 0;
+  int PDS16ASM__INSTUCTIONS = 0;
 
   /**
-   * The number of structural features of the '<em>Model</em>' class.
+   * The number of structural features of the '<em>PDS16ASM</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL_FEATURE_COUNT = 1;
+  int PDS16ASM_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.pds16.pds16asm.impl.OperationsImpl <em>Operations</em>}' class.
+   * The meta object id for the '{@link org.pds16.pds16asm.impl.InstructionsImpl <em>Instructions</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.pds16.pds16asm.impl.OperationsImpl
-   * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getOperations()
+   * @see org.pds16.pds16asm.impl.InstructionsImpl
+   * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getInstructions()
    * @generated
    */
-  int OPERATIONS = 1;
+  int INSTRUCTIONS = 1;
+
+  /**
+   * The number of structural features of the '<em>Instructions</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INSTRUCTIONS_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.pds16.pds16asm.impl.LoadImpl <em>Load</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.pds16.pds16asm.impl.LoadImpl
+   * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getLoad()
+   * @generated
+   */
+  int LOAD = 2;
+
+  /**
+   * The number of structural features of the '<em>Load</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOAD_FEATURE_COUNT = INSTRUCTIONS_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.pds16.pds16asm.impl.LdImmediateImpl <em>Ld Immediate</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.pds16.pds16asm.impl.LdImmediateImpl
+   * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getLdImmediate()
+   * @generated
+   */
+  int LD_IMMEDIATE = 3;
+
+  /**
+   * The number of structural features of the '<em>Ld Immediate</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LD_IMMEDIATE_FEATURE_COUNT = LOAD_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.pds16.pds16asm.impl.LdDirectImpl <em>Ld Direct</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.pds16.pds16asm.impl.LdDirectImpl
+   * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getLdDirect()
+   * @generated
+   */
+  int LD_DIRECT = 4;
+
+  /**
+   * The number of structural features of the '<em>Ld Direct</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LD_DIRECT_FEATURE_COUNT = LOAD_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.pds16.pds16asm.impl.LdIndexedImpl <em>Ld Indexed</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.pds16.pds16asm.impl.LdIndexedImpl
+   * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getLdIndexed()
+   * @generated
+   */
+  int LD_INDEXED = 5;
+
+  /**
+   * The number of structural features of the '<em>Ld Indexed</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LD_INDEXED_FEATURE_COUNT = LOAD_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.pds16.pds16asm.impl.LdBasedIndexedImpl <em>Ld Based Indexed</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.pds16.pds16asm.impl.LdBasedIndexedImpl
+   * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getLdBasedIndexed()
+   * @generated
+   */
+  int LD_BASED_INDEXED = 6;
+
+  /**
+   * The number of structural features of the '<em>Ld Based Indexed</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LD_BASED_INDEXED_FEATURE_COUNT = LOAD_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.pds16.pds16asm.impl.ImmediateImpl <em>Immediate</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.pds16.pds16asm.impl.ImmediateImpl
+   * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getImmediate()
+   * @generated
+   */
+  int IMMEDIATE = 7;
 
   /**
    * The feature id for the '<em><b>Register</b></em>' containment reference.
@@ -102,35 +216,7 @@ public interface Pds16asmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OPERATIONS__REGISTER = 0;
-
-  /**
-   * The number of structural features of the '<em>Operations</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OPERATIONS_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link org.pds16.pds16asm.impl.OperationLDIImpl <em>Operation LDI</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.pds16.pds16asm.impl.OperationLDIImpl
-   * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getOperationLDI()
-   * @generated
-   */
-  int OPERATION_LDI = 2;
-
-  /**
-   * The feature id for the '<em><b>Register</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OPERATION_LDI__REGISTER = OPERATIONS__REGISTER;
+  int IMMEDIATE__REGISTER = LD_IMMEDIATE_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Immediate8</b></em>' containment reference.
@@ -139,26 +225,26 @@ public interface Pds16asmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OPERATION_LDI__IMMEDIATE8 = OPERATIONS_FEATURE_COUNT + 0;
+  int IMMEDIATE__IMMEDIATE8 = LD_IMMEDIATE_FEATURE_COUNT + 1;
 
   /**
-   * The number of structural features of the '<em>Operation LDI</em>' class.
+   * The number of structural features of the '<em>Immediate</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OPERATION_LDI_FEATURE_COUNT = OPERATIONS_FEATURE_COUNT + 1;
+  int IMMEDIATE_FEATURE_COUNT = LD_IMMEDIATE_FEATURE_COUNT + 2;
 
   /**
-   * The meta object id for the '{@link org.pds16.pds16asm.impl.OperationLD2Impl <em>Operation LD2</em>}' class.
+   * The meta object id for the '{@link org.pds16.pds16asm.impl.DirectImpl <em>Direct</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.pds16.pds16asm.impl.OperationLD2Impl
-   * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getOperationLD2()
+   * @see org.pds16.pds16asm.impl.DirectImpl
+   * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getDirect()
    * @generated
    */
-  int OPERATION_LD2 = 3;
+  int DIRECT = 8;
 
   /**
    * The feature id for the '<em><b>Register</b></em>' containment reference.
@@ -167,25 +253,25 @@ public interface Pds16asmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OPERATION_LD2__REGISTER = OPERATIONS__REGISTER;
+  int DIRECT__REGISTER = LD_DIRECT_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Indexed</b></em>' containment reference.
+   * The feature id for the '<em><b>Direct7</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OPERATION_LD2__INDEXED = OPERATIONS_FEATURE_COUNT + 0;
+  int DIRECT__DIRECT7 = LD_DIRECT_FEATURE_COUNT + 1;
 
   /**
-   * The number of structural features of the '<em>Operation LD2</em>' class.
+   * The number of structural features of the '<em>Direct</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OPERATION_LD2_FEATURE_COUNT = OPERATIONS_FEATURE_COUNT + 1;
+  int DIRECT_FEATURE_COUNT = LD_DIRECT_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.pds16.pds16asm.impl.IndexedImpl <em>Indexed</em>}' class.
@@ -195,25 +281,34 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getIndexed()
    * @generated
    */
-  int INDEXED = 4;
+  int INDEXED = 9;
 
   /**
-   * The feature id for the '<em><b>Reg</b></em>' containment reference.
+   * The feature id for the '<em><b>Rd</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INDEXED__REG = 0;
+  int INDEXED__RD = LD_INDEXED_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Imediate8</b></em>' containment reference.
+   * The feature id for the '<em><b>Rbx</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INDEXED__IMEDIATE8 = 1;
+  int INDEXED__RBX = LD_INDEXED_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Index</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDEXED__INDEX = LD_INDEXED_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Indexed</em>' class.
@@ -222,7 +317,26 @@ public interface Pds16asmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INDEXED_FEATURE_COUNT = 2;
+  int INDEXED_FEATURE_COUNT = LD_INDEXED_FEATURE_COUNT + 3;
+
+  /**
+   * The meta object id for the '{@link org.pds16.pds16asm.impl.BasedIndexedImpl <em>Based Indexed</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.pds16.pds16asm.impl.BasedIndexedImpl
+   * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getBasedIndexed()
+   * @generated
+   */
+  int BASED_INDEXED = 10;
+
+  /**
+   * The number of structural features of the '<em>Based Indexed</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BASED_INDEXED_FEATURE_COUNT = LD_BASED_INDEXED_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link org.pds16.pds16asm.impl.HexaDecimalImpl <em>Hexa Decimal</em>}' class.
@@ -232,7 +346,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getHexaDecimal()
    * @generated
    */
-  int HEXA_DECIMAL = 5;
+  int HEXA_DECIMAL = 11;
 
   /**
    * The feature id for the '<em><b>Number</b></em>' attribute.
@@ -253,14 +367,14 @@ public interface Pds16asmPackage extends EPackage
   int HEXA_DECIMAL_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.pds16.pds16asm.impl.RegistersImpl <em>Registers</em>}' class.
+   * The meta object id for the '{@link org.pds16.pds16asm.impl.CommentImpl <em>Comment</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.pds16.pds16asm.impl.RegistersImpl
-   * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getRegisters()
+   * @see org.pds16.pds16asm.impl.CommentImpl
+   * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getComment()
    * @generated
    */
-  int REGISTERS = 6;
+  int COMMENT = 12;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -269,7 +383,53 @@ public interface Pds16asmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int REGISTERS__VALUE = 0;
+  int COMMENT__VALUE = INSTRUCTIONS_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Comment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMMENT_FEATURE_COUNT = INSTRUCTIONS_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.pds16.pds16asm.impl.RegistersImpl <em>Registers</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.pds16.pds16asm.impl.RegistersImpl
+   * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getRegisters()
+   * @generated
+   */
+  int REGISTERS = 13;
+
+  /**
+   * The feature id for the '<em><b>Rbx</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REGISTERS__RBX = BASED_INDEXED_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Rix</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REGISTERS__RIX = BASED_INDEXED_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REGISTERS__VALUE = BASED_INDEXED_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Registers</em>' class.
@@ -278,148 +438,153 @@ public interface Pds16asmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int REGISTERS_FEATURE_COUNT = 1;
+  int REGISTERS_FEATURE_COUNT = BASED_INDEXED_FEATURE_COUNT + 3;
+
 
   /**
-   * The meta object id for the '{@link org.pds16.pds16asm.impl.R1Impl <em>R1</em>}' class.
+   * Returns the meta object for class '{@link org.pds16.pds16asm.PDS16ASM <em>PDS16ASM</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.pds16.pds16asm.impl.R1Impl
-   * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getR1()
+   * @return the meta object for class '<em>PDS16ASM</em>'.
+   * @see org.pds16.pds16asm.PDS16ASM
    * @generated
    */
-  int R1 = 7;
+  EClass getPDS16ASM();
 
   /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * Returns the meta object for the containment reference list '{@link org.pds16.pds16asm.PDS16ASM#getInstuctions <em>Instuctions</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Instuctions</em>'.
+   * @see org.pds16.pds16asm.PDS16ASM#getInstuctions()
+   * @see #getPDS16ASM()
    * @generated
-   * @ordered
    */
-  int R1__VALUE = REGISTERS__VALUE;
+  EReference getPDS16ASM_Instuctions();
 
   /**
-   * The number of structural features of the '<em>R1</em>' class.
+   * Returns the meta object for class '{@link org.pds16.pds16asm.Instructions <em>Instructions</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Instructions</em>'.
+   * @see org.pds16.pds16asm.Instructions
    * @generated
-   * @ordered
    */
-  int R1_FEATURE_COUNT = REGISTERS_FEATURE_COUNT + 0;
+  EClass getInstructions();
 
   /**
-   * The meta object id for the '{@link org.pds16.pds16asm.impl.R2Impl <em>R2</em>}' class.
+   * Returns the meta object for class '{@link org.pds16.pds16asm.Load <em>Load</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.pds16.pds16asm.impl.R2Impl
-   * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getR2()
+   * @return the meta object for class '<em>Load</em>'.
+   * @see org.pds16.pds16asm.Load
    * @generated
    */
-  int R2 = 8;
+  EClass getLoad();
 
   /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * Returns the meta object for class '{@link org.pds16.pds16asm.LdImmediate <em>Ld Immediate</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Ld Immediate</em>'.
+   * @see org.pds16.pds16asm.LdImmediate
    * @generated
-   * @ordered
    */
-  int R2__VALUE = REGISTERS__VALUE;
+  EClass getLdImmediate();
 
   /**
-   * The number of structural features of the '<em>R2</em>' class.
+   * Returns the meta object for class '{@link org.pds16.pds16asm.LdDirect <em>Ld Direct</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Ld Direct</em>'.
+   * @see org.pds16.pds16asm.LdDirect
    * @generated
-   * @ordered
    */
-  int R2_FEATURE_COUNT = REGISTERS_FEATURE_COUNT + 0;
-
+  EClass getLdDirect();
 
   /**
-   * Returns the meta object for class '{@link org.pds16.pds16asm.Model <em>Model</em>}'.
+   * Returns the meta object for class '{@link org.pds16.pds16asm.LdIndexed <em>Ld Indexed</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Model</em>'.
-   * @see org.pds16.pds16asm.Model
+   * @return the meta object for class '<em>Ld Indexed</em>'.
+   * @see org.pds16.pds16asm.LdIndexed
    * @generated
    */
-  EClass getModel();
+  EClass getLdIndexed();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.pds16.pds16asm.Model#getOperations <em>Operations</em>}'.
+   * Returns the meta object for class '{@link org.pds16.pds16asm.LdBasedIndexed <em>Ld Based Indexed</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Operations</em>'.
-   * @see org.pds16.pds16asm.Model#getOperations()
-   * @see #getModel()
+   * @return the meta object for class '<em>Ld Based Indexed</em>'.
+   * @see org.pds16.pds16asm.LdBasedIndexed
    * @generated
    */
-  EReference getModel_Operations();
+  EClass getLdBasedIndexed();
 
   /**
-   * Returns the meta object for class '{@link org.pds16.pds16asm.Operations <em>Operations</em>}'.
+   * Returns the meta object for class '{@link org.pds16.pds16asm.Immediate <em>Immediate</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Operations</em>'.
-   * @see org.pds16.pds16asm.Operations
+   * @return the meta object for class '<em>Immediate</em>'.
+   * @see org.pds16.pds16asm.Immediate
    * @generated
    */
-  EClass getOperations();
+  EClass getImmediate();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.Operations#getRegister <em>Register</em>}'.
+   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.Immediate#getRegister <em>Register</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Register</em>'.
-   * @see org.pds16.pds16asm.Operations#getRegister()
-   * @see #getOperations()
+   * @see org.pds16.pds16asm.Immediate#getRegister()
+   * @see #getImmediate()
    * @generated
    */
-  EReference getOperations_Register();
+  EReference getImmediate_Register();
 
   /**
-   * Returns the meta object for class '{@link org.pds16.pds16asm.OperationLDI <em>Operation LDI</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Operation LDI</em>'.
-   * @see org.pds16.pds16asm.OperationLDI
-   * @generated
-   */
-  EClass getOperationLDI();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.OperationLDI#getImmediate8 <em>Immediate8</em>}'.
+   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.Immediate#getImmediate8 <em>Immediate8</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Immediate8</em>'.
-   * @see org.pds16.pds16asm.OperationLDI#getImmediate8()
-   * @see #getOperationLDI()
+   * @see org.pds16.pds16asm.Immediate#getImmediate8()
+   * @see #getImmediate()
    * @generated
    */
-  EReference getOperationLDI_Immediate8();
+  EReference getImmediate_Immediate8();
 
   /**
-   * Returns the meta object for class '{@link org.pds16.pds16asm.OperationLD2 <em>Operation LD2</em>}'.
+   * Returns the meta object for class '{@link org.pds16.pds16asm.Direct <em>Direct</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Operation LD2</em>'.
-   * @see org.pds16.pds16asm.OperationLD2
+   * @return the meta object for class '<em>Direct</em>'.
+   * @see org.pds16.pds16asm.Direct
    * @generated
    */
-  EClass getOperationLD2();
+  EClass getDirect();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.OperationLD2#getIndexed <em>Indexed</em>}'.
+   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.Direct#getRegister <em>Register</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Indexed</em>'.
-   * @see org.pds16.pds16asm.OperationLD2#getIndexed()
-   * @see #getOperationLD2()
+   * @return the meta object for the containment reference '<em>Register</em>'.
+   * @see org.pds16.pds16asm.Direct#getRegister()
+   * @see #getDirect()
    * @generated
    */
-  EReference getOperationLD2_Indexed();
+  EReference getDirect_Register();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.Direct#getDirect7 <em>Direct7</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Direct7</em>'.
+   * @see org.pds16.pds16asm.Direct#getDirect7()
+   * @see #getDirect()
+   * @generated
+   */
+  EAttribute getDirect_Direct7();
 
   /**
    * Returns the meta object for class '{@link org.pds16.pds16asm.Indexed <em>Indexed</em>}'.
@@ -432,26 +597,47 @@ public interface Pds16asmPackage extends EPackage
   EClass getIndexed();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.Indexed#getReg <em>Reg</em>}'.
+   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.Indexed#getRd <em>Rd</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Reg</em>'.
-   * @see org.pds16.pds16asm.Indexed#getReg()
+   * @return the meta object for the containment reference '<em>Rd</em>'.
+   * @see org.pds16.pds16asm.Indexed#getRd()
    * @see #getIndexed()
    * @generated
    */
-  EReference getIndexed_Reg();
+  EReference getIndexed_Rd();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.Indexed#getImediate8 <em>Imediate8</em>}'.
+   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.Indexed#getRbx <em>Rbx</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Imediate8</em>'.
-   * @see org.pds16.pds16asm.Indexed#getImediate8()
+   * @return the meta object for the containment reference '<em>Rbx</em>'.
+   * @see org.pds16.pds16asm.Indexed#getRbx()
    * @see #getIndexed()
    * @generated
    */
-  EReference getIndexed_Imediate8();
+  EReference getIndexed_Rbx();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.Indexed#getIndex <em>Index</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Index</em>'.
+   * @see org.pds16.pds16asm.Indexed#getIndex()
+   * @see #getIndexed()
+   * @generated
+   */
+  EAttribute getIndexed_Index();
+
+  /**
+   * Returns the meta object for class '{@link org.pds16.pds16asm.BasedIndexed <em>Based Indexed</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Based Indexed</em>'.
+   * @see org.pds16.pds16asm.BasedIndexed
+   * @generated
+   */
+  EClass getBasedIndexed();
 
   /**
    * Returns the meta object for class '{@link org.pds16.pds16asm.HexaDecimal <em>Hexa Decimal</em>}'.
@@ -475,6 +661,27 @@ public interface Pds16asmPackage extends EPackage
   EAttribute getHexaDecimal_Number();
 
   /**
+   * Returns the meta object for class '{@link org.pds16.pds16asm.Comment <em>Comment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Comment</em>'.
+   * @see org.pds16.pds16asm.Comment
+   * @generated
+   */
+  EClass getComment();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.Comment#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.pds16.pds16asm.Comment#getValue()
+   * @see #getComment()
+   * @generated
+   */
+  EAttribute getComment_Value();
+
+  /**
    * Returns the meta object for class '{@link org.pds16.pds16asm.Registers <em>Registers</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -483,6 +690,28 @@ public interface Pds16asmPackage extends EPackage
    * @generated
    */
   EClass getRegisters();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.Registers#getRbx <em>Rbx</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Rbx</em>'.
+   * @see org.pds16.pds16asm.Registers#getRbx()
+   * @see #getRegisters()
+   * @generated
+   */
+  EReference getRegisters_Rbx();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.Registers#getRix <em>Rix</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Rix</em>'.
+   * @see org.pds16.pds16asm.Registers#getRix()
+   * @see #getRegisters()
+   * @generated
+   */
+  EReference getRegisters_Rix();
 
   /**
    * Returns the meta object for the attribute '{@link org.pds16.pds16asm.Registers#getValue <em>Value</em>}'.
@@ -494,26 +723,6 @@ public interface Pds16asmPackage extends EPackage
    * @generated
    */
   EAttribute getRegisters_Value();
-
-  /**
-   * Returns the meta object for class '{@link org.pds16.pds16asm.R1 <em>R1</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>R1</em>'.
-   * @see org.pds16.pds16asm.R1
-   * @generated
-   */
-  EClass getR1();
-
-  /**
-   * Returns the meta object for class '{@link org.pds16.pds16asm.R2 <em>R2</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>R2</em>'.
-   * @see org.pds16.pds16asm.R2
-   * @generated
-   */
-  EClass getR2();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -539,32 +748,92 @@ public interface Pds16asmPackage extends EPackage
   interface Literals
   {
     /**
-     * The meta object literal for the '{@link org.pds16.pds16asm.impl.ModelImpl <em>Model</em>}' class.
+     * The meta object literal for the '{@link org.pds16.pds16asm.impl.PDS16ASMImpl <em>PDS16ASM</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.pds16.pds16asm.impl.ModelImpl
-     * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getModel()
+     * @see org.pds16.pds16asm.impl.PDS16ASMImpl
+     * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getPDS16ASM()
      * @generated
      */
-    EClass MODEL = eINSTANCE.getModel();
+    EClass PDS16ASM = eINSTANCE.getPDS16ASM();
 
     /**
-     * The meta object literal for the '<em><b>Operations</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Instuctions</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference MODEL__OPERATIONS = eINSTANCE.getModel_Operations();
+    EReference PDS16ASM__INSTUCTIONS = eINSTANCE.getPDS16ASM_Instuctions();
 
     /**
-     * The meta object literal for the '{@link org.pds16.pds16asm.impl.OperationsImpl <em>Operations</em>}' class.
+     * The meta object literal for the '{@link org.pds16.pds16asm.impl.InstructionsImpl <em>Instructions</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.pds16.pds16asm.impl.OperationsImpl
-     * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getOperations()
+     * @see org.pds16.pds16asm.impl.InstructionsImpl
+     * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getInstructions()
      * @generated
      */
-    EClass OPERATIONS = eINSTANCE.getOperations();
+    EClass INSTRUCTIONS = eINSTANCE.getInstructions();
+
+    /**
+     * The meta object literal for the '{@link org.pds16.pds16asm.impl.LoadImpl <em>Load</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.pds16.pds16asm.impl.LoadImpl
+     * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getLoad()
+     * @generated
+     */
+    EClass LOAD = eINSTANCE.getLoad();
+
+    /**
+     * The meta object literal for the '{@link org.pds16.pds16asm.impl.LdImmediateImpl <em>Ld Immediate</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.pds16.pds16asm.impl.LdImmediateImpl
+     * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getLdImmediate()
+     * @generated
+     */
+    EClass LD_IMMEDIATE = eINSTANCE.getLdImmediate();
+
+    /**
+     * The meta object literal for the '{@link org.pds16.pds16asm.impl.LdDirectImpl <em>Ld Direct</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.pds16.pds16asm.impl.LdDirectImpl
+     * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getLdDirect()
+     * @generated
+     */
+    EClass LD_DIRECT = eINSTANCE.getLdDirect();
+
+    /**
+     * The meta object literal for the '{@link org.pds16.pds16asm.impl.LdIndexedImpl <em>Ld Indexed</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.pds16.pds16asm.impl.LdIndexedImpl
+     * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getLdIndexed()
+     * @generated
+     */
+    EClass LD_INDEXED = eINSTANCE.getLdIndexed();
+
+    /**
+     * The meta object literal for the '{@link org.pds16.pds16asm.impl.LdBasedIndexedImpl <em>Ld Based Indexed</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.pds16.pds16asm.impl.LdBasedIndexedImpl
+     * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getLdBasedIndexed()
+     * @generated
+     */
+    EClass LD_BASED_INDEXED = eINSTANCE.getLdBasedIndexed();
+
+    /**
+     * The meta object literal for the '{@link org.pds16.pds16asm.impl.ImmediateImpl <em>Immediate</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.pds16.pds16asm.impl.ImmediateImpl
+     * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getImmediate()
+     * @generated
+     */
+    EClass IMMEDIATE = eINSTANCE.getImmediate();
 
     /**
      * The meta object literal for the '<em><b>Register</b></em>' containment reference feature.
@@ -572,17 +841,7 @@ public interface Pds16asmPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference OPERATIONS__REGISTER = eINSTANCE.getOperations_Register();
-
-    /**
-     * The meta object literal for the '{@link org.pds16.pds16asm.impl.OperationLDIImpl <em>Operation LDI</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.pds16.pds16asm.impl.OperationLDIImpl
-     * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getOperationLDI()
-     * @generated
-     */
-    EClass OPERATION_LDI = eINSTANCE.getOperationLDI();
+    EReference IMMEDIATE__REGISTER = eINSTANCE.getImmediate_Register();
 
     /**
      * The meta object literal for the '<em><b>Immediate8</b></em>' containment reference feature.
@@ -590,25 +849,33 @@ public interface Pds16asmPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference OPERATION_LDI__IMMEDIATE8 = eINSTANCE.getOperationLDI_Immediate8();
+    EReference IMMEDIATE__IMMEDIATE8 = eINSTANCE.getImmediate_Immediate8();
 
     /**
-     * The meta object literal for the '{@link org.pds16.pds16asm.impl.OperationLD2Impl <em>Operation LD2</em>}' class.
+     * The meta object literal for the '{@link org.pds16.pds16asm.impl.DirectImpl <em>Direct</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.pds16.pds16asm.impl.OperationLD2Impl
-     * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getOperationLD2()
+     * @see org.pds16.pds16asm.impl.DirectImpl
+     * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getDirect()
      * @generated
      */
-    EClass OPERATION_LD2 = eINSTANCE.getOperationLD2();
+    EClass DIRECT = eINSTANCE.getDirect();
 
     /**
-     * The meta object literal for the '<em><b>Indexed</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Register</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference OPERATION_LD2__INDEXED = eINSTANCE.getOperationLD2_Indexed();
+    EReference DIRECT__REGISTER = eINSTANCE.getDirect_Register();
+
+    /**
+     * The meta object literal for the '<em><b>Direct7</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DIRECT__DIRECT7 = eINSTANCE.getDirect_Direct7();
 
     /**
      * The meta object literal for the '{@link org.pds16.pds16asm.impl.IndexedImpl <em>Indexed</em>}' class.
@@ -621,20 +888,38 @@ public interface Pds16asmPackage extends EPackage
     EClass INDEXED = eINSTANCE.getIndexed();
 
     /**
-     * The meta object literal for the '<em><b>Reg</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Rd</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference INDEXED__REG = eINSTANCE.getIndexed_Reg();
+    EReference INDEXED__RD = eINSTANCE.getIndexed_Rd();
 
     /**
-     * The meta object literal for the '<em><b>Imediate8</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Rbx</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference INDEXED__IMEDIATE8 = eINSTANCE.getIndexed_Imediate8();
+    EReference INDEXED__RBX = eINSTANCE.getIndexed_Rbx();
+
+    /**
+     * The meta object literal for the '<em><b>Index</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INDEXED__INDEX = eINSTANCE.getIndexed_Index();
+
+    /**
+     * The meta object literal for the '{@link org.pds16.pds16asm.impl.BasedIndexedImpl <em>Based Indexed</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.pds16.pds16asm.impl.BasedIndexedImpl
+     * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getBasedIndexed()
+     * @generated
+     */
+    EClass BASED_INDEXED = eINSTANCE.getBasedIndexed();
 
     /**
      * The meta object literal for the '{@link org.pds16.pds16asm.impl.HexaDecimalImpl <em>Hexa Decimal</em>}' class.
@@ -655,6 +940,24 @@ public interface Pds16asmPackage extends EPackage
     EAttribute HEXA_DECIMAL__NUMBER = eINSTANCE.getHexaDecimal_Number();
 
     /**
+     * The meta object literal for the '{@link org.pds16.pds16asm.impl.CommentImpl <em>Comment</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.pds16.pds16asm.impl.CommentImpl
+     * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getComment()
+     * @generated
+     */
+    EClass COMMENT = eINSTANCE.getComment();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COMMENT__VALUE = eINSTANCE.getComment_Value();
+
+    /**
      * The meta object literal for the '{@link org.pds16.pds16asm.impl.RegistersImpl <em>Registers</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -665,32 +968,28 @@ public interface Pds16asmPackage extends EPackage
     EClass REGISTERS = eINSTANCE.getRegisters();
 
     /**
+     * The meta object literal for the '<em><b>Rbx</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference REGISTERS__RBX = eINSTANCE.getRegisters_Rbx();
+
+    /**
+     * The meta object literal for the '<em><b>Rix</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference REGISTERS__RIX = eINSTANCE.getRegisters_Rix();
+
+    /**
      * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EAttribute REGISTERS__VALUE = eINSTANCE.getRegisters_Value();
-
-    /**
-     * The meta object literal for the '{@link org.pds16.pds16asm.impl.R1Impl <em>R1</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.pds16.pds16asm.impl.R1Impl
-     * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getR1()
-     * @generated
-     */
-    EClass R1 = eINSTANCE.getR1();
-
-    /**
-     * The meta object literal for the '{@link org.pds16.pds16asm.impl.R2Impl <em>R2</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.pds16.pds16asm.impl.R2Impl
-     * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getR2()
-     * @generated
-     */
-    EClass R2 = eINSTANCE.getR2();
 
   }
 

@@ -3,7 +3,6 @@
  */
 package org.pds16.pds16asm;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,8 +12,9 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.pds16.pds16asm.Indexed#getReg <em>Reg</em>}</li>
- *   <li>{@link org.pds16.pds16asm.Indexed#getImediate8 <em>Imediate8</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.Indexed#getRd <em>Rd</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.Indexed#getRbx <em>Rbx</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.Indexed#getIndex <em>Index</em>}</li>
  * </ul>
  * </p>
  *
@@ -22,58 +22,84 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Indexed extends EObject
+public interface Indexed extends LdIndexed
 {
   /**
-   * Returns the value of the '<em><b>Reg</b></em>' containment reference.
+   * Returns the value of the '<em><b>Rd</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Reg</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Rd</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Reg</em>' containment reference.
-   * @see #setReg(Registers)
-   * @see org.pds16.pds16asm.Pds16asmPackage#getIndexed_Reg()
+   * @return the value of the '<em>Rd</em>' containment reference.
+   * @see #setRd(Registers)
+   * @see org.pds16.pds16asm.Pds16asmPackage#getIndexed_Rd()
    * @model containment="true"
    * @generated
    */
-  Registers getReg();
+  Registers getRd();
 
   /**
-   * Sets the value of the '{@link org.pds16.pds16asm.Indexed#getReg <em>Reg</em>}' containment reference.
+   * Sets the value of the '{@link org.pds16.pds16asm.Indexed#getRd <em>Rd</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Reg</em>' containment reference.
-   * @see #getReg()
+   * @param value the new value of the '<em>Rd</em>' containment reference.
+   * @see #getRd()
    * @generated
    */
-  void setReg(Registers value);
+  void setRd(Registers value);
 
   /**
-   * Returns the value of the '<em><b>Imediate8</b></em>' containment reference.
+   * Returns the value of the '<em><b>Rbx</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Imediate8</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Rbx</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Imediate8</em>' containment reference.
-   * @see #setImediate8(HexaDecimal)
-   * @see org.pds16.pds16asm.Pds16asmPackage#getIndexed_Imediate8()
+   * @return the value of the '<em>Rbx</em>' containment reference.
+   * @see #setRbx(Registers)
+   * @see org.pds16.pds16asm.Pds16asmPackage#getIndexed_Rbx()
    * @model containment="true"
    * @generated
    */
-  HexaDecimal getImediate8();
+  Registers getRbx();
 
   /**
-   * Sets the value of the '{@link org.pds16.pds16asm.Indexed#getImediate8 <em>Imediate8</em>}' containment reference.
+   * Sets the value of the '{@link org.pds16.pds16asm.Indexed#getRbx <em>Rbx</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Imediate8</em>' containment reference.
-   * @see #getImediate8()
+   * @param value the new value of the '<em>Rbx</em>' containment reference.
+   * @see #getRbx()
    * @generated
    */
-  void setImediate8(HexaDecimal value);
+  void setRbx(Registers value);
+
+  /**
+   * Returns the value of the '<em><b>Index</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Index</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Index</em>' attribute.
+   * @see #setIndex(String)
+   * @see org.pds16.pds16asm.Pds16asmPackage#getIndexed_Index()
+   * @model
+   * @generated
+   */
+  String getIndex();
+
+  /**
+   * Sets the value of the '{@link org.pds16.pds16asm.Indexed#getIndex <em>Index</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Index</em>' attribute.
+   * @see #getIndex()
+   * @generated
+   */
+  void setIndex(String value);
 
 } // Indexed

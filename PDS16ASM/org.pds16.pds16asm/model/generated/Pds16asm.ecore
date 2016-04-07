@@ -1,34 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="pds16asm" nsURI="http://www.pds16.org/Pds16asm" nsPrefix="pds16asm">
-  <eClassifiers xsi:type="ecore:EClass" name="Model">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="operations" upperBound="-1"
-        eType="#//Operations" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PDS16ASM">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instuctions" upperBound="-1"
+        eType="#//Instructions" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Operations">
+  <eClassifiers xsi:type="ecore:EClass" name="Instructions"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Load" eSuperTypes="#//Instructions"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LdImmediate" eSuperTypes="#//Load"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LdDirect" eSuperTypes="#//Load"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LdIndexed" eSuperTypes="#//Load"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LdBasedIndexed" eSuperTypes="#//Load"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Immediate" eSuperTypes="#//LdImmediate">
     <eStructuralFeatures xsi:type="ecore:EReference" name="register" eType="#//Registers"
         containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="OperationLDI" eSuperTypes="#//Operations">
     <eStructuralFeatures xsi:type="ecore:EReference" name="immediate8" eType="#//HexaDecimal"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="OperationLD2" eSuperTypes="#//Operations">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="indexed" eType="#//Indexed"
+  <eClassifiers xsi:type="ecore:EClass" name="Direct" eSuperTypes="#//LdDirect">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="register" eType="#//Registers"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="direct7" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Indexed">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="reg" eType="#//Registers"
+  <eClassifiers xsi:type="ecore:EClass" name="Indexed" eSuperTypes="#//LdIndexed">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rd" eType="#//Registers"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="imediate8" eType="#//HexaDecimal"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rbx" eType="#//Registers"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="index" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BasedIndexed" eSuperTypes="#//LdBasedIndexed"/>
   <eClassifiers xsi:type="ecore:EClass" name="HexaDecimal">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="number" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Registers">
+  <eClassifiers xsi:type="ecore:EClass" name="Comment" eSuperTypes="#//Instructions">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="R1" eSuperTypes="#//Registers"/>
-  <eClassifiers xsi:type="ecore:EClass" name="R2" eSuperTypes="#//Registers"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Registers" eSuperTypes="#//BasedIndexed">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rbx" eType="#//Registers"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rix" eType="#//Registers"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
 </ecore:EPackage>

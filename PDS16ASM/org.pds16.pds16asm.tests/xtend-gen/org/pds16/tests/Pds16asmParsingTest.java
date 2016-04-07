@@ -12,7 +12,7 @@ import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.pds16.pds16asm.Model;
+import org.pds16.pds16asm.PDS16ASM;
 import org.pds16.tests.Pds16asmInjectorProvider;
 
 @RunWith(XtextRunner.class)
@@ -20,7 +20,7 @@ import org.pds16.tests.Pds16asmInjectorProvider;
 @SuppressWarnings("all")
 public class Pds16asmParsingTest {
   @Inject
-  private ParseHelper<Model> parseHelper;
+  private ParseHelper<PDS16ASM> parseHelper;
   
   @Test
   public void loadModel() {
@@ -28,7 +28,7 @@ public class Pds16asmParsingTest {
       StringConcatenation _builder = new StringConcatenation();
       _builder.append("Hello Xtext!");
       _builder.newLine();
-      final Model result = this.parseHelper.parse(_builder);
+      final PDS16ASM result = this.parseHelper.parse(_builder);
       Assert.assertNotNull(result);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);

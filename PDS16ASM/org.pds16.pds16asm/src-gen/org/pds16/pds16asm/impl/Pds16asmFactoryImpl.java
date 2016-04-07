@@ -65,15 +65,20 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
   {
     switch (eClass.getClassifierID())
     {
-      case Pds16asmPackage.MODEL: return createModel();
-      case Pds16asmPackage.OPERATIONS: return createOperations();
-      case Pds16asmPackage.OPERATION_LDI: return createOperationLDI();
-      case Pds16asmPackage.OPERATION_LD2: return createOperationLD2();
+      case Pds16asmPackage.PDS16ASM: return createPDS16ASM();
+      case Pds16asmPackage.INSTRUCTIONS: return createInstructions();
+      case Pds16asmPackage.LOAD: return createLoad();
+      case Pds16asmPackage.LD_IMMEDIATE: return createLdImmediate();
+      case Pds16asmPackage.LD_DIRECT: return createLdDirect();
+      case Pds16asmPackage.LD_INDEXED: return createLdIndexed();
+      case Pds16asmPackage.LD_BASED_INDEXED: return createLdBasedIndexed();
+      case Pds16asmPackage.IMMEDIATE: return createImmediate();
+      case Pds16asmPackage.DIRECT: return createDirect();
       case Pds16asmPackage.INDEXED: return createIndexed();
+      case Pds16asmPackage.BASED_INDEXED: return createBasedIndexed();
       case Pds16asmPackage.HEXA_DECIMAL: return createHexaDecimal();
+      case Pds16asmPackage.COMMENT: return createComment();
       case Pds16asmPackage.REGISTERS: return createRegisters();
-      case Pds16asmPackage.R1: return createR1();
-      case Pds16asmPackage.R2: return createR2();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -84,10 +89,10 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Model createModel()
+  public PDS16ASM createPDS16ASM()
   {
-    ModelImpl model = new ModelImpl();
-    return model;
+    PDS16ASMImpl pds16ASM = new PDS16ASMImpl();
+    return pds16ASM;
   }
 
   /**
@@ -95,10 +100,10 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Operations createOperations()
+  public Instructions createInstructions()
   {
-    OperationsImpl operations = new OperationsImpl();
-    return operations;
+    InstructionsImpl instructions = new InstructionsImpl();
+    return instructions;
   }
 
   /**
@@ -106,10 +111,10 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public OperationLDI createOperationLDI()
+  public Load createLoad()
   {
-    OperationLDIImpl operationLDI = new OperationLDIImpl();
-    return operationLDI;
+    LoadImpl load = new LoadImpl();
+    return load;
   }
 
   /**
@@ -117,10 +122,65 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public OperationLD2 createOperationLD2()
+  public LdImmediate createLdImmediate()
   {
-    OperationLD2Impl operationLD2 = new OperationLD2Impl();
-    return operationLD2;
+    LdImmediateImpl ldImmediate = new LdImmediateImpl();
+    return ldImmediate;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LdDirect createLdDirect()
+  {
+    LdDirectImpl ldDirect = new LdDirectImpl();
+    return ldDirect;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LdIndexed createLdIndexed()
+  {
+    LdIndexedImpl ldIndexed = new LdIndexedImpl();
+    return ldIndexed;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LdBasedIndexed createLdBasedIndexed()
+  {
+    LdBasedIndexedImpl ldBasedIndexed = new LdBasedIndexedImpl();
+    return ldBasedIndexed;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Immediate createImmediate()
+  {
+    ImmediateImpl immediate = new ImmediateImpl();
+    return immediate;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Direct createDirect()
+  {
+    DirectImpl direct = new DirectImpl();
+    return direct;
   }
 
   /**
@@ -139,6 +199,17 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public BasedIndexed createBasedIndexed()
+  {
+    BasedIndexedImpl basedIndexed = new BasedIndexedImpl();
+    return basedIndexed;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public HexaDecimal createHexaDecimal()
   {
     HexaDecimalImpl hexaDecimal = new HexaDecimalImpl();
@@ -150,32 +221,21 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public Comment createComment()
+  {
+    CommentImpl comment = new CommentImpl();
+    return comment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Registers createRegisters()
   {
     RegistersImpl registers = new RegistersImpl();
     return registers;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public R1 createR1()
-  {
-    R1Impl r1 = new R1Impl();
-    return r1;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public R2 createR2()
-  {
-    R2Impl r2 = new R2Impl();
-    return r2;
   }
 
   /**

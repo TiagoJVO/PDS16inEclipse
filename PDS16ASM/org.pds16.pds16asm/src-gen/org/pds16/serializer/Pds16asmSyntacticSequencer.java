@@ -10,6 +10,9 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
+import org.eclipse.xtext.serializer.analysis.GrammarAlias.AlternativeAlias;
+import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
+import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
 import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 import org.pds16.services.Pds16asmGrammarAccess;
@@ -18,17 +21,48 @@ import org.pds16.services.Pds16asmGrammarAccess;
 public class Pds16asmSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected Pds16asmGrammarAccess grammarAccess;
+	protected AbstractElementAlias match_Indexed_HEXTerminalRuleCall_6_1_or_INTTerminalRuleCall_6_0;
+	protected AbstractElementAlias match_LdBasedIndexed_LdKeyword_0_0_or_LdbKeyword_1_0;
+	protected AbstractElementAlias match_LdDirect_LdKeyword_0_0_or_LdbKeyword_1_0;
+	protected AbstractElementAlias match_LdImmediate_LdiKeyword_0_0_or_LdihKeyword_1_0;
+	protected AbstractElementAlias match_LdIndexed_LdKeyword_0_0_or_LdbKeyword_1_0;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (Pds16asmGrammarAccess) access;
+		match_Indexed_HEXTerminalRuleCall_6_1_or_INTTerminalRuleCall_6_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getIndexedAccess().getHEXTerminalRuleCall_6_1()), new TokenAlias(false, false, grammarAccess.getIndexedAccess().getINTTerminalRuleCall_6_0()));
+		match_LdBasedIndexed_LdKeyword_0_0_or_LdbKeyword_1_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getLdBasedIndexedAccess().getLdKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getLdBasedIndexedAccess().getLdbKeyword_1_0()));
+		match_LdDirect_LdKeyword_0_0_or_LdbKeyword_1_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getLdDirectAccess().getLdKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getLdDirectAccess().getLdbKeyword_1_0()));
+		match_LdImmediate_LdiKeyword_0_0_or_LdihKeyword_1_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getLdImmediateAccess().getLdiKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getLdImmediateAccess().getLdihKeyword_1_0()));
+		match_LdIndexed_LdKeyword_0_0_or_LdbKeyword_1_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getLdIndexedAccess().getLdKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getLdIndexedAccess().getLdbKeyword_1_0()));
 	}
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (ruleCall.getRule() == grammarAccess.getHEXRule())
+			return getHEXToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getINTRule())
+			return getINTToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
+	/**
+	 * terminal HEX : '0' ('x'|'X')(('0'..'9')|('a'..'f')|('A'..'F'))+;
+	 */
+	protected String getHEXToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "0x";
+	}
+	
+	/**
+	 * terminal INT returns ecore::EInt: ('0'..'9')+;
+	 */
+	protected String getINTToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "";
+	}
 	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
@@ -36,8 +70,80 @@ public class Pds16asmSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			acceptNodes(getLastNavigableState(), syntaxNodes);
+			if (match_Indexed_HEXTerminalRuleCall_6_1_or_INTTerminalRuleCall_6_0.equals(syntax))
+				emit_Indexed_HEXTerminalRuleCall_6_1_or_INTTerminalRuleCall_6_0(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_LdBasedIndexed_LdKeyword_0_0_or_LdbKeyword_1_0.equals(syntax))
+				emit_LdBasedIndexed_LdKeyword_0_0_or_LdbKeyword_1_0(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_LdDirect_LdKeyword_0_0_or_LdbKeyword_1_0.equals(syntax))
+				emit_LdDirect_LdKeyword_0_0_or_LdbKeyword_1_0(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_LdImmediate_LdiKeyword_0_0_or_LdihKeyword_1_0.equals(syntax))
+				emit_LdImmediate_LdiKeyword_0_0_or_LdihKeyword_1_0(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_LdIndexed_LdKeyword_0_0_or_LdbKeyword_1_0.equals(syntax))
+				emit_LdIndexed_LdKeyword_0_0_or_LdbKeyword_1_0(semanticObject, getLastNavigableState(), syntaxNodes);
+			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
+	/**
+	 * Ambiguous syntax:
+	 *     INT | HEX
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     index='#' (ambiguity) ']' (rule end)
+	 */
+	protected void emit_Indexed_HEXTerminalRuleCall_6_1_or_INTTerminalRuleCall_6_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     'ld' | 'ldb'
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (rule start) (ambiguity) value='r0'
+	 *     (rule start) (ambiguity) value='r1'
+	 *     (rule start) (ambiguity) value='r2'
+	 *     (rule start) (ambiguity) value='r3'
+	 *     (rule start) (ambiguity) value='r4'
+	 *     (rule start) (ambiguity) value='r5'
+	 *     (rule start) (ambiguity) value='r6'
+	 *     (rule start) (ambiguity) value='r7'
+	 */
+	protected void emit_LdBasedIndexed_LdKeyword_0_0_or_LdbKeyword_1_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     'ld' | 'ldb'
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (rule start) (ambiguity) register=Registers
+	 */
+	protected void emit_LdDirect_LdKeyword_0_0_or_LdbKeyword_1_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     'ldi' | 'ldih'
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (rule start) (ambiguity) register=Registers
+	 */
+	protected void emit_LdImmediate_LdiKeyword_0_0_or_LdihKeyword_1_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     'ld' | 'ldb'
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (rule start) (ambiguity) rd=Registers
+	 */
+	protected void emit_LdIndexed_LdKeyword_0_0_or_LdbKeyword_1_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
 }

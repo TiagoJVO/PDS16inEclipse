@@ -6,29 +6,39 @@
     complianceLevel="6.0" copyrightFields="false" runtimeVersion="2.10">
   <genPackages prefix="Pds16asm" basePackage="org.pds16" disposableProviderFactory="true"
       fileExtensions="asm" ecorePackage="Pds16asm.ecore#/">
-    <genClasses ecoreClass="Pds16asm.ecore#//Model">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//Model/operations"/>
+    <genClasses ecoreClass="Pds16asm.ecore#//PDS16ASM">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//PDS16ASM/instuctions"/>
     </genClasses>
-    <genClasses ecoreClass="Pds16asm.ecore#//Operations">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//Operations/register"/>
+    <genClasses ecoreClass="Pds16asm.ecore#//Instructions"/>
+    <genClasses ecoreClass="Pds16asm.ecore#//Load"/>
+    <genClasses ecoreClass="Pds16asm.ecore#//LdImmediate"/>
+    <genClasses ecoreClass="Pds16asm.ecore#//LdDirect"/>
+    <genClasses ecoreClass="Pds16asm.ecore#//LdIndexed"/>
+    <genClasses ecoreClass="Pds16asm.ecore#//LdBasedIndexed"/>
+    <genClasses ecoreClass="Pds16asm.ecore#//Immediate">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//Immediate/register"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//Immediate/immediate8"/>
     </genClasses>
-    <genClasses ecoreClass="Pds16asm.ecore#//OperationLDI">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//OperationLDI/immediate8"/>
-    </genClasses>
-    <genClasses ecoreClass="Pds16asm.ecore#//OperationLD2">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//OperationLD2/indexed"/>
+    <genClasses ecoreClass="Pds16asm.ecore#//Direct">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//Direct/register"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Direct/direct7"/>
     </genClasses>
     <genClasses ecoreClass="Pds16asm.ecore#//Indexed">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//Indexed/reg"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//Indexed/imediate8"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//Indexed/rd"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//Indexed/rbx"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Indexed/index"/>
     </genClasses>
+    <genClasses ecoreClass="Pds16asm.ecore#//BasedIndexed"/>
     <genClasses ecoreClass="Pds16asm.ecore#//HexaDecimal">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//HexaDecimal/number"/>
     </genClasses>
+    <genClasses ecoreClass="Pds16asm.ecore#//Comment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Comment/value"/>
+    </genClasses>
     <genClasses ecoreClass="Pds16asm.ecore#//Registers">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//Registers/rbx"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//Registers/rix"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Registers/value"/>
     </genClasses>
-    <genClasses ecoreClass="Pds16asm.ecore#//R1"/>
-    <genClasses ecoreClass="Pds16asm.ecore#//R2"/>
   </genPackages>
 </genmodel:GenModel>

@@ -76,24 +76,49 @@ public class Pds16asmAdapterFactory extends AdapterFactoryImpl
     new Pds16asmSwitch<Adapter>()
     {
       @Override
-      public Adapter caseModel(Model object)
+      public Adapter casePDS16ASM(PDS16ASM object)
       {
-        return createModelAdapter();
+        return createPDS16ASMAdapter();
       }
       @Override
-      public Adapter caseOperations(Operations object)
+      public Adapter caseInstructions(Instructions object)
       {
-        return createOperationsAdapter();
+        return createInstructionsAdapter();
       }
       @Override
-      public Adapter caseOperationLDI(OperationLDI object)
+      public Adapter caseLoad(Load object)
       {
-        return createOperationLDIAdapter();
+        return createLoadAdapter();
       }
       @Override
-      public Adapter caseOperationLD2(OperationLD2 object)
+      public Adapter caseLdImmediate(LdImmediate object)
       {
-        return createOperationLD2Adapter();
+        return createLdImmediateAdapter();
+      }
+      @Override
+      public Adapter caseLdDirect(LdDirect object)
+      {
+        return createLdDirectAdapter();
+      }
+      @Override
+      public Adapter caseLdIndexed(LdIndexed object)
+      {
+        return createLdIndexedAdapter();
+      }
+      @Override
+      public Adapter caseLdBasedIndexed(LdBasedIndexed object)
+      {
+        return createLdBasedIndexedAdapter();
+      }
+      @Override
+      public Adapter caseImmediate(Immediate object)
+      {
+        return createImmediateAdapter();
+      }
+      @Override
+      public Adapter caseDirect(Direct object)
+      {
+        return createDirectAdapter();
       }
       @Override
       public Adapter caseIndexed(Indexed object)
@@ -101,24 +126,24 @@ public class Pds16asmAdapterFactory extends AdapterFactoryImpl
         return createIndexedAdapter();
       }
       @Override
+      public Adapter caseBasedIndexed(BasedIndexed object)
+      {
+        return createBasedIndexedAdapter();
+      }
+      @Override
       public Adapter caseHexaDecimal(HexaDecimal object)
       {
         return createHexaDecimalAdapter();
       }
       @Override
+      public Adapter caseComment(Comment object)
+      {
+        return createCommentAdapter();
+      }
+      @Override
       public Adapter caseRegisters(Registers object)
       {
         return createRegistersAdapter();
-      }
-      @Override
-      public Adapter caseR1(R1 object)
-      {
-        return createR1Adapter();
-      }
-      @Override
-      public Adapter caseR2(R2 object)
-      {
-        return createR2Adapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -143,61 +168,136 @@ public class Pds16asmAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.Model <em>Model</em>}'.
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.PDS16ASM <em>PDS16ASM</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.pds16.pds16asm.Model
+   * @see org.pds16.pds16asm.PDS16ASM
    * @generated
    */
-  public Adapter createModelAdapter()
+  public Adapter createPDS16ASMAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.Operations <em>Operations</em>}'.
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.Instructions <em>Instructions</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.pds16.pds16asm.Operations
+   * @see org.pds16.pds16asm.Instructions
    * @generated
    */
-  public Adapter createOperationsAdapter()
+  public Adapter createInstructionsAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.OperationLDI <em>Operation LDI</em>}'.
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.Load <em>Load</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.pds16.pds16asm.OperationLDI
+   * @see org.pds16.pds16asm.Load
    * @generated
    */
-  public Adapter createOperationLDIAdapter()
+  public Adapter createLoadAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.OperationLD2 <em>Operation LD2</em>}'.
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.LdImmediate <em>Ld Immediate</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.pds16.pds16asm.OperationLD2
+   * @see org.pds16.pds16asm.LdImmediate
    * @generated
    */
-  public Adapter createOperationLD2Adapter()
+  public Adapter createLdImmediateAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.LdDirect <em>Ld Direct</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.pds16.pds16asm.LdDirect
+   * @generated
+   */
+  public Adapter createLdDirectAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.LdIndexed <em>Ld Indexed</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.pds16.pds16asm.LdIndexed
+   * @generated
+   */
+  public Adapter createLdIndexedAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.LdBasedIndexed <em>Ld Based Indexed</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.pds16.pds16asm.LdBasedIndexed
+   * @generated
+   */
+  public Adapter createLdBasedIndexedAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.Immediate <em>Immediate</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.pds16.pds16asm.Immediate
+   * @generated
+   */
+  public Adapter createImmediateAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.Direct <em>Direct</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.pds16.pds16asm.Direct
+   * @generated
+   */
+  public Adapter createDirectAdapter()
   {
     return null;
   }
@@ -218,6 +318,21 @@ public class Pds16asmAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.BasedIndexed <em>Based Indexed</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.pds16.pds16asm.BasedIndexed
+   * @generated
+   */
+  public Adapter createBasedIndexedAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.HexaDecimal <em>Hexa Decimal</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -233,6 +348,21 @@ public class Pds16asmAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.Comment <em>Comment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.pds16.pds16asm.Comment
+   * @generated
+   */
+  public Adapter createCommentAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.Registers <em>Registers</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -243,36 +373,6 @@ public class Pds16asmAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createRegistersAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.R1 <em>R1</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.pds16.pds16asm.R1
-   * @generated
-   */
-  public Adapter createR1Adapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.R2 <em>R2</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.pds16.pds16asm.R2
-   * @generated
-   */
-  public Adapter createR2Adapter()
   {
     return null;
   }

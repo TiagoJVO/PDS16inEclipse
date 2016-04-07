@@ -10,9 +10,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.pds16.pds16asm.HexaDecimal;
 import org.pds16.pds16asm.Indexed;
 import org.pds16.pds16asm.Pds16asmPackage;
 import org.pds16.pds16asm.Registers;
@@ -24,34 +22,55 @@ import org.pds16.pds16asm.Registers;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.pds16.pds16asm.impl.IndexedImpl#getReg <em>Reg</em>}</li>
- *   <li>{@link org.pds16.pds16asm.impl.IndexedImpl#getImediate8 <em>Imediate8</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.impl.IndexedImpl#getRd <em>Rd</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.impl.IndexedImpl#getRbx <em>Rbx</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.impl.IndexedImpl#getIndex <em>Index</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class IndexedImpl extends MinimalEObjectImpl.Container implements Indexed
+public class IndexedImpl extends LdIndexedImpl implements Indexed
 {
   /**
-   * The cached value of the '{@link #getReg() <em>Reg</em>}' containment reference.
+   * The cached value of the '{@link #getRd() <em>Rd</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getReg()
+   * @see #getRd()
    * @generated
    * @ordered
    */
-  protected Registers reg;
+  protected Registers rd;
 
   /**
-   * The cached value of the '{@link #getImediate8() <em>Imediate8</em>}' containment reference.
+   * The cached value of the '{@link #getRbx() <em>Rbx</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getImediate8()
+   * @see #getRbx()
    * @generated
    * @ordered
    */
-  protected HexaDecimal imediate8;
+  protected Registers rbx;
+
+  /**
+   * The default value of the '{@link #getIndex() <em>Index</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getIndex()
+   * @generated
+   * @ordered
+   */
+  protected static final String INDEX_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getIndex() <em>Index</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getIndex()
+   * @generated
+   * @ordered
+   */
+  protected String index = INDEX_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -79,9 +98,9 @@ public class IndexedImpl extends MinimalEObjectImpl.Container implements Indexed
    * <!-- end-user-doc -->
    * @generated
    */
-  public Registers getReg()
+  public Registers getRd()
   {
-    return reg;
+    return rd;
   }
 
   /**
@@ -89,13 +108,13 @@ public class IndexedImpl extends MinimalEObjectImpl.Container implements Indexed
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetReg(Registers newReg, NotificationChain msgs)
+  public NotificationChain basicSetRd(Registers newRd, NotificationChain msgs)
   {
-    Registers oldReg = reg;
-    reg = newReg;
+    Registers oldRd = rd;
+    rd = newRd;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Pds16asmPackage.INDEXED__REG, oldReg, newReg);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Pds16asmPackage.INDEXED__RD, oldRd, newRd);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -106,20 +125,20 @@ public class IndexedImpl extends MinimalEObjectImpl.Container implements Indexed
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setReg(Registers newReg)
+  public void setRd(Registers newRd)
   {
-    if (newReg != reg)
+    if (newRd != rd)
     {
       NotificationChain msgs = null;
-      if (reg != null)
-        msgs = ((InternalEObject)reg).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.INDEXED__REG, null, msgs);
-      if (newReg != null)
-        msgs = ((InternalEObject)newReg).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.INDEXED__REG, null, msgs);
-      msgs = basicSetReg(newReg, msgs);
+      if (rd != null)
+        msgs = ((InternalEObject)rd).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.INDEXED__RD, null, msgs);
+      if (newRd != null)
+        msgs = ((InternalEObject)newRd).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.INDEXED__RD, null, msgs);
+      msgs = basicSetRd(newRd, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.INDEXED__REG, newReg, newReg));
+      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.INDEXED__RD, newRd, newRd));
   }
 
   /**
@@ -127,9 +146,9 @@ public class IndexedImpl extends MinimalEObjectImpl.Container implements Indexed
    * <!-- end-user-doc -->
    * @generated
    */
-  public HexaDecimal getImediate8()
+  public Registers getRbx()
   {
-    return imediate8;
+    return rbx;
   }
 
   /**
@@ -137,13 +156,13 @@ public class IndexedImpl extends MinimalEObjectImpl.Container implements Indexed
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetImediate8(HexaDecimal newImediate8, NotificationChain msgs)
+  public NotificationChain basicSetRbx(Registers newRbx, NotificationChain msgs)
   {
-    HexaDecimal oldImediate8 = imediate8;
-    imediate8 = newImediate8;
+    Registers oldRbx = rbx;
+    rbx = newRbx;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Pds16asmPackage.INDEXED__IMEDIATE8, oldImediate8, newImediate8);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Pds16asmPackage.INDEXED__RBX, oldRbx, newRbx);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -154,20 +173,43 @@ public class IndexedImpl extends MinimalEObjectImpl.Container implements Indexed
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setImediate8(HexaDecimal newImediate8)
+  public void setRbx(Registers newRbx)
   {
-    if (newImediate8 != imediate8)
+    if (newRbx != rbx)
     {
       NotificationChain msgs = null;
-      if (imediate8 != null)
-        msgs = ((InternalEObject)imediate8).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.INDEXED__IMEDIATE8, null, msgs);
-      if (newImediate8 != null)
-        msgs = ((InternalEObject)newImediate8).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.INDEXED__IMEDIATE8, null, msgs);
-      msgs = basicSetImediate8(newImediate8, msgs);
+      if (rbx != null)
+        msgs = ((InternalEObject)rbx).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.INDEXED__RBX, null, msgs);
+      if (newRbx != null)
+        msgs = ((InternalEObject)newRbx).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.INDEXED__RBX, null, msgs);
+      msgs = basicSetRbx(newRbx, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.INDEXED__IMEDIATE8, newImediate8, newImediate8));
+      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.INDEXED__RBX, newRbx, newRbx));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getIndex()
+  {
+    return index;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setIndex(String newIndex)
+  {
+    String oldIndex = index;
+    index = newIndex;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.INDEXED__INDEX, oldIndex, index));
   }
 
   /**
@@ -180,10 +222,10 @@ public class IndexedImpl extends MinimalEObjectImpl.Container implements Indexed
   {
     switch (featureID)
     {
-      case Pds16asmPackage.INDEXED__REG:
-        return basicSetReg(null, msgs);
-      case Pds16asmPackage.INDEXED__IMEDIATE8:
-        return basicSetImediate8(null, msgs);
+      case Pds16asmPackage.INDEXED__RD:
+        return basicSetRd(null, msgs);
+      case Pds16asmPackage.INDEXED__RBX:
+        return basicSetRbx(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -198,10 +240,12 @@ public class IndexedImpl extends MinimalEObjectImpl.Container implements Indexed
   {
     switch (featureID)
     {
-      case Pds16asmPackage.INDEXED__REG:
-        return getReg();
-      case Pds16asmPackage.INDEXED__IMEDIATE8:
-        return getImediate8();
+      case Pds16asmPackage.INDEXED__RD:
+        return getRd();
+      case Pds16asmPackage.INDEXED__RBX:
+        return getRbx();
+      case Pds16asmPackage.INDEXED__INDEX:
+        return getIndex();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -216,11 +260,14 @@ public class IndexedImpl extends MinimalEObjectImpl.Container implements Indexed
   {
     switch (featureID)
     {
-      case Pds16asmPackage.INDEXED__REG:
-        setReg((Registers)newValue);
+      case Pds16asmPackage.INDEXED__RD:
+        setRd((Registers)newValue);
         return;
-      case Pds16asmPackage.INDEXED__IMEDIATE8:
-        setImediate8((HexaDecimal)newValue);
+      case Pds16asmPackage.INDEXED__RBX:
+        setRbx((Registers)newValue);
+        return;
+      case Pds16asmPackage.INDEXED__INDEX:
+        setIndex((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -236,11 +283,14 @@ public class IndexedImpl extends MinimalEObjectImpl.Container implements Indexed
   {
     switch (featureID)
     {
-      case Pds16asmPackage.INDEXED__REG:
-        setReg((Registers)null);
+      case Pds16asmPackage.INDEXED__RD:
+        setRd((Registers)null);
         return;
-      case Pds16asmPackage.INDEXED__IMEDIATE8:
-        setImediate8((HexaDecimal)null);
+      case Pds16asmPackage.INDEXED__RBX:
+        setRbx((Registers)null);
+        return;
+      case Pds16asmPackage.INDEXED__INDEX:
+        setIndex(INDEX_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -256,12 +306,31 @@ public class IndexedImpl extends MinimalEObjectImpl.Container implements Indexed
   {
     switch (featureID)
     {
-      case Pds16asmPackage.INDEXED__REG:
-        return reg != null;
-      case Pds16asmPackage.INDEXED__IMEDIATE8:
-        return imediate8 != null;
+      case Pds16asmPackage.INDEXED__RD:
+        return rd != null;
+      case Pds16asmPackage.INDEXED__RBX:
+        return rbx != null;
+      case Pds16asmPackage.INDEXED__INDEX:
+        return INDEX_EDEFAULT == null ? index != null : !INDEX_EDEFAULT.equals(index);
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (index: ");
+    result.append(index);
+    result.append(')');
+    return result.toString();
   }
 
 } //IndexedImpl

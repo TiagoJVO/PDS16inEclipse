@@ -1,0 +1,26 @@
+package org.pds16.ui;
+
+import org.eclipse.xtext.ui.editor.syntaxcoloring.IHighlightingConfiguration;
+import org.eclipse.xtext.ui.editor.syntaxcoloring.IHighlightingConfigurationAcceptor;
+
+public class Pds16asmHighlightingConfiguration implements IHighlightingConfiguration{
+
+	public static final String COMMENT = "Comment";
+	
+	@Override
+	public void configure(IHighlightingConfigurationAcceptor acceptor) {
+		addType( acceptor, COMMENT, 50, 0, 0, NORMAL );
+	}
+	
+	public void addType( IHighlightingConfigurationAcceptor acceptor, String s, int r, int g, int b, int style )
+	{
+	TextStyle textStyle = new TextStyle();
+	textStyle.setBackgroundColor(new RGB(255, 255, 255));
+	textStyle.setColor(new RGB(r, g, b));
+	textStyle.setStyle(style);
+	ac
+	
+
+}
+
+}

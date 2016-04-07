@@ -35,22 +35,40 @@ public class Pds16asmParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
-					put(grammarAccess.getOperationsAccess().getAlternatives(), "rule__Operations__Alternatives");
-					put(grammarAccess.getRegistersAccess().getAlternatives(), "rule__Registers__Alternatives");
-					put(grammarAccess.getOperationLDIAccess().getGroup(), "rule__OperationLDI__Group__0");
-					put(grammarAccess.getOperationLD2Access().getGroup(), "rule__OperationLD2__Group__0");
+					put(grammarAccess.getInstructionsAccess().getAlternatives(), "rule__Instructions__Alternatives");
+					put(grammarAccess.getLoadAccess().getAlternatives(), "rule__Load__Alternatives");
+					put(grammarAccess.getLdImmediateAccess().getAlternatives(), "rule__LdImmediate__Alternatives");
+					put(grammarAccess.getLdDirectAccess().getAlternatives(), "rule__LdDirect__Alternatives");
+					put(grammarAccess.getLdIndexedAccess().getAlternatives(), "rule__LdIndexed__Alternatives");
+					put(grammarAccess.getLdBasedIndexedAccess().getAlternatives(), "rule__LdBasedIndexed__Alternatives");
+					put(grammarAccess.getIndexedAccess().getAlternatives_6(), "rule__Indexed__Alternatives_6");
+					put(grammarAccess.getRegistersAccess().getValueAlternatives_0(), "rule__Registers__ValueAlternatives_0");
+					put(grammarAccess.getLdImmediateAccess().getGroup_0(), "rule__LdImmediate__Group_0__0");
+					put(grammarAccess.getLdImmediateAccess().getGroup_1(), "rule__LdImmediate__Group_1__0");
+					put(grammarAccess.getLdDirectAccess().getGroup_0(), "rule__LdDirect__Group_0__0");
+					put(grammarAccess.getLdDirectAccess().getGroup_1(), "rule__LdDirect__Group_1__0");
+					put(grammarAccess.getLdIndexedAccess().getGroup_0(), "rule__LdIndexed__Group_0__0");
+					put(grammarAccess.getLdIndexedAccess().getGroup_1(), "rule__LdIndexed__Group_1__0");
+					put(grammarAccess.getLdBasedIndexedAccess().getGroup_0(), "rule__LdBasedIndexed__Group_0__0");
+					put(grammarAccess.getLdBasedIndexedAccess().getGroup_1(), "rule__LdBasedIndexed__Group_1__0");
+					put(grammarAccess.getImmediateAccess().getGroup(), "rule__Immediate__Group__0");
+					put(grammarAccess.getDirectAccess().getGroup(), "rule__Direct__Group__0");
 					put(grammarAccess.getIndexedAccess().getGroup(), "rule__Indexed__Group__0");
+					put(grammarAccess.getBasedIndexedAccess().getGroup(), "rule__BasedIndexed__Group__0");
 					put(grammarAccess.getHexaDecimalAccess().getGroup(), "rule__HexaDecimal__Group__0");
-					put(grammarAccess.getModelAccess().getOperationsAssignment(), "rule__Model__OperationsAssignment");
-					put(grammarAccess.getOperationLDIAccess().getRegisterAssignment_1(), "rule__OperationLDI__RegisterAssignment_1");
-					put(grammarAccess.getOperationLDIAccess().getImmediate8Assignment_3(), "rule__OperationLDI__Immediate8Assignment_3");
-					put(grammarAccess.getOperationLD2Access().getRegisterAssignment_1(), "rule__OperationLD2__RegisterAssignment_1");
-					put(grammarAccess.getOperationLD2Access().getIndexedAssignment_3(), "rule__OperationLD2__IndexedAssignment_3");
-					put(grammarAccess.getIndexedAccess().getRegAssignment_1(), "rule__Indexed__RegAssignment_1");
-					put(grammarAccess.getIndexedAccess().getImediate8Assignment_3(), "rule__Indexed__Imediate8Assignment_3");
+					put(grammarAccess.getPDS16ASMAccess().getInstuctionsAssignment(), "rule__PDS16ASM__InstuctionsAssignment");
+					put(grammarAccess.getImmediateAccess().getRegisterAssignment_0(), "rule__Immediate__RegisterAssignment_0");
+					put(grammarAccess.getImmediateAccess().getImmediate8Assignment_2(), "rule__Immediate__Immediate8Assignment_2");
+					put(grammarAccess.getDirectAccess().getRegisterAssignment_0(), "rule__Direct__RegisterAssignment_0");
+					put(grammarAccess.getDirectAccess().getDirect7Assignment_2(), "rule__Direct__Direct7Assignment_2");
+					put(grammarAccess.getIndexedAccess().getRdAssignment_0(), "rule__Indexed__RdAssignment_0");
+					put(grammarAccess.getIndexedAccess().getRbxAssignment_3(), "rule__Indexed__RbxAssignment_3");
+					put(grammarAccess.getIndexedAccess().getIndexAssignment_5(), "rule__Indexed__IndexAssignment_5");
+					put(grammarAccess.getBasedIndexedAccess().getRbxAssignment_3(), "rule__BasedIndexed__RbxAssignment_3");
+					put(grammarAccess.getBasedIndexedAccess().getRixAssignment_5(), "rule__BasedIndexed__RixAssignment_5");
 					put(grammarAccess.getHexaDecimalAccess().getNumberAssignment_1(), "rule__HexaDecimal__NumberAssignment_1");
-					put(grammarAccess.getR1Access().getValueAssignment(), "rule__R1__ValueAssignment");
-					put(grammarAccess.getR2Access().getValueAssignment(), "rule__R2__ValueAssignment");
+					put(grammarAccess.getCommentAccess().getValueAssignment(), "rule__Comment__ValueAssignment");
+					put(grammarAccess.getRegistersAccess().getValueAssignment(), "rule__Registers__ValueAssignment");
 				}
 			};
 		}
@@ -61,7 +79,7 @@ public class Pds16asmParser extends AbstractContentAssistParser {
 	protected Collection<FollowElement> getFollowElements(AbstractInternalContentAssistParser parser) {
 		try {
 			InternalPds16asmParser typedParser = (InternalPds16asmParser) parser;
-			typedParser.entryRuleModel();
+			typedParser.entryRulePDS16ASM();
 			return typedParser.getFollowElements();
 		} catch(RecognitionException ex) {
 			throw new RuntimeException(ex);

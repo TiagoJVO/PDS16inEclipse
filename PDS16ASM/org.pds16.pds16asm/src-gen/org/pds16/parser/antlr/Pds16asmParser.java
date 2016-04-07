@@ -27,7 +27,7 @@ public class Pds16asmParser extends AbstractAntlrParser {
 
 	@Override 
 	protected String getDefaultRuleName() {
-		return "Model";
+		return "PDS16ASM";
 	}
 
 	public Pds16asmGrammarAccess getGrammarAccess() {

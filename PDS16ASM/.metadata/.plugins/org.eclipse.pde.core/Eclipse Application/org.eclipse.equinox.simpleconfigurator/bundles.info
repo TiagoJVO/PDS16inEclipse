@@ -894,11 +894,11 @@ org.junit,4.11.0.v201303080030,file:/D:/eclipse-jee-luna-SR2-win32/eclipse/plugi
 org.mozilla.javascript,1.7.2.v201005080400,file:/D:/eclipse-jee-luna-SR2-win32/eclipse/plugins/org.mozilla.javascript_1.7.2.v201005080400.jar,4,false
 org.objectweb.asm,5.0.1.v201404251740,file:/D:/eclipse-jee-luna-SR2-win32/eclipse/plugins/org.objectweb.asm_5.0.1.v201404251740.jar,4,false
 org.objectweb.asm.tree,5.0.1.v201404251740,file:/D:/eclipse-jee-luna-SR2-win32/eclipse/plugins/org.objectweb.asm.tree_5.0.1.v201404251740.jar,4,false
-org.pds16.pds16asm,1.0.0.qualifier,file:/D:/PDS16ASM/org.pds16.pds16asm/,4,false
-org.pds16.pds16asm.ide,1.0.0.qualifier,file:/D:/PDS16ASM/org.pds16.pds16asm.ide/,4,false
-org.pds16.pds16asm.tests,1.0.0.qualifier,file:/D:/PDS16ASM/org.pds16.pds16asm.tests/,4,false
-org.pds16.pds16asm.ui,1.0.0.qualifier,file:/D:/PDS16ASM/org.pds16.pds16asm.ui/,4,false
-org.pds16.pds16asm.ui.tests,1.0.0.qualifier,file:/D:/PDS16ASM/org.pds16.pds16asm.ui.tests/,4,false
+org.pds16.pds16asm,1.0.0.qualifier,file:/D:/Repositorio/PDS16ASM/PDS16ASM/org.pds16.pds16asm/,4,false
+org.pds16.pds16asm.ide,1.0.0.qualifier,file:/D:/Repositorio/PDS16ASM/PDS16ASM/org.pds16.pds16asm.ide/,4,false
+org.pds16.pds16asm.tests,1.0.0.qualifier,file:/D:/Repositorio/PDS16ASM/PDS16ASM/org.pds16.pds16asm.tests/,4,false
+org.pds16.pds16asm.ui,1.0.0.qualifier,file:/D:/Repositorio/PDS16ASM/PDS16ASM/org.pds16.pds16asm.ui/,4,false
+org.pds16.pds16asm.ui.tests,1.0.0.qualifier,file:/D:/Repositorio/PDS16ASM/PDS16ASM/org.pds16.pds16asm.ui.tests/,4,false
 org.sat4j.core,2.3.5.v201308161310,file:/D:/eclipse-jee-luna-SR2-win32/eclipse/plugins/org.sat4j.core_2.3.5.v201308161310.jar,4,false
 org.sat4j.pb,2.3.5.v201404071733,file:/D:/eclipse-jee-luna-SR2-win32/eclipse/plugins/org.sat4j.pb_2.3.5.v201404071733.jar,4,false
 org.slf4j.api,1.7.2.v20121108-1250,file:/D:/eclipse-jee-luna-SR2-win32/eclipse/plugins/org.slf4j.api_1.7.2.v20121108-1250.jar,4,false

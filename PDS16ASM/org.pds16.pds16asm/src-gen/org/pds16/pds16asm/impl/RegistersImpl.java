@@ -4,11 +4,12 @@
 package org.pds16.pds16asm.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.pds16.pds16asm.Pds16asmPackage;
 import org.pds16.pds16asm.Registers;
@@ -20,14 +21,36 @@ import org.pds16.pds16asm.Registers;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.pds16.pds16asm.impl.RegistersImpl#getRbx <em>Rbx</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.impl.RegistersImpl#getRix <em>Rix</em>}</li>
  *   <li>{@link org.pds16.pds16asm.impl.RegistersImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class RegistersImpl extends MinimalEObjectImpl.Container implements Registers
+public class RegistersImpl extends BasedIndexedImpl implements Registers
 {
+  /**
+   * The cached value of the '{@link #getRbx() <em>Rbx</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRbx()
+   * @generated
+   * @ordered
+   */
+  protected Registers rbx;
+
+  /**
+   * The cached value of the '{@link #getRix() <em>Rix</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRix()
+   * @generated
+   * @ordered
+   */
+  protected Registers rix;
+
   /**
    * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -74,6 +97,102 @@ public class RegistersImpl extends MinimalEObjectImpl.Container implements Regis
    * <!-- end-user-doc -->
    * @generated
    */
+  public Registers getRbx()
+  {
+    return rbx;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetRbx(Registers newRbx, NotificationChain msgs)
+  {
+    Registers oldRbx = rbx;
+    rbx = newRbx;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Pds16asmPackage.REGISTERS__RBX, oldRbx, newRbx);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRbx(Registers newRbx)
+  {
+    if (newRbx != rbx)
+    {
+      NotificationChain msgs = null;
+      if (rbx != null)
+        msgs = ((InternalEObject)rbx).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.REGISTERS__RBX, null, msgs);
+      if (newRbx != null)
+        msgs = ((InternalEObject)newRbx).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.REGISTERS__RBX, null, msgs);
+      msgs = basicSetRbx(newRbx, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.REGISTERS__RBX, newRbx, newRbx));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Registers getRix()
+  {
+    return rix;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetRix(Registers newRix, NotificationChain msgs)
+  {
+    Registers oldRix = rix;
+    rix = newRix;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Pds16asmPackage.REGISTERS__RIX, oldRix, newRix);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRix(Registers newRix)
+  {
+    if (newRix != rix)
+    {
+      NotificationChain msgs = null;
+      if (rix != null)
+        msgs = ((InternalEObject)rix).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.REGISTERS__RIX, null, msgs);
+      if (newRix != null)
+        msgs = ((InternalEObject)newRix).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.REGISTERS__RIX, null, msgs);
+      msgs = basicSetRix(newRix, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.REGISTERS__RIX, newRix, newRix));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getValue()
   {
     return value;
@@ -98,10 +217,32 @@ public class RegistersImpl extends MinimalEObjectImpl.Container implements Regis
    * @generated
    */
   @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case Pds16asmPackage.REGISTERS__RBX:
+        return basicSetRbx(null, msgs);
+      case Pds16asmPackage.REGISTERS__RIX:
+        return basicSetRix(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
     switch (featureID)
     {
+      case Pds16asmPackage.REGISTERS__RBX:
+        return getRbx();
+      case Pds16asmPackage.REGISTERS__RIX:
+        return getRix();
       case Pds16asmPackage.REGISTERS__VALUE:
         return getValue();
     }
@@ -118,6 +259,12 @@ public class RegistersImpl extends MinimalEObjectImpl.Container implements Regis
   {
     switch (featureID)
     {
+      case Pds16asmPackage.REGISTERS__RBX:
+        setRbx((Registers)newValue);
+        return;
+      case Pds16asmPackage.REGISTERS__RIX:
+        setRix((Registers)newValue);
+        return;
       case Pds16asmPackage.REGISTERS__VALUE:
         setValue((String)newValue);
         return;
@@ -135,6 +282,12 @@ public class RegistersImpl extends MinimalEObjectImpl.Container implements Regis
   {
     switch (featureID)
     {
+      case Pds16asmPackage.REGISTERS__RBX:
+        setRbx((Registers)null);
+        return;
+      case Pds16asmPackage.REGISTERS__RIX:
+        setRix((Registers)null);
+        return;
       case Pds16asmPackage.REGISTERS__VALUE:
         setValue(VALUE_EDEFAULT);
         return;
@@ -152,6 +305,10 @@ public class RegistersImpl extends MinimalEObjectImpl.Container implements Regis
   {
     switch (featureID)
     {
+      case Pds16asmPackage.REGISTERS__RBX:
+        return rbx != null;
+      case Pds16asmPackage.REGISTERS__RIX:
+        return rix != null;
       case Pds16asmPackage.REGISTERS__VALUE:
         return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
     }

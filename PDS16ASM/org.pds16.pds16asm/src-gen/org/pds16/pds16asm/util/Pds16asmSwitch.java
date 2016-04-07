@@ -73,33 +73,81 @@ public class Pds16asmSwitch<T> extends Switch<T>
   {
     switch (classifierID)
     {
-      case Pds16asmPackage.MODEL:
+      case Pds16asmPackage.PDS16ASM:
       {
-        Model model = (Model)theEObject;
-        T result = caseModel(model);
+        PDS16ASM pds16ASM = (PDS16ASM)theEObject;
+        T result = casePDS16ASM(pds16ASM);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case Pds16asmPackage.OPERATIONS:
+      case Pds16asmPackage.INSTRUCTIONS:
       {
-        Operations operations = (Operations)theEObject;
-        T result = caseOperations(operations);
+        Instructions instructions = (Instructions)theEObject;
+        T result = caseInstructions(instructions);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case Pds16asmPackage.OPERATION_LDI:
+      case Pds16asmPackage.LOAD:
       {
-        OperationLDI operationLDI = (OperationLDI)theEObject;
-        T result = caseOperationLDI(operationLDI);
-        if (result == null) result = caseOperations(operationLDI);
+        Load load = (Load)theEObject;
+        T result = caseLoad(load);
+        if (result == null) result = caseInstructions(load);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case Pds16asmPackage.OPERATION_LD2:
+      case Pds16asmPackage.LD_IMMEDIATE:
       {
-        OperationLD2 operationLD2 = (OperationLD2)theEObject;
-        T result = caseOperationLD2(operationLD2);
-        if (result == null) result = caseOperations(operationLD2);
+        LdImmediate ldImmediate = (LdImmediate)theEObject;
+        T result = caseLdImmediate(ldImmediate);
+        if (result == null) result = caseLoad(ldImmediate);
+        if (result == null) result = caseInstructions(ldImmediate);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case Pds16asmPackage.LD_DIRECT:
+      {
+        LdDirect ldDirect = (LdDirect)theEObject;
+        T result = caseLdDirect(ldDirect);
+        if (result == null) result = caseLoad(ldDirect);
+        if (result == null) result = caseInstructions(ldDirect);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case Pds16asmPackage.LD_INDEXED:
+      {
+        LdIndexed ldIndexed = (LdIndexed)theEObject;
+        T result = caseLdIndexed(ldIndexed);
+        if (result == null) result = caseLoad(ldIndexed);
+        if (result == null) result = caseInstructions(ldIndexed);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case Pds16asmPackage.LD_BASED_INDEXED:
+      {
+        LdBasedIndexed ldBasedIndexed = (LdBasedIndexed)theEObject;
+        T result = caseLdBasedIndexed(ldBasedIndexed);
+        if (result == null) result = caseLoad(ldBasedIndexed);
+        if (result == null) result = caseInstructions(ldBasedIndexed);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case Pds16asmPackage.IMMEDIATE:
+      {
+        Immediate immediate = (Immediate)theEObject;
+        T result = caseImmediate(immediate);
+        if (result == null) result = caseLdImmediate(immediate);
+        if (result == null) result = caseLoad(immediate);
+        if (result == null) result = caseInstructions(immediate);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case Pds16asmPackage.DIRECT:
+      {
+        Direct direct = (Direct)theEObject;
+        T result = caseDirect(direct);
+        if (result == null) result = caseLdDirect(direct);
+        if (result == null) result = caseLoad(direct);
+        if (result == null) result = caseInstructions(direct);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -107,6 +155,19 @@ public class Pds16asmSwitch<T> extends Switch<T>
       {
         Indexed indexed = (Indexed)theEObject;
         T result = caseIndexed(indexed);
+        if (result == null) result = caseLdIndexed(indexed);
+        if (result == null) result = caseLoad(indexed);
+        if (result == null) result = caseInstructions(indexed);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case Pds16asmPackage.BASED_INDEXED:
+      {
+        BasedIndexed basedIndexed = (BasedIndexed)theEObject;
+        T result = caseBasedIndexed(basedIndexed);
+        if (result == null) result = caseLdBasedIndexed(basedIndexed);
+        if (result == null) result = caseLoad(basedIndexed);
+        if (result == null) result = caseInstructions(basedIndexed);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -117,26 +178,22 @@ public class Pds16asmSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case Pds16asmPackage.COMMENT:
+      {
+        Comment comment = (Comment)theEObject;
+        T result = caseComment(comment);
+        if (result == null) result = caseInstructions(comment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case Pds16asmPackage.REGISTERS:
       {
         Registers registers = (Registers)theEObject;
         T result = caseRegisters(registers);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case Pds16asmPackage.R1:
-      {
-        R1 r1 = (R1)theEObject;
-        T result = caseR1(r1);
-        if (result == null) result = caseRegisters(r1);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case Pds16asmPackage.R2:
-      {
-        R2 r2 = (R2)theEObject;
-        T result = caseR2(r2);
-        if (result == null) result = caseRegisters(r2);
+        if (result == null) result = caseBasedIndexed(registers);
+        if (result == null) result = caseLdBasedIndexed(registers);
+        if (result == null) result = caseLoad(registers);
+        if (result == null) result = caseInstructions(registers);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -145,65 +202,145 @@ public class Pds16asmSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Model</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>PDS16ASM</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Model</em>'.
+   * @return the result of interpreting the object as an instance of '<em>PDS16ASM</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseModel(Model object)
+  public T casePDS16ASM(PDS16ASM object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Operations</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Instructions</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Operations</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Instructions</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseOperations(Operations object)
+  public T caseInstructions(Instructions object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Operation LDI</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Load</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Operation LDI</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Load</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseOperationLDI(OperationLDI object)
+  public T caseLoad(Load object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Operation LD2</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Ld Immediate</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Operation LD2</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Ld Immediate</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseOperationLD2(OperationLD2 object)
+  public T caseLdImmediate(LdImmediate object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Ld Direct</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Ld Direct</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLdDirect(LdDirect object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Ld Indexed</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Ld Indexed</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLdIndexed(LdIndexed object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Ld Based Indexed</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Ld Based Indexed</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLdBasedIndexed(LdBasedIndexed object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Immediate</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Immediate</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseImmediate(Immediate object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Direct</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Direct</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDirect(Direct object)
   {
     return null;
   }
@@ -225,6 +362,22 @@ public class Pds16asmSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Based Indexed</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Based Indexed</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBasedIndexed(BasedIndexed object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Hexa Decimal</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -241,6 +394,22 @@ public class Pds16asmSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Comment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Comment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseComment(Comment object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Registers</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -252,38 +421,6 @@ public class Pds16asmSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseRegisters(Registers object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>R1</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>R1</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseR1(R1 object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>R2</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>R2</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseR2(R2 object)
   {
     return null;
   }

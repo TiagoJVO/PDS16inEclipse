@@ -22,241 +22,482 @@ import org.eclipse.xtext.service.GrammarProvider;
 @Singleton
 public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 	
-	public class ModelElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Model");
-		private final Assignment cOperationsAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cOperationsOperationsParserRuleCall_0 = (RuleCall)cOperationsAssignment.eContents().get(0);
+	public class PDS16ASMElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.PDS16ASM");
+		private final Assignment cInstuctionsAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cInstuctionsInstructionsParserRuleCall_0 = (RuleCall)cInstuctionsAssignment.eContents().get(0);
 		
-		//Model:
-		//	operations+=Operations*;
+		//PDS16ASM:
+		//	instuctions+=Instructions*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//operations+=Operations*
-		public Assignment getOperationsAssignment() { return cOperationsAssignment; }
+		//instuctions+=Instructions*
+		public Assignment getInstuctionsAssignment() { return cInstuctionsAssignment; }
 		
-		//Operations
-		public RuleCall getOperationsOperationsParserRuleCall_0() { return cOperationsOperationsParserRuleCall_0; }
+		//Instructions
+		public RuleCall getInstuctionsInstructionsParserRuleCall_0() { return cInstuctionsInstructionsParserRuleCall_0; }
 	}
-	public class OperationsElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Operations");
+	public class InstructionsElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Instructions");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cOperationLDIParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cOperationLD2ParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cLoadParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cCommentParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//Operations:
-		//	OperationLDI | OperationLD2;
+		//Instructions:
+		//	Load | Comment;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//OperationLDI | OperationLD2
+		//Load | Comment
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//OperationLDI
-		public RuleCall getOperationLDIParserRuleCall_0() { return cOperationLDIParserRuleCall_0; }
+		//Load
+		public RuleCall getLoadParserRuleCall_0() { return cLoadParserRuleCall_0; }
 		
-		//OperationLD2
-		public RuleCall getOperationLD2ParserRuleCall_1() { return cOperationLD2ParserRuleCall_1; }
+		//Comment
+		public RuleCall getCommentParserRuleCall_1() { return cCommentParserRuleCall_1; }
 	}
-	public class OperationLDIElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.OperationLDI");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cLDIKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cRegisterAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cRegisterRegistersParserRuleCall_1_0 = (RuleCall)cRegisterAssignment_1.eContents().get(0);
-		private final Keyword cCommaKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cImmediate8Assignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cImmediate8HexaDecimalParserRuleCall_3_0 = (RuleCall)cImmediate8Assignment_3.eContents().get(0);
-		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
+	public class LoadElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Load");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cLdImmediateParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cLdDirectParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cLdIndexedParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cLdBasedIndexedParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
-		//OperationLDI: / *LDI ex: LDI r1,#0x2f * / 'LDI' register=Registers ',' immediate8=HexaDecimal ';';
+		//Load:
+		//	LdImmediate | LdDirect | LdIndexed | LdBasedIndexed;
 		@Override public ParserRule getRule() { return rule; }
 		
-		/// *LDI ex: LDI r1,#0x2f * / 'LDI' register=Registers ',' immediate8=HexaDecimal ';'
-		public Group getGroup() { return cGroup; }
+		//LdImmediate | LdDirect | LdIndexed | LdBasedIndexed
+		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		/// *LDI ex: LDI r1,#0x2f * / 'LDI'
-		public Keyword getLDIKeyword_0() { return cLDIKeyword_0; }
+		//LdImmediate
+		public RuleCall getLdImmediateParserRuleCall_0() { return cLdImmediateParserRuleCall_0; }
 		
-		//register=Registers
-		public Assignment getRegisterAssignment_1() { return cRegisterAssignment_1; }
+		//LdDirect
+		public RuleCall getLdDirectParserRuleCall_1() { return cLdDirectParserRuleCall_1; }
 		
-		//Registers
-		public RuleCall getRegisterRegistersParserRuleCall_1_0() { return cRegisterRegistersParserRuleCall_1_0; }
+		//LdIndexed
+		public RuleCall getLdIndexedParserRuleCall_2() { return cLdIndexedParserRuleCall_2; }
 		
-		//','
-		public Keyword getCommaKeyword_2() { return cCommaKeyword_2; }
-		
-		//immediate8=HexaDecimal
-		public Assignment getImmediate8Assignment_3() { return cImmediate8Assignment_3; }
-		
-		//HexaDecimal
-		public RuleCall getImmediate8HexaDecimalParserRuleCall_3_0() { return cImmediate8HexaDecimalParserRuleCall_3_0; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_4() { return cSemicolonKeyword_4; }
+		//LdBasedIndexed
+		public RuleCall getLdBasedIndexedParserRuleCall_3() { return cLdBasedIndexedParserRuleCall_3; }
 	}
-	public class OperationLD2Elements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.OperationLD2");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cLDKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cRegisterAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cRegisterRegistersParserRuleCall_1_0 = (RuleCall)cRegisterAssignment_1.eContents().get(0);
-		private final Keyword cCommaKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cIndexedAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cIndexedIndexedParserRuleCall_3_0 = (RuleCall)cIndexedAssignment_3.eContents().get(0);
-		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
+	public class LdImmediateElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.LdImmediate");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
+		private final Keyword cLdiKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
+		private final RuleCall cImmediateParserRuleCall_0_1 = (RuleCall)cGroup_0.eContents().get(1);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
+		private final Keyword cLdihKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final RuleCall cImmediateParserRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
 		
-		//OperationLD2: / *LD RD,[RBX,#idx3]* / 'LD' register=Registers ',' indexed=Indexed ';';
+		/// *Load* / LdImmediate:
+		//	'ldi' Immediate | 'ldih' Immediate;
 		@Override public ParserRule getRule() { return rule; }
 		
-		/// *LD RD,[RBX,#idx3]* / 'LD' register=Registers ',' indexed=Indexed ';'
-		public Group getGroup() { return cGroup; }
+		//'ldi' Immediate | 'ldih' Immediate
+		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		/// *LD RD,[RBX,#idx3]* / 'LD'
-		public Keyword getLDKeyword_0() { return cLDKeyword_0; }
+		//'ldi' Immediate
+		public Group getGroup_0() { return cGroup_0; }
 		
-		//register=Registers
-		public Assignment getRegisterAssignment_1() { return cRegisterAssignment_1; }
+		//'ldi'
+		public Keyword getLdiKeyword_0_0() { return cLdiKeyword_0_0; }
 		
-		//Registers
-		public RuleCall getRegisterRegistersParserRuleCall_1_0() { return cRegisterRegistersParserRuleCall_1_0; }
+		//Immediate
+		public RuleCall getImmediateParserRuleCall_0_1() { return cImmediateParserRuleCall_0_1; }
 		
-		//','
-		public Keyword getCommaKeyword_2() { return cCommaKeyword_2; }
+		//'ldih' Immediate
+		public Group getGroup_1() { return cGroup_1; }
 		
-		//indexed=Indexed
-		public Assignment getIndexedAssignment_3() { return cIndexedAssignment_3; }
+		//'ldih'
+		public Keyword getLdihKeyword_1_0() { return cLdihKeyword_1_0; }
+		
+		//Immediate
+		public RuleCall getImmediateParserRuleCall_1_1() { return cImmediateParserRuleCall_1_1; }
+	}
+	public class LdDirectElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.LdDirect");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
+		private final Keyword cLdKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
+		private final RuleCall cDirectParserRuleCall_0_1 = (RuleCall)cGroup_0.eContents().get(1);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
+		private final Keyword cLdbKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final RuleCall cDirectParserRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		
+		//LdDirect:
+		//	'ld' Direct | 'ldb' Direct;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'ld' Direct | 'ldb' Direct
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//'ld' Direct
+		public Group getGroup_0() { return cGroup_0; }
+		
+		//'ld'
+		public Keyword getLdKeyword_0_0() { return cLdKeyword_0_0; }
+		
+		//Direct
+		public RuleCall getDirectParserRuleCall_0_1() { return cDirectParserRuleCall_0_1; }
+		
+		//'ldb' Direct
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//'ldb'
+		public Keyword getLdbKeyword_1_0() { return cLdbKeyword_1_0; }
+		
+		//Direct
+		public RuleCall getDirectParserRuleCall_1_1() { return cDirectParserRuleCall_1_1; }
+	}
+	public class LdIndexedElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.LdIndexed");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
+		private final Keyword cLdKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
+		private final RuleCall cIndexedParserRuleCall_0_1 = (RuleCall)cGroup_0.eContents().get(1);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
+		private final Keyword cLdbKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final RuleCall cIndexedParserRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		
+		//LdIndexed:
+		//	'ld' Indexed | 'ldb' Indexed;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'ld' Indexed | 'ldb' Indexed
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//'ld' Indexed
+		public Group getGroup_0() { return cGroup_0; }
+		
+		//'ld'
+		public Keyword getLdKeyword_0_0() { return cLdKeyword_0_0; }
 		
 		//Indexed
-		public RuleCall getIndexedIndexedParserRuleCall_3_0() { return cIndexedIndexedParserRuleCall_3_0; }
+		public RuleCall getIndexedParserRuleCall_0_1() { return cIndexedParserRuleCall_0_1; }
 		
-		//';'
-		public Keyword getSemicolonKeyword_4() { return cSemicolonKeyword_4; }
+		//'ldb' Indexed
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//'ldb'
+		public Keyword getLdbKeyword_1_0() { return cLdbKeyword_1_0; }
+		
+		//Indexed
+		public RuleCall getIndexedParserRuleCall_1_1() { return cIndexedParserRuleCall_1_1; }
+	}
+	public class LdBasedIndexedElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.LdBasedIndexed");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
+		private final Keyword cLdKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
+		private final RuleCall cBasedIndexedParserRuleCall_0_1 = (RuleCall)cGroup_0.eContents().get(1);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
+		private final Keyword cLdbKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final RuleCall cBasedIndexedParserRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		
+		//LdBasedIndexed:
+		//	'ld' BasedIndexed | 'ldb' BasedIndexed;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'ld' BasedIndexed | 'ldb' BasedIndexed
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//'ld' BasedIndexed
+		public Group getGroup_0() { return cGroup_0; }
+		
+		//'ld'
+		public Keyword getLdKeyword_0_0() { return cLdKeyword_0_0; }
+		
+		//BasedIndexed
+		public RuleCall getBasedIndexedParserRuleCall_0_1() { return cBasedIndexedParserRuleCall_0_1; }
+		
+		//'ldb' BasedIndexed
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//'ldb'
+		public Keyword getLdbKeyword_1_0() { return cLdbKeyword_1_0; }
+		
+		//BasedIndexed
+		public RuleCall getBasedIndexedParserRuleCall_1_1() { return cBasedIndexedParserRuleCall_1_1; }
+	}
+	public class ImmediateElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Immediate");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cRegisterAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cRegisterRegistersParserRuleCall_0_0 = (RuleCall)cRegisterAssignment_0.eContents().get(0);
+		private final Keyword cCommaKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cImmediate8Assignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cImmediate8HexaDecimalParserRuleCall_2_0 = (RuleCall)cImmediate8Assignment_2.eContents().get(0);
+		
+		/// *Type Operations* / Immediate:
+		//	register=Registers ',' immediate8=HexaDecimal;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//register=Registers ',' immediate8=HexaDecimal
+		public Group getGroup() { return cGroup; }
+		
+		//register=Registers
+		public Assignment getRegisterAssignment_0() { return cRegisterAssignment_0; }
+		
+		//Registers
+		public RuleCall getRegisterRegistersParserRuleCall_0_0() { return cRegisterRegistersParserRuleCall_0_0; }
+		
+		//','
+		public Keyword getCommaKeyword_1() { return cCommaKeyword_1; }
+		
+		//immediate8=HexaDecimal
+		public Assignment getImmediate8Assignment_2() { return cImmediate8Assignment_2; }
+		
+		//HexaDecimal
+		public RuleCall getImmediate8HexaDecimalParserRuleCall_2_0() { return cImmediate8HexaDecimalParserRuleCall_2_0; }
+	}
+	public class DirectElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Direct");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cRegisterAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cRegisterRegistersParserRuleCall_0_0 = (RuleCall)cRegisterAssignment_0.eContents().get(0);
+		private final Keyword cCommaKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cDirect7Assignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cDirect7HEXTerminalRuleCall_2_0 = (RuleCall)cDirect7Assignment_2.eContents().get(0);
+		
+		//Direct:
+		//	register=Registers ',' direct7=HEX;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//register=Registers ',' direct7=HEX
+		public Group getGroup() { return cGroup; }
+		
+		//register=Registers
+		public Assignment getRegisterAssignment_0() { return cRegisterAssignment_0; }
+		
+		//Registers
+		public RuleCall getRegisterRegistersParserRuleCall_0_0() { return cRegisterRegistersParserRuleCall_0_0; }
+		
+		//','
+		public Keyword getCommaKeyword_1() { return cCommaKeyword_1; }
+		
+		//direct7=HEX
+		public Assignment getDirect7Assignment_2() { return cDirect7Assignment_2; }
+		
+		//HEX
+		public RuleCall getDirect7HEXTerminalRuleCall_2_0() { return cDirect7HEXTerminalRuleCall_2_0; }
 	}
 	public class IndexedElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Indexed");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cLeftSquareBracketKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cRegAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cRegRegistersParserRuleCall_1_0 = (RuleCall)cRegAssignment_1.eContents().get(0);
-		private final Keyword cCommaKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cImediate8Assignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cImediate8HexaDecimalParserRuleCall_3_0 = (RuleCall)cImediate8Assignment_3.eContents().get(0);
-		private final Keyword cRightSquareBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cRdAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cRdRegistersParserRuleCall_0_0 = (RuleCall)cRdAssignment_0.eContents().get(0);
+		private final Keyword cCommaKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cLeftSquareBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cRbxAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cRbxRegistersParserRuleCall_3_0 = (RuleCall)cRbxAssignment_3.eContents().get(0);
+		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cIndexAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final Keyword cIndexNumberSignKeyword_5_0 = (Keyword)cIndexAssignment_5.eContents().get(0);
+		private final Alternatives cAlternatives_6 = (Alternatives)cGroup.eContents().get(6);
+		private final RuleCall cINTTerminalRuleCall_6_0 = (RuleCall)cAlternatives_6.eContents().get(0);
+		private final RuleCall cHEXTerminalRuleCall_6_1 = (RuleCall)cAlternatives_6.eContents().get(1);
+		private final Keyword cRightSquareBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
-		//Indexed: //Ou seja podemos aproveitar isto tanto para LD e ST!!
-		//	'[' reg=Registers ',' imediate8=HexaDecimal ']';
+		//Indexed:
+		//	rd=Registers ',' '[' rbx=Registers ',' index='#' (INT | HEX) ']';
 		@Override public ParserRule getRule() { return rule; }
 		
-		////Ou seja podemos aproveitar isto tanto para LD e ST!!
-		//'[' reg=Registers ',' imediate8=HexaDecimal ']'
+		//rd=Registers ',' '[' rbx=Registers ',' index='#' (INT | HEX) ']'
 		public Group getGroup() { return cGroup; }
 		
-		////Ou seja podemos aproveitar isto tanto para LD e ST!!
-		//'['
-		public Keyword getLeftSquareBracketKeyword_0() { return cLeftSquareBracketKeyword_0; }
-		
-		//reg=Registers
-		public Assignment getRegAssignment_1() { return cRegAssignment_1; }
+		//rd=Registers
+		public Assignment getRdAssignment_0() { return cRdAssignment_0; }
 		
 		//Registers
-		public RuleCall getRegRegistersParserRuleCall_1_0() { return cRegRegistersParserRuleCall_1_0; }
+		public RuleCall getRdRegistersParserRuleCall_0_0() { return cRdRegistersParserRuleCall_0_0; }
 		
 		//','
-		public Keyword getCommaKeyword_2() { return cCommaKeyword_2; }
+		public Keyword getCommaKeyword_1() { return cCommaKeyword_1; }
 		
-		//imediate8=HexaDecimal
-		public Assignment getImediate8Assignment_3() { return cImediate8Assignment_3; }
+		//'['
+		public Keyword getLeftSquareBracketKeyword_2() { return cLeftSquareBracketKeyword_2; }
 		
-		//HexaDecimal
-		public RuleCall getImediate8HexaDecimalParserRuleCall_3_0() { return cImediate8HexaDecimalParserRuleCall_3_0; }
+		//rbx=Registers
+		public Assignment getRbxAssignment_3() { return cRbxAssignment_3; }
+		
+		//Registers
+		public RuleCall getRbxRegistersParserRuleCall_3_0() { return cRbxRegistersParserRuleCall_3_0; }
+		
+		//','
+		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
+		
+		//index='#'
+		public Assignment getIndexAssignment_5() { return cIndexAssignment_5; }
+		
+		//'#'
+		public Keyword getIndexNumberSignKeyword_5_0() { return cIndexNumberSignKeyword_5_0; }
+		
+		//(INT | HEX)
+		public Alternatives getAlternatives_6() { return cAlternatives_6; }
+		
+		//INT
+		public RuleCall getINTTerminalRuleCall_6_0() { return cINTTerminalRuleCall_6_0; }
+		
+		//HEX
+		public RuleCall getHEXTerminalRuleCall_6_1() { return cHEXTerminalRuleCall_6_1; }
 		
 		//']'
-		public Keyword getRightSquareBracketKeyword_4() { return cRightSquareBracketKeyword_4; }
+		public Keyword getRightSquareBracketKeyword_7() { return cRightSquareBracketKeyword_7; }
+	}
+	public class BasedIndexedElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.BasedIndexed");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cRegistersParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Keyword cCommaKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cLeftSquareBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cRbxAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cRbxRegistersParserRuleCall_3_0 = (RuleCall)cRbxAssignment_3.eContents().get(0);
+		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cRixAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cRixRegistersParserRuleCall_5_0 = (RuleCall)cRixAssignment_5.eContents().get(0);
+		private final Keyword cRightSquareBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		
+		//BasedIndexed:
+		//	Registers ',' '[' rbx=Registers ',' rix=Registers ']';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//Registers ',' '[' rbx=Registers ',' rix=Registers ']'
+		public Group getGroup() { return cGroup; }
+		
+		//Registers
+		public RuleCall getRegistersParserRuleCall_0() { return cRegistersParserRuleCall_0; }
+		
+		//','
+		public Keyword getCommaKeyword_1() { return cCommaKeyword_1; }
+		
+		//'['
+		public Keyword getLeftSquareBracketKeyword_2() { return cLeftSquareBracketKeyword_2; }
+		
+		//rbx=Registers
+		public Assignment getRbxAssignment_3() { return cRbxAssignment_3; }
+		
+		//Registers
+		public RuleCall getRbxRegistersParserRuleCall_3_0() { return cRbxRegistersParserRuleCall_3_0; }
+		
+		//','
+		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
+		
+		//rix=Registers
+		public Assignment getRixAssignment_5() { return cRixAssignment_5; }
+		
+		//Registers
+		public RuleCall getRixRegistersParserRuleCall_5_0() { return cRixRegistersParserRuleCall_5_0; }
+		
+		//']'
+		public Keyword getRightSquareBracketKeyword_6() { return cRightSquareBracketKeyword_6; }
 	}
 	public class HexaDecimalElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.HexaDecimal");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cNumberSignKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNumberAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNumberIDTerminalRuleCall_1_0 = (RuleCall)cNumberAssignment_1.eContents().get(0);
+		private final RuleCall cNumberHEXTerminalRuleCall_1_0 = (RuleCall)cNumberAssignment_1.eContents().get(0);
 		
 		//HexaDecimal:
-		//	'#' number=ID;
+		//	'#' number=HEX;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'#' number=ID
+		//'#' number=HEX
 		public Group getGroup() { return cGroup; }
 		
 		//'#'
 		public Keyword getNumberSignKeyword_0() { return cNumberSignKeyword_0; }
 		
-		//number=ID
+		//number=HEX
 		public Assignment getNumberAssignment_1() { return cNumberAssignment_1; }
 		
-		//ID
-		public RuleCall getNumberIDTerminalRuleCall_1_0() { return cNumberIDTerminalRuleCall_1_0; }
+		//HEX
+		public RuleCall getNumberHEXTerminalRuleCall_1_0() { return cNumberHEXTerminalRuleCall_1_0; }
+	}
+	public class CommentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Comment");
+		private final Assignment cValueAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cValueCOMTTerminalRuleCall_0 = (RuleCall)cValueAssignment.eContents().get(0);
+		
+		/// *Utils* / Comment:
+		//	value=COMT;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//value=COMT
+		public Assignment getValueAssignment() { return cValueAssignment; }
+		
+		//COMT
+		public RuleCall getValueCOMTTerminalRuleCall_0() { return cValueCOMTTerminalRuleCall_0; }
 	}
 	public class RegistersElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Registers");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cR1ParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cR2ParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final Assignment cValueAssignment = (Assignment)rule.eContents().get(1);
+		private final Alternatives cValueAlternatives_0 = (Alternatives)cValueAssignment.eContents().get(0);
+		private final Keyword cValueR0Keyword_0_0 = (Keyword)cValueAlternatives_0.eContents().get(0);
+		private final Keyword cValueR1Keyword_0_1 = (Keyword)cValueAlternatives_0.eContents().get(1);
+		private final Keyword cValueR2Keyword_0_2 = (Keyword)cValueAlternatives_0.eContents().get(2);
+		private final Keyword cValueR3Keyword_0_3 = (Keyword)cValueAlternatives_0.eContents().get(3);
+		private final Keyword cValueR4Keyword_0_4 = (Keyword)cValueAlternatives_0.eContents().get(4);
+		private final Keyword cValueR5Keyword_0_5 = (Keyword)cValueAlternatives_0.eContents().get(5);
+		private final Keyword cValueR6Keyword_0_6 = (Keyword)cValueAlternatives_0.eContents().get(6);
+		private final Keyword cValueR7Keyword_0_7 = (Keyword)cValueAlternatives_0.eContents().get(7);
 		
 		//Registers:
-		//	R1 | R2;
+		//	value=('r0' | 'r1' | 'r2' | 'r3' | 'r4' | 'r5' | 'r6' | 'r7');
 		@Override public ParserRule getRule() { return rule; }
 		
-		//R1 | R2
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//R1
-		public RuleCall getR1ParserRuleCall_0() { return cR1ParserRuleCall_0; }
-		
-		//R2
-		public RuleCall getR2ParserRuleCall_1() { return cR2ParserRuleCall_1; }
-	}
-	public class R1Elements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.R1");
-		private final Assignment cValueAssignment = (Assignment)rule.eContents().get(1);
-		private final Keyword cValueR1Keyword_0 = (Keyword)cValueAssignment.eContents().get(0);
-		
-		//R1:
-		//	value='R1';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//value='R1'
+		//value=('r0' | 'r1' | 'r2' | 'r3' | 'r4' | 'r5' | 'r6' | 'r7')
 		public Assignment getValueAssignment() { return cValueAssignment; }
 		
-		//'R1'
-		public Keyword getValueR1Keyword_0() { return cValueR1Keyword_0; }
-	}
-	public class R2Elements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.R2");
-		private final Assignment cValueAssignment = (Assignment)rule.eContents().get(1);
-		private final Keyword cValueR2Keyword_0 = (Keyword)cValueAssignment.eContents().get(0);
+		//('r0' | 'r1' | 'r2' | 'r3' | 'r4' | 'r5' | 'r6' | 'r7')
+		public Alternatives getValueAlternatives_0() { return cValueAlternatives_0; }
 		
-		//R2:
-		//	value='R2';
-		@Override public ParserRule getRule() { return rule; }
+		//'r0'
+		public Keyword getValueR0Keyword_0_0() { return cValueR0Keyword_0_0; }
 		
-		//value='R2'
-		public Assignment getValueAssignment() { return cValueAssignment; }
+		//'r1'
+		public Keyword getValueR1Keyword_0_1() { return cValueR1Keyword_0_1; }
 		
-		//'R2'
-		public Keyword getValueR2Keyword_0() { return cValueR2Keyword_0; }
+		//'r2'
+		public Keyword getValueR2Keyword_0_2() { return cValueR2Keyword_0_2; }
+		
+		//'r3'
+		public Keyword getValueR3Keyword_0_3() { return cValueR3Keyword_0_3; }
+		
+		//'r4'
+		public Keyword getValueR4Keyword_0_4() { return cValueR4Keyword_0_4; }
+		
+		//'r5'
+		public Keyword getValueR5Keyword_0_5() { return cValueR5Keyword_0_5; }
+		
+		//'r6'
+		public Keyword getValueR6Keyword_0_6() { return cValueR6Keyword_0_6; }
+		
+		//'r7'
+		public Keyword getValueR7Keyword_0_7() { return cValueR7Keyword_0_7; }
 	}
 	
 	
-	private final ModelElements pModel;
-	private final OperationsElements pOperations;
-	private final OperationLDIElements pOperationLDI;
-	private final OperationLD2Elements pOperationLD2;
+	private final PDS16ASMElements pPDS16ASM;
+	private final InstructionsElements pInstructions;
+	private final LoadElements pLoad;
+	private final LdImmediateElements pLdImmediate;
+	private final LdDirectElements pLdDirect;
+	private final LdIndexedElements pLdIndexed;
+	private final LdBasedIndexedElements pLdBasedIndexed;
+	private final ImmediateElements pImmediate;
+	private final DirectElements pDirect;
 	private final IndexedElements pIndexed;
+	private final BasedIndexedElements pBasedIndexed;
 	private final HexaDecimalElements pHexaDecimal;
+	private final CommentElements pComment;
 	private final RegistersElements pRegisters;
-	private final R1Elements pR1;
-	private final R2Elements pR2;
-	private final TerminalRule tID;
+	private final TerminalRule tHEX;
+	private final TerminalRule tCOMT;
 	
 	private final Grammar grammar;
 	
@@ -267,16 +508,22 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 			TerminalsGrammarAccess gaTerminals) {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
-		this.pModel = new ModelElements();
-		this.pOperations = new OperationsElements();
-		this.pOperationLDI = new OperationLDIElements();
-		this.pOperationLD2 = new OperationLD2Elements();
+		this.pPDS16ASM = new PDS16ASMElements();
+		this.pInstructions = new InstructionsElements();
+		this.pLoad = new LoadElements();
+		this.pLdImmediate = new LdImmediateElements();
+		this.pLdDirect = new LdDirectElements();
+		this.pLdIndexed = new LdIndexedElements();
+		this.pLdBasedIndexed = new LdBasedIndexedElements();
+		this.pImmediate = new ImmediateElements();
+		this.pDirect = new DirectElements();
 		this.pIndexed = new IndexedElements();
+		this.pBasedIndexed = new BasedIndexedElements();
 		this.pHexaDecimal = new HexaDecimalElements();
+		this.pComment = new CommentElements();
 		this.pRegisters = new RegistersElements();
-		this.pR1 = new R1Elements();
-		this.pR2 = new R2Elements();
-		this.tID = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.ID");
+		this.tHEX = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.HEX");
+		this.tCOMT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.COMT");
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -306,46 +553,98 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
-	//Model:
-	//	operations+=Operations*;
-	public ModelElements getModelAccess() {
-		return pModel;
+	//PDS16ASM:
+	//	instuctions+=Instructions*;
+	public PDS16ASMElements getPDS16ASMAccess() {
+		return pPDS16ASM;
 	}
 	
-	public ParserRule getModelRule() {
-		return getModelAccess().getRule();
+	public ParserRule getPDS16ASMRule() {
+		return getPDS16ASMAccess().getRule();
 	}
 	
-	//Operations:
-	//	OperationLDI | OperationLD2;
-	public OperationsElements getOperationsAccess() {
-		return pOperations;
+	//Instructions:
+	//	Load | Comment;
+	public InstructionsElements getInstructionsAccess() {
+		return pInstructions;
 	}
 	
-	public ParserRule getOperationsRule() {
-		return getOperationsAccess().getRule();
+	public ParserRule getInstructionsRule() {
+		return getInstructionsAccess().getRule();
 	}
 	
-	//OperationLDI: / *LDI ex: LDI r1,#0x2f * / 'LDI' register=Registers ',' immediate8=HexaDecimal ';';
-	public OperationLDIElements getOperationLDIAccess() {
-		return pOperationLDI;
+	//Load:
+	//	LdImmediate | LdDirect | LdIndexed | LdBasedIndexed;
+	public LoadElements getLoadAccess() {
+		return pLoad;
 	}
 	
-	public ParserRule getOperationLDIRule() {
-		return getOperationLDIAccess().getRule();
+	public ParserRule getLoadRule() {
+		return getLoadAccess().getRule();
 	}
 	
-	//OperationLD2: / *LD RD,[RBX,#idx3]* / 'LD' register=Registers ',' indexed=Indexed ';';
-	public OperationLD2Elements getOperationLD2Access() {
-		return pOperationLD2;
+	/// *Load* / LdImmediate:
+	//	'ldi' Immediate | 'ldih' Immediate;
+	public LdImmediateElements getLdImmediateAccess() {
+		return pLdImmediate;
 	}
 	
-	public ParserRule getOperationLD2Rule() {
-		return getOperationLD2Access().getRule();
+	public ParserRule getLdImmediateRule() {
+		return getLdImmediateAccess().getRule();
 	}
 	
-	//Indexed: //Ou seja podemos aproveitar isto tanto para LD e ST!!
-	//	'[' reg=Registers ',' imediate8=HexaDecimal ']';
+	//LdDirect:
+	//	'ld' Direct | 'ldb' Direct;
+	public LdDirectElements getLdDirectAccess() {
+		return pLdDirect;
+	}
+	
+	public ParserRule getLdDirectRule() {
+		return getLdDirectAccess().getRule();
+	}
+	
+	//LdIndexed:
+	//	'ld' Indexed | 'ldb' Indexed;
+	public LdIndexedElements getLdIndexedAccess() {
+		return pLdIndexed;
+	}
+	
+	public ParserRule getLdIndexedRule() {
+		return getLdIndexedAccess().getRule();
+	}
+	
+	//LdBasedIndexed:
+	//	'ld' BasedIndexed | 'ldb' BasedIndexed;
+	public LdBasedIndexedElements getLdBasedIndexedAccess() {
+		return pLdBasedIndexed;
+	}
+	
+	public ParserRule getLdBasedIndexedRule() {
+		return getLdBasedIndexedAccess().getRule();
+	}
+	
+	/// *Type Operations* / Immediate:
+	//	register=Registers ',' immediate8=HexaDecimal;
+	public ImmediateElements getImmediateAccess() {
+		return pImmediate;
+	}
+	
+	public ParserRule getImmediateRule() {
+		return getImmediateAccess().getRule();
+	}
+	
+	//Direct:
+	//	register=Registers ',' direct7=HEX;
+	public DirectElements getDirectAccess() {
+		return pDirect;
+	}
+	
+	public ParserRule getDirectRule() {
+		return getDirectAccess().getRule();
+	}
+	
+	//Indexed:
+	//	rd=Registers ',' '[' rbx=Registers ',' index='#' (INT | HEX) ']';
 	public IndexedElements getIndexedAccess() {
 		return pIndexed;
 	}
@@ -354,8 +653,18 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		return getIndexedAccess().getRule();
 	}
 	
+	//BasedIndexed:
+	//	Registers ',' '[' rbx=Registers ',' rix=Registers ']';
+	public BasedIndexedElements getBasedIndexedAccess() {
+		return pBasedIndexed;
+	}
+	
+	public ParserRule getBasedIndexedRule() {
+		return getBasedIndexedAccess().getRule();
+	}
+	
 	//HexaDecimal:
-	//	'#' number=ID;
+	//	'#' number=HEX;
 	public HexaDecimalElements getHexaDecimalAccess() {
 		return pHexaDecimal;
 	}
@@ -364,8 +673,18 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		return getHexaDecimalAccess().getRule();
 	}
 	
+	/// *Utils* / Comment:
+	//	value=COMT;
+	public CommentElements getCommentAccess() {
+		return pComment;
+	}
+	
+	public ParserRule getCommentRule() {
+		return getCommentAccess().getRule();
+	}
+	
 	//Registers:
-	//	R1 | R2;
+	//	value=('r0' | 'r1' | 'r2' | 'r3' | 'r4' | 'r5' | 'r6' | 'r7');
 	public RegistersElements getRegistersAccess() {
 		return pRegisters;
 	}
@@ -374,30 +693,22 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		return getRegistersAccess().getRule();
 	}
 	
-	//R1:
-	//	value='R1';
-	public R1Elements getR1Access() {
-		return pR1;
+	//terminal HEX:
+	//	'0' ('x' | 'X') ('0'..'9' | 'a'..'f' | 'A'..'F')+;
+	public TerminalRule getHEXRule() {
+		return tHEX;
 	}
 	
-	public ParserRule getR1Rule() {
-		return getR1Access().getRule();
-	}
-	
-	//R2:
-	//	value='R2';
-	public R2Elements getR2Access() {
-		return pR2;
-	}
-	
-	public ParserRule getR2Rule() {
-		return getR2Access().getRule();
+	//terminal COMT:
+	//	';'->'\n';
+	public TerminalRule getCOMTRule() {
+		return tCOMT;
 	}
 	
 	//terminal ID:
-	//	'0' ('x' | 'X') ('0'..'9' | 'a'..'f' | 'A'..'F')+;
+	//	'^'? ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*;
 	public TerminalRule getIDRule() {
-		return tID;
+		return gaTerminals.getIDRule();
 	}
 	
 	//terminal INT returns ecore::EInt:

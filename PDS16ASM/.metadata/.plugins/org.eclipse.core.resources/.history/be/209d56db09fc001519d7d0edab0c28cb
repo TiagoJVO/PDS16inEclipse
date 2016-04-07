@@ -1,0 +1,14 @@
+grammar org.pds16.Pds16asm with org.eclipse.xtext.common.Terminals
+
+/*Type Operations*/
+Immediate: register=Registers ',' immediate8=HexaDecimal;
+
+Direct: register=Registers ',' direct7=HEX;
+
+Indexed:
+	Registers ',' '[' reg=Registers ',' '#' (INT | HEX) ']' ;
+BasedIndexed: 
+	Registers ',' '[' rbx=Registers ',' rix=Registers ']';
+
+HexaDecimal: 
+	'#' number=HEX;
