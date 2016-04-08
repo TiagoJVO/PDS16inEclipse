@@ -19,9 +19,15 @@ import org.pds16.pds16asm.Direct;
 import org.pds16.pds16asm.HexaDecimal;
 import org.pds16.pds16asm.Immediate;
 import org.pds16.pds16asm.Indexed;
+import org.pds16.pds16asm.JumpOp;
 import org.pds16.pds16asm.PDS16ASM;
 import org.pds16.pds16asm.Pds16asmPackage;
 import org.pds16.pds16asm.Registers;
+import org.pds16.pds16asm.operationShift;
+import org.pds16.pds16asm.operationWithOffset;
+import org.pds16.pds16asm.operationWithTwoRegisters;
+import org.pds16.pds16asm.operationsWithConstant;
+import org.pds16.pds16asm.operationsWithTreeRegisters;
 import org.pds16.services.Pds16asmGrammarAccess;
 
 @SuppressWarnings("all")
@@ -53,13 +59,18 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case Pds16asmPackage.INDEXED:
 				sequence_Indexed(context, (Indexed) semanticObject); 
 				return; 
+			case Pds16asmPackage.JUMP_OP:
+				sequence_JumpOp(context, (JumpOp) semanticObject); 
+				return; 
 			case Pds16asmPackage.PDS16ASM:
 				sequence_PDS16ASM(context, (PDS16ASM) semanticObject); 
 				return; 
 			case Pds16asmPackage.REGISTERS:
 				if (rule == grammarAccess.getInstructionsRule()
 						|| rule == grammarAccess.getLoadRule()
+						|| rule == grammarAccess.getStoreRule()
 						|| rule == grammarAccess.getLdBasedIndexedRule()
+						|| rule == grammarAccess.getStBasedIndexedRule()
 						|| rule == grammarAccess.getBasedIndexedRule()) {
 					sequence_BasedIndexed_Registers(context, (Registers) semanticObject); 
 					return; 
@@ -69,6 +80,21 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 					return; 
 				}
 				else break;
+			case Pds16asmPackage.OPERATION_SHIFT:
+				sequence_operationShift(context, (operationShift) semanticObject); 
+				return; 
+			case Pds16asmPackage.OPERATION_WITH_OFFSET:
+				sequence_operationWithOffset(context, (operationWithOffset) semanticObject); 
+				return; 
+			case Pds16asmPackage.OPERATION_WITH_TWO_REGISTERS:
+				sequence_operationWithTwoRegisters(context, (operationWithTwoRegisters) semanticObject); 
+				return; 
+			case Pds16asmPackage.OPERATIONS_WITH_CONSTANT:
+				sequence_operationsWithConstant(context, (operationsWithConstant) semanticObject); 
+				return; 
+			case Pds16asmPackage.OPERATIONS_WITH_TREE_REGISTERS:
+				sequence_operationsWithTreeRegisters(context, (operationsWithTreeRegisters) semanticObject); 
+				return; 
 			}
 		if (errorAcceptor != null)
 			errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
@@ -78,7 +104,9 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 * Contexts:
 	 *     Instructions returns Registers
 	 *     Load returns Registers
+	 *     Store returns Registers
 	 *     LdBasedIndexed returns Registers
+	 *     StBasedIndexed returns Registers
 	 *     BasedIndexed returns Registers
 	 *
 	 * Constraint:
@@ -91,7 +119,8 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *             value='r4' | 
 	 *             value='r5' | 
 	 *             value='r6' | 
-	 *             value='r7'
+	 *             value='r7' | 
+	 *             value='PSW'
 	 *         ) 
 	 *         rbx=Registers 
 	 *         rix=Registers
@@ -125,7 +154,9 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 * Contexts:
 	 *     Instructions returns Direct
 	 *     Load returns Direct
+	 *     Store returns Direct
 	 *     LdDirect returns Direct
+	 *     StDirect returns Direct
 	 *     Direct returns Direct
 	 *
 	 * Constraint:
@@ -191,7 +222,9 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 * Contexts:
 	 *     Instructions returns Indexed
 	 *     Load returns Indexed
+	 *     Store returns Indexed
 	 *     LdIndexed returns Indexed
+	 *     StIndexed returns Indexed
 	 *     Indexed returns Indexed
 	 *
 	 * Constraint:
@@ -210,6 +243,26 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 		feeder.accept(grammarAccess.getIndexedAccess().getRdRegistersParserRuleCall_0_0(), semanticObject.getRd());
 		feeder.accept(grammarAccess.getIndexedAccess().getRbxRegistersParserRuleCall_3_0(), semanticObject.getRbx());
 		feeder.accept(grammarAccess.getIndexedAccess().getIndexNumberSignKeyword_5_0(), semanticObject.getIndex());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Instructions returns JumpOp
+	 *     Jump returns JumpOp
+	 *     JumpOp returns JumpOp
+	 *
+	 * Constraint:
+	 *     op=STRING
+	 */
+	protected void sequence_JumpOp(ISerializationContext context, JumpOp semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.JUMP_OP__OP) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.JUMP_OP__OP));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getJumpOpAccess().getOpSTRINGTerminalRuleCall_1_1_0(), semanticObject.getOp());
 		feeder.finish();
 	}
 	
@@ -239,11 +292,154 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *         value='r4' | 
 	 *         value='r5' | 
 	 *         value='r6' | 
-	 *         value='r7'
+	 *         value='r7' | 
+	 *         value='PSW'
 	 *     )
 	 */
 	protected void sequence_Registers(ISerializationContext context, Registers semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Instructions returns operationShift
+	 *     Logica returns operationShift
+	 *     SHL returns operationShift
+	 *     SHR returns operationShift
+	 *     operationShift returns operationShift
+	 *
+	 * Constraint:
+	 *     (rd=Registers rm=Registers const4=INT sin=INT)
+	 */
+	protected void sequence_operationShift(ISerializationContext context, operationShift semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.OPERATION_SHIFT__RD) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.OPERATION_SHIFT__RD));
+			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.OPERATION_SHIFT__RM) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.OPERATION_SHIFT__RM));
+			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.OPERATION_SHIFT__CONST4) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.OPERATION_SHIFT__CONST4));
+			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.OPERATION_SHIFT__SIN) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.OPERATION_SHIFT__SIN));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getOperationShiftAccess().getRdRegistersParserRuleCall_0_0(), semanticObject.getRd());
+		feeder.accept(grammarAccess.getOperationShiftAccess().getRmRegistersParserRuleCall_2_0(), semanticObject.getRm());
+		feeder.accept(grammarAccess.getOperationShiftAccess().getConst4INTTerminalRuleCall_5_0(), semanticObject.getConst4());
+		feeder.accept(grammarAccess.getOperationShiftAccess().getSinINTTerminalRuleCall_7_0(), semanticObject.getSin());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Instructions returns operationWithOffset
+	 *     Jump returns operationWithOffset
+	 *     JumpOp returns operationWithOffset
+	 *     operationWithOffset returns operationWithOffset
+	 *
+	 * Constraint:
+	 *     (rbx=Registers offset8=HexaDecimal)
+	 */
+	protected void sequence_operationWithOffset(ISerializationContext context, operationWithOffset semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.OPERATION_WITH_OFFSET__RBX) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.OPERATION_WITH_OFFSET__RBX));
+			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.OPERATION_WITH_OFFSET__OFFSET8) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.OPERATION_WITH_OFFSET__OFFSET8));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getOperationWithOffsetAccess().getRbxRegistersParserRuleCall_0_0(), semanticObject.getRbx());
+		feeder.accept(grammarAccess.getOperationWithOffsetAccess().getOffset8HexaDecimalParserRuleCall_2_0(), semanticObject.getOffset8());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Instructions returns operationWithTwoRegisters
+	 *     Logica returns operationWithTwoRegisters
+	 *     NOT returns operationWithTwoRegisters
+	 *     RC returns operationWithTwoRegisters
+	 *     operationWithTwoRegisters returns operationWithTwoRegisters
+	 *
+	 * Constraint:
+	 *     (rd=Registers rm=Registers)
+	 */
+	protected void sequence_operationWithTwoRegisters(ISerializationContext context, operationWithTwoRegisters semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.OPERATION_WITH_TWO_REGISTERS__RD) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.OPERATION_WITH_TWO_REGISTERS__RD));
+			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.OPERATION_WITH_TWO_REGISTERS__RM) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.OPERATION_WITH_TWO_REGISTERS__RM));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getOperationWithTwoRegistersAccess().getRdRegistersParserRuleCall_0_0(), semanticObject.getRd());
+		feeder.accept(grammarAccess.getOperationWithTwoRegistersAccess().getRmRegistersParserRuleCall_2_0(), semanticObject.getRm());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Instructions returns operationsWithConstant
+	 *     Aritmetica returns operationsWithConstant
+	 *     Logica returns operationsWithConstant
+	 *     AddConstant returns operationsWithConstant
+	 *     SubConstant returns operationsWithConstant
+	 *     RR returns operationsWithConstant
+	 *     operationsWithConstant returns operationsWithConstant
+	 *
+	 * Constraint:
+	 *     (rd=Registers rm=Registers const4=INT)
+	 */
+	protected void sequence_operationsWithConstant(ISerializationContext context, operationsWithConstant semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.OPERATIONS_WITH_CONSTANT__RD) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.OPERATIONS_WITH_CONSTANT__RD));
+			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.OPERATIONS_WITH_CONSTANT__RM) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.OPERATIONS_WITH_CONSTANT__RM));
+			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.OPERATIONS_WITH_CONSTANT__CONST4) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.OPERATIONS_WITH_CONSTANT__CONST4));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getOperationsWithConstantAccess().getRdRegistersParserRuleCall_0_0(), semanticObject.getRd());
+		feeder.accept(grammarAccess.getOperationsWithConstantAccess().getRmRegistersParserRuleCall_2_0(), semanticObject.getRm());
+		feeder.accept(grammarAccess.getOperationsWithConstantAccess().getConst4INTTerminalRuleCall_5_0(), semanticObject.getConst4());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Instructions returns operationsWithTreeRegisters
+	 *     Aritmetica returns operationsWithTreeRegisters
+	 *     Logica returns operationsWithTreeRegisters
+	 *     AddRegisters returns operationsWithTreeRegisters
+	 *     SubRegisters returns operationsWithTreeRegisters
+	 *     ANL returns operationsWithTreeRegisters
+	 *     ORL returns operationsWithTreeRegisters
+	 *     XRL returns operationsWithTreeRegisters
+	 *     operationsWithTreeRegisters returns operationsWithTreeRegisters
+	 *
+	 * Constraint:
+	 *     (rd=Registers rm=Registers rn=Registers)
+	 */
+	protected void sequence_operationsWithTreeRegisters(ISerializationContext context, operationsWithTreeRegisters semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.OPERATIONS_WITH_TREE_REGISTERS__RD) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.OPERATIONS_WITH_TREE_REGISTERS__RD));
+			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.OPERATIONS_WITH_TREE_REGISTERS__RM) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.OPERATIONS_WITH_TREE_REGISTERS__RM));
+			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.OPERATIONS_WITH_TREE_REGISTERS__RN) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.OPERATIONS_WITH_TREE_REGISTERS__RN));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getOperationsWithTreeRegistersAccess().getRdRegistersParserRuleCall_0_0(), semanticObject.getRd());
+		feeder.accept(grammarAccess.getOperationsWithTreeRegistersAccess().getRmRegistersParserRuleCall_2_0(), semanticObject.getRm());
+		feeder.accept(grammarAccess.getOperationsWithTreeRegistersAccess().getRnRegistersParserRuleCall_4_0(), semanticObject.getRn());
+		feeder.finish();
 	}
 	
 	

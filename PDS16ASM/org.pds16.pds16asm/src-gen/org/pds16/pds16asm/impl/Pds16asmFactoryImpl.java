@@ -68,15 +68,40 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
       case Pds16asmPackage.PDS16ASM: return createPDS16ASM();
       case Pds16asmPackage.INSTRUCTIONS: return createInstructions();
       case Pds16asmPackage.LOAD: return createLoad();
+      case Pds16asmPackage.STORE: return createStore();
+      case Pds16asmPackage.ARITMETICA: return createAritmetica();
+      case Pds16asmPackage.LOGICA: return createLogica();
+      case Pds16asmPackage.JUMP: return createJump();
       case Pds16asmPackage.LD_IMMEDIATE: return createLdImmediate();
       case Pds16asmPackage.LD_DIRECT: return createLdDirect();
       case Pds16asmPackage.LD_INDEXED: return createLdIndexed();
       case Pds16asmPackage.LD_BASED_INDEXED: return createLdBasedIndexed();
+      case Pds16asmPackage.ST_DIRECT: return createStDirect();
+      case Pds16asmPackage.ST_INDEXED: return createStIndexed();
+      case Pds16asmPackage.ST_BASED_INDEXED: return createStBasedIndexed();
+      case Pds16asmPackage.ADD_REGISTERS: return createAddRegisters();
+      case Pds16asmPackage.ADD_CONSTANT: return createAddConstant();
+      case Pds16asmPackage.SUB_REGISTERS: return createSubRegisters();
+      case Pds16asmPackage.SUB_CONSTANT: return createSubConstant();
+      case Pds16asmPackage.ANL: return createANL();
+      case Pds16asmPackage.ORL: return createORL();
+      case Pds16asmPackage.XRL: return createXRL();
+      case Pds16asmPackage.NOT: return createNOT();
+      case Pds16asmPackage.SHL: return createSHL();
+      case Pds16asmPackage.SHR: return createSHR();
+      case Pds16asmPackage.RR: return createRR();
+      case Pds16asmPackage.RC: return createRC();
+      case Pds16asmPackage.JUMP_OP: return createJumpOp();
       case Pds16asmPackage.IMMEDIATE: return createImmediate();
       case Pds16asmPackage.DIRECT: return createDirect();
       case Pds16asmPackage.INDEXED: return createIndexed();
       case Pds16asmPackage.BASED_INDEXED: return createBasedIndexed();
       case Pds16asmPackage.HEXA_DECIMAL: return createHexaDecimal();
+      case Pds16asmPackage.OPERATION_WITH_TWO_REGISTERS: return createoperationWithTwoRegisters();
+      case Pds16asmPackage.OPERATIONS_WITH_TREE_REGISTERS: return createoperationsWithTreeRegisters();
+      case Pds16asmPackage.OPERATIONS_WITH_CONSTANT: return createoperationsWithConstant();
+      case Pds16asmPackage.OPERATION_SHIFT: return createoperationShift();
+      case Pds16asmPackage.OPERATION_WITH_OFFSET: return createoperationWithOffset();
       case Pds16asmPackage.COMMENT: return createComment();
       case Pds16asmPackage.REGISTERS: return createRegisters();
       default:
@@ -122,6 +147,50 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public Store createStore()
+  {
+    StoreImpl store = new StoreImpl();
+    return store;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Aritmetica createAritmetica()
+  {
+    AritmeticaImpl aritmetica = new AritmeticaImpl();
+    return aritmetica;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Logica createLogica()
+  {
+    LogicaImpl logica = new LogicaImpl();
+    return logica;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Jump createJump()
+  {
+    JumpImpl jump = new JumpImpl();
+    return jump;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public LdImmediate createLdImmediate()
   {
     LdImmediateImpl ldImmediate = new LdImmediateImpl();
@@ -159,6 +228,182 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
   {
     LdBasedIndexedImpl ldBasedIndexed = new LdBasedIndexedImpl();
     return ldBasedIndexed;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public StDirect createStDirect()
+  {
+    StDirectImpl stDirect = new StDirectImpl();
+    return stDirect;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public StIndexed createStIndexed()
+  {
+    StIndexedImpl stIndexed = new StIndexedImpl();
+    return stIndexed;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public StBasedIndexed createStBasedIndexed()
+  {
+    StBasedIndexedImpl stBasedIndexed = new StBasedIndexedImpl();
+    return stBasedIndexed;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AddRegisters createAddRegisters()
+  {
+    AddRegistersImpl addRegisters = new AddRegistersImpl();
+    return addRegisters;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AddConstant createAddConstant()
+  {
+    AddConstantImpl addConstant = new AddConstantImpl();
+    return addConstant;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SubRegisters createSubRegisters()
+  {
+    SubRegistersImpl subRegisters = new SubRegistersImpl();
+    return subRegisters;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SubConstant createSubConstant()
+  {
+    SubConstantImpl subConstant = new SubConstantImpl();
+    return subConstant;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ANL createANL()
+  {
+    ANLImpl anl = new ANLImpl();
+    return anl;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ORL createORL()
+  {
+    ORLImpl orl = new ORLImpl();
+    return orl;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public XRL createXRL()
+  {
+    XRLImpl xrl = new XRLImpl();
+    return xrl;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NOT createNOT()
+  {
+    NOTImpl not = new NOTImpl();
+    return not;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SHL createSHL()
+  {
+    SHLImpl shl = new SHLImpl();
+    return shl;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SHR createSHR()
+  {
+    SHRImpl shr = new SHRImpl();
+    return shr;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RR createRR()
+  {
+    RRImpl rr = new RRImpl();
+    return rr;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RC createRC()
+  {
+    RCImpl rc = new RCImpl();
+    return rc;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public JumpOp createJumpOp()
+  {
+    JumpOpImpl jumpOp = new JumpOpImpl();
+    return jumpOp;
   }
 
   /**
@@ -214,6 +459,61 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
   {
     HexaDecimalImpl hexaDecimal = new HexaDecimalImpl();
     return hexaDecimal;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public operationWithTwoRegisters createoperationWithTwoRegisters()
+  {
+    operationWithTwoRegistersImpl operationWithTwoRegisters = new operationWithTwoRegistersImpl();
+    return operationWithTwoRegisters;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public operationsWithTreeRegisters createoperationsWithTreeRegisters()
+  {
+    operationsWithTreeRegistersImpl operationsWithTreeRegisters = new operationsWithTreeRegistersImpl();
+    return operationsWithTreeRegisters;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public operationsWithConstant createoperationsWithConstant()
+  {
+    operationsWithConstantImpl operationsWithConstant = new operationsWithConstantImpl();
+    return operationsWithConstant;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public operationShift createoperationShift()
+  {
+    operationShiftImpl operationShift = new operationShiftImpl();
+    return operationShift;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public operationWithOffset createoperationWithOffset()
+  {
+    operationWithOffsetImpl operationWithOffset = new operationWithOffsetImpl();
+    return operationWithOffset;
   }
 
   /**

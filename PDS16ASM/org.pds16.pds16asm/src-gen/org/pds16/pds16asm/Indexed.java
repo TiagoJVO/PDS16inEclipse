@@ -22,7 +22,7 @@ package org.pds16.pds16asm;
  * @model
  * @generated
  */
-public interface Indexed extends LdIndexed
+public interface Indexed extends LdIndexed, StIndexed
 {
   /**
    * Returns the value of the '<em><b>Rd</b></em>' containment reference.

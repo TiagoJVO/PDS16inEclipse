@@ -21,7 +21,7 @@ package org.pds16.pds16asm;
  * @model
  * @generated
  */
-public interface Direct extends LdDirect
+public interface Direct extends LdDirect, StDirect
 {
   /**
    * Returns the value of the '<em><b>Register</b></em>' containment reference.

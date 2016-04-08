@@ -51,6 +51,42 @@ public interface Pds16asmFactory extends EFactory
   Load createLoad();
 
   /**
+   * Returns a new object of class '<em>Store</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Store</em>'.
+   * @generated
+   */
+  Store createStore();
+
+  /**
+   * Returns a new object of class '<em>Aritmetica</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Aritmetica</em>'.
+   * @generated
+   */
+  Aritmetica createAritmetica();
+
+  /**
+   * Returns a new object of class '<em>Logica</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Logica</em>'.
+   * @generated
+   */
+  Logica createLogica();
+
+  /**
+   * Returns a new object of class '<em>Jump</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Jump</em>'.
+   * @generated
+   */
+  Jump createJump();
+
+  /**
    * Returns a new object of class '<em>Ld Immediate</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -85,6 +121,150 @@ public interface Pds16asmFactory extends EFactory
    * @generated
    */
   LdBasedIndexed createLdBasedIndexed();
+
+  /**
+   * Returns a new object of class '<em>St Direct</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>St Direct</em>'.
+   * @generated
+   */
+  StDirect createStDirect();
+
+  /**
+   * Returns a new object of class '<em>St Indexed</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>St Indexed</em>'.
+   * @generated
+   */
+  StIndexed createStIndexed();
+
+  /**
+   * Returns a new object of class '<em>St Based Indexed</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>St Based Indexed</em>'.
+   * @generated
+   */
+  StBasedIndexed createStBasedIndexed();
+
+  /**
+   * Returns a new object of class '<em>Add Registers</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Add Registers</em>'.
+   * @generated
+   */
+  AddRegisters createAddRegisters();
+
+  /**
+   * Returns a new object of class '<em>Add Constant</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Add Constant</em>'.
+   * @generated
+   */
+  AddConstant createAddConstant();
+
+  /**
+   * Returns a new object of class '<em>Sub Registers</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Sub Registers</em>'.
+   * @generated
+   */
+  SubRegisters createSubRegisters();
+
+  /**
+   * Returns a new object of class '<em>Sub Constant</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Sub Constant</em>'.
+   * @generated
+   */
+  SubConstant createSubConstant();
+
+  /**
+   * Returns a new object of class '<em>ANL</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>ANL</em>'.
+   * @generated
+   */
+  ANL createANL();
+
+  /**
+   * Returns a new object of class '<em>ORL</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>ORL</em>'.
+   * @generated
+   */
+  ORL createORL();
+
+  /**
+   * Returns a new object of class '<em>XRL</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>XRL</em>'.
+   * @generated
+   */
+  XRL createXRL();
+
+  /**
+   * Returns a new object of class '<em>NOT</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>NOT</em>'.
+   * @generated
+   */
+  NOT createNOT();
+
+  /**
+   * Returns a new object of class '<em>SHL</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>SHL</em>'.
+   * @generated
+   */
+  SHL createSHL();
+
+  /**
+   * Returns a new object of class '<em>SHR</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>SHR</em>'.
+   * @generated
+   */
+  SHR createSHR();
+
+  /**
+   * Returns a new object of class '<em>RR</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>RR</em>'.
+   * @generated
+   */
+  RR createRR();
+
+  /**
+   * Returns a new object of class '<em>RC</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>RC</em>'.
+   * @generated
+   */
+  RC createRC();
+
+  /**
+   * Returns a new object of class '<em>Jump Op</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Jump Op</em>'.
+   * @generated
+   */
+  JumpOp createJumpOp();
 
   /**
    * Returns a new object of class '<em>Immediate</em>'.
@@ -130,6 +310,51 @@ public interface Pds16asmFactory extends EFactory
    * @generated
    */
   HexaDecimal createHexaDecimal();
+
+  /**
+   * Returns a new object of class '<em>operation With Two Registers</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>operation With Two Registers</em>'.
+   * @generated
+   */
+  operationWithTwoRegisters createoperationWithTwoRegisters();
+
+  /**
+   * Returns a new object of class '<em>operations With Tree Registers</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>operations With Tree Registers</em>'.
+   * @generated
+   */
+  operationsWithTreeRegisters createoperationsWithTreeRegisters();
+
+  /**
+   * Returns a new object of class '<em>operations With Constant</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>operations With Constant</em>'.
+   * @generated
+   */
+  operationsWithConstant createoperationsWithConstant();
+
+  /**
+   * Returns a new object of class '<em>operation Shift</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>operation Shift</em>'.
+   * @generated
+   */
+  operationShift createoperationShift();
+
+  /**
+   * Returns a new object of class '<em>operation With Offset</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>operation With Offset</em>'.
+   * @generated
+   */
+  operationWithOffset createoperationWithOffset();
 
   /**
    * Returns a new object of class '<em>Comment</em>'.

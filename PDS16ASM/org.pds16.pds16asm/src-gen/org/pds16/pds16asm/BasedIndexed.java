@@ -14,6 +14,6 @@ package org.pds16.pds16asm;
  * @model
  * @generated
  */
-public interface BasedIndexed extends LdBasedIndexed
+public interface BasedIndexed extends LdBasedIndexed, StBasedIndexed
 {
 } // BasedIndexed
