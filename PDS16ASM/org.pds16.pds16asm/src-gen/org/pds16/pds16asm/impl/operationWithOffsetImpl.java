@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.pds16.pds16asm.IntOrHexOrString;
 import org.pds16.pds16asm.OperationWithOffset;
 import org.pds16.pds16asm.Pds16asmPackage;
 import org.pds16.pds16asm.Registers;
@@ -42,24 +43,14 @@ public class OperationWithOffsetImpl extends JumpOpImpl implements OperationWith
   protected Registers rbx;
 
   /**
-   * The default value of the '{@link #getOffset8() <em>Offset8</em>}' attribute.
+   * The cached value of the '{@link #getOffset8() <em>Offset8</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getOffset8()
    * @generated
    * @ordered
    */
-  protected static final String OFFSET8_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getOffset8() <em>Offset8</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getOffset8()
-   * @generated
-   * @ordered
-   */
-  protected String offset8 = OFFSET8_EDEFAULT;
+  protected IntOrHexOrString offset8;
 
   /**
    * <!-- begin-user-doc -->
@@ -135,7 +126,7 @@ public class OperationWithOffsetImpl extends JumpOpImpl implements OperationWith
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getOffset8()
+  public IntOrHexOrString getOffset8()
   {
     return offset8;
   }
@@ -145,12 +136,37 @@ public class OperationWithOffsetImpl extends JumpOpImpl implements OperationWith
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setOffset8(String newOffset8)
+  public NotificationChain basicSetOffset8(IntOrHexOrString newOffset8, NotificationChain msgs)
   {
-    String oldOffset8 = offset8;
+    IntOrHexOrString oldOffset8 = offset8;
     offset8 = newOffset8;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.OPERATION_WITH_OFFSET__OFFSET8, oldOffset8, offset8));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Pds16asmPackage.OPERATION_WITH_OFFSET__OFFSET8, oldOffset8, newOffset8);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setOffset8(IntOrHexOrString newOffset8)
+  {
+    if (newOffset8 != offset8)
+    {
+      NotificationChain msgs = null;
+      if (offset8 != null)
+        msgs = ((InternalEObject)offset8).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.OPERATION_WITH_OFFSET__OFFSET8, null, msgs);
+      if (newOffset8 != null)
+        msgs = ((InternalEObject)newOffset8).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.OPERATION_WITH_OFFSET__OFFSET8, null, msgs);
+      msgs = basicSetOffset8(newOffset8, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.OPERATION_WITH_OFFSET__OFFSET8, newOffset8, newOffset8));
   }
 
   /**
@@ -165,6 +181,8 @@ public class OperationWithOffsetImpl extends JumpOpImpl implements OperationWith
     {
       case Pds16asmPackage.OPERATION_WITH_OFFSET__RBX:
         return basicSetRbx(null, msgs);
+      case Pds16asmPackage.OPERATION_WITH_OFFSET__OFFSET8:
+        return basicSetOffset8(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -201,7 +219,7 @@ public class OperationWithOffsetImpl extends JumpOpImpl implements OperationWith
         setRbx((Registers)newValue);
         return;
       case Pds16asmPackage.OPERATION_WITH_OFFSET__OFFSET8:
-        setOffset8((String)newValue);
+        setOffset8((IntOrHexOrString)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -221,7 +239,7 @@ public class OperationWithOffsetImpl extends JumpOpImpl implements OperationWith
         setRbx((Registers)null);
         return;
       case Pds16asmPackage.OPERATION_WITH_OFFSET__OFFSET8:
-        setOffset8(OFFSET8_EDEFAULT);
+        setOffset8((IntOrHexOrString)null);
         return;
     }
     super.eUnset(featureID);
@@ -240,26 +258,9 @@ public class OperationWithOffsetImpl extends JumpOpImpl implements OperationWith
       case Pds16asmPackage.OPERATION_WITH_OFFSET__RBX:
         return rbx != null;
       case Pds16asmPackage.OPERATION_WITH_OFFSET__OFFSET8:
-        return OFFSET8_EDEFAULT == null ? offset8 != null : !OFFSET8_EDEFAULT.equals(offset8);
+        return offset8 != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (offset8: ");
-    result.append(offset8);
-    result.append(')');
-    return result.toString();
   }
 
 } //OperationWithOffsetImpl

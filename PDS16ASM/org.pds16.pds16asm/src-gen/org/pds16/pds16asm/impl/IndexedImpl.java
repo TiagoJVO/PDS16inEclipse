@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.pds16.pds16asm.Indexed;
+import org.pds16.pds16asm.IntOrHexOrString;
 import org.pds16.pds16asm.Pds16asmPackage;
 import org.pds16.pds16asm.Registers;
 
@@ -53,24 +54,14 @@ public class IndexedImpl extends LdIndexedImpl implements Indexed
   protected Registers rbx;
 
   /**
-   * The default value of the '{@link #getIdx3() <em>Idx3</em>}' attribute.
+   * The cached value of the '{@link #getIdx3() <em>Idx3</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getIdx3()
    * @generated
    * @ordered
    */
-  protected static final String IDX3_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getIdx3() <em>Idx3</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getIdx3()
-   * @generated
-   * @ordered
-   */
-  protected String idx3 = IDX3_EDEFAULT;
+  protected IntOrHexOrString idx3;
 
   /**
    * <!-- begin-user-doc -->
@@ -194,7 +185,7 @@ public class IndexedImpl extends LdIndexedImpl implements Indexed
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getIdx3()
+  public IntOrHexOrString getIdx3()
   {
     return idx3;
   }
@@ -204,12 +195,37 @@ public class IndexedImpl extends LdIndexedImpl implements Indexed
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setIdx3(String newIdx3)
+  public NotificationChain basicSetIdx3(IntOrHexOrString newIdx3, NotificationChain msgs)
   {
-    String oldIdx3 = idx3;
+    IntOrHexOrString oldIdx3 = idx3;
     idx3 = newIdx3;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.INDEXED__IDX3, oldIdx3, idx3));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Pds16asmPackage.INDEXED__IDX3, oldIdx3, newIdx3);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setIdx3(IntOrHexOrString newIdx3)
+  {
+    if (newIdx3 != idx3)
+    {
+      NotificationChain msgs = null;
+      if (idx3 != null)
+        msgs = ((InternalEObject)idx3).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.INDEXED__IDX3, null, msgs);
+      if (newIdx3 != null)
+        msgs = ((InternalEObject)newIdx3).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.INDEXED__IDX3, null, msgs);
+      msgs = basicSetIdx3(newIdx3, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.INDEXED__IDX3, newIdx3, newIdx3));
   }
 
   /**
@@ -226,6 +242,8 @@ public class IndexedImpl extends LdIndexedImpl implements Indexed
         return basicSetRd(null, msgs);
       case Pds16asmPackage.INDEXED__RBX:
         return basicSetRbx(null, msgs);
+      case Pds16asmPackage.INDEXED__IDX3:
+        return basicSetIdx3(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -267,7 +285,7 @@ public class IndexedImpl extends LdIndexedImpl implements Indexed
         setRbx((Registers)newValue);
         return;
       case Pds16asmPackage.INDEXED__IDX3:
-        setIdx3((String)newValue);
+        setIdx3((IntOrHexOrString)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -290,7 +308,7 @@ public class IndexedImpl extends LdIndexedImpl implements Indexed
         setRbx((Registers)null);
         return;
       case Pds16asmPackage.INDEXED__IDX3:
-        setIdx3(IDX3_EDEFAULT);
+        setIdx3((IntOrHexOrString)null);
         return;
     }
     super.eUnset(featureID);
@@ -311,26 +329,9 @@ public class IndexedImpl extends LdIndexedImpl implements Indexed
       case Pds16asmPackage.INDEXED__RBX:
         return rbx != null;
       case Pds16asmPackage.INDEXED__IDX3:
-        return IDX3_EDEFAULT == null ? idx3 != null : !IDX3_EDEFAULT.equals(idx3);
+        return idx3 != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (idx3: ");
-    result.append(idx3);
-    result.append(')');
-    return result.toString();
   }
 
 } //IndexedImpl

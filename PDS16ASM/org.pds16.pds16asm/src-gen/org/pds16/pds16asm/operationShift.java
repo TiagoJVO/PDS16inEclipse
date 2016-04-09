@@ -78,30 +78,30 @@ public interface OperationShift extends Shl, Shr
   void setRm(Registers value);
 
   /**
-   * Returns the value of the '<em><b>Const4</b></em>' attribute.
+   * Returns the value of the '<em><b>Const4</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Const4</em>' attribute isn't clear,
+   * If the meaning of the '<em>Const4</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Const4</em>' attribute.
-   * @see #setConst4(String)
+   * @return the value of the '<em>Const4</em>' containment reference.
+   * @see #setConst4(IntOrHexOrString)
    * @see org.pds16.pds16asm.Pds16asmPackage#getOperationShift_Const4()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  String getConst4();
+  IntOrHexOrString getConst4();
 
   /**
-   * Sets the value of the '{@link org.pds16.pds16asm.OperationShift#getConst4 <em>Const4</em>}' attribute.
+   * Sets the value of the '{@link org.pds16.pds16asm.OperationShift#getConst4 <em>Const4</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Const4</em>' attribute.
+   * @param value the new value of the '<em>Const4</em>' containment reference.
    * @see #getConst4()
    * @generated
    */
-  void setConst4(String value);
+  void setConst4(IntOrHexOrString value);
 
   /**
    * Returns the value of the '<em><b>Sin</b></em>' attribute.

@@ -25,17 +25,36 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 	public class PDS16ASMElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.PDS16ASM");
 		private final Assignment cInstuctionsAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cInstuctionsInstructionsParserRuleCall_0 = (RuleCall)cInstuctionsAssignment.eContents().get(0);
+		private final RuleCall cInstuctionsStatementParserRuleCall_0 = (RuleCall)cInstuctionsAssignment.eContents().get(0);
 		
 		//PDS16ASM:
-		//	instuctions+=Instructions*;
+		//	instuctions+=Statement*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//instuctions+=Instructions*
+		//instuctions+=Statement*
 		public Assignment getInstuctionsAssignment() { return cInstuctionsAssignment; }
 		
+		//Statement
+		public RuleCall getInstuctionsStatementParserRuleCall_0() { return cInstuctionsStatementParserRuleCall_0; }
+	}
+	public class StatementElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Statement");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cInstructionsParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cCommentParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//Statement:
+		//	Instructions | Comment / * /| Label | Directive* /;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//Instructions | Comment
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
 		//Instructions
-		public RuleCall getInstuctionsInstructionsParserRuleCall_0() { return cInstuctionsInstructionsParserRuleCall_0; }
+		public RuleCall getInstructionsParserRuleCall_0() { return cInstructionsParserRuleCall_0; }
+		
+		//Comment
+		public RuleCall getCommentParserRuleCall_1() { return cCommentParserRuleCall_1; }
 	}
 	public class InstructionsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Instructions");
@@ -45,13 +64,12 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cAritmeticaParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final RuleCall cLogicaParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		private final RuleCall cJumpParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
-		private final RuleCall cCommentParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		
-		//Instructions:
-		//	Load | Store | Aritmetica | Logica | Jump | Comment;
+		/// *... Falta aqui código teu! * / Instructions:
+		//	Load | Store | Aritmetica | Logica | Jump;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//Load | Store | Aritmetica | Logica | Jump | Comment
+		//Load | Store | Aritmetica | Logica | Jump
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//Load
@@ -68,9 +86,6 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//Jump
 		public RuleCall getJumpParserRuleCall_4() { return cJumpParserRuleCall_4; }
-		
-		//Comment
-		public RuleCall getCommentParserRuleCall_5() { return cCommentParserRuleCall_5; }
 	}
 	public class CommentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Comment");
@@ -938,37 +953,53 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 	public class IntOrHexOrStringElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.IntOrHexOrString");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Alternatives cAlternatives_0 = (Alternatives)cAlternatives.eContents().get(0);
-		private final Group cGroup_0_0 = (Group)cAlternatives_0.eContents().get(0);
-		private final Keyword cNumberSignKeyword_0_0_0 = (Keyword)cGroup_0_0.eContents().get(0);
-		private final RuleCall cINTTerminalRuleCall_0_0_1 = (RuleCall)cGroup_0_0.eContents().get(1);
-		private final RuleCall cHEXTerminalRuleCall_0_1 = (RuleCall)cAlternatives_0.eContents().get(1);
-		private final RuleCall cSTRINGTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
+		private final Keyword cNumberSignKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
+		private final Assignment cIntAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
+		private final RuleCall cIntNUMBTerminalRuleCall_0_1_0 = (RuleCall)cIntAssignment_0_1.eContents().get(0);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
+		private final Keyword cNumberSignKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cHexAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cHexHEXTerminalRuleCall_1_1_0 = (RuleCall)cHexAssignment_1_1.eContents().get(0);
+		private final Assignment cLabelAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
+		private final RuleCall cLabelSTRINGTerminalRuleCall_2_0 = (RuleCall)cLabelAssignment_2.eContents().get(0);
 		
 		//IntOrHexOrString:
-		//	('#' INT | HEX) | STRING;
+		//	'#' int=NUMB | '#' hex=HEX | label=STRING;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//('#' INT | HEX) | STRING
+		//'#' int=NUMB | '#' hex=HEX | label=STRING
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//('#' INT | HEX)
-		public Alternatives getAlternatives_0() { return cAlternatives_0; }
-		
-		//'#' INT
-		public Group getGroup_0_0() { return cGroup_0_0; }
+		//'#' int=NUMB
+		public Group getGroup_0() { return cGroup_0; }
 		
 		//'#'
-		public Keyword getNumberSignKeyword_0_0_0() { return cNumberSignKeyword_0_0_0; }
+		public Keyword getNumberSignKeyword_0_0() { return cNumberSignKeyword_0_0; }
 		
-		//INT
-		public RuleCall getINTTerminalRuleCall_0_0_1() { return cINTTerminalRuleCall_0_0_1; }
+		//int=NUMB
+		public Assignment getIntAssignment_0_1() { return cIntAssignment_0_1; }
+		
+		//NUMB
+		public RuleCall getIntNUMBTerminalRuleCall_0_1_0() { return cIntNUMBTerminalRuleCall_0_1_0; }
+		
+		//'#' hex=HEX
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//'#'
+		public Keyword getNumberSignKeyword_1_0() { return cNumberSignKeyword_1_0; }
+		
+		//hex=HEX
+		public Assignment getHexAssignment_1_1() { return cHexAssignment_1_1; }
 		
 		//HEX
-		public RuleCall getHEXTerminalRuleCall_0_1() { return cHEXTerminalRuleCall_0_1; }
+		public RuleCall getHexHEXTerminalRuleCall_1_1_0() { return cHexHEXTerminalRuleCall_1_1_0; }
+		
+		//label=STRING
+		public Assignment getLabelAssignment_2() { return cLabelAssignment_2; }
 		
 		//STRING
-		public RuleCall getSTRINGTerminalRuleCall_1() { return cSTRINGTerminalRuleCall_1; }
+		public RuleCall getLabelSTRINGTerminalRuleCall_2_0() { return cLabelSTRINGTerminalRuleCall_2_0; }
 	}
 	public class OperationWithTwoRegistersElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.OperationWithTwoRegisters");
@@ -1228,18 +1259,35 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	public class NumberElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Number");
-		private final RuleCall cSTRINGTerminalRuleCall = (RuleCall)rule.eContents().get(1);
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cINTTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cHEXTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cOCTTerminalRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cBINTerminalRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
 		//Number:
-		//	STRING;
+		//	INT | HEX | OCT | BIN;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//STRING
-		public RuleCall getSTRINGTerminalRuleCall() { return cSTRINGTerminalRuleCall; }
+		//INT | HEX | OCT | BIN
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//INT
+		public RuleCall getINTTerminalRuleCall_0() { return cINTTerminalRuleCall_0; }
+		
+		//HEX
+		public RuleCall getHEXTerminalRuleCall_1() { return cHEXTerminalRuleCall_1; }
+		
+		//OCT
+		public RuleCall getOCTTerminalRuleCall_2() { return cOCTTerminalRuleCall_2; }
+		
+		//BIN
+		public RuleCall getBINTerminalRuleCall_3() { return cBINTerminalRuleCall_3; }
 	}
 	
 	
 	private final PDS16ASMElements pPDS16ASM;
+	private final StatementElements pStatement;
 	private final InstructionsElements pInstructions;
 	private final CommentElements pComment;
 	private final LoadElements pLoad;
@@ -1278,6 +1326,7 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 	private final RegistersElements pRegisters;
 	private final NumberElements pNumber;
 	private final TerminalRule tHEX;
+	private final TerminalRule tNUMB;
 	private final TerminalRule tOCT;
 	private final TerminalRule tBIN;
 	private final TerminalRule tCOMT;
@@ -1292,6 +1341,7 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pPDS16ASM = new PDS16ASMElements();
+		this.pStatement = new StatementElements();
 		this.pInstructions = new InstructionsElements();
 		this.pComment = new CommentElements();
 		this.pLoad = new LoadElements();
@@ -1330,6 +1380,7 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		this.pRegisters = new RegistersElements();
 		this.pNumber = new NumberElements();
 		this.tHEX = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.HEX");
+		this.tNUMB = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.NUMB");
 		this.tOCT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.OCT");
 		this.tBIN = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.BIN");
 		this.tCOMT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.COMT");
@@ -1363,7 +1414,7 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//PDS16ASM:
-	//	instuctions+=Instructions*;
+	//	instuctions+=Statement*;
 	public PDS16ASMElements getPDS16ASMAccess() {
 		return pPDS16ASM;
 	}
@@ -1372,8 +1423,18 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		return getPDS16ASMAccess().getRule();
 	}
 	
-	//Instructions:
-	//	Load | Store | Aritmetica | Logica | Jump | Comment;
+	//Statement:
+	//	Instructions | Comment / * /| Label | Directive* /;
+	public StatementElements getStatementAccess() {
+		return pStatement;
+	}
+	
+	public ParserRule getStatementRule() {
+		return getStatementAccess().getRule();
+	}
+	
+	/// *... Falta aqui código teu! * / Instructions:
+	//	Load | Store | Aritmetica | Logica | Jump;
 	public InstructionsElements getInstructionsAccess() {
 		return pInstructions;
 	}
@@ -1669,7 +1730,7 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//IntOrHexOrString:
-	//	('#' INT | HEX) | STRING;
+	//	'#' int=NUMB | '#' hex=HEX | label=STRING;
 	public IntOrHexOrStringElements getIntOrHexOrStringAccess() {
 		return pIntOrHexOrString;
 	}
@@ -1741,7 +1802,7 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Number:
-	//	STRING;
+	//	INT | HEX | OCT | BIN;
 	public NumberElements getNumberAccess() {
 		return pNumber;
 	}
@@ -1754,6 +1815,12 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 	//	'0' ('x' | 'X') ('0'..'9' | 'a'..'f' | 'A'..'F')+;
 	public TerminalRule getHEXRule() {
 		return tHEX;
+	}
+	
+	//terminal NUMB:
+	//	'0'..'9'+;
+	public TerminalRule getNUMBRule() {
+		return tNUMB;
 	}
 	
 	//terminal OCT:

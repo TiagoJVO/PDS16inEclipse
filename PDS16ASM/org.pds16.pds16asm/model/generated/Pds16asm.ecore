@@ -3,10 +3,11 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="pds16asm" nsURI="http://www.pds16.org/Pds16asm" nsPrefix="pds16asm">
   <eClassifiers xsi:type="ecore:EClass" name="PDS16ASM">
     <eStructuralFeatures xsi:type="ecore:EReference" name="instuctions" upperBound="-1"
-        eType="#//Instructions" containment="true"/>
+        eType="#//Statement" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Instructions"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Comment" eSuperTypes="#//Instructions">
+  <eClassifiers xsi:type="ecore:EClass" name="Statement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Instructions" eSuperTypes="#//Statement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Comment" eSuperTypes="#//Statement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="comment" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Load" eSuperTypes="#//Instructions"/>
@@ -35,7 +36,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Immediate" eSuperTypes="#//LdImmediate">
     <eStructuralFeatures xsi:type="ecore:EReference" name="register" eType="#//Registers"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="immediate8" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="immediate8" eType="#//IntOrHexOrString"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Direct" eSuperTypes="#//LdDirect #//StDirect">
     <eStructuralFeatures xsi:type="ecore:EReference" name="register" eType="#//Registers"
@@ -46,9 +48,15 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="rbx" eType="#//Registers"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="idx3" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="idx3" eType="#//IntOrHexOrString"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BasedIndexed" eSuperTypes="#//LdBasedIndexed #//StBasedIndexed"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IntOrHexOrString">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="int" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OperationWithTwoRegisters" eSuperTypes="#//Not #//Rc">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rd" eType="#//Registers"
         containment="true"/>
@@ -68,20 +76,23 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="rm" eType="#//Registers"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="const4" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="const4" eType="#//IntOrHexOrString"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OperationShift" eSuperTypes="#//Shl #//Shr">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rd" eType="#//Registers"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="rm" eType="#//Registers"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="const4" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="const4" eType="#//IntOrHexOrString"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OperationWithOffset" eSuperTypes="#//JumpOp">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rbx" eType="#//Registers"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="offset8" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="offset8" eType="#//IntOrHexOrString"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Registers" eSuperTypes="#//BasedIndexed">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rbx" eType="#//Registers"

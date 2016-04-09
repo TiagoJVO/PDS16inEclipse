@@ -20,7 +20,7 @@ package org.pds16.pds16asm;
  * @model
  * @generated
  */
-public interface Comment extends Instructions
+public interface Comment extends Statement
 {
   /**
    * Returns the value of the '<em><b>Comment</b></em>' attribute.

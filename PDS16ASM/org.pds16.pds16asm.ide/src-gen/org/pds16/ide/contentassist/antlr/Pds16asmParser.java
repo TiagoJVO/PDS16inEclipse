@@ -35,6 +35,7 @@ public class Pds16asmParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
+					put(grammarAccess.getStatementAccess().getAlternatives(), "rule__Statement__Alternatives");
 					put(grammarAccess.getInstructionsAccess().getAlternatives(), "rule__Instructions__Alternatives");
 					put(grammarAccess.getLoadAccess().getAlternatives(), "rule__Load__Alternatives");
 					put(grammarAccess.getStoreAccess().getAlternatives(), "rule__Store__Alternatives");
@@ -61,8 +62,8 @@ public class Pds16asmParser extends AbstractContentAssistParser {
 					put(grammarAccess.getJumpOpAccess().getAlternatives_0(), "rule__JumpOp__Alternatives_0");
 					put(grammarAccess.getDirectAccess().getAlternatives_2(), "rule__Direct__Alternatives_2");
 					put(grammarAccess.getIntOrHexOrStringAccess().getAlternatives(), "rule__IntOrHexOrString__Alternatives");
-					put(grammarAccess.getIntOrHexOrStringAccess().getAlternatives_0(), "rule__IntOrHexOrString__Alternatives_0");
 					put(grammarAccess.getRegistersAccess().getValueAlternatives_0(), "rule__Registers__ValueAlternatives_0");
+					put(grammarAccess.getNumberAccess().getAlternatives(), "rule__Number__Alternatives");
 					put(grammarAccess.getLdImmediateAccess().getGroup(), "rule__LdImmediate__Group__0");
 					put(grammarAccess.getLdDirectAccess().getGroup(), "rule__LdDirect__Group__0");
 					put(grammarAccess.getLdIndexedAccess().getGroup(), "rule__LdIndexed__Group__0");
@@ -86,7 +87,8 @@ public class Pds16asmParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDirectAccess().getGroup(), "rule__Direct__Group__0");
 					put(grammarAccess.getIndexedAccess().getGroup(), "rule__Indexed__Group__0");
 					put(grammarAccess.getBasedIndexedAccess().getGroup(), "rule__BasedIndexed__Group__0");
-					put(grammarAccess.getIntOrHexOrStringAccess().getGroup_0_0(), "rule__IntOrHexOrString__Group_0_0__0");
+					put(grammarAccess.getIntOrHexOrStringAccess().getGroup_0(), "rule__IntOrHexOrString__Group_0__0");
+					put(grammarAccess.getIntOrHexOrStringAccess().getGroup_1(), "rule__IntOrHexOrString__Group_1__0");
 					put(grammarAccess.getOperationWithTwoRegistersAccess().getGroup(), "rule__OperationWithTwoRegisters__Group__0");
 					put(grammarAccess.getOperationsWithTreeRegistersAccess().getGroup(), "rule__OperationsWithTreeRegisters__Group__0");
 					put(grammarAccess.getOperationsWithConstantAccess().getGroup(), "rule__OperationsWithConstant__Group__0");
@@ -102,6 +104,9 @@ public class Pds16asmParser extends AbstractContentAssistParser {
 					put(grammarAccess.getIndexedAccess().getIdx3Assignment_5(), "rule__Indexed__Idx3Assignment_5");
 					put(grammarAccess.getBasedIndexedAccess().getRbxAssignment_3(), "rule__BasedIndexed__RbxAssignment_3");
 					put(grammarAccess.getBasedIndexedAccess().getRixAssignment_5(), "rule__BasedIndexed__RixAssignment_5");
+					put(grammarAccess.getIntOrHexOrStringAccess().getIntAssignment_0_1(), "rule__IntOrHexOrString__IntAssignment_0_1");
+					put(grammarAccess.getIntOrHexOrStringAccess().getHexAssignment_1_1(), "rule__IntOrHexOrString__HexAssignment_1_1");
+					put(grammarAccess.getIntOrHexOrStringAccess().getLabelAssignment_2(), "rule__IntOrHexOrString__LabelAssignment_2");
 					put(grammarAccess.getOperationWithTwoRegistersAccess().getRdAssignment_0(), "rule__OperationWithTwoRegisters__RdAssignment_0");
 					put(grammarAccess.getOperationWithTwoRegistersAccess().getRmAssignment_2(), "rule__OperationWithTwoRegisters__RmAssignment_2");
 					put(grammarAccess.getOperationsWithTreeRegistersAccess().getRdAssignment_0(), "rule__OperationsWithTreeRegisters__RdAssignment_0");

@@ -50,29 +50,29 @@ public interface Immediate extends LdImmediate
   void setRegister(Registers value);
 
   /**
-   * Returns the value of the '<em><b>Immediate8</b></em>' attribute.
+   * Returns the value of the '<em><b>Immediate8</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Immediate8</em>' attribute isn't clear,
+   * If the meaning of the '<em>Immediate8</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Immediate8</em>' attribute.
-   * @see #setImmediate8(String)
+   * @return the value of the '<em>Immediate8</em>' containment reference.
+   * @see #setImmediate8(IntOrHexOrString)
    * @see org.pds16.pds16asm.Pds16asmPackage#getImmediate_Immediate8()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  String getImmediate8();
+  IntOrHexOrString getImmediate8();
 
   /**
-   * Sets the value of the '{@link org.pds16.pds16asm.Immediate#getImmediate8 <em>Immediate8</em>}' attribute.
+   * Sets the value of the '{@link org.pds16.pds16asm.Immediate#getImmediate8 <em>Immediate8</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Immediate8</em>' attribute.
+   * @param value the new value of the '<em>Immediate8</em>' containment reference.
    * @see #getImmediate8()
    * @generated
    */
-  void setImmediate8(String value);
+  void setImmediate8(IntOrHexOrString value);
 
 } // Immediate

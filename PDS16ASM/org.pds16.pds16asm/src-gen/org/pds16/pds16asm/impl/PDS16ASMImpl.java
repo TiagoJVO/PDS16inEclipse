@@ -17,9 +17,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.pds16.pds16asm.Instructions;
 import org.pds16.pds16asm.PDS16ASM;
 import org.pds16.pds16asm.Pds16asmPackage;
+import org.pds16.pds16asm.Statement;
 
 /**
  * <!-- begin-user-doc -->
@@ -44,7 +44,7 @@ public class PDS16ASMImpl extends MinimalEObjectImpl.Container implements PDS16A
    * @generated
    * @ordered
    */
-  protected EList<Instructions> instuctions;
+  protected EList<Statement> instuctions;
 
   /**
    * <!-- begin-user-doc -->
@@ -72,11 +72,11 @@ public class PDS16ASMImpl extends MinimalEObjectImpl.Container implements PDS16A
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Instructions> getInstuctions()
+  public EList<Statement> getInstuctions()
   {
     if (instuctions == null)
     {
-      instuctions = new EObjectContainmentEList<Instructions>(Instructions.class, this, Pds16asmPackage.PDS16ASM__INSTUCTIONS);
+      instuctions = new EObjectContainmentEList<Statement>(Statement.class, this, Pds16asmPackage.PDS16ASM__INSTUCTIONS);
     }
     return instuctions;
   }
@@ -126,7 +126,7 @@ public class PDS16ASMImpl extends MinimalEObjectImpl.Container implements PDS16A
     {
       case Pds16asmPackage.PDS16ASM__INSTUCTIONS:
         getInstuctions().clear();
-        getInstuctions().addAll((Collection<? extends Instructions>)newValue);
+        getInstuctions().addAll((Collection<? extends Statement>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

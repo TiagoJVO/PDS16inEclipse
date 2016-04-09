@@ -18,6 +18,7 @@ import org.pds16.pds16asm.Comment;
 import org.pds16.pds16asm.Direct;
 import org.pds16.pds16asm.Immediate;
 import org.pds16.pds16asm.Indexed;
+import org.pds16.pds16asm.IntOrHexOrString;
 import org.pds16.pds16asm.OperationShift;
 import org.pds16.pds16asm.OperationWithOffset;
 import org.pds16.pds16asm.OperationWithTwoRegisters;
@@ -54,6 +55,9 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case Pds16asmPackage.INDEXED:
 				sequence_Indexed(context, (Indexed) semanticObject); 
 				return; 
+			case Pds16asmPackage.INT_OR_HEX_OR_STRING:
+				sequence_IntOrHexOrString(context, (IntOrHexOrString) semanticObject); 
+				return; 
 			case Pds16asmPackage.OPERATION_SHIFT:
 				sequence_OperationShift(context, (OperationShift) semanticObject); 
 				return; 
@@ -73,7 +77,8 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				sequence_PDS16ASM(context, (PDS16ASM) semanticObject); 
 				return; 
 			case Pds16asmPackage.REGISTERS:
-				if (rule == grammarAccess.getInstructionsRule()
+				if (rule == grammarAccess.getStatementRule()
+						|| rule == grammarAccess.getInstructionsRule()
 						|| rule == grammarAccess.getLoadRule()
 						|| rule == grammarAccess.getStoreRule()
 						|| rule == grammarAccess.getLdBasedIndexedRule()
@@ -94,6 +99,7 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     Statement returns Registers
 	 *     Instructions returns Registers
 	 *     Load returns Registers
 	 *     Store returns Registers
@@ -125,7 +131,7 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
-	 *     Instructions returns Comment
+	 *     Statement returns Comment
 	 *     Comment returns Comment
 	 *
 	 * Constraint:
@@ -144,6 +150,7 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     Statement returns Direct
 	 *     Instructions returns Direct
 	 *     Load returns Direct
 	 *     Store returns Direct
@@ -167,6 +174,7 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     Statement returns Immediate
 	 *     Instructions returns Immediate
 	 *     Load returns Immediate
 	 *     LdImmediate returns Immediate
@@ -191,6 +199,7 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     Statement returns Indexed
 	 *     Instructions returns Indexed
 	 *     Load returns Indexed
 	 *     Store returns Indexed
@@ -220,6 +229,19 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     IntOrHexOrString returns IntOrHexOrString
+	 *
+	 * Constraint:
+	 *     (int=NUMB | hex=HEX | label=STRING)
+	 */
+	protected void sequence_IntOrHexOrString(ISerializationContext context, IntOrHexOrString semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Statement returns OperationShift
 	 *     Instructions returns OperationShift
 	 *     Logica returns OperationShift
 	 *     Shl returns OperationShift
@@ -251,6 +273,7 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     Statement returns OperationWithOffset
 	 *     Instructions returns OperationWithOffset
 	 *     Jump returns OperationWithOffset
 	 *     JumpOp returns OperationWithOffset
@@ -275,6 +298,7 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     Statement returns OperationWithTwoRegisters
 	 *     Instructions returns OperationWithTwoRegisters
 	 *     Logica returns OperationWithTwoRegisters
 	 *     Not returns OperationWithTwoRegisters
@@ -300,6 +324,7 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     Statement returns OperationsWithConstant
 	 *     Instructions returns OperationsWithConstant
 	 *     Aritmetica returns OperationsWithConstant
 	 *     Logica returns OperationsWithConstant
@@ -330,6 +355,7 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     Statement returns OperationsWithTreeRegisters
 	 *     Instructions returns OperationsWithTreeRegisters
 	 *     Aritmetica returns OperationsWithTreeRegisters
 	 *     Logica returns OperationsWithTreeRegisters
@@ -365,7 +391,7 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     PDS16ASM returns PDS16ASM
 	 *
 	 * Constraint:
-	 *     instuctions+=Instructions+
+	 *     instuctions+=Statement+
 	 */
 	protected void sequence_PDS16ASM(ISerializationContext context, PDS16ASM semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

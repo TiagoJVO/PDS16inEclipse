@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.pds16.pds16asm.IntOrHexOrString;
 import org.pds16.pds16asm.OperationsWithConstant;
 import org.pds16.pds16asm.Pds16asmPackage;
 import org.pds16.pds16asm.Registers;
@@ -53,24 +54,14 @@ public class OperationsWithConstantImpl extends AddImpl implements OperationsWit
   protected Registers rm;
 
   /**
-   * The default value of the '{@link #getConst4() <em>Const4</em>}' attribute.
+   * The cached value of the '{@link #getConst4() <em>Const4</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getConst4()
    * @generated
    * @ordered
    */
-  protected static final String CONST4_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getConst4() <em>Const4</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getConst4()
-   * @generated
-   * @ordered
-   */
-  protected String const4 = CONST4_EDEFAULT;
+  protected IntOrHexOrString const4;
 
   /**
    * <!-- begin-user-doc -->
@@ -194,7 +185,7 @@ public class OperationsWithConstantImpl extends AddImpl implements OperationsWit
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getConst4()
+  public IntOrHexOrString getConst4()
   {
     return const4;
   }
@@ -204,12 +195,37 @@ public class OperationsWithConstantImpl extends AddImpl implements OperationsWit
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setConst4(String newConst4)
+  public NotificationChain basicSetConst4(IntOrHexOrString newConst4, NotificationChain msgs)
   {
-    String oldConst4 = const4;
+    IntOrHexOrString oldConst4 = const4;
     const4 = newConst4;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.OPERATIONS_WITH_CONSTANT__CONST4, oldConst4, const4));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Pds16asmPackage.OPERATIONS_WITH_CONSTANT__CONST4, oldConst4, newConst4);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setConst4(IntOrHexOrString newConst4)
+  {
+    if (newConst4 != const4)
+    {
+      NotificationChain msgs = null;
+      if (const4 != null)
+        msgs = ((InternalEObject)const4).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.OPERATIONS_WITH_CONSTANT__CONST4, null, msgs);
+      if (newConst4 != null)
+        msgs = ((InternalEObject)newConst4).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.OPERATIONS_WITH_CONSTANT__CONST4, null, msgs);
+      msgs = basicSetConst4(newConst4, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.OPERATIONS_WITH_CONSTANT__CONST4, newConst4, newConst4));
   }
 
   /**
@@ -226,6 +242,8 @@ public class OperationsWithConstantImpl extends AddImpl implements OperationsWit
         return basicSetRd(null, msgs);
       case Pds16asmPackage.OPERATIONS_WITH_CONSTANT__RM:
         return basicSetRm(null, msgs);
+      case Pds16asmPackage.OPERATIONS_WITH_CONSTANT__CONST4:
+        return basicSetConst4(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -267,7 +285,7 @@ public class OperationsWithConstantImpl extends AddImpl implements OperationsWit
         setRm((Registers)newValue);
         return;
       case Pds16asmPackage.OPERATIONS_WITH_CONSTANT__CONST4:
-        setConst4((String)newValue);
+        setConst4((IntOrHexOrString)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -290,7 +308,7 @@ public class OperationsWithConstantImpl extends AddImpl implements OperationsWit
         setRm((Registers)null);
         return;
       case Pds16asmPackage.OPERATIONS_WITH_CONSTANT__CONST4:
-        setConst4(CONST4_EDEFAULT);
+        setConst4((IntOrHexOrString)null);
         return;
     }
     super.eUnset(featureID);
@@ -311,26 +329,9 @@ public class OperationsWithConstantImpl extends AddImpl implements OperationsWit
       case Pds16asmPackage.OPERATIONS_WITH_CONSTANT__RM:
         return rm != null;
       case Pds16asmPackage.OPERATIONS_WITH_CONSTANT__CONST4:
-        return CONST4_EDEFAULT == null ? const4 != null : !CONST4_EDEFAULT.equals(const4);
+        return const4 != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (const4: ");
-    result.append(const4);
-    result.append(')');
-    return result.toString();
   }
 
 } //OperationsWithConstantImpl

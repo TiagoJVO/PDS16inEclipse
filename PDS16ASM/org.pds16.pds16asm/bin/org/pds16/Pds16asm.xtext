@@ -2,10 +2,15 @@ grammar org.pds16.Pds16asm with org.eclipse.xtext.common.Terminals
 generate pds16asm "http://www.pds16.org/Pds16asm"
 
 PDS16ASM:
-	instuctions+=Instructions*;
+	instuctions+=Statement*;
+
+Statement:
+	Instructions | Comment /*/| Label | Directive*/;
+
+/*... Falta aqui código teu! */
 
 Instructions:
-	Load | Store | Aritmetica | Logica | Jump | Comment;
+	Load | Store | Aritmetica | Logica | Jump;
 
 Comment:
 	comment=COMT;
@@ -78,7 +83,7 @@ Indexed:
 BasedIndexed: 
 	Registers ',' '[' rbx=Registers ',' rix=Registers ']';
 
-IntOrHexOrString: ('#' INT | HEX) | STRING;
+IntOrHexOrString: (('#' int=INT) | ('#' hex=HEX) | label=STRING);
 
 OperationWithTwoRegisters: rd=Registers ',' rm=Registers;
 
@@ -96,10 +101,11 @@ OperationWithOffset: rbx=Registers ',' offset8=IntOrHexOrString;
 Registers:
 		value= ('r0' | 'r1' | 'r2' | 'r3' | 'r4' | 'r5' | 'r6' | 'r7' | 'PSW');
 
-Number: STRING;
-		//(INT | HEX | OCT | BIN);
+Number: (INT | HEX | OCT | BIN);
 
 terminal HEX : '0' ('x'|'X')(('0'..'9')|('a'..'f')|('A'..'F'))+;
+
+//terminal NUMB : ('0'..'9')+; Não deixa por já existe o INT defenido
 
 terminal OCT : ('0' | '1'..'7' '0'..'7'*);
 

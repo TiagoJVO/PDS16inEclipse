@@ -77,29 +77,29 @@ public interface Indexed extends LdIndexed, StIndexed
   void setRbx(Registers value);
 
   /**
-   * Returns the value of the '<em><b>Idx3</b></em>' attribute.
+   * Returns the value of the '<em><b>Idx3</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Idx3</em>' attribute isn't clear,
+   * If the meaning of the '<em>Idx3</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Idx3</em>' attribute.
-   * @see #setIdx3(String)
+   * @return the value of the '<em>Idx3</em>' containment reference.
+   * @see #setIdx3(IntOrHexOrString)
    * @see org.pds16.pds16asm.Pds16asmPackage#getIndexed_Idx3()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  String getIdx3();
+  IntOrHexOrString getIdx3();
 
   /**
-   * Sets the value of the '{@link org.pds16.pds16asm.Indexed#getIdx3 <em>Idx3</em>}' attribute.
+   * Sets the value of the '{@link org.pds16.pds16asm.Indexed#getIdx3 <em>Idx3</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Idx3</em>' attribute.
+   * @param value the new value of the '<em>Idx3</em>' containment reference.
    * @see #getIdx3()
    * @generated
    */
-  void setIdx3(String value);
+  void setIdx3(IntOrHexOrString value);
 
 } // Indexed

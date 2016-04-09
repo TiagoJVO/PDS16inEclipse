@@ -78,9 +78,9 @@ rulePDS16ASM returns [EObject current=null]
 	(
 		(
 			{
-				newCompositeNode(grammarAccess.getPDS16ASMAccess().getInstuctionsInstructionsParserRuleCall_0());
+				newCompositeNode(grammarAccess.getPDS16ASMAccess().getInstuctionsStatementParserRuleCall_0());
 			}
-			lv_instuctions_0_0=ruleInstructions
+			lv_instuctions_0_0=ruleStatement
 			{
 				if ($current==null) {
 					$current = createModelElementForParent(grammarAccess.getPDS16ASMRule());
@@ -89,11 +89,47 @@ rulePDS16ASM returns [EObject current=null]
 					$current,
 					"instuctions",
 					lv_instuctions_0_0,
-					"org.pds16.Pds16asm.Instructions");
+					"org.pds16.Pds16asm.Statement");
 				afterParserOrEnumRuleCall();
 			}
 		)
 	)*
+;
+
+// Entry rule entryRuleStatement
+entryRuleStatement returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getStatementRule()); }
+	iv_ruleStatement=ruleStatement
+	{ $current=$iv_ruleStatement.current; }
+	EOF;
+
+// Rule Statement
+ruleStatement returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			newCompositeNode(grammarAccess.getStatementAccess().getInstructionsParserRuleCall_0());
+		}
+		this_Instructions_0=ruleInstructions
+		{
+			$current = $this_Instructions_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getStatementAccess().getCommentParserRuleCall_1());
+		}
+		this_Comment_1=ruleComment
+		{
+			$current = $this_Comment_1.current;
+			afterParserOrEnumRuleCall();
+		}
+	)
 ;
 
 // Entry rule entryRuleInstructions
@@ -154,15 +190,6 @@ ruleInstructions returns [EObject current=null]
 		this_Jump_4=ruleJump
 		{
 			$current = $this_Jump_4.current;
-			afterParserOrEnumRuleCall();
-		}
-		    |
-		{
-			newCompositeNode(grammarAccess.getInstructionsAccess().getCommentParserRuleCall_5());
-		}
-		this_Comment_5=ruleComment
-		{
-			$current = $this_Comment_5.current;
 			afterParserOrEnumRuleCall();
 		}
 	)
@@ -1515,14 +1542,14 @@ ruleBasedIndexed returns [EObject current=null]
 ;
 
 // Entry rule entryRuleIntOrHexOrString
-entryRuleIntOrHexOrString returns [String current=null]:
+entryRuleIntOrHexOrString returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getIntOrHexOrStringRule()); }
 	iv_ruleIntOrHexOrString=ruleIntOrHexOrString
-	{ $current=$iv_ruleIntOrHexOrString.current.getText(); }
+	{ $current=$iv_ruleIntOrHexOrString.current; }
 	EOF;
 
 // Rule IntOrHexOrString
-ruleIntOrHexOrString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+ruleIntOrHexOrString returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -1531,37 +1558,73 @@ ruleIntOrHexOrString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRu
 }:
 	(
 		(
+			otherlv_0='#'
+			{
+				newLeafNode(otherlv_0, grammarAccess.getIntOrHexOrStringAccess().getNumberSignKeyword_0_0());
+			}
 			(
-				kw='#'
-				{
-					$current.merge(kw);
-					newLeafNode(kw, grammarAccess.getIntOrHexOrStringAccess().getNumberSignKeyword_0_0_0());
-				}
-				this_INT_1=RULE_INT
-				{
-					$current.merge(this_INT_1);
-				}
-				{
-					newLeafNode(this_INT_1, grammarAccess.getIntOrHexOrStringAccess().getINTTerminalRuleCall_0_0_1());
-				}
+				(
+					lv_int_1_0=RULE_NUMB
+					{
+						newLeafNode(lv_int_1_0, grammarAccess.getIntOrHexOrStringAccess().getIntNUMBTerminalRuleCall_0_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getIntOrHexOrStringRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"int",
+							lv_int_1_0,
+							"org.pds16.Pds16asm.NUMB");
+					}
+				)
 			)
-			    |
-			this_HEX_2=RULE_HEX
-			{
-				$current.merge(this_HEX_2);
-			}
-			{
-				newLeafNode(this_HEX_2, grammarAccess.getIntOrHexOrStringAccess().getHEXTerminalRuleCall_0_1());
-			}
 		)
 		    |
-		this_STRING_3=RULE_STRING
-		{
-			$current.merge(this_STRING_3);
-		}
-		{
-			newLeafNode(this_STRING_3, grammarAccess.getIntOrHexOrStringAccess().getSTRINGTerminalRuleCall_1());
-		}
+		(
+			otherlv_2='#'
+			{
+				newLeafNode(otherlv_2, grammarAccess.getIntOrHexOrStringAccess().getNumberSignKeyword_1_0());
+			}
+			(
+				(
+					lv_hex_3_0=RULE_HEX
+					{
+						newLeafNode(lv_hex_3_0, grammarAccess.getIntOrHexOrStringAccess().getHexHEXTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getIntOrHexOrStringRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"hex",
+							lv_hex_3_0,
+							"org.pds16.Pds16asm.HEX");
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				lv_label_4_0=RULE_STRING
+				{
+					newLeafNode(lv_label_4_0, grammarAccess.getIntOrHexOrStringAccess().getLabelSTRINGTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getIntOrHexOrStringRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"label",
+						lv_label_4_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
 	)
 ;
 
@@ -2083,6 +2146,8 @@ ruleRegisters returns [EObject current=null]
 ;
 
 RULE_HEX : '0' ('x'|'X') ('0'..'9'|'a'..'f'|'A'..'F')+;
+
+RULE_NUMB : ('0'..'9')+;
 
 RULE_OCT : ('0'|'1'..'7' ('0'..'7')*);
 

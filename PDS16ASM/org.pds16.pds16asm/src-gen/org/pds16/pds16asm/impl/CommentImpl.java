@@ -25,7 +25,7 @@ import org.pds16.pds16asm.Pds16asmPackage;
  *
  * @generated
  */
-public class CommentImpl extends InstructionsImpl implements Comment
+public class CommentImpl extends StatementImpl implements Comment
 {
   /**
    * The default value of the '{@link #getComment() <em>Comment</em>}' attribute.

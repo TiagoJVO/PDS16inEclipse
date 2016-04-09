@@ -80,10 +80,18 @@ public class Pds16asmSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case Pds16asmPackage.STATEMENT:
+      {
+        Statement statement = (Statement)theEObject;
+        T result = caseStatement(statement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case Pds16asmPackage.INSTRUCTIONS:
       {
         Instructions instructions = (Instructions)theEObject;
         T result = caseInstructions(instructions);
+        if (result == null) result = caseStatement(instructions);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -91,7 +99,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
       {
         Comment comment = (Comment)theEObject;
         T result = caseComment(comment);
-        if (result == null) result = caseInstructions(comment);
+        if (result == null) result = caseStatement(comment);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -100,6 +108,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         Load load = (Load)theEObject;
         T result = caseLoad(load);
         if (result == null) result = caseInstructions(load);
+        if (result == null) result = caseStatement(load);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -108,6 +117,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         Store store = (Store)theEObject;
         T result = caseStore(store);
         if (result == null) result = caseInstructions(store);
+        if (result == null) result = caseStatement(store);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -116,6 +126,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         Aritmetica aritmetica = (Aritmetica)theEObject;
         T result = caseAritmetica(aritmetica);
         if (result == null) result = caseInstructions(aritmetica);
+        if (result == null) result = caseStatement(aritmetica);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -124,6 +135,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         Logica logica = (Logica)theEObject;
         T result = caseLogica(logica);
         if (result == null) result = caseInstructions(logica);
+        if (result == null) result = caseStatement(logica);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -132,6 +144,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         Jump jump = (Jump)theEObject;
         T result = caseJump(jump);
         if (result == null) result = caseInstructions(jump);
+        if (result == null) result = caseStatement(jump);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -141,6 +154,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         T result = caseLdImmediate(ldImmediate);
         if (result == null) result = caseLoad(ldImmediate);
         if (result == null) result = caseInstructions(ldImmediate);
+        if (result == null) result = caseStatement(ldImmediate);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -150,6 +164,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         T result = caseLdDirect(ldDirect);
         if (result == null) result = caseLoad(ldDirect);
         if (result == null) result = caseInstructions(ldDirect);
+        if (result == null) result = caseStatement(ldDirect);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -159,6 +174,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         T result = caseLdIndexed(ldIndexed);
         if (result == null) result = caseLoad(ldIndexed);
         if (result == null) result = caseInstructions(ldIndexed);
+        if (result == null) result = caseStatement(ldIndexed);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -168,6 +184,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         T result = caseLdBasedIndexed(ldBasedIndexed);
         if (result == null) result = caseLoad(ldBasedIndexed);
         if (result == null) result = caseInstructions(ldBasedIndexed);
+        if (result == null) result = caseStatement(ldBasedIndexed);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -177,6 +194,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         T result = caseStDirect(stDirect);
         if (result == null) result = caseStore(stDirect);
         if (result == null) result = caseInstructions(stDirect);
+        if (result == null) result = caseStatement(stDirect);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -186,6 +204,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         T result = caseStIndexed(stIndexed);
         if (result == null) result = caseStore(stIndexed);
         if (result == null) result = caseInstructions(stIndexed);
+        if (result == null) result = caseStatement(stIndexed);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -195,6 +214,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         T result = caseStBasedIndexed(stBasedIndexed);
         if (result == null) result = caseStore(stBasedIndexed);
         if (result == null) result = caseInstructions(stBasedIndexed);
+        if (result == null) result = caseStatement(stBasedIndexed);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -204,6 +224,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         T result = caseAdd(add);
         if (result == null) result = caseAritmetica(add);
         if (result == null) result = caseInstructions(add);
+        if (result == null) result = caseStatement(add);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -213,6 +234,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         T result = caseSub(sub);
         if (result == null) result = caseAritmetica(sub);
         if (result == null) result = caseInstructions(sub);
+        if (result == null) result = caseStatement(sub);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -222,6 +244,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         T result = caseAnl(anl);
         if (result == null) result = caseLogica(anl);
         if (result == null) result = caseInstructions(anl);
+        if (result == null) result = caseStatement(anl);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -231,6 +254,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         T result = caseOrl(orl);
         if (result == null) result = caseLogica(orl);
         if (result == null) result = caseInstructions(orl);
+        if (result == null) result = caseStatement(orl);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -240,6 +264,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         T result = caseXrl(xrl);
         if (result == null) result = caseLogica(xrl);
         if (result == null) result = caseInstructions(xrl);
+        if (result == null) result = caseStatement(xrl);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -249,6 +274,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         T result = caseNot(not);
         if (result == null) result = caseLogica(not);
         if (result == null) result = caseInstructions(not);
+        if (result == null) result = caseStatement(not);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -258,6 +284,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         T result = caseShl(shl);
         if (result == null) result = caseLogica(shl);
         if (result == null) result = caseInstructions(shl);
+        if (result == null) result = caseStatement(shl);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -267,6 +294,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         T result = caseShr(shr);
         if (result == null) result = caseLogica(shr);
         if (result == null) result = caseInstructions(shr);
+        if (result == null) result = caseStatement(shr);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -276,6 +304,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         T result = caseRr(rr);
         if (result == null) result = caseLogica(rr);
         if (result == null) result = caseInstructions(rr);
+        if (result == null) result = caseStatement(rr);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -285,6 +314,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         T result = caseRc(rc);
         if (result == null) result = caseLogica(rc);
         if (result == null) result = caseInstructions(rc);
+        if (result == null) result = caseStatement(rc);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -294,6 +324,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         T result = caseJumpOp(jumpOp);
         if (result == null) result = caseJump(jumpOp);
         if (result == null) result = caseInstructions(jumpOp);
+        if (result == null) result = caseStatement(jumpOp);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -304,6 +335,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         if (result == null) result = caseLdImmediate(immediate);
         if (result == null) result = caseLoad(immediate);
         if (result == null) result = caseInstructions(immediate);
+        if (result == null) result = caseStatement(immediate);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -316,6 +348,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         if (result == null) result = caseLoad(direct);
         if (result == null) result = caseStore(direct);
         if (result == null) result = caseInstructions(direct);
+        if (result == null) result = caseStatement(direct);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -328,6 +361,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         if (result == null) result = caseLoad(indexed);
         if (result == null) result = caseStore(indexed);
         if (result == null) result = caseInstructions(indexed);
+        if (result == null) result = caseStatement(indexed);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -340,6 +374,14 @@ public class Pds16asmSwitch<T> extends Switch<T>
         if (result == null) result = caseLoad(basedIndexed);
         if (result == null) result = caseStore(basedIndexed);
         if (result == null) result = caseInstructions(basedIndexed);
+        if (result == null) result = caseStatement(basedIndexed);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case Pds16asmPackage.INT_OR_HEX_OR_STRING:
+      {
+        IntOrHexOrString intOrHexOrString = (IntOrHexOrString)theEObject;
+        T result = caseIntOrHexOrString(intOrHexOrString);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -351,6 +393,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         if (result == null) result = caseRc(operationWithTwoRegisters);
         if (result == null) result = caseLogica(operationWithTwoRegisters);
         if (result == null) result = caseInstructions(operationWithTwoRegisters);
+        if (result == null) result = caseStatement(operationWithTwoRegisters);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -366,6 +409,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         if (result == null) result = caseAritmetica(operationsWithTreeRegisters);
         if (result == null) result = caseLogica(operationsWithTreeRegisters);
         if (result == null) result = caseInstructions(operationsWithTreeRegisters);
+        if (result == null) result = caseStatement(operationsWithTreeRegisters);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -379,6 +423,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         if (result == null) result = caseAritmetica(operationsWithConstant);
         if (result == null) result = caseLogica(operationsWithConstant);
         if (result == null) result = caseInstructions(operationsWithConstant);
+        if (result == null) result = caseStatement(operationsWithConstant);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -390,6 +435,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         if (result == null) result = caseShr(operationShift);
         if (result == null) result = caseLogica(operationShift);
         if (result == null) result = caseInstructions(operationShift);
+        if (result == null) result = caseStatement(operationShift);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -400,6 +446,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         if (result == null) result = caseJumpOp(operationWithOffset);
         if (result == null) result = caseJump(operationWithOffset);
         if (result == null) result = caseInstructions(operationWithOffset);
+        if (result == null) result = caseStatement(operationWithOffset);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -413,6 +460,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
         if (result == null) result = caseLoad(registers);
         if (result == null) result = caseStore(registers);
         if (result == null) result = caseInstructions(registers);
+        if (result == null) result = caseStatement(registers);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -432,6 +480,22 @@ public class Pds16asmSwitch<T> extends Switch<T>
    * @generated
    */
   public T casePDS16ASM(PDS16ASM object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Statement</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Statement</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStatement(Statement object)
   {
     return null;
   }
@@ -896,6 +960,22 @@ public class Pds16asmSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseBasedIndexed(BasedIndexed object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Int Or Hex Or String</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Int Or Hex Or String</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIntOrHexOrString(IntOrHexOrString object)
   {
     return null;
   }

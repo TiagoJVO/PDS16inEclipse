@@ -50,29 +50,29 @@ public interface OperationWithOffset extends JumpOp
   void setRbx(Registers value);
 
   /**
-   * Returns the value of the '<em><b>Offset8</b></em>' attribute.
+   * Returns the value of the '<em><b>Offset8</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Offset8</em>' attribute isn't clear,
+   * If the meaning of the '<em>Offset8</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Offset8</em>' attribute.
-   * @see #setOffset8(String)
+   * @return the value of the '<em>Offset8</em>' containment reference.
+   * @see #setOffset8(IntOrHexOrString)
    * @see org.pds16.pds16asm.Pds16asmPackage#getOperationWithOffset_Offset8()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  String getOffset8();
+  IntOrHexOrString getOffset8();
 
   /**
-   * Sets the value of the '{@link org.pds16.pds16asm.OperationWithOffset#getOffset8 <em>Offset8</em>}' attribute.
+   * Sets the value of the '{@link org.pds16.pds16asm.OperationWithOffset#getOffset8 <em>Offset8</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Offset8</em>' attribute.
+   * @param value the new value of the '<em>Offset8</em>' containment reference.
    * @see #getOffset8()
    * @generated
    */
-  void setOffset8(String value);
+  void setOffset8(IntOrHexOrString value);
 
 } // OperationWithOffset

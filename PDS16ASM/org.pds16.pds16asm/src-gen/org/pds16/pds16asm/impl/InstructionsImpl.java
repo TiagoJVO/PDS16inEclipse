@@ -5,8 +5,6 @@ package org.pds16.pds16asm.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.pds16.pds16asm.Instructions;
 import org.pds16.pds16asm.Pds16asmPackage;
 
@@ -19,7 +17,7 @@ import org.pds16.pds16asm.Pds16asmPackage;
  *
  * @generated
  */
-public class InstructionsImpl extends MinimalEObjectImpl.Container implements Instructions
+public class InstructionsImpl extends StatementImpl implements Instructions
 {
   /**
    * <!-- begin-user-doc -->

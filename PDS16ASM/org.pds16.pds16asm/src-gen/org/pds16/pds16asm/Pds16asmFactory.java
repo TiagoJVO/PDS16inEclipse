@@ -33,6 +33,15 @@ public interface Pds16asmFactory extends EFactory
   PDS16ASM createPDS16ASM();
 
   /**
+   * Returns a new object of class '<em>Statement</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Statement</em>'.
+   * @generated
+   */
+  Statement createStatement();
+
+  /**
    * Returns a new object of class '<em>Instructions</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -292,6 +301,15 @@ public interface Pds16asmFactory extends EFactory
    * @generated
    */
   BasedIndexed createBasedIndexed();
+
+  /**
+   * Returns a new object of class '<em>Int Or Hex Or String</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Int Or Hex Or String</em>'.
+   * @generated
+   */
+  IntOrHexOrString createIntOrHexOrString();
 
   /**
    * Returns a new object of class '<em>Operation With Two Registers</em>'.

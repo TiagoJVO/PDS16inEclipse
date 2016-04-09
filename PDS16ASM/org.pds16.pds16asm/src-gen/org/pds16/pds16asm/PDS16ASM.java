@@ -27,7 +27,7 @@ public interface PDS16ASM extends EObject
 {
   /**
    * Returns the value of the '<em><b>Instuctions</b></em>' containment reference list.
-   * The list contents are of type {@link org.pds16.pds16asm.Instructions}.
+   * The list contents are of type {@link org.pds16.pds16asm.Statement}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Instuctions</em>' containment reference list isn't clear,
@@ -39,6 +39,6 @@ public interface PDS16ASM extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<Instructions> getInstuctions();
+  EList<Statement> getInstuctions();
 
 } // PDS16ASM

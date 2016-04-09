@@ -66,6 +66,7 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
     switch (eClass.getClassifierID())
     {
       case Pds16asmPackage.PDS16ASM: return createPDS16ASM();
+      case Pds16asmPackage.STATEMENT: return createStatement();
       case Pds16asmPackage.INSTRUCTIONS: return createInstructions();
       case Pds16asmPackage.COMMENT: return createComment();
       case Pds16asmPackage.LOAD: return createLoad();
@@ -95,6 +96,7 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
       case Pds16asmPackage.DIRECT: return createDirect();
       case Pds16asmPackage.INDEXED: return createIndexed();
       case Pds16asmPackage.BASED_INDEXED: return createBasedIndexed();
+      case Pds16asmPackage.INT_OR_HEX_OR_STRING: return createIntOrHexOrString();
       case Pds16asmPackage.OPERATION_WITH_TWO_REGISTERS: return createOperationWithTwoRegisters();
       case Pds16asmPackage.OPERATIONS_WITH_TREE_REGISTERS: return createOperationsWithTreeRegisters();
       case Pds16asmPackage.OPERATIONS_WITH_CONSTANT: return createOperationsWithConstant();
@@ -115,6 +117,17 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
   {
     PDS16ASMImpl pds16ASM = new PDS16ASMImpl();
     return pds16ASM;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Statement createStatement()
+  {
+    StatementImpl statement = new StatementImpl();
+    return statement;
   }
 
   /**
@@ -434,6 +447,17 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
   {
     BasedIndexedImpl basedIndexed = new BasedIndexedImpl();
     return basedIndexed;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IntOrHexOrString createIntOrHexOrString()
+  {
+    IntOrHexOrStringImpl intOrHexOrString = new IntOrHexOrStringImpl();
+    return intOrHexOrString;
   }
 
   /**

@@ -81,6 +81,11 @@ public class Pds16asmAdapterFactory extends AdapterFactoryImpl
         return createPDS16ASMAdapter();
       }
       @Override
+      public Adapter caseStatement(Statement object)
+      {
+        return createStatementAdapter();
+      }
+      @Override
       public Adapter caseInstructions(Instructions object)
       {
         return createInstructionsAdapter();
@@ -226,6 +231,11 @@ public class Pds16asmAdapterFactory extends AdapterFactoryImpl
         return createBasedIndexedAdapter();
       }
       @Override
+      public Adapter caseIntOrHexOrString(IntOrHexOrString object)
+      {
+        return createIntOrHexOrStringAdapter();
+      }
+      @Override
       public Adapter caseOperationWithTwoRegisters(OperationWithTwoRegisters object)
       {
         return createOperationWithTwoRegistersAdapter();
@@ -288,6 +298,21 @@ public class Pds16asmAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createPDS16ASMAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.Statement <em>Statement</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.pds16.pds16asm.Statement
+   * @generated
+   */
+  public Adapter createStatementAdapter()
   {
     return null;
   }
@@ -723,6 +748,21 @@ public class Pds16asmAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createBasedIndexedAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.IntOrHexOrString <em>Int Or Hex Or String</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.pds16.pds16asm.IntOrHexOrString
+   * @generated
+   */
+  public Adapter createIntOrHexOrStringAdapter()
   {
     return null;
   }

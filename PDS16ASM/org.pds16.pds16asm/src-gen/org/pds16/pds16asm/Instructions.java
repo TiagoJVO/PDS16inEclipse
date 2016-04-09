@@ -3,7 +3,6 @@
  */
 package org.pds16.pds16asm;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,6 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Instructions extends EObject
+public interface Instructions extends Statement
 {
 } // Instructions
