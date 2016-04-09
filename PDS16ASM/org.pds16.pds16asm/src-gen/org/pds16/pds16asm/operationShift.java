@@ -6,24 +6,24 @@ package org.pds16.pds16asm;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>operation Shift</b></em>'.
+ * A representation of the model object '<em><b>Operation Shift</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.pds16.pds16asm.operationShift#getRd <em>Rd</em>}</li>
- *   <li>{@link org.pds16.pds16asm.operationShift#getRm <em>Rm</em>}</li>
- *   <li>{@link org.pds16.pds16asm.operationShift#getConst4 <em>Const4</em>}</li>
- *   <li>{@link org.pds16.pds16asm.operationShift#getSin <em>Sin</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.OperationShift#getRd <em>Rd</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.OperationShift#getRm <em>Rm</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.OperationShift#getConst4 <em>Const4</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.OperationShift#getSin <em>Sin</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.pds16.pds16asm.Pds16asmPackage#getoperationShift()
+ * @see org.pds16.pds16asm.Pds16asmPackage#getOperationShift()
  * @model
  * @generated
  */
-public interface operationShift extends SHL, SHR
+public interface OperationShift extends Shl, Shr
 {
   /**
    * Returns the value of the '<em><b>Rd</b></em>' containment reference.
@@ -35,14 +35,14 @@ public interface operationShift extends SHL, SHR
    * <!-- end-user-doc -->
    * @return the value of the '<em>Rd</em>' containment reference.
    * @see #setRd(Registers)
-   * @see org.pds16.pds16asm.Pds16asmPackage#getoperationShift_Rd()
+   * @see org.pds16.pds16asm.Pds16asmPackage#getOperationShift_Rd()
    * @model containment="true"
    * @generated
    */
   Registers getRd();
 
   /**
-   * Sets the value of the '{@link org.pds16.pds16asm.operationShift#getRd <em>Rd</em>}' containment reference.
+   * Sets the value of the '{@link org.pds16.pds16asm.OperationShift#getRd <em>Rd</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Rd</em>' containment reference.
@@ -61,14 +61,14 @@ public interface operationShift extends SHL, SHR
    * <!-- end-user-doc -->
    * @return the value of the '<em>Rm</em>' containment reference.
    * @see #setRm(Registers)
-   * @see org.pds16.pds16asm.Pds16asmPackage#getoperationShift_Rm()
+   * @see org.pds16.pds16asm.Pds16asmPackage#getOperationShift_Rm()
    * @model containment="true"
    * @generated
    */
   Registers getRm();
 
   /**
-   * Sets the value of the '{@link org.pds16.pds16asm.operationShift#getRm <em>Rm</em>}' containment reference.
+   * Sets the value of the '{@link org.pds16.pds16asm.OperationShift#getRm <em>Rm</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Rm</em>' containment reference.
@@ -86,22 +86,22 @@ public interface operationShift extends SHL, SHR
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Const4</em>' attribute.
-   * @see #setConst4(int)
-   * @see org.pds16.pds16asm.Pds16asmPackage#getoperationShift_Const4()
+   * @see #setConst4(String)
+   * @see org.pds16.pds16asm.Pds16asmPackage#getOperationShift_Const4()
    * @model
    * @generated
    */
-  int getConst4();
+  String getConst4();
 
   /**
-   * Sets the value of the '{@link org.pds16.pds16asm.operationShift#getConst4 <em>Const4</em>}' attribute.
+   * Sets the value of the '{@link org.pds16.pds16asm.OperationShift#getConst4 <em>Const4</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Const4</em>' attribute.
    * @see #getConst4()
    * @generated
    */
-  void setConst4(int value);
+  void setConst4(String value);
 
   /**
    * Returns the value of the '<em><b>Sin</b></em>' attribute.
@@ -112,21 +112,21 @@ public interface operationShift extends SHL, SHR
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Sin</em>' attribute.
-   * @see #setSin(int)
-   * @see org.pds16.pds16asm.Pds16asmPackage#getoperationShift_Sin()
+   * @see #setSin(String)
+   * @see org.pds16.pds16asm.Pds16asmPackage#getOperationShift_Sin()
    * @model
    * @generated
    */
-  int getSin();
+  String getSin();
 
   /**
-   * Sets the value of the '{@link org.pds16.pds16asm.operationShift#getSin <em>Sin</em>}' attribute.
+   * Sets the value of the '{@link org.pds16.pds16asm.OperationShift#getSin <em>Sin</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Sin</em>' attribute.
    * @see #getSin()
    * @generated
    */
-  void setSin(int value);
+  void setSin(String value);
 
-} // operationShift
+} // OperationShift

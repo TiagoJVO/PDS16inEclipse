@@ -5,26 +5,26 @@ package org.pds16.pds16asm.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.pds16.pds16asm.ORL;
+import org.pds16.pds16asm.Orl;
 import org.pds16.pds16asm.Pds16asmPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>ORL</b></em>'.
+ * An implementation of the model object '<em><b>Orl</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class ORLImpl extends LogicaImpl implements ORL
+public class OrlImpl extends LogicaImpl implements Orl
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ORLImpl()
+  protected OrlImpl()
   {
     super();
   }
@@ -40,4 +40,4 @@ public class ORLImpl extends LogicaImpl implements ORL
     return Pds16asmPackage.Literals.ORL;
   }
 
-} //ORLImpl
+} //OrlImpl

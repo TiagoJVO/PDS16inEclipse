@@ -11,26 +11,26 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.pds16.pds16asm.OperationsWithTreeRegisters;
 import org.pds16.pds16asm.Pds16asmPackage;
 import org.pds16.pds16asm.Registers;
-import org.pds16.pds16asm.operationsWithTreeRegisters;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>operations With Tree Registers</b></em>'.
+ * An implementation of the model object '<em><b>Operations With Tree Registers</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.pds16.pds16asm.impl.operationsWithTreeRegistersImpl#getRd <em>Rd</em>}</li>
- *   <li>{@link org.pds16.pds16asm.impl.operationsWithTreeRegistersImpl#getRm <em>Rm</em>}</li>
- *   <li>{@link org.pds16.pds16asm.impl.operationsWithTreeRegistersImpl#getRn <em>Rn</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.impl.OperationsWithTreeRegistersImpl#getRd <em>Rd</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.impl.OperationsWithTreeRegistersImpl#getRm <em>Rm</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.impl.OperationsWithTreeRegistersImpl#getRn <em>Rn</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class operationsWithTreeRegistersImpl extends AddRegistersImpl implements operationsWithTreeRegisters
+public class OperationsWithTreeRegistersImpl extends AddImpl implements OperationsWithTreeRegisters
 {
   /**
    * The cached value of the '{@link #getRd() <em>Rd</em>}' containment reference.
@@ -67,7 +67,7 @@ public class operationsWithTreeRegistersImpl extends AddRegistersImpl implements
    * <!-- end-user-doc -->
    * @generated
    */
-  protected operationsWithTreeRegistersImpl()
+  protected OperationsWithTreeRegistersImpl()
   {
     super();
   }
@@ -333,4 +333,4 @@ public class operationsWithTreeRegistersImpl extends AddRegistersImpl implements
     return super.eIsSet(featureID);
   }
 
-} //operationsWithTreeRegistersImpl
+} //OperationsWithTreeRegistersImpl

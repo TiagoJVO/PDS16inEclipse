@@ -6,14 +6,14 @@ package org.pds16.pds16asm;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>ANL</b></em>'.
+ * A representation of the model object '<em><b>Anl</b></em>'.
  * <!-- end-user-doc -->
  *
  *
- * @see org.pds16.pds16asm.Pds16asmPackage#getANL()
+ * @see org.pds16.pds16asm.Pds16asmPackage#getAnl()
  * @model
  * @generated
  */
-public interface ANL extends Logica
+public interface Anl extends Logica
 {
-} // ANL
+} // Anl

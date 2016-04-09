@@ -6,25 +6,25 @@ package org.pds16.pds16asm.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import org.pds16.pds16asm.Pds16asmPackage;
-import org.pds16.pds16asm.SHR;
+import org.pds16.pds16asm.Shr;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>SHR</b></em>'.
+ * An implementation of the model object '<em><b>Shr</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class SHRImpl extends LogicaImpl implements SHR
+public class ShrImpl extends LogicaImpl implements Shr
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected SHRImpl()
+  protected ShrImpl()
   {
     super();
   }
@@ -40,4 +40,4 @@ public class SHRImpl extends LogicaImpl implements SHR
     return Pds16asmPackage.Literals.SHR;
   }
 
-} //SHRImpl
+} //ShrImpl

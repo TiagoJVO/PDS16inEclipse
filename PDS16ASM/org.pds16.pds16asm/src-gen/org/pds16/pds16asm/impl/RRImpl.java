@@ -6,25 +6,25 @@ package org.pds16.pds16asm.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import org.pds16.pds16asm.Pds16asmPackage;
-import org.pds16.pds16asm.RR;
+import org.pds16.pds16asm.Rr;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>RR</b></em>'.
+ * An implementation of the model object '<em><b>Rr</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class RRImpl extends LogicaImpl implements RR
+public class RrImpl extends LogicaImpl implements Rr
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected RRImpl()
+  protected RrImpl()
   {
     super();
   }
@@ -40,4 +40,4 @@ public class RRImpl extends LogicaImpl implements RR
     return Pds16asmPackage.Literals.RR;
   }
 
-} //RRImpl
+} //RrImpl

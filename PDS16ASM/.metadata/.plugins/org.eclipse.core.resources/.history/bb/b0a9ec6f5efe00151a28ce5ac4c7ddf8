@@ -1,0 +1,113 @@
+grammar org.pds16.Pds16asm with org.eclipse.xtext.common.Terminals
+generate pds16asm "http://www.pds16.org/Pds16asm"
+
+PDS16ASM:
+	instuctions+=Instructions*;
+
+Instructions:
+	Load | Store | Aritmetica | Logica | Jump ;
+
+
+Load: LdImmediate | LdDirect | LdIndexed | LdBasedIndexed ;
+Store: StDirect | StIndexed | StBasedIndexed;
+Aritmetica: Add | Sub;
+Logica: Anl | Orl | Xrl | Not | Shl | Shr | Rr | Rc;
+Jump: JumpOp;
+
+/*********************** Load **********************/
+LdImmediate: ('ldi' |'ldih')  Immediate;
+
+LdDirect: ('ld' | 'ldb') Direct;
+
+LdIndexed: ('ld' | 'ldb') Indexed;
+
+LdBasedIndexed: ('ld' | 'ldb') BasedIndexed;
+/***************************************************/
+
+/*********************** Store *********************/
+StDirect: ('st' | 'stb') Direct ;
+
+StIndexed: ('st' | 'stb') Indexed;
+
+StBasedIndexed: ('st' | 'stb') BasedIndexed ;
+/***************************************************/
+
+/******************************************* Aritmetica ***********************************/
+Add: ('add' | 'addf' | 'adc' | 'adcf') 
+		(OperationsWithConstant | OperationsWithTreeRegisters);
+
+Sub: (('sub' | 'subf' | 'sbb' | 'sbbf') 
+		(OperationsWithConstant | OperationsWithTreeRegisters))
+	 | 'subr' OperationsWithTreeRegisters ;
+/******************************************************************************************/
+
+/******************************************* Logica ***************************************/
+Anl: ('anl' | 'anlf') OperationsWithTreeRegisters;
+
+Orl: ('orl' | 'orlf') OperationsWithTreeRegisters;
+
+Xrl: ('xrl' | 'xrlf') OperationsWithTreeRegisters;
+
+Not: ('not' | 'notf') OperationWithTwoRegisters;
+
+Shl: 'shl' OperationShift;
+
+Shr: 'shr' OperationShift;
+
+Rr: ('rrl' | 'rrm') OperationsWithConstant;
+
+Rc: ('rcr' | 'rcl') OperationWithTwoRegisters;
+/******************************************************************************************/
+
+/************************************** Jump **********************************************/
+JumpOp: 
+	('jz' | 'je' | 'jnz' | 'jne' | 'jc' | 'jbl' | 'jnc' | 'jae' | 'jmp' | 'jmpl')
+		OperationWithOffset;
+/******************************************************************************************/
+
+/************************************Type Operations***************************************/
+Immediate: register=Registers ',' immediate8=IntOrHexOrString;
+
+Direct: register=Registers ',' (INT | HEX | STRING);
+
+Indexed:
+	rd=Registers ',''[' rbx=Registers ',' idx3=IntOrHexOrString ']' ;
+	
+BasedIndexed: 
+	Registers ',' '[' rbx=Registers ',' rix=Registers ']';
+
+//IntOrHexOrString: ('#' INT | HEX) | STRING;
+
+IntOrHexOrString: value= STRING;
+
+OperationWithTwoRegisters: rd=Registers ',' rm=Registers;
+
+OperationsWithTreeRegisters: rd=Registers ',' rm=Registers ',' rn=Registers ;
+
+OperationsWithConstant: rd=Registers ',' rm=Registers ',' const4=IntOrHexOrString;
+
+OperationShift: rd=Registers ',' rm=Registers ',' const4=IntOrHexOrString ',' sin=BIN;
+//const4 é possivel usar label?????
+
+OperationWithOffset: rbx=Registers ',' offset8=IntOrHexOrString;
+/******************************************************************************************/
+
+/***********************************************Utils**************************************/
+Registers:
+		value= ('r0' | 'r1' | 'r2' | 'r3' | 'r4' | 'r5' | 'r6' | 'r7' | 'PSW');
+
+Number: STRING;
+		//(INT | HEX | OCT | BIN);
+
+terminal HEX : '0' ('x'|'X')(('0'..'9')|('a'..'f')|('A'..'F'))+;
+
+terminal OCT : ('0' | '1'..'7' '0'..'7'*);
+
+terminal BIN : ('0' | '1')+;
+
+//terminal CONST4: ('0'..'9')+; //É IGUAL AO INT
+
+terminal COMT : ';' -> '\n';
+/******************************************************************************************/
+
+

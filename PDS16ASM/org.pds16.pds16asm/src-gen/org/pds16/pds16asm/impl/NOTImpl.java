@@ -5,26 +5,26 @@ package org.pds16.pds16asm.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.pds16.pds16asm.NOT;
+import org.pds16.pds16asm.Not;
 import org.pds16.pds16asm.Pds16asmPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>NOT</b></em>'.
+ * An implementation of the model object '<em><b>Not</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class NOTImpl extends LogicaImpl implements NOT
+public class NotImpl extends LogicaImpl implements Not
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected NOTImpl()
+  protected NotImpl()
   {
     super();
   }
@@ -40,4 +40,4 @@ public class NOTImpl extends LogicaImpl implements NOT
     return Pds16asmPackage.Literals.NOT;
   }
 
-} //NOTImpl
+} //NotImpl

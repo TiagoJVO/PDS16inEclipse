@@ -11,7 +11,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.pds16.pds16asm.HexaDecimal;
 import org.pds16.pds16asm.Immediate;
 import org.pds16.pds16asm.Pds16asmPackage;
 import org.pds16.pds16asm.Registers;
@@ -43,14 +42,24 @@ public class ImmediateImpl extends LdImmediateImpl implements Immediate
   protected Registers register;
 
   /**
-   * The cached value of the '{@link #getImmediate8() <em>Immediate8</em>}' containment reference.
+   * The default value of the '{@link #getImmediate8() <em>Immediate8</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getImmediate8()
    * @generated
    * @ordered
    */
-  protected HexaDecimal immediate8;
+  protected static final String IMMEDIATE8_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getImmediate8() <em>Immediate8</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getImmediate8()
+   * @generated
+   * @ordered
+   */
+  protected String immediate8 = IMMEDIATE8_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -126,7 +135,7 @@ public class ImmediateImpl extends LdImmediateImpl implements Immediate
    * <!-- end-user-doc -->
    * @generated
    */
-  public HexaDecimal getImmediate8()
+  public String getImmediate8()
   {
     return immediate8;
   }
@@ -136,37 +145,12 @@ public class ImmediateImpl extends LdImmediateImpl implements Immediate
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetImmediate8(HexaDecimal newImmediate8, NotificationChain msgs)
+  public void setImmediate8(String newImmediate8)
   {
-    HexaDecimal oldImmediate8 = immediate8;
+    String oldImmediate8 = immediate8;
     immediate8 = newImmediate8;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Pds16asmPackage.IMMEDIATE__IMMEDIATE8, oldImmediate8, newImmediate8);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setImmediate8(HexaDecimal newImmediate8)
-  {
-    if (newImmediate8 != immediate8)
-    {
-      NotificationChain msgs = null;
-      if (immediate8 != null)
-        msgs = ((InternalEObject)immediate8).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.IMMEDIATE__IMMEDIATE8, null, msgs);
-      if (newImmediate8 != null)
-        msgs = ((InternalEObject)newImmediate8).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.IMMEDIATE__IMMEDIATE8, null, msgs);
-      msgs = basicSetImmediate8(newImmediate8, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.IMMEDIATE__IMMEDIATE8, newImmediate8, newImmediate8));
+      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.IMMEDIATE__IMMEDIATE8, oldImmediate8, immediate8));
   }
 
   /**
@@ -181,8 +165,6 @@ public class ImmediateImpl extends LdImmediateImpl implements Immediate
     {
       case Pds16asmPackage.IMMEDIATE__REGISTER:
         return basicSetRegister(null, msgs);
-      case Pds16asmPackage.IMMEDIATE__IMMEDIATE8:
-        return basicSetImmediate8(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -219,7 +201,7 @@ public class ImmediateImpl extends LdImmediateImpl implements Immediate
         setRegister((Registers)newValue);
         return;
       case Pds16asmPackage.IMMEDIATE__IMMEDIATE8:
-        setImmediate8((HexaDecimal)newValue);
+        setImmediate8((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -239,7 +221,7 @@ public class ImmediateImpl extends LdImmediateImpl implements Immediate
         setRegister((Registers)null);
         return;
       case Pds16asmPackage.IMMEDIATE__IMMEDIATE8:
-        setImmediate8((HexaDecimal)null);
+        setImmediate8(IMMEDIATE8_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -258,9 +240,26 @@ public class ImmediateImpl extends LdImmediateImpl implements Immediate
       case Pds16asmPackage.IMMEDIATE__REGISTER:
         return register != null;
       case Pds16asmPackage.IMMEDIATE__IMMEDIATE8:
-        return immediate8 != null;
+        return IMMEDIATE8_EDEFAULT == null ? immediate8 != null : !IMMEDIATE8_EDEFAULT.equals(immediate8);
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (immediate8: ");
+    result.append(immediate8);
+    result.append(')');
+    return result.toString();
   }
 
 } //ImmediateImpl

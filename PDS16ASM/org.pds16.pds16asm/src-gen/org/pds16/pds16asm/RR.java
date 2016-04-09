@@ -6,14 +6,14 @@ package org.pds16.pds16asm;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>RR</b></em>'.
+ * A representation of the model object '<em><b>Rr</b></em>'.
  * <!-- end-user-doc -->
  *
  *
- * @see org.pds16.pds16asm.Pds16asmPackage#getRR()
+ * @see org.pds16.pds16asm.Pds16asmPackage#getRr()
  * @model
  * @generated
  */
-public interface RR extends Logica
+public interface Rr extends Logica
 {
-} // RR
+} // Rr

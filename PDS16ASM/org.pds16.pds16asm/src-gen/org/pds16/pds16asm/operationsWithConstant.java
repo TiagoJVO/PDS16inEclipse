@@ -6,23 +6,23 @@ package org.pds16.pds16asm;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>operations With Constant</b></em>'.
+ * A representation of the model object '<em><b>Operations With Constant</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.pds16.pds16asm.operationsWithConstant#getRd <em>Rd</em>}</li>
- *   <li>{@link org.pds16.pds16asm.operationsWithConstant#getRm <em>Rm</em>}</li>
- *   <li>{@link org.pds16.pds16asm.operationsWithConstant#getConst4 <em>Const4</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.OperationsWithConstant#getRd <em>Rd</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.OperationsWithConstant#getRm <em>Rm</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.OperationsWithConstant#getConst4 <em>Const4</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.pds16.pds16asm.Pds16asmPackage#getoperationsWithConstant()
+ * @see org.pds16.pds16asm.Pds16asmPackage#getOperationsWithConstant()
  * @model
  * @generated
  */
-public interface operationsWithConstant extends AddConstant, SubConstant, RR
+public interface OperationsWithConstant extends Add, Sub, Rr
 {
   /**
    * Returns the value of the '<em><b>Rd</b></em>' containment reference.
@@ -34,14 +34,14 @@ public interface operationsWithConstant extends AddConstant, SubConstant, RR
    * <!-- end-user-doc -->
    * @return the value of the '<em>Rd</em>' containment reference.
    * @see #setRd(Registers)
-   * @see org.pds16.pds16asm.Pds16asmPackage#getoperationsWithConstant_Rd()
+   * @see org.pds16.pds16asm.Pds16asmPackage#getOperationsWithConstant_Rd()
    * @model containment="true"
    * @generated
    */
   Registers getRd();
 
   /**
-   * Sets the value of the '{@link org.pds16.pds16asm.operationsWithConstant#getRd <em>Rd</em>}' containment reference.
+   * Sets the value of the '{@link org.pds16.pds16asm.OperationsWithConstant#getRd <em>Rd</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Rd</em>' containment reference.
@@ -60,14 +60,14 @@ public interface operationsWithConstant extends AddConstant, SubConstant, RR
    * <!-- end-user-doc -->
    * @return the value of the '<em>Rm</em>' containment reference.
    * @see #setRm(Registers)
-   * @see org.pds16.pds16asm.Pds16asmPackage#getoperationsWithConstant_Rm()
+   * @see org.pds16.pds16asm.Pds16asmPackage#getOperationsWithConstant_Rm()
    * @model containment="true"
    * @generated
    */
   Registers getRm();
 
   /**
-   * Sets the value of the '{@link org.pds16.pds16asm.operationsWithConstant#getRm <em>Rm</em>}' containment reference.
+   * Sets the value of the '{@link org.pds16.pds16asm.OperationsWithConstant#getRm <em>Rm</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Rm</em>' containment reference.
@@ -85,21 +85,21 @@ public interface operationsWithConstant extends AddConstant, SubConstant, RR
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Const4</em>' attribute.
-   * @see #setConst4(int)
-   * @see org.pds16.pds16asm.Pds16asmPackage#getoperationsWithConstant_Const4()
+   * @see #setConst4(String)
+   * @see org.pds16.pds16asm.Pds16asmPackage#getOperationsWithConstant_Const4()
    * @model
    * @generated
    */
-  int getConst4();
+  String getConst4();
 
   /**
-   * Sets the value of the '{@link org.pds16.pds16asm.operationsWithConstant#getConst4 <em>Const4</em>}' attribute.
+   * Sets the value of the '{@link org.pds16.pds16asm.OperationsWithConstant#getConst4 <em>Const4</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Const4</em>' attribute.
    * @see #getConst4()
    * @generated
    */
-  void setConst4(int value);
+  void setConst4(String value);
 
-} // operationsWithConstant
+} // OperationsWithConstant

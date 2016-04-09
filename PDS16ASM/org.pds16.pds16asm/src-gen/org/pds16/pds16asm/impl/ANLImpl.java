@@ -5,26 +5,26 @@ package org.pds16.pds16asm.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.pds16.pds16asm.ANL;
+import org.pds16.pds16asm.Anl;
 import org.pds16.pds16asm.Pds16asmPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>ANL</b></em>'.
+ * An implementation of the model object '<em><b>Anl</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class ANLImpl extends LogicaImpl implements ANL
+public class AnlImpl extends LogicaImpl implements Anl
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ANLImpl()
+  protected AnlImpl()
   {
     super();
   }
@@ -40,4 +40,4 @@ public class ANLImpl extends LogicaImpl implements ANL
     return Pds16asmPackage.Literals.ANL;
   }
 
-} //ANLImpl
+} //AnlImpl

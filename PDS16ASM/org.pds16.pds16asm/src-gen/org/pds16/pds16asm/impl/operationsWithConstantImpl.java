@@ -11,26 +11,26 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.pds16.pds16asm.OperationsWithConstant;
 import org.pds16.pds16asm.Pds16asmPackage;
 import org.pds16.pds16asm.Registers;
-import org.pds16.pds16asm.operationsWithConstant;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>operations With Constant</b></em>'.
+ * An implementation of the model object '<em><b>Operations With Constant</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.pds16.pds16asm.impl.operationsWithConstantImpl#getRd <em>Rd</em>}</li>
- *   <li>{@link org.pds16.pds16asm.impl.operationsWithConstantImpl#getRm <em>Rm</em>}</li>
- *   <li>{@link org.pds16.pds16asm.impl.operationsWithConstantImpl#getConst4 <em>Const4</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.impl.OperationsWithConstantImpl#getRd <em>Rd</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.impl.OperationsWithConstantImpl#getRm <em>Rm</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.impl.OperationsWithConstantImpl#getConst4 <em>Const4</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class operationsWithConstantImpl extends AddConstantImpl implements operationsWithConstant
+public class OperationsWithConstantImpl extends AddImpl implements OperationsWithConstant
 {
   /**
    * The cached value of the '{@link #getRd() <em>Rd</em>}' containment reference.
@@ -60,7 +60,7 @@ public class operationsWithConstantImpl extends AddConstantImpl implements opera
    * @generated
    * @ordered
    */
-  protected static final int CONST4_EDEFAULT = 0;
+  protected static final String CONST4_EDEFAULT = null;
 
   /**
    * The cached value of the '{@link #getConst4() <em>Const4</em>}' attribute.
@@ -70,14 +70,14 @@ public class operationsWithConstantImpl extends AddConstantImpl implements opera
    * @generated
    * @ordered
    */
-  protected int const4 = CONST4_EDEFAULT;
+  protected String const4 = CONST4_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected operationsWithConstantImpl()
+  protected OperationsWithConstantImpl()
   {
     super();
   }
@@ -194,7 +194,7 @@ public class operationsWithConstantImpl extends AddConstantImpl implements opera
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getConst4()
+  public String getConst4()
   {
     return const4;
   }
@@ -204,9 +204,9 @@ public class operationsWithConstantImpl extends AddConstantImpl implements opera
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setConst4(int newConst4)
+  public void setConst4(String newConst4)
   {
-    int oldConst4 = const4;
+    String oldConst4 = const4;
     const4 = newConst4;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.OPERATIONS_WITH_CONSTANT__CONST4, oldConst4, const4));
@@ -267,7 +267,7 @@ public class operationsWithConstantImpl extends AddConstantImpl implements opera
         setRm((Registers)newValue);
         return;
       case Pds16asmPackage.OPERATIONS_WITH_CONSTANT__CONST4:
-        setConst4((Integer)newValue);
+        setConst4((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -311,7 +311,7 @@ public class operationsWithConstantImpl extends AddConstantImpl implements opera
       case Pds16asmPackage.OPERATIONS_WITH_CONSTANT__RM:
         return rm != null;
       case Pds16asmPackage.OPERATIONS_WITH_CONSTANT__CONST4:
-        return const4 != CONST4_EDEFAULT;
+        return CONST4_EDEFAULT == null ? const4 != null : !CONST4_EDEFAULT.equals(const4);
     }
     return super.eIsSet(featureID);
   }
@@ -333,4 +333,4 @@ public class operationsWithConstantImpl extends AddConstantImpl implements opera
     return result.toString();
   }
 
-} //operationsWithConstantImpl
+} //OperationsWithConstantImpl

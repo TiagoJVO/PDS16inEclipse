@@ -72,6 +72,21 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		//Comment
 		public RuleCall getCommentParserRuleCall_5() { return cCommentParserRuleCall_5; }
 	}
+	public class CommentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Comment");
+		private final Assignment cCommentAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cCommentCOMTTerminalRuleCall_0 = (RuleCall)cCommentAssignment.eContents().get(0);
+		
+		//Comment:
+		//	comment=COMT;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//comment=COMT
+		public Assignment getCommentAssignment() { return cCommentAssignment; }
+		
+		//COMT
+		public RuleCall getCommentCOMTTerminalRuleCall_0() { return cCommentCOMTTerminalRuleCall_0; }
+	}
 	public class LoadElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Load");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
@@ -125,72 +140,64 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 	public class AritmeticaElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Aritmetica");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cAddRegistersParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cAddConstantParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cSubRegistersParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cSubConstantParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cAddParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cSubParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//Aritmetica:
-		//	AddRegisters | AddConstant | SubRegisters | SubConstant;
+		//	Add | Sub;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//AddRegisters | AddConstant | SubRegisters | SubConstant
+		//Add | Sub
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//AddRegisters
-		public RuleCall getAddRegistersParserRuleCall_0() { return cAddRegistersParserRuleCall_0; }
+		//Add
+		public RuleCall getAddParserRuleCall_0() { return cAddParserRuleCall_0; }
 		
-		//AddConstant
-		public RuleCall getAddConstantParserRuleCall_1() { return cAddConstantParserRuleCall_1; }
-		
-		//SubRegisters
-		public RuleCall getSubRegistersParserRuleCall_2() { return cSubRegistersParserRuleCall_2; }
-		
-		//SubConstant
-		public RuleCall getSubConstantParserRuleCall_3() { return cSubConstantParserRuleCall_3; }
+		//Sub
+		public RuleCall getSubParserRuleCall_1() { return cSubParserRuleCall_1; }
 	}
 	public class LogicaElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Logica");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cANLParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cORLParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cXRLParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cNOTParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
-		private final RuleCall cSHLParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
-		private final RuleCall cSHRParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
-		private final RuleCall cRRParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
-		private final RuleCall cRCParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
+		private final RuleCall cAnlParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cOrlParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cXrlParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cNotParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cShlParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cShrParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cRrParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		private final RuleCall cRcParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
 		
 		//Logica:
-		//	ANL | ORL | XRL | NOT | SHL | SHR | RR | RC;
+		//	Anl | Orl | Xrl | Not | Shl | Shr | Rr | Rc;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//ANL | ORL | XRL | NOT | SHL | SHR | RR | RC
+		//Anl | Orl | Xrl | Not | Shl | Shr | Rr | Rc
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//ANL
-		public RuleCall getANLParserRuleCall_0() { return cANLParserRuleCall_0; }
+		//Anl
+		public RuleCall getAnlParserRuleCall_0() { return cAnlParserRuleCall_0; }
 		
-		//ORL
-		public RuleCall getORLParserRuleCall_1() { return cORLParserRuleCall_1; }
+		//Orl
+		public RuleCall getOrlParserRuleCall_1() { return cOrlParserRuleCall_1; }
 		
-		//XRL
-		public RuleCall getXRLParserRuleCall_2() { return cXRLParserRuleCall_2; }
+		//Xrl
+		public RuleCall getXrlParserRuleCall_2() { return cXrlParserRuleCall_2; }
 		
-		//NOT
-		public RuleCall getNOTParserRuleCall_3() { return cNOTParserRuleCall_3; }
+		//Not
+		public RuleCall getNotParserRuleCall_3() { return cNotParserRuleCall_3; }
 		
-		//SHL
-		public RuleCall getSHLParserRuleCall_4() { return cSHLParserRuleCall_4; }
+		//Shl
+		public RuleCall getShlParserRuleCall_4() { return cShlParserRuleCall_4; }
 		
-		//SHR
-		public RuleCall getSHRParserRuleCall_5() { return cSHRParserRuleCall_5; }
+		//Shr
+		public RuleCall getShrParserRuleCall_5() { return cShrParserRuleCall_5; }
 		
-		//RR
-		public RuleCall getRRParserRuleCall_6() { return cRRParserRuleCall_6; }
+		//Rr
+		public RuleCall getRrParserRuleCall_6() { return cRrParserRuleCall_6; }
 		
-		//RC
-		public RuleCall getRCParserRuleCall_7() { return cRCParserRuleCall_7; }
+		//Rc
+		public RuleCall getRcParserRuleCall_7() { return cRcParserRuleCall_7; }
 	}
 	public class JumpElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Jump");
@@ -211,7 +218,7 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLdihKeyword_0_1 = (Keyword)cAlternatives_0.eContents().get(1);
 		private final RuleCall cImmediateParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		
-		/// *********************** Load ********************** / LdImmediate:
+		/// **************************************Load************************************************ / LdImmediate:
 		//	('ldi' | 'ldih') Immediate;
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -319,7 +326,8 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cStbKeyword_0_1 = (Keyword)cAlternatives_0.eContents().get(1);
 		private final RuleCall cDirectParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		
-		/// *************************************************** / / *********************** Store ********************* / StDirect:
+		/// ****************************************************************************************** /
+		/// ****************************************Store ******************************************** / StDirect:
 		//	('st' | 'stb') Direct;
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -392,22 +400,24 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		//BasedIndexed
 		public RuleCall getBasedIndexedParserRuleCall_1() { return cBasedIndexedParserRuleCall_1; }
 	}
-	public class AddRegistersElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.AddRegisters");
+	public class AddElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Add");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
 		private final Keyword cAddKeyword_0_0 = (Keyword)cAlternatives_0.eContents().get(0);
 		private final Keyword cAddfKeyword_0_1 = (Keyword)cAlternatives_0.eContents().get(1);
 		private final Keyword cAdcKeyword_0_2 = (Keyword)cAlternatives_0.eContents().get(2);
 		private final Keyword cAdcfKeyword_0_3 = (Keyword)cAlternatives_0.eContents().get(3);
-		private final RuleCall cOperationsWithTreeRegistersParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
+		private final RuleCall cOperationsWithConstantParserRuleCall_1_0 = (RuleCall)cAlternatives_1.eContents().get(0);
+		private final RuleCall cOperationsWithTreeRegistersParserRuleCall_1_1 = (RuleCall)cAlternatives_1.eContents().get(1);
 		
-		/// *************************************************** / / ******************** Aritmetica ******************* /
-		//AddRegisters:
-		//	('add' | 'addf' | 'adc' | 'adcf') operationsWithTreeRegisters;
+		/// ****************************************************************************************** /
+		/// ******************************************* Aritmetica *********************************** / Add:
+		//	('add' | 'addf' | 'adc' | 'adcf') (OperationsWithConstant | OperationsWithTreeRegisters);
 		@Override public ParserRule getRule() { return rule; }
 		
-		//('add' | 'addf' | 'adc' | 'adcf') operationsWithTreeRegisters
+		//('add' | 'addf' | 'adc' | 'adcf') (OperationsWithConstant | OperationsWithTreeRegisters)
 		public Group getGroup() { return cGroup; }
 		
 		//('add' | 'addf' | 'adc' | 'adcf')
@@ -425,129 +435,90 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		//'adcf'
 		public Keyword getAdcfKeyword_0_3() { return cAdcfKeyword_0_3; }
 		
-		//operationsWithTreeRegisters
-		public RuleCall getOperationsWithTreeRegistersParserRuleCall_1() { return cOperationsWithTreeRegistersParserRuleCall_1; }
-	}
-	public class AddConstantElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.AddConstant");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
-		private final Keyword cAddKeyword_0_0 = (Keyword)cAlternatives_0.eContents().get(0);
-		private final Keyword cAddfKeyword_0_1 = (Keyword)cAlternatives_0.eContents().get(1);
-		private final Keyword cAdcKeyword_0_2 = (Keyword)cAlternatives_0.eContents().get(2);
-		private final Keyword cAdcfKeyword_0_3 = (Keyword)cAlternatives_0.eContents().get(3);
-		private final RuleCall cOperationsWithConstantParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		//(OperationsWithConstant | OperationsWithTreeRegisters)
+		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 		
-		//AddConstant:
-		//	('add' | 'addf' | 'adc' | 'adcf') operationsWithConstant;
+		//OperationsWithConstant
+		public RuleCall getOperationsWithConstantParserRuleCall_1_0() { return cOperationsWithConstantParserRuleCall_1_0; }
+		
+		//OperationsWithTreeRegisters
+		public RuleCall getOperationsWithTreeRegistersParserRuleCall_1_1() { return cOperationsWithTreeRegistersParserRuleCall_1_1; }
+	}
+	public class SubElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Sub");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
+		private final Alternatives cAlternatives_0_0 = (Alternatives)cGroup_0.eContents().get(0);
+		private final Keyword cSubKeyword_0_0_0 = (Keyword)cAlternatives_0_0.eContents().get(0);
+		private final Keyword cSubfKeyword_0_0_1 = (Keyword)cAlternatives_0_0.eContents().get(1);
+		private final Keyword cSbbKeyword_0_0_2 = (Keyword)cAlternatives_0_0.eContents().get(2);
+		private final Keyword cSbbfKeyword_0_0_3 = (Keyword)cAlternatives_0_0.eContents().get(3);
+		private final Alternatives cAlternatives_0_1 = (Alternatives)cGroup_0.eContents().get(1);
+		private final RuleCall cOperationsWithConstantParserRuleCall_0_1_0 = (RuleCall)cAlternatives_0_1.eContents().get(0);
+		private final RuleCall cOperationsWithTreeRegistersParserRuleCall_0_1_1 = (RuleCall)cAlternatives_0_1.eContents().get(1);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
+		private final Keyword cSubrKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final RuleCall cOperationsWithTreeRegistersParserRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		
+		//Sub:
+		//	('sub' | 'subf' | 'sbb' | 'sbbf') (OperationsWithConstant | OperationsWithTreeRegisters) | 'subr'
+		//	OperationsWithTreeRegisters;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//('add' | 'addf' | 'adc' | 'adcf') operationsWithConstant
-		public Group getGroup() { return cGroup; }
+		//('sub' | 'subf' | 'sbb' | 'sbbf') (OperationsWithConstant | OperationsWithTreeRegisters) | 'subr'
+		//OperationsWithTreeRegisters
+		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//('add' | 'addf' | 'adc' | 'adcf')
-		public Alternatives getAlternatives_0() { return cAlternatives_0; }
-		
-		//'add'
-		public Keyword getAddKeyword_0_0() { return cAddKeyword_0_0; }
-		
-		//'addf'
-		public Keyword getAddfKeyword_0_1() { return cAddfKeyword_0_1; }
-		
-		//'adc'
-		public Keyword getAdcKeyword_0_2() { return cAdcKeyword_0_2; }
-		
-		//'adcf'
-		public Keyword getAdcfKeyword_0_3() { return cAdcfKeyword_0_3; }
-		
-		//operationsWithConstant
-		public RuleCall getOperationsWithConstantParserRuleCall_1() { return cOperationsWithConstantParserRuleCall_1; }
-	}
-	public class SubRegistersElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.SubRegisters");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
-		private final Keyword cSubKeyword_0_0 = (Keyword)cAlternatives_0.eContents().get(0);
-		private final Keyword cSubfKeyword_0_1 = (Keyword)cAlternatives_0.eContents().get(1);
-		private final Keyword cSbbKeyword_0_2 = (Keyword)cAlternatives_0.eContents().get(2);
-		private final Keyword cSbbfKeyword_0_3 = (Keyword)cAlternatives_0.eContents().get(3);
-		private final RuleCall cOperationsWithTreeRegistersParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		
-		////É possivel simplificar para esta maneira!! É legivel??
-		////Add: ('add' | 'addf' | 'adc' | 'adcf') (operationsWithConstant | operationsWithRegisters);
-		//SubRegisters:
-		//	('sub' | 'subf' | 'sbb' | 'sbbf') operationsWithTreeRegisters;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//('sub' | 'subf' | 'sbb' | 'sbbf') operationsWithTreeRegisters
-		public Group getGroup() { return cGroup; }
+		//('sub' | 'subf' | 'sbb' | 'sbbf') (OperationsWithConstant | OperationsWithTreeRegisters)
+		public Group getGroup_0() { return cGroup_0; }
 		
 		//('sub' | 'subf' | 'sbb' | 'sbbf')
-		public Alternatives getAlternatives_0() { return cAlternatives_0; }
+		public Alternatives getAlternatives_0_0() { return cAlternatives_0_0; }
 		
 		//'sub'
-		public Keyword getSubKeyword_0_0() { return cSubKeyword_0_0; }
+		public Keyword getSubKeyword_0_0_0() { return cSubKeyword_0_0_0; }
 		
 		//'subf'
-		public Keyword getSubfKeyword_0_1() { return cSubfKeyword_0_1; }
+		public Keyword getSubfKeyword_0_0_1() { return cSubfKeyword_0_0_1; }
 		
 		//'sbb'
-		public Keyword getSbbKeyword_0_2() { return cSbbKeyword_0_2; }
+		public Keyword getSbbKeyword_0_0_2() { return cSbbKeyword_0_0_2; }
 		
 		//'sbbf'
-		public Keyword getSbbfKeyword_0_3() { return cSbbfKeyword_0_3; }
+		public Keyword getSbbfKeyword_0_0_3() { return cSbbfKeyword_0_0_3; }
 		
-		//operationsWithTreeRegisters
-		public RuleCall getOperationsWithTreeRegistersParserRuleCall_1() { return cOperationsWithTreeRegistersParserRuleCall_1; }
+		//(OperationsWithConstant | OperationsWithTreeRegisters)
+		public Alternatives getAlternatives_0_1() { return cAlternatives_0_1; }
+		
+		//OperationsWithConstant
+		public RuleCall getOperationsWithConstantParserRuleCall_0_1_0() { return cOperationsWithConstantParserRuleCall_0_1_0; }
+		
+		//OperationsWithTreeRegisters
+		public RuleCall getOperationsWithTreeRegistersParserRuleCall_0_1_1() { return cOperationsWithTreeRegistersParserRuleCall_0_1_1; }
+		
+		//'subr' OperationsWithTreeRegisters
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//'subr'
+		public Keyword getSubrKeyword_1_0() { return cSubrKeyword_1_0; }
+		
+		//OperationsWithTreeRegisters
+		public RuleCall getOperationsWithTreeRegistersParserRuleCall_1_1() { return cOperationsWithTreeRegistersParserRuleCall_1_1; }
 	}
-	public class SubConstantElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.SubConstant");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
-		private final Keyword cSubKeyword_0_0 = (Keyword)cAlternatives_0.eContents().get(0);
-		private final Keyword cSubfKeyword_0_1 = (Keyword)cAlternatives_0.eContents().get(1);
-		private final Keyword cSbbKeyword_0_2 = (Keyword)cAlternatives_0.eContents().get(2);
-		private final Keyword cSbbfKeyword_0_3 = (Keyword)cAlternatives_0.eContents().get(3);
-		private final RuleCall cOperationsWithConstantParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		
-		//SubConstant:
-		//	('sub' | 'subf' | 'sbb' | 'sbbf') operationsWithConstant;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//('sub' | 'subf' | 'sbb' | 'sbbf') operationsWithConstant
-		public Group getGroup() { return cGroup; }
-		
-		//('sub' | 'subf' | 'sbb' | 'sbbf')
-		public Alternatives getAlternatives_0() { return cAlternatives_0; }
-		
-		//'sub'
-		public Keyword getSubKeyword_0_0() { return cSubKeyword_0_0; }
-		
-		//'subf'
-		public Keyword getSubfKeyword_0_1() { return cSubfKeyword_0_1; }
-		
-		//'sbb'
-		public Keyword getSbbKeyword_0_2() { return cSbbKeyword_0_2; }
-		
-		//'sbbf'
-		public Keyword getSbbfKeyword_0_3() { return cSbbfKeyword_0_3; }
-		
-		//operationsWithConstant
-		public RuleCall getOperationsWithConstantParserRuleCall_1() { return cOperationsWithConstantParserRuleCall_1; }
-	}
-	public class ANLElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.ANL");
+	public class AnlElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Anl");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
 		private final Keyword cAnlKeyword_0_0 = (Keyword)cAlternatives_0.eContents().get(0);
 		private final Keyword cAnlfKeyword_0_1 = (Keyword)cAlternatives_0.eContents().get(1);
 		private final RuleCall cOperationsWithTreeRegistersParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		
-		/// *************************************************** / / ******************** Logica ******************* / ANL:
-		//	('anl' | 'anlf') operationsWithTreeRegisters;
+		/// ****************************************************************************************** /
+		/// ******************************************* Logica *************************************** / Anl:
+		//	('anl' | 'anlf') OperationsWithTreeRegisters;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//('anl' | 'anlf') operationsWithTreeRegisters
+		//('anl' | 'anlf') OperationsWithTreeRegisters
 		public Group getGroup() { return cGroup; }
 		
 		//('anl' | 'anlf')
@@ -559,22 +530,22 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		//'anlf'
 		public Keyword getAnlfKeyword_0_1() { return cAnlfKeyword_0_1; }
 		
-		//operationsWithTreeRegisters
+		//OperationsWithTreeRegisters
 		public RuleCall getOperationsWithTreeRegistersParserRuleCall_1() { return cOperationsWithTreeRegistersParserRuleCall_1; }
 	}
-	public class ORLElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.ORL");
+	public class OrlElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Orl");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
 		private final Keyword cOrlKeyword_0_0 = (Keyword)cAlternatives_0.eContents().get(0);
 		private final Keyword cOrlfKeyword_0_1 = (Keyword)cAlternatives_0.eContents().get(1);
 		private final RuleCall cOperationsWithTreeRegistersParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		
-		//ORL:
-		//	('orl' | 'orlf') operationsWithTreeRegisters;
+		//Orl:
+		//	('orl' | 'orlf') OperationsWithTreeRegisters;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//('orl' | 'orlf') operationsWithTreeRegisters
+		//('orl' | 'orlf') OperationsWithTreeRegisters
 		public Group getGroup() { return cGroup; }
 		
 		//('orl' | 'orlf')
@@ -586,22 +557,22 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		//'orlf'
 		public Keyword getOrlfKeyword_0_1() { return cOrlfKeyword_0_1; }
 		
-		//operationsWithTreeRegisters
+		//OperationsWithTreeRegisters
 		public RuleCall getOperationsWithTreeRegistersParserRuleCall_1() { return cOperationsWithTreeRegistersParserRuleCall_1; }
 	}
-	public class XRLElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.XRL");
+	public class XrlElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Xrl");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
 		private final Keyword cXrlKeyword_0_0 = (Keyword)cAlternatives_0.eContents().get(0);
 		private final Keyword cXrlfKeyword_0_1 = (Keyword)cAlternatives_0.eContents().get(1);
 		private final RuleCall cOperationsWithTreeRegistersParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		
-		//XRL:
-		//	('xrl' | 'xrlf') operationsWithTreeRegisters;
+		//Xrl:
+		//	('xrl' | 'xrlf') OperationsWithTreeRegisters;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//('xrl' | 'xrlf') operationsWithTreeRegisters
+		//('xrl' | 'xrlf') OperationsWithTreeRegisters
 		public Group getGroup() { return cGroup; }
 		
 		//('xrl' | 'xrlf')
@@ -613,22 +584,22 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		//'xrlf'
 		public Keyword getXrlfKeyword_0_1() { return cXrlfKeyword_0_1; }
 		
-		//operationsWithTreeRegisters
+		//OperationsWithTreeRegisters
 		public RuleCall getOperationsWithTreeRegistersParserRuleCall_1() { return cOperationsWithTreeRegistersParserRuleCall_1; }
 	}
-	public class NOTElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.NOT");
+	public class NotElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Not");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
 		private final Keyword cNotKeyword_0_0 = (Keyword)cAlternatives_0.eContents().get(0);
 		private final Keyword cNotfKeyword_0_1 = (Keyword)cAlternatives_0.eContents().get(1);
 		private final RuleCall cOperationWithTwoRegistersParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		
-		//NOT:
-		//	('not' | 'notf') operationWithTwoRegisters;
+		//Not:
+		//	('not' | 'notf') OperationWithTwoRegisters;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//('not' | 'notf') operationWithTwoRegisters
+		//('not' | 'notf') OperationWithTwoRegisters
 		public Group getGroup() { return cGroup; }
 		
 		//('not' | 'notf')
@@ -640,60 +611,60 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		//'notf'
 		public Keyword getNotfKeyword_0_1() { return cNotfKeyword_0_1; }
 		
-		//operationWithTwoRegisters
+		//OperationWithTwoRegisters
 		public RuleCall getOperationWithTwoRegistersParserRuleCall_1() { return cOperationWithTwoRegistersParserRuleCall_1; }
 	}
-	public class SHLElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.SHL");
+	public class ShlElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Shl");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cShlKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final RuleCall cOperationShiftParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		
-		//SHL:
-		//	'shl' operationShift;
+		//Shl:
+		//	'shl' OperationShift;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'shl' operationShift
+		//'shl' OperationShift
 		public Group getGroup() { return cGroup; }
 		
 		//'shl'
 		public Keyword getShlKeyword_0() { return cShlKeyword_0; }
 		
-		//operationShift
+		//OperationShift
 		public RuleCall getOperationShiftParserRuleCall_1() { return cOperationShiftParserRuleCall_1; }
 	}
-	public class SHRElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.SHR");
+	public class ShrElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Shr");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cShrKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final RuleCall cOperationShiftParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		
-		//SHR:
-		//	'shr' operationShift;
+		//Shr:
+		//	'shr' OperationShift;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'shr' operationShift
+		//'shr' OperationShift
 		public Group getGroup() { return cGroup; }
 		
 		//'shr'
 		public Keyword getShrKeyword_0() { return cShrKeyword_0; }
 		
-		//operationShift
+		//OperationShift
 		public RuleCall getOperationShiftParserRuleCall_1() { return cOperationShiftParserRuleCall_1; }
 	}
-	public class RRElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.RR");
+	public class RrElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Rr");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
 		private final Keyword cRrlKeyword_0_0 = (Keyword)cAlternatives_0.eContents().get(0);
 		private final Keyword cRrmKeyword_0_1 = (Keyword)cAlternatives_0.eContents().get(1);
 		private final RuleCall cOperationsWithConstantParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		
-		//RR:
-		//	('rrl' | 'rrm') operationsWithConstant;
+		//Rr:
+		//	('rrl' | 'rrm') OperationsWithConstant;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//('rrl' | 'rrm') operationsWithConstant
+		//('rrl' | 'rrm') OperationsWithConstant
 		public Group getGroup() { return cGroup; }
 		
 		//('rrl' | 'rrm')
@@ -705,22 +676,22 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		//'rrm'
 		public Keyword getRrmKeyword_0_1() { return cRrmKeyword_0_1; }
 		
-		//operationsWithConstant
+		//OperationsWithConstant
 		public RuleCall getOperationsWithConstantParserRuleCall_1() { return cOperationsWithConstantParserRuleCall_1; }
 	}
-	public class RCElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.RC");
+	public class RcElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Rc");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
 		private final Keyword cRcrKeyword_0_0 = (Keyword)cAlternatives_0.eContents().get(0);
 		private final Keyword cRclKeyword_0_1 = (Keyword)cAlternatives_0.eContents().get(1);
 		private final RuleCall cOperationWithTwoRegistersParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		
-		//RC:
-		//	('rcr' | 'rcl') operationWithTwoRegisters;
+		//Rc:
+		//	('rcr' | 'rcl') OperationWithTwoRegisters;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//('rcr' | 'rcl') operationWithTwoRegisters
+		//('rcr' | 'rcl') OperationWithTwoRegisters
 		public Group getGroup() { return cGroup; }
 		
 		//('rcr' | 'rcl')
@@ -732,7 +703,7 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		//'rcl'
 		public Keyword getRclKeyword_0_1() { return cRclKeyword_0_1; }
 		
-		//operationWithTwoRegisters
+		//OperationWithTwoRegisters
 		public RuleCall getOperationWithTwoRegistersParserRuleCall_1() { return cOperationWithTwoRegistersParserRuleCall_1; }
 	}
 	public class JumpOpElements extends AbstractParserRuleElementFinder {
@@ -749,16 +720,14 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cJaeKeyword_0_7 = (Keyword)cAlternatives_0.eContents().get(7);
 		private final Keyword cJmpKeyword_0_8 = (Keyword)cAlternatives_0.eContents().get(8);
 		private final Keyword cJmplKeyword_0_9 = (Keyword)cAlternatives_0.eContents().get(9);
-		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
-		private final RuleCall cOperationWithOffsetParserRuleCall_1_0 = (RuleCall)cAlternatives_1.eContents().get(0);
-		private final Assignment cOpAssignment_1_1 = (Assignment)cAlternatives_1.eContents().get(1);
-		private final RuleCall cOpSTRINGTerminalRuleCall_1_1_0 = (RuleCall)cOpAssignment_1_1.eContents().get(0);
+		private final RuleCall cOperationWithOffsetParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		
-		/// *********************************************** / / ******************** Jump ******************* / JumpOp:
-		//	('jz' | 'je' | 'jnz' | 'jne' | 'jc' | 'jbl' | 'jnc' | 'jae' | 'jmp' | 'jmpl') (operationWithOffset | op=STRING);
+		/// ****************************************************************************************** /
+		/// ************************************** Jump ********************************************** / JumpOp:
+		//	('jz' | 'je' | 'jnz' | 'jne' | 'jc' | 'jbl' | 'jnc' | 'jae' | 'jmp' | 'jmpl') OperationWithOffset;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//('jz' | 'je' | 'jnz' | 'jne' | 'jc' | 'jbl' | 'jnc' | 'jae' | 'jmp' | 'jmpl') (operationWithOffset | op=STRING)
+		//('jz' | 'je' | 'jnz' | 'jne' | 'jc' | 'jbl' | 'jnc' | 'jae' | 'jmp' | 'jmpl') OperationWithOffset
 		public Group getGroup() { return cGroup; }
 		
 		//('jz' | 'je' | 'jnz' | 'jne' | 'jc' | 'jbl' | 'jnc' | 'jae' | 'jmp' | 'jmpl')
@@ -794,17 +763,8 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		//'jmpl'
 		public Keyword getJmplKeyword_0_9() { return cJmplKeyword_0_9; }
 		
-		//(operationWithOffset | op=STRING)
-		public Alternatives getAlternatives_1() { return cAlternatives_1; }
-		
-		//operationWithOffset
-		public RuleCall getOperationWithOffsetParserRuleCall_1_0() { return cOperationWithOffsetParserRuleCall_1_0; }
-		
-		//op=STRING
-		public Assignment getOpAssignment_1_1() { return cOpAssignment_1_1; }
-		
-		//STRING
-		public RuleCall getOpSTRINGTerminalRuleCall_1_1_0() { return cOpSTRINGTerminalRuleCall_1_1_0; }
+		//OperationWithOffset
+		public RuleCall getOperationWithOffsetParserRuleCall_1() { return cOperationWithOffsetParserRuleCall_1; }
 	}
 	public class ImmediateElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Immediate");
@@ -813,15 +773,14 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRegisterRegistersParserRuleCall_0_0 = (RuleCall)cRegisterAssignment_0.eContents().get(0);
 		private final Keyword cCommaKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cImmediate8Assignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cImmediate8HexaDecimalParserRuleCall_2_0 = (RuleCall)cImmediate8Assignment_2.eContents().get(0);
+		private final RuleCall cImmediate8IntOrHexOrStringParserRuleCall_2_0 = (RuleCall)cImmediate8Assignment_2.eContents().get(0);
 		
-		////Ter isto desta forma ou partir aos bocados???
-		/// ********************************************* /
-		/// ******************************Type Operations**************************** / Immediate:
-		//	register=Registers ',' immediate8=HexaDecimal;
+		/// ****************************************************************************************** /
+		/// ************************************Type Operations*************************************** / Immediate:
+		//	register=Registers ',' immediate8=IntOrHexOrString;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//register=Registers ',' immediate8=HexaDecimal
+		//register=Registers ',' immediate8=IntOrHexOrString
 		public Group getGroup() { return cGroup; }
 		
 		//register=Registers
@@ -833,11 +792,11 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		//','
 		public Keyword getCommaKeyword_1() { return cCommaKeyword_1; }
 		
-		//immediate8=HexaDecimal
+		//immediate8=IntOrHexOrString
 		public Assignment getImmediate8Assignment_2() { return cImmediate8Assignment_2; }
 		
-		//HexaDecimal
-		public RuleCall getImmediate8HexaDecimalParserRuleCall_2_0() { return cImmediate8HexaDecimalParserRuleCall_2_0; }
+		//IntOrHexOrString
+		public RuleCall getImmediate8IntOrHexOrStringParserRuleCall_2_0() { return cImmediate8IntOrHexOrStringParserRuleCall_2_0; }
 	}
 	public class DirectElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Direct");
@@ -845,14 +804,16 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cRegisterAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cRegisterRegistersParserRuleCall_0_0 = (RuleCall)cRegisterAssignment_0.eContents().get(0);
 		private final Keyword cCommaKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cDirect7Assignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cDirect7HEXTerminalRuleCall_2_0 = (RuleCall)cDirect7Assignment_2.eContents().get(0);
+		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
+		private final RuleCall cINTTerminalRuleCall_2_0 = (RuleCall)cAlternatives_2.eContents().get(0);
+		private final RuleCall cHEXTerminalRuleCall_2_1 = (RuleCall)cAlternatives_2.eContents().get(1);
+		private final RuleCall cSTRINGTerminalRuleCall_2_2 = (RuleCall)cAlternatives_2.eContents().get(2);
 		
 		//Direct:
-		//	register=Registers ',' direct7=HEX;
+		//	register=Registers ',' (INT | HEX | STRING);
 		@Override public ParserRule getRule() { return rule; }
 		
-		//register=Registers ',' direct7=HEX
+		//register=Registers ',' (INT | HEX | STRING)
 		public Group getGroup() { return cGroup; }
 		
 		//register=Registers
@@ -864,11 +825,17 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		//','
 		public Keyword getCommaKeyword_1() { return cCommaKeyword_1; }
 		
-		//direct7=HEX
-		public Assignment getDirect7Assignment_2() { return cDirect7Assignment_2; }
+		//(INT | HEX | STRING)
+		public Alternatives getAlternatives_2() { return cAlternatives_2; }
+		
+		//INT
+		public RuleCall getINTTerminalRuleCall_2_0() { return cINTTerminalRuleCall_2_0; }
 		
 		//HEX
-		public RuleCall getDirect7HEXTerminalRuleCall_2_0() { return cDirect7HEXTerminalRuleCall_2_0; }
+		public RuleCall getHEXTerminalRuleCall_2_1() { return cHEXTerminalRuleCall_2_1; }
+		
+		//STRING
+		public RuleCall getSTRINGTerminalRuleCall_2_2() { return cSTRINGTerminalRuleCall_2_2; }
 	}
 	public class IndexedElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Indexed");
@@ -880,18 +847,15 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cRbxAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cRbxRegistersParserRuleCall_3_0 = (RuleCall)cRbxAssignment_3.eContents().get(0);
 		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cIndexAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final Keyword cIndexNumberSignKeyword_5_0 = (Keyword)cIndexAssignment_5.eContents().get(0);
-		private final Alternatives cAlternatives_6 = (Alternatives)cGroup.eContents().get(6);
-		private final RuleCall cINTTerminalRuleCall_6_0 = (RuleCall)cAlternatives_6.eContents().get(0);
-		private final RuleCall cHEXTerminalRuleCall_6_1 = (RuleCall)cAlternatives_6.eContents().get(1);
-		private final Keyword cRightSquareBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cIdx3Assignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cIdx3IntOrHexOrStringParserRuleCall_5_0 = (RuleCall)cIdx3Assignment_5.eContents().get(0);
+		private final Keyword cRightSquareBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Indexed:
-		//	rd=Registers ',' '[' rbx=Registers ',' index='#' (INT | HEX) ']';
+		//	rd=Registers ',' '[' rbx=Registers ',' idx3=IntOrHexOrString ']';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//rd=Registers ',' '[' rbx=Registers ',' index='#' (INT | HEX) ']'
+		//rd=Registers ',' '[' rbx=Registers ',' idx3=IntOrHexOrString ']'
 		public Group getGroup() { return cGroup; }
 		
 		//rd=Registers
@@ -915,23 +879,14 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		//','
 		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
 		
-		//index='#'
-		public Assignment getIndexAssignment_5() { return cIndexAssignment_5; }
+		//idx3=IntOrHexOrString
+		public Assignment getIdx3Assignment_5() { return cIdx3Assignment_5; }
 		
-		//'#'
-		public Keyword getIndexNumberSignKeyword_5_0() { return cIndexNumberSignKeyword_5_0; }
-		
-		//(INT | HEX)
-		public Alternatives getAlternatives_6() { return cAlternatives_6; }
-		
-		//INT
-		public RuleCall getINTTerminalRuleCall_6_0() { return cINTTerminalRuleCall_6_0; }
-		
-		//HEX
-		public RuleCall getHEXTerminalRuleCall_6_1() { return cHEXTerminalRuleCall_6_1; }
+		//IntOrHexOrString
+		public RuleCall getIdx3IntOrHexOrStringParserRuleCall_5_0() { return cIdx3IntOrHexOrStringParserRuleCall_5_0; }
 		
 		//']'
-		public Keyword getRightSquareBracketKeyword_7() { return cRightSquareBracketKeyword_7; }
+		public Keyword getRightSquareBracketKeyword_6() { return cRightSquareBracketKeyword_6; }
 	}
 	public class BasedIndexedElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.BasedIndexed");
@@ -980,31 +935,43 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		//']'
 		public Keyword getRightSquareBracketKeyword_6() { return cRightSquareBracketKeyword_6; }
 	}
-	public class HexaDecimalElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.HexaDecimal");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cNumberSignKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNumberAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNumberHEXTerminalRuleCall_1_0 = (RuleCall)cNumberAssignment_1.eContents().get(0);
+	public class IntOrHexOrStringElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.IntOrHexOrString");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Alternatives cAlternatives_0 = (Alternatives)cAlternatives.eContents().get(0);
+		private final Group cGroup_0_0 = (Group)cAlternatives_0.eContents().get(0);
+		private final Keyword cNumberSignKeyword_0_0_0 = (Keyword)cGroup_0_0.eContents().get(0);
+		private final RuleCall cINTTerminalRuleCall_0_0_1 = (RuleCall)cGroup_0_0.eContents().get(1);
+		private final RuleCall cHEXTerminalRuleCall_0_1 = (RuleCall)cAlternatives_0.eContents().get(1);
+		private final RuleCall cSTRINGTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//HexaDecimal:
-		//	'#' number=HEX;
+		//IntOrHexOrString:
+		//	('#' INT | HEX) | STRING;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'#' number=HEX
-		public Group getGroup() { return cGroup; }
+		//('#' INT | HEX) | STRING
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//('#' INT | HEX)
+		public Alternatives getAlternatives_0() { return cAlternatives_0; }
+		
+		//'#' INT
+		public Group getGroup_0_0() { return cGroup_0_0; }
 		
 		//'#'
-		public Keyword getNumberSignKeyword_0() { return cNumberSignKeyword_0; }
+		public Keyword getNumberSignKeyword_0_0_0() { return cNumberSignKeyword_0_0_0; }
 		
-		//number=HEX
-		public Assignment getNumberAssignment_1() { return cNumberAssignment_1; }
+		//INT
+		public RuleCall getINTTerminalRuleCall_0_0_1() { return cINTTerminalRuleCall_0_0_1; }
 		
 		//HEX
-		public RuleCall getNumberHEXTerminalRuleCall_1_0() { return cNumberHEXTerminalRuleCall_1_0; }
+		public RuleCall getHEXTerminalRuleCall_0_1() { return cHEXTerminalRuleCall_0_1; }
+		
+		//STRING
+		public RuleCall getSTRINGTerminalRuleCall_1() { return cSTRINGTerminalRuleCall_1; }
 	}
 	public class OperationWithTwoRegistersElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.operationWithTwoRegisters");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.OperationWithTwoRegisters");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cRdAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cRdRegistersParserRuleCall_0_0 = (RuleCall)cRdAssignment_0.eContents().get(0);
@@ -1012,7 +979,7 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cRmAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cRmRegistersParserRuleCall_2_0 = (RuleCall)cRmAssignment_2.eContents().get(0);
 		
-		//operationWithTwoRegisters:
+		//OperationWithTwoRegisters:
 		//	rd=Registers ',' rm=Registers;
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -1035,7 +1002,7 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getRmRegistersParserRuleCall_2_0() { return cRmRegistersParserRuleCall_2_0; }
 	}
 	public class OperationsWithTreeRegistersElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.operationsWithTreeRegisters");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.OperationsWithTreeRegisters");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cRdAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cRdRegistersParserRuleCall_0_0 = (RuleCall)cRdAssignment_0.eContents().get(0);
@@ -1046,7 +1013,7 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cRnAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cRnRegistersParserRuleCall_4_0 = (RuleCall)cRnAssignment_4.eContents().get(0);
 		
-		//operationsWithTreeRegisters:
+		//OperationsWithTreeRegisters:
 		//	rd=Registers ',' rm=Registers ',' rn=Registers;
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -1078,7 +1045,7 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getRnRegistersParserRuleCall_4_0() { return cRnRegistersParserRuleCall_4_0; }
 	}
 	public class OperationsWithConstantElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.operationsWithConstant");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.OperationsWithConstant");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cRdAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cRdRegistersParserRuleCall_0_0 = (RuleCall)cRdAssignment_0.eContents().get(0);
@@ -1086,15 +1053,14 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cRmAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cRmRegistersParserRuleCall_2_0 = (RuleCall)cRmAssignment_2.eContents().get(0);
 		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cNumberSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cConst4Assignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cConst4INTTerminalRuleCall_5_0 = (RuleCall)cConst4Assignment_5.eContents().get(0);
+		private final Assignment cConst4Assignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cConst4IntOrHexOrStringParserRuleCall_4_0 = (RuleCall)cConst4Assignment_4.eContents().get(0);
 		
-		//operationsWithConstant:
-		//	rd=Registers ',' rm=Registers ',' '#' const4=INT;
+		//OperationsWithConstant:
+		//	rd=Registers ',' rm=Registers ',' const4=IntOrHexOrString;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//rd=Registers ',' rm=Registers ',' '#' const4=INT
+		//rd=Registers ',' rm=Registers ',' const4=IntOrHexOrString
 		public Group getGroup() { return cGroup; }
 		
 		//rd=Registers
@@ -1115,17 +1081,14 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		//','
 		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
 		
-		//'#'
-		public Keyword getNumberSignKeyword_4() { return cNumberSignKeyword_4; }
+		//const4=IntOrHexOrString
+		public Assignment getConst4Assignment_4() { return cConst4Assignment_4; }
 		
-		//const4=INT
-		public Assignment getConst4Assignment_5() { return cConst4Assignment_5; }
-		
-		//INT
-		public RuleCall getConst4INTTerminalRuleCall_5_0() { return cConst4INTTerminalRuleCall_5_0; }
+		//IntOrHexOrString
+		public RuleCall getConst4IntOrHexOrStringParserRuleCall_4_0() { return cConst4IntOrHexOrStringParserRuleCall_4_0; }
 	}
 	public class OperationShiftElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.operationShift");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.OperationShift");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cRdAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cRdRegistersParserRuleCall_0_0 = (RuleCall)cRdAssignment_0.eContents().get(0);
@@ -1133,18 +1096,17 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cRmAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cRmRegistersParserRuleCall_2_0 = (RuleCall)cRmAssignment_2.eContents().get(0);
 		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cNumberSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cConst4Assignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cConst4INTTerminalRuleCall_5_0 = (RuleCall)cConst4Assignment_5.eContents().get(0);
-		private final Keyword cCommaKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Assignment cSinAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cSinINTTerminalRuleCall_7_0 = (RuleCall)cSinAssignment_7.eContents().get(0);
+		private final Assignment cConst4Assignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cConst4IntOrHexOrStringParserRuleCall_4_0 = (RuleCall)cConst4Assignment_4.eContents().get(0);
+		private final Keyword cCommaKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cSinAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cSinBINTerminalRuleCall_6_0 = (RuleCall)cSinAssignment_6.eContents().get(0);
 		
-		//operationShift:
-		//	rd=Registers ',' rm=Registers ',' '#' const4=INT ',' sin=INT;
+		//OperationShift:
+		//	rd=Registers ',' rm=Registers ',' const4=IntOrHexOrString ',' sin=BIN;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//rd=Registers ',' rm=Registers ',' '#' const4=INT ',' sin=INT
+		//rd=Registers ',' rm=Registers ',' const4=IntOrHexOrString ',' sin=BIN
 		public Group getGroup() { return cGroup; }
 		
 		//rd=Registers
@@ -1165,38 +1127,36 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		//','
 		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
 		
-		//'#'
-		public Keyword getNumberSignKeyword_4() { return cNumberSignKeyword_4; }
+		//const4=IntOrHexOrString
+		public Assignment getConst4Assignment_4() { return cConst4Assignment_4; }
 		
-		//const4=INT
-		public Assignment getConst4Assignment_5() { return cConst4Assignment_5; }
-		
-		//INT
-		public RuleCall getConst4INTTerminalRuleCall_5_0() { return cConst4INTTerminalRuleCall_5_0; }
+		//IntOrHexOrString
+		public RuleCall getConst4IntOrHexOrStringParserRuleCall_4_0() { return cConst4IntOrHexOrStringParserRuleCall_4_0; }
 		
 		//','
-		public Keyword getCommaKeyword_6() { return cCommaKeyword_6; }
+		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
 		
-		//sin=INT
-		public Assignment getSinAssignment_7() { return cSinAssignment_7; }
+		//sin=BIN
+		public Assignment getSinAssignment_6() { return cSinAssignment_6; }
 		
-		//INT
-		public RuleCall getSinINTTerminalRuleCall_7_0() { return cSinINTTerminalRuleCall_7_0; }
+		//BIN
+		public RuleCall getSinBINTerminalRuleCall_6_0() { return cSinBINTerminalRuleCall_6_0; }
 	}
 	public class OperationWithOffsetElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.operationWithOffset");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.OperationWithOffset");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cRbxAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cRbxRegistersParserRuleCall_0_0 = (RuleCall)cRbxAssignment_0.eContents().get(0);
 		private final Keyword cCommaKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cOffset8Assignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cOffset8HexaDecimalParserRuleCall_2_0 = (RuleCall)cOffset8Assignment_2.eContents().get(0);
+		private final RuleCall cOffset8IntOrHexOrStringParserRuleCall_2_0 = (RuleCall)cOffset8Assignment_2.eContents().get(0);
 		
-		//operationWithOffset:
-		//	rbx=Registers ',' offset8=HexaDecimal;
+		////const4 é possivel usar label?????
+		//OperationWithOffset:
+		//	rbx=Registers ',' offset8=IntOrHexOrString;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//rbx=Registers ',' offset8=HexaDecimal
+		//rbx=Registers ',' offset8=IntOrHexOrString
 		public Group getGroup() { return cGroup; }
 		
 		//rbx=Registers
@@ -1208,26 +1168,11 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		//','
 		public Keyword getCommaKeyword_1() { return cCommaKeyword_1; }
 		
-		//offset8=HexaDecimal
+		//offset8=IntOrHexOrString
 		public Assignment getOffset8Assignment_2() { return cOffset8Assignment_2; }
 		
-		//HexaDecimal
-		public RuleCall getOffset8HexaDecimalParserRuleCall_2_0() { return cOffset8HexaDecimalParserRuleCall_2_0; }
-	}
-	public class CommentElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Comment");
-		private final Assignment cValueAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cValueCOMTTerminalRuleCall_0 = (RuleCall)cValueAssignment.eContents().get(0);
-		
-		/// *************************************************************************** / / *Utils* / Comment:
-		//	value=COMT;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//value=COMT
-		public Assignment getValueAssignment() { return cValueAssignment; }
-		
-		//COMT
-		public RuleCall getValueCOMTTerminalRuleCall_0() { return cValueCOMTTerminalRuleCall_0; }
+		//IntOrHexOrString
+		public RuleCall getOffset8IntOrHexOrStringParserRuleCall_2_0() { return cOffset8IntOrHexOrStringParserRuleCall_2_0; }
 	}
 	public class RegistersElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Registers");
@@ -1243,7 +1188,8 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cValueR7Keyword_0_7 = (Keyword)cValueAlternatives_0.eContents().get(7);
 		private final Keyword cValuePSWKeyword_0_8 = (Keyword)cValueAlternatives_0.eContents().get(8);
 		
-		//Registers:
+		/// ****************************************************************************************** /
+		/// ***********************************************Utils************************************** / Registers:
 		//	value=('r0' | 'r1' | 'r2' | 'r3' | 'r4' | 'r5' | 'r6' | 'r7' | 'PSW');
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -1280,10 +1226,22 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		//'PSW'
 		public Keyword getValuePSWKeyword_0_8() { return cValuePSWKeyword_0_8; }
 	}
+	public class NumberElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Number");
+		private final RuleCall cSTRINGTerminalRuleCall = (RuleCall)rule.eContents().get(1);
+		
+		//Number:
+		//	STRING;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//STRING
+		public RuleCall getSTRINGTerminalRuleCall() { return cSTRINGTerminalRuleCall; }
+	}
 	
 	
 	private final PDS16ASMElements pPDS16ASM;
 	private final InstructionsElements pInstructions;
+	private final CommentElements pComment;
 	private final LoadElements pLoad;
 	private final StoreElements pStore;
 	private final AritmeticaElements pAritmetica;
@@ -1296,32 +1254,32 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 	private final StDirectElements pStDirect;
 	private final StIndexedElements pStIndexed;
 	private final StBasedIndexedElements pStBasedIndexed;
-	private final AddRegistersElements pAddRegisters;
-	private final AddConstantElements pAddConstant;
-	private final SubRegistersElements pSubRegisters;
-	private final SubConstantElements pSubConstant;
-	private final ANLElements pANL;
-	private final ORLElements pORL;
-	private final XRLElements pXRL;
-	private final NOTElements pNOT;
-	private final SHLElements pSHL;
-	private final SHRElements pSHR;
-	private final RRElements pRR;
-	private final RCElements pRC;
+	private final AddElements pAdd;
+	private final SubElements pSub;
+	private final AnlElements pAnl;
+	private final OrlElements pOrl;
+	private final XrlElements pXrl;
+	private final NotElements pNot;
+	private final ShlElements pShl;
+	private final ShrElements pShr;
+	private final RrElements pRr;
+	private final RcElements pRc;
 	private final JumpOpElements pJumpOp;
 	private final ImmediateElements pImmediate;
 	private final DirectElements pDirect;
 	private final IndexedElements pIndexed;
 	private final BasedIndexedElements pBasedIndexed;
-	private final HexaDecimalElements pHexaDecimal;
+	private final IntOrHexOrStringElements pIntOrHexOrString;
 	private final OperationWithTwoRegistersElements pOperationWithTwoRegisters;
 	private final OperationsWithTreeRegistersElements pOperationsWithTreeRegisters;
 	private final OperationsWithConstantElements pOperationsWithConstant;
 	private final OperationShiftElements pOperationShift;
 	private final OperationWithOffsetElements pOperationWithOffset;
-	private final CommentElements pComment;
 	private final RegistersElements pRegisters;
+	private final NumberElements pNumber;
 	private final TerminalRule tHEX;
+	private final TerminalRule tOCT;
+	private final TerminalRule tBIN;
 	private final TerminalRule tCOMT;
 	
 	private final Grammar grammar;
@@ -1335,6 +1293,7 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		this.gaTerminals = gaTerminals;
 		this.pPDS16ASM = new PDS16ASMElements();
 		this.pInstructions = new InstructionsElements();
+		this.pComment = new CommentElements();
 		this.pLoad = new LoadElements();
 		this.pStore = new StoreElements();
 		this.pAritmetica = new AritmeticaElements();
@@ -1347,32 +1306,32 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		this.pStDirect = new StDirectElements();
 		this.pStIndexed = new StIndexedElements();
 		this.pStBasedIndexed = new StBasedIndexedElements();
-		this.pAddRegisters = new AddRegistersElements();
-		this.pAddConstant = new AddConstantElements();
-		this.pSubRegisters = new SubRegistersElements();
-		this.pSubConstant = new SubConstantElements();
-		this.pANL = new ANLElements();
-		this.pORL = new ORLElements();
-		this.pXRL = new XRLElements();
-		this.pNOT = new NOTElements();
-		this.pSHL = new SHLElements();
-		this.pSHR = new SHRElements();
-		this.pRR = new RRElements();
-		this.pRC = new RCElements();
+		this.pAdd = new AddElements();
+		this.pSub = new SubElements();
+		this.pAnl = new AnlElements();
+		this.pOrl = new OrlElements();
+		this.pXrl = new XrlElements();
+		this.pNot = new NotElements();
+		this.pShl = new ShlElements();
+		this.pShr = new ShrElements();
+		this.pRr = new RrElements();
+		this.pRc = new RcElements();
 		this.pJumpOp = new JumpOpElements();
 		this.pImmediate = new ImmediateElements();
 		this.pDirect = new DirectElements();
 		this.pIndexed = new IndexedElements();
 		this.pBasedIndexed = new BasedIndexedElements();
-		this.pHexaDecimal = new HexaDecimalElements();
+		this.pIntOrHexOrString = new IntOrHexOrStringElements();
 		this.pOperationWithTwoRegisters = new OperationWithTwoRegistersElements();
 		this.pOperationsWithTreeRegisters = new OperationsWithTreeRegistersElements();
 		this.pOperationsWithConstant = new OperationsWithConstantElements();
 		this.pOperationShift = new OperationShiftElements();
 		this.pOperationWithOffset = new OperationWithOffsetElements();
-		this.pComment = new CommentElements();
 		this.pRegisters = new RegistersElements();
+		this.pNumber = new NumberElements();
 		this.tHEX = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.HEX");
+		this.tOCT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.OCT");
+		this.tBIN = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.BIN");
 		this.tCOMT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.COMT");
 	}
 	
@@ -1423,6 +1382,16 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		return getInstructionsAccess().getRule();
 	}
 	
+	//Comment:
+	//	comment=COMT;
+	public CommentElements getCommentAccess() {
+		return pComment;
+	}
+	
+	public ParserRule getCommentRule() {
+		return getCommentAccess().getRule();
+	}
+	
 	//Load:
 	//	LdImmediate | LdDirect | LdIndexed | LdBasedIndexed;
 	public LoadElements getLoadAccess() {
@@ -1444,7 +1413,7 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Aritmetica:
-	//	AddRegisters | AddConstant | SubRegisters | SubConstant;
+	//	Add | Sub;
 	public AritmeticaElements getAritmeticaAccess() {
 		return pAritmetica;
 	}
@@ -1454,7 +1423,7 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Logica:
-	//	ANL | ORL | XRL | NOT | SHL | SHR | RR | RC;
+	//	Anl | Orl | Xrl | Not | Shl | Shr | Rr | Rc;
 	public LogicaElements getLogicaAccess() {
 		return pLogica;
 	}
@@ -1473,7 +1442,7 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		return getJumpAccess().getRule();
 	}
 	
-	/// *********************** Load ********************** / LdImmediate:
+	/// **************************************Load************************************************ / LdImmediate:
 	//	('ldi' | 'ldih') Immediate;
 	public LdImmediateElements getLdImmediateAccess() {
 		return pLdImmediate;
@@ -1513,7 +1482,8 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		return getLdBasedIndexedAccess().getRule();
 	}
 	
-	/// *************************************************** / / *********************** Store ********************* / StDirect:
+	/// ****************************************************************************************** /
+	/// ****************************************Store ******************************************** / StDirect:
 	//	('st' | 'stb') Direct;
 	public StDirectElements getStDirectAccess() {
 		return pStDirect;
@@ -1543,131 +1513,112 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		return getStBasedIndexedAccess().getRule();
 	}
 	
-	/// *************************************************** / / ******************** Aritmetica ******************* /
-	//AddRegisters:
-	//	('add' | 'addf' | 'adc' | 'adcf') operationsWithTreeRegisters;
-	public AddRegistersElements getAddRegistersAccess() {
-		return pAddRegisters;
+	/// ****************************************************************************************** /
+	/// ******************************************* Aritmetica *********************************** / Add:
+	//	('add' | 'addf' | 'adc' | 'adcf') (OperationsWithConstant | OperationsWithTreeRegisters);
+	public AddElements getAddAccess() {
+		return pAdd;
 	}
 	
-	public ParserRule getAddRegistersRule() {
-		return getAddRegistersAccess().getRule();
+	public ParserRule getAddRule() {
+		return getAddAccess().getRule();
 	}
 	
-	//AddConstant:
-	//	('add' | 'addf' | 'adc' | 'adcf') operationsWithConstant;
-	public AddConstantElements getAddConstantAccess() {
-		return pAddConstant;
+	//Sub:
+	//	('sub' | 'subf' | 'sbb' | 'sbbf') (OperationsWithConstant | OperationsWithTreeRegisters) | 'subr'
+	//	OperationsWithTreeRegisters;
+	public SubElements getSubAccess() {
+		return pSub;
 	}
 	
-	public ParserRule getAddConstantRule() {
-		return getAddConstantAccess().getRule();
+	public ParserRule getSubRule() {
+		return getSubAccess().getRule();
 	}
 	
-	////É possivel simplificar para esta maneira!! É legivel??
-	////Add: ('add' | 'addf' | 'adc' | 'adcf') (operationsWithConstant | operationsWithRegisters);
-	//SubRegisters:
-	//	('sub' | 'subf' | 'sbb' | 'sbbf') operationsWithTreeRegisters;
-	public SubRegistersElements getSubRegistersAccess() {
-		return pSubRegisters;
+	/// ****************************************************************************************** /
+	/// ******************************************* Logica *************************************** / Anl:
+	//	('anl' | 'anlf') OperationsWithTreeRegisters;
+	public AnlElements getAnlAccess() {
+		return pAnl;
 	}
 	
-	public ParserRule getSubRegistersRule() {
-		return getSubRegistersAccess().getRule();
+	public ParserRule getAnlRule() {
+		return getAnlAccess().getRule();
 	}
 	
-	//SubConstant:
-	//	('sub' | 'subf' | 'sbb' | 'sbbf') operationsWithConstant;
-	public SubConstantElements getSubConstantAccess() {
-		return pSubConstant;
+	//Orl:
+	//	('orl' | 'orlf') OperationsWithTreeRegisters;
+	public OrlElements getOrlAccess() {
+		return pOrl;
 	}
 	
-	public ParserRule getSubConstantRule() {
-		return getSubConstantAccess().getRule();
+	public ParserRule getOrlRule() {
+		return getOrlAccess().getRule();
 	}
 	
-	/// *************************************************** / / ******************** Logica ******************* / ANL:
-	//	('anl' | 'anlf') operationsWithTreeRegisters;
-	public ANLElements getANLAccess() {
-		return pANL;
+	//Xrl:
+	//	('xrl' | 'xrlf') OperationsWithTreeRegisters;
+	public XrlElements getXrlAccess() {
+		return pXrl;
 	}
 	
-	public ParserRule getANLRule() {
-		return getANLAccess().getRule();
+	public ParserRule getXrlRule() {
+		return getXrlAccess().getRule();
 	}
 	
-	//ORL:
-	//	('orl' | 'orlf') operationsWithTreeRegisters;
-	public ORLElements getORLAccess() {
-		return pORL;
+	//Not:
+	//	('not' | 'notf') OperationWithTwoRegisters;
+	public NotElements getNotAccess() {
+		return pNot;
 	}
 	
-	public ParserRule getORLRule() {
-		return getORLAccess().getRule();
+	public ParserRule getNotRule() {
+		return getNotAccess().getRule();
 	}
 	
-	//XRL:
-	//	('xrl' | 'xrlf') operationsWithTreeRegisters;
-	public XRLElements getXRLAccess() {
-		return pXRL;
+	//Shl:
+	//	'shl' OperationShift;
+	public ShlElements getShlAccess() {
+		return pShl;
 	}
 	
-	public ParserRule getXRLRule() {
-		return getXRLAccess().getRule();
+	public ParserRule getShlRule() {
+		return getShlAccess().getRule();
 	}
 	
-	//NOT:
-	//	('not' | 'notf') operationWithTwoRegisters;
-	public NOTElements getNOTAccess() {
-		return pNOT;
+	//Shr:
+	//	'shr' OperationShift;
+	public ShrElements getShrAccess() {
+		return pShr;
 	}
 	
-	public ParserRule getNOTRule() {
-		return getNOTAccess().getRule();
+	public ParserRule getShrRule() {
+		return getShrAccess().getRule();
 	}
 	
-	//SHL:
-	//	'shl' operationShift;
-	public SHLElements getSHLAccess() {
-		return pSHL;
+	//Rr:
+	//	('rrl' | 'rrm') OperationsWithConstant;
+	public RrElements getRrAccess() {
+		return pRr;
 	}
 	
-	public ParserRule getSHLRule() {
-		return getSHLAccess().getRule();
+	public ParserRule getRrRule() {
+		return getRrAccess().getRule();
 	}
 	
-	//SHR:
-	//	'shr' operationShift;
-	public SHRElements getSHRAccess() {
-		return pSHR;
+	//Rc:
+	//	('rcr' | 'rcl') OperationWithTwoRegisters;
+	public RcElements getRcAccess() {
+		return pRc;
 	}
 	
-	public ParserRule getSHRRule() {
-		return getSHRAccess().getRule();
+	public ParserRule getRcRule() {
+		return getRcAccess().getRule();
 	}
 	
-	//RR:
-	//	('rrl' | 'rrm') operationsWithConstant;
-	public RRElements getRRAccess() {
-		return pRR;
-	}
-	
-	public ParserRule getRRRule() {
-		return getRRAccess().getRule();
-	}
-	
-	//RC:
-	//	('rcr' | 'rcl') operationWithTwoRegisters;
-	public RCElements getRCAccess() {
-		return pRC;
-	}
-	
-	public ParserRule getRCRule() {
-		return getRCAccess().getRule();
-	}
-	
-	/// *********************************************** / / ******************** Jump ******************* / JumpOp:
-	//	('jz' | 'je' | 'jnz' | 'jne' | 'jc' | 'jbl' | 'jnc' | 'jae' | 'jmp' | 'jmpl') (operationWithOffset | op=STRING);
+	/// ****************************************************************************************** /
+	/// ************************************** Jump ********************************************** / JumpOp:
+	//	('jz' | 'je' | 'jnz' | 'jne' | 'jc' | 'jbl' | 'jnc' | 'jae' | 'jmp' | 'jmpl') OperationWithOffset;
 	public JumpOpElements getJumpOpAccess() {
 		return pJumpOp;
 	}
@@ -1676,10 +1627,9 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		return getJumpOpAccess().getRule();
 	}
 	
-	////Ter isto desta forma ou partir aos bocados???
-	/// ********************************************* /
-	/// ******************************Type Operations**************************** / Immediate:
-	//	register=Registers ',' immediate8=HexaDecimal;
+	/// ****************************************************************************************** /
+	/// ************************************Type Operations*************************************** / Immediate:
+	//	register=Registers ',' immediate8=IntOrHexOrString;
 	public ImmediateElements getImmediateAccess() {
 		return pImmediate;
 	}
@@ -1689,7 +1639,7 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Direct:
-	//	register=Registers ',' direct7=HEX;
+	//	register=Registers ',' (INT | HEX | STRING);
 	public DirectElements getDirectAccess() {
 		return pDirect;
 	}
@@ -1699,7 +1649,7 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Indexed:
-	//	rd=Registers ',' '[' rbx=Registers ',' index='#' (INT | HEX) ']';
+	//	rd=Registers ',' '[' rbx=Registers ',' idx3=IntOrHexOrString ']';
 	public IndexedElements getIndexedAccess() {
 		return pIndexed;
 	}
@@ -1718,17 +1668,17 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		return getBasedIndexedAccess().getRule();
 	}
 	
-	//HexaDecimal:
-	//	'#' number=HEX;
-	public HexaDecimalElements getHexaDecimalAccess() {
-		return pHexaDecimal;
+	//IntOrHexOrString:
+	//	('#' INT | HEX) | STRING;
+	public IntOrHexOrStringElements getIntOrHexOrStringAccess() {
+		return pIntOrHexOrString;
 	}
 	
-	public ParserRule getHexaDecimalRule() {
-		return getHexaDecimalAccess().getRule();
+	public ParserRule getIntOrHexOrStringRule() {
+		return getIntOrHexOrStringAccess().getRule();
 	}
 	
-	//operationWithTwoRegisters:
+	//OperationWithTwoRegisters:
 	//	rd=Registers ',' rm=Registers;
 	public OperationWithTwoRegistersElements getOperationWithTwoRegistersAccess() {
 		return pOperationWithTwoRegisters;
@@ -1738,7 +1688,7 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		return getOperationWithTwoRegistersAccess().getRule();
 	}
 	
-	//operationsWithTreeRegisters:
+	//OperationsWithTreeRegisters:
 	//	rd=Registers ',' rm=Registers ',' rn=Registers;
 	public OperationsWithTreeRegistersElements getOperationsWithTreeRegistersAccess() {
 		return pOperationsWithTreeRegisters;
@@ -1748,8 +1698,8 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		return getOperationsWithTreeRegistersAccess().getRule();
 	}
 	
-	//operationsWithConstant:
-	//	rd=Registers ',' rm=Registers ',' '#' const4=INT;
+	//OperationsWithConstant:
+	//	rd=Registers ',' rm=Registers ',' const4=IntOrHexOrString;
 	public OperationsWithConstantElements getOperationsWithConstantAccess() {
 		return pOperationsWithConstant;
 	}
@@ -1758,8 +1708,8 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		return getOperationsWithConstantAccess().getRule();
 	}
 	
-	//operationShift:
-	//	rd=Registers ',' rm=Registers ',' '#' const4=INT ',' sin=INT;
+	//OperationShift:
+	//	rd=Registers ',' rm=Registers ',' const4=IntOrHexOrString ',' sin=BIN;
 	public OperationShiftElements getOperationShiftAccess() {
 		return pOperationShift;
 	}
@@ -1768,8 +1718,9 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		return getOperationShiftAccess().getRule();
 	}
 	
-	//operationWithOffset:
-	//	rbx=Registers ',' offset8=HexaDecimal;
+	////const4 é possivel usar label?????
+	//OperationWithOffset:
+	//	rbx=Registers ',' offset8=IntOrHexOrString;
 	public OperationWithOffsetElements getOperationWithOffsetAccess() {
 		return pOperationWithOffset;
 	}
@@ -1778,17 +1729,8 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		return getOperationWithOffsetAccess().getRule();
 	}
 	
-	/// *************************************************************************** / / *Utils* / Comment:
-	//	value=COMT;
-	public CommentElements getCommentAccess() {
-		return pComment;
-	}
-	
-	public ParserRule getCommentRule() {
-		return getCommentAccess().getRule();
-	}
-	
-	//Registers:
+	/// ****************************************************************************************** /
+	/// ***********************************************Utils************************************** / Registers:
 	//	value=('r0' | 'r1' | 'r2' | 'r3' | 'r4' | 'r5' | 'r6' | 'r7' | 'PSW');
 	public RegistersElements getRegistersAccess() {
 		return pRegisters;
@@ -1798,10 +1740,32 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		return getRegistersAccess().getRule();
 	}
 	
+	//Number:
+	//	STRING;
+	public NumberElements getNumberAccess() {
+		return pNumber;
+	}
+	
+	public ParserRule getNumberRule() {
+		return getNumberAccess().getRule();
+	}
+	
 	//terminal HEX:
 	//	'0' ('x' | 'X') ('0'..'9' | 'a'..'f' | 'A'..'F')+;
 	public TerminalRule getHEXRule() {
 		return tHEX;
+	}
+	
+	//terminal OCT:
+	//	'0' | '1'..'7' '0'..'7'*;
+	public TerminalRule getOCTRule() {
+		return tOCT;
+	}
+	
+	//terminal BIN:
+	//	'0' | '1'+;
+	public TerminalRule getBINRule() {
+		return tBIN;
 	}
 	
 	//terminal COMT:

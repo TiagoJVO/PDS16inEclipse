@@ -10,6 +10,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//PDS16ASM/instuctions"/>
     </genClasses>
     <genClasses ecoreClass="Pds16asm.ecore#//Instructions"/>
+    <genClasses ecoreClass="Pds16asm.ecore#//Comment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Comment/comment"/>
+    </genClasses>
     <genClasses ecoreClass="Pds16asm.ecore#//Load"/>
     <genClasses ecoreClass="Pds16asm.ecore#//Store"/>
     <genClasses ecoreClass="Pds16asm.ecore#//Aritmetica"/>
@@ -22,64 +25,53 @@
     <genClasses ecoreClass="Pds16asm.ecore#//StDirect"/>
     <genClasses ecoreClass="Pds16asm.ecore#//StIndexed"/>
     <genClasses ecoreClass="Pds16asm.ecore#//StBasedIndexed"/>
-    <genClasses ecoreClass="Pds16asm.ecore#//AddRegisters"/>
-    <genClasses ecoreClass="Pds16asm.ecore#//AddConstant"/>
-    <genClasses ecoreClass="Pds16asm.ecore#//SubRegisters"/>
-    <genClasses ecoreClass="Pds16asm.ecore#//SubConstant"/>
-    <genClasses ecoreClass="Pds16asm.ecore#//ANL"/>
-    <genClasses ecoreClass="Pds16asm.ecore#//ORL"/>
-    <genClasses ecoreClass="Pds16asm.ecore#//XRL"/>
-    <genClasses ecoreClass="Pds16asm.ecore#//NOT"/>
-    <genClasses ecoreClass="Pds16asm.ecore#//SHL"/>
-    <genClasses ecoreClass="Pds16asm.ecore#//SHR"/>
-    <genClasses ecoreClass="Pds16asm.ecore#//RR"/>
-    <genClasses ecoreClass="Pds16asm.ecore#//RC"/>
-    <genClasses ecoreClass="Pds16asm.ecore#//JumpOp">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//JumpOp/op"/>
-    </genClasses>
+    <genClasses ecoreClass="Pds16asm.ecore#//Add"/>
+    <genClasses ecoreClass="Pds16asm.ecore#//Sub"/>
+    <genClasses ecoreClass="Pds16asm.ecore#//Anl"/>
+    <genClasses ecoreClass="Pds16asm.ecore#//Orl"/>
+    <genClasses ecoreClass="Pds16asm.ecore#//Xrl"/>
+    <genClasses ecoreClass="Pds16asm.ecore#//Not"/>
+    <genClasses ecoreClass="Pds16asm.ecore#//Shl"/>
+    <genClasses ecoreClass="Pds16asm.ecore#//Shr"/>
+    <genClasses ecoreClass="Pds16asm.ecore#//Rr"/>
+    <genClasses ecoreClass="Pds16asm.ecore#//Rc"/>
+    <genClasses ecoreClass="Pds16asm.ecore#//JumpOp"/>
     <genClasses ecoreClass="Pds16asm.ecore#//Immediate">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//Immediate/register"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//Immediate/immediate8"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Immediate/immediate8"/>
     </genClasses>
     <genClasses ecoreClass="Pds16asm.ecore#//Direct">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//Direct/register"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Direct/direct7"/>
     </genClasses>
     <genClasses ecoreClass="Pds16asm.ecore#//Indexed">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//Indexed/rd"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//Indexed/rbx"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Indexed/index"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Indexed/idx3"/>
     </genClasses>
     <genClasses ecoreClass="Pds16asm.ecore#//BasedIndexed"/>
-    <genClasses ecoreClass="Pds16asm.ecore#//HexaDecimal">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//HexaDecimal/number"/>
+    <genClasses ecoreClass="Pds16asm.ecore#//OperationWithTwoRegisters">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//OperationWithTwoRegisters/rd"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//OperationWithTwoRegisters/rm"/>
     </genClasses>
-    <genClasses ecoreClass="Pds16asm.ecore#//operationWithTwoRegisters">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//operationWithTwoRegisters/rd"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//operationWithTwoRegisters/rm"/>
+    <genClasses ecoreClass="Pds16asm.ecore#//OperationsWithTreeRegisters">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//OperationsWithTreeRegisters/rd"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//OperationsWithTreeRegisters/rm"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//OperationsWithTreeRegisters/rn"/>
     </genClasses>
-    <genClasses ecoreClass="Pds16asm.ecore#//operationsWithTreeRegisters">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//operationsWithTreeRegisters/rd"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//operationsWithTreeRegisters/rm"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//operationsWithTreeRegisters/rn"/>
+    <genClasses ecoreClass="Pds16asm.ecore#//OperationsWithConstant">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//OperationsWithConstant/rd"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//OperationsWithConstant/rm"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//OperationsWithConstant/const4"/>
     </genClasses>
-    <genClasses ecoreClass="Pds16asm.ecore#//operationsWithConstant">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//operationsWithConstant/rd"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//operationsWithConstant/rm"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//operationsWithConstant/const4"/>
+    <genClasses ecoreClass="Pds16asm.ecore#//OperationShift">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//OperationShift/rd"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//OperationShift/rm"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//OperationShift/const4"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//OperationShift/sin"/>
     </genClasses>
-    <genClasses ecoreClass="Pds16asm.ecore#//operationShift">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//operationShift/rd"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//operationShift/rm"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//operationShift/const4"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//operationShift/sin"/>
-    </genClasses>
-    <genClasses ecoreClass="Pds16asm.ecore#//operationWithOffset">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//operationWithOffset/rbx"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//operationWithOffset/offset8"/>
-    </genClasses>
-    <genClasses ecoreClass="Pds16asm.ecore#//Comment">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Comment/value"/>
+    <genClasses ecoreClass="Pds16asm.ecore#//OperationWithOffset">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//OperationWithOffset/rbx"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//OperationWithOffset/offset8"/>
     </genClasses>
     <genClasses ecoreClass="Pds16asm.ecore#//Registers">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//Registers/rbx"/>

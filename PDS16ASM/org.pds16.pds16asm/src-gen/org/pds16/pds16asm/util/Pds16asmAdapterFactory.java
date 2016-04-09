@@ -86,6 +86,11 @@ public class Pds16asmAdapterFactory extends AdapterFactoryImpl
         return createInstructionsAdapter();
       }
       @Override
+      public Adapter caseComment(Comment object)
+      {
+        return createCommentAdapter();
+      }
+      @Override
       public Adapter caseLoad(Load object)
       {
         return createLoadAdapter();
@@ -146,64 +151,54 @@ public class Pds16asmAdapterFactory extends AdapterFactoryImpl
         return createStBasedIndexedAdapter();
       }
       @Override
-      public Adapter caseAddRegisters(AddRegisters object)
+      public Adapter caseAdd(Add object)
       {
-        return createAddRegistersAdapter();
+        return createAddAdapter();
       }
       @Override
-      public Adapter caseAddConstant(AddConstant object)
+      public Adapter caseSub(Sub object)
       {
-        return createAddConstantAdapter();
+        return createSubAdapter();
       }
       @Override
-      public Adapter caseSubRegisters(SubRegisters object)
+      public Adapter caseAnl(Anl object)
       {
-        return createSubRegistersAdapter();
+        return createAnlAdapter();
       }
       @Override
-      public Adapter caseSubConstant(SubConstant object)
+      public Adapter caseOrl(Orl object)
       {
-        return createSubConstantAdapter();
+        return createOrlAdapter();
       }
       @Override
-      public Adapter caseANL(ANL object)
+      public Adapter caseXrl(Xrl object)
       {
-        return createANLAdapter();
+        return createXrlAdapter();
       }
       @Override
-      public Adapter caseORL(ORL object)
+      public Adapter caseNot(Not object)
       {
-        return createORLAdapter();
+        return createNotAdapter();
       }
       @Override
-      public Adapter caseXRL(XRL object)
+      public Adapter caseShl(Shl object)
       {
-        return createXRLAdapter();
+        return createShlAdapter();
       }
       @Override
-      public Adapter caseNOT(NOT object)
+      public Adapter caseShr(Shr object)
       {
-        return createNOTAdapter();
+        return createShrAdapter();
       }
       @Override
-      public Adapter caseSHL(SHL object)
+      public Adapter caseRr(Rr object)
       {
-        return createSHLAdapter();
+        return createRrAdapter();
       }
       @Override
-      public Adapter caseSHR(SHR object)
+      public Adapter caseRc(Rc object)
       {
-        return createSHRAdapter();
-      }
-      @Override
-      public Adapter caseRR(RR object)
-      {
-        return createRRAdapter();
-      }
-      @Override
-      public Adapter caseRC(RC object)
-      {
-        return createRCAdapter();
+        return createRcAdapter();
       }
       @Override
       public Adapter caseJumpOp(JumpOp object)
@@ -231,39 +226,29 @@ public class Pds16asmAdapterFactory extends AdapterFactoryImpl
         return createBasedIndexedAdapter();
       }
       @Override
-      public Adapter caseHexaDecimal(HexaDecimal object)
+      public Adapter caseOperationWithTwoRegisters(OperationWithTwoRegisters object)
       {
-        return createHexaDecimalAdapter();
+        return createOperationWithTwoRegistersAdapter();
       }
       @Override
-      public Adapter caseoperationWithTwoRegisters(operationWithTwoRegisters object)
+      public Adapter caseOperationsWithTreeRegisters(OperationsWithTreeRegisters object)
       {
-        return createoperationWithTwoRegistersAdapter();
+        return createOperationsWithTreeRegistersAdapter();
       }
       @Override
-      public Adapter caseoperationsWithTreeRegisters(operationsWithTreeRegisters object)
+      public Adapter caseOperationsWithConstant(OperationsWithConstant object)
       {
-        return createoperationsWithTreeRegistersAdapter();
+        return createOperationsWithConstantAdapter();
       }
       @Override
-      public Adapter caseoperationsWithConstant(operationsWithConstant object)
+      public Adapter caseOperationShift(OperationShift object)
       {
-        return createoperationsWithConstantAdapter();
+        return createOperationShiftAdapter();
       }
       @Override
-      public Adapter caseoperationShift(operationShift object)
+      public Adapter caseOperationWithOffset(OperationWithOffset object)
       {
-        return createoperationShiftAdapter();
-      }
-      @Override
-      public Adapter caseoperationWithOffset(operationWithOffset object)
-      {
-        return createoperationWithOffsetAdapter();
-      }
-      @Override
-      public Adapter caseComment(Comment object)
-      {
-        return createCommentAdapter();
+        return createOperationWithOffsetAdapter();
       }
       @Override
       public Adapter caseRegisters(Registers object)
@@ -318,6 +303,21 @@ public class Pds16asmAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createInstructionsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.Comment <em>Comment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.pds16.pds16asm.Comment
+   * @generated
+   */
+  public Adapter createCommentAdapter()
   {
     return null;
   }
@@ -503,181 +503,151 @@ public class Pds16asmAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.AddRegisters <em>Add Registers</em>}'.
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.Add <em>Add</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.pds16.pds16asm.AddRegisters
+   * @see org.pds16.pds16asm.Add
    * @generated
    */
-  public Adapter createAddRegistersAdapter()
+  public Adapter createAddAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.AddConstant <em>Add Constant</em>}'.
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.Sub <em>Sub</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.pds16.pds16asm.AddConstant
+   * @see org.pds16.pds16asm.Sub
    * @generated
    */
-  public Adapter createAddConstantAdapter()
+  public Adapter createSubAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.SubRegisters <em>Sub Registers</em>}'.
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.Anl <em>Anl</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.pds16.pds16asm.SubRegisters
+   * @see org.pds16.pds16asm.Anl
    * @generated
    */
-  public Adapter createSubRegistersAdapter()
+  public Adapter createAnlAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.SubConstant <em>Sub Constant</em>}'.
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.Orl <em>Orl</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.pds16.pds16asm.SubConstant
+   * @see org.pds16.pds16asm.Orl
    * @generated
    */
-  public Adapter createSubConstantAdapter()
+  public Adapter createOrlAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.ANL <em>ANL</em>}'.
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.Xrl <em>Xrl</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.pds16.pds16asm.ANL
+   * @see org.pds16.pds16asm.Xrl
    * @generated
    */
-  public Adapter createANLAdapter()
+  public Adapter createXrlAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.ORL <em>ORL</em>}'.
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.Not <em>Not</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.pds16.pds16asm.ORL
+   * @see org.pds16.pds16asm.Not
    * @generated
    */
-  public Adapter createORLAdapter()
+  public Adapter createNotAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.XRL <em>XRL</em>}'.
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.Shl <em>Shl</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.pds16.pds16asm.XRL
+   * @see org.pds16.pds16asm.Shl
    * @generated
    */
-  public Adapter createXRLAdapter()
+  public Adapter createShlAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.NOT <em>NOT</em>}'.
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.Shr <em>Shr</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.pds16.pds16asm.NOT
+   * @see org.pds16.pds16asm.Shr
    * @generated
    */
-  public Adapter createNOTAdapter()
+  public Adapter createShrAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.SHL <em>SHL</em>}'.
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.Rr <em>Rr</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.pds16.pds16asm.SHL
+   * @see org.pds16.pds16asm.Rr
    * @generated
    */
-  public Adapter createSHLAdapter()
+  public Adapter createRrAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.SHR <em>SHR</em>}'.
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.Rc <em>Rc</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.pds16.pds16asm.SHR
+   * @see org.pds16.pds16asm.Rc
    * @generated
    */
-  public Adapter createSHRAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.RR <em>RR</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.pds16.pds16asm.RR
-   * @generated
-   */
-  public Adapter createRRAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.RC <em>RC</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.pds16.pds16asm.RC
-   * @generated
-   */
-  public Adapter createRCAdapter()
+  public Adapter createRcAdapter()
   {
     return null;
   }
@@ -758,106 +728,76 @@ public class Pds16asmAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.HexaDecimal <em>Hexa Decimal</em>}'.
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.OperationWithTwoRegisters <em>Operation With Two Registers</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.pds16.pds16asm.HexaDecimal
+   * @see org.pds16.pds16asm.OperationWithTwoRegisters
    * @generated
    */
-  public Adapter createHexaDecimalAdapter()
+  public Adapter createOperationWithTwoRegistersAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.operationWithTwoRegisters <em>operation With Two Registers</em>}'.
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.OperationsWithTreeRegisters <em>Operations With Tree Registers</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.pds16.pds16asm.operationWithTwoRegisters
+   * @see org.pds16.pds16asm.OperationsWithTreeRegisters
    * @generated
    */
-  public Adapter createoperationWithTwoRegistersAdapter()
+  public Adapter createOperationsWithTreeRegistersAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.operationsWithTreeRegisters <em>operations With Tree Registers</em>}'.
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.OperationsWithConstant <em>Operations With Constant</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.pds16.pds16asm.operationsWithTreeRegisters
+   * @see org.pds16.pds16asm.OperationsWithConstant
    * @generated
    */
-  public Adapter createoperationsWithTreeRegistersAdapter()
+  public Adapter createOperationsWithConstantAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.operationsWithConstant <em>operations With Constant</em>}'.
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.OperationShift <em>Operation Shift</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.pds16.pds16asm.operationsWithConstant
+   * @see org.pds16.pds16asm.OperationShift
    * @generated
    */
-  public Adapter createoperationsWithConstantAdapter()
+  public Adapter createOperationShiftAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.operationShift <em>operation Shift</em>}'.
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.OperationWithOffset <em>Operation With Offset</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.pds16.pds16asm.operationShift
+   * @see org.pds16.pds16asm.OperationWithOffset
    * @generated
    */
-  public Adapter createoperationShiftAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.operationWithOffset <em>operation With Offset</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.pds16.pds16asm.operationWithOffset
-   * @generated
-   */
-  public Adapter createoperationWithOffsetAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.Comment <em>Comment</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.pds16.pds16asm.Comment
-   * @generated
-   */
-  public Adapter createCommentAdapter()
+  public Adapter createOperationWithOffsetAdapter()
   {
     return null;
   }

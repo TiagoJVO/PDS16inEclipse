@@ -87,6 +87,14 @@ public class Pds16asmSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case Pds16asmPackage.COMMENT:
+      {
+        Comment comment = (Comment)theEObject;
+        T result = caseComment(comment);
+        if (result == null) result = caseInstructions(comment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case Pds16asmPackage.LOAD:
       {
         Load load = (Load)theEObject;
@@ -190,46 +198,28 @@ public class Pds16asmSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case Pds16asmPackage.ADD_REGISTERS:
+      case Pds16asmPackage.ADD:
       {
-        AddRegisters addRegisters = (AddRegisters)theEObject;
-        T result = caseAddRegisters(addRegisters);
-        if (result == null) result = caseAritmetica(addRegisters);
-        if (result == null) result = caseInstructions(addRegisters);
+        Add add = (Add)theEObject;
+        T result = caseAdd(add);
+        if (result == null) result = caseAritmetica(add);
+        if (result == null) result = caseInstructions(add);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case Pds16asmPackage.ADD_CONSTANT:
+      case Pds16asmPackage.SUB:
       {
-        AddConstant addConstant = (AddConstant)theEObject;
-        T result = caseAddConstant(addConstant);
-        if (result == null) result = caseAritmetica(addConstant);
-        if (result == null) result = caseInstructions(addConstant);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case Pds16asmPackage.SUB_REGISTERS:
-      {
-        SubRegisters subRegisters = (SubRegisters)theEObject;
-        T result = caseSubRegisters(subRegisters);
-        if (result == null) result = caseAritmetica(subRegisters);
-        if (result == null) result = caseInstructions(subRegisters);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case Pds16asmPackage.SUB_CONSTANT:
-      {
-        SubConstant subConstant = (SubConstant)theEObject;
-        T result = caseSubConstant(subConstant);
-        if (result == null) result = caseAritmetica(subConstant);
-        if (result == null) result = caseInstructions(subConstant);
+        Sub sub = (Sub)theEObject;
+        T result = caseSub(sub);
+        if (result == null) result = caseAritmetica(sub);
+        if (result == null) result = caseInstructions(sub);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case Pds16asmPackage.ANL:
       {
-        ANL anl = (ANL)theEObject;
-        T result = caseANL(anl);
+        Anl anl = (Anl)theEObject;
+        T result = caseAnl(anl);
         if (result == null) result = caseLogica(anl);
         if (result == null) result = caseInstructions(anl);
         if (result == null) result = defaultCase(theEObject);
@@ -237,8 +227,8 @@ public class Pds16asmSwitch<T> extends Switch<T>
       }
       case Pds16asmPackage.ORL:
       {
-        ORL orl = (ORL)theEObject;
-        T result = caseORL(orl);
+        Orl orl = (Orl)theEObject;
+        T result = caseOrl(orl);
         if (result == null) result = caseLogica(orl);
         if (result == null) result = caseInstructions(orl);
         if (result == null) result = defaultCase(theEObject);
@@ -246,8 +236,8 @@ public class Pds16asmSwitch<T> extends Switch<T>
       }
       case Pds16asmPackage.XRL:
       {
-        XRL xrl = (XRL)theEObject;
-        T result = caseXRL(xrl);
+        Xrl xrl = (Xrl)theEObject;
+        T result = caseXrl(xrl);
         if (result == null) result = caseLogica(xrl);
         if (result == null) result = caseInstructions(xrl);
         if (result == null) result = defaultCase(theEObject);
@@ -255,8 +245,8 @@ public class Pds16asmSwitch<T> extends Switch<T>
       }
       case Pds16asmPackage.NOT:
       {
-        NOT not = (NOT)theEObject;
-        T result = caseNOT(not);
+        Not not = (Not)theEObject;
+        T result = caseNot(not);
         if (result == null) result = caseLogica(not);
         if (result == null) result = caseInstructions(not);
         if (result == null) result = defaultCase(theEObject);
@@ -264,8 +254,8 @@ public class Pds16asmSwitch<T> extends Switch<T>
       }
       case Pds16asmPackage.SHL:
       {
-        SHL shl = (SHL)theEObject;
-        T result = caseSHL(shl);
+        Shl shl = (Shl)theEObject;
+        T result = caseShl(shl);
         if (result == null) result = caseLogica(shl);
         if (result == null) result = caseInstructions(shl);
         if (result == null) result = defaultCase(theEObject);
@@ -273,8 +263,8 @@ public class Pds16asmSwitch<T> extends Switch<T>
       }
       case Pds16asmPackage.SHR:
       {
-        SHR shr = (SHR)theEObject;
-        T result = caseSHR(shr);
+        Shr shr = (Shr)theEObject;
+        T result = caseShr(shr);
         if (result == null) result = caseLogica(shr);
         if (result == null) result = caseInstructions(shr);
         if (result == null) result = defaultCase(theEObject);
@@ -282,8 +272,8 @@ public class Pds16asmSwitch<T> extends Switch<T>
       }
       case Pds16asmPackage.RR:
       {
-        RR rr = (RR)theEObject;
-        T result = caseRR(rr);
+        Rr rr = (Rr)theEObject;
+        T result = caseRr(rr);
         if (result == null) result = caseLogica(rr);
         if (result == null) result = caseInstructions(rr);
         if (result == null) result = defaultCase(theEObject);
@@ -291,8 +281,8 @@ public class Pds16asmSwitch<T> extends Switch<T>
       }
       case Pds16asmPackage.RC:
       {
-        RC rc = (RC)theEObject;
-        T result = caseRC(rc);
+        Rc rc = (Rc)theEObject;
+        T result = caseRc(rc);
         if (result == null) result = caseLogica(rc);
         if (result == null) result = caseInstructions(rc);
         if (result == null) result = defaultCase(theEObject);
@@ -353,19 +343,12 @@ public class Pds16asmSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case Pds16asmPackage.HEXA_DECIMAL:
-      {
-        HexaDecimal hexaDecimal = (HexaDecimal)theEObject;
-        T result = caseHexaDecimal(hexaDecimal);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case Pds16asmPackage.OPERATION_WITH_TWO_REGISTERS:
       {
-        operationWithTwoRegisters operationWithTwoRegisters = (operationWithTwoRegisters)theEObject;
-        T result = caseoperationWithTwoRegisters(operationWithTwoRegisters);
-        if (result == null) result = caseNOT(operationWithTwoRegisters);
-        if (result == null) result = caseRC(operationWithTwoRegisters);
+        OperationWithTwoRegisters operationWithTwoRegisters = (OperationWithTwoRegisters)theEObject;
+        T result = caseOperationWithTwoRegisters(operationWithTwoRegisters);
+        if (result == null) result = caseNot(operationWithTwoRegisters);
+        if (result == null) result = caseRc(operationWithTwoRegisters);
         if (result == null) result = caseLogica(operationWithTwoRegisters);
         if (result == null) result = caseInstructions(operationWithTwoRegisters);
         if (result == null) result = defaultCase(theEObject);
@@ -373,13 +356,13 @@ public class Pds16asmSwitch<T> extends Switch<T>
       }
       case Pds16asmPackage.OPERATIONS_WITH_TREE_REGISTERS:
       {
-        operationsWithTreeRegisters operationsWithTreeRegisters = (operationsWithTreeRegisters)theEObject;
-        T result = caseoperationsWithTreeRegisters(operationsWithTreeRegisters);
-        if (result == null) result = caseAddRegisters(operationsWithTreeRegisters);
-        if (result == null) result = caseSubRegisters(operationsWithTreeRegisters);
-        if (result == null) result = caseANL(operationsWithTreeRegisters);
-        if (result == null) result = caseORL(operationsWithTreeRegisters);
-        if (result == null) result = caseXRL(operationsWithTreeRegisters);
+        OperationsWithTreeRegisters operationsWithTreeRegisters = (OperationsWithTreeRegisters)theEObject;
+        T result = caseOperationsWithTreeRegisters(operationsWithTreeRegisters);
+        if (result == null) result = caseAdd(operationsWithTreeRegisters);
+        if (result == null) result = caseSub(operationsWithTreeRegisters);
+        if (result == null) result = caseAnl(operationsWithTreeRegisters);
+        if (result == null) result = caseOrl(operationsWithTreeRegisters);
+        if (result == null) result = caseXrl(operationsWithTreeRegisters);
         if (result == null) result = caseAritmetica(operationsWithTreeRegisters);
         if (result == null) result = caseLogica(operationsWithTreeRegisters);
         if (result == null) result = caseInstructions(operationsWithTreeRegisters);
@@ -388,11 +371,11 @@ public class Pds16asmSwitch<T> extends Switch<T>
       }
       case Pds16asmPackage.OPERATIONS_WITH_CONSTANT:
       {
-        operationsWithConstant operationsWithConstant = (operationsWithConstant)theEObject;
-        T result = caseoperationsWithConstant(operationsWithConstant);
-        if (result == null) result = caseAddConstant(operationsWithConstant);
-        if (result == null) result = caseSubConstant(operationsWithConstant);
-        if (result == null) result = caseRR(operationsWithConstant);
+        OperationsWithConstant operationsWithConstant = (OperationsWithConstant)theEObject;
+        T result = caseOperationsWithConstant(operationsWithConstant);
+        if (result == null) result = caseAdd(operationsWithConstant);
+        if (result == null) result = caseSub(operationsWithConstant);
+        if (result == null) result = caseRr(operationsWithConstant);
         if (result == null) result = caseAritmetica(operationsWithConstant);
         if (result == null) result = caseLogica(operationsWithConstant);
         if (result == null) result = caseInstructions(operationsWithConstant);
@@ -401,10 +384,10 @@ public class Pds16asmSwitch<T> extends Switch<T>
       }
       case Pds16asmPackage.OPERATION_SHIFT:
       {
-        operationShift operationShift = (operationShift)theEObject;
-        T result = caseoperationShift(operationShift);
-        if (result == null) result = caseSHL(operationShift);
-        if (result == null) result = caseSHR(operationShift);
+        OperationShift operationShift = (OperationShift)theEObject;
+        T result = caseOperationShift(operationShift);
+        if (result == null) result = caseShl(operationShift);
+        if (result == null) result = caseShr(operationShift);
         if (result == null) result = caseLogica(operationShift);
         if (result == null) result = caseInstructions(operationShift);
         if (result == null) result = defaultCase(theEObject);
@@ -412,19 +395,11 @@ public class Pds16asmSwitch<T> extends Switch<T>
       }
       case Pds16asmPackage.OPERATION_WITH_OFFSET:
       {
-        operationWithOffset operationWithOffset = (operationWithOffset)theEObject;
-        T result = caseoperationWithOffset(operationWithOffset);
+        OperationWithOffset operationWithOffset = (OperationWithOffset)theEObject;
+        T result = caseOperationWithOffset(operationWithOffset);
         if (result == null) result = caseJumpOp(operationWithOffset);
         if (result == null) result = caseJump(operationWithOffset);
         if (result == null) result = caseInstructions(operationWithOffset);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case Pds16asmPackage.COMMENT:
-      {
-        Comment comment = (Comment)theEObject;
-        T result = caseComment(comment);
-        if (result == null) result = caseInstructions(comment);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -473,6 +448,22 @@ public class Pds16asmSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseInstructions(Instructions object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Comment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Comment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseComment(Comment object)
   {
     return null;
   }
@@ -670,193 +661,161 @@ public class Pds16asmSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Add Registers</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Add</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Add Registers</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Add</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseAddRegisters(AddRegisters object)
+  public T caseAdd(Add object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Add Constant</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Sub</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Add Constant</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Sub</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseAddConstant(AddConstant object)
+  public T caseSub(Sub object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Sub Registers</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Anl</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Sub Registers</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Anl</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseSubRegisters(SubRegisters object)
+  public T caseAnl(Anl object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Sub Constant</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Orl</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Sub Constant</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Orl</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseSubConstant(SubConstant object)
+  public T caseOrl(Orl object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>ANL</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Xrl</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>ANL</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Xrl</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseANL(ANL object)
+  public T caseXrl(Xrl object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>ORL</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Not</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>ORL</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Not</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseORL(ORL object)
+  public T caseNot(Not object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>XRL</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Shl</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>XRL</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Shl</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseXRL(XRL object)
+  public T caseShl(Shl object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>NOT</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Shr</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>NOT</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Shr</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseNOT(NOT object)
+  public T caseShr(Shr object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>SHL</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Rr</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>SHL</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Rr</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseSHL(SHL object)
+  public T caseRr(Rr object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>SHR</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Rc</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>SHR</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Rc</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseSHR(SHR object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>RR</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>RR</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseRR(RR object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>RC</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>RC</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseRC(RC object)
+  public T caseRc(Rc object)
   {
     return null;
   }
@@ -942,113 +901,81 @@ public class Pds16asmSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Hexa Decimal</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Operation With Two Registers</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Hexa Decimal</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Operation With Two Registers</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseHexaDecimal(HexaDecimal object)
+  public T caseOperationWithTwoRegisters(OperationWithTwoRegisters object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>operation With Two Registers</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Operations With Tree Registers</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>operation With Two Registers</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Operations With Tree Registers</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseoperationWithTwoRegisters(operationWithTwoRegisters object)
+  public T caseOperationsWithTreeRegisters(OperationsWithTreeRegisters object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>operations With Tree Registers</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Operations With Constant</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>operations With Tree Registers</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Operations With Constant</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseoperationsWithTreeRegisters(operationsWithTreeRegisters object)
+  public T caseOperationsWithConstant(OperationsWithConstant object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>operations With Constant</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Operation Shift</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>operations With Constant</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Operation Shift</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseoperationsWithConstant(operationsWithConstant object)
+  public T caseOperationShift(OperationShift object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>operation Shift</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Operation With Offset</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>operation Shift</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Operation With Offset</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseoperationShift(operationShift object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>operation With Offset</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>operation With Offset</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseoperationWithOffset(operationWithOffset object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Comment</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Comment</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseComment(Comment object)
+  public T caseOperationWithOffset(OperationWithOffset object)
   {
     return null;
   }

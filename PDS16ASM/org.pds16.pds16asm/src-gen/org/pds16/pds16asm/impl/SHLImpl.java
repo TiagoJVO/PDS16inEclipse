@@ -6,25 +6,25 @@ package org.pds16.pds16asm.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import org.pds16.pds16asm.Pds16asmPackage;
-import org.pds16.pds16asm.SHL;
+import org.pds16.pds16asm.Shl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>SHL</b></em>'.
+ * An implementation of the model object '<em><b>Shl</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class SHLImpl extends LogicaImpl implements SHL
+public class ShlImpl extends LogicaImpl implements Shl
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected SHLImpl()
+  protected ShlImpl()
   {
     super();
   }
@@ -40,4 +40,4 @@ public class SHLImpl extends LogicaImpl implements SHL
     return Pds16asmPackage.Literals.SHL;
   }
 
-} //SHLImpl
+} //ShlImpl

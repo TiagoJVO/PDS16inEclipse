@@ -19,7 +19,7 @@ import org.pds16.pds16asm.Pds16asmPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.pds16.pds16asm.impl.CommentImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.impl.CommentImpl#getComment <em>Comment</em>}</li>
  * </ul>
  * </p>
  *
@@ -28,24 +28,24 @@ import org.pds16.pds16asm.Pds16asmPackage;
 public class CommentImpl extends InstructionsImpl implements Comment
 {
   /**
-   * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+   * The default value of the '{@link #getComment() <em>Comment</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getValue()
+   * @see #getComment()
    * @generated
    * @ordered
    */
-  protected static final String VALUE_EDEFAULT = null;
+  protected static final String COMMENT_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
+   * The cached value of the '{@link #getComment() <em>Comment</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getValue()
+   * @see #getComment()
    * @generated
    * @ordered
    */
-  protected String value = VALUE_EDEFAULT;
+  protected String comment = COMMENT_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -73,9 +73,9 @@ public class CommentImpl extends InstructionsImpl implements Comment
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getValue()
+  public String getComment()
   {
-    return value;
+    return comment;
   }
 
   /**
@@ -83,12 +83,12 @@ public class CommentImpl extends InstructionsImpl implements Comment
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setValue(String newValue)
+  public void setComment(String newComment)
   {
-    String oldValue = value;
-    value = newValue;
+    String oldComment = comment;
+    comment = newComment;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.COMMENT__VALUE, oldValue, value));
+      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.COMMENT__COMMENT, oldComment, comment));
   }
 
   /**
@@ -101,8 +101,8 @@ public class CommentImpl extends InstructionsImpl implements Comment
   {
     switch (featureID)
     {
-      case Pds16asmPackage.COMMENT__VALUE:
-        return getValue();
+      case Pds16asmPackage.COMMENT__COMMENT:
+        return getComment();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -117,8 +117,8 @@ public class CommentImpl extends InstructionsImpl implements Comment
   {
     switch (featureID)
     {
-      case Pds16asmPackage.COMMENT__VALUE:
-        setValue((String)newValue);
+      case Pds16asmPackage.COMMENT__COMMENT:
+        setComment((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -134,8 +134,8 @@ public class CommentImpl extends InstructionsImpl implements Comment
   {
     switch (featureID)
     {
-      case Pds16asmPackage.COMMENT__VALUE:
-        setValue(VALUE_EDEFAULT);
+      case Pds16asmPackage.COMMENT__COMMENT:
+        setComment(COMMENT_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -151,8 +151,8 @@ public class CommentImpl extends InstructionsImpl implements Comment
   {
     switch (featureID)
     {
-      case Pds16asmPackage.COMMENT__VALUE:
-        return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+      case Pds16asmPackage.COMMENT__COMMENT:
+        return COMMENT_EDEFAULT == null ? comment != null : !COMMENT_EDEFAULT.equals(comment);
     }
     return super.eIsSet(featureID);
   }
@@ -168,8 +168,8 @@ public class CommentImpl extends InstructionsImpl implements Comment
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (value: ");
-    result.append(value);
+    result.append(" (comment: ");
+    result.append(comment);
     result.append(')');
     return result.toString();
   }

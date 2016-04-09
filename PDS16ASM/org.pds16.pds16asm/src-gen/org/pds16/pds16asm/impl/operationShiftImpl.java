@@ -11,27 +11,27 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.pds16.pds16asm.OperationShift;
 import org.pds16.pds16asm.Pds16asmPackage;
 import org.pds16.pds16asm.Registers;
-import org.pds16.pds16asm.operationShift;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>operation Shift</b></em>'.
+ * An implementation of the model object '<em><b>Operation Shift</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.pds16.pds16asm.impl.operationShiftImpl#getRd <em>Rd</em>}</li>
- *   <li>{@link org.pds16.pds16asm.impl.operationShiftImpl#getRm <em>Rm</em>}</li>
- *   <li>{@link org.pds16.pds16asm.impl.operationShiftImpl#getConst4 <em>Const4</em>}</li>
- *   <li>{@link org.pds16.pds16asm.impl.operationShiftImpl#getSin <em>Sin</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.impl.OperationShiftImpl#getRd <em>Rd</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.impl.OperationShiftImpl#getRm <em>Rm</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.impl.OperationShiftImpl#getConst4 <em>Const4</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.impl.OperationShiftImpl#getSin <em>Sin</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class operationShiftImpl extends SHLImpl implements operationShift
+public class OperationShiftImpl extends ShlImpl implements OperationShift
 {
   /**
    * The cached value of the '{@link #getRd() <em>Rd</em>}' containment reference.
@@ -61,7 +61,7 @@ public class operationShiftImpl extends SHLImpl implements operationShift
    * @generated
    * @ordered
    */
-  protected static final int CONST4_EDEFAULT = 0;
+  protected static final String CONST4_EDEFAULT = null;
 
   /**
    * The cached value of the '{@link #getConst4() <em>Const4</em>}' attribute.
@@ -71,7 +71,7 @@ public class operationShiftImpl extends SHLImpl implements operationShift
    * @generated
    * @ordered
    */
-  protected int const4 = CONST4_EDEFAULT;
+  protected String const4 = CONST4_EDEFAULT;
 
   /**
    * The default value of the '{@link #getSin() <em>Sin</em>}' attribute.
@@ -81,7 +81,7 @@ public class operationShiftImpl extends SHLImpl implements operationShift
    * @generated
    * @ordered
    */
-  protected static final int SIN_EDEFAULT = 0;
+  protected static final String SIN_EDEFAULT = null;
 
   /**
    * The cached value of the '{@link #getSin() <em>Sin</em>}' attribute.
@@ -91,14 +91,14 @@ public class operationShiftImpl extends SHLImpl implements operationShift
    * @generated
    * @ordered
    */
-  protected int sin = SIN_EDEFAULT;
+  protected String sin = SIN_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected operationShiftImpl()
+  protected OperationShiftImpl()
   {
     super();
   }
@@ -215,7 +215,7 @@ public class operationShiftImpl extends SHLImpl implements operationShift
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getConst4()
+  public String getConst4()
   {
     return const4;
   }
@@ -225,9 +225,9 @@ public class operationShiftImpl extends SHLImpl implements operationShift
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setConst4(int newConst4)
+  public void setConst4(String newConst4)
   {
-    int oldConst4 = const4;
+    String oldConst4 = const4;
     const4 = newConst4;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.OPERATION_SHIFT__CONST4, oldConst4, const4));
@@ -238,7 +238,7 @@ public class operationShiftImpl extends SHLImpl implements operationShift
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getSin()
+  public String getSin()
   {
     return sin;
   }
@@ -248,9 +248,9 @@ public class operationShiftImpl extends SHLImpl implements operationShift
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setSin(int newSin)
+  public void setSin(String newSin)
   {
-    int oldSin = sin;
+    String oldSin = sin;
     sin = newSin;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.OPERATION_SHIFT__SIN, oldSin, sin));
@@ -313,10 +313,10 @@ public class operationShiftImpl extends SHLImpl implements operationShift
         setRm((Registers)newValue);
         return;
       case Pds16asmPackage.OPERATION_SHIFT__CONST4:
-        setConst4((Integer)newValue);
+        setConst4((String)newValue);
         return;
       case Pds16asmPackage.OPERATION_SHIFT__SIN:
-        setSin((Integer)newValue);
+        setSin((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -363,9 +363,9 @@ public class operationShiftImpl extends SHLImpl implements operationShift
       case Pds16asmPackage.OPERATION_SHIFT__RM:
         return rm != null;
       case Pds16asmPackage.OPERATION_SHIFT__CONST4:
-        return const4 != CONST4_EDEFAULT;
+        return CONST4_EDEFAULT == null ? const4 != null : !CONST4_EDEFAULT.equals(const4);
       case Pds16asmPackage.OPERATION_SHIFT__SIN:
-        return sin != SIN_EDEFAULT;
+        return SIN_EDEFAULT == null ? sin != null : !SIN_EDEFAULT.equals(sin);
     }
     return super.eIsSet(featureID);
   }
@@ -389,4 +389,4 @@ public class operationShiftImpl extends SHLImpl implements operationShift
     return result.toString();
   }
 
-} //operationShiftImpl
+} //OperationShiftImpl

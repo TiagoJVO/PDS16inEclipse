@@ -6,14 +6,14 @@ package org.pds16.pds16asm;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>XRL</b></em>'.
+ * A representation of the model object '<em><b>Xrl</b></em>'.
  * <!-- end-user-doc -->
  *
  *
- * @see org.pds16.pds16asm.Pds16asmPackage#getXRL()
+ * @see org.pds16.pds16asm.Pds16asmPackage#getXrl()
  * @model
  * @generated
  */
-public interface XRL extends Logica
+public interface Xrl extends Logica
 {
-} // XRL
+} // Xrl

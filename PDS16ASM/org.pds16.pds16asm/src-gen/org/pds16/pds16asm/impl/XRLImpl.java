@@ -6,25 +6,25 @@ package org.pds16.pds16asm.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import org.pds16.pds16asm.Pds16asmPackage;
-import org.pds16.pds16asm.XRL;
+import org.pds16.pds16asm.Xrl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>XRL</b></em>'.
+ * An implementation of the model object '<em><b>Xrl</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class XRLImpl extends LogicaImpl implements XRL
+public class XrlImpl extends LogicaImpl implements Xrl
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected XRLImpl()
+  protected XrlImpl()
   {
     super();
   }
@@ -40,4 +40,4 @@ public class XRLImpl extends LogicaImpl implements XRL
     return Pds16asmPackage.Literals.XRL;
   }
 
-} //XRLImpl
+} //XrlImpl

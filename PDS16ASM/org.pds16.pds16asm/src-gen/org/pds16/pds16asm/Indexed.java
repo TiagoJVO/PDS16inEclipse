@@ -14,7 +14,7 @@ package org.pds16.pds16asm;
  * <ul>
  *   <li>{@link org.pds16.pds16asm.Indexed#getRd <em>Rd</em>}</li>
  *   <li>{@link org.pds16.pds16asm.Indexed#getRbx <em>Rbx</em>}</li>
- *   <li>{@link org.pds16.pds16asm.Indexed#getIndex <em>Index</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.Indexed#getIdx3 <em>Idx3</em>}</li>
  * </ul>
  * </p>
  *
@@ -77,29 +77,29 @@ public interface Indexed extends LdIndexed, StIndexed
   void setRbx(Registers value);
 
   /**
-   * Returns the value of the '<em><b>Index</b></em>' attribute.
+   * Returns the value of the '<em><b>Idx3</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Index</em>' attribute isn't clear,
+   * If the meaning of the '<em>Idx3</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Index</em>' attribute.
-   * @see #setIndex(String)
-   * @see org.pds16.pds16asm.Pds16asmPackage#getIndexed_Index()
+   * @return the value of the '<em>Idx3</em>' attribute.
+   * @see #setIdx3(String)
+   * @see org.pds16.pds16asm.Pds16asmPackage#getIndexed_Idx3()
    * @model
    * @generated
    */
-  String getIndex();
+  String getIdx3();
 
   /**
-   * Sets the value of the '{@link org.pds16.pds16asm.Indexed#getIndex <em>Index</em>}' attribute.
+   * Sets the value of the '{@link org.pds16.pds16asm.Indexed#getIdx3 <em>Idx3</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Index</em>' attribute.
-   * @see #getIndex()
+   * @param value the new value of the '<em>Idx3</em>' attribute.
+   * @see #getIdx3()
    * @generated
    */
-  void setIndex(String value);
+  void setIdx3(String value);
 
 } // Indexed

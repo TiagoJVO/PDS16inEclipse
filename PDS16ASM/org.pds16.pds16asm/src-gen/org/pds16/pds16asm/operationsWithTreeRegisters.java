@@ -6,23 +6,23 @@ package org.pds16.pds16asm;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>operations With Tree Registers</b></em>'.
+ * A representation of the model object '<em><b>Operations With Tree Registers</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.pds16.pds16asm.operationsWithTreeRegisters#getRd <em>Rd</em>}</li>
- *   <li>{@link org.pds16.pds16asm.operationsWithTreeRegisters#getRm <em>Rm</em>}</li>
- *   <li>{@link org.pds16.pds16asm.operationsWithTreeRegisters#getRn <em>Rn</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.OperationsWithTreeRegisters#getRd <em>Rd</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.OperationsWithTreeRegisters#getRm <em>Rm</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.OperationsWithTreeRegisters#getRn <em>Rn</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.pds16.pds16asm.Pds16asmPackage#getoperationsWithTreeRegisters()
+ * @see org.pds16.pds16asm.Pds16asmPackage#getOperationsWithTreeRegisters()
  * @model
  * @generated
  */
-public interface operationsWithTreeRegisters extends AddRegisters, SubRegisters, ANL, ORL, XRL
+public interface OperationsWithTreeRegisters extends Add, Sub, Anl, Orl, Xrl
 {
   /**
    * Returns the value of the '<em><b>Rd</b></em>' containment reference.
@@ -34,14 +34,14 @@ public interface operationsWithTreeRegisters extends AddRegisters, SubRegisters,
    * <!-- end-user-doc -->
    * @return the value of the '<em>Rd</em>' containment reference.
    * @see #setRd(Registers)
-   * @see org.pds16.pds16asm.Pds16asmPackage#getoperationsWithTreeRegisters_Rd()
+   * @see org.pds16.pds16asm.Pds16asmPackage#getOperationsWithTreeRegisters_Rd()
    * @model containment="true"
    * @generated
    */
   Registers getRd();
 
   /**
-   * Sets the value of the '{@link org.pds16.pds16asm.operationsWithTreeRegisters#getRd <em>Rd</em>}' containment reference.
+   * Sets the value of the '{@link org.pds16.pds16asm.OperationsWithTreeRegisters#getRd <em>Rd</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Rd</em>' containment reference.
@@ -60,14 +60,14 @@ public interface operationsWithTreeRegisters extends AddRegisters, SubRegisters,
    * <!-- end-user-doc -->
    * @return the value of the '<em>Rm</em>' containment reference.
    * @see #setRm(Registers)
-   * @see org.pds16.pds16asm.Pds16asmPackage#getoperationsWithTreeRegisters_Rm()
+   * @see org.pds16.pds16asm.Pds16asmPackage#getOperationsWithTreeRegisters_Rm()
    * @model containment="true"
    * @generated
    */
   Registers getRm();
 
   /**
-   * Sets the value of the '{@link org.pds16.pds16asm.operationsWithTreeRegisters#getRm <em>Rm</em>}' containment reference.
+   * Sets the value of the '{@link org.pds16.pds16asm.OperationsWithTreeRegisters#getRm <em>Rm</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Rm</em>' containment reference.
@@ -86,14 +86,14 @@ public interface operationsWithTreeRegisters extends AddRegisters, SubRegisters,
    * <!-- end-user-doc -->
    * @return the value of the '<em>Rn</em>' containment reference.
    * @see #setRn(Registers)
-   * @see org.pds16.pds16asm.Pds16asmPackage#getoperationsWithTreeRegisters_Rn()
+   * @see org.pds16.pds16asm.Pds16asmPackage#getOperationsWithTreeRegisters_Rn()
    * @model containment="true"
    * @generated
    */
   Registers getRn();
 
   /**
-   * Sets the value of the '{@link org.pds16.pds16asm.operationsWithTreeRegisters#getRn <em>Rn</em>}' containment reference.
+   * Sets the value of the '{@link org.pds16.pds16asm.OperationsWithTreeRegisters#getRn <em>Rn</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Rn</em>' containment reference.
@@ -102,4 +102,4 @@ public interface operationsWithTreeRegisters extends AddRegisters, SubRegisters,
    */
   void setRn(Registers value);
 
-} // operationsWithTreeRegisters
+} // OperationsWithTreeRegisters

@@ -6,14 +6,14 @@ package org.pds16.pds16asm;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>SHR</b></em>'.
+ * A representation of the model object '<em><b>Shr</b></em>'.
  * <!-- end-user-doc -->
  *
  *
- * @see org.pds16.pds16asm.Pds16asmPackage#getSHR()
+ * @see org.pds16.pds16asm.Pds16asmPackage#getShr()
  * @model
  * @generated
  */
-public interface SHR extends Logica
+public interface Shr extends Logica
 {
-} // SHR
+} // Shr

@@ -11,26 +11,25 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.pds16.pds16asm.HexaDecimal;
+import org.pds16.pds16asm.OperationWithOffset;
 import org.pds16.pds16asm.Pds16asmPackage;
 import org.pds16.pds16asm.Registers;
-import org.pds16.pds16asm.operationWithOffset;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>operation With Offset</b></em>'.
+ * An implementation of the model object '<em><b>Operation With Offset</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.pds16.pds16asm.impl.operationWithOffsetImpl#getRbx <em>Rbx</em>}</li>
- *   <li>{@link org.pds16.pds16asm.impl.operationWithOffsetImpl#getOffset8 <em>Offset8</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.impl.OperationWithOffsetImpl#getRbx <em>Rbx</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.impl.OperationWithOffsetImpl#getOffset8 <em>Offset8</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class operationWithOffsetImpl extends JumpOpImpl implements operationWithOffset
+public class OperationWithOffsetImpl extends JumpOpImpl implements OperationWithOffset
 {
   /**
    * The cached value of the '{@link #getRbx() <em>Rbx</em>}' containment reference.
@@ -43,21 +42,31 @@ public class operationWithOffsetImpl extends JumpOpImpl implements operationWith
   protected Registers rbx;
 
   /**
-   * The cached value of the '{@link #getOffset8() <em>Offset8</em>}' containment reference.
+   * The default value of the '{@link #getOffset8() <em>Offset8</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getOffset8()
    * @generated
    * @ordered
    */
-  protected HexaDecimal offset8;
+  protected static final String OFFSET8_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getOffset8() <em>Offset8</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getOffset8()
+   * @generated
+   * @ordered
+   */
+  protected String offset8 = OFFSET8_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected operationWithOffsetImpl()
+  protected OperationWithOffsetImpl()
   {
     super();
   }
@@ -126,7 +135,7 @@ public class operationWithOffsetImpl extends JumpOpImpl implements operationWith
    * <!-- end-user-doc -->
    * @generated
    */
-  public HexaDecimal getOffset8()
+  public String getOffset8()
   {
     return offset8;
   }
@@ -136,37 +145,12 @@ public class operationWithOffsetImpl extends JumpOpImpl implements operationWith
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetOffset8(HexaDecimal newOffset8, NotificationChain msgs)
+  public void setOffset8(String newOffset8)
   {
-    HexaDecimal oldOffset8 = offset8;
+    String oldOffset8 = offset8;
     offset8 = newOffset8;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Pds16asmPackage.OPERATION_WITH_OFFSET__OFFSET8, oldOffset8, newOffset8);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setOffset8(HexaDecimal newOffset8)
-  {
-    if (newOffset8 != offset8)
-    {
-      NotificationChain msgs = null;
-      if (offset8 != null)
-        msgs = ((InternalEObject)offset8).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.OPERATION_WITH_OFFSET__OFFSET8, null, msgs);
-      if (newOffset8 != null)
-        msgs = ((InternalEObject)newOffset8).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.OPERATION_WITH_OFFSET__OFFSET8, null, msgs);
-      msgs = basicSetOffset8(newOffset8, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.OPERATION_WITH_OFFSET__OFFSET8, newOffset8, newOffset8));
+      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.OPERATION_WITH_OFFSET__OFFSET8, oldOffset8, offset8));
   }
 
   /**
@@ -181,8 +165,6 @@ public class operationWithOffsetImpl extends JumpOpImpl implements operationWith
     {
       case Pds16asmPackage.OPERATION_WITH_OFFSET__RBX:
         return basicSetRbx(null, msgs);
-      case Pds16asmPackage.OPERATION_WITH_OFFSET__OFFSET8:
-        return basicSetOffset8(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -219,7 +201,7 @@ public class operationWithOffsetImpl extends JumpOpImpl implements operationWith
         setRbx((Registers)newValue);
         return;
       case Pds16asmPackage.OPERATION_WITH_OFFSET__OFFSET8:
-        setOffset8((HexaDecimal)newValue);
+        setOffset8((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -239,7 +221,7 @@ public class operationWithOffsetImpl extends JumpOpImpl implements operationWith
         setRbx((Registers)null);
         return;
       case Pds16asmPackage.OPERATION_WITH_OFFSET__OFFSET8:
-        setOffset8((HexaDecimal)null);
+        setOffset8(OFFSET8_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -258,9 +240,26 @@ public class operationWithOffsetImpl extends JumpOpImpl implements operationWith
       case Pds16asmPackage.OPERATION_WITH_OFFSET__RBX:
         return rbx != null;
       case Pds16asmPackage.OPERATION_WITH_OFFSET__OFFSET8:
-        return offset8 != null;
+        return OFFSET8_EDEFAULT == null ? offset8 != null : !OFFSET8_EDEFAULT.equals(offset8);
     }
     return super.eIsSet(featureID);
   }
 
-} //operationWithOffsetImpl
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (offset8: ");
+    result.append(offset8);
+    result.append(')');
+    return result.toString();
+  }
+
+} //OperationWithOffsetImpl

@@ -9,12 +9,6 @@ package org.pds16.pds16asm;
  * A representation of the model object '<em><b>Jump Op</b></em>'.
  * <!-- end-user-doc -->
  *
- * <p>
- * The following features are supported:
- * <ul>
- *   <li>{@link org.pds16.pds16asm.JumpOp#getOp <em>Op</em>}</li>
- * </ul>
- * </p>
  *
  * @see org.pds16.pds16asm.Pds16asmPackage#getJumpOp()
  * @model
@@ -22,30 +16,4 @@ package org.pds16.pds16asm;
  */
 public interface JumpOp extends Jump
 {
-  /**
-   * Returns the value of the '<em><b>Op</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Op</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Op</em>' attribute.
-   * @see #setOp(String)
-   * @see org.pds16.pds16asm.Pds16asmPackage#getJumpOp_Op()
-   * @model
-   * @generated
-   */
-  String getOp();
-
-  /**
-   * Sets the value of the '{@link org.pds16.pds16asm.JumpOp#getOp <em>Op</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Op</em>' attribute.
-   * @see #getOp()
-   * @generated
-   */
-  void setOp(String value);
-
 } // JumpOp

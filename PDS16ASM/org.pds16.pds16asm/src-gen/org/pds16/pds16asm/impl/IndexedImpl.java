@@ -24,7 +24,7 @@ import org.pds16.pds16asm.Registers;
  * <ul>
  *   <li>{@link org.pds16.pds16asm.impl.IndexedImpl#getRd <em>Rd</em>}</li>
  *   <li>{@link org.pds16.pds16asm.impl.IndexedImpl#getRbx <em>Rbx</em>}</li>
- *   <li>{@link org.pds16.pds16asm.impl.IndexedImpl#getIndex <em>Index</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.impl.IndexedImpl#getIdx3 <em>Idx3</em>}</li>
  * </ul>
  * </p>
  *
@@ -53,24 +53,24 @@ public class IndexedImpl extends LdIndexedImpl implements Indexed
   protected Registers rbx;
 
   /**
-   * The default value of the '{@link #getIndex() <em>Index</em>}' attribute.
+   * The default value of the '{@link #getIdx3() <em>Idx3</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getIndex()
+   * @see #getIdx3()
    * @generated
    * @ordered
    */
-  protected static final String INDEX_EDEFAULT = null;
+  protected static final String IDX3_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getIndex() <em>Index</em>}' attribute.
+   * The cached value of the '{@link #getIdx3() <em>Idx3</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getIndex()
+   * @see #getIdx3()
    * @generated
    * @ordered
    */
-  protected String index = INDEX_EDEFAULT;
+  protected String idx3 = IDX3_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -194,9 +194,9 @@ public class IndexedImpl extends LdIndexedImpl implements Indexed
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getIndex()
+  public String getIdx3()
   {
-    return index;
+    return idx3;
   }
 
   /**
@@ -204,12 +204,12 @@ public class IndexedImpl extends LdIndexedImpl implements Indexed
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setIndex(String newIndex)
+  public void setIdx3(String newIdx3)
   {
-    String oldIndex = index;
-    index = newIndex;
+    String oldIdx3 = idx3;
+    idx3 = newIdx3;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.INDEXED__INDEX, oldIndex, index));
+      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.INDEXED__IDX3, oldIdx3, idx3));
   }
 
   /**
@@ -244,8 +244,8 @@ public class IndexedImpl extends LdIndexedImpl implements Indexed
         return getRd();
       case Pds16asmPackage.INDEXED__RBX:
         return getRbx();
-      case Pds16asmPackage.INDEXED__INDEX:
-        return getIndex();
+      case Pds16asmPackage.INDEXED__IDX3:
+        return getIdx3();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -266,8 +266,8 @@ public class IndexedImpl extends LdIndexedImpl implements Indexed
       case Pds16asmPackage.INDEXED__RBX:
         setRbx((Registers)newValue);
         return;
-      case Pds16asmPackage.INDEXED__INDEX:
-        setIndex((String)newValue);
+      case Pds16asmPackage.INDEXED__IDX3:
+        setIdx3((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -289,8 +289,8 @@ public class IndexedImpl extends LdIndexedImpl implements Indexed
       case Pds16asmPackage.INDEXED__RBX:
         setRbx((Registers)null);
         return;
-      case Pds16asmPackage.INDEXED__INDEX:
-        setIndex(INDEX_EDEFAULT);
+      case Pds16asmPackage.INDEXED__IDX3:
+        setIdx3(IDX3_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -310,8 +310,8 @@ public class IndexedImpl extends LdIndexedImpl implements Indexed
         return rd != null;
       case Pds16asmPackage.INDEXED__RBX:
         return rbx != null;
-      case Pds16asmPackage.INDEXED__INDEX:
-        return INDEX_EDEFAULT == null ? index != null : !INDEX_EDEFAULT.equals(index);
+      case Pds16asmPackage.INDEXED__IDX3:
+        return IDX3_EDEFAULT == null ? idx3 != null : !IDX3_EDEFAULT.equals(idx3);
     }
     return super.eIsSet(featureID);
   }
@@ -327,8 +327,8 @@ public class IndexedImpl extends LdIndexedImpl implements Indexed
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (index: ");
-    result.append(index);
+    result.append(" (idx3: ");
+    result.append(idx3);
     result.append(')');
     return result.toString();
   }

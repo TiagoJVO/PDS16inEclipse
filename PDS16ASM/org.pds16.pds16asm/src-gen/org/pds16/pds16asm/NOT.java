@@ -6,14 +6,14 @@ package org.pds16.pds16asm;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>NOT</b></em>'.
+ * A representation of the model object '<em><b>Not</b></em>'.
  * <!-- end-user-doc -->
  *
  *
- * @see org.pds16.pds16asm.Pds16asmPackage#getNOT()
+ * @see org.pds16.pds16asm.Pds16asmPackage#getNot()
  * @model
  * @generated
  */
-public interface NOT extends Logica
+public interface Not extends Logica
 {
-} // NOT
+} // Not

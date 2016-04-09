@@ -11,25 +11,25 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.pds16.pds16asm.OperationWithTwoRegisters;
 import org.pds16.pds16asm.Pds16asmPackage;
 import org.pds16.pds16asm.Registers;
-import org.pds16.pds16asm.operationWithTwoRegisters;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>operation With Two Registers</b></em>'.
+ * An implementation of the model object '<em><b>Operation With Two Registers</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.pds16.pds16asm.impl.operationWithTwoRegistersImpl#getRd <em>Rd</em>}</li>
- *   <li>{@link org.pds16.pds16asm.impl.operationWithTwoRegistersImpl#getRm <em>Rm</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.impl.OperationWithTwoRegistersImpl#getRd <em>Rd</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.impl.OperationWithTwoRegistersImpl#getRm <em>Rm</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class operationWithTwoRegistersImpl extends NOTImpl implements operationWithTwoRegisters
+public class OperationWithTwoRegistersImpl extends NotImpl implements OperationWithTwoRegisters
 {
   /**
    * The cached value of the '{@link #getRd() <em>Rd</em>}' containment reference.
@@ -56,7 +56,7 @@ public class operationWithTwoRegistersImpl extends NOTImpl implements operationW
    * <!-- end-user-doc -->
    * @generated
    */
-  protected operationWithTwoRegistersImpl()
+  protected OperationWithTwoRegistersImpl()
   {
     super();
   }
@@ -262,4 +262,4 @@ public class operationWithTwoRegistersImpl extends NOTImpl implements operationW
     return super.eIsSet(featureID);
   }
 
-} //operationWithTwoRegistersImpl
+} //OperationWithTwoRegistersImpl

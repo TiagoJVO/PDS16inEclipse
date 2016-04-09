@@ -6,14 +6,14 @@ package org.pds16.pds16asm;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>ORL</b></em>'.
+ * A representation of the model object '<em><b>Orl</b></em>'.
  * <!-- end-user-doc -->
  *
  *
- * @see org.pds16.pds16asm.Pds16asmPackage#getORL()
+ * @see org.pds16.pds16asm.Pds16asmPackage#getOrl()
  * @model
  * @generated
  */
-public interface ORL extends Logica
+public interface Orl extends Logica
 {
-} // ORL
+} // Orl

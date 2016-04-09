@@ -67,6 +67,7 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
     {
       case Pds16asmPackage.PDS16ASM: return createPDS16ASM();
       case Pds16asmPackage.INSTRUCTIONS: return createInstructions();
+      case Pds16asmPackage.COMMENT: return createComment();
       case Pds16asmPackage.LOAD: return createLoad();
       case Pds16asmPackage.STORE: return createStore();
       case Pds16asmPackage.ARITMETICA: return createAritmetica();
@@ -79,30 +80,26 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
       case Pds16asmPackage.ST_DIRECT: return createStDirect();
       case Pds16asmPackage.ST_INDEXED: return createStIndexed();
       case Pds16asmPackage.ST_BASED_INDEXED: return createStBasedIndexed();
-      case Pds16asmPackage.ADD_REGISTERS: return createAddRegisters();
-      case Pds16asmPackage.ADD_CONSTANT: return createAddConstant();
-      case Pds16asmPackage.SUB_REGISTERS: return createSubRegisters();
-      case Pds16asmPackage.SUB_CONSTANT: return createSubConstant();
-      case Pds16asmPackage.ANL: return createANL();
-      case Pds16asmPackage.ORL: return createORL();
-      case Pds16asmPackage.XRL: return createXRL();
-      case Pds16asmPackage.NOT: return createNOT();
-      case Pds16asmPackage.SHL: return createSHL();
-      case Pds16asmPackage.SHR: return createSHR();
-      case Pds16asmPackage.RR: return createRR();
-      case Pds16asmPackage.RC: return createRC();
+      case Pds16asmPackage.ADD: return createAdd();
+      case Pds16asmPackage.SUB: return createSub();
+      case Pds16asmPackage.ANL: return createAnl();
+      case Pds16asmPackage.ORL: return createOrl();
+      case Pds16asmPackage.XRL: return createXrl();
+      case Pds16asmPackage.NOT: return createNot();
+      case Pds16asmPackage.SHL: return createShl();
+      case Pds16asmPackage.SHR: return createShr();
+      case Pds16asmPackage.RR: return createRr();
+      case Pds16asmPackage.RC: return createRc();
       case Pds16asmPackage.JUMP_OP: return createJumpOp();
       case Pds16asmPackage.IMMEDIATE: return createImmediate();
       case Pds16asmPackage.DIRECT: return createDirect();
       case Pds16asmPackage.INDEXED: return createIndexed();
       case Pds16asmPackage.BASED_INDEXED: return createBasedIndexed();
-      case Pds16asmPackage.HEXA_DECIMAL: return createHexaDecimal();
-      case Pds16asmPackage.OPERATION_WITH_TWO_REGISTERS: return createoperationWithTwoRegisters();
-      case Pds16asmPackage.OPERATIONS_WITH_TREE_REGISTERS: return createoperationsWithTreeRegisters();
-      case Pds16asmPackage.OPERATIONS_WITH_CONSTANT: return createoperationsWithConstant();
-      case Pds16asmPackage.OPERATION_SHIFT: return createoperationShift();
-      case Pds16asmPackage.OPERATION_WITH_OFFSET: return createoperationWithOffset();
-      case Pds16asmPackage.COMMENT: return createComment();
+      case Pds16asmPackage.OPERATION_WITH_TWO_REGISTERS: return createOperationWithTwoRegisters();
+      case Pds16asmPackage.OPERATIONS_WITH_TREE_REGISTERS: return createOperationsWithTreeRegisters();
+      case Pds16asmPackage.OPERATIONS_WITH_CONSTANT: return createOperationsWithConstant();
+      case Pds16asmPackage.OPERATION_SHIFT: return createOperationShift();
+      case Pds16asmPackage.OPERATION_WITH_OFFSET: return createOperationWithOffset();
       case Pds16asmPackage.REGISTERS: return createRegisters();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -129,6 +126,17 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
   {
     InstructionsImpl instructions = new InstructionsImpl();
     return instructions;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Comment createComment()
+  {
+    CommentImpl comment = new CommentImpl();
+    return comment;
   }
 
   /**
@@ -268,10 +276,10 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public AddRegisters createAddRegisters()
+  public Add createAdd()
   {
-    AddRegistersImpl addRegisters = new AddRegistersImpl();
-    return addRegisters;
+    AddImpl add = new AddImpl();
+    return add;
   }
 
   /**
@@ -279,10 +287,10 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public AddConstant createAddConstant()
+  public Sub createSub()
   {
-    AddConstantImpl addConstant = new AddConstantImpl();
-    return addConstant;
+    SubImpl sub = new SubImpl();
+    return sub;
   }
 
   /**
@@ -290,31 +298,9 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public SubRegisters createSubRegisters()
+  public Anl createAnl()
   {
-    SubRegistersImpl subRegisters = new SubRegistersImpl();
-    return subRegisters;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public SubConstant createSubConstant()
-  {
-    SubConstantImpl subConstant = new SubConstantImpl();
-    return subConstant;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ANL createANL()
-  {
-    ANLImpl anl = new ANLImpl();
+    AnlImpl anl = new AnlImpl();
     return anl;
   }
 
@@ -323,9 +309,9 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ORL createORL()
+  public Orl createOrl()
   {
-    ORLImpl orl = new ORLImpl();
+    OrlImpl orl = new OrlImpl();
     return orl;
   }
 
@@ -334,9 +320,9 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public XRL createXRL()
+  public Xrl createXrl()
   {
-    XRLImpl xrl = new XRLImpl();
+    XrlImpl xrl = new XrlImpl();
     return xrl;
   }
 
@@ -345,9 +331,9 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public NOT createNOT()
+  public Not createNot()
   {
-    NOTImpl not = new NOTImpl();
+    NotImpl not = new NotImpl();
     return not;
   }
 
@@ -356,9 +342,9 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public SHL createSHL()
+  public Shl createShl()
   {
-    SHLImpl shl = new SHLImpl();
+    ShlImpl shl = new ShlImpl();
     return shl;
   }
 
@@ -367,9 +353,9 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public SHR createSHR()
+  public Shr createShr()
   {
-    SHRImpl shr = new SHRImpl();
+    ShrImpl shr = new ShrImpl();
     return shr;
   }
 
@@ -378,9 +364,9 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public RR createRR()
+  public Rr createRr()
   {
-    RRImpl rr = new RRImpl();
+    RrImpl rr = new RrImpl();
     return rr;
   }
 
@@ -389,9 +375,9 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public RC createRC()
+  public Rc createRc()
   {
-    RCImpl rc = new RCImpl();
+    RcImpl rc = new RcImpl();
     return rc;
   }
 
@@ -455,20 +441,9 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public HexaDecimal createHexaDecimal()
+  public OperationWithTwoRegisters createOperationWithTwoRegisters()
   {
-    HexaDecimalImpl hexaDecimal = new HexaDecimalImpl();
-    return hexaDecimal;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public operationWithTwoRegisters createoperationWithTwoRegisters()
-  {
-    operationWithTwoRegistersImpl operationWithTwoRegisters = new operationWithTwoRegistersImpl();
+    OperationWithTwoRegistersImpl operationWithTwoRegisters = new OperationWithTwoRegistersImpl();
     return operationWithTwoRegisters;
   }
 
@@ -477,9 +452,9 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public operationsWithTreeRegisters createoperationsWithTreeRegisters()
+  public OperationsWithTreeRegisters createOperationsWithTreeRegisters()
   {
-    operationsWithTreeRegistersImpl operationsWithTreeRegisters = new operationsWithTreeRegistersImpl();
+    OperationsWithTreeRegistersImpl operationsWithTreeRegisters = new OperationsWithTreeRegistersImpl();
     return operationsWithTreeRegisters;
   }
 
@@ -488,9 +463,9 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public operationsWithConstant createoperationsWithConstant()
+  public OperationsWithConstant createOperationsWithConstant()
   {
-    operationsWithConstantImpl operationsWithConstant = new operationsWithConstantImpl();
+    OperationsWithConstantImpl operationsWithConstant = new OperationsWithConstantImpl();
     return operationsWithConstant;
   }
 
@@ -499,9 +474,9 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public operationShift createoperationShift()
+  public OperationShift createOperationShift()
   {
-    operationShiftImpl operationShift = new operationShiftImpl();
+    OperationShiftImpl operationShift = new OperationShiftImpl();
     return operationShift;
   }
 
@@ -510,21 +485,10 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public operationWithOffset createoperationWithOffset()
+  public OperationWithOffset createOperationWithOffset()
   {
-    operationWithOffsetImpl operationWithOffset = new operationWithOffsetImpl();
+    OperationWithOffsetImpl operationWithOffset = new OperationWithOffsetImpl();
     return operationWithOffset;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Comment createComment()
-  {
-    CommentImpl comment = new CommentImpl();
-    return comment;
   }
 
   /**
