@@ -19,6 +19,7 @@ import org.pds16.pds16asm.Direct;
 import org.pds16.pds16asm.Immediate;
 import org.pds16.pds16asm.Indexed;
 import org.pds16.pds16asm.IntOrHexOrString;
+import org.pds16.pds16asm.JumpOp;
 import org.pds16.pds16asm.OperationShift;
 import org.pds16.pds16asm.OperationWithOffset;
 import org.pds16.pds16asm.OperationWithTwoRegisters;
@@ -57,6 +58,9 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				return; 
 			case Pds16asmPackage.INT_OR_HEX_OR_STRING:
 				sequence_IntOrHexOrString(context, (IntOrHexOrString) semanticObject); 
+				return; 
+			case Pds16asmPackage.JUMP_OP:
+				sequence_JumpOp(context, (JumpOp) semanticObject); 
 				return; 
 			case Pds16asmPackage.OPERATION_SHIFT:
 				sequence_OperationShift(context, (OperationShift) semanticObject); 
@@ -232,10 +236,31 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     IntOrHexOrString returns IntOrHexOrString
 	 *
 	 * Constraint:
-	 *     (int=NUMB | hex=HEX | label=STRING)
+	 *     (int=INT | hex=HEX | label=STRING)
 	 */
 	protected void sequence_IntOrHexOrString(ISerializationContext context, IntOrHexOrString semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Statement returns JumpOp
+	 *     Instructions returns JumpOp
+	 *     Jump returns JumpOp
+	 *     JumpOp returns JumpOp
+	 *
+	 * Constraint:
+	 *     op=STRING
+	 */
+	protected void sequence_JumpOp(ISerializationContext context, JumpOp semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.JUMP_OP__OP) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.JUMP_OP__OP));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getJumpOpAccess().getOpSTRINGTerminalRuleCall_1_1_0(), semanticObject.getOp());
+		feeder.finish();
 	}
 	
 	
@@ -249,7 +274,7 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     OperationShift returns OperationShift
 	 *
 	 * Constraint:
-	 *     (rd=Registers rm=Registers const4=IntOrHexOrString sin=BIN)
+	 *     (rd=Registers rm=Registers const4=IntOrHexOrString sin=INT)
 	 */
 	protected void sequence_OperationShift(ISerializationContext context, OperationShift semanticObject) {
 		if (errorAcceptor != null) {
@@ -266,7 +291,7 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 		feeder.accept(grammarAccess.getOperationShiftAccess().getRdRegistersParserRuleCall_0_0(), semanticObject.getRd());
 		feeder.accept(grammarAccess.getOperationShiftAccess().getRmRegistersParserRuleCall_2_0(), semanticObject.getRm());
 		feeder.accept(grammarAccess.getOperationShiftAccess().getConst4IntOrHexOrStringParserRuleCall_4_0(), semanticObject.getConst4());
-		feeder.accept(grammarAccess.getOperationShiftAccess().getSinBINTerminalRuleCall_6_0(), semanticObject.getSin());
+		feeder.accept(grammarAccess.getOperationShiftAccess().getSinINTTerminalRuleCall_6_0(), semanticObject.getSin());
 		feeder.finish();
 	}
 	

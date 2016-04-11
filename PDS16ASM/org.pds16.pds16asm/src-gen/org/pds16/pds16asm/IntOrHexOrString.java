@@ -34,12 +34,12 @@ public interface IntOrHexOrString extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Int</em>' attribute.
-   * @see #setInt(String)
+   * @see #setInt(int)
    * @see org.pds16.pds16asm.Pds16asmPackage#getIntOrHexOrString_Int()
    * @model
    * @generated
    */
-  String getInt();
+  int getInt();
 
   /**
    * Sets the value of the '{@link org.pds16.pds16asm.IntOrHexOrString#getInt <em>Int</em>}' attribute.
@@ -49,7 +49,7 @@ public interface IntOrHexOrString extends EObject
    * @see #getInt()
    * @generated
    */
-  void setInt(String value);
+  void setInt(int value);
 
   /**
    * Returns the value of the '<em><b>Hex</b></em>' attribute.

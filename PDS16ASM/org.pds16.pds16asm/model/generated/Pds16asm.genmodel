@@ -36,7 +36,9 @@
     <genClasses ecoreClass="Pds16asm.ecore#//Shr"/>
     <genClasses ecoreClass="Pds16asm.ecore#//Rr"/>
     <genClasses ecoreClass="Pds16asm.ecore#//Rc"/>
-    <genClasses ecoreClass="Pds16asm.ecore#//JumpOp"/>
+    <genClasses ecoreClass="Pds16asm.ecore#//JumpOp">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//JumpOp/op"/>
+    </genClasses>
     <genClasses ecoreClass="Pds16asm.ecore#//Immediate">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//Immediate/register"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//Immediate/immediate8"/>

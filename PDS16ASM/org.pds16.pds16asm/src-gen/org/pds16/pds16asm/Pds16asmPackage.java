@@ -580,13 +580,22 @@ public interface Pds16asmPackage extends EPackage
   int JUMP_OP = 26;
 
   /**
+   * The feature id for the '<em><b>Op</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int JUMP_OP__OP = JUMP_FEATURE_COUNT + 0;
+
+  /**
    * The number of structural features of the '<em>Jump Op</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int JUMP_OP_FEATURE_COUNT = JUMP_FEATURE_COUNT + 0;
+  int JUMP_OP_FEATURE_COUNT = JUMP_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.pds16.pds16asm.impl.ImmediateImpl <em>Immediate</em>}' class.
@@ -959,6 +968,15 @@ public interface Pds16asmPackage extends EPackage
   int OPERATION_WITH_OFFSET = 36;
 
   /**
+   * The feature id for the '<em><b>Op</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPERATION_WITH_OFFSET__OP = JUMP_OP__OP;
+
+  /**
    * The feature id for the '<em><b>Rbx</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1323,6 +1341,17 @@ public interface Pds16asmPackage extends EPackage
    * @generated
    */
   EClass getJumpOp();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.JumpOp#getOp <em>Op</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Op</em>'.
+   * @see org.pds16.pds16asm.JumpOp#getOp()
+   * @see #getJumpOp()
+   * @generated
+   */
+  EAttribute getJumpOp_Op();
 
   /**
    * Returns the meta object for class '{@link org.pds16.pds16asm.Immediate <em>Immediate</em>}'.
@@ -2028,6 +2057,14 @@ public interface Pds16asmPackage extends EPackage
      * @generated
      */
     EClass JUMP_OP = eINSTANCE.getJumpOp();
+
+    /**
+     * The meta object literal for the '<em><b>Op</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute JUMP_OP__OP = eINSTANCE.getJumpOp_Op();
 
     /**
      * The meta object literal for the '{@link org.pds16.pds16asm.impl.ImmediateImpl <em>Immediate</em>}' class.

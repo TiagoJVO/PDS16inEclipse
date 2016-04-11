@@ -32,7 +32,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="Shr" eSuperTypes="#//Logica"/>
   <eClassifiers xsi:type="ecore:EClass" name="Rr" eSuperTypes="#//Logica"/>
   <eClassifiers xsi:type="ecore:EClass" name="Rc" eSuperTypes="#//Logica"/>
-  <eClassifiers xsi:type="ecore:EClass" name="JumpOp" eSuperTypes="#//Jump"/>
+  <eClassifiers xsi:type="ecore:EClass" name="JumpOp" eSuperTypes="#//Jump">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Immediate" eSuperTypes="#//LdImmediate">
     <eStructuralFeatures xsi:type="ecore:EReference" name="register" eType="#//Registers"
         containment="true"/>
@@ -53,7 +55,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BasedIndexed" eSuperTypes="#//LdBasedIndexed #//StBasedIndexed"/>
   <eClassifiers xsi:type="ecore:EClass" name="IntOrHexOrString">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="int" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="int" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="hex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -86,7 +88,7 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="const4" eType="#//IntOrHexOrString"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OperationWithOffset" eSuperTypes="#//JumpOp">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rbx" eType="#//Registers"

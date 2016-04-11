@@ -38,7 +38,7 @@ public class IntOrHexOrStringImpl extends MinimalEObjectImpl.Container implement
    * @generated
    * @ordered
    */
-  protected static final String INT_EDEFAULT = null;
+  protected static final int INT_EDEFAULT = 0;
 
   /**
    * The cached value of the '{@link #getInt() <em>Int</em>}' attribute.
@@ -48,7 +48,7 @@ public class IntOrHexOrStringImpl extends MinimalEObjectImpl.Container implement
    * @generated
    * @ordered
    */
-  protected String int_ = INT_EDEFAULT;
+  protected int int_ = INT_EDEFAULT;
 
   /**
    * The default value of the '{@link #getHex() <em>Hex</em>}' attribute.
@@ -116,7 +116,7 @@ public class IntOrHexOrStringImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getInt()
+  public int getInt()
   {
     return int_;
   }
@@ -126,9 +126,9 @@ public class IntOrHexOrStringImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setInt(String newInt)
+  public void setInt(int newInt)
   {
-    String oldInt = int_;
+    int oldInt = int_;
     int_ = newInt;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.INT_OR_HEX_OR_STRING__INT, oldInt, int_));
@@ -211,7 +211,7 @@ public class IntOrHexOrStringImpl extends MinimalEObjectImpl.Container implement
     switch (featureID)
     {
       case Pds16asmPackage.INT_OR_HEX_OR_STRING__INT:
-        setInt((String)newValue);
+        setInt((Integer)newValue);
         return;
       case Pds16asmPackage.INT_OR_HEX_OR_STRING__HEX:
         setHex((String)newValue);
@@ -257,7 +257,7 @@ public class IntOrHexOrStringImpl extends MinimalEObjectImpl.Container implement
     switch (featureID)
     {
       case Pds16asmPackage.INT_OR_HEX_OR_STRING__INT:
-        return INT_EDEFAULT == null ? int_ != null : !INT_EDEFAULT.equals(int_);
+        return int_ != INT_EDEFAULT;
       case Pds16asmPackage.INT_OR_HEX_OR_STRING__HEX:
         return HEX_EDEFAULT == null ? hex != null : !HEX_EDEFAULT.equals(hex);
       case Pds16asmPackage.INT_OR_HEX_OR_STRING__LABEL:

@@ -1668,6 +1668,27 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+rule__JumpOp__Alternatives_1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getJumpOpAccess().getOperationWithOffsetParserRuleCall_1_0()); }
+		ruleOperationWithOffset
+		{ after(grammarAccess.getJumpOpAccess().getOperationWithOffsetParserRuleCall_1_0()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getJumpOpAccess().getOpAssignment_1_1()); }
+		(rule__JumpOp__OpAssignment_1_1)
+		{ after(grammarAccess.getJumpOpAccess().getOpAssignment_1_1()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 rule__Direct__Alternatives_2
 	@init {
 		int stackSize = keepStackSize();
@@ -2801,9 +2822,9 @@ rule__JumpOp__Group__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getJumpOpAccess().getOperationWithOffsetParserRuleCall_1()); }
-	ruleOperationWithOffset
-	{ after(grammarAccess.getJumpOpAccess().getOperationWithOffsetParserRuleCall_1()); }
+	{ before(grammarAccess.getJumpOpAccess().getAlternatives_1()); }
+	(rule__JumpOp__Alternatives_1)
+	{ after(grammarAccess.getJumpOpAccess().getAlternatives_1()); }
 )
 ;
 finally {
@@ -4110,6 +4131,21 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+rule__JumpOp__OpAssignment_1_1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getJumpOpAccess().getOpSTRINGTerminalRuleCall_1_1_0()); }
+		RULE_STRING
+		{ after(grammarAccess.getJumpOpAccess().getOpSTRINGTerminalRuleCall_1_1_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 rule__Immediate__RegisterAssignment_0
 	@init {
 		int stackSize = keepStackSize();
@@ -4236,9 +4272,9 @@ rule__IntOrHexOrString__IntAssignment_0_1
 	}
 :
 	(
-		{ before(grammarAccess.getIntOrHexOrStringAccess().getIntNUMBTerminalRuleCall_0_1_0()); }
-		RULE_NUMB
-		{ after(grammarAccess.getIntOrHexOrStringAccess().getIntNUMBTerminalRuleCall_0_1_0()); }
+		{ before(grammarAccess.getIntOrHexOrStringAccess().getIntINTTerminalRuleCall_0_1_0()); }
+		RULE_INT
+		{ after(grammarAccess.getIntOrHexOrStringAccess().getIntINTTerminalRuleCall_0_1_0()); }
 	)
 ;
 finally {
@@ -4446,9 +4482,9 @@ rule__OperationShift__SinAssignment_6
 	}
 :
 	(
-		{ before(grammarAccess.getOperationShiftAccess().getSinBINTerminalRuleCall_6_0()); }
-		RULE_BIN
-		{ after(grammarAccess.getOperationShiftAccess().getSinBINTerminalRuleCall_6_0()); }
+		{ before(grammarAccess.getOperationShiftAccess().getSinINTTerminalRuleCall_6_0()); }
+		RULE_INT
+		{ after(grammarAccess.getOperationShiftAccess().getSinINTTerminalRuleCall_6_0()); }
 	)
 ;
 finally {
@@ -4502,11 +4538,7 @@ finally {
 
 RULE_HEX : '0' ('x'|'X') ('0'..'9'|'a'..'f'|'A'..'F')+;
 
-RULE_NUMB : ('0'..'9')+;
-
-RULE_OCT : ('0'|'1'..'7' ('0'..'7')*);
-
-RULE_BIN : ('0'|'1')+;
+RULE_OWNSTRING : ('\\' .|~(('\\'|'"')))*;
 
 RULE_COMT : ';' ( options {greedy=false;} : . )*'\n';
 

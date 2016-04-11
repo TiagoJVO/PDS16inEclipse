@@ -682,6 +682,16 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getJumpOp_Op()
+  {
+    return (EAttribute)jumpOpEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getImmediate()
   {
     return immediateEClass;
@@ -1132,6 +1142,7 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
     rcEClass = createEClass(RC);
 
     jumpOpEClass = createEClass(JUMP_OP);
+    createEAttribute(jumpOpEClass, JUMP_OP__OP);
 
     immediateEClass = createEClass(IMMEDIATE);
     createEReference(immediateEClass, IMMEDIATE__REGISTER);
@@ -1314,6 +1325,7 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
     initEClass(rcEClass, Rc.class, "Rc", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(jumpOpEClass, JumpOp.class, "JumpOp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getJumpOp_Op(), ecorePackage.getEString(), "op", null, 0, 1, JumpOp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(immediateEClass, Immediate.class, "Immediate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getImmediate_Register(), this.getRegisters(), null, "register", null, 0, 1, Immediate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1330,7 +1342,7 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
     initEClass(basedIndexedEClass, BasedIndexed.class, "BasedIndexed", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(intOrHexOrStringEClass, IntOrHexOrString.class, "IntOrHexOrString", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getIntOrHexOrString_Int(), ecorePackage.getEString(), "int", null, 0, 1, IntOrHexOrString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getIntOrHexOrString_Int(), ecorePackage.getEInt(), "int", null, 0, 1, IntOrHexOrString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getIntOrHexOrString_Hex(), ecorePackage.getEString(), "hex", null, 0, 1, IntOrHexOrString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getIntOrHexOrString_Label(), ecorePackage.getEString(), "label", null, 0, 1, IntOrHexOrString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1352,7 +1364,7 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
     initEReference(getOperationShift_Rd(), this.getRegisters(), null, "rd", null, 0, 1, OperationShift.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getOperationShift_Rm(), this.getRegisters(), null, "rm", null, 0, 1, OperationShift.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getOperationShift_Const4(), this.getIntOrHexOrString(), null, "const4", null, 0, 1, OperationShift.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getOperationShift_Sin(), ecorePackage.getEString(), "sin", null, 0, 1, OperationShift.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getOperationShift_Sin(), ecorePackage.getEInt(), "sin", null, 0, 1, OperationShift.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(operationWithOffsetEClass, OperationWithOffset.class, "OperationWithOffset", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getOperationWithOffset_Rbx(), this.getRegisters(), null, "rbx", null, 0, 1, OperationWithOffset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

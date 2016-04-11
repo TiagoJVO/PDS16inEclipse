@@ -347,6 +347,7 @@ public class Pds16asmSyntacticSequencer extends AbstractSyntacticSequencer {
 	  *     )
 	 *
 	 * This ambiguous syntax occurs at:
+	 *     (rule start) (ambiguity) op=STRING
 	 *     (rule start) (ambiguity) rbx=Registers
 	 */
 	protected void emit_JumpOp_JaeKeyword_0_7_or_JblKeyword_0_5_or_JcKeyword_0_4_or_JeKeyword_0_1_or_JmpKeyword_0_8_or_JmplKeyword_0_9_or_JncKeyword_0_6_or_JneKeyword_0_3_or_JnzKeyword_0_2_or_JzKeyword_0_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {

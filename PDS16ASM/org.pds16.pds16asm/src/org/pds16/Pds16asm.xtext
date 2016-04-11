@@ -5,7 +5,7 @@ PDS16ASM:
 	instuctions+=Statement*;
 
 Statement:
-	Instructions | Comment /*/| Label | Directive*/;
+	Instructions | Comment/*/| Label | Directive*/;
 
 /*... Falta aqui código teu! */
 
@@ -69,7 +69,7 @@ Rc: ('rcr' | 'rcl') OperationWithTwoRegisters;
 /************************************** Jump **********************************************/
 JumpOp: 
 	('jz' | 'je' | 'jnz' | 'jne' | 'jc' | 'jbl' | 'jnc' | 'jae' | 'jmp' | 'jmpl')
-		OperationWithOffset;
+		(OperationWithOffset | op=STRING);
 /******************************************************************************************/
 
 /************************************Type Operations***************************************/
@@ -91,7 +91,7 @@ OperationsWithTreeRegisters: rd=Registers ',' rm=Registers ',' rn=Registers ;
 
 OperationsWithConstant: rd=Registers ',' rm=Registers ',' const4=IntOrHexOrString;
 
-OperationShift: rd=Registers ',' rm=Registers ',' const4=IntOrHexOrString ',' sin=BIN;
+OperationShift: rd=Registers ',' rm=Registers ',' const4=IntOrHexOrString ',' sin=/*BIN*/INT;
 //const4 é possivel usar label?????
 
 OperationWithOffset: rbx=Registers ',' offset8=IntOrHexOrString;
@@ -101,17 +101,20 @@ OperationWithOffset: rbx=Registers ',' offset8=IntOrHexOrString;
 Registers:
 		value= ('r0' | 'r1' | 'r2' | 'r3' | 'r4' | 'r5' | 'r6' | 'r7' | 'PSW');
 
-Number: (INT | HEX | OCT | BIN);
+//Number: (INT | HEX | OCT | BIN);
 
 terminal HEX : '0' ('x'|'X')(('0'..'9')|('a'..'f')|('A'..'F'))+;
 
-//terminal NUMB : ('0'..'9')+; Não deixa por já existe o INT defenido
+//terminal OCT : ('0' | '1'..'7' '0'..'7'*); //Conflito com terminal INT
 
-terminal OCT : ('0' | '1'..'7' '0'..'7'*);
-
-terminal BIN : ('0' | '1')+;
+//terminal BIN : ('0' | '1')+; //Conflito com terminal INT
 
 //terminal CONST4: ('0'..'9')+; //É IGUAL AO INT
+
+//terminal INT: ('0'..'9')+;
+//terminal STRING	: 
+//	 ( '\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('\\'|'"') )*; 
+//terminal STRING obriga a ter "ola" ou 'ola' mas no asm não existe aspas nem traços ex: ola;
 
 terminal COMT : ';' -> '\n';
 /******************************************************************************************/

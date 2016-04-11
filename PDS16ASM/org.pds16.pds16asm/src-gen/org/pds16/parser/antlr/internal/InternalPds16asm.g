@@ -1238,14 +1238,35 @@ ruleJumpOp returns [EObject current=null]
 				newLeafNode(otherlv_9, grammarAccess.getJumpOpAccess().getJmplKeyword_0_9());
 			}
 		)
-		{
-			newCompositeNode(grammarAccess.getJumpOpAccess().getOperationWithOffsetParserRuleCall_1());
-		}
-		this_OperationWithOffset_10=ruleOperationWithOffset
-		{
-			$current = $this_OperationWithOffset_10.current;
-			afterParserOrEnumRuleCall();
-		}
+		(
+			{
+				newCompositeNode(grammarAccess.getJumpOpAccess().getOperationWithOffsetParserRuleCall_1_0());
+			}
+			this_OperationWithOffset_10=ruleOperationWithOffset
+			{
+				$current = $this_OperationWithOffset_10.current;
+				afterParserOrEnumRuleCall();
+			}
+			    |
+			(
+				(
+					lv_op_11_0=RULE_STRING
+					{
+						newLeafNode(lv_op_11_0, grammarAccess.getJumpOpAccess().getOpSTRINGTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getJumpOpRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"op",
+							lv_op_11_0,
+							"org.eclipse.xtext.common.Terminals.STRING");
+					}
+				)
+			)
+		)
 	)
 ;
 
@@ -1564,9 +1585,9 @@ ruleIntOrHexOrString returns [EObject current=null]
 			}
 			(
 				(
-					lv_int_1_0=RULE_NUMB
+					lv_int_1_0=RULE_INT
 					{
-						newLeafNode(lv_int_1_0, grammarAccess.getIntOrHexOrStringAccess().getIntNUMBTerminalRuleCall_0_1_0());
+						newLeafNode(lv_int_1_0, grammarAccess.getIntOrHexOrStringAccess().getIntINTTerminalRuleCall_0_1_0());
 					}
 					{
 						if ($current==null) {
@@ -1576,7 +1597,7 @@ ruleIntOrHexOrString returns [EObject current=null]
 							$current,
 							"int",
 							lv_int_1_0,
-							"org.pds16.Pds16asm.NUMB");
+							"org.eclipse.xtext.common.Terminals.INT");
 					}
 				)
 			)
@@ -1944,9 +1965,9 @@ ruleOperationShift returns [EObject current=null]
 		}
 		(
 			(
-				lv_sin_6_0=RULE_BIN
+				lv_sin_6_0=RULE_INT
 				{
-					newLeafNode(lv_sin_6_0, grammarAccess.getOperationShiftAccess().getSinBINTerminalRuleCall_6_0());
+					newLeafNode(lv_sin_6_0, grammarAccess.getOperationShiftAccess().getSinINTTerminalRuleCall_6_0());
 				}
 				{
 					if ($current==null) {
@@ -1956,7 +1977,7 @@ ruleOperationShift returns [EObject current=null]
 						$current,
 						"sin",
 						lv_sin_6_0,
-						"org.pds16.Pds16asm.BIN");
+						"org.eclipse.xtext.common.Terminals.INT");
 				}
 			)
 		)
@@ -2147,11 +2168,7 @@ ruleRegisters returns [EObject current=null]
 
 RULE_HEX : '0' ('x'|'X') ('0'..'9'|'a'..'f'|'A'..'F')+;
 
-RULE_NUMB : ('0'..'9')+;
-
-RULE_OCT : ('0'|'1'..'7' ('0'..'7')*);
-
-RULE_BIN : ('0'|'1')+;
+RULE_OWNSTRING : ('\\' .|~(('\\'|'"')))*;
 
 RULE_COMT : ';' ( options {greedy=false;} : . )*'\n';
 
