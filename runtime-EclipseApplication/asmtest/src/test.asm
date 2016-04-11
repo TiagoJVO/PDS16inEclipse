@@ -1,94 +1,53 @@
-/*LDI*/
-	ldi r1, #0x2f
-
-/*LDIH*/
-	ldih r1, #0x2f
-
-/*LD direct*/
-	;ldb r1, var1
-	ldb r1, 0x25
-	;ld r3, var1
-	ld r3, 0x25
-
-/*LD indexed*/
-	ld r0, [r7, #5]
-	ldb r1, [r2, #3]
-	ldb r3,[r1,#0x0]
-
-/*LD based indexed*/
-	ld r0, [r1, r2]
-	ldb r2,[r0, r1]
-
-/*ADD registers*/
-	add r0,r7,r2
-	addf r0,r7,r2
-	
-/*ADD registers with CY flag*/
-	adc r0,r7,r2
-	adcf r0,r7,r2
-
-/*ADD constant*/
-	add r0,r7,#15
-	addf r1,r2,#0
-/*ADD constant with CY flag*/
-	adc r0,r7,#12
-	adcf r0,r7,#12
-
-/*SUB registers*/
-	sub r0,r7,r2
-	subf r0,r7,r2
-	;subr r2,r2,r3
-
-/*SUB registers with borrow*/
-	sbb r0,r7,r2
-	sbbf r0,r7,r2
-	
-/*SUB constant*/
-	sub r0,r7,#5
-	subf r0,r7,#5
-	
-/*SUB constant with borrow*/
-	sbb r0,r7,#3
-	sbbf r0,r7,#3
-
-/*AND registers*/
-	anl r0,r7,r2
-	anlf r0,r7,r2
-	;anlr r2,r2,r3
-
-/*OR registers*/
-	orl r0,r7,r2
-	orlf r2,r3,r3	
-
-/*XOR registers*/
-	xrl r0, r7,r2
-	xrlf r0, r7,r2
-
-/*NOT register*/
-	not r0,r1
-	notf r0,r1
-
-/*Shift left register*/
-	shl r0,r2,#5,0
-
-/*Shift right register*/
-	shr r0,r2,#5,0
-
-/*Rotate right least significant bit*/
-	rrl r0, r2, #12
-
-/*Rotate right must significant bit*/
-	rrm r0, r2, #3
-
-/*Rotate with carry right*/
-	rcr r0, r2
-
-/*Rotate with carry left*/
-	rcl r0, r3
-	
-;Comentario LD R1,[R2,#0xF]
-
-/*Jump */
-	jz "as"
-	jz r0,#1
-	jz r0,#0x1
+.section directData
+.org 016
+var4x12:
+.byte 12, 13, 14, 32, 98, 255; decimal
+.byte 014 ;octal
+.byte 0xC ;hexadecimal
+.byte -12 ; negativos -> -número
+.byte 1100b ;binario
+.section indirectData
+varChar:
+.byte 'A', 'B', 'C',0x0a,0x0d, 0 /* vários bytes com os códigos ascii das letras */
+varWord:
+.word 0xA25C ; dois bytes
+varWord:
+.word main, l1, rotina ; inicia array com os endereços das várias referências
+varArray:
+.space 5, 0xAB ;preenche 5 bytes com o valor 0xAB
+.space 3 ;reserva 3 bytes e inicia com zero
+varTexto:
+.ascii "isto é texto que não acaba com um byte a zero"
+.ascii "isto é", " texto que" , " não acaba com um byte a zero"
+/* código */
+.section start
+.org 0
+ld r7,[r7,#1] ; jmp main
+jmp isr
+.word main
+/* utilizam-se as mesmas primitivas que em .data ou as seguintes */
+.equ const1, 86
+.set const2, 10
+.word 0xA25C /* dois bytes */
+.space 3, 0xAB
+.section main
+.org 0x2000
+main: 
+ldi r0,#123
+ld r1,[r7,#1]
+jmp l1
+.word main
+l1: 
+ldi r2,#low(varArray)
+ldih r3,#high(varArray)
+jmpl rotina
+jmp $
+rotina: 
+st r0,[r2,#0]
+ld r0,[r1,#4]
+ld r3,var4x12+4
+movf r0,r2
+inc r2
+ret
+/* fim do modulo */
+.end

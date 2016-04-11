@@ -1,19 +1,45 @@
-grammar org.pds16.Pds16asm with org.eclipse.xtext.common.Terminals
+grammar org.pds16.Pds16asm hidden(WS, ML_COMMENT, SL_COMMENT)
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
 generate pds16asm "http://www.pds16.org/Pds16asm"
+
 
 PDS16ASM:
 	instuctions+=Statement*;
 
 Statement:
-	Instructions | Comment/*/| Label | Directive*/;
+	Instructions | Label | Directive;
 
-/*... Falta aqui código teu! */
+Label:
+	labelName=ID ':' value=(LabelDirective | Instructions);
+
+Directive:
+	'.bss' | '.data' | '.end' | '.text' | Equ | Org | Section | Set | LabelDirective;
+
+LabelDirective: Ascii | Asciiz | Byte | Word | Space;
+				
+
+Ascii:	'.ascii' value=STRING (',' STRING)*;
+
+Asciiz:	'.asciiz' value=STRING (',' STRING)*;
+
+Byte:	'.byte' value1=Number (',' Number)*;
+
+Word:	'.word' value1=(Number | ID) (',' (Number | ID))*;
+
+Space:	'.space' size=Number (',' byteValeu=Number)?;
+
+Set:    '.set' value1=ID ',' value2=Expression;
+
+Section:'.section' value=ID;
+
+Org:    '.org' Expression;
+
+Equ:    '.equ' ID ',' Expression;
 
 Instructions:
 	Load | Store | Aritmetica | Logica | Jump;
-
-Comment:
-	comment=COMT;
 
 Load: LdImmediate | LdDirect | LdIndexed | LdBasedIndexed ;
 Store: StDirect | StIndexed | StBasedIndexed;
@@ -69,54 +95,71 @@ Rc: ('rcr' | 'rcl') OperationWithTwoRegisters;
 /************************************** Jump **********************************************/
 JumpOp: 
 	('jz' | 'je' | 'jnz' | 'jne' | 'jc' | 'jbl' | 'jnc' | 'jae' | 'jmp' | 'jmpl')
-		(OperationWithOffset | op=STRING);
+		(OperationWithOffset | op=ID | '$');
 /******************************************************************************************/
 
 /************************************Type Operations***************************************/
-Immediate: register=Registers ',' immediate8=IntOrHexOrString;
+Immediate: register=Registers ',' immediate8= (ConstOrLabel | LowOrHight) ;
 
-Direct: register=Registers ',' (INT | HEX | STRING);
+Direct: register=Registers ',' direct7=DirectOrLabel;
 
 Indexed:
-	rd=Registers ',''[' rbx=Registers ',' idx3=IntOrHexOrString ']' ;
+	rd=Registers ',''[' rbx=Registers ',' idx3=ConstOrLabel ']' ;
 	
 BasedIndexed: 
 	Registers ',' '[' rbx=Registers ',' rix=Registers ']';
 
-IntOrHexOrString: (('#' int=INT) | ('#' hex=HEX) | label=STRING);
+DirectOrLabel: number=Number | label=ID;
+
+ConstOrLabel: '#'( number=Number | label=ID);
 
 OperationWithTwoRegisters: rd=Registers ',' rm=Registers;
 
 OperationsWithTreeRegisters: rd=Registers ',' rm=Registers ',' rn=Registers ;
 
-OperationsWithConstant: rd=Registers ',' rm=Registers ',' const4=IntOrHexOrString;
+OperationsWithConstant: rd=Registers ',' rm=Registers ',' const4=ConstOrLabel;
 
-OperationShift: rd=Registers ',' rm=Registers ',' const4=IntOrHexOrString ',' sin=/*BIN*/INT;
-//const4 é possivel usar label?????
+OperationShift: rd=Registers ',' rm=Registers ',' const4=ConstOrLabel ',' sin=BIT;
 
-OperationWithOffset: rbx=Registers ',' offset8=IntOrHexOrString;
+OperationWithOffset: rbx=Registers ',' offset8=ConstOrLabel;
+
+Expression: value1=
+	(Number | ID)+
+	//para a string temos que fazer um validator que verifique se é realmente uma expressão
+;
+
+LowOrHight: '#' ('low' | 'high') '(' Expression ')' ;
 /******************************************************************************************/
 
 /***********************************************Utils**************************************/
 Registers:
 		value= ('r0' | 'r1' | 'r2' | 'r3' | 'r4' | 'r5' | 'r6' | 'r7' | 'PSW');
 
-//Number: (INT | HEX | OCT | BIN);
+Number: (INT | HEX | OCT | BIN | CHAR);
 
-terminal HEX : '0' ('x'|'X')(('0'..'9')|('a'..'f')|('A'..'F'))+;
+terminal HEX : ('0x'|'0X')(('0'..'9')|('a'..'f')|('A'..'F'))+;
 
-//terminal OCT : ('0' | '1'..'7' '0'..'7'*); //Conflito com terminal INT
+terminal OCT : '0' ('0'..'7')+; 
 
-//terminal BIN : ('0' | '1')+; //Conflito com terminal INT
+terminal BIT : ('0' | '1');
 
-//terminal CONST4: ('0'..'9')+; //É IGUAL AO INT
+terminal BIN : BIT+ 'b';
 
-//terminal INT: ('0'..'9')+;
-//terminal STRING	: 
-//	 ( '\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('\\'|'"') )*; 
-//terminal STRING obriga a ter "ola" ou 'ola' mas no asm não existe aspas nem traços ex: ola;
+terminal CHAR : "'" ANY_OTHER "'";
 
-terminal COMT : ';' -> '\n';
+terminal SIGN : '-' | '+';
+
 /******************************************************************************************/
 
+terminal ID : ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+terminal INT returns ecore::EInt: SIGN? ('1'..'9')('0'..'9')*;
+terminal STRING	: 
+			'"' ( '\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('\\'|'"') )* '"' |
+			"'" ( '\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('\\'|"'") )* "'"
+		;
+terminal ML_COMMENT	: '/*' -> '*/';
+terminal SL_COMMENT 	: ';' -> '\n';
 
+terminal WS			: (' '|'\t'|'\r'|'\n')+;
+
+terminal ANY_OTHER: .;

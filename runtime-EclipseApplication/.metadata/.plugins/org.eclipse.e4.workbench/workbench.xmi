@@ -3,7 +3,7 @@
   <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.pds16.Pds16asm&quot; name=&quot;test.asm&quot; tooltip=&quot;asmtest/src/test.asm&quot;>&#xD;&#xA;&lt;persistable path=&quot;/asmtest/src/test.asm&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_lDeL0vzVEeW_OIDL3Wd60Q" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_lRbvU_zVEeW_OIDL3Wd60Q" label="%trimmedwindow.label.eclipseSDK" x="305" y="6" width="1024" height="768">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_lDeL0vzVEeW_OIDL3Wd60Q" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_lRbvU_zVEeW_OIDL3Wd60Q" label="%trimmedwindow.label.eclipseSDK" x="0" y="0" width="1024" height="768">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="workingSets" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workingSets/>"/>
@@ -227,7 +227,7 @@
         <tags>EditorStack</tags>
         <tags>active</tags>
         <children xsi:type="basic:Part" xmi:id="_rwfs8P1jEeWobq_VkPvkAw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="test.asm" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.pds16.Pds16asm&quot; name=&quot;test.asm&quot; partName=&quot;test.asm&quot; title=&quot;test.asm&quot; tooltip=&quot;asmtest/src/test.asm&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/asmtest/src/test.asm&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1315&quot; selectionTopPixel=&quot;1034&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.pds16.Pds16asm&quot; name=&quot;test.asm&quot; partName=&quot;test.asm&quot; title=&quot;test.asm&quot; tooltip=&quot;asmtest/src/test.asm&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/asmtest/src/test.asm&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1110&quot; selectionTopPixel=&quot;320&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.pds16.Pds16asm</tags>
           <tags>removeOnHide</tags>
@@ -363,7 +363,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_lS5u8vzVEeW_OIDL3Wd60Q" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_aU_5t__EEeWVTc_1ied_yg" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_lFSw3fzVEeW_OIDL3Wd60Q"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_nHM64AAGEea0DOXZCxUlrA" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_lFSw3fzVEeW_OIDL3Wd60Q"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_lS5u8_zVEeW_OIDL3Wd60Q" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -384,7 +384,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_lS5u9_zVEeW_OIDL3Wd60Q" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_aVJqtP_EEeWVTc_1ied_yg" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_lFSJ0PzVEeW_OIDL3Wd60Q"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_nHQlQgAGEea0DOXZCxUlrA" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_lFSJ0PzVEeW_OIDL3Wd60Q"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_lS5u-PzVEeW_OIDL3Wd60Q" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>

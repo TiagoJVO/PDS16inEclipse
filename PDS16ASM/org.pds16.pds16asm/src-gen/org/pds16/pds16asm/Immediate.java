@@ -3,6 +3,7 @@
  */
 package org.pds16.pds16asm;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -58,12 +59,12 @@ public interface Immediate extends LdImmediate
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Immediate8</em>' containment reference.
-   * @see #setImmediate8(IntOrHexOrString)
+   * @see #setImmediate8(EObject)
    * @see org.pds16.pds16asm.Pds16asmPackage#getImmediate_Immediate8()
    * @model containment="true"
    * @generated
    */
-  IntOrHexOrString getImmediate8();
+  EObject getImmediate8();
 
   /**
    * Sets the value of the '{@link org.pds16.pds16asm.Immediate#getImmediate8 <em>Immediate8</em>}' containment reference.
@@ -73,6 +74,6 @@ public interface Immediate extends LdImmediate
    * @see #getImmediate8()
    * @generated
    */
-  void setImmediate8(IntOrHexOrString value);
+  void setImmediate8(EObject value);
 
 } // Immediate

@@ -72,7 +72,7 @@ public class OperationShiftImpl extends ShlImpl implements OperationShift
    * @generated
    * @ordered
    */
-  protected static final int SIN_EDEFAULT = 0;
+  protected static final String SIN_EDEFAULT = null;
 
   /**
    * The cached value of the '{@link #getSin() <em>Sin</em>}' attribute.
@@ -82,7 +82,7 @@ public class OperationShiftImpl extends ShlImpl implements OperationShift
    * @generated
    * @ordered
    */
-  protected int sin = SIN_EDEFAULT;
+  protected String sin = SIN_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -254,7 +254,7 @@ public class OperationShiftImpl extends ShlImpl implements OperationShift
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getSin()
+  public String getSin()
   {
     return sin;
   }
@@ -264,9 +264,9 @@ public class OperationShiftImpl extends ShlImpl implements OperationShift
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setSin(int newSin)
+  public void setSin(String newSin)
   {
-    int oldSin = sin;
+    String oldSin = sin;
     sin = newSin;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.OPERATION_SHIFT__SIN, oldSin, sin));
@@ -334,7 +334,7 @@ public class OperationShiftImpl extends ShlImpl implements OperationShift
         setConst4((IntOrHexOrString)newValue);
         return;
       case Pds16asmPackage.OPERATION_SHIFT__SIN:
-        setSin((Integer)newValue);
+        setSin((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -383,7 +383,7 @@ public class OperationShiftImpl extends ShlImpl implements OperationShift
       case Pds16asmPackage.OPERATION_SHIFT__CONST4:
         return const4 != null;
       case Pds16asmPackage.OPERATION_SHIFT__SIN:
-        return sin != SIN_EDEFAULT;
+        return SIN_EDEFAULT == null ? sin != null : !SIN_EDEFAULT.equals(sin);
     }
     return super.eIsSet(featureID);
   }

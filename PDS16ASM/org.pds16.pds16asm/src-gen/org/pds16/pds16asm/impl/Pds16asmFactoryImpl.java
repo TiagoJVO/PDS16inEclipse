@@ -11,7 +11,58 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import org.pds16.pds16asm.*;
+import org.pds16.pds16asm.Add;
+import org.pds16.pds16asm.Anl;
+import org.pds16.pds16asm.Aritmetica;
+import org.pds16.pds16asm.Ascii;
+import org.pds16.pds16asm.Asciiz;
+import org.pds16.pds16asm.BasedIndexed;
+import org.pds16.pds16asm.Direct;
+import org.pds16.pds16asm.Directive;
+import org.pds16.pds16asm.Equ;
+import org.pds16.pds16asm.Expression;
+import org.pds16.pds16asm.Immediate;
+import org.pds16.pds16asm.Indexed;
+import org.pds16.pds16asm.Instructions;
+import org.pds16.pds16asm.IntOrHexOrString;
+import org.pds16.pds16asm.Jump;
+import org.pds16.pds16asm.JumpOp;
+import org.pds16.pds16asm.Label;
+import org.pds16.pds16asm.LabelDirective;
+import org.pds16.pds16asm.LdBasedIndexed;
+import org.pds16.pds16asm.LdDirect;
+import org.pds16.pds16asm.LdImmediate;
+import org.pds16.pds16asm.LdIndexed;
+import org.pds16.pds16asm.Load;
+import org.pds16.pds16asm.Logica;
+import org.pds16.pds16asm.LowOrHight;
+import org.pds16.pds16asm.Not;
+import org.pds16.pds16asm.OperationShift;
+import org.pds16.pds16asm.OperationWithOffset;
+import org.pds16.pds16asm.OperationWithTwoRegisters;
+import org.pds16.pds16asm.OperationsWithConstant;
+import org.pds16.pds16asm.OperationsWithTreeRegisters;
+import org.pds16.pds16asm.Org;
+import org.pds16.pds16asm.Orl;
+import org.pds16.pds16asm.PDS16ASM;
+import org.pds16.pds16asm.Pds16asmFactory;
+import org.pds16.pds16asm.Pds16asmPackage;
+import org.pds16.pds16asm.Rc;
+import org.pds16.pds16asm.Registers;
+import org.pds16.pds16asm.Rr;
+import org.pds16.pds16asm.Section;
+import org.pds16.pds16asm.Set;
+import org.pds16.pds16asm.Shl;
+import org.pds16.pds16asm.Shr;
+import org.pds16.pds16asm.Space;
+import org.pds16.pds16asm.StBasedIndexed;
+import org.pds16.pds16asm.StDirect;
+import org.pds16.pds16asm.StIndexed;
+import org.pds16.pds16asm.Statement;
+import org.pds16.pds16asm.Store;
+import org.pds16.pds16asm.Sub;
+import org.pds16.pds16asm.Word;
+import org.pds16.pds16asm.Xrl;
 
 /**
  * <!-- begin-user-doc -->
@@ -67,8 +118,19 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
     {
       case Pds16asmPackage.PDS16ASM: return createPDS16ASM();
       case Pds16asmPackage.STATEMENT: return createStatement();
+      case Pds16asmPackage.LABEL: return createLabel();
+      case Pds16asmPackage.DIRECTIVE: return createDirective();
+      case Pds16asmPackage.LABEL_DIRECTIVE: return createLabelDirective();
+      case Pds16asmPackage.ASCII: return createAscii();
+      case Pds16asmPackage.ASCIIZ: return createAsciiz();
+      case Pds16asmPackage.BYTE: return createByte();
+      case Pds16asmPackage.WORD: return createWord();
+      case Pds16asmPackage.SPACE: return createSpace();
+      case Pds16asmPackage.SET: return createSet();
+      case Pds16asmPackage.SECTION: return createSection();
+      case Pds16asmPackage.ORG: return createOrg();
+      case Pds16asmPackage.EQU: return createEqu();
       case Pds16asmPackage.INSTRUCTIONS: return createInstructions();
-      case Pds16asmPackage.COMMENT: return createComment();
       case Pds16asmPackage.LOAD: return createLoad();
       case Pds16asmPackage.STORE: return createStore();
       case Pds16asmPackage.ARITMETICA: return createAritmetica();
@@ -102,6 +164,8 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
       case Pds16asmPackage.OPERATIONS_WITH_CONSTANT: return createOperationsWithConstant();
       case Pds16asmPackage.OPERATION_SHIFT: return createOperationShift();
       case Pds16asmPackage.OPERATION_WITH_OFFSET: return createOperationWithOffset();
+      case Pds16asmPackage.EXPRESSION: return createExpression();
+      case Pds16asmPackage.LOW_OR_HIGHT: return createLowOrHight();
       case Pds16asmPackage.REGISTERS: return createRegisters();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -135,10 +199,10 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Instructions createInstructions()
+  public Label createLabel()
   {
-    InstructionsImpl instructions = new InstructionsImpl();
-    return instructions;
+    LabelImpl label = new LabelImpl();
+    return label;
   }
 
   /**
@@ -146,10 +210,131 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Comment createComment()
+  public Directive createDirective()
   {
-    CommentImpl comment = new CommentImpl();
-    return comment;
+    DirectiveImpl directive = new DirectiveImpl();
+    return directive;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LabelDirective createLabelDirective()
+  {
+    LabelDirectiveImpl labelDirective = new LabelDirectiveImpl();
+    return labelDirective;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Ascii createAscii()
+  {
+    AsciiImpl ascii = new AsciiImpl();
+    return ascii;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Asciiz createAsciiz()
+  {
+    AsciizImpl asciiz = new AsciizImpl();
+    return asciiz;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public org.pds16.pds16asm.Byte createByte()
+  {
+    ByteImpl byte_ = new ByteImpl();
+    return byte_;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Word createWord()
+  {
+    WordImpl word = new WordImpl();
+    return word;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Space createSpace()
+  {
+    SpaceImpl space = new SpaceImpl();
+    return space;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Set createSet()
+  {
+    SetImpl set = new SetImpl();
+    return set;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Section createSection()
+  {
+    SectionImpl section = new SectionImpl();
+    return section;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Org createOrg()
+  {
+    OrgImpl org = new OrgImpl();
+    return org;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Equ createEqu()
+  {
+    EquImpl equ = new EquImpl();
+    return equ;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Instructions createInstructions()
+  {
+    InstructionsImpl instructions = new InstructionsImpl();
+    return instructions;
   }
 
   /**
@@ -513,6 +698,28 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
   {
     OperationWithOffsetImpl operationWithOffset = new OperationWithOffsetImpl();
     return operationWithOffset;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Expression createExpression()
+  {
+    ExpressionImpl expression = new ExpressionImpl();
+    return expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LowOrHight createLowOrHight()
+  {
+    LowOrHightImpl lowOrHight = new LowOrHightImpl();
+    return lowOrHight;
   }
 
   /**

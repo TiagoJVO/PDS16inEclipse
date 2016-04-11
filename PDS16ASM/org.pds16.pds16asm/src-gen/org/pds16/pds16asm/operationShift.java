@@ -112,12 +112,12 @@ public interface OperationShift extends Shl, Shr
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Sin</em>' attribute.
-   * @see #setSin(int)
+   * @see #setSin(String)
    * @see org.pds16.pds16asm.Pds16asmPackage#getOperationShift_Sin()
    * @model
    * @generated
    */
-  int getSin();
+  String getSin();
 
   /**
    * Sets the value of the '{@link org.pds16.pds16asm.OperationShift#getSin <em>Sin</em>}' attribute.
@@ -127,6 +127,6 @@ public interface OperationShift extends Shl, Shr
    * @see #getSin()
    * @generated
    */
-  void setSin(int value);
+  void setSin(String value);
 
 } // OperationShift

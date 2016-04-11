@@ -42,6 +42,114 @@ public interface Pds16asmFactory extends EFactory
   Statement createStatement();
 
   /**
+   * Returns a new object of class '<em>Label</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Label</em>'.
+   * @generated
+   */
+  Label createLabel();
+
+  /**
+   * Returns a new object of class '<em>Directive</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Directive</em>'.
+   * @generated
+   */
+  Directive createDirective();
+
+  /**
+   * Returns a new object of class '<em>Label Directive</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Label Directive</em>'.
+   * @generated
+   */
+  LabelDirective createLabelDirective();
+
+  /**
+   * Returns a new object of class '<em>Ascii</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Ascii</em>'.
+   * @generated
+   */
+  Ascii createAscii();
+
+  /**
+   * Returns a new object of class '<em>Asciiz</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Asciiz</em>'.
+   * @generated
+   */
+  Asciiz createAsciiz();
+
+  /**
+   * Returns a new object of class '<em>Byte</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Byte</em>'.
+   * @generated
+   */
+  Byte createByte();
+
+  /**
+   * Returns a new object of class '<em>Word</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Word</em>'.
+   * @generated
+   */
+  Word createWord();
+
+  /**
+   * Returns a new object of class '<em>Space</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Space</em>'.
+   * @generated
+   */
+  Space createSpace();
+
+  /**
+   * Returns a new object of class '<em>Set</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Set</em>'.
+   * @generated
+   */
+  Set createSet();
+
+  /**
+   * Returns a new object of class '<em>Section</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Section</em>'.
+   * @generated
+   */
+  Section createSection();
+
+  /**
+   * Returns a new object of class '<em>Org</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Org</em>'.
+   * @generated
+   */
+  Org createOrg();
+
+  /**
+   * Returns a new object of class '<em>Equ</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Equ</em>'.
+   * @generated
+   */
+  Equ createEqu();
+
+  /**
    * Returns a new object of class '<em>Instructions</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -49,15 +157,6 @@ public interface Pds16asmFactory extends EFactory
    * @generated
    */
   Instructions createInstructions();
-
-  /**
-   * Returns a new object of class '<em>Comment</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Comment</em>'.
-   * @generated
-   */
-  Comment createComment();
 
   /**
    * Returns a new object of class '<em>Load</em>'.
@@ -355,6 +454,24 @@ public interface Pds16asmFactory extends EFactory
    * @generated
    */
   OperationWithOffset createOperationWithOffset();
+
+  /**
+   * Returns a new object of class '<em>Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Expression</em>'.
+   * @generated
+   */
+  Expression createExpression();
+
+  /**
+   * Returns a new object of class '<em>Low Or Hight</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Low Or Hight</em>'.
+   * @generated
+   */
+  LowOrHight createLowOrHight();
 
   /**
    * Returns a new object of class '<em>Registers</em>'.

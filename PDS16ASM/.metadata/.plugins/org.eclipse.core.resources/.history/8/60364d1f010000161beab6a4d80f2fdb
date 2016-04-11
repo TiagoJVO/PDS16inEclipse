@@ -1,0 +1,158 @@
+grammar org.pds16.Pds16asm hidden(WS, ML_COMMENT, SL_COMMENT)
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+generate pds16asm "http://www.pds16.org/Pds16asm"
+
+
+PDS16ASM:
+	instuctions+=Statement*;
+
+Statement:
+	Instructions | Label | Directive;
+
+Label:
+	labelName=ID ':' value=(LabelDirective | Instructions);
+
+Directive:
+	'.BSS' | '.DATA' | '.END' | '.TEXT' | Equ | Org | Section | Set;
+
+LabelDirective: Ascii | Asciiz | Byte | Word | Space;
+				
+
+Ascii:	'.ASCII' value=STRING (',' STRING)*;
+
+Asciiz:	'.ASCIIZ' value=STRING (',' STRING)*;
+
+Byte:	'.BYTE' value1=Number (',' Number)*;
+
+Word:	'.WORD' value1=Number (',' Number)*;
+
+Space:	'.SPACE' size=Number (',' byteValeu=Number)?;
+
+Set:    '.SET' value1=ID ',' value2=EXPRESSION;
+
+Section:'.SECTION' value=ID;
+
+Org:    '.ORG' EXPRESSION;
+
+Equ:    '.SET' ID ',' EXPRESSION;
+
+EXPRESSION: value1=
+	(Number | ID) 
+	//para a string temos que fazer um validator que verifique se é realmente uma expressão
+;
+
+Instructions:
+	Load | Store | Aritmetica | Logica | Jump;
+
+Load: LdImmediate | LdDirect | LdIndexed | LdBasedIndexed ;
+Store: StDirect | StIndexed | StBasedIndexed;
+Aritmetica: Add | Sub;
+Logica: Anl | Orl | Xrl | Not | Shl | Shr | Rr | Rc;
+Jump: JumpOp;
+
+/**************************************Load************************************************/
+LdImmediate: ('ldi' |'ldih')  Immediate;
+
+LdDirect: ('ld' | 'ldb') Direct;
+
+LdIndexed: ('ld' | 'ldb') Indexed;
+
+LdBasedIndexed: ('ld' | 'ldb') BasedIndexed;
+/******************************************************************************************/
+
+/****************************************Store ********************************************/
+StDirect: ('st' | 'stb') Direct ;
+
+StIndexed: ('st' | 'stb') Indexed;
+
+StBasedIndexed: ('st' | 'stb') BasedIndexed ;
+/******************************************************************************************/
+
+/******************************************* Aritmetica ***********************************/
+Add: ('add' | 'addf' | 'adc' | 'adcf') 
+		(OperationsWithConstant | OperationsWithTreeRegisters);
+
+Sub: (('sub' | 'subf' | 'sbb' | 'sbbf') 
+		(OperationsWithConstant | OperationsWithTreeRegisters))
+	 | 'subr' OperationsWithTreeRegisters ;
+/******************************************************************************************/
+
+/******************************************* Logica ***************************************/
+Anl: ('anl' | 'anlf') OperationsWithTreeRegisters;
+
+Orl: ('orl' | 'orlf') OperationsWithTreeRegisters;
+
+Xrl: ('xrl' | 'xrlf') OperationsWithTreeRegisters;
+
+Not: ('not' | 'notf') OperationWithTwoRegisters;
+
+Shl: 'shl' OperationShift;
+
+Shr: 'shr' OperationShift;
+
+Rr: ('rrl' | 'rrm') OperationsWithConstant;
+
+Rc: ('rcr' | 'rcl') OperationWithTwoRegisters;
+/******************************************************************************************/
+
+/************************************** Jump **********************************************/
+JumpOp: 
+	('jz' | 'je' | 'jnz' | 'jne' | 'jc' | 'jbl' | 'jnc' | 'jae' | 'jmp' | 'jmpl')
+		(OperationWithOffset | op=ID);
+/******************************************************************************************/
+
+/************************************Type Operations***************************************/
+Immediate: register=Registers ',' immediate8=IntOrHexOrString;
+
+Direct: register=Registers ',' (INT | HEX | ID);
+
+Indexed:
+	rd=Registers ',''[' rbx=Registers ',' idx3=IntOrHexOrString ']' ;
+	
+BasedIndexed: 
+	Registers ',' '[' rbx=Registers ',' rix=Registers ']';
+
+IntOrHexOrString: (('#' int=INT) | ('#' hex=HEX) | label=ID);
+
+OperationWithTwoRegisters: rd=Registers ',' rm=Registers;
+
+OperationsWithTreeRegisters: rd=Registers ',' rm=Registers ',' rn=Registers ;
+
+OperationsWithConstant: rd=Registers ',' rm=Registers ',' const4=IntOrHexOrString;
+
+OperationShift: rd=Registers ',' rm=Registers ',' const4=IntOrHexOrString ',' sin=BIT;
+//const4 é possivel usar label?????
+
+OperationWithOffset: rbx=Registers ',' offset8=IntOrHexOrString;
+/******************************************************************************************/
+
+/***********************************************Utils**************************************/
+Registers:
+		value= ('r0' | 'r1' | 'r2' | 'r3' | 'r4' | 'r5' | 'r6' | 'r7' | 'PSW');
+
+Number: (INT | HEX | OCT | BIN);
+
+terminal HEX : '0' ('x'|'X')(('0'..'9')|('a'..'f')|('A'..'F'))+;
+
+terminal OCT : '0' ('0'..'7')+; 
+
+terminal BIT : ('0' | '1');
+
+terminal BIN : 'b' BIT+;
+
+/******************************************************************************************/
+
+terminal ID  		: ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+terminal INT returns ecore::EInt: ('0'..'9')+;
+terminal STRING	: 
+			'"' ( '\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('\\'|'"') )* '"' |
+			"'" ( '\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('\\'|"'") )* "'"
+		;
+terminal ML_COMMENT	: '/*' -> '*/';
+terminal SL_COMMENT 	: ';' -> '\n';
+
+terminal WS			: (' '|'\t'|'\r'|'\n')+;
+
+terminal ANY_OTHER: .;

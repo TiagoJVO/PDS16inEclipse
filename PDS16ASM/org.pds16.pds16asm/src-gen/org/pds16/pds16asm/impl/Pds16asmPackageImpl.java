@@ -13,41 +13,53 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.pds16.pds16asm.Add;
 import org.pds16.pds16asm.Anl;
 import org.pds16.pds16asm.Aritmetica;
+import org.pds16.pds16asm.Ascii;
+import org.pds16.pds16asm.Asciiz;
 import org.pds16.pds16asm.BasedIndexed;
-import org.pds16.pds16asm.Comment;
 import org.pds16.pds16asm.Direct;
+import org.pds16.pds16asm.Directive;
+import org.pds16.pds16asm.Equ;
+import org.pds16.pds16asm.Expression;
 import org.pds16.pds16asm.Immediate;
 import org.pds16.pds16asm.Indexed;
 import org.pds16.pds16asm.Instructions;
 import org.pds16.pds16asm.IntOrHexOrString;
 import org.pds16.pds16asm.Jump;
 import org.pds16.pds16asm.JumpOp;
+import org.pds16.pds16asm.Label;
+import org.pds16.pds16asm.LabelDirective;
 import org.pds16.pds16asm.LdBasedIndexed;
 import org.pds16.pds16asm.LdDirect;
 import org.pds16.pds16asm.LdImmediate;
 import org.pds16.pds16asm.LdIndexed;
 import org.pds16.pds16asm.Load;
 import org.pds16.pds16asm.Logica;
+import org.pds16.pds16asm.LowOrHight;
 import org.pds16.pds16asm.Not;
 import org.pds16.pds16asm.OperationShift;
 import org.pds16.pds16asm.OperationWithOffset;
 import org.pds16.pds16asm.OperationWithTwoRegisters;
 import org.pds16.pds16asm.OperationsWithConstant;
 import org.pds16.pds16asm.OperationsWithTreeRegisters;
+import org.pds16.pds16asm.Org;
 import org.pds16.pds16asm.Orl;
 import org.pds16.pds16asm.Pds16asmFactory;
 import org.pds16.pds16asm.Pds16asmPackage;
 import org.pds16.pds16asm.Rc;
 import org.pds16.pds16asm.Registers;
 import org.pds16.pds16asm.Rr;
+import org.pds16.pds16asm.Section;
+import org.pds16.pds16asm.Set;
 import org.pds16.pds16asm.Shl;
 import org.pds16.pds16asm.Shr;
+import org.pds16.pds16asm.Space;
 import org.pds16.pds16asm.StBasedIndexed;
 import org.pds16.pds16asm.StDirect;
 import org.pds16.pds16asm.StIndexed;
 import org.pds16.pds16asm.Statement;
 import org.pds16.pds16asm.Store;
 import org.pds16.pds16asm.Sub;
+import org.pds16.pds16asm.Word;
 import org.pds16.pds16asm.Xrl;
 
 /**
@@ -77,14 +89,91 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass instructionsEClass = null;
+  private EClass labelEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass commentEClass = null;
+  private EClass directiveEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass labelDirectiveEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass asciiEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass asciizEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass byteEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass wordEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass spaceEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass setEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass sectionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass orgEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass equEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass instructionsEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -322,6 +411,20 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass expressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass lowOrHightEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass registersEClass = null;
 
   /**
@@ -422,29 +525,239 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getLabel()
+  {
+    return labelEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLabel_LabelName()
+  {
+    return (EAttribute)labelEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLabel_Value()
+  {
+    return (EReference)labelEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDirective()
+  {
+    return directiveEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLabelDirective()
+  {
+    return labelDirectiveEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAscii()
+  {
+    return asciiEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAscii_Value()
+  {
+    return (EAttribute)asciiEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAsciiz()
+  {
+    return asciizEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAsciiz_Value()
+  {
+    return (EAttribute)asciizEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getByte()
+  {
+    return byteEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getByte_Value1()
+  {
+    return (EAttribute)byteEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getWord()
+  {
+    return wordEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getWord_Value1()
+  {
+    return (EAttribute)wordEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSpace()
+  {
+    return spaceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSpace_Size()
+  {
+    return (EAttribute)spaceEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSpace_ByteValeu()
+  {
+    return (EAttribute)spaceEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSet()
+  {
+    return setEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSet_Value1()
+  {
+    return (EAttribute)setEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getSet_Value2()
+  {
+    return (EReference)setEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSection()
+  {
+    return sectionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSection_Value()
+  {
+    return (EAttribute)sectionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getOrg()
+  {
+    return orgEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getEqu()
+  {
+    return equEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getInstructions()
   {
     return instructionsEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getComment()
-  {
-    return commentEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getComment_Comment()
-  {
-    return (EAttribute)commentEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1022,6 +1335,36 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getExpression()
+  {
+    return expressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getExpression_Value1()
+  {
+    return (EAttribute)expressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLowOrHight()
+  {
+    return lowOrHightEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getRegisters()
   {
     return registersEClass;
@@ -1092,10 +1435,42 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
 
     statementEClass = createEClass(STATEMENT);
 
-    instructionsEClass = createEClass(INSTRUCTIONS);
+    labelEClass = createEClass(LABEL);
+    createEAttribute(labelEClass, LABEL__LABEL_NAME);
+    createEReference(labelEClass, LABEL__VALUE);
 
-    commentEClass = createEClass(COMMENT);
-    createEAttribute(commentEClass, COMMENT__COMMENT);
+    directiveEClass = createEClass(DIRECTIVE);
+
+    labelDirectiveEClass = createEClass(LABEL_DIRECTIVE);
+
+    asciiEClass = createEClass(ASCII);
+    createEAttribute(asciiEClass, ASCII__VALUE);
+
+    asciizEClass = createEClass(ASCIIZ);
+    createEAttribute(asciizEClass, ASCIIZ__VALUE);
+
+    byteEClass = createEClass(BYTE);
+    createEAttribute(byteEClass, BYTE__VALUE1);
+
+    wordEClass = createEClass(WORD);
+    createEAttribute(wordEClass, WORD__VALUE1);
+
+    spaceEClass = createEClass(SPACE);
+    createEAttribute(spaceEClass, SPACE__SIZE);
+    createEAttribute(spaceEClass, SPACE__BYTE_VALEU);
+
+    setEClass = createEClass(SET);
+    createEAttribute(setEClass, SET__VALUE1);
+    createEReference(setEClass, SET__VALUE2);
+
+    sectionEClass = createEClass(SECTION);
+    createEAttribute(sectionEClass, SECTION__VALUE);
+
+    orgEClass = createEClass(ORG);
+
+    equEClass = createEClass(EQU);
+
+    instructionsEClass = createEClass(INSTRUCTIONS);
 
     loadEClass = createEClass(LOAD);
 
@@ -1187,6 +1562,11 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
     createEReference(operationWithOffsetEClass, OPERATION_WITH_OFFSET__RBX);
     createEReference(operationWithOffsetEClass, OPERATION_WITH_OFFSET__OFFSET8);
 
+    expressionEClass = createEClass(EXPRESSION);
+    createEAttribute(expressionEClass, EXPRESSION__VALUE1);
+
+    lowOrHightEClass = createEClass(LOW_OR_HIGHT);
+
     registersEClass = createEClass(REGISTERS);
     createEReference(registersEClass, REGISTERS__RBX);
     createEReference(registersEClass, REGISTERS__RIX);
@@ -1222,8 +1602,19 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    labelEClass.getESuperTypes().add(this.getStatement());
+    directiveEClass.getESuperTypes().add(this.getStatement());
+    labelDirectiveEClass.getESuperTypes().add(this.getDirective());
+    asciiEClass.getESuperTypes().add(this.getLabelDirective());
+    asciizEClass.getESuperTypes().add(this.getLabelDirective());
+    byteEClass.getESuperTypes().add(this.getLabelDirective());
+    wordEClass.getESuperTypes().add(this.getLabelDirective());
+    spaceEClass.getESuperTypes().add(this.getLabelDirective());
+    setEClass.getESuperTypes().add(this.getDirective());
+    sectionEClass.getESuperTypes().add(this.getDirective());
+    orgEClass.getESuperTypes().add(this.getDirective());
+    equEClass.getESuperTypes().add(this.getDirective());
     instructionsEClass.getESuperTypes().add(this.getStatement());
-    commentEClass.getESuperTypes().add(this.getStatement());
     loadEClass.getESuperTypes().add(this.getInstructions());
     storeEClass.getESuperTypes().add(this.getInstructions());
     aritmeticaEClass.getESuperTypes().add(this.getInstructions());
@@ -1267,6 +1658,9 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
     operationShiftEClass.getESuperTypes().add(this.getShl());
     operationShiftEClass.getESuperTypes().add(this.getShr());
     operationWithOffsetEClass.getESuperTypes().add(this.getJumpOp());
+    expressionEClass.getESuperTypes().add(this.getOrg());
+    expressionEClass.getESuperTypes().add(this.getEqu());
+    expressionEClass.getESuperTypes().add(this.getLowOrHight());
     registersEClass.getESuperTypes().add(this.getBasedIndexed());
 
     // Initialize classes and features; add operations and parameters
@@ -1275,10 +1669,42 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
 
     initEClass(statementEClass, Statement.class, "Statement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(instructionsEClass, Instructions.class, "Instructions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(labelEClass, Label.class, "Label", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getLabel_LabelName(), ecorePackage.getEString(), "labelName", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getLabel_Value(), this.getStatement(), null, "value", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(commentEClass, Comment.class, "Comment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getComment_Comment(), ecorePackage.getEString(), "comment", null, 0, 1, Comment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(directiveEClass, Directive.class, "Directive", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(labelDirectiveEClass, LabelDirective.class, "LabelDirective", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(asciiEClass, Ascii.class, "Ascii", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAscii_Value(), ecorePackage.getEString(), "value", null, 0, 1, Ascii.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(asciizEClass, Asciiz.class, "Asciiz", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAsciiz_Value(), ecorePackage.getEString(), "value", null, 0, 1, Asciiz.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(byteEClass, org.pds16.pds16asm.Byte.class, "Byte", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getByte_Value1(), ecorePackage.getEString(), "value1", null, 0, 1, org.pds16.pds16asm.Byte.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(wordEClass, Word.class, "Word", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getWord_Value1(), ecorePackage.getEString(), "value1", null, 0, 1, Word.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(spaceEClass, Space.class, "Space", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSpace_Size(), ecorePackage.getEString(), "size", null, 0, 1, Space.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getSpace_ByteValeu(), ecorePackage.getEString(), "byteValeu", null, 0, 1, Space.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(setEClass, Set.class, "Set", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSet_Value1(), ecorePackage.getEString(), "value1", null, 0, 1, Set.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSet_Value2(), this.getExpression(), null, "value2", null, 0, 1, Set.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(sectionEClass, Section.class, "Section", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSection_Value(), ecorePackage.getEString(), "value", null, 0, 1, Section.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(orgEClass, Org.class, "Org", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(equEClass, Equ.class, "Equ", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(instructionsEClass, Instructions.class, "Instructions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(loadEClass, Load.class, "Load", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1329,7 +1755,7 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
 
     initEClass(immediateEClass, Immediate.class, "Immediate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getImmediate_Register(), this.getRegisters(), null, "register", null, 0, 1, Immediate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getImmediate_Immediate8(), this.getIntOrHexOrString(), null, "immediate8", null, 0, 1, Immediate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getImmediate_Immediate8(), ecorePackage.getEObject(), null, "immediate8", null, 0, 1, Immediate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(directEClass, Direct.class, "Direct", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getDirect_Register(), this.getRegisters(), null, "register", null, 0, 1, Direct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1364,11 +1790,16 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
     initEReference(getOperationShift_Rd(), this.getRegisters(), null, "rd", null, 0, 1, OperationShift.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getOperationShift_Rm(), this.getRegisters(), null, "rm", null, 0, 1, OperationShift.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getOperationShift_Const4(), this.getIntOrHexOrString(), null, "const4", null, 0, 1, OperationShift.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getOperationShift_Sin(), ecorePackage.getEInt(), "sin", null, 0, 1, OperationShift.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getOperationShift_Sin(), ecorePackage.getEString(), "sin", null, 0, 1, OperationShift.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(operationWithOffsetEClass, OperationWithOffset.class, "OperationWithOffset", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getOperationWithOffset_Rbx(), this.getRegisters(), null, "rbx", null, 0, 1, OperationWithOffset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getOperationWithOffset_Offset8(), this.getIntOrHexOrString(), null, "offset8", null, 0, 1, OperationWithOffset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getExpression_Value1(), ecorePackage.getEString(), "value1", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(lowOrHightEClass, LowOrHight.class, "LowOrHight", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(registersEClass, Registers.class, "Registers", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getRegisters_Rbx(), this.getRegisters(), null, "rbx", null, 0, 1, Registers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

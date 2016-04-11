@@ -7,12 +7,12 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.pds16.pds16asm.Immediate;
-import org.pds16.pds16asm.IntOrHexOrString;
 import org.pds16.pds16asm.Pds16asmPackage;
 import org.pds16.pds16asm.Registers;
 
@@ -50,7 +50,7 @@ public class ImmediateImpl extends LdImmediateImpl implements Immediate
    * @generated
    * @ordered
    */
-  protected IntOrHexOrString immediate8;
+  protected EObject immediate8;
 
   /**
    * <!-- begin-user-doc -->
@@ -126,7 +126,7 @@ public class ImmediateImpl extends LdImmediateImpl implements Immediate
    * <!-- end-user-doc -->
    * @generated
    */
-  public IntOrHexOrString getImmediate8()
+  public EObject getImmediate8()
   {
     return immediate8;
   }
@@ -136,9 +136,9 @@ public class ImmediateImpl extends LdImmediateImpl implements Immediate
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetImmediate8(IntOrHexOrString newImmediate8, NotificationChain msgs)
+  public NotificationChain basicSetImmediate8(EObject newImmediate8, NotificationChain msgs)
   {
-    IntOrHexOrString oldImmediate8 = immediate8;
+    EObject oldImmediate8 = immediate8;
     immediate8 = newImmediate8;
     if (eNotificationRequired())
     {
@@ -153,7 +153,7 @@ public class ImmediateImpl extends LdImmediateImpl implements Immediate
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setImmediate8(IntOrHexOrString newImmediate8)
+  public void setImmediate8(EObject newImmediate8)
   {
     if (newImmediate8 != immediate8)
     {
@@ -219,7 +219,7 @@ public class ImmediateImpl extends LdImmediateImpl implements Immediate
         setRegister((Registers)newValue);
         return;
       case Pds16asmPackage.IMMEDIATE__IMMEDIATE8:
-        setImmediate8((IntOrHexOrString)newValue);
+        setImmediate8((EObject)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -239,7 +239,7 @@ public class ImmediateImpl extends LdImmediateImpl implements Immediate
         setRegister((Registers)null);
         return;
       case Pds16asmPackage.IMMEDIATE__IMMEDIATE8:
-        setImmediate8((IntOrHexOrString)null);
+        setImmediate8((EObject)null);
         return;
     }
     super.eUnset(featureID);
