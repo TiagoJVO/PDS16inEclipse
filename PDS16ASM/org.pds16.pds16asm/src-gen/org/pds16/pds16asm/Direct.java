@@ -13,6 +13,7 @@ package org.pds16.pds16asm;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.pds16.pds16asm.Direct#getRegister <em>Register</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.Direct#getDirect7 <em>Direct7</em>}</li>
  * </ul>
  * </p>
  *
@@ -47,5 +48,31 @@ public interface Direct extends LdDirect, StDirect
    * @generated
    */
   void setRegister(Registers value);
+
+  /**
+   * Returns the value of the '<em><b>Direct7</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Direct7</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Direct7</em>' containment reference.
+   * @see #setDirect7(DirectOrLabel)
+   * @see org.pds16.pds16asm.Pds16asmPackage#getDirect_Direct7()
+   * @model containment="true"
+   * @generated
+   */
+  DirectOrLabel getDirect7();
+
+  /**
+   * Sets the value of the '{@link org.pds16.pds16asm.Direct#getDirect7 <em>Direct7</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Direct7</em>' containment reference.
+   * @see #getDirect7()
+   * @generated
+   */
+  void setDirect7(DirectOrLabel value);
 
 } // Direct

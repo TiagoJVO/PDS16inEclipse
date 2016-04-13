@@ -16,13 +16,15 @@ import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequence
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.pds16.pds16asm.Ascii;
 import org.pds16.pds16asm.Asciiz;
+import org.pds16.pds16asm.ConstOrLabel;
 import org.pds16.pds16asm.Direct;
+import org.pds16.pds16asm.DirectOrLabel;
 import org.pds16.pds16asm.Expression;
 import org.pds16.pds16asm.Immediate;
 import org.pds16.pds16asm.Indexed;
-import org.pds16.pds16asm.IntOrHexOrString;
 import org.pds16.pds16asm.JumpOp;
 import org.pds16.pds16asm.Label;
+import org.pds16.pds16asm.Nop;
 import org.pds16.pds16asm.OperationShift;
 import org.pds16.pds16asm.OperationWithOffset;
 import org.pds16.pds16asm.OperationWithTwoRegisters;
@@ -31,6 +33,7 @@ import org.pds16.pds16asm.OperationsWithTreeRegisters;
 import org.pds16.pds16asm.PDS16ASM;
 import org.pds16.pds16asm.Pds16asmPackage;
 import org.pds16.pds16asm.Registers;
+import org.pds16.pds16asm.Ret;
 import org.pds16.pds16asm.Section;
 import org.pds16.pds16asm.Space;
 import org.pds16.pds16asm.Word;
@@ -59,8 +62,14 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case Pds16asmPackage.BYTE:
 				sequence_Byte(context, (org.pds16.pds16asm.Byte) semanticObject); 
 				return; 
+			case Pds16asmPackage.CONST_OR_LABEL:
+				sequence_ConstOrLabel(context, (ConstOrLabel) semanticObject); 
+				return; 
 			case Pds16asmPackage.DIRECT:
 				sequence_Direct(context, (Direct) semanticObject); 
+				return; 
+			case Pds16asmPackage.DIRECT_OR_LABEL:
+				sequence_DirectOrLabel(context, (DirectOrLabel) semanticObject); 
 				return; 
 			case Pds16asmPackage.EXPRESSION:
 				sequence_Expression(context, (Expression) semanticObject); 
@@ -71,14 +80,14 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case Pds16asmPackage.INDEXED:
 				sequence_Indexed(context, (Indexed) semanticObject); 
 				return; 
-			case Pds16asmPackage.INT_OR_HEX_OR_STRING:
-				sequence_IntOrHexOrString(context, (IntOrHexOrString) semanticObject); 
-				return; 
 			case Pds16asmPackage.JUMP_OP:
 				sequence_JumpOp(context, (JumpOp) semanticObject); 
 				return; 
 			case Pds16asmPackage.LABEL:
 				sequence_Label(context, (Label) semanticObject); 
+				return; 
+			case Pds16asmPackage.NOP:
+				sequence_Nop(context, (Nop) semanticObject); 
 				return; 
 			case Pds16asmPackage.OPERATION_SHIFT:
 				sequence_OperationShift(context, (OperationShift) semanticObject); 
@@ -100,8 +109,11 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				return; 
 			case Pds16asmPackage.REGISTERS:
 				if (rule == grammarAccess.getStatementRule()
-						|| rule == grammarAccess.getInstructionsRule()
-						|| rule == grammarAccess.getLoadRule()
+						|| rule == grammarAccess.getInstructionsRule()) {
+					sequence_BasedIndexed_Registers(context, (Registers) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getLoadRule()
 						|| rule == grammarAccess.getStoreRule()
 						|| rule == grammarAccess.getLdBasedIndexedRule()
 						|| rule == grammarAccess.getStBasedIndexedRule()
@@ -109,11 +121,17 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 					sequence_BasedIndexed_Registers(context, (Registers) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getRegistersRule()) {
+				else if (rule == grammarAccess.getAritmeticaRule()
+						|| rule == grammarAccess.getAddRule()
+						|| rule == grammarAccess.getSubRule()
+						|| rule == grammarAccess.getRegistersRule()) {
 					sequence_Registers(context, (Registers) semanticObject); 
 					return; 
 				}
 				else break;
+			case Pds16asmPackage.RET:
+				sequence_Ret(context, (Ret) semanticObject); 
+				return; 
 			case Pds16asmPackage.SECTION:
 				sequence_Section(context, (Section) semanticObject); 
 				return; 
@@ -177,11 +195,6 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 * Contexts:
 	 *     Statement returns Registers
 	 *     Instructions returns Registers
-	 *     Load returns Registers
-	 *     Store returns Registers
-	 *     LdBasedIndexed returns Registers
-	 *     StBasedIndexed returns Registers
-	 *     BasedIndexed returns Registers
 	 *
 	 * Constraint:
 	 *     (
@@ -196,14 +209,43 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *             value='r7' | 
 	 *             value='PSW'
 	 *         ) 
-	 *         rbx=Registers 
-	 *         rix=Registers
+	 *         (rbx=Registers rix=Registers)?
 	 *     )
 	 */
 	protected void sequence_BasedIndexed_Registers(ISerializationContext context, Registers semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
+	
+	// This method is commented out because it has the same signature as another method in this class.
+	// This is probably a bug in Xtext's serializer, please report it here: 
+	// https://bugs.eclipse.org/bugs/enter_bug.cgi?product=TMF
+	//
+	// Contexts:
+	//     Load returns Registers
+	//     Store returns Registers
+	//     LdBasedIndexed returns Registers
+	//     StBasedIndexed returns Registers
+	//     BasedIndexed returns Registers
+	//
+	// Constraint:
+	//     (
+	//         (
+	//             value='r0' | 
+	//             value='r1' | 
+	//             value='r2' | 
+	//             value='r3' | 
+	//             value='r4' | 
+	//             value='r5' | 
+	//             value='r6' | 
+	//             value='r7' | 
+	//             value='PSW'
+	//         ) 
+	//         rbx=Registers 
+	//         rix=Registers
+	//     )
+	//
+	// protected void sequence_BasedIndexed_Registers(ISerializationContext context, Registers semanticObject) { }
 	
 	/**
 	 * Contexts:
@@ -228,6 +270,30 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     ConstOrLabel returns ConstOrLabel
+	 *
+	 * Constraint:
+	 *     (number=Number | label=ID)
+	 */
+	protected void sequence_ConstOrLabel(ISerializationContext context, ConstOrLabel semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     DirectOrLabel returns DirectOrLabel
+	 *
+	 * Constraint:
+	 *     (number=Number | label=ID)
+	 */
+	protected void sequence_DirectOrLabel(ISerializationContext context, DirectOrLabel semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Statement returns Direct
 	 *     Instructions returns Direct
 	 *     Load returns Direct
@@ -237,15 +303,18 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Direct returns Direct
 	 *
 	 * Constraint:
-	 *     register=Registers
+	 *     (register=Registers direct7=DirectOrLabel)
 	 */
 	protected void sequence_Direct(ISerializationContext context, Direct semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.DIRECT__REGISTER) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.DIRECT__REGISTER));
+			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.DIRECT__DIRECT7) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.DIRECT__DIRECT7));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getDirectAccess().getRegisterRegistersParserRuleCall_0_0(), semanticObject.getRegister());
+		feeder.accept(grammarAccess.getDirectAccess().getDirect7DirectOrLabelParserRuleCall_2_0(), semanticObject.getDirect7());
 		feeder.finish();
 	}
 	
@@ -260,7 +329,7 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     LowOrHight returns Expression
 	 *
 	 * Constraint:
-	 *     (value1=Number | value1=ID)
+	 *     (value1=Number | value1=ID)+
 	 */
 	protected void sequence_Expression(ISerializationContext context, Expression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -276,7 +345,7 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Immediate returns Immediate
 	 *
 	 * Constraint:
-	 *     (register=Registers (immediate8=IntOrHexOrString | immediate8=LowOrHight))
+	 *     (register=Registers (immediate8=ConstOrLabel | immediate8=LowOrHight))
 	 */
 	protected void sequence_Immediate(ISerializationContext context, Immediate semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -294,7 +363,7 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Indexed returns Indexed
 	 *
 	 * Constraint:
-	 *     (rd=Registers rbx=Registers idx3=IntOrHexOrString)
+	 *     (rd=Registers rbx=Registers idx3=ConstOrLabel)
 	 */
 	protected void sequence_Indexed(ISerializationContext context, Indexed semanticObject) {
 		if (errorAcceptor != null) {
@@ -308,20 +377,8 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getIndexedAccess().getRdRegistersParserRuleCall_0_0(), semanticObject.getRd());
 		feeder.accept(grammarAccess.getIndexedAccess().getRbxRegistersParserRuleCall_3_0(), semanticObject.getRbx());
-		feeder.accept(grammarAccess.getIndexedAccess().getIdx3IntOrHexOrStringParserRuleCall_5_0(), semanticObject.getIdx3());
+		feeder.accept(grammarAccess.getIndexedAccess().getIdx3ConstOrLabelParserRuleCall_5_0(), semanticObject.getIdx3());
 		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     IntOrHexOrString returns IntOrHexOrString
-	 *
-	 * Constraint:
-	 *     (int=INT | hex=HEX | label=ID)
-	 */
-	protected void sequence_IntOrHexOrString(ISerializationContext context, IntOrHexOrString semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -352,10 +409,30 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Label returns Label
 	 *
 	 * Constraint:
-	 *     (labelName=ID (value=LabelDirective | value=Instructions))
+	 *     (labelName=ID (value=Label | value=LabelDirective | value=Instructions))
 	 */
 	protected void sequence_Label(ISerializationContext context, Label semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Statement returns Nop
+	 *     Instructions returns Nop
+	 *     Nop returns Nop
+	 *
+	 * Constraint:
+	 *     instruction='nop'
+	 */
+	protected void sequence_Nop(ISerializationContext context, Nop semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.NOP__INSTRUCTION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.NOP__INSTRUCTION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getNopAccess().getInstructionNopKeyword_0(), semanticObject.getInstruction());
+		feeder.finish();
 	}
 	
 	
@@ -369,25 +446,10 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     OperationShift returns OperationShift
 	 *
 	 * Constraint:
-	 *     (rd=Registers rm=Registers const4=IntOrHexOrString sin=BIT)
+	 *     (rd=Registers rm=Registers const4=ConstOrLabel (sin='0' | sin='1'))
 	 */
 	protected void sequence_OperationShift(ISerializationContext context, OperationShift semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.OPERATION_SHIFT__RD) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.OPERATION_SHIFT__RD));
-			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.OPERATION_SHIFT__RM) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.OPERATION_SHIFT__RM));
-			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.OPERATION_SHIFT__CONST4) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.OPERATION_SHIFT__CONST4));
-			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.OPERATION_SHIFT__SIN) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.OPERATION_SHIFT__SIN));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getOperationShiftAccess().getRdRegistersParserRuleCall_0_0(), semanticObject.getRd());
-		feeder.accept(grammarAccess.getOperationShiftAccess().getRmRegistersParserRuleCall_2_0(), semanticObject.getRm());
-		feeder.accept(grammarAccess.getOperationShiftAccess().getConst4IntOrHexOrStringParserRuleCall_4_0(), semanticObject.getConst4());
-		feeder.accept(grammarAccess.getOperationShiftAccess().getSinBITTerminalRuleCall_6_0(), semanticObject.getSin());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -400,7 +462,7 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     OperationWithOffset returns OperationWithOffset
 	 *
 	 * Constraint:
-	 *     (rbx=Registers offset8=IntOrHexOrString)
+	 *     (rbx=Registers offset8=ConstOrLabel)
 	 */
 	protected void sequence_OperationWithOffset(ISerializationContext context, OperationWithOffset semanticObject) {
 		if (errorAcceptor != null) {
@@ -411,7 +473,7 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getOperationWithOffsetAccess().getRbxRegistersParserRuleCall_0_0(), semanticObject.getRbx());
-		feeder.accept(grammarAccess.getOperationWithOffsetAccess().getOffset8IntOrHexOrStringParserRuleCall_2_0(), semanticObject.getOffset8());
+		feeder.accept(grammarAccess.getOperationWithOffsetAccess().getOffset8ConstOrLabelParserRuleCall_2_0(), semanticObject.getOffset8());
 		feeder.finish();
 	}
 	
@@ -421,6 +483,7 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Statement returns OperationWithTwoRegisters
 	 *     Instructions returns OperationWithTwoRegisters
 	 *     Logica returns OperationWithTwoRegisters
+	 *     Orl returns OperationWithTwoRegisters
 	 *     Not returns OperationWithTwoRegisters
 	 *     Rc returns OperationWithTwoRegisters
 	 *     OperationWithTwoRegisters returns OperationWithTwoRegisters
@@ -430,10 +493,10 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 */
 	protected void sequence_OperationWithTwoRegisters(ISerializationContext context, OperationWithTwoRegisters semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.OPERATION_WITH_TWO_REGISTERS__RD) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.OPERATION_WITH_TWO_REGISTERS__RD));
-			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.OPERATION_WITH_TWO_REGISTERS__RM) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.OPERATION_WITH_TWO_REGISTERS__RM));
+			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.ORL__RD) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.ORL__RD));
+			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.ORL__RM) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.ORL__RM));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getOperationWithTwoRegistersAccess().getRdRegistersParserRuleCall_0_0(), semanticObject.getRd());
@@ -454,7 +517,7 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     OperationsWithConstant returns OperationsWithConstant
 	 *
 	 * Constraint:
-	 *     (rd=Registers rm=Registers const4=IntOrHexOrString)
+	 *     (rd=Registers rm=Registers const4=ConstOrLabel)
 	 */
 	protected void sequence_OperationsWithConstant(ISerializationContext context, OperationsWithConstant semanticObject) {
 		if (errorAcceptor != null) {
@@ -468,7 +531,7 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getOperationsWithConstantAccess().getRdRegistersParserRuleCall_0_0(), semanticObject.getRd());
 		feeder.accept(grammarAccess.getOperationsWithConstantAccess().getRmRegistersParserRuleCall_2_0(), semanticObject.getRm());
-		feeder.accept(grammarAccess.getOperationsWithConstantAccess().getConst4IntOrHexOrStringParserRuleCall_4_0(), semanticObject.getConst4());
+		feeder.accept(grammarAccess.getOperationsWithConstantAccess().getConst4ConstOrLabelParserRuleCall_4_0(), semanticObject.getConst4());
 		feeder.finish();
 	}
 	
@@ -491,10 +554,10 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 */
 	protected void sequence_OperationsWithTreeRegisters(ISerializationContext context, OperationsWithTreeRegisters semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.OPERATIONS_WITH_TREE_REGISTERS__RD) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.OPERATIONS_WITH_TREE_REGISTERS__RD));
-			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.OPERATIONS_WITH_TREE_REGISTERS__RM) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.OPERATIONS_WITH_TREE_REGISTERS__RM));
+			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.ORL__RD) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.ORL__RD));
+			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.ORL__RM) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.ORL__RM));
 			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.OPERATIONS_WITH_TREE_REGISTERS__RN) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.OPERATIONS_WITH_TREE_REGISTERS__RN));
 		}
@@ -520,6 +583,9 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     Aritmetica returns Registers
+	 *     Add returns Registers
+	 *     Sub returns Registers
 	 *     Registers returns Registers
 	 *
 	 * Constraint:
@@ -536,6 +602,20 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     )
 	 */
 	protected void sequence_Registers(ISerializationContext context, Registers semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Statement returns Ret
+	 *     Instructions returns Ret
+	 *     Ret returns Ret
+	 *
+	 * Constraint:
+	 *     (instruction='ret' | instruction='iret')
+	 */
+	protected void sequence_Ret(ISerializationContext context, Ret semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

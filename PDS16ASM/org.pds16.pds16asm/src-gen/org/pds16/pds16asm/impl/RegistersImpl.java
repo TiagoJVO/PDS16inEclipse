@@ -29,7 +29,7 @@ import org.pds16.pds16asm.Registers;
  *
  * @generated
  */
-public class RegistersImpl extends BasedIndexedImpl implements Registers
+public class RegistersImpl extends AddImpl implements Registers
 {
   /**
    * The cached value of the '{@link #getRbx() <em>Rbx</em>}' containment reference.

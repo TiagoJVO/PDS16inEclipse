@@ -58,12 +58,12 @@ public interface OperationWithOffset extends JumpOp
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Offset8</em>' containment reference.
-   * @see #setOffset8(IntOrHexOrString)
+   * @see #setOffset8(ConstOrLabel)
    * @see org.pds16.pds16asm.Pds16asmPackage#getOperationWithOffset_Offset8()
    * @model containment="true"
    * @generated
    */
-  IntOrHexOrString getOffset8();
+  ConstOrLabel getOffset8();
 
   /**
    * Sets the value of the '{@link org.pds16.pds16asm.OperationWithOffset#getOffset8 <em>Offset8</em>}' containment reference.
@@ -73,6 +73,6 @@ public interface OperationWithOffset extends JumpOp
    * @see #getOffset8()
    * @generated
    */
-  void setOffset8(IntOrHexOrString value);
+  void setOffset8(ConstOrLabel value);
 
 } // OperationWithOffset

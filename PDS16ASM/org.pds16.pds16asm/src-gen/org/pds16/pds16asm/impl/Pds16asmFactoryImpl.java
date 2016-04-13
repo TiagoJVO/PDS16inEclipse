@@ -17,14 +17,15 @@ import org.pds16.pds16asm.Aritmetica;
 import org.pds16.pds16asm.Ascii;
 import org.pds16.pds16asm.Asciiz;
 import org.pds16.pds16asm.BasedIndexed;
+import org.pds16.pds16asm.ConstOrLabel;
 import org.pds16.pds16asm.Direct;
+import org.pds16.pds16asm.DirectOrLabel;
 import org.pds16.pds16asm.Directive;
 import org.pds16.pds16asm.Equ;
 import org.pds16.pds16asm.Expression;
 import org.pds16.pds16asm.Immediate;
 import org.pds16.pds16asm.Indexed;
 import org.pds16.pds16asm.Instructions;
-import org.pds16.pds16asm.IntOrHexOrString;
 import org.pds16.pds16asm.Jump;
 import org.pds16.pds16asm.JumpOp;
 import org.pds16.pds16asm.Label;
@@ -36,6 +37,7 @@ import org.pds16.pds16asm.LdIndexed;
 import org.pds16.pds16asm.Load;
 import org.pds16.pds16asm.Logica;
 import org.pds16.pds16asm.LowOrHight;
+import org.pds16.pds16asm.Nop;
 import org.pds16.pds16asm.Not;
 import org.pds16.pds16asm.OperationShift;
 import org.pds16.pds16asm.OperationWithOffset;
@@ -49,6 +51,7 @@ import org.pds16.pds16asm.Pds16asmFactory;
 import org.pds16.pds16asm.Pds16asmPackage;
 import org.pds16.pds16asm.Rc;
 import org.pds16.pds16asm.Registers;
+import org.pds16.pds16asm.Ret;
 import org.pds16.pds16asm.Rr;
 import org.pds16.pds16asm.Section;
 import org.pds16.pds16asm.Set;
@@ -154,11 +157,14 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
       case Pds16asmPackage.RR: return createRr();
       case Pds16asmPackage.RC: return createRc();
       case Pds16asmPackage.JUMP_OP: return createJumpOp();
+      case Pds16asmPackage.NOP: return createNop();
+      case Pds16asmPackage.RET: return createRet();
       case Pds16asmPackage.IMMEDIATE: return createImmediate();
       case Pds16asmPackage.DIRECT: return createDirect();
       case Pds16asmPackage.INDEXED: return createIndexed();
       case Pds16asmPackage.BASED_INDEXED: return createBasedIndexed();
-      case Pds16asmPackage.INT_OR_HEX_OR_STRING: return createIntOrHexOrString();
+      case Pds16asmPackage.DIRECT_OR_LABEL: return createDirectOrLabel();
+      case Pds16asmPackage.CONST_OR_LABEL: return createConstOrLabel();
       case Pds16asmPackage.OPERATION_WITH_TWO_REGISTERS: return createOperationWithTwoRegisters();
       case Pds16asmPackage.OPERATIONS_WITH_TREE_REGISTERS: return createOperationsWithTreeRegisters();
       case Pds16asmPackage.OPERATIONS_WITH_CONSTANT: return createOperationsWithConstant();
@@ -595,6 +601,28 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public Nop createNop()
+  {
+    NopImpl nop = new NopImpl();
+    return nop;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Ret createRet()
+  {
+    RetImpl ret = new RetImpl();
+    return ret;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Immediate createImmediate()
   {
     ImmediateImpl immediate = new ImmediateImpl();
@@ -639,10 +667,21 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public IntOrHexOrString createIntOrHexOrString()
+  public DirectOrLabel createDirectOrLabel()
   {
-    IntOrHexOrStringImpl intOrHexOrString = new IntOrHexOrStringImpl();
-    return intOrHexOrString;
+    DirectOrLabelImpl directOrLabel = new DirectOrLabelImpl();
+    return directOrLabel;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ConstOrLabel createConstOrLabel()
+  {
+    ConstOrLabelImpl constOrLabel = new ConstOrLabelImpl();
+    return constOrLabel;
   }
 
   /**

@@ -86,12 +86,12 @@ public interface OperationShift extends Shl, Shr
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Const4</em>' containment reference.
-   * @see #setConst4(IntOrHexOrString)
+   * @see #setConst4(ConstOrLabel)
    * @see org.pds16.pds16asm.Pds16asmPackage#getOperationShift_Const4()
    * @model containment="true"
    * @generated
    */
-  IntOrHexOrString getConst4();
+  ConstOrLabel getConst4();
 
   /**
    * Sets the value of the '{@link org.pds16.pds16asm.OperationShift#getConst4 <em>Const4</em>}' containment reference.
@@ -101,7 +101,7 @@ public interface OperationShift extends Shl, Shr
    * @see #getConst4()
    * @generated
    */
-  void setConst4(IntOrHexOrString value);
+  void setConst4(ConstOrLabel value);
 
   /**
    * Returns the value of the '<em><b>Sin</b></em>' attribute.

@@ -16,14 +16,15 @@ import org.pds16.pds16asm.Aritmetica;
 import org.pds16.pds16asm.Ascii;
 import org.pds16.pds16asm.Asciiz;
 import org.pds16.pds16asm.BasedIndexed;
+import org.pds16.pds16asm.ConstOrLabel;
 import org.pds16.pds16asm.Direct;
+import org.pds16.pds16asm.DirectOrLabel;
 import org.pds16.pds16asm.Directive;
 import org.pds16.pds16asm.Equ;
 import org.pds16.pds16asm.Expression;
 import org.pds16.pds16asm.Immediate;
 import org.pds16.pds16asm.Indexed;
 import org.pds16.pds16asm.Instructions;
-import org.pds16.pds16asm.IntOrHexOrString;
 import org.pds16.pds16asm.Jump;
 import org.pds16.pds16asm.JumpOp;
 import org.pds16.pds16asm.Label;
@@ -35,6 +36,7 @@ import org.pds16.pds16asm.LdIndexed;
 import org.pds16.pds16asm.Load;
 import org.pds16.pds16asm.Logica;
 import org.pds16.pds16asm.LowOrHight;
+import org.pds16.pds16asm.Nop;
 import org.pds16.pds16asm.Not;
 import org.pds16.pds16asm.OperationShift;
 import org.pds16.pds16asm.OperationWithOffset;
@@ -47,6 +49,7 @@ import org.pds16.pds16asm.PDS16ASM;
 import org.pds16.pds16asm.Pds16asmPackage;
 import org.pds16.pds16asm.Rc;
 import org.pds16.pds16asm.Registers;
+import org.pds16.pds16asm.Ret;
 import org.pds16.pds16asm.Rr;
 import org.pds16.pds16asm.Section;
 import org.pds16.pds16asm.Set;
@@ -316,6 +319,16 @@ public class Pds16asmAdapterFactory extends AdapterFactoryImpl
         return createJumpOpAdapter();
       }
       @Override
+      public Adapter caseNop(Nop object)
+      {
+        return createNopAdapter();
+      }
+      @Override
+      public Adapter caseRet(Ret object)
+      {
+        return createRetAdapter();
+      }
+      @Override
       public Adapter caseImmediate(Immediate object)
       {
         return createImmediateAdapter();
@@ -336,9 +349,14 @@ public class Pds16asmAdapterFactory extends AdapterFactoryImpl
         return createBasedIndexedAdapter();
       }
       @Override
-      public Adapter caseIntOrHexOrString(IntOrHexOrString object)
+      public Adapter caseDirectOrLabel(DirectOrLabel object)
       {
-        return createIntOrHexOrStringAdapter();
+        return createDirectOrLabelAdapter();
+      }
+      @Override
+      public Adapter caseConstOrLabel(ConstOrLabel object)
+      {
+        return createConstOrLabelAdapter();
       }
       @Override
       public Adapter caseOperationWithTwoRegisters(OperationWithTwoRegisters object)
@@ -973,6 +991,36 @@ public class Pds16asmAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.Nop <em>Nop</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.pds16.pds16asm.Nop
+   * @generated
+   */
+  public Adapter createNopAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.Ret <em>Ret</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.pds16.pds16asm.Ret
+   * @generated
+   */
+  public Adapter createRetAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.Immediate <em>Immediate</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -1033,16 +1081,31 @@ public class Pds16asmAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.IntOrHexOrString <em>Int Or Hex Or String</em>}'.
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.DirectOrLabel <em>Direct Or Label</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.pds16.pds16asm.IntOrHexOrString
+   * @see org.pds16.pds16asm.DirectOrLabel
    * @generated
    */
-  public Adapter createIntOrHexOrStringAdapter()
+  public Adapter createDirectOrLabelAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.ConstOrLabel <em>Const Or Label</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.pds16.pds16asm.ConstOrLabel
+   * @generated
+   */
+  public Adapter createConstOrLabelAdapter()
   {
     return null;
   }

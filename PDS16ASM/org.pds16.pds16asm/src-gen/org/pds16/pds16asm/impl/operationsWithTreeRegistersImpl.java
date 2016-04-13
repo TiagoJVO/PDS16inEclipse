@@ -11,9 +11,14 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.pds16.pds16asm.Anl;
+import org.pds16.pds16asm.Logica;
 import org.pds16.pds16asm.OperationsWithTreeRegisters;
+import org.pds16.pds16asm.Orl;
 import org.pds16.pds16asm.Pds16asmPackage;
 import org.pds16.pds16asm.Registers;
+import org.pds16.pds16asm.Sub;
+import org.pds16.pds16asm.Xrl;
 
 /**
  * <!-- begin-user-doc -->
@@ -331,6 +336,102 @@ public class OperationsWithTreeRegistersImpl extends AddImpl implements Operatio
         return rn != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass)
+  {
+    if (baseClass == Sub.class)
+    {
+      switch (derivedFeatureID)
+      {
+        default: return -1;
+      }
+    }
+    if (baseClass == Logica.class)
+    {
+      switch (derivedFeatureID)
+      {
+        default: return -1;
+      }
+    }
+    if (baseClass == Anl.class)
+    {
+      switch (derivedFeatureID)
+      {
+        default: return -1;
+      }
+    }
+    if (baseClass == Orl.class)
+    {
+      switch (derivedFeatureID)
+      {
+        case Pds16asmPackage.OPERATIONS_WITH_TREE_REGISTERS__RD: return Pds16asmPackage.ORL__RD;
+        case Pds16asmPackage.OPERATIONS_WITH_TREE_REGISTERS__RM: return Pds16asmPackage.ORL__RM;
+        default: return -1;
+      }
+    }
+    if (baseClass == Xrl.class)
+    {
+      switch (derivedFeatureID)
+      {
+        default: return -1;
+      }
+    }
+    return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass)
+  {
+    if (baseClass == Sub.class)
+    {
+      switch (baseFeatureID)
+      {
+        default: return -1;
+      }
+    }
+    if (baseClass == Logica.class)
+    {
+      switch (baseFeatureID)
+      {
+        default: return -1;
+      }
+    }
+    if (baseClass == Anl.class)
+    {
+      switch (baseFeatureID)
+      {
+        default: return -1;
+      }
+    }
+    if (baseClass == Orl.class)
+    {
+      switch (baseFeatureID)
+      {
+        case Pds16asmPackage.ORL__RD: return Pds16asmPackage.OPERATIONS_WITH_TREE_REGISTERS__RD;
+        case Pds16asmPackage.ORL__RM: return Pds16asmPackage.OPERATIONS_WITH_TREE_REGISTERS__RM;
+        default: return -1;
+      }
+    }
+    if (baseClass == Xrl.class)
+    {
+      switch (baseFeatureID)
+      {
+        default: return -1;
+      }
+    }
+    return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
   }
 
 } //OperationsWithTreeRegistersImpl

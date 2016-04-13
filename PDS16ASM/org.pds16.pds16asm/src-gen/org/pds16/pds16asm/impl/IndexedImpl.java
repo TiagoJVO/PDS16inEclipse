@@ -11,8 +11,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.pds16.pds16asm.ConstOrLabel;
 import org.pds16.pds16asm.Indexed;
-import org.pds16.pds16asm.IntOrHexOrString;
 import org.pds16.pds16asm.Pds16asmPackage;
 import org.pds16.pds16asm.Registers;
 
@@ -61,7 +61,7 @@ public class IndexedImpl extends LdIndexedImpl implements Indexed
    * @generated
    * @ordered
    */
-  protected IntOrHexOrString idx3;
+  protected ConstOrLabel idx3;
 
   /**
    * <!-- begin-user-doc -->
@@ -185,7 +185,7 @@ public class IndexedImpl extends LdIndexedImpl implements Indexed
    * <!-- end-user-doc -->
    * @generated
    */
-  public IntOrHexOrString getIdx3()
+  public ConstOrLabel getIdx3()
   {
     return idx3;
   }
@@ -195,9 +195,9 @@ public class IndexedImpl extends LdIndexedImpl implements Indexed
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetIdx3(IntOrHexOrString newIdx3, NotificationChain msgs)
+  public NotificationChain basicSetIdx3(ConstOrLabel newIdx3, NotificationChain msgs)
   {
-    IntOrHexOrString oldIdx3 = idx3;
+    ConstOrLabel oldIdx3 = idx3;
     idx3 = newIdx3;
     if (eNotificationRequired())
     {
@@ -212,7 +212,7 @@ public class IndexedImpl extends LdIndexedImpl implements Indexed
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setIdx3(IntOrHexOrString newIdx3)
+  public void setIdx3(ConstOrLabel newIdx3)
   {
     if (newIdx3 != idx3)
     {
@@ -285,7 +285,7 @@ public class IndexedImpl extends LdIndexedImpl implements Indexed
         setRbx((Registers)newValue);
         return;
       case Pds16asmPackage.INDEXED__IDX3:
-        setIdx3((IntOrHexOrString)newValue);
+        setIdx3((ConstOrLabel)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -308,7 +308,7 @@ public class IndexedImpl extends LdIndexedImpl implements Indexed
         setRbx((Registers)null);
         return;
       case Pds16asmPackage.INDEXED__IDX3:
-        setIdx3((IntOrHexOrString)null);
+        setIdx3((ConstOrLabel)null);
         return;
     }
     super.eUnset(featureID);

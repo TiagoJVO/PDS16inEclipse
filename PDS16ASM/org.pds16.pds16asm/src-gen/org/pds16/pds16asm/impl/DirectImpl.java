@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.pds16.pds16asm.Direct;
+import org.pds16.pds16asm.DirectOrLabel;
 import org.pds16.pds16asm.Pds16asmPackage;
 import org.pds16.pds16asm.Registers;
 
@@ -23,6 +24,7 @@ import org.pds16.pds16asm.Registers;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.pds16.pds16asm.impl.DirectImpl#getRegister <em>Register</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.impl.DirectImpl#getDirect7 <em>Direct7</em>}</li>
  * </ul>
  * </p>
  *
@@ -39,6 +41,16 @@ public class DirectImpl extends LdDirectImpl implements Direct
    * @ordered
    */
   protected Registers register;
+
+  /**
+   * The cached value of the '{@link #getDirect7() <em>Direct7</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDirect7()
+   * @generated
+   * @ordered
+   */
+  protected DirectOrLabel direct7;
 
   /**
    * <!-- begin-user-doc -->
@@ -114,6 +126,54 @@ public class DirectImpl extends LdDirectImpl implements Direct
    * <!-- end-user-doc -->
    * @generated
    */
+  public DirectOrLabel getDirect7()
+  {
+    return direct7;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetDirect7(DirectOrLabel newDirect7, NotificationChain msgs)
+  {
+    DirectOrLabel oldDirect7 = direct7;
+    direct7 = newDirect7;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Pds16asmPackage.DIRECT__DIRECT7, oldDirect7, newDirect7);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setDirect7(DirectOrLabel newDirect7)
+  {
+    if (newDirect7 != direct7)
+    {
+      NotificationChain msgs = null;
+      if (direct7 != null)
+        msgs = ((InternalEObject)direct7).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.DIRECT__DIRECT7, null, msgs);
+      if (newDirect7 != null)
+        msgs = ((InternalEObject)newDirect7).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.DIRECT__DIRECT7, null, msgs);
+      msgs = basicSetDirect7(newDirect7, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.DIRECT__DIRECT7, newDirect7, newDirect7));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -121,6 +181,8 @@ public class DirectImpl extends LdDirectImpl implements Direct
     {
       case Pds16asmPackage.DIRECT__REGISTER:
         return basicSetRegister(null, msgs);
+      case Pds16asmPackage.DIRECT__DIRECT7:
+        return basicSetDirect7(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -137,6 +199,8 @@ public class DirectImpl extends LdDirectImpl implements Direct
     {
       case Pds16asmPackage.DIRECT__REGISTER:
         return getRegister();
+      case Pds16asmPackage.DIRECT__DIRECT7:
+        return getDirect7();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -153,6 +217,9 @@ public class DirectImpl extends LdDirectImpl implements Direct
     {
       case Pds16asmPackage.DIRECT__REGISTER:
         setRegister((Registers)newValue);
+        return;
+      case Pds16asmPackage.DIRECT__DIRECT7:
+        setDirect7((DirectOrLabel)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -171,6 +238,9 @@ public class DirectImpl extends LdDirectImpl implements Direct
       case Pds16asmPackage.DIRECT__REGISTER:
         setRegister((Registers)null);
         return;
+      case Pds16asmPackage.DIRECT__DIRECT7:
+        setDirect7((DirectOrLabel)null);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -187,6 +257,8 @@ public class DirectImpl extends LdDirectImpl implements Direct
     {
       case Pds16asmPackage.DIRECT__REGISTER:
         return register != null;
+      case Pds16asmPackage.DIRECT__DIRECT7:
+        return direct7 != null;
     }
     return super.eIsSet(featureID);
   }

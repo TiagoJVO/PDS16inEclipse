@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.pds16.pds16asm.IntOrHexOrString;
+import org.pds16.pds16asm.ConstOrLabel;
 import org.pds16.pds16asm.OperationsWithConstant;
 import org.pds16.pds16asm.Pds16asmPackage;
 import org.pds16.pds16asm.Registers;
@@ -61,7 +61,7 @@ public class OperationsWithConstantImpl extends AddImpl implements OperationsWit
    * @generated
    * @ordered
    */
-  protected IntOrHexOrString const4;
+  protected ConstOrLabel const4;
 
   /**
    * <!-- begin-user-doc -->
@@ -185,7 +185,7 @@ public class OperationsWithConstantImpl extends AddImpl implements OperationsWit
    * <!-- end-user-doc -->
    * @generated
    */
-  public IntOrHexOrString getConst4()
+  public ConstOrLabel getConst4()
   {
     return const4;
   }
@@ -195,9 +195,9 @@ public class OperationsWithConstantImpl extends AddImpl implements OperationsWit
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetConst4(IntOrHexOrString newConst4, NotificationChain msgs)
+  public NotificationChain basicSetConst4(ConstOrLabel newConst4, NotificationChain msgs)
   {
-    IntOrHexOrString oldConst4 = const4;
+    ConstOrLabel oldConst4 = const4;
     const4 = newConst4;
     if (eNotificationRequired())
     {
@@ -212,7 +212,7 @@ public class OperationsWithConstantImpl extends AddImpl implements OperationsWit
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setConst4(IntOrHexOrString newConst4)
+  public void setConst4(ConstOrLabel newConst4)
   {
     if (newConst4 != const4)
     {
@@ -285,7 +285,7 @@ public class OperationsWithConstantImpl extends AddImpl implements OperationsWit
         setRm((Registers)newValue);
         return;
       case Pds16asmPackage.OPERATIONS_WITH_CONSTANT__CONST4:
-        setConst4((IntOrHexOrString)newValue);
+        setConst4((ConstOrLabel)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -308,7 +308,7 @@ public class OperationsWithConstantImpl extends AddImpl implements OperationsWit
         setRm((Registers)null);
         return;
       case Pds16asmPackage.OPERATIONS_WITH_CONSTANT__CONST4:
-        setConst4((IntOrHexOrString)null);
+        setConst4((ConstOrLabel)null);
         return;
     }
     super.eUnset(featureID);

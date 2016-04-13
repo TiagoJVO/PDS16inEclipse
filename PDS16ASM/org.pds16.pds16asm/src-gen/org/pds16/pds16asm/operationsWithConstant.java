@@ -85,12 +85,12 @@ public interface OperationsWithConstant extends Add, Sub, Rr
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Const4</em>' containment reference.
-   * @see #setConst4(IntOrHexOrString)
+   * @see #setConst4(ConstOrLabel)
    * @see org.pds16.pds16asm.Pds16asmPackage#getOperationsWithConstant_Const4()
    * @model containment="true"
    * @generated
    */
-  IntOrHexOrString getConst4();
+  ConstOrLabel getConst4();
 
   /**
    * Sets the value of the '{@link org.pds16.pds16asm.OperationsWithConstant#getConst4 <em>Const4</em>}' containment reference.
@@ -100,6 +100,6 @@ public interface OperationsWithConstant extends Add, Sub, Rr
    * @see #getConst4()
    * @generated
    */
-  void setConst4(IntOrHexOrString value);
+  void setConst4(ConstOrLabel value);
 
 } // OperationsWithConstant

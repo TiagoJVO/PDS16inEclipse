@@ -746,13 +746,31 @@ public interface Pds16asmPackage extends EPackage
   int ORL = 30;
 
   /**
+   * The feature id for the '<em><b>Rd</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ORL__RD = LOGICA_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Rm</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ORL__RM = LOGICA_FEATURE_COUNT + 1;
+
+  /**
    * The number of structural features of the '<em>Orl</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ORL_FEATURE_COUNT = LOGICA_FEATURE_COUNT + 0;
+  int ORL_FEATURE_COUNT = LOGICA_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.pds16.pds16asm.impl.XrlImpl <em>Xrl</em>}' class.
@@ -897,6 +915,62 @@ public interface Pds16asmPackage extends EPackage
   int JUMP_OP_FEATURE_COUNT = JUMP_FEATURE_COUNT + 1;
 
   /**
+   * The meta object id for the '{@link org.pds16.pds16asm.impl.NopImpl <em>Nop</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.pds16.pds16asm.impl.NopImpl
+   * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getNop()
+   * @generated
+   */
+  int NOP = 38;
+
+  /**
+   * The feature id for the '<em><b>Instruction</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NOP__INSTRUCTION = INSTRUCTIONS_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Nop</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NOP_FEATURE_COUNT = INSTRUCTIONS_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.pds16.pds16asm.impl.RetImpl <em>Ret</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.pds16.pds16asm.impl.RetImpl
+   * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getRet()
+   * @generated
+   */
+  int RET = 39;
+
+  /**
+   * The feature id for the '<em><b>Instruction</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RET__INSTRUCTION = INSTRUCTIONS_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Ret</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RET_FEATURE_COUNT = INSTRUCTIONS_FEATURE_COUNT + 1;
+
+  /**
    * The meta object id for the '{@link org.pds16.pds16asm.impl.ImmediateImpl <em>Immediate</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -904,7 +978,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getImmediate()
    * @generated
    */
-  int IMMEDIATE = 38;
+  int IMMEDIATE = 40;
 
   /**
    * The feature id for the '<em><b>Register</b></em>' containment reference.
@@ -941,7 +1015,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getDirect()
    * @generated
    */
-  int DIRECT = 39;
+  int DIRECT = 41;
 
   /**
    * The feature id for the '<em><b>Register</b></em>' containment reference.
@@ -953,13 +1027,22 @@ public interface Pds16asmPackage extends EPackage
   int DIRECT__REGISTER = LD_DIRECT_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>Direct7</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIRECT__DIRECT7 = LD_DIRECT_FEATURE_COUNT + 1;
+
+  /**
    * The number of structural features of the '<em>Direct</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DIRECT_FEATURE_COUNT = LD_DIRECT_FEATURE_COUNT + 1;
+  int DIRECT_FEATURE_COUNT = LD_DIRECT_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.pds16.pds16asm.impl.IndexedImpl <em>Indexed</em>}' class.
@@ -969,7 +1052,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getIndexed()
    * @generated
    */
-  int INDEXED = 40;
+  int INDEXED = 42;
 
   /**
    * The feature id for the '<em><b>Rd</b></em>' containment reference.
@@ -1015,7 +1098,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getBasedIndexed()
    * @generated
    */
-  int BASED_INDEXED = 41;
+  int BASED_INDEXED = 43;
 
   /**
    * The number of structural features of the '<em>Based Indexed</em>' class.
@@ -1027,32 +1110,23 @@ public interface Pds16asmPackage extends EPackage
   int BASED_INDEXED_FEATURE_COUNT = LD_BASED_INDEXED_FEATURE_COUNT + 0;
 
   /**
-   * The meta object id for the '{@link org.pds16.pds16asm.impl.IntOrHexOrStringImpl <em>Int Or Hex Or String</em>}' class.
+   * The meta object id for the '{@link org.pds16.pds16asm.impl.DirectOrLabelImpl <em>Direct Or Label</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.pds16.pds16asm.impl.IntOrHexOrStringImpl
-   * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getIntOrHexOrString()
+   * @see org.pds16.pds16asm.impl.DirectOrLabelImpl
+   * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getDirectOrLabel()
    * @generated
    */
-  int INT_OR_HEX_OR_STRING = 42;
+  int DIRECT_OR_LABEL = 44;
 
   /**
-   * The feature id for the '<em><b>Int</b></em>' attribute.
+   * The feature id for the '<em><b>Number</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INT_OR_HEX_OR_STRING__INT = 0;
-
-  /**
-   * The feature id for the '<em><b>Hex</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INT_OR_HEX_OR_STRING__HEX = 1;
+  int DIRECT_OR_LABEL__NUMBER = 0;
 
   /**
    * The feature id for the '<em><b>Label</b></em>' attribute.
@@ -1061,16 +1135,53 @@ public interface Pds16asmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INT_OR_HEX_OR_STRING__LABEL = 2;
+  int DIRECT_OR_LABEL__LABEL = 1;
 
   /**
-   * The number of structural features of the '<em>Int Or Hex Or String</em>' class.
+   * The number of structural features of the '<em>Direct Or Label</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INT_OR_HEX_OR_STRING_FEATURE_COUNT = 3;
+  int DIRECT_OR_LABEL_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.pds16.pds16asm.impl.ConstOrLabelImpl <em>Const Or Label</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.pds16.pds16asm.impl.ConstOrLabelImpl
+   * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getConstOrLabel()
+   * @generated
+   */
+  int CONST_OR_LABEL = 45;
+
+  /**
+   * The feature id for the '<em><b>Number</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONST_OR_LABEL__NUMBER = 0;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONST_OR_LABEL__LABEL = 1;
+
+  /**
+   * The number of structural features of the '<em>Const Or Label</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONST_OR_LABEL_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.pds16.pds16asm.impl.OperationWithTwoRegistersImpl <em>Operation With Two Registers</em>}' class.
@@ -1080,7 +1191,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getOperationWithTwoRegisters()
    * @generated
    */
-  int OPERATION_WITH_TWO_REGISTERS = 43;
+  int OPERATION_WITH_TWO_REGISTERS = 46;
 
   /**
    * The feature id for the '<em><b>Rd</b></em>' containment reference.
@@ -1089,7 +1200,7 @@ public interface Pds16asmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OPERATION_WITH_TWO_REGISTERS__RD = NOT_FEATURE_COUNT + 0;
+  int OPERATION_WITH_TWO_REGISTERS__RD = ORL__RD;
 
   /**
    * The feature id for the '<em><b>Rm</b></em>' containment reference.
@@ -1098,7 +1209,7 @@ public interface Pds16asmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OPERATION_WITH_TWO_REGISTERS__RM = NOT_FEATURE_COUNT + 1;
+  int OPERATION_WITH_TWO_REGISTERS__RM = ORL__RM;
 
   /**
    * The number of structural features of the '<em>Operation With Two Registers</em>' class.
@@ -1107,7 +1218,7 @@ public interface Pds16asmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OPERATION_WITH_TWO_REGISTERS_FEATURE_COUNT = NOT_FEATURE_COUNT + 2;
+  int OPERATION_WITH_TWO_REGISTERS_FEATURE_COUNT = ORL_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link org.pds16.pds16asm.impl.OperationsWithTreeRegistersImpl <em>Operations With Tree Registers</em>}' class.
@@ -1117,7 +1228,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getOperationsWithTreeRegisters()
    * @generated
    */
-  int OPERATIONS_WITH_TREE_REGISTERS = 44;
+  int OPERATIONS_WITH_TREE_REGISTERS = 47;
 
   /**
    * The feature id for the '<em><b>Rd</b></em>' containment reference.
@@ -1163,7 +1274,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getOperationsWithConstant()
    * @generated
    */
-  int OPERATIONS_WITH_CONSTANT = 45;
+  int OPERATIONS_WITH_CONSTANT = 48;
 
   /**
    * The feature id for the '<em><b>Rd</b></em>' containment reference.
@@ -1209,7 +1320,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getOperationShift()
    * @generated
    */
-  int OPERATION_SHIFT = 46;
+  int OPERATION_SHIFT = 49;
 
   /**
    * The feature id for the '<em><b>Rd</b></em>' containment reference.
@@ -1264,7 +1375,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getOperationWithOffset()
    * @generated
    */
-  int OPERATION_WITH_OFFSET = 47;
+  int OPERATION_WITH_OFFSET = 50;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -1310,7 +1421,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getExpression()
    * @generated
    */
-  int EXPRESSION = 48;
+  int EXPRESSION = 51;
 
   /**
    * The feature id for the '<em><b>Value1</b></em>' attribute.
@@ -1338,7 +1449,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getLowOrHight()
    * @generated
    */
-  int LOW_OR_HIGHT = 49;
+  int LOW_OR_HIGHT = 52;
 
   /**
    * The number of structural features of the '<em>Low Or Hight</em>' class.
@@ -1357,7 +1468,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getRegisters()
    * @generated
    */
-  int REGISTERS = 50;
+  int REGISTERS = 53;
 
   /**
    * The feature id for the '<em><b>Rbx</b></em>' containment reference.
@@ -1366,7 +1477,7 @@ public interface Pds16asmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int REGISTERS__RBX = BASED_INDEXED_FEATURE_COUNT + 0;
+  int REGISTERS__RBX = ADD_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Rix</b></em>' containment reference.
@@ -1375,7 +1486,7 @@ public interface Pds16asmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int REGISTERS__RIX = BASED_INDEXED_FEATURE_COUNT + 1;
+  int REGISTERS__RIX = ADD_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1384,7 +1495,7 @@ public interface Pds16asmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int REGISTERS__VALUE = BASED_INDEXED_FEATURE_COUNT + 2;
+  int REGISTERS__VALUE = ADD_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Registers</em>' class.
@@ -1393,7 +1504,7 @@ public interface Pds16asmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int REGISTERS_FEATURE_COUNT = BASED_INDEXED_FEATURE_COUNT + 3;
+  int REGISTERS_FEATURE_COUNT = ADD_FEATURE_COUNT + 3;
 
 
   /**
@@ -1839,6 +1950,28 @@ public interface Pds16asmPackage extends EPackage
   EClass getOrl();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.Orl#getRd <em>Rd</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Rd</em>'.
+   * @see org.pds16.pds16asm.Orl#getRd()
+   * @see #getOrl()
+   * @generated
+   */
+  EReference getOrl_Rd();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.Orl#getRm <em>Rm</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Rm</em>'.
+   * @see org.pds16.pds16asm.Orl#getRm()
+   * @see #getOrl()
+   * @generated
+   */
+  EReference getOrl_Rm();
+
+  /**
    * Returns the meta object for class '{@link org.pds16.pds16asm.Xrl <em>Xrl</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1920,6 +2053,48 @@ public interface Pds16asmPackage extends EPackage
   EAttribute getJumpOp_Op();
 
   /**
+   * Returns the meta object for class '{@link org.pds16.pds16asm.Nop <em>Nop</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Nop</em>'.
+   * @see org.pds16.pds16asm.Nop
+   * @generated
+   */
+  EClass getNop();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.Nop#getInstruction <em>Instruction</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Instruction</em>'.
+   * @see org.pds16.pds16asm.Nop#getInstruction()
+   * @see #getNop()
+   * @generated
+   */
+  EAttribute getNop_Instruction();
+
+  /**
+   * Returns the meta object for class '{@link org.pds16.pds16asm.Ret <em>Ret</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Ret</em>'.
+   * @see org.pds16.pds16asm.Ret
+   * @generated
+   */
+  EClass getRet();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.Ret#getInstruction <em>Instruction</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Instruction</em>'.
+   * @see org.pds16.pds16asm.Ret#getInstruction()
+   * @see #getRet()
+   * @generated
+   */
+  EAttribute getRet_Instruction();
+
+  /**
    * Returns the meta object for class '{@link org.pds16.pds16asm.Immediate <em>Immediate</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1971,6 +2146,17 @@ public interface Pds16asmPackage extends EPackage
    * @generated
    */
   EReference getDirect_Register();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.Direct#getDirect7 <em>Direct7</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Direct7</em>'.
+   * @see org.pds16.pds16asm.Direct#getDirect7()
+   * @see #getDirect()
+   * @generated
+   */
+  EReference getDirect_Direct7();
 
   /**
    * Returns the meta object for class '{@link org.pds16.pds16asm.Indexed <em>Indexed</em>}'.
@@ -2026,47 +2212,68 @@ public interface Pds16asmPackage extends EPackage
   EClass getBasedIndexed();
 
   /**
-   * Returns the meta object for class '{@link org.pds16.pds16asm.IntOrHexOrString <em>Int Or Hex Or String</em>}'.
+   * Returns the meta object for class '{@link org.pds16.pds16asm.DirectOrLabel <em>Direct Or Label</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Int Or Hex Or String</em>'.
-   * @see org.pds16.pds16asm.IntOrHexOrString
+   * @return the meta object for class '<em>Direct Or Label</em>'.
+   * @see org.pds16.pds16asm.DirectOrLabel
    * @generated
    */
-  EClass getIntOrHexOrString();
+  EClass getDirectOrLabel();
 
   /**
-   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.IntOrHexOrString#getInt <em>Int</em>}'.
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.DirectOrLabel#getNumber <em>Number</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Int</em>'.
-   * @see org.pds16.pds16asm.IntOrHexOrString#getInt()
-   * @see #getIntOrHexOrString()
+   * @return the meta object for the attribute '<em>Number</em>'.
+   * @see org.pds16.pds16asm.DirectOrLabel#getNumber()
+   * @see #getDirectOrLabel()
    * @generated
    */
-  EAttribute getIntOrHexOrString_Int();
+  EAttribute getDirectOrLabel_Number();
 
   /**
-   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.IntOrHexOrString#getHex <em>Hex</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Hex</em>'.
-   * @see org.pds16.pds16asm.IntOrHexOrString#getHex()
-   * @see #getIntOrHexOrString()
-   * @generated
-   */
-  EAttribute getIntOrHexOrString_Hex();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.IntOrHexOrString#getLabel <em>Label</em>}'.
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.DirectOrLabel#getLabel <em>Label</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Label</em>'.
-   * @see org.pds16.pds16asm.IntOrHexOrString#getLabel()
-   * @see #getIntOrHexOrString()
+   * @see org.pds16.pds16asm.DirectOrLabel#getLabel()
+   * @see #getDirectOrLabel()
    * @generated
    */
-  EAttribute getIntOrHexOrString_Label();
+  EAttribute getDirectOrLabel_Label();
+
+  /**
+   * Returns the meta object for class '{@link org.pds16.pds16asm.ConstOrLabel <em>Const Or Label</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Const Or Label</em>'.
+   * @see org.pds16.pds16asm.ConstOrLabel
+   * @generated
+   */
+  EClass getConstOrLabel();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.ConstOrLabel#getNumber <em>Number</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Number</em>'.
+   * @see org.pds16.pds16asm.ConstOrLabel#getNumber()
+   * @see #getConstOrLabel()
+   * @generated
+   */
+  EAttribute getConstOrLabel_Number();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.ConstOrLabel#getLabel <em>Label</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Label</em>'.
+   * @see org.pds16.pds16asm.ConstOrLabel#getLabel()
+   * @see #getConstOrLabel()
+   * @generated
+   */
+  EAttribute getConstOrLabel_Label();
 
   /**
    * Returns the meta object for class '{@link org.pds16.pds16asm.OperationWithTwoRegisters <em>Operation With Two Registers</em>}'.
@@ -2079,28 +2286,6 @@ public interface Pds16asmPackage extends EPackage
   EClass getOperationWithTwoRegisters();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.OperationWithTwoRegisters#getRd <em>Rd</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Rd</em>'.
-   * @see org.pds16.pds16asm.OperationWithTwoRegisters#getRd()
-   * @see #getOperationWithTwoRegisters()
-   * @generated
-   */
-  EReference getOperationWithTwoRegisters_Rd();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.OperationWithTwoRegisters#getRm <em>Rm</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Rm</em>'.
-   * @see org.pds16.pds16asm.OperationWithTwoRegisters#getRm()
-   * @see #getOperationWithTwoRegisters()
-   * @generated
-   */
-  EReference getOperationWithTwoRegisters_Rm();
-
-  /**
    * Returns the meta object for class '{@link org.pds16.pds16asm.OperationsWithTreeRegisters <em>Operations With Tree Registers</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2109,28 +2294,6 @@ public interface Pds16asmPackage extends EPackage
    * @generated
    */
   EClass getOperationsWithTreeRegisters();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.OperationsWithTreeRegisters#getRd <em>Rd</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Rd</em>'.
-   * @see org.pds16.pds16asm.OperationsWithTreeRegisters#getRd()
-   * @see #getOperationsWithTreeRegisters()
-   * @generated
-   */
-  EReference getOperationsWithTreeRegisters_Rd();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.OperationsWithTreeRegisters#getRm <em>Rm</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Rm</em>'.
-   * @see org.pds16.pds16asm.OperationsWithTreeRegisters#getRm()
-   * @see #getOperationsWithTreeRegisters()
-   * @generated
-   */
-  EReference getOperationsWithTreeRegisters_Rm();
 
   /**
    * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.OperationsWithTreeRegisters#getRn <em>Rn</em>}'.
@@ -2776,6 +2939,22 @@ public interface Pds16asmPackage extends EPackage
     EClass ORL = eINSTANCE.getOrl();
 
     /**
+     * The meta object literal for the '<em><b>Rd</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ORL__RD = eINSTANCE.getOrl_Rd();
+
+    /**
+     * The meta object literal for the '<em><b>Rm</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ORL__RM = eINSTANCE.getOrl_Rm();
+
+    /**
      * The meta object literal for the '{@link org.pds16.pds16asm.impl.XrlImpl <em>Xrl</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2854,6 +3033,42 @@ public interface Pds16asmPackage extends EPackage
     EAttribute JUMP_OP__OP = eINSTANCE.getJumpOp_Op();
 
     /**
+     * The meta object literal for the '{@link org.pds16.pds16asm.impl.NopImpl <em>Nop</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.pds16.pds16asm.impl.NopImpl
+     * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getNop()
+     * @generated
+     */
+    EClass NOP = eINSTANCE.getNop();
+
+    /**
+     * The meta object literal for the '<em><b>Instruction</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute NOP__INSTRUCTION = eINSTANCE.getNop_Instruction();
+
+    /**
+     * The meta object literal for the '{@link org.pds16.pds16asm.impl.RetImpl <em>Ret</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.pds16.pds16asm.impl.RetImpl
+     * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getRet()
+     * @generated
+     */
+    EClass RET = eINSTANCE.getRet();
+
+    /**
+     * The meta object literal for the '<em><b>Instruction</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute RET__INSTRUCTION = eINSTANCE.getRet_Instruction();
+
+    /**
      * The meta object literal for the '{@link org.pds16.pds16asm.impl.ImmediateImpl <em>Immediate</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2896,6 +3111,14 @@ public interface Pds16asmPackage extends EPackage
      * @generated
      */
     EReference DIRECT__REGISTER = eINSTANCE.getDirect_Register();
+
+    /**
+     * The meta object literal for the '<em><b>Direct7</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DIRECT__DIRECT7 = eINSTANCE.getDirect_Direct7();
 
     /**
      * The meta object literal for the '{@link org.pds16.pds16asm.impl.IndexedImpl <em>Indexed</em>}' class.
@@ -2942,30 +3165,22 @@ public interface Pds16asmPackage extends EPackage
     EClass BASED_INDEXED = eINSTANCE.getBasedIndexed();
 
     /**
-     * The meta object literal for the '{@link org.pds16.pds16asm.impl.IntOrHexOrStringImpl <em>Int Or Hex Or String</em>}' class.
+     * The meta object literal for the '{@link org.pds16.pds16asm.impl.DirectOrLabelImpl <em>Direct Or Label</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.pds16.pds16asm.impl.IntOrHexOrStringImpl
-     * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getIntOrHexOrString()
+     * @see org.pds16.pds16asm.impl.DirectOrLabelImpl
+     * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getDirectOrLabel()
      * @generated
      */
-    EClass INT_OR_HEX_OR_STRING = eINSTANCE.getIntOrHexOrString();
+    EClass DIRECT_OR_LABEL = eINSTANCE.getDirectOrLabel();
 
     /**
-     * The meta object literal for the '<em><b>Int</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Number</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute INT_OR_HEX_OR_STRING__INT = eINSTANCE.getIntOrHexOrString_Int();
-
-    /**
-     * The meta object literal for the '<em><b>Hex</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute INT_OR_HEX_OR_STRING__HEX = eINSTANCE.getIntOrHexOrString_Hex();
+    EAttribute DIRECT_OR_LABEL__NUMBER = eINSTANCE.getDirectOrLabel_Number();
 
     /**
      * The meta object literal for the '<em><b>Label</b></em>' attribute feature.
@@ -2973,7 +3188,33 @@ public interface Pds16asmPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute INT_OR_HEX_OR_STRING__LABEL = eINSTANCE.getIntOrHexOrString_Label();
+    EAttribute DIRECT_OR_LABEL__LABEL = eINSTANCE.getDirectOrLabel_Label();
+
+    /**
+     * The meta object literal for the '{@link org.pds16.pds16asm.impl.ConstOrLabelImpl <em>Const Or Label</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.pds16.pds16asm.impl.ConstOrLabelImpl
+     * @see org.pds16.pds16asm.impl.Pds16asmPackageImpl#getConstOrLabel()
+     * @generated
+     */
+    EClass CONST_OR_LABEL = eINSTANCE.getConstOrLabel();
+
+    /**
+     * The meta object literal for the '<em><b>Number</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CONST_OR_LABEL__NUMBER = eINSTANCE.getConstOrLabel_Number();
+
+    /**
+     * The meta object literal for the '<em><b>Label</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CONST_OR_LABEL__LABEL = eINSTANCE.getConstOrLabel_Label();
 
     /**
      * The meta object literal for the '{@link org.pds16.pds16asm.impl.OperationWithTwoRegistersImpl <em>Operation With Two Registers</em>}' class.
@@ -2986,22 +3227,6 @@ public interface Pds16asmPackage extends EPackage
     EClass OPERATION_WITH_TWO_REGISTERS = eINSTANCE.getOperationWithTwoRegisters();
 
     /**
-     * The meta object literal for the '<em><b>Rd</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference OPERATION_WITH_TWO_REGISTERS__RD = eINSTANCE.getOperationWithTwoRegisters_Rd();
-
-    /**
-     * The meta object literal for the '<em><b>Rm</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference OPERATION_WITH_TWO_REGISTERS__RM = eINSTANCE.getOperationWithTwoRegisters_Rm();
-
-    /**
      * The meta object literal for the '{@link org.pds16.pds16asm.impl.OperationsWithTreeRegistersImpl <em>Operations With Tree Registers</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3010,22 +3235,6 @@ public interface Pds16asmPackage extends EPackage
      * @generated
      */
     EClass OPERATIONS_WITH_TREE_REGISTERS = eINSTANCE.getOperationsWithTreeRegisters();
-
-    /**
-     * The meta object literal for the '<em><b>Rd</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference OPERATIONS_WITH_TREE_REGISTERS__RD = eINSTANCE.getOperationsWithTreeRegisters_Rd();
-
-    /**
-     * The meta object literal for the '<em><b>Rm</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference OPERATIONS_WITH_TREE_REGISTERS__RM = eINSTANCE.getOperationsWithTreeRegisters_Rm();
 
     /**
      * The meta object literal for the '<em><b>Rn</b></em>' containment reference feature.

@@ -22,7 +22,7 @@ package org.pds16.pds16asm;
  * @model
  * @generated
  */
-public interface Registers extends BasedIndexed
+public interface Registers extends Add, Sub, BasedIndexed
 {
   /**
    * Returns the value of the '<em><b>Rbx</b></em>' containment reference.

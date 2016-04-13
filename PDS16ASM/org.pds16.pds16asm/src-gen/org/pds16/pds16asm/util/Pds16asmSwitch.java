@@ -14,14 +14,15 @@ import org.pds16.pds16asm.Aritmetica;
 import org.pds16.pds16asm.Ascii;
 import org.pds16.pds16asm.Asciiz;
 import org.pds16.pds16asm.BasedIndexed;
+import org.pds16.pds16asm.ConstOrLabel;
 import org.pds16.pds16asm.Direct;
+import org.pds16.pds16asm.DirectOrLabel;
 import org.pds16.pds16asm.Directive;
 import org.pds16.pds16asm.Equ;
 import org.pds16.pds16asm.Expression;
 import org.pds16.pds16asm.Immediate;
 import org.pds16.pds16asm.Indexed;
 import org.pds16.pds16asm.Instructions;
-import org.pds16.pds16asm.IntOrHexOrString;
 import org.pds16.pds16asm.Jump;
 import org.pds16.pds16asm.JumpOp;
 import org.pds16.pds16asm.Label;
@@ -33,6 +34,7 @@ import org.pds16.pds16asm.LdIndexed;
 import org.pds16.pds16asm.Load;
 import org.pds16.pds16asm.Logica;
 import org.pds16.pds16asm.LowOrHight;
+import org.pds16.pds16asm.Nop;
 import org.pds16.pds16asm.Not;
 import org.pds16.pds16asm.OperationShift;
 import org.pds16.pds16asm.OperationWithOffset;
@@ -45,6 +47,7 @@ import org.pds16.pds16asm.PDS16ASM;
 import org.pds16.pds16asm.Pds16asmPackage;
 import org.pds16.pds16asm.Rc;
 import org.pds16.pds16asm.Registers;
+import org.pds16.pds16asm.Ret;
 import org.pds16.pds16asm.Rr;
 import org.pds16.pds16asm.Section;
 import org.pds16.pds16asm.Set;
@@ -481,6 +484,24 @@ public class Pds16asmSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case Pds16asmPackage.NOP:
+      {
+        Nop nop = (Nop)theEObject;
+        T result = caseNop(nop);
+        if (result == null) result = caseInstructions(nop);
+        if (result == null) result = caseStatement(nop);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case Pds16asmPackage.RET:
+      {
+        Ret ret = (Ret)theEObject;
+        T result = caseRet(ret);
+        if (result == null) result = caseInstructions(ret);
+        if (result == null) result = caseStatement(ret);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case Pds16asmPackage.IMMEDIATE:
       {
         Immediate immediate = (Immediate)theEObject;
@@ -531,10 +552,17 @@ public class Pds16asmSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case Pds16asmPackage.INT_OR_HEX_OR_STRING:
+      case Pds16asmPackage.DIRECT_OR_LABEL:
       {
-        IntOrHexOrString intOrHexOrString = (IntOrHexOrString)theEObject;
-        T result = caseIntOrHexOrString(intOrHexOrString);
+        DirectOrLabel directOrLabel = (DirectOrLabel)theEObject;
+        T result = caseDirectOrLabel(directOrLabel);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case Pds16asmPackage.CONST_OR_LABEL:
+      {
+        ConstOrLabel constOrLabel = (ConstOrLabel)theEObject;
+        T result = caseConstOrLabel(constOrLabel);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -542,6 +570,7 @@ public class Pds16asmSwitch<T> extends Switch<T>
       {
         OperationWithTwoRegisters operationWithTwoRegisters = (OperationWithTwoRegisters)theEObject;
         T result = caseOperationWithTwoRegisters(operationWithTwoRegisters);
+        if (result == null) result = caseOrl(operationWithTwoRegisters);
         if (result == null) result = caseNot(operationWithTwoRegisters);
         if (result == null) result = caseRc(operationWithTwoRegisters);
         if (result == null) result = caseLogica(operationWithTwoRegisters);
@@ -626,7 +655,10 @@ public class Pds16asmSwitch<T> extends Switch<T>
       {
         Registers registers = (Registers)theEObject;
         T result = caseRegisters(registers);
+        if (result == null) result = caseAdd(registers);
+        if (result == null) result = caseSub(registers);
         if (result == null) result = caseBasedIndexed(registers);
+        if (result == null) result = caseAritmetica(registers);
         if (result == null) result = caseLdBasedIndexed(registers);
         if (result == null) result = caseStBasedIndexed(registers);
         if (result == null) result = caseLoad(registers);
@@ -1249,6 +1281,38 @@ public class Pds16asmSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Nop</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Nop</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseNop(Nop object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Ret</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Ret</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRet(Ret object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Immediate</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -1313,17 +1377,33 @@ public class Pds16asmSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Int Or Hex Or String</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Direct Or Label</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Int Or Hex Or String</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Direct Or Label</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseIntOrHexOrString(IntOrHexOrString object)
+  public T caseDirectOrLabel(DirectOrLabel object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Const Or Label</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Const Or Label</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseConstOrLabel(ConstOrLabel object)
   {
     return null;
   }

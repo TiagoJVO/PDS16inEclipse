@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.pds16.pds16asm.IntOrHexOrString;
+import org.pds16.pds16asm.ConstOrLabel;
 import org.pds16.pds16asm.OperationWithOffset;
 import org.pds16.pds16asm.Pds16asmPackage;
 import org.pds16.pds16asm.Registers;
@@ -50,7 +50,7 @@ public class OperationWithOffsetImpl extends JumpOpImpl implements OperationWith
    * @generated
    * @ordered
    */
-  protected IntOrHexOrString offset8;
+  protected ConstOrLabel offset8;
 
   /**
    * <!-- begin-user-doc -->
@@ -126,7 +126,7 @@ public class OperationWithOffsetImpl extends JumpOpImpl implements OperationWith
    * <!-- end-user-doc -->
    * @generated
    */
-  public IntOrHexOrString getOffset8()
+  public ConstOrLabel getOffset8()
   {
     return offset8;
   }
@@ -136,9 +136,9 @@ public class OperationWithOffsetImpl extends JumpOpImpl implements OperationWith
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetOffset8(IntOrHexOrString newOffset8, NotificationChain msgs)
+  public NotificationChain basicSetOffset8(ConstOrLabel newOffset8, NotificationChain msgs)
   {
-    IntOrHexOrString oldOffset8 = offset8;
+    ConstOrLabel oldOffset8 = offset8;
     offset8 = newOffset8;
     if (eNotificationRequired())
     {
@@ -153,7 +153,7 @@ public class OperationWithOffsetImpl extends JumpOpImpl implements OperationWith
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setOffset8(IntOrHexOrString newOffset8)
+  public void setOffset8(ConstOrLabel newOffset8)
   {
     if (newOffset8 != offset8)
     {
@@ -219,7 +219,7 @@ public class OperationWithOffsetImpl extends JumpOpImpl implements OperationWith
         setRbx((Registers)newValue);
         return;
       case Pds16asmPackage.OPERATION_WITH_OFFSET__OFFSET8:
-        setOffset8((IntOrHexOrString)newValue);
+        setOffset8((ConstOrLabel)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -239,7 +239,7 @@ public class OperationWithOffsetImpl extends JumpOpImpl implements OperationWith
         setRbx((Registers)null);
         return;
       case Pds16asmPackage.OPERATION_WITH_OFFSET__OFFSET8:
-        setOffset8((IntOrHexOrString)null);
+        setOffset8((ConstOrLabel)null);
         return;
     }
     super.eUnset(featureID);

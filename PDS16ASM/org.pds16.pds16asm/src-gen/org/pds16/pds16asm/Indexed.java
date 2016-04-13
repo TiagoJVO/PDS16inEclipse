@@ -85,12 +85,12 @@ public interface Indexed extends LdIndexed, StIndexed
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Idx3</em>' containment reference.
-   * @see #setIdx3(IntOrHexOrString)
+   * @see #setIdx3(ConstOrLabel)
    * @see org.pds16.pds16asm.Pds16asmPackage#getIndexed_Idx3()
    * @model containment="true"
    * @generated
    */
-  IntOrHexOrString getIdx3();
+  ConstOrLabel getIdx3();
 
   /**
    * Sets the value of the '{@link org.pds16.pds16asm.Indexed#getIdx3 <em>Idx3</em>}' containment reference.
@@ -100,6 +100,6 @@ public interface Indexed extends LdIndexed, StIndexed
    * @see #getIdx3()
    * @generated
    */
-  void setIdx3(IntOrHexOrString value);
+  void setIdx3(ConstOrLabel value);
 
 } // Indexed

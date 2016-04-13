@@ -12,8 +12,6 @@ package org.pds16.pds16asm;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.pds16.pds16asm.OperationsWithTreeRegisters#getRd <em>Rd</em>}</li>
- *   <li>{@link org.pds16.pds16asm.OperationsWithTreeRegisters#getRm <em>Rm</em>}</li>
  *   <li>{@link org.pds16.pds16asm.OperationsWithTreeRegisters#getRn <em>Rn</em>}</li>
  * </ul>
  * </p>
@@ -24,58 +22,6 @@ package org.pds16.pds16asm;
  */
 public interface OperationsWithTreeRegisters extends Add, Sub, Anl, Orl, Xrl
 {
-  /**
-   * Returns the value of the '<em><b>Rd</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Rd</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Rd</em>' containment reference.
-   * @see #setRd(Registers)
-   * @see org.pds16.pds16asm.Pds16asmPackage#getOperationsWithTreeRegisters_Rd()
-   * @model containment="true"
-   * @generated
-   */
-  Registers getRd();
-
-  /**
-   * Sets the value of the '{@link org.pds16.pds16asm.OperationsWithTreeRegisters#getRd <em>Rd</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Rd</em>' containment reference.
-   * @see #getRd()
-   * @generated
-   */
-  void setRd(Registers value);
-
-  /**
-   * Returns the value of the '<em><b>Rm</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Rm</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Rm</em>' containment reference.
-   * @see #setRm(Registers)
-   * @see org.pds16.pds16asm.Pds16asmPackage#getOperationsWithTreeRegisters_Rm()
-   * @model containment="true"
-   * @generated
-   */
-  Registers getRm();
-
-  /**
-   * Sets the value of the '{@link org.pds16.pds16asm.OperationsWithTreeRegisters#getRm <em>Rm</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Rm</em>' containment reference.
-   * @see #getRm()
-   * @generated
-   */
-  void setRm(Registers value);
-
   /**
    * Returns the value of the '<em><b>Rn</b></em>' containment reference.
    * <!-- begin-user-doc -->

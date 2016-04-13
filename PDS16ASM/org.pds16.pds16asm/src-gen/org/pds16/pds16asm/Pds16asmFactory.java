@@ -366,6 +366,24 @@ public interface Pds16asmFactory extends EFactory
   JumpOp createJumpOp();
 
   /**
+   * Returns a new object of class '<em>Nop</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Nop</em>'.
+   * @generated
+   */
+  Nop createNop();
+
+  /**
+   * Returns a new object of class '<em>Ret</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Ret</em>'.
+   * @generated
+   */
+  Ret createRet();
+
+  /**
    * Returns a new object of class '<em>Immediate</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -402,13 +420,22 @@ public interface Pds16asmFactory extends EFactory
   BasedIndexed createBasedIndexed();
 
   /**
-   * Returns a new object of class '<em>Int Or Hex Or String</em>'.
+   * Returns a new object of class '<em>Direct Or Label</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Int Or Hex Or String</em>'.
+   * @return a new object of class '<em>Direct Or Label</em>'.
    * @generated
    */
-  IntOrHexOrString createIntOrHexOrString();
+  DirectOrLabel createDirectOrLabel();
+
+  /**
+   * Returns a new object of class '<em>Const Or Label</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Const Or Label</em>'.
+   * @generated
+   */
+  ConstOrLabel createConstOrLabel();
 
   /**
    * Returns a new object of class '<em>Operation With Two Registers</em>'.

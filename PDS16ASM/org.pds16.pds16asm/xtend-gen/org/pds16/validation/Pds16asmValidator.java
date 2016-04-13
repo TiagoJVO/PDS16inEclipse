@@ -3,6 +3,8 @@
  */
 package org.pds16.validation;
 
+import org.eclipse.xtext.validation.Check;
+import org.pds16.pds16asm.Immediate;
 import org.pds16.validation.AbstractPds16asmValidator;
 
 /**
@@ -12,4 +14,8 @@ import org.pds16.validation.AbstractPds16asmValidator;
  */
 @SuppressWarnings("all")
 public class Pds16asmValidator extends AbstractPds16asmValidator {
+  @Check
+  public Object checkImmediate8(final Immediate i) {
+    return null;
+  }
 }

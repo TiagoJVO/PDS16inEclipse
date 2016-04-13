@@ -3,6 +3,9 @@
  */
 package org.pds16.validation
 
+import org.pds16.pds16asm.Immediate
+import org.eclipse.xtext.validation.Check
+import org.eclipse.emf.ecore.EObject
 
 /**
  * This class contains custom validation rules. 
@@ -10,6 +13,15 @@ package org.pds16.validation
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#validation
  */
 class Pds16asmValidator extends AbstractPds16asmValidator {
+	
+	
+	
+	@Check
+	def checkImmediate8(Immediate i)
+	{
+		 
+		
+	}
 	
 //  public static val INVALID_NAME = 'invalidName'
 //
