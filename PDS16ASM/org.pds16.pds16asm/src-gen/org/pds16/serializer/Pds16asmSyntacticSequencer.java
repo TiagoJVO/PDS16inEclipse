@@ -35,8 +35,7 @@ public class Pds16asmSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_Ascii___CommaKeyword_2_0_STRINGTerminalRuleCall_2_1__a;
 	protected AbstractElementAlias match_Asciiz___CommaKeyword_2_0_STRINGTerminalRuleCall_2_1__a;
 	protected AbstractElementAlias match_Byte___CommaKeyword_2_0_NumberParserRuleCall_2_1__a;
-	protected AbstractElementAlias match_Directive_BssKeyword_0_or_DataKeyword_1_or_EndKeyword_2_or_TextKeyword_3;
-	protected AbstractElementAlias match_Equ_Org_OrgKeyword_0_or___EquKeyword_0_IDTerminalRuleCall_1_CommaKeyword_2__;
+	protected AbstractElementAlias match_Directive_BssKeyword_0_or_DataKeyword_1_or_EndKeyword_2_or_EquParserRuleCall_4_or_OrgParserRuleCall_5_or_TextKeyword_3;
 	protected AbstractElementAlias match_JumpOp_JaeKeyword_0_7_or_JblKeyword_0_5_or_JcKeyword_0_4_or_JeKeyword_0_1_or_JmpKeyword_0_8_or_JmplKeyword_0_9_or_JncKeyword_0_6_or_JneKeyword_0_3_or_JnzKeyword_0_2_or_JzKeyword_0_0;
 	protected AbstractElementAlias match_LdBasedIndexed_LdKeyword_0_0_or_LdbKeyword_0_1;
 	protected AbstractElementAlias match_LdDirect_LdKeyword_0_0_or_LdbKeyword_0_1;
@@ -77,8 +76,7 @@ public class Pds16asmSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_Ascii___CommaKeyword_2_0_STRINGTerminalRuleCall_2_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getAsciiAccess().getCommaKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getAsciiAccess().getSTRINGTerminalRuleCall_2_1()));
 		match_Asciiz___CommaKeyword_2_0_STRINGTerminalRuleCall_2_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getAsciizAccess().getCommaKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getAsciizAccess().getSTRINGTerminalRuleCall_2_1()));
 		match_Byte___CommaKeyword_2_0_NumberParserRuleCall_2_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getByteAccess().getCommaKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getByteAccess().getNumberParserRuleCall_2_1()));
-		match_Directive_BssKeyword_0_or_DataKeyword_1_or_EndKeyword_2_or_TextKeyword_3 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getDirectiveAccess().getBssKeyword_0()), new TokenAlias(false, false, grammarAccess.getDirectiveAccess().getDataKeyword_1()), new TokenAlias(false, false, grammarAccess.getDirectiveAccess().getEndKeyword_2()), new TokenAlias(false, false, grammarAccess.getDirectiveAccess().getTextKeyword_3()));
-		match_Equ_Org_OrgKeyword_0_or___EquKeyword_0_IDTerminalRuleCall_1_CommaKeyword_2__ = new AlternativeAlias(false, false, new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getEquAccess().getEquKeyword_0()), new TokenAlias(false, false, grammarAccess.getEquAccess().getIDTerminalRuleCall_1()), new TokenAlias(false, false, grammarAccess.getEquAccess().getCommaKeyword_2())), new TokenAlias(false, false, grammarAccess.getOrgAccess().getOrgKeyword_0()));
+		match_Directive_BssKeyword_0_or_DataKeyword_1_or_EndKeyword_2_or_EquParserRuleCall_4_or_OrgParserRuleCall_5_or_TextKeyword_3 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getDirectiveAccess().getBssKeyword_0()), new TokenAlias(false, false, grammarAccess.getDirectiveAccess().getDataKeyword_1()), new TokenAlias(false, false, grammarAccess.getDirectiveAccess().getEndKeyword_2()), new TokenAlias(false, false, grammarAccess.getDirectiveAccess().getEquParserRuleCall_4()), new TokenAlias(false, false, grammarAccess.getDirectiveAccess().getOrgParserRuleCall_5()), new TokenAlias(false, false, grammarAccess.getDirectiveAccess().getTextKeyword_3()));
 		match_JumpOp_JaeKeyword_0_7_or_JblKeyword_0_5_or_JcKeyword_0_4_or_JeKeyword_0_1_or_JmpKeyword_0_8_or_JmplKeyword_0_9_or_JncKeyword_0_6_or_JneKeyword_0_3_or_JnzKeyword_0_2_or_JzKeyword_0_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getJumpOpAccess().getJaeKeyword_0_7()), new TokenAlias(false, false, grammarAccess.getJumpOpAccess().getJblKeyword_0_5()), new TokenAlias(false, false, grammarAccess.getJumpOpAccess().getJcKeyword_0_4()), new TokenAlias(false, false, grammarAccess.getJumpOpAccess().getJeKeyword_0_1()), new TokenAlias(false, false, grammarAccess.getJumpOpAccess().getJmpKeyword_0_8()), new TokenAlias(false, false, grammarAccess.getJumpOpAccess().getJmplKeyword_0_9()), new TokenAlias(false, false, grammarAccess.getJumpOpAccess().getJncKeyword_0_6()), new TokenAlias(false, false, grammarAccess.getJumpOpAccess().getJneKeyword_0_3()), new TokenAlias(false, false, grammarAccess.getJumpOpAccess().getJnzKeyword_0_2()), new TokenAlias(false, false, grammarAccess.getJumpOpAccess().getJzKeyword_0_0()));
 		match_LdBasedIndexed_LdKeyword_0_0_or_LdbKeyword_0_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getLdBasedIndexedAccess().getLdKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getLdBasedIndexedAccess().getLdbKeyword_0_1()));
 		match_LdDirect_LdKeyword_0_0_or_LdbKeyword_0_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getLdDirectAccess().getLdKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getLdDirectAccess().getLdbKeyword_0_1()));
@@ -106,13 +104,26 @@ public class Pds16asmSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (ruleCall.getRule() == grammarAccess.getIDRule())
+		if (ruleCall.getRule() == grammarAccess.getEquRule())
+			return getEquToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getIDRule())
 			return getIDToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getNumberRule())
 			return getNumberToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getOrgRule())
+			return getOrgToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getSTRINGRule())
 			return getSTRINGToken(semanticObject, ruleCall, node);
 		return "";
+	}
+	
+	/**
+	 * Equ:    '.equ' ID ',' Expression;
+	 */
+	protected String getEquToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return ".equ,";
 	}
 	
 	/**
@@ -131,6 +142,15 @@ public class Pds16asmSyntacticSequencer extends AbstractSyntacticSequencer {
 		if (node != null)
 			return getTokenText(node);
 		return "";
+	}
+	
+	/**
+	 * Org:    '.org' Expression;
+	 */
+	protected String getOrgToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return ".org";
 	}
 	
 	/**
@@ -177,10 +197,8 @@ public class Pds16asmSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_Asciiz___CommaKeyword_2_0_STRINGTerminalRuleCall_2_1__a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Byte___CommaKeyword_2_0_NumberParserRuleCall_2_1__a.equals(syntax))
 				emit_Byte___CommaKeyword_2_0_NumberParserRuleCall_2_1__a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Directive_BssKeyword_0_or_DataKeyword_1_or_EndKeyword_2_or_TextKeyword_3.equals(syntax))
-				emit_Directive_BssKeyword_0_or_DataKeyword_1_or_EndKeyword_2_or_TextKeyword_3(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Equ_Org_OrgKeyword_0_or___EquKeyword_0_IDTerminalRuleCall_1_CommaKeyword_2__.equals(syntax))
-				emit_Equ_Org_OrgKeyword_0_or___EquKeyword_0_IDTerminalRuleCall_1_CommaKeyword_2__(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Directive_BssKeyword_0_or_DataKeyword_1_or_EndKeyword_2_or_EquParserRuleCall_4_or_OrgParserRuleCall_5_or_TextKeyword_3.equals(syntax))
+				emit_Directive_BssKeyword_0_or_DataKeyword_1_or_EndKeyword_2_or_EquParserRuleCall_4_or_OrgParserRuleCall_5_or_TextKeyword_3(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_JumpOp_JaeKeyword_0_7_or_JblKeyword_0_5_or_JcKeyword_0_4_or_JeKeyword_0_1_or_JmpKeyword_0_8_or_JmplKeyword_0_9_or_JncKeyword_0_6_or_JneKeyword_0_3_or_JnzKeyword_0_2_or_JzKeyword_0_0.equals(syntax))
 				emit_JumpOp_JaeKeyword_0_7_or_JblKeyword_0_5_or_JcKeyword_0_4_or_JeKeyword_0_1_or_JmpKeyword_0_8_or_JmplKeyword_0_9_or_JncKeyword_0_6_or_JneKeyword_0_3_or_JnzKeyword_0_2_or_JzKeyword_0_0(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_LdBasedIndexed_LdKeyword_0_0_or_LdbKeyword_0_1.equals(syntax))
@@ -462,24 +480,19 @@ public class Pds16asmSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     '.bss' | '.data' | '.end' | '.text'
+	 *     (
+	  *         '.bss' | 
+	  *         '.data' | 
+	  *         '.end' | 
+	  *         '.text' | 
+	  *         Equ | 
+	  *         Org
+	  *     )
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) (rule start)
 	 */
-	protected void emit_Directive_BssKeyword_0_or_DataKeyword_1_or_EndKeyword_2_or_TextKeyword_3(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     '.org' | ('.equ' ID ',')
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) value1=ID
-	 *     (rule start) (ambiguity) value1=Number
-	 */
-	protected void emit_Equ_Org_OrgKeyword_0_or___EquKeyword_0_IDTerminalRuleCall_1_CommaKeyword_2__(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Directive_BssKeyword_0_or_DataKeyword_1_or_EndKeyword_2_or_EquParserRuleCall_4_or_OrgParserRuleCall_5_or_TextKeyword_3(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -586,8 +599,7 @@ public class Pds16asmSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     'low' | 'high'
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) '#' (ambiguity) '(' value1=ID
-	 *     (rule start) '#' (ambiguity) '(' value1=Number
+	 *     (rule start) '#' (ambiguity) '(' value=Expression
 	 */
 	protected void emit_LowOrHight_HighKeyword_1_1_or_LowKeyword_1_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);

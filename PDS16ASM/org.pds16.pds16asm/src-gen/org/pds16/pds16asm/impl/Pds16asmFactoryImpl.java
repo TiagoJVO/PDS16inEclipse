@@ -21,8 +21,6 @@ import org.pds16.pds16asm.ConstOrLabel;
 import org.pds16.pds16asm.Direct;
 import org.pds16.pds16asm.DirectOrLabel;
 import org.pds16.pds16asm.Directive;
-import org.pds16.pds16asm.Equ;
-import org.pds16.pds16asm.Expression;
 import org.pds16.pds16asm.Immediate;
 import org.pds16.pds16asm.Indexed;
 import org.pds16.pds16asm.Instructions;
@@ -44,7 +42,6 @@ import org.pds16.pds16asm.OperationWithOffset;
 import org.pds16.pds16asm.OperationWithTwoRegisters;
 import org.pds16.pds16asm.OperationsWithConstant;
 import org.pds16.pds16asm.OperationsWithTreeRegisters;
-import org.pds16.pds16asm.Org;
 import org.pds16.pds16asm.Orl;
 import org.pds16.pds16asm.PDS16ASM;
 import org.pds16.pds16asm.Pds16asmFactory;
@@ -131,8 +128,6 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
       case Pds16asmPackage.SPACE: return createSpace();
       case Pds16asmPackage.SET: return createSet();
       case Pds16asmPackage.SECTION: return createSection();
-      case Pds16asmPackage.ORG: return createOrg();
-      case Pds16asmPackage.EQU: return createEqu();
       case Pds16asmPackage.INSTRUCTIONS: return createInstructions();
       case Pds16asmPackage.LOAD: return createLoad();
       case Pds16asmPackage.STORE: return createStore();
@@ -170,7 +165,6 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
       case Pds16asmPackage.OPERATIONS_WITH_CONSTANT: return createOperationsWithConstant();
       case Pds16asmPackage.OPERATION_SHIFT: return createOperationShift();
       case Pds16asmPackage.OPERATION_WITH_OFFSET: return createOperationWithOffset();
-      case Pds16asmPackage.EXPRESSION: return createExpression();
       case Pds16asmPackage.LOW_OR_HIGHT: return createLowOrHight();
       case Pds16asmPackage.REGISTERS: return createRegisters();
       default:
@@ -308,28 +302,6 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
   {
     SectionImpl section = new SectionImpl();
     return section;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Org createOrg()
-  {
-    OrgImpl org = new OrgImpl();
-    return org;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Equ createEqu()
-  {
-    EquImpl equ = new EquImpl();
-    return equ;
   }
 
   /**
@@ -737,17 +709,6 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
   {
     OperationWithOffsetImpl operationWithOffset = new OperationWithOffsetImpl();
     return operationWithOffset;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Expression createExpression()
-  {
-    ExpressionImpl expression = new ExpressionImpl();
-    return expression;
   }
 
   /**

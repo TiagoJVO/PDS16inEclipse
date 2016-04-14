@@ -4,14 +4,11 @@
 package org.pds16.pds16asm.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.pds16.pds16asm.Expression;
 import org.pds16.pds16asm.Pds16asmPackage;
 import org.pds16.pds16asm.Set;
 
@@ -52,14 +49,24 @@ public class SetImpl extends DirectiveImpl implements Set
   protected String value1 = VALUE1_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getValue2() <em>Value2</em>}' containment reference.
+   * The default value of the '{@link #getValue2() <em>Value2</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getValue2()
    * @generated
    * @ordered
    */
-  protected Expression value2;
+  protected static final String VALUE2_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getValue2() <em>Value2</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getValue2()
+   * @generated
+   * @ordered
+   */
+  protected String value2 = VALUE2_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -110,7 +117,7 @@ public class SetImpl extends DirectiveImpl implements Set
    * <!-- end-user-doc -->
    * @generated
    */
-  public Expression getValue2()
+  public String getValue2()
   {
     return value2;
   }
@@ -120,53 +127,12 @@ public class SetImpl extends DirectiveImpl implements Set
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetValue2(Expression newValue2, NotificationChain msgs)
+  public void setValue2(String newValue2)
   {
-    Expression oldValue2 = value2;
+    String oldValue2 = value2;
     value2 = newValue2;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Pds16asmPackage.SET__VALUE2, oldValue2, newValue2);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setValue2(Expression newValue2)
-  {
-    if (newValue2 != value2)
-    {
-      NotificationChain msgs = null;
-      if (value2 != null)
-        msgs = ((InternalEObject)value2).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.SET__VALUE2, null, msgs);
-      if (newValue2 != null)
-        msgs = ((InternalEObject)newValue2).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.SET__VALUE2, null, msgs);
-      msgs = basicSetValue2(newValue2, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.SET__VALUE2, newValue2, newValue2));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case Pds16asmPackage.SET__VALUE2:
-        return basicSetValue2(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
+      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.SET__VALUE2, oldValue2, value2));
   }
 
   /**
@@ -201,7 +167,7 @@ public class SetImpl extends DirectiveImpl implements Set
         setValue1((String)newValue);
         return;
       case Pds16asmPackage.SET__VALUE2:
-        setValue2((Expression)newValue);
+        setValue2((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -221,7 +187,7 @@ public class SetImpl extends DirectiveImpl implements Set
         setValue1(VALUE1_EDEFAULT);
         return;
       case Pds16asmPackage.SET__VALUE2:
-        setValue2((Expression)null);
+        setValue2(VALUE2_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -240,7 +206,7 @@ public class SetImpl extends DirectiveImpl implements Set
       case Pds16asmPackage.SET__VALUE1:
         return VALUE1_EDEFAULT == null ? value1 != null : !VALUE1_EDEFAULT.equals(value1);
       case Pds16asmPackage.SET__VALUE2:
-        return value2 != null;
+        return VALUE2_EDEFAULT == null ? value2 != null : !VALUE2_EDEFAULT.equals(value2);
     }
     return super.eIsSet(featureID);
   }
@@ -258,6 +224,8 @@ public class SetImpl extends DirectiveImpl implements Set
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (value1: ");
     result.append(value1);
+    result.append(", value2: ");
+    result.append(value2);
     result.append(')');
     return result.toString();
   }

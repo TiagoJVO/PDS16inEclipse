@@ -1,7 +1,7 @@
 .section	 start
 ;.section	 1
 ;.section	 "oi"
-.org	2
+.org	0
 
 jmp	main
 jmp interruption

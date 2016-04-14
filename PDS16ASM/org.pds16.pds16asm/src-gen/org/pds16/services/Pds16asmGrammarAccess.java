@@ -1563,7 +1563,6 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cRmAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cRmRegistersParserRuleCall_2_0 = (RuleCall)cRmAssignment_2.eContents().get(0);
 		
-		////PK NAO USAR O EXPRESSION??
 		//OperationWithTwoRegisters:
 		//	rd=Registers ',' rm=Registers;
 		@Override public ParserRule getRule() { return rule; }
@@ -1685,15 +1684,13 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cConst4ConstOrLabelParserRuleCall_4_0 = (RuleCall)cConst4Assignment_4.eContents().get(0);
 		private final Keyword cCommaKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Assignment cSinAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final Alternatives cSinAlternatives_6_0 = (Alternatives)cSinAssignment_6.eContents().get(0);
-		private final Keyword cSin0Keyword_6_0_0 = (Keyword)cSinAlternatives_6_0.eContents().get(0);
-		private final Keyword cSin1Keyword_6_0_1 = (Keyword)cSinAlternatives_6_0.eContents().get(1);
+		private final RuleCall cSinNumberParserRuleCall_6_0 = (RuleCall)cSinAssignment_6.eContents().get(0);
 		
 		//OperationShift:
-		//	rd=Registers ',' rm=Registers ',' const4=ConstOrLabel ',' sin=('0' | '1');
+		//	rd=Registers ',' rm=Registers ',' const4=ConstOrLabel ',' sin=Number;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//rd=Registers ',' rm=Registers ',' const4=ConstOrLabel ',' sin=('0' | '1')
+		//rd=Registers ',' rm=Registers ',' const4=ConstOrLabel ',' sin=Number
 		public Group getGroup() { return cGroup; }
 		
 		//rd=Registers
@@ -1723,17 +1720,11 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		//','
 		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
 		
-		//sin=('0' | '1')
+		//sin=Number
 		public Assignment getSinAssignment_6() { return cSinAssignment_6; }
 		
-		//('0' | '1')
-		public Alternatives getSinAlternatives_6_0() { return cSinAlternatives_6_0; }
-		
-		//'0'
-		public Keyword getSin0Keyword_6_0_0() { return cSin0Keyword_6_0_0; }
-		
-		//'1'
-		public Keyword getSin1Keyword_6_0_1() { return cSin1Keyword_6_0_1; }
+		//Number
+		public RuleCall getSinNumberParserRuleCall_6_0() { return cSinNumberParserRuleCall_6_0; }
 	}
 	public class OperationWithOffsetElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.OperationWithOffset");
@@ -1768,28 +1759,24 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	public class ExpressionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.Expression");
-		private final Assignment cValue1Assignment = (Assignment)rule.eContents().get(1);
-		private final Alternatives cValue1Alternatives_0 = (Alternatives)cValue1Assignment.eContents().get(0);
-		private final RuleCall cValue1NumberParserRuleCall_0_0 = (RuleCall)cValue1Alternatives_0.eContents().get(0);
-		private final RuleCall cValue1IDTerminalRuleCall_0_1 = (RuleCall)cValue1Alternatives_0.eContents().get(1);
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cNumberParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//Expression:
-		//	value1=(Number | ID)+
+		//	(Number | ID)+
 		//	//para a string temos que fazer um validator que verifique se é realmente uma expressão
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//value1=(Number | ID)+
-		public Assignment getValue1Assignment() { return cValue1Assignment; }
-		
-		//(Number | ID)
-		public Alternatives getValue1Alternatives_0() { return cValue1Alternatives_0; }
+		//(Number | ID)+
+		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//Number
-		public RuleCall getValue1NumberParserRuleCall_0_0() { return cValue1NumberParserRuleCall_0_0; }
+		public RuleCall getNumberParserRuleCall_0() { return cNumberParserRuleCall_0; }
 		
 		//ID
-		public RuleCall getValue1IDTerminalRuleCall_0_1() { return cValue1IDTerminalRuleCall_0_1; }
+		public RuleCall getIDTerminalRuleCall_1() { return cIDTerminalRuleCall_1; }
 	}
 	public class LowOrHightElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.Pds16asm.LowOrHight");
@@ -1799,14 +1786,15 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLowKeyword_1_0 = (Keyword)cAlternatives_1.eContents().get(0);
 		private final Keyword cHighKeyword_1_1 = (Keyword)cAlternatives_1.eContents().get(1);
 		private final Keyword cLeftParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final RuleCall cExpressionParserRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
+		private final Assignment cValueAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cValueExpressionParserRuleCall_3_0 = (RuleCall)cValueAssignment_3.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//LowOrHight:
-		//	'#' ('low' | 'high') '(' Expression ')';
+		//	'#' ('low' | 'high') '(' value=Expression ')';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'#' ('low' | 'high') '(' Expression ')'
+		//'#' ('low' | 'high') '(' value=Expression ')'
 		public Group getGroup() { return cGroup; }
 		
 		//'#'
@@ -1824,8 +1812,11 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		//'('
 		public Keyword getLeftParenthesisKeyword_2() { return cLeftParenthesisKeyword_2; }
 		
+		//value=Expression
+		public Assignment getValueAssignment_3() { return cValueAssignment_3; }
+		
 		//Expression
-		public RuleCall getExpressionParserRuleCall_3() { return cExpressionParserRuleCall_3; }
+		public RuleCall getValueExpressionParserRuleCall_3_0() { return cValueExpressionParserRuleCall_3_0; }
 		
 		//')'
 		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
@@ -2550,7 +2541,6 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		return getConstOrLabelAccess().getRule();
 	}
 	
-	////PK NAO USAR O EXPRESSION??
 	//OperationWithTwoRegisters:
 	//	rd=Registers ',' rm=Registers;
 	public OperationWithTwoRegistersElements getOperationWithTwoRegistersAccess() {
@@ -2582,7 +2572,7 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//OperationShift:
-	//	rd=Registers ',' rm=Registers ',' const4=ConstOrLabel ',' sin=('0' | '1');
+	//	rd=Registers ',' rm=Registers ',' const4=ConstOrLabel ',' sin=Number;
 	public OperationShiftElements getOperationShiftAccess() {
 		return pOperationShift;
 	}
@@ -2602,7 +2592,7 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Expression:
-	//	value1=(Number | ID)+
+	//	(Number | ID)+
 	//	//para a string temos que fazer um validator que verifique se é realmente uma expressão
 	//;
 	public ExpressionElements getExpressionAccess() {
@@ -2614,7 +2604,7 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//LowOrHight:
-	//	'#' ('low' | 'high') '(' Expression ')';
+	//	'#' ('low' | 'high') '(' value=Expression ')';
 	public LowOrHightElements getLowOrHightAccess() {
 		return pLowOrHight;
 	}
@@ -2681,7 +2671,7 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//terminal INT returns ecore::EInt:
-	//	SIGN? '1'..'9' '0'..'9'*;
+	//	SIGN? '0'..'9'+;
 	public TerminalRule getINTRule() {
 		return tINT;
 	}

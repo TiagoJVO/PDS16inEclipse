@@ -75,8 +75,7 @@ public class Pds16asmParser extends AbstractContentAssistParser {
 					put(grammarAccess.getImmediateAccess().getImmediate8Alternatives_2_0(), "rule__Immediate__Immediate8Alternatives_2_0");
 					put(grammarAccess.getDirectOrLabelAccess().getAlternatives(), "rule__DirectOrLabel__Alternatives");
 					put(grammarAccess.getConstOrLabelAccess().getAlternatives_1(), "rule__ConstOrLabel__Alternatives_1");
-					put(grammarAccess.getOperationShiftAccess().getSinAlternatives_6_0(), "rule__OperationShift__SinAlternatives_6_0");
-					put(grammarAccess.getExpressionAccess().getValue1Alternatives_0(), "rule__Expression__Value1Alternatives_0");
+					put(grammarAccess.getExpressionAccess().getAlternatives(), "rule__Expression__Alternatives");
 					put(grammarAccess.getLowOrHightAccess().getAlternatives_1(), "rule__LowOrHight__Alternatives_1");
 					put(grammarAccess.getRegistersAccess().getValueAlternatives_0(), "rule__Registers__ValueAlternatives_0");
 					put(grammarAccess.getNumberAccess().getAlternatives(), "rule__Number__Alternatives");
@@ -170,7 +169,7 @@ public class Pds16asmParser extends AbstractContentAssistParser {
 					put(grammarAccess.getOperationShiftAccess().getSinAssignment_6(), "rule__OperationShift__SinAssignment_6");
 					put(grammarAccess.getOperationWithOffsetAccess().getRbxAssignment_0(), "rule__OperationWithOffset__RbxAssignment_0");
 					put(grammarAccess.getOperationWithOffsetAccess().getOffset8Assignment_2(), "rule__OperationWithOffset__Offset8Assignment_2");
-					put(grammarAccess.getExpressionAccess().getValue1Assignment(), "rule__Expression__Value1Assignment");
+					put(grammarAccess.getLowOrHightAccess().getValueAssignment_3(), "rule__LowOrHight__ValueAssignment_3");
 					put(grammarAccess.getRegistersAccess().getValueAssignment(), "rule__Registers__ValueAssignment");
 				}
 			};

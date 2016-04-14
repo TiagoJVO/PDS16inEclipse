@@ -18,8 +18,6 @@ import org.pds16.pds16asm.ConstOrLabel;
 import org.pds16.pds16asm.Direct;
 import org.pds16.pds16asm.DirectOrLabel;
 import org.pds16.pds16asm.Directive;
-import org.pds16.pds16asm.Equ;
-import org.pds16.pds16asm.Expression;
 import org.pds16.pds16asm.Immediate;
 import org.pds16.pds16asm.Indexed;
 import org.pds16.pds16asm.Instructions;
@@ -41,7 +39,6 @@ import org.pds16.pds16asm.OperationWithOffset;
 import org.pds16.pds16asm.OperationWithTwoRegisters;
 import org.pds16.pds16asm.OperationsWithConstant;
 import org.pds16.pds16asm.OperationsWithTreeRegisters;
-import org.pds16.pds16asm.Org;
 import org.pds16.pds16asm.Orl;
 import org.pds16.pds16asm.PDS16ASM;
 import org.pds16.pds16asm.Pds16asmPackage;
@@ -230,24 +227,6 @@ public class Pds16asmSwitch<T> extends Switch<T>
         T result = caseSection(section);
         if (result == null) result = caseDirective(section);
         if (result == null) result = caseStatement(section);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case Pds16asmPackage.ORG:
-      {
-        Org org = (Org)theEObject;
-        T result = caseOrg(org);
-        if (result == null) result = caseDirective(org);
-        if (result == null) result = caseStatement(org);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case Pds16asmPackage.EQU:
-      {
-        Equ equ = (Equ)theEObject;
-        T result = caseEqu(equ);
-        if (result == null) result = caseDirective(equ);
-        if (result == null) result = caseStatement(equ);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -632,18 +611,6 @@ public class Pds16asmSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case Pds16asmPackage.EXPRESSION:
-      {
-        Expression expression = (Expression)theEObject;
-        T result = caseExpression(expression);
-        if (result == null) result = caseOrg(expression);
-        if (result == null) result = caseEqu(expression);
-        if (result == null) result = caseLowOrHight(expression);
-        if (result == null) result = caseDirective(expression);
-        if (result == null) result = caseStatement(expression);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case Pds16asmPackage.LOW_OR_HIGHT:
       {
         LowOrHight lowOrHight = (LowOrHight)theEObject;
@@ -860,38 +827,6 @@ public class Pds16asmSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseSection(Section object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Org</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Org</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseOrg(Org object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Equ</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Equ</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseEqu(Equ object)
   {
     return null;
   }
@@ -1484,22 +1419,6 @@ public class Pds16asmSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseOperationWithOffset(OperationWithOffset object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Expression</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Expression</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseExpression(Expression object)
   {
     return null;
   }

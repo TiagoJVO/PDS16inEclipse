@@ -19,11 +19,11 @@ import org.pds16.pds16asm.Asciiz;
 import org.pds16.pds16asm.ConstOrLabel;
 import org.pds16.pds16asm.Direct;
 import org.pds16.pds16asm.DirectOrLabel;
-import org.pds16.pds16asm.Expression;
 import org.pds16.pds16asm.Immediate;
 import org.pds16.pds16asm.Indexed;
 import org.pds16.pds16asm.JumpOp;
 import org.pds16.pds16asm.Label;
+import org.pds16.pds16asm.LowOrHight;
 import org.pds16.pds16asm.Nop;
 import org.pds16.pds16asm.OperationShift;
 import org.pds16.pds16asm.OperationWithOffset;
@@ -71,9 +71,6 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case Pds16asmPackage.DIRECT_OR_LABEL:
 				sequence_DirectOrLabel(context, (DirectOrLabel) semanticObject); 
 				return; 
-			case Pds16asmPackage.EXPRESSION:
-				sequence_Expression(context, (Expression) semanticObject); 
-				return; 
 			case Pds16asmPackage.IMMEDIATE:
 				sequence_Immediate(context, (Immediate) semanticObject); 
 				return; 
@@ -85,6 +82,9 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				return; 
 			case Pds16asmPackage.LABEL:
 				sequence_Label(context, (Label) semanticObject); 
+				return; 
+			case Pds16asmPackage.LOW_OR_HIGHT:
+				sequence_LowOrHight(context, (LowOrHight) semanticObject); 
 				return; 
 			case Pds16asmPackage.NOP:
 				sequence_Nop(context, (Nop) semanticObject); 
@@ -321,23 +321,6 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
-	 *     Statement returns Expression
-	 *     Directive returns Expression
-	 *     Org returns Expression
-	 *     Equ returns Expression
-	 *     Expression returns Expression
-	 *     LowOrHight returns Expression
-	 *
-	 * Constraint:
-	 *     (value1=Number | value1=ID)+
-	 */
-	protected void sequence_Expression(ISerializationContext context, Expression semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     Statement returns Immediate
 	 *     Instructions returns Immediate
 	 *     Load returns Immediate
@@ -418,6 +401,24 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     LowOrHight returns LowOrHight
+	 *
+	 * Constraint:
+	 *     value=Expression
+	 */
+	protected void sequence_LowOrHight(ISerializationContext context, LowOrHight semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.LOW_OR_HIGHT__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.LOW_OR_HIGHT__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getLowOrHightAccess().getValueExpressionParserRuleCall_3_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Statement returns Nop
 	 *     Instructions returns Nop
 	 *     Nop returns Nop
@@ -446,10 +447,25 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     OperationShift returns OperationShift
 	 *
 	 * Constraint:
-	 *     (rd=Registers rm=Registers const4=ConstOrLabel (sin='0' | sin='1'))
+	 *     (rd=Registers rm=Registers const4=ConstOrLabel sin=Number)
 	 */
 	protected void sequence_OperationShift(ISerializationContext context, OperationShift semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.OPERATION_SHIFT__RD) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.OPERATION_SHIFT__RD));
+			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.OPERATION_SHIFT__RM) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.OPERATION_SHIFT__RM));
+			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.OPERATION_SHIFT__CONST4) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.OPERATION_SHIFT__CONST4));
+			if (transientValues.isValueTransient(semanticObject, Pds16asmPackage.Literals.OPERATION_SHIFT__SIN) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.OPERATION_SHIFT__SIN));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getOperationShiftAccess().getRdRegistersParserRuleCall_0_0(), semanticObject.getRd());
+		feeder.accept(grammarAccess.getOperationShiftAccess().getRmRegistersParserRuleCall_2_0(), semanticObject.getRm());
+		feeder.accept(grammarAccess.getOperationShiftAccess().getConst4ConstOrLabelParserRuleCall_4_0(), semanticObject.getConst4());
+		feeder.accept(grammarAccess.getOperationShiftAccess().getSinNumberParserRuleCall_6_0(), semanticObject.getSin());
+		feeder.finish();
 	}
 	
 	

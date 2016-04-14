@@ -20,8 +20,6 @@ import org.pds16.pds16asm.ConstOrLabel;
 import org.pds16.pds16asm.Direct;
 import org.pds16.pds16asm.DirectOrLabel;
 import org.pds16.pds16asm.Directive;
-import org.pds16.pds16asm.Equ;
-import org.pds16.pds16asm.Expression;
 import org.pds16.pds16asm.Immediate;
 import org.pds16.pds16asm.Indexed;
 import org.pds16.pds16asm.Instructions;
@@ -43,7 +41,6 @@ import org.pds16.pds16asm.OperationWithOffset;
 import org.pds16.pds16asm.OperationWithTwoRegisters;
 import org.pds16.pds16asm.OperationsWithConstant;
 import org.pds16.pds16asm.OperationsWithTreeRegisters;
-import org.pds16.pds16asm.Org;
 import org.pds16.pds16asm.Orl;
 import org.pds16.pds16asm.PDS16ASM;
 import org.pds16.pds16asm.Pds16asmPackage;
@@ -187,16 +184,6 @@ public class Pds16asmAdapterFactory extends AdapterFactoryImpl
       public Adapter caseSection(Section object)
       {
         return createSectionAdapter();
-      }
-      @Override
-      public Adapter caseOrg(Org object)
-      {
-        return createOrgAdapter();
-      }
-      @Override
-      public Adapter caseEqu(Equ object)
-      {
-        return createEquAdapter();
       }
       @Override
       public Adapter caseInstructions(Instructions object)
@@ -382,11 +369,6 @@ public class Pds16asmAdapterFactory extends AdapterFactoryImpl
       public Adapter caseOperationWithOffset(OperationWithOffset object)
       {
         return createOperationWithOffsetAdapter();
-      }
-      @Override
-      public Adapter caseExpression(Expression object)
-      {
-        return createExpressionAdapter();
       }
       @Override
       public Adapter caseLowOrHight(LowOrHight object)
@@ -596,36 +578,6 @@ public class Pds16asmAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createSectionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.Org <em>Org</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.pds16.pds16asm.Org
-   * @generated
-   */
-  public Adapter createOrgAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.Equ <em>Equ</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.pds16.pds16asm.Equ
-   * @generated
-   */
-  public Adapter createEquAdapter()
   {
     return null;
   }
@@ -1181,21 +1133,6 @@ public class Pds16asmAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createOperationWithOffsetAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.Expression <em>Expression</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.pds16.pds16asm.Expression
-   * @generated
-   */
-  public Adapter createExpressionAdapter()
   {
     return null;
   }

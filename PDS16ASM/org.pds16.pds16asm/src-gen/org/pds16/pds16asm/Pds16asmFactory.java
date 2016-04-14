@@ -132,24 +132,6 @@ public interface Pds16asmFactory extends EFactory
   Section createSection();
 
   /**
-   * Returns a new object of class '<em>Org</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Org</em>'.
-   * @generated
-   */
-  Org createOrg();
-
-  /**
-   * Returns a new object of class '<em>Equ</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Equ</em>'.
-   * @generated
-   */
-  Equ createEqu();
-
-  /**
    * Returns a new object of class '<em>Instructions</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -481,15 +463,6 @@ public interface Pds16asmFactory extends EFactory
    * @generated
    */
   OperationWithOffset createOperationWithOffset();
-
-  /**
-   * Returns a new object of class '<em>Expression</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Expression</em>'.
-   * @generated
-   */
-  Expression createExpression();
 
   /**
    * Returns a new object of class '<em>Low Or Hight</em>'.

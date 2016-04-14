@@ -31,14 +31,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Set" eSuperTypes="#//Directive">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value2" eType="#//Expression"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Section" eSuperTypes="#//Directive">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Org" eSuperTypes="#//Directive"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Equ" eSuperTypes="#//Directive"/>
   <eClassifiers xsi:type="ecore:EClass" name="Instructions" eSuperTypes="#//Statement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Load" eSuperTypes="#//Instructions"/>
   <eClassifiers xsi:type="ecore:EClass" name="Store" eSuperTypes="#//Instructions"/>
@@ -133,10 +130,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="offset8" eType="#//ConstOrLabel"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Expression" eSuperTypes="#//Org #//Equ #//LowOrHight">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LowOrHight">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LowOrHight"/>
   <eClassifiers xsi:type="ecore:EClass" name="Registers" eSuperTypes="#//Add #//Sub #//BasedIndexed">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rbx" eType="#//Registers"
         containment="true"/>

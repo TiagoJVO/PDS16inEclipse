@@ -50,29 +50,29 @@ public interface Set extends Directive
   void setValue1(String value);
 
   /**
-   * Returns the value of the '<em><b>Value2</b></em>' containment reference.
+   * Returns the value of the '<em><b>Value2</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Value2</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Value2</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Value2</em>' containment reference.
-   * @see #setValue2(Expression)
+   * @return the value of the '<em>Value2</em>' attribute.
+   * @see #setValue2(String)
    * @see org.pds16.pds16asm.Pds16asmPackage#getSet_Value2()
-   * @model containment="true"
+   * @model
    * @generated
    */
-  Expression getValue2();
+  String getValue2();
 
   /**
-   * Sets the value of the '{@link org.pds16.pds16asm.Set#getValue2 <em>Value2</em>}' containment reference.
+   * Sets the value of the '{@link org.pds16.pds16asm.Set#getValue2 <em>Value2</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Value2</em>' containment reference.
+   * @param value the new value of the '<em>Value2</em>' attribute.
    * @see #getValue2()
    * @generated
    */
-  void setValue2(Expression value);
+  void setValue2(String value);
 
 } // Set
