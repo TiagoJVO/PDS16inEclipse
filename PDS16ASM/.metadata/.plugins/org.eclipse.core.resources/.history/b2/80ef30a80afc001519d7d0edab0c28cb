@@ -1,4 +1,0 @@
-grammar org.pds16.Pds16asmSimpleTypes with org.eclipse.xtext.common.Terminals
-
-generate pds16asm "http://www.pds16.org/Pds16asm"
-
