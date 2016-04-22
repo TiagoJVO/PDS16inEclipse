@@ -110,9 +110,9 @@ class Pds16asmValidator extends AbstractPds16asmValidator {
 		if(b.number == null)
 			return;
 		val List<Integer> list = b.getNumber();
-		var int count = list.size();
+		var int size = list.size();
 		
-		(1..count).forEach[i | 
+		(0..size-1).forEach[i | 
 			var value = list.get(i);
 				if(value < MIN_8BIT_WITH_SIGNAL  || value > MAX_8BIT_WITH_SIGNAL)
 					error('Number should be between' + MIN_8BIT_WITH_SIGNAL + ' and ' + MAX_8BIT_WITH_SIGNAL, 
@@ -127,9 +127,9 @@ class Pds16asmValidator extends AbstractPds16asmValidator {
 		if(w.number == null)
 			return;
 		val List<Integer> list = w.getNumber();
-		var int count = list.size();
+		var int size = list.size();
 		
-		(1..count).forEach[i | 
+		(0..size-1).forEach[i | 
 			var value = list.get(i);
 				if(value < MIN_16BIT_WITH_SIGNAL  || value > MAX_16BIT_WITH_SIGNAL)
 					error('Number should be between' + MIN_16BIT_WITH_SIGNAL + ' and ' + MAX_16BIT_WITH_SIGNAL, 

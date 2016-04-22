@@ -140,8 +140,8 @@ public class Pds16asmValidator extends AbstractPds16asmValidator {
       return;
     }
     final List<Integer> list = b.getNumber();
-    int count = list.size();
-    IntegerRange _upTo = new IntegerRange(1, count);
+    int size = list.size();
+    IntegerRange _upTo = new IntegerRange(0, (size - 1));
     final Consumer<Integer> _function = (Integer i) -> {
       Integer value = list.get((i).intValue());
       if ((((value).intValue() < this.MIN_8BIT_WITH_SIGNAL) || ((value).intValue() > this.MAX_8BIT_WITH_SIGNAL))) {
@@ -161,8 +161,8 @@ public class Pds16asmValidator extends AbstractPds16asmValidator {
       return;
     }
     final List<Integer> list = w.getNumber();
-    int count = list.size();
-    IntegerRange _upTo = new IntegerRange(1, count);
+    int size = list.size();
+    IntegerRange _upTo = new IntegerRange(0, (size - 1));
     final Consumer<Integer> _function = (Integer i) -> {
       Integer value = list.get((i).intValue());
       if ((((value).intValue() < this.MIN_16BIT_WITH_SIGNAL) || ((value).intValue() > this.MAX_16BIT_WITH_SIGNAL))) {
