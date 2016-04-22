@@ -13,14 +13,7 @@ import org.pds16.pds16asm.pds16asm.Immediate8OrLabel
 import org.pds16.pds16asm.pds16asm.Offset8OrLabel
 import org.pds16.pds16asm.pds16asm.Word
 import org.pds16.pds16asm.pds16asm.Byte
-import org.eclipse.emf.common.util.EList
 import java.util.List
-import org.pds16.pds16asm.pds16asm.Label
-import org.eclipse.emf.ecore.EObject
-import java.util.EventObject
-import org.eclipse.emf.common.util.TreeIterator
-import org.eclipse.xtext.nodemodel.util.NodeModelUtils
-import org.eclipse.xtext.nodemodel.INode
 
 /**
  * This class contains custom validation rules. 
