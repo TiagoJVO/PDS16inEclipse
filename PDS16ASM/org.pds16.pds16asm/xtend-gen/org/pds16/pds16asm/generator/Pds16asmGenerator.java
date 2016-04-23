@@ -40,13 +40,11 @@ public class Pds16asmGenerator extends AbstractGenerator {
       URI _uRI = resource.getURI();
       URI _trimFileExtension = _uRI.trimFileExtension();
       final URI theRelativeFile = _trimFileExtension.appendFileExtension("asm");
-      IWorkspace _workspace = ResourcesPlugin.getWorkspace();
-      IWorkspaceRoot a = _workspace.getRoot();
       URI _uRI_1 = resource.getURI();
       boolean _isPlatform = _uRI_1.isPlatform();
       if (_isPlatform) {
-        IWorkspace _workspace_1 = ResourcesPlugin.getWorkspace();
-        IWorkspaceRoot _root = _workspace_1.getRoot();
+        IWorkspace _workspace = ResourcesPlugin.getWorkspace();
+        IWorkspaceRoot _root = _workspace.getRoot();
         String _platformString = theRelativeFile.toPlatformString(true);
         Path _path = new Path(_platformString);
         IFile _file = _root.getFile(_path);

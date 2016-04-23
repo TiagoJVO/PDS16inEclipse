@@ -14,6 +14,9 @@ import java.io.InputStreamReader
 import java.io.BufferedReader
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.Path
+import org.eclipse.emf.ecore.EObject
+import org.eclipse.emf.common.util.TreeIterator
+import org.pds16.pds16asm.pds16asm.PDS16ASM
 
 /**
  * Generates code from your model files on save.
@@ -24,7 +27,7 @@ class Pds16asmGenerator extends AbstractGenerator {
 
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
 		val List<String> command = new ArrayList<String>();
-		command.add("C:\\Users\\tiago\\Desktop\\proj\\teste\\dasm.exe");
+		command.add("C:\\Users\\tiago\\Desktop\\proj\\teste\\dasm.exe");//hardcoded, onde inserir o ficheiro dasm.exe para depois utilizar eneste metodo
 		
 		var libraryFile = ""
         
@@ -46,7 +49,7 @@ class Pds16asmGenerator extends AbstractGenerator {
 	    var String line;
 	    while ((line = br.readLine()) != null) {
 	      	if(line.startsWith("erro"))
-	      		System.out.println(line)
+	      		 System.out.println(line)// como aceder á consola do plugin, ou lançar um erro para o plugin
 	    }
 	}
 }
