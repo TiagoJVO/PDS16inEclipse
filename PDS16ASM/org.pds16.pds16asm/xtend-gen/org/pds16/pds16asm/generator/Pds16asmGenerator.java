@@ -3,10 +3,26 @@
  */
 package org.pds16.pds16asm.generator;
 
+import com.google.common.base.Objects;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IWorkspace;
+import org.eclipse.core.resources.IWorkspaceRoot;
+import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.core.runtime.IPath;
+import org.eclipse.core.runtime.Path;
+import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.URIConverter;
 import org.eclipse.xtext.generator.AbstractGenerator;
 import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
+import org.eclipse.xtext.xbase.lib.Exceptions;
 
 /**
  * Generates code from your model files on save.
@@ -17,5 +33,48 @@ import org.eclipse.xtext.generator.IGeneratorContext;
 public class Pds16asmGenerator extends AbstractGenerator {
   @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
+    try {
+      final List<String> command = new ArrayList<String>();
+      command.add("C:\\Users\\tiago\\Desktop\\proj\\teste\\dasm.exe");
+      String libraryFile = "";
+      URI _uRI = resource.getURI();
+      URI _trimFileExtension = _uRI.trimFileExtension();
+      final URI theRelativeFile = _trimFileExtension.appendFileExtension("asm");
+      IWorkspace _workspace = ResourcesPlugin.getWorkspace();
+      IWorkspaceRoot a = _workspace.getRoot();
+      URI _uRI_1 = resource.getURI();
+      boolean _isPlatform = _uRI_1.isPlatform();
+      if (_isPlatform) {
+        IWorkspace _workspace_1 = ResourcesPlugin.getWorkspace();
+        IWorkspaceRoot _root = _workspace_1.getRoot();
+        String _platformString = theRelativeFile.toPlatformString(true);
+        Path _path = new Path(_platformString);
+        IFile _file = _root.getFile(_path);
+        IPath _rawLocation = _file.getRawLocation();
+        String _oSString = _rawLocation.toOSString();
+        libraryFile = _oSString;
+      } else {
+        ResourceSet _resourceSet = resource.getResourceSet();
+        URIConverter _uRIConverter = _resourceSet.getURIConverter();
+        URI _normalize = _uRIConverter.normalize(theRelativeFile);
+        String _fileString = _normalize.toFileString();
+        libraryFile = _fileString;
+      }
+      command.add(libraryFile);
+      final ProcessBuilder builder = new ProcessBuilder(command);
+      final Process process = builder.start();
+      final InputStream is = process.getInputStream();
+      final InputStreamReader isr = new InputStreamReader(is);
+      final BufferedReader br = new BufferedReader(isr);
+      String line = null;
+      while ((!Objects.equal((line = br.readLine()), null))) {
+        boolean _startsWith = line.startsWith("erro");
+        if (_startsWith) {
+          System.out.println(line);
+        }
+      }
+    } catch (Throwable _e) {
+      throw Exceptions.sneakyThrow(_e);
+    }
   }
 }

@@ -26,4 +26,5 @@ Export-Package: org.pds16.pds16asm.services,
  org.pds16.pds16asm.pds16asm.impl,
  org.pds16.pds16asm.scoping,
  org.pds16.pds16asm.generator
-Import-Package: org.apache.log4j
+Import-Package: org.apache.log4j,
+ org.eclipse.core.resources
