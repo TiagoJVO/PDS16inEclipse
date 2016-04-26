@@ -3,18 +3,18 @@
  */
 package org.pds16.pds16asm.generator
 
+import java.io.BufferedReader
+import java.io.InputStream
+import java.io.InputStreamReader
+import java.util.ArrayList
+import java.util.List
+import org.eclipse.core.resources.IMarker
+import org.eclipse.core.resources.ResourcesPlugin
+import org.eclipse.core.runtime.Path
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
-import java.util.List
-import java.util.ArrayList
-import java.io.InputStream
-import java.io.InputStreamReader
-import java.io.BufferedReader
-import org.eclipse.core.resources.ResourcesPlugin;
-import org.eclipse.core.runtime.Path
-import org.eclipse.core.resources.IMarker
 
 /**
  * Generates code from your model files on save.
@@ -25,43 +25,50 @@ class Pds16asmGenerator extends AbstractGenerator {
 	val String SYSTEM_ENV_DASM = "DASM_PATH"
 
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
+		
+		val InputStream output = executeDasm(resource)
+		
+		val List<LinedError> errors = DasmErrorParser.getErrorsFromStream(output);
+		
+	    generateErrors(errors, resource);
+	}
+	
+	def void generateErrors(List<LinedError> errors, Resource resource) {
+		if(!errors.isEmpty){
+	    	var rel = resource.URI.toString().substring("platform:/resource".length)
+	    	val sharedFile = ResourcesPlugin.workspace.root.findMember(rel);
+	    	errors.forEach[error |
+	    		{
+		    		val marker = sharedFile.createMarker(IMarker.PROBLEM) 
+		      		marker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_ERROR)
+		      		marker.setAttribute(IMarker.LINE_NUMBER, error.line)
+		      		marker.setAttribute(IMarker.MESSAGE, error.description)
+	      		}
+	      	]
+	    }
+	}
+	
+	def InputStream executeDasm(Resource resource){
 		val List<String> command = new ArrayList<String>();
 		
 		val String dasmPath = System.getenv(SYSTEM_ENV_DASM)//system environment variable definida pelo utilizador com o path do dasm.exe
 		
 		command.add(dasmPath);
 		
-		var libraryFile = ""
-        
-        val theRelativeFile = resource.URI.trimFileExtension.appendFileExtension('asm')
+		var resourceFullPath = ""
+        val resourceRelativePath = resource.URI
 
-		if (resource.URI.isPlatform) {
-			libraryFile = ResourcesPlugin.workspace.root.getFile(new Path(theRelativeFile.toPlatformString(true))).rawLocation.toOSString	
-		}            	
-		else {
-			libraryFile = resource.resourceSet.URIConverter.normalize(theRelativeFile).toFileString
-		}
+		if (resourceRelativePath.isPlatform) 
+			resourceFullPath = ResourcesPlugin.workspace.root.getFile(new Path(resourceRelativePath.toPlatformString(true))).rawLocation.toOSString	
+		else 
+			resourceFullPath = resource.resourceSet.URIConverter.normalize(resourceRelativePath).toFileString
 		
-		command.add(libraryFile)
+		command.add(resourceFullPath)
+		
 		val ProcessBuilder builder = new ProcessBuilder(command);
 		val Process process = builder.start();
-		val InputStream is = process.getInputStream();
-	    val InputStreamReader isr = new InputStreamReader(is);
-	    val BufferedReader br = new BufferedReader(isr);
-	    var String line;
-	    
-	    //path relativa
-	    val relativePath = resource.URI.toString().substring("platform:/resource".length)
-	    val sharedFile = ResourcesPlugin.workspace.root.findMember(relativePath);
-	    	    
-	    val errors = resource.errors
-	    while ((line = br.readLine()) != null) {
-	      	if(line.startsWith("erro")){
-	      		val marker = sharedFile.createMarker(IMarker.PROBLEM) 
-	      		marker.setAttribute("severity",IMarker.SEVERITY_WARNING)
-	      		marker.setAttribute("lineNumber",1)
-	      	}
-		}
+		process.waitFor()
+		return process.getInputStream();
 	}
 }
 	

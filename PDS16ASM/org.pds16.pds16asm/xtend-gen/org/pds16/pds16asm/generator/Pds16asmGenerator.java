@@ -3,12 +3,10 @@
  */
 package org.pds16.pds16asm.generator;
 
-import com.google.common.base.Objects;
-import java.io.BufferedReader;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IMarker;
 import org.eclipse.core.resources.IResource;
@@ -17,7 +15,6 @@ import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -26,6 +23,8 @@ import org.eclipse.xtext.generator.AbstractGenerator;
 import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
 import org.eclipse.xtext.xbase.lib.Exceptions;
+import org.pds16.pds16asm.generator.DasmErrorParser;
+import org.pds16.pds16asm.generator.LinedError;
 
 /**
  * Generates code from your model files on save.
@@ -39,54 +38,70 @@ public class Pds16asmGenerator extends AbstractGenerator {
   @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
     try {
+      final InputStream output = this.executeDasm(resource);
+      final List<LinedError> errors = DasmErrorParser.getErrorsFromStream(output);
+      this.generateErrors(errors, resource);
+    } catch (Throwable _e) {
+      throw Exceptions.sneakyThrow(_e);
+    }
+  }
+  
+  public void generateErrors(final List<LinedError> errors, final Resource resource) {
+    boolean _isEmpty = errors.isEmpty();
+    boolean _not = (!_isEmpty);
+    if (_not) {
+      URI _uRI = resource.getURI();
+      String _string = _uRI.toString();
+      int _length = "platform:/resource".length();
+      String rel = _string.substring(_length);
+      IWorkspace _workspace = ResourcesPlugin.getWorkspace();
+      IWorkspaceRoot _root = _workspace.getRoot();
+      final IResource sharedFile = _root.findMember(rel);
+      final Consumer<LinedError> _function = (LinedError error) -> {
+        try {
+          final IMarker marker = sharedFile.createMarker(IMarker.PROBLEM);
+          marker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_ERROR);
+          int _line = error.getLine();
+          marker.setAttribute(IMarker.LINE_NUMBER, _line);
+          String _description = error.getDescription();
+          marker.setAttribute(IMarker.MESSAGE, _description);
+        } catch (Throwable _e) {
+          throw Exceptions.sneakyThrow(_e);
+        }
+      };
+      errors.forEach(_function);
+    }
+  }
+  
+  public InputStream executeDasm(final Resource resource) {
+    try {
       final List<String> command = new ArrayList<String>();
       final String dasmPath = System.getenv(this.SYSTEM_ENV_DASM);
       command.add(dasmPath);
-      String libraryFile = "";
-      URI _uRI = resource.getURI();
-      URI _trimFileExtension = _uRI.trimFileExtension();
-      final URI theRelativeFile = _trimFileExtension.appendFileExtension("asm");
-      URI _uRI_1 = resource.getURI();
-      boolean _isPlatform = _uRI_1.isPlatform();
+      String resourceFullPath = "";
+      final URI resourceRelativePath = resource.getURI();
+      boolean _isPlatform = resourceRelativePath.isPlatform();
       if (_isPlatform) {
         IWorkspace _workspace = ResourcesPlugin.getWorkspace();
         IWorkspaceRoot _root = _workspace.getRoot();
-        String _platformString = theRelativeFile.toPlatformString(true);
+        String _platformString = resourceRelativePath.toPlatformString(true);
         Path _path = new Path(_platformString);
         IFile _file = _root.getFile(_path);
         IPath _rawLocation = _file.getRawLocation();
         String _oSString = _rawLocation.toOSString();
-        libraryFile = _oSString;
+        resourceFullPath = _oSString;
       } else {
         ResourceSet _resourceSet = resource.getResourceSet();
         URIConverter _uRIConverter = _resourceSet.getURIConverter();
-        URI _normalize = _uRIConverter.normalize(theRelativeFile);
+        URI _normalize = _uRIConverter.normalize(resourceRelativePath);
         String _fileString = _normalize.toFileString();
-        libraryFile = _fileString;
+        resourceFullPath = _fileString;
       }
-      command.add(libraryFile);
+      command.add(resourceFullPath);
       final ProcessBuilder builder = new ProcessBuilder(command);
       final Process process = builder.start();
-      final InputStream is = process.getInputStream();
-      final InputStreamReader isr = new InputStreamReader(is);
-      final BufferedReader br = new BufferedReader(isr);
-      String line = null;
-      URI _uRI_2 = resource.getURI();
-      String _string = _uRI_2.toString();
-      int _length = "platform:/resource".length();
-      final String relativePath = _string.substring(_length);
-      IWorkspace _workspace_1 = ResourcesPlugin.getWorkspace();
-      IWorkspaceRoot _root_1 = _workspace_1.getRoot();
-      final IResource sharedFile = _root_1.findMember(relativePath);
-      final EList<Resource.Diagnostic> errors = resource.getErrors();
-      while ((!Objects.equal((line = br.readLine()), null))) {
-        boolean _startsWith = line.startsWith("erro");
-        if (_startsWith) {
-          final IMarker marker = sharedFile.createMarker(IMarker.PROBLEM);
-          marker.setAttribute("severity", IMarker.SEVERITY_WARNING);
-          marker.setAttribute("lineNumber", 1);
-        }
-      }
+      process.waitFor();
+      return process.getInputStream();
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
     }
