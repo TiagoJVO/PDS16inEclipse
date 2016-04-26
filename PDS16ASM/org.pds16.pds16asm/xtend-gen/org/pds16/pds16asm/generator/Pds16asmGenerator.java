@@ -10,11 +10,14 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IMarker;
+import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IWorkspace;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -31,11 +34,14 @@ import org.eclipse.xtext.xbase.lib.Exceptions;
  */
 @SuppressWarnings("all")
 public class Pds16asmGenerator extends AbstractGenerator {
+  private final String SYSTEM_ENV_DASM = "DASM_PATH";
+  
   @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
     try {
       final List<String> command = new ArrayList<String>();
-      command.add("C:\\Users\\tiago\\Desktop\\proj\\teste\\dasm.exe");
+      final String dasmPath = System.getenv(this.SYSTEM_ENV_DASM);
+      command.add(dasmPath);
       String libraryFile = "";
       URI _uRI = resource.getURI();
       URI _trimFileExtension = _uRI.trimFileExtension();
@@ -65,10 +71,20 @@ public class Pds16asmGenerator extends AbstractGenerator {
       final InputStreamReader isr = new InputStreamReader(is);
       final BufferedReader br = new BufferedReader(isr);
       String line = null;
+      URI _uRI_2 = resource.getURI();
+      String _string = _uRI_2.toString();
+      int _length = "platform:/resource".length();
+      final String relativePath = _string.substring(_length);
+      IWorkspace _workspace_1 = ResourcesPlugin.getWorkspace();
+      IWorkspaceRoot _root_1 = _workspace_1.getRoot();
+      final IResource sharedFile = _root_1.findMember(relativePath);
+      final EList<Resource.Diagnostic> errors = resource.getErrors();
       while ((!Objects.equal((line = br.readLine()), null))) {
         boolean _startsWith = line.startsWith("erro");
         if (_startsWith) {
-          System.out.println(line);
+          final IMarker marker = sharedFile.createMarker(IMarker.PROBLEM);
+          marker.setAttribute("severity", IMarker.SEVERITY_WARNING);
+          marker.setAttribute("lineNumber", 1);
         }
       }
     } catch (Throwable _e) {

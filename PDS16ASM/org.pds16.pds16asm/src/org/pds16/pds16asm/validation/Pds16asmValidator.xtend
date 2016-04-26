@@ -14,6 +14,10 @@ import org.pds16.pds16asm.pds16asm.Offset8OrLabel
 import org.pds16.pds16asm.pds16asm.Word
 import org.pds16.pds16asm.pds16asm.Byte
 import java.util.List
+import org.pds16.pds16asm.pds16asm.PDS16ASM
+import org.eclipse.core.resources.ResourcesPlugin
+import org.eclipse.core.resources.IMarker
+import org.eclipse.core.resources.IResource
 
 /**
  * This class contains custom validation rules. 
@@ -31,6 +35,11 @@ class Pds16asmValidator extends AbstractPds16asmValidator {
 	val MAX_7BIT_NO_SIGNAL = 127;
 	val MAX_4BIT_NO_SIGNAL = 15;
 	val MAX_3BIT_NO_SIGNAL = 7;
+	
+	@Check
+	def checkShift(PDS16ASM general){
+		ResourcesPlugin.workspace.root.deleteMarkers(IMarker.PROBLEM,true,IResource.DEPTH_INFINITE)//TODO: nao apagar todas as marcas
+	}//saber a linha da onde to a editar e apagar a marcar
 	
 	@Check
 	def checkShift(OperationShift os){

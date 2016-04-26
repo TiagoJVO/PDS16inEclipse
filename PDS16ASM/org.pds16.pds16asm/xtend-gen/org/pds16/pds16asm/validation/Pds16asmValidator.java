@@ -6,8 +6,14 @@ package org.pds16.pds16asm.validation;
 import com.google.common.base.Objects;
 import java.util.List;
 import java.util.function.Consumer;
+import org.eclipse.core.resources.IMarker;
+import org.eclipse.core.resources.IResource;
+import org.eclipse.core.resources.IWorkspace;
+import org.eclipse.core.resources.IWorkspaceRoot;
+import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.xtext.validation.Check;
+import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.IntegerRange;
 import org.pds16.pds16asm.pds16asm.Const4OrLabel;
 import org.pds16.pds16asm.pds16asm.DirectOrLabel;
@@ -15,6 +21,7 @@ import org.pds16.pds16asm.pds16asm.Idx3OrLabel;
 import org.pds16.pds16asm.pds16asm.Immediate8OrLabel;
 import org.pds16.pds16asm.pds16asm.Offset8OrLabel;
 import org.pds16.pds16asm.pds16asm.OperationShift;
+import org.pds16.pds16asm.pds16asm.PDS16ASM;
 import org.pds16.pds16asm.pds16asm.Pds16asmPackage;
 import org.pds16.pds16asm.pds16asm.Word;
 import org.pds16.pds16asm.validation.AbstractPds16asmValidator;
@@ -41,6 +48,17 @@ public class Pds16asmValidator extends AbstractPds16asmValidator {
   private final int MAX_4BIT_NO_SIGNAL = 15;
   
   private final int MAX_3BIT_NO_SIGNAL = 7;
+  
+  @Check
+  public void checkShift(final PDS16ASM general) {
+    try {
+      IWorkspace _workspace = ResourcesPlugin.getWorkspace();
+      IWorkspaceRoot _root = _workspace.getRoot();
+      _root.deleteMarkers(IMarker.PROBLEM, true, IResource.DEPTH_INFINITE);
+    } catch (Throwable _e) {
+      throw Exceptions.sneakyThrow(_e);
+    }
+  }
   
   @Check
   public void checkShift(final OperationShift os) {

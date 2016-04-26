@@ -14,9 +14,7 @@ import java.io.InputStreamReader
 import java.io.BufferedReader
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.Path
-import org.eclipse.emf.ecore.EObject
-import org.eclipse.emf.common.util.TreeIterator
-import org.pds16.pds16asm.pds16asm.PDS16ASM
+import org.eclipse.core.resources.IMarker
 
 /**
  * Generates code from your model files on save.
@@ -24,10 +22,14 @@ import org.pds16.pds16asm.pds16asm.PDS16ASM
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#code-generation
  */
 class Pds16asmGenerator extends AbstractGenerator {
+	val String SYSTEM_ENV_DASM = "DASM_PATH"
 
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
 		val List<String> command = new ArrayList<String>();
-		command.add("C:\\Users\\tiago\\Desktop\\proj\\teste\\dasm.exe");//hardcoded, onde inserir o ficheiro dasm.exe para depois utilizar eneste metodo
+		
+		val String dasmPath = System.getenv(SYSTEM_ENV_DASM)//system environment variable definida pelo utilizador com o path do dasm.exe
+		
+		command.add(dasmPath);
 		
 		var libraryFile = ""
         
@@ -47,10 +49,19 @@ class Pds16asmGenerator extends AbstractGenerator {
 	    val InputStreamReader isr = new InputStreamReader(is);
 	    val BufferedReader br = new BufferedReader(isr);
 	    var String line;
+	    
+	    //path relativa
+	    val relativePath = resource.URI.toString().substring("platform:/resource".length)
+	    val sharedFile = ResourcesPlugin.workspace.root.findMember(relativePath);
+	    	    
+	    val errors = resource.errors
 	    while ((line = br.readLine()) != null) {
-	      	if(line.startsWith("erro"))
-	      		 System.out.println(line)// como aceder á consola do plugin, ou lançar um erro para o plugin
-	    }
+	      	if(line.startsWith("erro")){
+	      		val marker = sharedFile.createMarker(IMarker.PROBLEM) 
+	      		marker.setAttribute("severity",IMarker.SEVERITY_WARNING)
+	      		marker.setAttribute("lineNumber",1)
+	      	}
+		}
 	}
 }
 	
