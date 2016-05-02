@@ -251,24 +251,40 @@ ruleDirective returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='.bss'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getDirectiveAccess().getBssKeyword_0());
+			newCompositeNode(grammarAccess.getDirectiveAccess().getBssParserRuleCall_0());
+		}
+		this_Bss_0=ruleBss
+		{
+			$current = $this_Bss_0.current;
+			afterParserOrEnumRuleCall();
 		}
 		    |
-		otherlv_1='.data'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getDirectiveAccess().getDataKeyword_1());
+			newCompositeNode(grammarAccess.getDirectiveAccess().getDataParserRuleCall_1());
+		}
+		this_Data_1=ruleData
+		{
+			$current = $this_Data_1.current;
+			afterParserOrEnumRuleCall();
 		}
 		    |
-		otherlv_2='.end'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getDirectiveAccess().getEndKeyword_2());
+			newCompositeNode(grammarAccess.getDirectiveAccess().getEndParserRuleCall_2());
+		}
+		this_End_2=ruleEnd
+		{
+			$current = $this_End_2.current;
+			afterParserOrEnumRuleCall();
 		}
 		    |
-		otherlv_3='.text'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getDirectiveAccess().getTextKeyword_3());
+			newCompositeNode(grammarAccess.getDirectiveAccess().getTextParserRuleCall_3());
+		}
+		this_Text_3=ruleText
+		{
+			$current = $this_Text_3.current;
+			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
@@ -378,6 +394,130 @@ ruleLabelDirective returns [EObject current=null]
 			$current = $this_Space_4.current;
 			afterParserOrEnumRuleCall();
 		}
+	)
+;
+
+// Entry rule entryRuleBss
+entryRuleBss returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getBssRule()); }
+	iv_ruleBss=ruleBss
+	{ $current=$iv_ruleBss.current; }
+	EOF;
+
+// Rule Bss
+ruleBss returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			lv_val_0_0='.bss'
+			{
+				newLeafNode(lv_val_0_0, grammarAccess.getBssAccess().getValBssKeyword_0());
+			}
+			{
+				if ($current==null) {
+					$current = createModelElement(grammarAccess.getBssRule());
+				}
+				setWithLastConsumed($current, "val", lv_val_0_0, ".bss");
+			}
+		)
+	)
+;
+
+// Entry rule entryRuleData
+entryRuleData returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getDataRule()); }
+	iv_ruleData=ruleData
+	{ $current=$iv_ruleData.current; }
+	EOF;
+
+// Rule Data
+ruleData returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			lv_val_0_0='.data'
+			{
+				newLeafNode(lv_val_0_0, grammarAccess.getDataAccess().getValDataKeyword_0());
+			}
+			{
+				if ($current==null) {
+					$current = createModelElement(grammarAccess.getDataRule());
+				}
+				setWithLastConsumed($current, "val", lv_val_0_0, ".data");
+			}
+		)
+	)
+;
+
+// Entry rule entryRuleEnd
+entryRuleEnd returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getEndRule()); }
+	iv_ruleEnd=ruleEnd
+	{ $current=$iv_ruleEnd.current; }
+	EOF;
+
+// Rule End
+ruleEnd returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			lv_val_0_0='.end'
+			{
+				newLeafNode(lv_val_0_0, grammarAccess.getEndAccess().getValEndKeyword_0());
+			}
+			{
+				if ($current==null) {
+					$current = createModelElement(grammarAccess.getEndRule());
+				}
+				setWithLastConsumed($current, "val", lv_val_0_0, ".end");
+			}
+		)
+	)
+;
+
+// Entry rule entryRuleText
+entryRuleText returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getTextRule()); }
+	iv_ruleText=ruleText
+	{ $current=$iv_ruleText.current; }
+	EOF;
+
+// Rule Text
+ruleText returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			lv_val_0_0='.text'
+			{
+				newLeafNode(lv_val_0_0, grammarAccess.getTextAccess().getValTextKeyword_0());
+			}
+			{
+				if ($current==null) {
+					$current = createModelElement(grammarAccess.getTextRule());
+				}
+				setWithLastConsumed($current, "val", lv_val_0_0, ".text");
+			}
+		)
 	)
 ;
 

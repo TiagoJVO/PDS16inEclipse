@@ -144,6 +144,10 @@ public class Pds16asmParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPDS16ASMAccess().getInstuctionsAssignment(), "rule__PDS16ASM__InstuctionsAssignment");
 					put(grammarAccess.getLabelAccess().getLabelNameAssignment_0(), "rule__Label__LabelNameAssignment_0");
 					put(grammarAccess.getLabelAccess().getValueAssignment_2(), "rule__Label__ValueAssignment_2");
+					put(grammarAccess.getBssAccess().getValAssignment(), "rule__Bss__ValAssignment");
+					put(grammarAccess.getDataAccess().getValAssignment(), "rule__Data__ValAssignment");
+					put(grammarAccess.getEndAccess().getValAssignment(), "rule__End__ValAssignment");
+					put(grammarAccess.getTextAccess().getValAssignment(), "rule__Text__ValAssignment");
 					put(grammarAccess.getAsciiAccess().getValueAssignment_1(), "rule__Ascii__ValueAssignment_1");
 					put(grammarAccess.getAsciizAccess().getValueAssignment_1(), "rule__Asciiz__ValueAssignment_1");
 					put(grammarAccess.getByteAccess().getNumberAssignment_1(), "rule__Byte__NumberAssignment_1");

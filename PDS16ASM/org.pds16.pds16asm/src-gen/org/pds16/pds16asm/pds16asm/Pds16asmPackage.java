@@ -180,6 +180,118 @@ public interface Pds16asmPackage extends EPackage
   int LABEL_DIRECTIVE_FEATURE_COUNT = DIRECTIVE_FEATURE_COUNT + 0;
 
   /**
+   * The meta object id for the '{@link org.pds16.pds16asm.pds16asm.impl.BssImpl <em>Bss</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.pds16.pds16asm.pds16asm.impl.BssImpl
+   * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getBss()
+   * @generated
+   */
+  int BSS = 5;
+
+  /**
+   * The feature id for the '<em><b>Val</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BSS__VAL = DIRECTIVE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Bss</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BSS_FEATURE_COUNT = DIRECTIVE_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.pds16.pds16asm.pds16asm.impl.DataImpl <em>Data</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.pds16.pds16asm.pds16asm.impl.DataImpl
+   * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getData()
+   * @generated
+   */
+  int DATA = 6;
+
+  /**
+   * The feature id for the '<em><b>Val</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DATA__VAL = DIRECTIVE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Data</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DATA_FEATURE_COUNT = DIRECTIVE_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.pds16.pds16asm.pds16asm.impl.EndImpl <em>End</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.pds16.pds16asm.pds16asm.impl.EndImpl
+   * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getEnd()
+   * @generated
+   */
+  int END = 7;
+
+  /**
+   * The feature id for the '<em><b>Val</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int END__VAL = DIRECTIVE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>End</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int END_FEATURE_COUNT = DIRECTIVE_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.pds16.pds16asm.pds16asm.impl.TextImpl <em>Text</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.pds16.pds16asm.pds16asm.impl.TextImpl
+   * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getText()
+   * @generated
+   */
+  int TEXT = 8;
+
+  /**
+   * The feature id for the '<em><b>Val</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TEXT__VAL = DIRECTIVE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Text</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TEXT_FEATURE_COUNT = DIRECTIVE_FEATURE_COUNT + 1;
+
+  /**
    * The meta object id for the '{@link org.pds16.pds16asm.pds16asm.impl.AsciiImpl <em>Ascii</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -187,7 +299,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getAscii()
    * @generated
    */
-  int ASCII = 5;
+  int ASCII = 9;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -215,7 +327,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getAsciiz()
    * @generated
    */
-  int ASCIIZ = 6;
+  int ASCIIZ = 10;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -243,7 +355,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getByte()
    * @generated
    */
-  int BYTE = 7;
+  int BYTE = 11;
 
   /**
    * The feature id for the '<em><b>Number</b></em>' attribute list.
@@ -271,7 +383,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getWord()
    * @generated
    */
-  int WORD = 8;
+  int WORD = 12;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute list.
@@ -308,7 +420,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getSpace()
    * @generated
    */
-  int SPACE = 9;
+  int SPACE = 13;
 
   /**
    * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -345,7 +457,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getSet()
    * @generated
    */
-  int SET = 10;
+  int SET = 14;
 
   /**
    * The feature id for the '<em><b>Value1</b></em>' attribute.
@@ -382,7 +494,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getSection()
    * @generated
    */
-  int SECTION = 11;
+  int SECTION = 15;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -410,7 +522,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getOrg()
    * @generated
    */
-  int ORG = 12;
+  int ORG = 16;
 
   /**
    * The number of structural features of the '<em>Org</em>' class.
@@ -429,7 +541,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getEqu()
    * @generated
    */
-  int EQU = 13;
+  int EQU = 17;
 
   /**
    * The number of structural features of the '<em>Equ</em>' class.
@@ -448,7 +560,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getInstructions()
    * @generated
    */
-  int INSTRUCTIONS = 14;
+  int INSTRUCTIONS = 18;
 
   /**
    * The number of structural features of the '<em>Instructions</em>' class.
@@ -467,7 +579,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getLoad()
    * @generated
    */
-  int LOAD = 15;
+  int LOAD = 19;
 
   /**
    * The number of structural features of the '<em>Load</em>' class.
@@ -486,7 +598,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getStore()
    * @generated
    */
-  int STORE = 16;
+  int STORE = 20;
 
   /**
    * The number of structural features of the '<em>Store</em>' class.
@@ -505,7 +617,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getAritmetica()
    * @generated
    */
-  int ARITMETICA = 17;
+  int ARITMETICA = 21;
 
   /**
    * The number of structural features of the '<em>Aritmetica</em>' class.
@@ -524,7 +636,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getLogica()
    * @generated
    */
-  int LOGICA = 18;
+  int LOGICA = 22;
 
   /**
    * The number of structural features of the '<em>Logica</em>' class.
@@ -543,7 +655,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getJump()
    * @generated
    */
-  int JUMP = 19;
+  int JUMP = 23;
 
   /**
    * The number of structural features of the '<em>Jump</em>' class.
@@ -562,7 +674,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getLdImmediate()
    * @generated
    */
-  int LD_IMMEDIATE = 20;
+  int LD_IMMEDIATE = 24;
 
   /**
    * The number of structural features of the '<em>Ld Immediate</em>' class.
@@ -581,7 +693,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getLdDirect()
    * @generated
    */
-  int LD_DIRECT = 21;
+  int LD_DIRECT = 25;
 
   /**
    * The number of structural features of the '<em>Ld Direct</em>' class.
@@ -600,7 +712,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getLdIndexed()
    * @generated
    */
-  int LD_INDEXED = 22;
+  int LD_INDEXED = 26;
 
   /**
    * The number of structural features of the '<em>Ld Indexed</em>' class.
@@ -619,7 +731,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getLdBasedIndexed()
    * @generated
    */
-  int LD_BASED_INDEXED = 23;
+  int LD_BASED_INDEXED = 27;
 
   /**
    * The number of structural features of the '<em>Ld Based Indexed</em>' class.
@@ -638,7 +750,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getStDirect()
    * @generated
    */
-  int ST_DIRECT = 24;
+  int ST_DIRECT = 28;
 
   /**
    * The number of structural features of the '<em>St Direct</em>' class.
@@ -657,7 +769,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getStIndexed()
    * @generated
    */
-  int ST_INDEXED = 25;
+  int ST_INDEXED = 29;
 
   /**
    * The number of structural features of the '<em>St Indexed</em>' class.
@@ -676,7 +788,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getStBasedIndexed()
    * @generated
    */
-  int ST_BASED_INDEXED = 26;
+  int ST_BASED_INDEXED = 30;
 
   /**
    * The number of structural features of the '<em>St Based Indexed</em>' class.
@@ -695,7 +807,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getAdd()
    * @generated
    */
-  int ADD = 27;
+  int ADD = 31;
 
   /**
    * The number of structural features of the '<em>Add</em>' class.
@@ -714,7 +826,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getSub()
    * @generated
    */
-  int SUB = 28;
+  int SUB = 32;
 
   /**
    * The number of structural features of the '<em>Sub</em>' class.
@@ -733,7 +845,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getAnl()
    * @generated
    */
-  int ANL = 29;
+  int ANL = 33;
 
   /**
    * The number of structural features of the '<em>Anl</em>' class.
@@ -752,7 +864,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getOrl()
    * @generated
    */
-  int ORL = 30;
+  int ORL = 34;
 
   /**
    * The feature id for the '<em><b>Rd</b></em>' containment reference.
@@ -789,7 +901,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getXrl()
    * @generated
    */
-  int XRL = 31;
+  int XRL = 35;
 
   /**
    * The number of structural features of the '<em>Xrl</em>' class.
@@ -808,7 +920,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getNot()
    * @generated
    */
-  int NOT = 32;
+  int NOT = 36;
 
   /**
    * The number of structural features of the '<em>Not</em>' class.
@@ -827,7 +939,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getShl()
    * @generated
    */
-  int SHL = 33;
+  int SHL = 37;
 
   /**
    * The number of structural features of the '<em>Shl</em>' class.
@@ -846,7 +958,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getShr()
    * @generated
    */
-  int SHR = 34;
+  int SHR = 38;
 
   /**
    * The number of structural features of the '<em>Shr</em>' class.
@@ -865,7 +977,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getRr()
    * @generated
    */
-  int RR = 35;
+  int RR = 39;
 
   /**
    * The number of structural features of the '<em>Rr</em>' class.
@@ -884,7 +996,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getRc()
    * @generated
    */
-  int RC = 36;
+  int RC = 40;
 
   /**
    * The number of structural features of the '<em>Rc</em>' class.
@@ -903,7 +1015,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getJumpOp()
    * @generated
    */
-  int JUMP_OP = 37;
+  int JUMP_OP = 41;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -931,7 +1043,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getNop()
    * @generated
    */
-  int NOP = 38;
+  int NOP = 42;
 
   /**
    * The feature id for the '<em><b>Instruction</b></em>' attribute.
@@ -959,7 +1071,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getRet()
    * @generated
    */
-  int RET = 39;
+  int RET = 43;
 
   /**
    * The feature id for the '<em><b>Instruction</b></em>' attribute.
@@ -987,7 +1099,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getImmediate()
    * @generated
    */
-  int IMMEDIATE = 40;
+  int IMMEDIATE = 44;
 
   /**
    * The feature id for the '<em><b>Register</b></em>' containment reference.
@@ -1033,7 +1145,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getDirect()
    * @generated
    */
-  int DIRECT = 41;
+  int DIRECT = 45;
 
   /**
    * The feature id for the '<em><b>Register</b></em>' containment reference.
@@ -1070,7 +1182,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getIndexed()
    * @generated
    */
-  int INDEXED = 42;
+  int INDEXED = 46;
 
   /**
    * The feature id for the '<em><b>Rd</b></em>' containment reference.
@@ -1116,7 +1228,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getBasedIndexed()
    * @generated
    */
-  int BASED_INDEXED = 43;
+  int BASED_INDEXED = 47;
 
   /**
    * The number of structural features of the '<em>Based Indexed</em>' class.
@@ -1135,7 +1247,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getDirectOrLabel()
    * @generated
    */
-  int DIRECT_OR_LABEL = 44;
+  int DIRECT_OR_LABEL = 48;
 
   /**
    * The feature id for the '<em><b>Number</b></em>' containment reference.
@@ -1172,7 +1284,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getImmediate8OrLabel()
    * @generated
    */
-  int IMMEDIATE8_OR_LABEL = 45;
+  int IMMEDIATE8_OR_LABEL = 49;
 
   /**
    * The feature id for the '<em><b>Number</b></em>' containment reference.
@@ -1209,7 +1321,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getIdx3OrLabel()
    * @generated
    */
-  int IDX3_OR_LABEL = 46;
+  int IDX3_OR_LABEL = 50;
 
   /**
    * The feature id for the '<em><b>Number</b></em>' containment reference.
@@ -1246,7 +1358,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getConst4OrLabel()
    * @generated
    */
-  int CONST4_OR_LABEL = 47;
+  int CONST4_OR_LABEL = 51;
 
   /**
    * The feature id for the '<em><b>Number</b></em>' containment reference.
@@ -1283,7 +1395,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getOffset8OrLabel()
    * @generated
    */
-  int OFFSET8_OR_LABEL = 48;
+  int OFFSET8_OR_LABEL = 52;
 
   /**
    * The feature id for the '<em><b>Number</b></em>' containment reference.
@@ -1320,7 +1432,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getOperationWithTwoRegisters()
    * @generated
    */
-  int OPERATION_WITH_TWO_REGISTERS = 49;
+  int OPERATION_WITH_TWO_REGISTERS = 53;
 
   /**
    * The feature id for the '<em><b>Rd</b></em>' containment reference.
@@ -1357,7 +1469,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getOperationsWithTreeRegisters()
    * @generated
    */
-  int OPERATIONS_WITH_TREE_REGISTERS = 50;
+  int OPERATIONS_WITH_TREE_REGISTERS = 54;
 
   /**
    * The feature id for the '<em><b>Rd</b></em>' containment reference.
@@ -1403,7 +1515,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getOperationsWithConstant()
    * @generated
    */
-  int OPERATIONS_WITH_CONSTANT = 51;
+  int OPERATIONS_WITH_CONSTANT = 55;
 
   /**
    * The feature id for the '<em><b>Rd</b></em>' containment reference.
@@ -1449,7 +1561,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getOperationShift()
    * @generated
    */
-  int OPERATION_SHIFT = 52;
+  int OPERATION_SHIFT = 56;
 
   /**
    * The feature id for the '<em><b>Rd</b></em>' containment reference.
@@ -1504,7 +1616,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getOperationWithOffset()
    * @generated
    */
-  int OPERATION_WITH_OFFSET = 53;
+  int OPERATION_WITH_OFFSET = 57;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -1550,7 +1662,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getExpression()
    * @generated
    */
-  int EXPRESSION = 54;
+  int EXPRESSION = 58;
 
   /**
    * The feature id for the '<em><b>Numeric Value</b></em>' attribute list.
@@ -1587,7 +1699,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getLowOrHight()
    * @generated
    */
-  int LOW_OR_HIGHT = 55;
+  int LOW_OR_HIGHT = 59;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -1615,7 +1727,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getRegisters()
    * @generated
    */
-  int REGISTERS = 56;
+  int REGISTERS = 60;
 
   /**
    * The feature id for the '<em><b>Rbx</b></em>' containment reference.
@@ -1661,7 +1773,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getNumber()
    * @generated
    */
-  int NUMBER = 57;
+  int NUMBER = 61;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1764,6 +1876,90 @@ public interface Pds16asmPackage extends EPackage
    * @generated
    */
   EClass getLabelDirective();
+
+  /**
+   * Returns the meta object for class '{@link org.pds16.pds16asm.pds16asm.Bss <em>Bss</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Bss</em>'.
+   * @see org.pds16.pds16asm.pds16asm.Bss
+   * @generated
+   */
+  EClass getBss();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.Bss#getVal <em>Val</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Val</em>'.
+   * @see org.pds16.pds16asm.pds16asm.Bss#getVal()
+   * @see #getBss()
+   * @generated
+   */
+  EAttribute getBss_Val();
+
+  /**
+   * Returns the meta object for class '{@link org.pds16.pds16asm.pds16asm.Data <em>Data</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Data</em>'.
+   * @see org.pds16.pds16asm.pds16asm.Data
+   * @generated
+   */
+  EClass getData();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.Data#getVal <em>Val</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Val</em>'.
+   * @see org.pds16.pds16asm.pds16asm.Data#getVal()
+   * @see #getData()
+   * @generated
+   */
+  EAttribute getData_Val();
+
+  /**
+   * Returns the meta object for class '{@link org.pds16.pds16asm.pds16asm.End <em>End</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>End</em>'.
+   * @see org.pds16.pds16asm.pds16asm.End
+   * @generated
+   */
+  EClass getEnd();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.End#getVal <em>Val</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Val</em>'.
+   * @see org.pds16.pds16asm.pds16asm.End#getVal()
+   * @see #getEnd()
+   * @generated
+   */
+  EAttribute getEnd_Val();
+
+  /**
+   * Returns the meta object for class '{@link org.pds16.pds16asm.pds16asm.Text <em>Text</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Text</em>'.
+   * @see org.pds16.pds16asm.pds16asm.Text
+   * @generated
+   */
+  EClass getText();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.Text#getVal <em>Val</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Val</em>'.
+   * @see org.pds16.pds16asm.pds16asm.Text#getVal()
+   * @see #getText()
+   * @generated
+   */
+  EAttribute getText_Val();
 
   /**
    * Returns the meta object for class '{@link org.pds16.pds16asm.pds16asm.Ascii <em>Ascii</em>}'.
@@ -2941,6 +3137,78 @@ public interface Pds16asmPackage extends EPackage
      * @generated
      */
     EClass LABEL_DIRECTIVE = eINSTANCE.getLabelDirective();
+
+    /**
+     * The meta object literal for the '{@link org.pds16.pds16asm.pds16asm.impl.BssImpl <em>Bss</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.pds16.pds16asm.pds16asm.impl.BssImpl
+     * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getBss()
+     * @generated
+     */
+    EClass BSS = eINSTANCE.getBss();
+
+    /**
+     * The meta object literal for the '<em><b>Val</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BSS__VAL = eINSTANCE.getBss_Val();
+
+    /**
+     * The meta object literal for the '{@link org.pds16.pds16asm.pds16asm.impl.DataImpl <em>Data</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.pds16.pds16asm.pds16asm.impl.DataImpl
+     * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getData()
+     * @generated
+     */
+    EClass DATA = eINSTANCE.getData();
+
+    /**
+     * The meta object literal for the '<em><b>Val</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DATA__VAL = eINSTANCE.getData_Val();
+
+    /**
+     * The meta object literal for the '{@link org.pds16.pds16asm.pds16asm.impl.EndImpl <em>End</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.pds16.pds16asm.pds16asm.impl.EndImpl
+     * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getEnd()
+     * @generated
+     */
+    EClass END = eINSTANCE.getEnd();
+
+    /**
+     * The meta object literal for the '<em><b>Val</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute END__VAL = eINSTANCE.getEnd_Val();
+
+    /**
+     * The meta object literal for the '{@link org.pds16.pds16asm.pds16asm.impl.TextImpl <em>Text</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.pds16.pds16asm.pds16asm.impl.TextImpl
+     * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getText()
+     * @generated
+     */
+    EClass TEXT = eINSTANCE.getText();
+
+    /**
+     * The meta object literal for the '<em><b>Val</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TEXT__VAL = eINSTANCE.getText_Val();
 
     /**
      * The meta object literal for the '{@link org.pds16.pds16asm.pds16asm.impl.AsciiImpl <em>Ascii</em>}' class.

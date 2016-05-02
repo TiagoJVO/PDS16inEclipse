@@ -69,6 +69,42 @@ public interface Pds16asmFactory extends EFactory
   LabelDirective createLabelDirective();
 
   /**
+   * Returns a new object of class '<em>Bss</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Bss</em>'.
+   * @generated
+   */
+  Bss createBss();
+
+  /**
+   * Returns a new object of class '<em>Data</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Data</em>'.
+   * @generated
+   */
+  Data createData();
+
+  /**
+   * Returns a new object of class '<em>End</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>End</em>'.
+   * @generated
+   */
+  End createEnd();
+
+  /**
+   * Returns a new object of class '<em>Text</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Text</em>'.
+   * @generated
+   */
+  Text createText();
+
+  /**
    * Returns a new object of class '<em>Ascii</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

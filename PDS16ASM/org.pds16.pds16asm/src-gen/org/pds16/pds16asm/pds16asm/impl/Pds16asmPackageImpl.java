@@ -16,10 +16,13 @@ import org.pds16.pds16asm.pds16asm.Aritmetica;
 import org.pds16.pds16asm.pds16asm.Ascii;
 import org.pds16.pds16asm.pds16asm.Asciiz;
 import org.pds16.pds16asm.pds16asm.BasedIndexed;
+import org.pds16.pds16asm.pds16asm.Bss;
 import org.pds16.pds16asm.pds16asm.Const4OrLabel;
+import org.pds16.pds16asm.pds16asm.Data;
 import org.pds16.pds16asm.pds16asm.Direct;
 import org.pds16.pds16asm.pds16asm.DirectOrLabel;
 import org.pds16.pds16asm.pds16asm.Directive;
+import org.pds16.pds16asm.pds16asm.End;
 import org.pds16.pds16asm.pds16asm.Equ;
 import org.pds16.pds16asm.pds16asm.Expression;
 import org.pds16.pds16asm.pds16asm.Idx3OrLabel;
@@ -65,6 +68,7 @@ import org.pds16.pds16asm.pds16asm.StIndexed;
 import org.pds16.pds16asm.pds16asm.Statement;
 import org.pds16.pds16asm.pds16asm.Store;
 import org.pds16.pds16asm.pds16asm.Sub;
+import org.pds16.pds16asm.pds16asm.Text;
 import org.pds16.pds16asm.pds16asm.Word;
 import org.pds16.pds16asm.pds16asm.Xrl;
 
@@ -110,6 +114,34 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
    * @generated
    */
   private EClass labelDirectiveEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass bssEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dataEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass endEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass textEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -623,6 +655,86 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
   public EClass getLabelDirective()
   {
     return labelDirectiveEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getBss()
+  {
+    return bssEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBss_Val()
+  {
+    return (EAttribute)bssEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getData()
+  {
+    return dataEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getData_Val()
+  {
+    return (EAttribute)dataEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getEnd()
+  {
+    return endEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getEnd_Val()
+  {
+    return (EAttribute)endEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getText()
+  {
+    return textEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getText_Val()
+  {
+    return (EAttribute)textEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1698,6 +1810,18 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
 
     labelDirectiveEClass = createEClass(LABEL_DIRECTIVE);
 
+    bssEClass = createEClass(BSS);
+    createEAttribute(bssEClass, BSS__VAL);
+
+    dataEClass = createEClass(DATA);
+    createEAttribute(dataEClass, DATA__VAL);
+
+    endEClass = createEClass(END);
+    createEAttribute(endEClass, END__VAL);
+
+    textEClass = createEClass(TEXT);
+    createEAttribute(textEClass, TEXT__VAL);
+
     asciiEClass = createEClass(ASCII);
     createEAttribute(asciiEClass, ASCII__VALUE);
 
@@ -1887,6 +2011,10 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
     labelEClass.getESuperTypes().add(this.getStatement());
     directiveEClass.getESuperTypes().add(this.getStatement());
     labelDirectiveEClass.getESuperTypes().add(this.getDirective());
+    bssEClass.getESuperTypes().add(this.getDirective());
+    dataEClass.getESuperTypes().add(this.getDirective());
+    endEClass.getESuperTypes().add(this.getDirective());
+    textEClass.getESuperTypes().add(this.getDirective());
     asciiEClass.getESuperTypes().add(this.getLabelDirective());
     asciizEClass.getESuperTypes().add(this.getLabelDirective());
     byteEClass.getESuperTypes().add(this.getLabelDirective());
@@ -1962,6 +2090,18 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
     initEClass(directiveEClass, Directive.class, "Directive", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(labelDirectiveEClass, LabelDirective.class, "LabelDirective", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(bssEClass, Bss.class, "Bss", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getBss_Val(), ecorePackage.getEString(), "val", null, 0, 1, Bss.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(dataEClass, Data.class, "Data", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getData_Val(), ecorePackage.getEString(), "val", null, 0, 1, Data.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(endEClass, End.class, "End", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getEnd_Val(), ecorePackage.getEString(), "val", null, 0, 1, End.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(textEClass, Text.class, "Text", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getText_Val(), ecorePackage.getEString(), "val", null, 0, 1, Text.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(asciiEClass, Ascii.class, "Ascii", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getAscii_Value(), ecorePackage.getEString(), "value", null, 0, 1, Ascii.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

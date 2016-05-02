@@ -14,10 +14,17 @@ Label:
 	labelName=ID ':' value=(Label | LabelDirective | Instructions);
 
 Directive:
-	'.bss' | '.data' | '.end' | '.text' | Equ | Org | Section | Set | LabelDirective;
+	Bss | Data | End | Text | Equ | Org | Section | Set | LabelDirective;
 
 LabelDirective: Ascii | Asciiz | Byte | Word | Space;
-				
+		
+Bss: val='.bss';
+
+Data: val='.data';
+
+End: val='.end';
+
+Text: val='.text';		
 
 Ascii:	'.ascii' value=STRING (',' STRING)*;
 

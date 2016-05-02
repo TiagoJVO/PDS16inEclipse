@@ -17,10 +17,13 @@ import org.pds16.pds16asm.pds16asm.Aritmetica;
 import org.pds16.pds16asm.pds16asm.Ascii;
 import org.pds16.pds16asm.pds16asm.Asciiz;
 import org.pds16.pds16asm.pds16asm.BasedIndexed;
+import org.pds16.pds16asm.pds16asm.Bss;
 import org.pds16.pds16asm.pds16asm.Const4OrLabel;
+import org.pds16.pds16asm.pds16asm.Data;
 import org.pds16.pds16asm.pds16asm.Direct;
 import org.pds16.pds16asm.pds16asm.DirectOrLabel;
 import org.pds16.pds16asm.pds16asm.Directive;
+import org.pds16.pds16asm.pds16asm.End;
 import org.pds16.pds16asm.pds16asm.Equ;
 import org.pds16.pds16asm.pds16asm.Expression;
 import org.pds16.pds16asm.pds16asm.Idx3OrLabel;
@@ -67,6 +70,7 @@ import org.pds16.pds16asm.pds16asm.StIndexed;
 import org.pds16.pds16asm.pds16asm.Statement;
 import org.pds16.pds16asm.pds16asm.Store;
 import org.pds16.pds16asm.pds16asm.Sub;
+import org.pds16.pds16asm.pds16asm.Text;
 import org.pds16.pds16asm.pds16asm.Word;
 import org.pds16.pds16asm.pds16asm.Xrl;
 
@@ -127,6 +131,10 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
       case Pds16asmPackage.LABEL: return createLabel();
       case Pds16asmPackage.DIRECTIVE: return createDirective();
       case Pds16asmPackage.LABEL_DIRECTIVE: return createLabelDirective();
+      case Pds16asmPackage.BSS: return createBss();
+      case Pds16asmPackage.DATA: return createData();
+      case Pds16asmPackage.END: return createEnd();
+      case Pds16asmPackage.TEXT: return createText();
       case Pds16asmPackage.ASCII: return createAscii();
       case Pds16asmPackage.ASCIIZ: return createAsciiz();
       case Pds16asmPackage.BYTE: return createByte();
@@ -238,6 +246,50 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
   {
     LabelDirectiveImpl labelDirective = new LabelDirectiveImpl();
     return labelDirective;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Bss createBss()
+  {
+    BssImpl bss = new BssImpl();
+    return bss;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Data createData()
+  {
+    DataImpl data = new DataImpl();
+    return data;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public End createEnd()
+  {
+    EndImpl end = new EndImpl();
+    return end;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Text createText()
+  {
+    TextImpl text = new TextImpl();
+    return text;
   }
 
   /**

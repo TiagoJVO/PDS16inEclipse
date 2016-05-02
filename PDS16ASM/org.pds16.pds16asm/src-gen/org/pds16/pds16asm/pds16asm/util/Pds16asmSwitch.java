@@ -14,10 +14,13 @@ import org.pds16.pds16asm.pds16asm.Aritmetica;
 import org.pds16.pds16asm.pds16asm.Ascii;
 import org.pds16.pds16asm.pds16asm.Asciiz;
 import org.pds16.pds16asm.pds16asm.BasedIndexed;
+import org.pds16.pds16asm.pds16asm.Bss;
 import org.pds16.pds16asm.pds16asm.Const4OrLabel;
+import org.pds16.pds16asm.pds16asm.Data;
 import org.pds16.pds16asm.pds16asm.Direct;
 import org.pds16.pds16asm.pds16asm.DirectOrLabel;
 import org.pds16.pds16asm.pds16asm.Directive;
+import org.pds16.pds16asm.pds16asm.End;
 import org.pds16.pds16asm.pds16asm.Equ;
 import org.pds16.pds16asm.pds16asm.Expression;
 import org.pds16.pds16asm.pds16asm.Idx3OrLabel;
@@ -63,6 +66,7 @@ import org.pds16.pds16asm.pds16asm.StIndexed;
 import org.pds16.pds16asm.pds16asm.Statement;
 import org.pds16.pds16asm.pds16asm.Store;
 import org.pds16.pds16asm.pds16asm.Sub;
+import org.pds16.pds16asm.pds16asm.Text;
 import org.pds16.pds16asm.pds16asm.Word;
 import org.pds16.pds16asm.pds16asm.Xrl;
 
@@ -165,6 +169,42 @@ public class Pds16asmSwitch<T> extends Switch<T>
         T result = caseLabelDirective(labelDirective);
         if (result == null) result = caseDirective(labelDirective);
         if (result == null) result = caseStatement(labelDirective);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case Pds16asmPackage.BSS:
+      {
+        Bss bss = (Bss)theEObject;
+        T result = caseBss(bss);
+        if (result == null) result = caseDirective(bss);
+        if (result == null) result = caseStatement(bss);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case Pds16asmPackage.DATA:
+      {
+        Data data = (Data)theEObject;
+        T result = caseData(data);
+        if (result == null) result = caseDirective(data);
+        if (result == null) result = caseStatement(data);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case Pds16asmPackage.END:
+      {
+        End end = (End)theEObject;
+        T result = caseEnd(end);
+        if (result == null) result = caseDirective(end);
+        if (result == null) result = caseStatement(end);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case Pds16asmPackage.TEXT:
+      {
+        Text text = (Text)theEObject;
+        T result = caseText(text);
+        if (result == null) result = caseDirective(text);
+        if (result == null) result = caseStatement(text);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -778,6 +818,70 @@ public class Pds16asmSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseLabelDirective(LabelDirective object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Bss</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Bss</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBss(Bss object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Data</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Data</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseData(Data object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>End</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>End</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEnd(End object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Text</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Text</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseText(Text object)
   {
     return null;
   }

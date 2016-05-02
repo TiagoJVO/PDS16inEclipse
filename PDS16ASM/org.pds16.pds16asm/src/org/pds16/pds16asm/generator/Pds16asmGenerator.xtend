@@ -3,9 +3,7 @@
  */
 package org.pds16.pds16asm.generator
 
-import java.io.BufferedReader
 import java.io.InputStream
-import java.io.InputStreamReader
 import java.util.ArrayList
 import java.util.List
 import org.eclipse.core.resources.IMarker
@@ -15,6 +13,7 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
+import org.pds16.pds16asm.pds16asm.impl.EndImpl
 
 /**
  * Generates code from your model files on save.
@@ -26,11 +25,25 @@ class Pds16asmGenerator extends AbstractGenerator {
 
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
 		
+		if(!existsEnd(resource)){
+			val errors = new ArrayList<LinedError>()
+			errors.add(new LinedError("Missing '.end' at the end of file",1))
+			generateErrors(errors,resource)
+			return
+		}
+			
+		
 		val InputStream output = executeDasm(resource)
 		
 		val List<LinedError> errors = DasmErrorParser.getErrorsFromStream(output);
 		
 	    generateErrors(errors, resource);
+	}
+	
+	def boolean existsEnd(Resource resource) {
+		resource.allContents.exists[elem|
+			elem.class.equals(EndImpl)
+		]
 	}
 	
 	def void generateErrors(List<LinedError> errors, Resource resource) {

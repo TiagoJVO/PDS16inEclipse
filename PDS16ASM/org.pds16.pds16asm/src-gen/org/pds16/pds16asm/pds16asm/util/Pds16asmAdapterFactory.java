@@ -16,10 +16,13 @@ import org.pds16.pds16asm.pds16asm.Aritmetica;
 import org.pds16.pds16asm.pds16asm.Ascii;
 import org.pds16.pds16asm.pds16asm.Asciiz;
 import org.pds16.pds16asm.pds16asm.BasedIndexed;
+import org.pds16.pds16asm.pds16asm.Bss;
 import org.pds16.pds16asm.pds16asm.Const4OrLabel;
+import org.pds16.pds16asm.pds16asm.Data;
 import org.pds16.pds16asm.pds16asm.Direct;
 import org.pds16.pds16asm.pds16asm.DirectOrLabel;
 import org.pds16.pds16asm.pds16asm.Directive;
+import org.pds16.pds16asm.pds16asm.End;
 import org.pds16.pds16asm.pds16asm.Equ;
 import org.pds16.pds16asm.pds16asm.Expression;
 import org.pds16.pds16asm.pds16asm.Idx3OrLabel;
@@ -65,6 +68,7 @@ import org.pds16.pds16asm.pds16asm.StIndexed;
 import org.pds16.pds16asm.pds16asm.Statement;
 import org.pds16.pds16asm.pds16asm.Store;
 import org.pds16.pds16asm.pds16asm.Sub;
+import org.pds16.pds16asm.pds16asm.Text;
 import org.pds16.pds16asm.pds16asm.Word;
 import org.pds16.pds16asm.pds16asm.Xrl;
 
@@ -155,6 +159,26 @@ public class Pds16asmAdapterFactory extends AdapterFactoryImpl
       public Adapter caseLabelDirective(LabelDirective object)
       {
         return createLabelDirectiveAdapter();
+      }
+      @Override
+      public Adapter caseBss(Bss object)
+      {
+        return createBssAdapter();
+      }
+      @Override
+      public Adapter caseData(Data object)
+      {
+        return createDataAdapter();
+      }
+      @Override
+      public Adapter caseEnd(End object)
+      {
+        return createEndAdapter();
+      }
+      @Override
+      public Adapter caseText(Text object)
+      {
+        return createTextAdapter();
       }
       @Override
       public Adapter caseAscii(Ascii object)
@@ -514,6 +538,66 @@ public class Pds16asmAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createLabelDirectiveAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.pds16asm.Bss <em>Bss</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.pds16.pds16asm.pds16asm.Bss
+   * @generated
+   */
+  public Adapter createBssAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.pds16asm.Data <em>Data</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.pds16.pds16asm.pds16asm.Data
+   * @generated
+   */
+  public Adapter createDataAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.pds16asm.End <em>End</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.pds16.pds16asm.pds16asm.End
+   * @generated
+   */
+  public Adapter createEndAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.pds16asm.Text <em>Text</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.pds16.pds16asm.pds16asm.Text
+   * @generated
+   */
+  public Adapter createTextAdapter()
   {
     return null;
   }

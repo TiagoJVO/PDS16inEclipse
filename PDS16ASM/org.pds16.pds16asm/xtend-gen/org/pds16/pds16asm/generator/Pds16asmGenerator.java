@@ -15,7 +15,9 @@ import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
+import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.URIConverter;
@@ -23,8 +25,11 @@ import org.eclipse.xtext.generator.AbstractGenerator;
 import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
 import org.eclipse.xtext.xbase.lib.Exceptions;
+import org.eclipse.xtext.xbase.lib.Functions.Function1;
+import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 import org.pds16.pds16asm.generator.DasmErrorParser;
 import org.pds16.pds16asm.generator.LinedError;
+import org.pds16.pds16asm.pds16asm.impl.EndImpl;
 
 /**
  * Generates code from your model files on save.
@@ -38,12 +43,30 @@ public class Pds16asmGenerator extends AbstractGenerator {
   @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
     try {
+      boolean _existsEnd = this.existsEnd(resource);
+      boolean _not = (!_existsEnd);
+      if (_not) {
+        final ArrayList<LinedError> errors = new ArrayList<LinedError>();
+        LinedError _linedError = new LinedError("Missing \'.end\' at the end of file", 1);
+        errors.add(_linedError);
+        this.generateErrors(errors, resource);
+        return;
+      }
       final InputStream output = this.executeDasm(resource);
-      final List<LinedError> errors = DasmErrorParser.getErrorsFromStream(output);
-      this.generateErrors(errors, resource);
+      final List<LinedError> errors_1 = DasmErrorParser.getErrorsFromStream(output);
+      this.generateErrors(errors_1, resource);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
     }
+  }
+  
+  public boolean existsEnd(final Resource resource) {
+    TreeIterator<EObject> _allContents = resource.getAllContents();
+    final Function1<EObject, Boolean> _function = (EObject elem) -> {
+      Class<? extends EObject> _class = elem.getClass();
+      return Boolean.valueOf(_class.equals(EndImpl.class));
+    };
+    return IteratorExtensions.<EObject>exists(_allContents, _function);
   }
   
   public void generateErrors(final List<LinedError> errors, final Resource resource) {

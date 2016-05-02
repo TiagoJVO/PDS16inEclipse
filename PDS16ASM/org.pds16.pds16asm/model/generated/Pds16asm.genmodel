@@ -16,6 +16,18 @@
     </genClasses>
     <genClasses ecoreClass="Pds16asm.ecore#//Directive"/>
     <genClasses ecoreClass="Pds16asm.ecore#//LabelDirective"/>
+    <genClasses ecoreClass="Pds16asm.ecore#//Bss">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Bss/val"/>
+    </genClasses>
+    <genClasses ecoreClass="Pds16asm.ecore#//Data">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Data/val"/>
+    </genClasses>
+    <genClasses ecoreClass="Pds16asm.ecore#//End">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//End/val"/>
+    </genClasses>
+    <genClasses ecoreClass="Pds16asm.ecore#//Text">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Text/val"/>
+    </genClasses>
     <genClasses ecoreClass="Pds16asm.ecore#//Ascii">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Ascii/value"/>
     </genClasses>

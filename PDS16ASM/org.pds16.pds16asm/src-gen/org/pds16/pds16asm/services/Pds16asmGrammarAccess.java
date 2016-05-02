@@ -105,10 +105,10 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 	public class DirectiveElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.pds16asm.Pds16asm.Directive");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Keyword cBssKeyword_0 = (Keyword)cAlternatives.eContents().get(0);
-		private final Keyword cDataKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
-		private final Keyword cEndKeyword_2 = (Keyword)cAlternatives.eContents().get(2);
-		private final Keyword cTextKeyword_3 = (Keyword)cAlternatives.eContents().get(3);
+		private final RuleCall cBssParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cDataParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cEndParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cTextParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		private final RuleCall cEquParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		private final RuleCall cOrgParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		private final RuleCall cSectionParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
@@ -116,23 +116,23 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cLabelDirectiveParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
 		
 		//Directive:
-		//	'.bss' | '.data' | '.end' | '.text' | Equ | Org | Section | Set | LabelDirective;
+		//	Bss | Data | End | Text | Equ | Org | Section | Set | LabelDirective;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'.bss' | '.data' | '.end' | '.text' | Equ | Org | Section | Set | LabelDirective
+		//Bss | Data | End | Text | Equ | Org | Section | Set | LabelDirective
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//'.bss'
-		public Keyword getBssKeyword_0() { return cBssKeyword_0; }
+		//Bss
+		public RuleCall getBssParserRuleCall_0() { return cBssParserRuleCall_0; }
 		
-		//'.data'
-		public Keyword getDataKeyword_1() { return cDataKeyword_1; }
+		//Data
+		public RuleCall getDataParserRuleCall_1() { return cDataParserRuleCall_1; }
 		
-		//'.end'
-		public Keyword getEndKeyword_2() { return cEndKeyword_2; }
+		//End
+		public RuleCall getEndParserRuleCall_2() { return cEndParserRuleCall_2; }
 		
-		//'.text'
-		public Keyword getTextKeyword_3() { return cTextKeyword_3; }
+		//Text
+		public RuleCall getTextParserRuleCall_3() { return cTextParserRuleCall_3; }
 		
 		//Equ
 		public RuleCall getEquParserRuleCall_4() { return cEquParserRuleCall_4; }
@@ -179,6 +179,66 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//Space
 		public RuleCall getSpaceParserRuleCall_4() { return cSpaceParserRuleCall_4; }
+	}
+	public class BssElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.pds16asm.Pds16asm.Bss");
+		private final Assignment cValAssignment = (Assignment)rule.eContents().get(1);
+		private final Keyword cValBssKeyword_0 = (Keyword)cValAssignment.eContents().get(0);
+		
+		//Bss:
+		//	val='.bss';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//val='.bss'
+		public Assignment getValAssignment() { return cValAssignment; }
+		
+		//'.bss'
+		public Keyword getValBssKeyword_0() { return cValBssKeyword_0; }
+	}
+	public class DataElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.pds16asm.Pds16asm.Data");
+		private final Assignment cValAssignment = (Assignment)rule.eContents().get(1);
+		private final Keyword cValDataKeyword_0 = (Keyword)cValAssignment.eContents().get(0);
+		
+		//Data:
+		//	val='.data';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//val='.data'
+		public Assignment getValAssignment() { return cValAssignment; }
+		
+		//'.data'
+		public Keyword getValDataKeyword_0() { return cValDataKeyword_0; }
+	}
+	public class EndElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.pds16asm.Pds16asm.End");
+		private final Assignment cValAssignment = (Assignment)rule.eContents().get(1);
+		private final Keyword cValEndKeyword_0 = (Keyword)cValAssignment.eContents().get(0);
+		
+		//End:
+		//	val='.end';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//val='.end'
+		public Assignment getValAssignment() { return cValAssignment; }
+		
+		//'.end'
+		public Keyword getValEndKeyword_0() { return cValEndKeyword_0; }
+	}
+	public class TextElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.pds16asm.Pds16asm.Text");
+		private final Assignment cValAssignment = (Assignment)rule.eContents().get(1);
+		private final Keyword cValTextKeyword_0 = (Keyword)cValAssignment.eContents().get(0);
+		
+		//Text:
+		//	val='.text';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//val='.text'
+		public Assignment getValAssignment() { return cValAssignment; }
+		
+		//'.text'
+		public Keyword getValTextKeyword_0() { return cValTextKeyword_0; }
 	}
 	public class AsciiElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.pds16asm.Pds16asm.Ascii");
@@ -2209,6 +2269,10 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 	private final LabelElements pLabel;
 	private final DirectiveElements pDirective;
 	private final LabelDirectiveElements pLabelDirective;
+	private final BssElements pBss;
+	private final DataElements pData;
+	private final EndElements pEnd;
+	private final TextElements pText;
 	private final AsciiElements pAscii;
 	private final AsciizElements pAsciiz;
 	private final ByteElements pByte;
@@ -2285,6 +2349,10 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		this.pLabel = new LabelElements();
 		this.pDirective = new DirectiveElements();
 		this.pLabelDirective = new LabelDirectiveElements();
+		this.pBss = new BssElements();
+		this.pData = new DataElements();
+		this.pEnd = new EndElements();
+		this.pText = new TextElements();
 		this.pAscii = new AsciiElements();
 		this.pAsciiz = new AsciizElements();
 		this.pByte = new ByteElements();
@@ -2406,7 +2474,7 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Directive:
-	//	'.bss' | '.data' | '.end' | '.text' | Equ | Org | Section | Set | LabelDirective;
+	//	Bss | Data | End | Text | Equ | Org | Section | Set | LabelDirective;
 	public DirectiveElements getDirectiveAccess() {
 		return pDirective;
 	}
@@ -2423,6 +2491,46 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getLabelDirectiveRule() {
 		return getLabelDirectiveAccess().getRule();
+	}
+	
+	//Bss:
+	//	val='.bss';
+	public BssElements getBssAccess() {
+		return pBss;
+	}
+	
+	public ParserRule getBssRule() {
+		return getBssAccess().getRule();
+	}
+	
+	//Data:
+	//	val='.data';
+	public DataElements getDataAccess() {
+		return pData;
+	}
+	
+	public ParserRule getDataRule() {
+		return getDataAccess().getRule();
+	}
+	
+	//End:
+	//	val='.end';
+	public EndElements getEndAccess() {
+		return pEnd;
+	}
+	
+	public ParserRule getEndRule() {
+		return getEndAccess().getRule();
+	}
+	
+	//Text:
+	//	val='.text';
+	public TextElements getTextAccess() {
+		return pText;
+	}
+	
+	public ParserRule getTextRule() {
+		return getTextAccess().getRule();
 	}
 	
 	//Ascii:
