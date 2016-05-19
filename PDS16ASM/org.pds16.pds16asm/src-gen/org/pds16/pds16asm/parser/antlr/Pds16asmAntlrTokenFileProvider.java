@@ -11,6 +11,6 @@ public class Pds16asmAntlrTokenFileProvider implements IAntlrTokenFileProvider {
 	@Override
 	public InputStream getAntlrTokenFile() {
 		ClassLoader classLoader = getClass().getClassLoader();
-		return classLoader.getResourceAsStream("org/pds16/pds16asm/parser/antlr/internal/InternalPds16asm.tokens");
+		return classLoader.getResourceAsStream("org/pds16/pds16asm/parser/antlr/internal/InternalPds16asmParser.tokens");
 	}
 }

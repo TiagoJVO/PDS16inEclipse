@@ -9,6 +9,8 @@ import com.google.inject.name.Names;
 import java.util.Properties;
 import org.eclipse.xtext.Constants;
 import org.eclipse.xtext.IGrammarAccess;
+import org.eclipse.xtext.conversion.impl.AbstractIDValueConverter;
+import org.eclipse.xtext.conversion.impl.IgnoreCaseIDValueConverter;
 import org.eclipse.xtext.generator.IGenerator2;
 import org.eclipse.xtext.naming.DefaultDeclarativeQualifiedNameProvider;
 import org.eclipse.xtext.naming.IQualifiedNameProvider;
@@ -21,6 +23,8 @@ import org.eclipse.xtext.parser.antlr.ITokenDefProvider;
 import org.eclipse.xtext.parser.antlr.Lexer;
 import org.eclipse.xtext.parser.antlr.LexerBindings;
 import org.eclipse.xtext.parser.antlr.LexerProvider;
+import org.eclipse.xtext.parsetree.reconstr.ITokenSerializer;
+import org.eclipse.xtext.parsetree.reconstr.impl.IgnoreCaseKeywordSerializer;
 import org.eclipse.xtext.resource.IContainer;
 import org.eclipse.xtext.resource.IResourceDescriptions;
 import org.eclipse.xtext.resource.containers.IAllContainersState;
@@ -43,7 +47,7 @@ import org.eclipse.xtext.service.SingletonBinding;
 import org.pds16.pds16asm.generator.Pds16asmGenerator;
 import org.pds16.pds16asm.parser.antlr.Pds16asmAntlrTokenFileProvider;
 import org.pds16.pds16asm.parser.antlr.Pds16asmParser;
-import org.pds16.pds16asm.parser.antlr.internal.InternalPds16asmLexer;
+import org.pds16.pds16asm.parser.antlr.lexer.InternalPds16asmLexer;
 import org.pds16.pds16asm.scoping.Pds16asmScopeProvider;
 import org.pds16.pds16asm.serializer.Pds16asmSemanticSequencer;
 import org.pds16.pds16asm.serializer.Pds16asmSyntacticSequencer;
@@ -135,6 +139,16 @@ public abstract class AbstractPds16asmRuntimeModule extends DefaultRuntimeModule
 			.to(InternalPds16asmLexer.class);
 	}
 	
+	// contributed by org.eclipse.xtext.xtext.generator.parser.antlr.XtextAntlrGeneratorFragment2
+	public Class<? extends ITokenSerializer.IKeywordSerializer> bindITokenSerializer$IKeywordSerializer() {
+		return IgnoreCaseKeywordSerializer.class;
+	}
+	
+	// contributed by org.eclipse.xtext.xtext.generator.parser.antlr.XtextAntlrGeneratorFragment2
+	public Class<? extends AbstractIDValueConverter> bindAbstractIDValueConverter() {
+		return IgnoreCaseIDValueConverter.class;
+	}
+	
 	// contributed by org.eclipse.xtext.xtext.generator.validation.ValidatorFragment2
 	@SingletonBinding(eager=true)
 	public Class<? extends Pds16asmValidator> bindPds16asmValidator() {
@@ -158,7 +172,7 @@ public abstract class AbstractPds16asmRuntimeModule extends DefaultRuntimeModule
 	
 	// contributed by org.eclipse.xtext.xtext.generator.scoping.ImportNamespacesScopingFragment2
 	public void configureIgnoreCaseLinking(Binder binder) {
-		binder.bindConstant().annotatedWith(IgnoreCaseLinking.class).to(false);
+		binder.bindConstant().annotatedWith(IgnoreCaseLinking.class).to(true);
 	}
 	
 	// contributed by org.eclipse.xtext.xtext.generator.exporting.QualifiedNamesFragment2

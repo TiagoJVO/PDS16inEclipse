@@ -69,7 +69,7 @@ import org.eclipse.xtext.ui.resource.ResourceServiceDescriptionLabelProvider;
 import org.eclipse.xtext.ui.shared.Access;
 import org.pds16.pds16asm.ide.contentassist.antlr.PartialPds16asmContentAssistParser;
 import org.pds16.pds16asm.ide.contentassist.antlr.Pds16asmParser;
-import org.pds16.pds16asm.ide.contentassist.antlr.internal.InternalPds16asmLexer;
+import org.pds16.pds16asm.ide.contentassist.antlr.lexer.InternalPds16asmLexer;
 import org.pds16.pds16asm.ui.contentassist.Pds16asmProposalProvider;
 import org.pds16.pds16asm.ui.labeling.Pds16asmDescriptionLabelProvider;
 import org.pds16.pds16asm.ui.labeling.Pds16asmLabelProvider;
@@ -107,7 +107,7 @@ public abstract class AbstractPds16asmUiModule extends DefaultUiModule {
 	public void configureHighlightingLexer(Binder binder) {
 		binder.bind(org.eclipse.xtext.parser.antlr.Lexer.class)
 			.annotatedWith(Names.named(LexerIdeBindings.HIGHLIGHTING))
-			.to(org.pds16.pds16asm.parser.antlr.internal.InternalPds16asmLexer.class);
+			.to(org.pds16.pds16asm.parser.antlr.lexer.InternalPds16asmLexer.class);
 	}
 	
 	// contributed by org.eclipse.xtext.xtext.generator.parser.antlr.XtextAntlrGeneratorFragment2
