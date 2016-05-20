@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/Pds16_ASM_Features_1.0.0.201605191925.jar" id="Pds16_ASM_Features" version="1.0.0.201605191925">
+      <category name="plugin"/>
+   </feature>
+   <category-def name="plugin" label="Pds16inEclipse"/>
+</site>

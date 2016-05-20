@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<site>
-   <feature url="features/PDS16_ASM_Editor_1.0.0.201605191737.jar" id="PDS16_ASM_Editor" version="1.0.0.201605191737">
-      <category name="plugin"/>
-   </feature>
-   <category-def name="plugin" label="plugin"/>
-</site>
