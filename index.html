@@ -1,37 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-
+    <title>Pds16inEcplise by TiagoJVO</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
     <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <title>Pds16inEclipse</title>
   </head>
-
   <body>
-    <header>
-      <div class="inner">
-        <h1>Pds16inEclipse</h1>
-        <h2></h2>
-        <a href="https://github.com/TiagoJVO/PDS16inEclipse" class="button"><small>View project on</small> GitHub</a>
-      </div>
-    </header>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/TiagoJVO/PDS16inEclipse">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/TiagoJVO/PDS16inEclipse/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/TiagoJVO/PDS16inEclipse/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h3>
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Pds16inEcplise</h1>
+          <p></p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/TiagoJVO">TiagoJVO</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h3>
 <a id="projeto" class="anchor" href="#projeto" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Projeto.</h3>
 
-<p>O projeto PDS16inEclipse consiste no desenvolvimento de uma ferramenta que visa facilitar a escrita de programas para o processador PDS16 usando a sua linguagem assembly. Este plug-in é, essencialmente, um editor de texto que integra funcionalidades para fazer uma verificação da semântica e da sintaxe em tempo de escrita de código. O desenvolvimento desta ferramenta é baseado na framework Xtext <a href="https://eclipse.org/Xtext/">Xtext</a> integrada no Ambiente Integrado de Desenvolvimento (IDE) <a href="https://eclipse.org/">Eclipse</a>. </p>
+<p>O projeto PDS16inEcplise consiste no desenvolvimento de uma ferramenta que visa facilitar a escrita de programas para o processador PDS16 usando a sua linguagem assembly. Este plug-in é, essencialmente, um editor de texto que integra funcionalidades para fazer uma verificação da semântica e da sintaxe em tempo de escrita de código. O desenvolvimento desta ferramenta é baseado na framework Xtext <a href="https://eclipse.org/Xtext/">Xtext</a> integrada no Ambiente Integrado de Desenvolvimento (IDE) <a href="https://eclipse.org/">Ecplise</a>. </p>
 
 <h3>
 <a id="assembly-pds16" class="anchor" href="#assembly-pds16" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Assembly PDS16</h3>
@@ -39,47 +49,13 @@
 <p>A arquitetura <a href="http://pwp.net.ipl.pt/cc.isel/ezeq/arquitetura/sistemas_didaticos/pds16/hardware/QuickRef_V2.pdf">PDS16</a> foi desenvolvida no Instituto Superior de Engenharia de Lisboa (ISEL), em 2008, com o objetivo de suportar não só uma mais fácil compreensão mas também o ensino experimental dos conceitos básicos subjacentes ao tema “Arquitetura de Computadores”. Esta arquitetura a 16 bits adota a mesma filosofia das máquinas do tipo Reduced Instruction Set Computer (RISC), oferecendo o seu Instruction Set Architecture (ISA) ao programador 6 registos de uso geral e cerca de 40 instruções distintas, organizadas em três classes: 6 instruções para controlo do fluxo de execução, 18 instruções de processamento de dados e 12 instruções de transferência de dados. </p>
 
 <h3>
-<a id="autores" class="anchor" href="#autores" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Processo de Instalação</h3>
-
-<p>
-     Para fazer o correto uso do editor de texto é necessario instalar o plug-in e defenir uma variavel de ambiente do assembler <a href="http://pwp.net.ipl.pt/cc.isel/ezeq/arquitetura/sistemas_didaticos/pds16/ferramentas/dasm.exe">DASM</a>.</br>
-     O plug-in pode ser instalado no IDE Eclipse de duas maneiras, fazendo download ficheiro ZIP ou instalar usando o seguinte link <a href="http://tiagojvo.github.io/PDS16inEclipse/">(http://tiagojvo.github.io/PDS16inEclipse/)</a>.</br>
-     Para a instalação do plug-in seja qual for a fonte é necessario seguir os seguintes passos:
-     <ul>
-	<li>Começar por defenir uma variavel de ambiente com o nome "DASM_PATH" com a respetiva path do assembler.</li>
-   	<li>De seguinda efetuar os seguintes passos no IDE Eclipse:</li>
-   	<ul>
-	  <li>Ir a tab "Help" -> "Install New Software"</li>
-	   <li>Clicar em "Add"  e no campo "Location" colocar o endereço web do plug-in ou a path da pasta descompactada.</li>
-	  <li>Selecionar o software "Pds16inEclipse" e prosseguir a instalação. </li>
-	</ul>
-     </ul>
-</p>
-  		
-
-<h3>
 <a id="autores" class="anchor" href="#autores" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Autores</h3>
 
-<p>Este plug-in foi desenvolvido por alunos do Instituto Superior de Engenharia de Lisboa (ISEL) no ambito da cadeira de Projeto e Seminario. Os contribuidores do projeto são: André Ramanlal (<a href="https://github.com/22mramanlal" class="user-mention">@22mramanlal</a>) e Tiago Oliveira (<a href="https://github.com/Tiagojvo" class="user-mention">@Tiagojvo</a>) coordenado pelos docentes Tiago Dias (<a href="https://github.com/tmdias" class="user-mention">@tmdias</a>) e Pedro Sampaio (<a href="https://github.com/pmfsampaio" class="user-mention">@pmfsampaio</a>).</p>
-        </section>
+<p>Este plug-in foi desenvolvido por alunos do Instituto Superior de Engenharia de Lisboa (ISEL) no ambito da cadeira de Projeto e Seminario. Os contribuidores do projeto são: André Ramanlal (<a href="https://github.com/22mramanlal" class="user-mention">@22mramanlal</a>) e Tiago Oliveira (<a href="https://github.com/Tiagojvo" class="user-mention">@Tiagojvo</a>) coordenado pelos docentes Tiago Dias (@) e Pedro Sampaio (@).</p>
+      </section>
 
-        <aside id="sidebar">
-          <a href="https://github.com/TiagoJVO/PDS16inEclipse/zipball/gh-pages/PDS16_Editor_Plugin" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/TiagoJVO/PDS16inEclipse/tarball/gh-pages/PDS16_Editor_Plugin" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/TiagoJVO/PDS16inEclipse"></a> is maintained by <a href="https://github.com/TiagoJVO">TiagoJVO</a> and by <a href="https://github.com/22mramanlal">22mramanlal</a>.</p>
-
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside> 
-      </div>
     </div>
-
-  
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
   </body>
 </html>
