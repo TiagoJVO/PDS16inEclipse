@@ -4,10 +4,20 @@
 package org.pds16.pds16asm.ui
 
 import org.eclipse.xtend.lib.annotations.FinalFieldsConstructor
+import org.eclipse.xtext.ui.editor.syntaxcoloring.IHighlightingConfiguration
+import org.eclipse.xtext.ide.editor.syntaxcoloring.ISemanticHighlightingCalculator
 
 /**
  * Use this class to register components to be used within the Eclipse IDE.
  */
 @FinalFieldsConstructor
 class Pds16asmUiModule extends AbstractPds16asmUiModule {
+
+	 def Class<? extends IHighlightingConfiguration> bindIHighlightingConfiguration () {
+ 		return Pds16asmHighlightingConfiguration;
+ 	 }
+	 
+	 def Class<? extends ISemanticHighlightingCalculator> bindISemanticHighlightingCalculator(){
+  		return Pds16asmHighlightingCalculator;
+     }
 }

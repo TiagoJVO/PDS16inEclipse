@@ -5,7 +5,11 @@ package org.pds16.pds16asm.ui;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.eclipse.xtend.lib.annotations.FinalFieldsConstructor;
+import org.eclipse.xtext.ide.editor.syntaxcoloring.ISemanticHighlightingCalculator;
+import org.eclipse.xtext.ui.editor.syntaxcoloring.IHighlightingConfiguration;
 import org.pds16.pds16asm.ui.AbstractPds16asmUiModule;
+import org.pds16.pds16asm.ui.Pds16asmHighlightingCalculator;
+import org.pds16.pds16asm.ui.Pds16asmHighlightingConfiguration;
 
 /**
  * Use this class to register components to be used within the Eclipse IDE.
@@ -13,6 +17,14 @@ import org.pds16.pds16asm.ui.AbstractPds16asmUiModule;
 @FinalFieldsConstructor
 @SuppressWarnings("all")
 public class Pds16asmUiModule extends AbstractPds16asmUiModule {
+  public Class<? extends IHighlightingConfiguration> bindIHighlightingConfiguration() {
+    return Pds16asmHighlightingConfiguration.class;
+  }
+  
+  public Class<? extends ISemanticHighlightingCalculator> bindISemanticHighlightingCalculator() {
+    return Pds16asmHighlightingCalculator.class;
+  }
+  
   public Pds16asmUiModule(final AbstractUIPlugin plugin) {
     super(plugin);
   }
