@@ -183,13 +183,3 @@ terminal WS			: (' '|'\t'|'\r'|'\n')+;
 
 terminal ANY_OTHER: .;
 
-/*grammar org.pds16.pds16asm.Pds16asm with org.eclipse.xtext.common.Terminals
-
-generate pds16asm "http://www.pds16.org/pds16asm/Pds16asm"
-
-Model:
-	greetings+=Greeting*;
-	
-Greeting:
-	'Hello' name=ID '!';*/
-
