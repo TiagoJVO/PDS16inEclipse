@@ -12,10 +12,13 @@ public class Pds16asmHighlightingConfiguration extends DefaultHighlightingConfig
   
   public final static String COMMENT = "Comment";
   
+  public final static String LABEL = "Label";
+  
   @Override
   public void configure(final IHighlightingConfigurationAcceptor acceptor) {
     this.addType(acceptor, Pds16asmHighlightingConfiguration.RULES, 20, 239, 35, SWT.NORMAL);
     this.addType(acceptor, Pds16asmHighlightingConfiguration.COMMENT, 255, 32, 218, SWT.NORMAL);
+    this.addType(acceptor, Pds16asmHighlightingConfiguration.LABEL, 20, 32, 218, SWT.BOLD);
   }
   
   public void addType(final IHighlightingConfigurationAcceptor acceptor, final String s, final int r, final int g, final int b, final int style) {

@@ -36,7 +36,6 @@ import org.pds16.pds16asm.services.Pds16asmGrammarAccess;
 		tokenNameToValue.put("LeftParenthesis", "'('");
 		tokenNameToValue.put("RightParenthesis", "')'");
 		tokenNameToValue.put("Comma", "','");
-		tokenNameToValue.put("Colon", "':'");
 		tokenNameToValue.put("LeftSquareBracket", "'['");
 		tokenNameToValue.put("RightSquareBracket", "']'");
 		tokenNameToValue.put("Jc", "'jc'");
@@ -1715,27 +1714,27 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Label__ValueAlternatives_2_0
+rule__Label__ValueAlternatives_1_0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getLabelAccess().getValueLabelParserRuleCall_2_0_0()); }
+		{ before(grammarAccess.getLabelAccess().getValueLabelParserRuleCall_1_0_0()); }
 		ruleLabel
-		{ after(grammarAccess.getLabelAccess().getValueLabelParserRuleCall_2_0_0()); }
+		{ after(grammarAccess.getLabelAccess().getValueLabelParserRuleCall_1_0_0()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getLabelAccess().getValueLabelDirectiveParserRuleCall_2_0_1()); }
+		{ before(grammarAccess.getLabelAccess().getValueLabelDirectiveParserRuleCall_1_0_1()); }
 		ruleLabelDirective
-		{ after(grammarAccess.getLabelAccess().getValueLabelDirectiveParserRuleCall_2_0_1()); }
+		{ after(grammarAccess.getLabelAccess().getValueLabelDirectiveParserRuleCall_1_0_1()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getLabelAccess().getValueInstructionsParserRuleCall_2_0_2()); }
+		{ before(grammarAccess.getLabelAccess().getValueInstructionsParserRuleCall_1_0_2()); }
 		ruleInstructions
-		{ after(grammarAccess.getLabelAccess().getValueInstructionsParserRuleCall_2_0_2()); }
+		{ after(grammarAccess.getLabelAccess().getValueInstructionsParserRuleCall_1_0_2()); }
 	)
 ;
 finally {
@@ -3320,7 +3319,6 @@ rule__Label__Group__1
 	}
 :
 	rule__Label__Group__1__Impl
-	rule__Label__Group__2
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -3332,35 +3330,9 @@ rule__Label__Group__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getLabelAccess().getColonKeyword_1()); }
-	Colon
-	{ after(grammarAccess.getLabelAccess().getColonKeyword_1()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Label__Group__2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__Label__Group__2__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Label__Group__2__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getLabelAccess().getValueAssignment_2()); }
-	(rule__Label__ValueAssignment_2)
-	{ after(grammarAccess.getLabelAccess().getValueAssignment_2()); }
+	{ before(grammarAccess.getLabelAccess().getValueAssignment_1()); }
+	(rule__Label__ValueAssignment_1)
+	{ after(grammarAccess.getLabelAccess().getValueAssignment_1()); }
 )
 ;
 finally {
@@ -7088,24 +7060,24 @@ rule__Label__LabelNameAssignment_0
 	}
 :
 	(
-		{ before(grammarAccess.getLabelAccess().getLabelNameIDTerminalRuleCall_0_0()); }
-		RULE_ID
-		{ after(grammarAccess.getLabelAccess().getLabelNameIDTerminalRuleCall_0_0()); }
+		{ before(grammarAccess.getLabelAccess().getLabelNameIDLABELTerminalRuleCall_0_0()); }
+		RULE_IDLABEL
+		{ after(grammarAccess.getLabelAccess().getLabelNameIDLABELTerminalRuleCall_0_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Label__ValueAssignment_2
+rule__Label__ValueAssignment_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getLabelAccess().getValueAlternatives_2_0()); }
-		(rule__Label__ValueAlternatives_2_0)
-		{ after(grammarAccess.getLabelAccess().getValueAlternatives_2_0()); }
+		{ before(grammarAccess.getLabelAccess().getValueAlternatives_1_0()); }
+		(rule__Label__ValueAlternatives_1_0)
+		{ after(grammarAccess.getLabelAccess().getValueAlternatives_1_0()); }
 	)
 ;
 finally {

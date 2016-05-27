@@ -165,8 +165,6 @@ RightParenthesis : ')';
 
 Comma : ',';
 
-Colon : ':';
-
 LeftSquareBracket : '[';
 
 RightSquareBracket : ']';
@@ -183,7 +181,9 @@ RULE_CHAR : RULE_SIGN? '\'' RULE_ANY_OTHER '\'';
 
 fragment RULE_SIGN : ('-'|'+');
 
-RULE_ID : ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+RULE_ID : ('a'..'z'|'A'..'Z'|'_'|'0'..'9')+;
+
+RULE_IDLABEL : ('a'..'z'|'A'..'Z'|'_'|'0'..'9')+ ':';
 
 RULE_INT : RULE_SIGN? ('0'..'9')+;
 

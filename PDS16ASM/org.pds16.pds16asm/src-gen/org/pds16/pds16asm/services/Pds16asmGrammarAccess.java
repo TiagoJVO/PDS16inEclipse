@@ -63,44 +63,40 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.pds16asm.Pds16asm.Label");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cLabelNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cLabelNameIDTerminalRuleCall_0_0 = (RuleCall)cLabelNameAssignment_0.eContents().get(0);
-		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final Alternatives cValueAlternatives_2_0 = (Alternatives)cValueAssignment_2.eContents().get(0);
-		private final RuleCall cValueLabelParserRuleCall_2_0_0 = (RuleCall)cValueAlternatives_2_0.eContents().get(0);
-		private final RuleCall cValueLabelDirectiveParserRuleCall_2_0_1 = (RuleCall)cValueAlternatives_2_0.eContents().get(1);
-		private final RuleCall cValueInstructionsParserRuleCall_2_0_2 = (RuleCall)cValueAlternatives_2_0.eContents().get(2);
+		private final RuleCall cLabelNameIDLABELTerminalRuleCall_0_0 = (RuleCall)cLabelNameAssignment_0.eContents().get(0);
+		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Alternatives cValueAlternatives_1_0 = (Alternatives)cValueAssignment_1.eContents().get(0);
+		private final RuleCall cValueLabelParserRuleCall_1_0_0 = (RuleCall)cValueAlternatives_1_0.eContents().get(0);
+		private final RuleCall cValueLabelDirectiveParserRuleCall_1_0_1 = (RuleCall)cValueAlternatives_1_0.eContents().get(1);
+		private final RuleCall cValueInstructionsParserRuleCall_1_0_2 = (RuleCall)cValueAlternatives_1_0.eContents().get(2);
 		
 		//Label:
-		//	labelName=ID ':' value=(Label | LabelDirective | Instructions);
+		//	labelName=IDLABEL value=(Label | LabelDirective | Instructions);
 		@Override public ParserRule getRule() { return rule; }
 		
-		//labelName=ID ':' value=(Label | LabelDirective | Instructions)
+		//labelName=IDLABEL value=(Label | LabelDirective | Instructions)
 		public Group getGroup() { return cGroup; }
 		
-		//labelName=ID
+		//labelName=IDLABEL
 		public Assignment getLabelNameAssignment_0() { return cLabelNameAssignment_0; }
 		
-		//ID
-		public RuleCall getLabelNameIDTerminalRuleCall_0_0() { return cLabelNameIDTerminalRuleCall_0_0; }
-		
-		//':'
-		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
+		//IDLABEL
+		public RuleCall getLabelNameIDLABELTerminalRuleCall_0_0() { return cLabelNameIDLABELTerminalRuleCall_0_0; }
 		
 		//value=(Label | LabelDirective | Instructions)
-		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
+		public Assignment getValueAssignment_1() { return cValueAssignment_1; }
 		
 		//(Label | LabelDirective | Instructions)
-		public Alternatives getValueAlternatives_2_0() { return cValueAlternatives_2_0; }
+		public Alternatives getValueAlternatives_1_0() { return cValueAlternatives_1_0; }
 		
 		//Label
-		public RuleCall getValueLabelParserRuleCall_2_0_0() { return cValueLabelParserRuleCall_2_0_0; }
+		public RuleCall getValueLabelParserRuleCall_1_0_0() { return cValueLabelParserRuleCall_1_0_0; }
 		
 		//LabelDirective
-		public RuleCall getValueLabelDirectiveParserRuleCall_2_0_1() { return cValueLabelDirectiveParserRuleCall_2_0_1; }
+		public RuleCall getValueLabelDirectiveParserRuleCall_1_0_1() { return cValueLabelDirectiveParserRuleCall_1_0_1; }
 		
 		//Instructions
-		public RuleCall getValueInstructionsParserRuleCall_2_0_2() { return cValueInstructionsParserRuleCall_2_0_2; }
+		public RuleCall getValueInstructionsParserRuleCall_1_0_2() { return cValueInstructionsParserRuleCall_1_0_2; }
 	}
 	public class DirectiveElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.pds16asm.Pds16asm.Directive");
@@ -2332,6 +2328,7 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 	private final TerminalRule tCHAR;
 	private final TerminalRule tSIGN;
 	private final TerminalRule tID;
+	private final TerminalRule tIDLABEL;
 	private final TerminalRule tINT;
 	private final TerminalRule tSTRING;
 	private final TerminalRule tML_COMMENT;
@@ -2412,6 +2409,7 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		this.tCHAR = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.pds16asm.Pds16asm.CHAR");
 		this.tSIGN = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.pds16asm.Pds16asm.SIGN");
 		this.tID = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.pds16asm.Pds16asm.ID");
+		this.tIDLABEL = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.pds16asm.Pds16asm.IDLABEL");
 		this.tINT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.pds16asm.Pds16asm.INT");
 		this.tSTRING = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.pds16asm.Pds16asm.STRING");
 		this.tML_COMMENT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.pds16asm.Pds16asm.ML_COMMENT");
@@ -2464,7 +2462,7 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Label:
-	//	labelName=ID ':' value=(Label | LabelDirective | Instructions);
+	//	labelName=IDLABEL value=(Label | LabelDirective | Instructions);
 	public LabelElements getLabelAccess() {
 		return pLabel;
 	}
@@ -3108,9 +3106,15 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//terminal ID:
-	//	('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*;
+	//	'a'..'z' | 'A'..'Z' | '_' | '0'..'9'+;
 	public TerminalRule getIDRule() {
 		return tID;
+	}
+	
+	//terminal IDLABEL:
+	//	('a'..'z' | 'A'..'Z' | '_' | '0'..'9')+ ':';
+	public TerminalRule getIDLABELRule() {
+		return tIDLABEL;
 	}
 	
 	//terminal INT returns ecore::EInt:

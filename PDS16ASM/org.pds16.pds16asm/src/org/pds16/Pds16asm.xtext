@@ -11,7 +11,7 @@ Statement:
 	Instructions | Label | Directive;
 
 Label:
-	labelName=ID ':' value=(Label | LabelDirective | Instructions);
+	labelName=IDLABEL  value=(Label | LabelDirective | Instructions);
 
 Directive:
 	Bss | Data | End | Text | Equ | Org | Section | Set | LabelDirective;
@@ -170,7 +170,8 @@ terminal SIGN : '-' | '+';
 
 /******************************************************************************************/
 
-terminal ID : ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+terminal ID : ('a'..'z'|'A'..'Z'|'_'|'0'..'9')+;
+terminal IDLABEL : ('a'..'z'|'A'..'Z'|'_'|'0'..'9')+ ':';
 terminal INT returns ecore::EInt: SIGN? ('0'..'9')+;
 terminal STRING	: 
 			'"' ( '\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('\\'|'"') )* '"' |

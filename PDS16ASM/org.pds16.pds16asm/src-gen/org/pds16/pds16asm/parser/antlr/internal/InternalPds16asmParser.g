@@ -152,9 +152,9 @@ ruleLabel returns [EObject current=null]
 	(
 		(
 			(
-				lv_labelName_0_0=RULE_ID
+				lv_labelName_0_0=RULE_IDLABEL
 				{
-					newLeafNode(lv_labelName_0_0, grammarAccess.getLabelAccess().getLabelNameIDTerminalRuleCall_0_0());
+					newLeafNode(lv_labelName_0_0, grammarAccess.getLabelAccess().getLabelNameIDLABELTerminalRuleCall_0_0());
 				}
 				{
 					if ($current==null) {
@@ -164,21 +164,17 @@ ruleLabel returns [EObject current=null]
 						$current,
 						"labelName",
 						lv_labelName_0_0,
-						"org.pds16.pds16asm.Pds16asm.ID");
+						"org.pds16.pds16asm.Pds16asm.IDLABEL");
 				}
 			)
 		)
-		otherlv_1=Colon
-		{
-			newLeafNode(otherlv_1, grammarAccess.getLabelAccess().getColonKeyword_1());
-		}
 		(
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getLabelAccess().getValueLabelParserRuleCall_2_0_0());
+						newCompositeNode(grammarAccess.getLabelAccess().getValueLabelParserRuleCall_1_0_0());
 					}
-					lv_value_2_1=ruleLabel
+					lv_value_1_1=ruleLabel
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getLabelRule());
@@ -186,15 +182,15 @@ ruleLabel returns [EObject current=null]
 						set(
 							$current,
 							"value",
-							lv_value_2_1,
+							lv_value_1_1,
 							"org.pds16.pds16asm.Pds16asm.Label");
 						afterParserOrEnumRuleCall();
 					}
 					    |
 					{
-						newCompositeNode(grammarAccess.getLabelAccess().getValueLabelDirectiveParserRuleCall_2_0_1());
+						newCompositeNode(grammarAccess.getLabelAccess().getValueLabelDirectiveParserRuleCall_1_0_1());
 					}
-					lv_value_2_2=ruleLabelDirective
+					lv_value_1_2=ruleLabelDirective
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getLabelRule());
@@ -202,15 +198,15 @@ ruleLabel returns [EObject current=null]
 						set(
 							$current,
 							"value",
-							lv_value_2_2,
+							lv_value_1_2,
 							"org.pds16.pds16asm.Pds16asm.LabelDirective");
 						afterParserOrEnumRuleCall();
 					}
 					    |
 					{
-						newCompositeNode(grammarAccess.getLabelAccess().getValueInstructionsParserRuleCall_2_0_2());
+						newCompositeNode(grammarAccess.getLabelAccess().getValueInstructionsParserRuleCall_1_0_2());
 					}
-					lv_value_2_3=ruleInstructions
+					lv_value_1_3=ruleInstructions
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getLabelRule());
@@ -218,7 +214,7 @@ ruleLabel returns [EObject current=null]
 						set(
 							$current,
 							"value",
-							lv_value_2_3,
+							lv_value_1_3,
 							"org.pds16.pds16asm.Pds16asm.Instructions");
 						afterParserOrEnumRuleCall();
 					}

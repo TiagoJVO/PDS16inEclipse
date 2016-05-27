@@ -532,7 +532,7 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Label returns Label
 	 *
 	 * Constraint:
-	 *     (labelName=ID (value=Label | value=LabelDirective | value=Instructions))
+	 *     (labelName=IDLABEL (value=Label | value=LabelDirective | value=Instructions))
 	 */
 	protected void sequence_Label(ISerializationContext context, Label semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

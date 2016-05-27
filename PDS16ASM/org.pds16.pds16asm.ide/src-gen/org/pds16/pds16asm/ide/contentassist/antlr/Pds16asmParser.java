@@ -36,7 +36,7 @@ public class Pds16asmParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getStatementAccess().getAlternatives(), "rule__Statement__Alternatives");
-					put(grammarAccess.getLabelAccess().getValueAlternatives_2_0(), "rule__Label__ValueAlternatives_2_0");
+					put(grammarAccess.getLabelAccess().getValueAlternatives_1_0(), "rule__Label__ValueAlternatives_1_0");
 					put(grammarAccess.getDirectiveAccess().getAlternatives(), "rule__Directive__Alternatives");
 					put(grammarAccess.getLabelDirectiveAccess().getAlternatives(), "rule__LabelDirective__Alternatives");
 					put(grammarAccess.getByteAccess().getNumberAlternatives_1_0(), "rule__Byte__NumberAlternatives_1_0");
@@ -143,7 +143,7 @@ public class Pds16asmParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLowOrHightAccess().getGroup(), "rule__LowOrHight__Group__0");
 					put(grammarAccess.getPDS16ASMAccess().getInstuctionsAssignment(), "rule__PDS16ASM__InstuctionsAssignment");
 					put(grammarAccess.getLabelAccess().getLabelNameAssignment_0(), "rule__Label__LabelNameAssignment_0");
-					put(grammarAccess.getLabelAccess().getValueAssignment_2(), "rule__Label__ValueAssignment_2");
+					put(grammarAccess.getLabelAccess().getValueAssignment_1(), "rule__Label__ValueAssignment_1");
 					put(grammarAccess.getBssAccess().getValAssignment(), "rule__Bss__ValAssignment");
 					put(grammarAccess.getDataAccess().getValAssignment(), "rule__Data__ValAssignment");
 					put(grammarAccess.getEndAccess().getValAssignment(), "rule__End__ValAssignment");
