@@ -867,7 +867,7 @@ public interface Pds16asmPackage extends EPackage
   int ORL = 34;
 
   /**
-   * The feature id for the '<em><b>Rd</b></em>' containment reference.
+   * The feature id for the '<em><b>Rd</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -876,7 +876,7 @@ public interface Pds16asmPackage extends EPackage
   int ORL__RD = LOGICA_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Rm</b></em>' containment reference.
+   * The feature id for the '<em><b>Rm</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1102,7 +1102,7 @@ public interface Pds16asmPackage extends EPackage
   int IMMEDIATE = 44;
 
   /**
-   * The feature id for the '<em><b>Register</b></em>' containment reference.
+   * The feature id for the '<em><b>Register</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1148,7 +1148,7 @@ public interface Pds16asmPackage extends EPackage
   int DIRECT = 45;
 
   /**
-   * The feature id for the '<em><b>Register</b></em>' containment reference.
+   * The feature id for the '<em><b>Register</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1185,7 +1185,7 @@ public interface Pds16asmPackage extends EPackage
   int INDEXED = 46;
 
   /**
-   * The feature id for the '<em><b>Rd</b></em>' containment reference.
+   * The feature id for the '<em><b>Rd</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1194,7 +1194,7 @@ public interface Pds16asmPackage extends EPackage
   int INDEXED__RD = LD_INDEXED_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Rbx</b></em>' containment reference.
+   * The feature id for the '<em><b>Rbx</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1231,13 +1231,31 @@ public interface Pds16asmPackage extends EPackage
   int BASED_INDEXED = 47;
 
   /**
+   * The feature id for the '<em><b>Rbx</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BASED_INDEXED__RBX = LD_BASED_INDEXED_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Rix</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BASED_INDEXED__RIX = LD_BASED_INDEXED_FEATURE_COUNT + 1;
+
+  /**
    * The number of structural features of the '<em>Based Indexed</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BASED_INDEXED_FEATURE_COUNT = LD_BASED_INDEXED_FEATURE_COUNT + 0;
+  int BASED_INDEXED_FEATURE_COUNT = LD_BASED_INDEXED_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.pds16.pds16asm.pds16asm.impl.DirectOrLabelImpl <em>Direct Or Label</em>}' class.
@@ -1435,7 +1453,7 @@ public interface Pds16asmPackage extends EPackage
   int OPERATION_WITH_TWO_REGISTERS = 53;
 
   /**
-   * The feature id for the '<em><b>Rd</b></em>' containment reference.
+   * The feature id for the '<em><b>Rd</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1444,7 +1462,7 @@ public interface Pds16asmPackage extends EPackage
   int OPERATION_WITH_TWO_REGISTERS__RD = ORL__RD;
 
   /**
-   * The feature id for the '<em><b>Rm</b></em>' containment reference.
+   * The feature id for the '<em><b>Rm</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1472,7 +1490,7 @@ public interface Pds16asmPackage extends EPackage
   int OPERATIONS_WITH_TREE_REGISTERS = 54;
 
   /**
-   * The feature id for the '<em><b>Rd</b></em>' containment reference.
+   * The feature id for the '<em><b>Rd</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1481,7 +1499,7 @@ public interface Pds16asmPackage extends EPackage
   int OPERATIONS_WITH_TREE_REGISTERS__RD = ADD_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Rm</b></em>' containment reference.
+   * The feature id for the '<em><b>Rm</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1490,7 +1508,7 @@ public interface Pds16asmPackage extends EPackage
   int OPERATIONS_WITH_TREE_REGISTERS__RM = ADD_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Rn</b></em>' containment reference.
+   * The feature id for the '<em><b>Rn</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1518,7 +1536,7 @@ public interface Pds16asmPackage extends EPackage
   int OPERATIONS_WITH_CONSTANT = 55;
 
   /**
-   * The feature id for the '<em><b>Rd</b></em>' containment reference.
+   * The feature id for the '<em><b>Rd</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1527,7 +1545,7 @@ public interface Pds16asmPackage extends EPackage
   int OPERATIONS_WITH_CONSTANT__RD = ADD_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Rm</b></em>' containment reference.
+   * The feature id for the '<em><b>Rm</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1564,7 +1582,7 @@ public interface Pds16asmPackage extends EPackage
   int OPERATION_SHIFT = 56;
 
   /**
-   * The feature id for the '<em><b>Rd</b></em>' containment reference.
+   * The feature id for the '<em><b>Rd</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1573,7 +1591,7 @@ public interface Pds16asmPackage extends EPackage
   int OPERATION_SHIFT__RD = SHL_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Rm</b></em>' containment reference.
+   * The feature id for the '<em><b>Rm</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1628,7 +1646,7 @@ public interface Pds16asmPackage extends EPackage
   int OPERATION_WITH_OFFSET__OP = JUMP_OP__OP;
 
   /**
-   * The feature id for the '<em><b>Rbx</b></em>' containment reference.
+   * The feature id for the '<em><b>Rbx</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1720,52 +1738,6 @@ public interface Pds16asmPackage extends EPackage
   int LOW_OR_HIGHT_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.pds16.pds16asm.pds16asm.impl.RegistersImpl <em>Registers</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.pds16.pds16asm.pds16asm.impl.RegistersImpl
-   * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getRegisters()
-   * @generated
-   */
-  int REGISTERS = 60;
-
-  /**
-   * The feature id for the '<em><b>Rbx</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int REGISTERS__RBX = ADD_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Rix</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int REGISTERS__RIX = ADD_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int REGISTERS__VALUE = ADD_FEATURE_COUNT + 2;
-
-  /**
-   * The number of structural features of the '<em>Registers</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int REGISTERS_FEATURE_COUNT = ADD_FEATURE_COUNT + 3;
-
-  /**
    * The meta object id for the '{@link org.pds16.pds16asm.pds16asm.impl.NumberImpl <em>Number</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1773,7 +1745,7 @@ public interface Pds16asmPackage extends EPackage
    * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getNumber()
    * @generated
    */
-  int NUMBER = 61;
+  int NUMBER = 60;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2332,26 +2304,26 @@ public interface Pds16asmPackage extends EPackage
   EClass getOrl();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.pds16asm.Orl#getRd <em>Rd</em>}'.
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.Orl#getRd <em>Rd</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Rd</em>'.
+   * @return the meta object for the attribute '<em>Rd</em>'.
    * @see org.pds16.pds16asm.pds16asm.Orl#getRd()
    * @see #getOrl()
    * @generated
    */
-  EReference getOrl_Rd();
+  EAttribute getOrl_Rd();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.pds16asm.Orl#getRm <em>Rm</em>}'.
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.Orl#getRm <em>Rm</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Rm</em>'.
+   * @return the meta object for the attribute '<em>Rm</em>'.
    * @see org.pds16.pds16asm.pds16asm.Orl#getRm()
    * @see #getOrl()
    * @generated
    */
-  EReference getOrl_Rm();
+  EAttribute getOrl_Rm();
 
   /**
    * Returns the meta object for class '{@link org.pds16.pds16asm.pds16asm.Xrl <em>Xrl</em>}'.
@@ -2487,15 +2459,15 @@ public interface Pds16asmPackage extends EPackage
   EClass getImmediate();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.pds16asm.Immediate#getRegister <em>Register</em>}'.
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.Immediate#getRegister <em>Register</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Register</em>'.
+   * @return the meta object for the attribute '<em>Register</em>'.
    * @see org.pds16.pds16asm.pds16asm.Immediate#getRegister()
    * @see #getImmediate()
    * @generated
    */
-  EReference getImmediate_Register();
+  EAttribute getImmediate_Register();
 
   /**
    * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.pds16asm.Immediate#getImmediate8 <em>Immediate8</em>}'.
@@ -2530,15 +2502,15 @@ public interface Pds16asmPackage extends EPackage
   EClass getDirect();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.pds16asm.Direct#getRegister <em>Register</em>}'.
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.Direct#getRegister <em>Register</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Register</em>'.
+   * @return the meta object for the attribute '<em>Register</em>'.
    * @see org.pds16.pds16asm.pds16asm.Direct#getRegister()
    * @see #getDirect()
    * @generated
    */
-  EReference getDirect_Register();
+  EAttribute getDirect_Register();
 
   /**
    * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.pds16asm.Direct#getDirect7 <em>Direct7</em>}'.
@@ -2562,26 +2534,26 @@ public interface Pds16asmPackage extends EPackage
   EClass getIndexed();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.pds16asm.Indexed#getRd <em>Rd</em>}'.
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.Indexed#getRd <em>Rd</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Rd</em>'.
+   * @return the meta object for the attribute '<em>Rd</em>'.
    * @see org.pds16.pds16asm.pds16asm.Indexed#getRd()
    * @see #getIndexed()
    * @generated
    */
-  EReference getIndexed_Rd();
+  EAttribute getIndexed_Rd();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.pds16asm.Indexed#getRbx <em>Rbx</em>}'.
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.Indexed#getRbx <em>Rbx</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Rbx</em>'.
+   * @return the meta object for the attribute '<em>Rbx</em>'.
    * @see org.pds16.pds16asm.pds16asm.Indexed#getRbx()
    * @see #getIndexed()
    * @generated
    */
-  EReference getIndexed_Rbx();
+  EAttribute getIndexed_Rbx();
 
   /**
    * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.pds16asm.Indexed#getIdx3 <em>Idx3</em>}'.
@@ -2603,6 +2575,28 @@ public interface Pds16asmPackage extends EPackage
    * @generated
    */
   EClass getBasedIndexed();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.BasedIndexed#getRbx <em>Rbx</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Rbx</em>'.
+   * @see org.pds16.pds16asm.pds16asm.BasedIndexed#getRbx()
+   * @see #getBasedIndexed()
+   * @generated
+   */
+  EAttribute getBasedIndexed_Rbx();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.BasedIndexed#getRix <em>Rix</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Rix</em>'.
+   * @see org.pds16.pds16asm.pds16asm.BasedIndexed#getRix()
+   * @see #getBasedIndexed()
+   * @generated
+   */
+  EAttribute getBasedIndexed_Rix();
 
   /**
    * Returns the meta object for class '{@link org.pds16.pds16asm.pds16asm.DirectOrLabel <em>Direct Or Label</em>}'.
@@ -2785,15 +2779,15 @@ public interface Pds16asmPackage extends EPackage
   EClass getOperationsWithTreeRegisters();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.pds16asm.OperationsWithTreeRegisters#getRn <em>Rn</em>}'.
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.OperationsWithTreeRegisters#getRn <em>Rn</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Rn</em>'.
+   * @return the meta object for the attribute '<em>Rn</em>'.
    * @see org.pds16.pds16asm.pds16asm.OperationsWithTreeRegisters#getRn()
    * @see #getOperationsWithTreeRegisters()
    * @generated
    */
-  EReference getOperationsWithTreeRegisters_Rn();
+  EAttribute getOperationsWithTreeRegisters_Rn();
 
   /**
    * Returns the meta object for class '{@link org.pds16.pds16asm.pds16asm.OperationsWithConstant <em>Operations With Constant</em>}'.
@@ -2806,26 +2800,26 @@ public interface Pds16asmPackage extends EPackage
   EClass getOperationsWithConstant();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.pds16asm.OperationsWithConstant#getRd <em>Rd</em>}'.
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.OperationsWithConstant#getRd <em>Rd</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Rd</em>'.
+   * @return the meta object for the attribute '<em>Rd</em>'.
    * @see org.pds16.pds16asm.pds16asm.OperationsWithConstant#getRd()
    * @see #getOperationsWithConstant()
    * @generated
    */
-  EReference getOperationsWithConstant_Rd();
+  EAttribute getOperationsWithConstant_Rd();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.pds16asm.OperationsWithConstant#getRm <em>Rm</em>}'.
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.OperationsWithConstant#getRm <em>Rm</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Rm</em>'.
+   * @return the meta object for the attribute '<em>Rm</em>'.
    * @see org.pds16.pds16asm.pds16asm.OperationsWithConstant#getRm()
    * @see #getOperationsWithConstant()
    * @generated
    */
-  EReference getOperationsWithConstant_Rm();
+  EAttribute getOperationsWithConstant_Rm();
 
   /**
    * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.pds16asm.OperationsWithConstant#getConst4 <em>Const4</em>}'.
@@ -2849,26 +2843,26 @@ public interface Pds16asmPackage extends EPackage
   EClass getOperationShift();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.pds16asm.OperationShift#getRd <em>Rd</em>}'.
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.OperationShift#getRd <em>Rd</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Rd</em>'.
+   * @return the meta object for the attribute '<em>Rd</em>'.
    * @see org.pds16.pds16asm.pds16asm.OperationShift#getRd()
    * @see #getOperationShift()
    * @generated
    */
-  EReference getOperationShift_Rd();
+  EAttribute getOperationShift_Rd();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.pds16asm.OperationShift#getRm <em>Rm</em>}'.
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.OperationShift#getRm <em>Rm</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Rm</em>'.
+   * @return the meta object for the attribute '<em>Rm</em>'.
    * @see org.pds16.pds16asm.pds16asm.OperationShift#getRm()
    * @see #getOperationShift()
    * @generated
    */
-  EReference getOperationShift_Rm();
+  EAttribute getOperationShift_Rm();
 
   /**
    * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.pds16asm.OperationShift#getConst4 <em>Const4</em>}'.
@@ -2903,15 +2897,15 @@ public interface Pds16asmPackage extends EPackage
   EClass getOperationWithOffset();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.pds16asm.OperationWithOffset#getRbx <em>Rbx</em>}'.
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.OperationWithOffset#getRbx <em>Rbx</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Rbx</em>'.
+   * @return the meta object for the attribute '<em>Rbx</em>'.
    * @see org.pds16.pds16asm.pds16asm.OperationWithOffset#getRbx()
    * @see #getOperationWithOffset()
    * @generated
    */
-  EReference getOperationWithOffset_Rbx();
+  EAttribute getOperationWithOffset_Rbx();
 
   /**
    * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.pds16asm.OperationWithOffset#getOffset8 <em>Offset8</em>}'.
@@ -2976,49 +2970,6 @@ public interface Pds16asmPackage extends EPackage
    * @generated
    */
   EReference getLowOrHight_Value();
-
-  /**
-   * Returns the meta object for class '{@link org.pds16.pds16asm.pds16asm.Registers <em>Registers</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Registers</em>'.
-   * @see org.pds16.pds16asm.pds16asm.Registers
-   * @generated
-   */
-  EClass getRegisters();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.pds16asm.Registers#getRbx <em>Rbx</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Rbx</em>'.
-   * @see org.pds16.pds16asm.pds16asm.Registers#getRbx()
-   * @see #getRegisters()
-   * @generated
-   */
-  EReference getRegisters_Rbx();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.pds16asm.Registers#getRix <em>Rix</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Rix</em>'.
-   * @see org.pds16.pds16asm.pds16asm.Registers#getRix()
-   * @see #getRegisters()
-   * @generated
-   */
-  EReference getRegisters_Rix();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.Registers#getValue <em>Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value</em>'.
-   * @see org.pds16.pds16asm.pds16asm.Registers#getValue()
-   * @see #getRegisters()
-   * @generated
-   */
-  EAttribute getRegisters_Value();
 
   /**
    * Returns the meta object for class '{@link org.pds16.pds16asm.pds16asm.Number <em>Number</em>}'.
@@ -3551,20 +3502,20 @@ public interface Pds16asmPackage extends EPackage
     EClass ORL = eINSTANCE.getOrl();
 
     /**
-     * The meta object literal for the '<em><b>Rd</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Rd</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ORL__RD = eINSTANCE.getOrl_Rd();
+    EAttribute ORL__RD = eINSTANCE.getOrl_Rd();
 
     /**
-     * The meta object literal for the '<em><b>Rm</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Rm</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ORL__RM = eINSTANCE.getOrl_Rm();
+    EAttribute ORL__RM = eINSTANCE.getOrl_Rm();
 
     /**
      * The meta object literal for the '{@link org.pds16.pds16asm.pds16asm.impl.XrlImpl <em>Xrl</em>}' class.
@@ -3691,12 +3642,12 @@ public interface Pds16asmPackage extends EPackage
     EClass IMMEDIATE = eINSTANCE.getImmediate();
 
     /**
-     * The meta object literal for the '<em><b>Register</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Register</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference IMMEDIATE__REGISTER = eINSTANCE.getImmediate_Register();
+    EAttribute IMMEDIATE__REGISTER = eINSTANCE.getImmediate_Register();
 
     /**
      * The meta object literal for the '<em><b>Immediate8</b></em>' containment reference feature.
@@ -3725,12 +3676,12 @@ public interface Pds16asmPackage extends EPackage
     EClass DIRECT = eINSTANCE.getDirect();
 
     /**
-     * The meta object literal for the '<em><b>Register</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Register</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference DIRECT__REGISTER = eINSTANCE.getDirect_Register();
+    EAttribute DIRECT__REGISTER = eINSTANCE.getDirect_Register();
 
     /**
      * The meta object literal for the '<em><b>Direct7</b></em>' containment reference feature.
@@ -3751,20 +3702,20 @@ public interface Pds16asmPackage extends EPackage
     EClass INDEXED = eINSTANCE.getIndexed();
 
     /**
-     * The meta object literal for the '<em><b>Rd</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Rd</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference INDEXED__RD = eINSTANCE.getIndexed_Rd();
+    EAttribute INDEXED__RD = eINSTANCE.getIndexed_Rd();
 
     /**
-     * The meta object literal for the '<em><b>Rbx</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Rbx</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference INDEXED__RBX = eINSTANCE.getIndexed_Rbx();
+    EAttribute INDEXED__RBX = eINSTANCE.getIndexed_Rbx();
 
     /**
      * The meta object literal for the '<em><b>Idx3</b></em>' containment reference feature.
@@ -3783,6 +3734,22 @@ public interface Pds16asmPackage extends EPackage
      * @generated
      */
     EClass BASED_INDEXED = eINSTANCE.getBasedIndexed();
+
+    /**
+     * The meta object literal for the '<em><b>Rbx</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BASED_INDEXED__RBX = eINSTANCE.getBasedIndexed_Rbx();
+
+    /**
+     * The meta object literal for the '<em><b>Rix</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BASED_INDEXED__RIX = eINSTANCE.getBasedIndexed_Rix();
 
     /**
      * The meta object literal for the '{@link org.pds16.pds16asm.pds16asm.impl.DirectOrLabelImpl <em>Direct Or Label</em>}' class.
@@ -3935,12 +3902,12 @@ public interface Pds16asmPackage extends EPackage
     EClass OPERATIONS_WITH_TREE_REGISTERS = eINSTANCE.getOperationsWithTreeRegisters();
 
     /**
-     * The meta object literal for the '<em><b>Rn</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Rn</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference OPERATIONS_WITH_TREE_REGISTERS__RN = eINSTANCE.getOperationsWithTreeRegisters_Rn();
+    EAttribute OPERATIONS_WITH_TREE_REGISTERS__RN = eINSTANCE.getOperationsWithTreeRegisters_Rn();
 
     /**
      * The meta object literal for the '{@link org.pds16.pds16asm.pds16asm.impl.OperationsWithConstantImpl <em>Operations With Constant</em>}' class.
@@ -3953,20 +3920,20 @@ public interface Pds16asmPackage extends EPackage
     EClass OPERATIONS_WITH_CONSTANT = eINSTANCE.getOperationsWithConstant();
 
     /**
-     * The meta object literal for the '<em><b>Rd</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Rd</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference OPERATIONS_WITH_CONSTANT__RD = eINSTANCE.getOperationsWithConstant_Rd();
+    EAttribute OPERATIONS_WITH_CONSTANT__RD = eINSTANCE.getOperationsWithConstant_Rd();
 
     /**
-     * The meta object literal for the '<em><b>Rm</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Rm</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference OPERATIONS_WITH_CONSTANT__RM = eINSTANCE.getOperationsWithConstant_Rm();
+    EAttribute OPERATIONS_WITH_CONSTANT__RM = eINSTANCE.getOperationsWithConstant_Rm();
 
     /**
      * The meta object literal for the '<em><b>Const4</b></em>' containment reference feature.
@@ -3987,20 +3954,20 @@ public interface Pds16asmPackage extends EPackage
     EClass OPERATION_SHIFT = eINSTANCE.getOperationShift();
 
     /**
-     * The meta object literal for the '<em><b>Rd</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Rd</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference OPERATION_SHIFT__RD = eINSTANCE.getOperationShift_Rd();
+    EAttribute OPERATION_SHIFT__RD = eINSTANCE.getOperationShift_Rd();
 
     /**
-     * The meta object literal for the '<em><b>Rm</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Rm</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference OPERATION_SHIFT__RM = eINSTANCE.getOperationShift_Rm();
+    EAttribute OPERATION_SHIFT__RM = eINSTANCE.getOperationShift_Rm();
 
     /**
      * The meta object literal for the '<em><b>Const4</b></em>' containment reference feature.
@@ -4029,12 +3996,12 @@ public interface Pds16asmPackage extends EPackage
     EClass OPERATION_WITH_OFFSET = eINSTANCE.getOperationWithOffset();
 
     /**
-     * The meta object literal for the '<em><b>Rbx</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Rbx</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference OPERATION_WITH_OFFSET__RBX = eINSTANCE.getOperationWithOffset_Rbx();
+    EAttribute OPERATION_WITH_OFFSET__RBX = eINSTANCE.getOperationWithOffset_Rbx();
 
     /**
      * The meta object literal for the '<em><b>Offset8</b></em>' containment reference feature.
@@ -4087,40 +4054,6 @@ public interface Pds16asmPackage extends EPackage
      * @generated
      */
     EReference LOW_OR_HIGHT__VALUE = eINSTANCE.getLowOrHight_Value();
-
-    /**
-     * The meta object literal for the '{@link org.pds16.pds16asm.pds16asm.impl.RegistersImpl <em>Registers</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.pds16.pds16asm.pds16asm.impl.RegistersImpl
-     * @see org.pds16.pds16asm.pds16asm.impl.Pds16asmPackageImpl#getRegisters()
-     * @generated
-     */
-    EClass REGISTERS = eINSTANCE.getRegisters();
-
-    /**
-     * The meta object literal for the '<em><b>Rbx</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference REGISTERS__RBX = eINSTANCE.getRegisters_Rbx();
-
-    /**
-     * The meta object literal for the '<em><b>Rix</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference REGISTERS__RIX = eINSTANCE.getRegisters_Rix();
-
-    /**
-     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute REGISTERS__VALUE = eINSTANCE.getRegisters_Value();
 
     /**
      * The meta object literal for the '{@link org.pds16.pds16asm.pds16asm.impl.NumberImpl <em>Number</em>}' class.

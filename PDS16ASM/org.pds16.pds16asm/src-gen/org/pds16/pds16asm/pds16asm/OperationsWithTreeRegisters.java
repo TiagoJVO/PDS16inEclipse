@@ -23,29 +23,29 @@ package org.pds16.pds16asm.pds16asm;
 public interface OperationsWithTreeRegisters extends Add, Sub, Anl, Orl, Xrl
 {
   /**
-   * Returns the value of the '<em><b>Rn</b></em>' containment reference.
+   * Returns the value of the '<em><b>Rn</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Rn</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Rn</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Rn</em>' containment reference.
-   * @see #setRn(Registers)
+   * @return the value of the '<em>Rn</em>' attribute.
+   * @see #setRn(String)
    * @see org.pds16.pds16asm.pds16asm.Pds16asmPackage#getOperationsWithTreeRegisters_Rn()
-   * @model containment="true"
+   * @model
    * @generated
    */
-  Registers getRn();
+  String getRn();
 
   /**
-   * Sets the value of the '{@link org.pds16.pds16asm.pds16asm.OperationsWithTreeRegisters#getRn <em>Rn</em>}' containment reference.
+   * Sets the value of the '{@link org.pds16.pds16asm.pds16asm.OperationsWithTreeRegisters#getRn <em>Rn</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Rn</em>' containment reference.
+   * @param value the new value of the '<em>Rn</em>' attribute.
    * @see #getRn()
    * @generated
    */
-  void setRn(Registers value);
+  void setRn(String value);
 
 } // OperationsWithTreeRegisters

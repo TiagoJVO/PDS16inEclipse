@@ -54,7 +54,6 @@ import org.pds16.pds16asm.pds16asm.Orl;
 import org.pds16.pds16asm.pds16asm.PDS16ASM;
 import org.pds16.pds16asm.pds16asm.Pds16asmPackage;
 import org.pds16.pds16asm.pds16asm.Rc;
-import org.pds16.pds16asm.pds16asm.Registers;
 import org.pds16.pds16asm.pds16asm.Ret;
 import org.pds16.pds16asm.pds16asm.Rr;
 import org.pds16.pds16asm.pds16asm.Section;
@@ -434,11 +433,6 @@ public class Pds16asmAdapterFactory extends AdapterFactoryImpl
       public Adapter caseLowOrHight(LowOrHight object)
       {
         return createLowOrHightAdapter();
-      }
-      @Override
-      public Adapter caseRegisters(Registers object)
-      {
-        return createRegistersAdapter();
       }
       @Override
       public Adapter caseNumber(org.pds16.pds16asm.pds16asm.Number object)
@@ -1363,21 +1357,6 @@ public class Pds16asmAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createLowOrHightAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.pds16.pds16asm.pds16asm.Registers <em>Registers</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.pds16.pds16asm.pds16asm.Registers
-   * @generated
-   */
-  public Adapter createRegistersAdapter()
   {
     return null;
   }

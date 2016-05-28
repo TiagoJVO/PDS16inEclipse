@@ -25,56 +25,56 @@ package org.pds16.pds16asm.pds16asm;
 public interface OperationsWithConstant extends Add, Sub, Rr
 {
   /**
-   * Returns the value of the '<em><b>Rd</b></em>' containment reference.
+   * Returns the value of the '<em><b>Rd</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Rd</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Rd</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Rd</em>' containment reference.
-   * @see #setRd(Registers)
+   * @return the value of the '<em>Rd</em>' attribute.
+   * @see #setRd(String)
    * @see org.pds16.pds16asm.pds16asm.Pds16asmPackage#getOperationsWithConstant_Rd()
-   * @model containment="true"
+   * @model
    * @generated
    */
-  Registers getRd();
+  String getRd();
 
   /**
-   * Sets the value of the '{@link org.pds16.pds16asm.pds16asm.OperationsWithConstant#getRd <em>Rd</em>}' containment reference.
+   * Sets the value of the '{@link org.pds16.pds16asm.pds16asm.OperationsWithConstant#getRd <em>Rd</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Rd</em>' containment reference.
+   * @param value the new value of the '<em>Rd</em>' attribute.
    * @see #getRd()
    * @generated
    */
-  void setRd(Registers value);
+  void setRd(String value);
 
   /**
-   * Returns the value of the '<em><b>Rm</b></em>' containment reference.
+   * Returns the value of the '<em><b>Rm</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Rm</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Rm</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Rm</em>' containment reference.
-   * @see #setRm(Registers)
+   * @return the value of the '<em>Rm</em>' attribute.
+   * @see #setRm(String)
    * @see org.pds16.pds16asm.pds16asm.Pds16asmPackage#getOperationsWithConstant_Rm()
-   * @model containment="true"
+   * @model
    * @generated
    */
-  Registers getRm();
+  String getRm();
 
   /**
-   * Sets the value of the '{@link org.pds16.pds16asm.pds16asm.OperationsWithConstant#getRm <em>Rm</em>}' containment reference.
+   * Sets the value of the '{@link org.pds16.pds16asm.pds16asm.OperationsWithConstant#getRm <em>Rm</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Rm</em>' containment reference.
+   * @param value the new value of the '<em>Rm</em>' attribute.
    * @see #getRm()
    * @generated
    */
-  void setRm(Registers value);
+  void setRm(String value);
 
   /**
    * Returns the value of the '<em><b>Const4</b></em>' containment reference.

@@ -56,7 +56,6 @@ import org.pds16.pds16asm.pds16asm.PDS16ASM;
 import org.pds16.pds16asm.pds16asm.Pds16asmFactory;
 import org.pds16.pds16asm.pds16asm.Pds16asmPackage;
 import org.pds16.pds16asm.pds16asm.Rc;
-import org.pds16.pds16asm.pds16asm.Registers;
 import org.pds16.pds16asm.pds16asm.Ret;
 import org.pds16.pds16asm.pds16asm.Rr;
 import org.pds16.pds16asm.pds16asm.Section;
@@ -186,7 +185,6 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
       case Pds16asmPackage.OPERATION_WITH_OFFSET: return createOperationWithOffset();
       case Pds16asmPackage.EXPRESSION: return createExpression();
       case Pds16asmPackage.LOW_OR_HIGHT: return createLowOrHight();
-      case Pds16asmPackage.REGISTERS: return createRegisters();
       case Pds16asmPackage.NUMBER: return createNumber();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -851,17 +849,6 @@ public class Pds16asmFactoryImpl extends EFactoryImpl implements Pds16asmFactory
   {
     LowOrHightImpl lowOrHight = new LowOrHightImpl();
     return lowOrHight;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Registers createRegisters()
-  {
-    RegistersImpl registers = new RegistersImpl();
-    return registers;
   }
 
   /**

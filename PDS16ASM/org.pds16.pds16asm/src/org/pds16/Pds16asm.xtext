@@ -74,12 +74,12 @@ StBasedIndexed: ('st' | 'stb') BasedIndexed ;
 /******************************************* Aritmetica ***********************************/
 Add: ('add' | 'addf' | 'adc' | 'adcf') 
 		(OperationsWithConstant | OperationsWithTreeRegisters)
-	 | ('inc' | 'incf') Registers;
+	 | ('inc' | 'incf') REGISTERS;
 		
 Sub: (('sub' | 'subf' | 'sbb' | 'sbbf') 
 		(OperationsWithConstant | OperationsWithTreeRegisters))
 	 | 'subr' OperationsWithTreeRegisters
-	 |  ('dec' | 'decf') Registers ;
+	 |  ('dec' | 'decf') REGISTERS ;
 /******************************************************************************************/
 
 /******************************************* Logica ***************************************/
@@ -115,15 +115,15 @@ Ret: instruction=('ret' | 'iret') ;
 
 
 /************************************Type Operations***************************************/
-Immediate: register=Registers ',' (immediate8= Immediate8OrLabel | lowORhigh= LowOrHight) ;
+Immediate: register=REGISTERS ',' (immediate8= Immediate8OrLabel | lowORhigh= LowOrHight) ;
 
-Direct: register=Registers ',' direct7=DirectOrLabel;
+Direct: register=REGISTERS ',' direct7=DirectOrLabel;
 
 Indexed:
-	rd=Registers ',''[' rbx=Registers ',' idx3=Idx3OrLabel ']' ;
+	rd=REGISTERS ',''[' rbx=REGISTERS ',' idx3=Idx3OrLabel ']' ;
 	
 BasedIndexed: 
-	Registers ',' '[' rbx=Registers ',' rix=Registers ']';
+	REGISTERS ',' '[' rbx=REGISTERS ',' rix=REGISTERS ']';
 
 DirectOrLabel: number=Number | label=ID;
 
@@ -135,15 +135,15 @@ Const4OrLabel: '#'( number=Number | label=ID);
 
 Offset8OrLabel: '#'( number=Number | label=ID);
 
-OperationWithTwoRegisters: rd=Registers ',' rm=Registers;
+OperationWithTwoRegisters: rd=REGISTERS ',' rm=REGISTERS;
 
-OperationsWithTreeRegisters: rd=Registers ',' rm=Registers ',' rn=Registers ;
+OperationsWithTreeRegisters: rd=REGISTERS ',' rm=REGISTERS ',' rn=REGISTERS ;
 
-OperationsWithConstant: rd=Registers ',' rm=Registers ',' const4=Const4OrLabel;
+OperationsWithConstant: rd=REGISTERS ',' rm=REGISTERS ',' const4=Const4OrLabel;
 
-OperationShift: rd=Registers ',' rm=Registers ',' const4=Const4OrLabel ',' sin=(INT | HEX | OCT | BIN | CHAR);
+OperationShift: rd=REGISTERS ',' rm=REGISTERS ',' const4=Const4OrLabel ',' sin=(INT | HEX | OCT | BIN | CHAR);
 
-OperationWithOffset: rbx=Registers ',' offset8=Offset8OrLabel;
+OperationWithOffset: rbx=REGISTERS ',' offset8=Offset8OrLabel;
 
 Expression: (numericValue+=(INT | HEX | OCT | BIN | CHAR) | idValue+=ID)+
 	//para a string temos que fazer um validator que verifique se é realmente uma expressão
@@ -153,8 +153,8 @@ LowOrHight: '#' ('low' | 'high') '(' value=Expression ')' ;
 /******************************************************************************************/
 
 /***********************************************Utils**************************************/
-Registers:
-		value= ('r0' | 'r1' | 'r2' | 'r3' | 'r4' | 'r5' | 'r6' | 'r7' | 'PSW');
+terminal REGISTERS:
+			('r0' | 'r1' | 'r2' | 'r3' | 'r4' | 'r5' | 'r6' | 'r7' | 'PSW');
 
 Number : value= (INT | HEX | OCT | BIN | CHAR);
 
@@ -170,7 +170,7 @@ terminal SIGN : '-' | '+';
 
 /******************************************************************************************/
 
-terminal ID : ('a'..'z'|'A'..'Z'|'_'|'0'..'9')+;
+terminal ID : ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 terminal IDLABEL : ('a'..'z'|'A'..'Z'|'_'|'0'..'9')+ ':';
 terminal INT returns ecore::EInt: SIGN? ('0'..'9')+;
 terminal STRING	: 

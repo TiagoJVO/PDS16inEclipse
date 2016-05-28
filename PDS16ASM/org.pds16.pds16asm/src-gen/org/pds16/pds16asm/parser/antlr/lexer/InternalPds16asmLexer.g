@@ -69,8 +69,6 @@ Subr : ('S'|'s')('U'|'u')('B'|'b')('R'|'r');
 
 Xrlf : ('X'|'x')('R'|'r')('L'|'l')('F'|'f');
 
-PSW : ('P'|'p')('S'|'s')('W'|'w');
-
 Adc : ('A'|'a')('D'|'d')('C'|'c');
 
 Add : ('A'|'a')('D'|'d')('D'|'d');
@@ -137,22 +135,6 @@ Jz : ('J'|'j')('Z'|'z');
 
 Ld : ('L'|'l')('D'|'d');
 
-R0 : ('R'|'r')'0';
-
-R1 : ('R'|'r')'1';
-
-R2 : ('R'|'r')'2';
-
-R3 : ('R'|'r')'3';
-
-R4 : ('R'|'r')'4';
-
-R5 : ('R'|'r')'5';
-
-R6 : ('R'|'r')'6';
-
-R7 : ('R'|'r')'7';
-
 St : ('S'|'s')('T'|'t');
 
 NumberSign : '#';
@@ -171,6 +153,8 @@ RightSquareBracket : ']';
 
 // Rules duplicated to allow inter-rule references
 
+RULE_REGISTERS : ('r0'|'r1'|'r2'|'r3'|'r4'|'r5'|'r6'|'r7'|'PSW');
+
 RULE_HEX : RULE_SIGN? ('0x'|'0X') ('0'..'9'|'a'..'f'|'A'..'F')+;
 
 RULE_OCT : RULE_SIGN? '0' ('0'..'7')+;
@@ -181,7 +165,7 @@ RULE_CHAR : RULE_SIGN? '\'' RULE_ANY_OTHER '\'';
 
 fragment RULE_SIGN : ('-'|'+');
 
-RULE_ID : ('a'..'z'|'A'..'Z'|'_'|'0'..'9')+;
+RULE_ID : ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
 RULE_IDLABEL : ('a'..'z'|'A'..'Z'|'_'|'0'..'9')+ ':';
 

@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.pds16.pds16asm.pds16asm.Idx3OrLabel;
 import org.pds16.pds16asm.pds16asm.Indexed;
 import org.pds16.pds16asm.pds16asm.Pds16asmPackage;
-import org.pds16.pds16asm.pds16asm.Registers;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,24 +33,44 @@ import org.pds16.pds16asm.pds16asm.Registers;
 public class IndexedImpl extends LdIndexedImpl implements Indexed
 {
   /**
-   * The cached value of the '{@link #getRd() <em>Rd</em>}' containment reference.
+   * The default value of the '{@link #getRd() <em>Rd</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getRd()
    * @generated
    * @ordered
    */
-  protected Registers rd;
+  protected static final String RD_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getRbx() <em>Rbx</em>}' containment reference.
+   * The cached value of the '{@link #getRd() <em>Rd</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRd()
+   * @generated
+   * @ordered
+   */
+  protected String rd = RD_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getRbx() <em>Rbx</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getRbx()
    * @generated
    * @ordered
    */
-  protected Registers rbx;
+  protected static final String RBX_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getRbx() <em>Rbx</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRbx()
+   * @generated
+   * @ordered
+   */
+  protected String rbx = RBX_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getIdx3() <em>Idx3</em>}' containment reference.
@@ -89,7 +108,7 @@ public class IndexedImpl extends LdIndexedImpl implements Indexed
    * <!-- end-user-doc -->
    * @generated
    */
-  public Registers getRd()
+  public String getRd()
   {
     return rd;
   }
@@ -99,16 +118,12 @@ public class IndexedImpl extends LdIndexedImpl implements Indexed
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetRd(Registers newRd, NotificationChain msgs)
+  public void setRd(String newRd)
   {
-    Registers oldRd = rd;
+    String oldRd = rd;
     rd = newRd;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Pds16asmPackage.INDEXED__RD, oldRd, newRd);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
+      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.INDEXED__RD, oldRd, rd));
   }
 
   /**
@@ -116,28 +131,7 @@ public class IndexedImpl extends LdIndexedImpl implements Indexed
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setRd(Registers newRd)
-  {
-    if (newRd != rd)
-    {
-      NotificationChain msgs = null;
-      if (rd != null)
-        msgs = ((InternalEObject)rd).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.INDEXED__RD, null, msgs);
-      if (newRd != null)
-        msgs = ((InternalEObject)newRd).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.INDEXED__RD, null, msgs);
-      msgs = basicSetRd(newRd, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.INDEXED__RD, newRd, newRd));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Registers getRbx()
+  public String getRbx()
   {
     return rbx;
   }
@@ -147,37 +141,12 @@ public class IndexedImpl extends LdIndexedImpl implements Indexed
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetRbx(Registers newRbx, NotificationChain msgs)
+  public void setRbx(String newRbx)
   {
-    Registers oldRbx = rbx;
+    String oldRbx = rbx;
     rbx = newRbx;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Pds16asmPackage.INDEXED__RBX, oldRbx, newRbx);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setRbx(Registers newRbx)
-  {
-    if (newRbx != rbx)
-    {
-      NotificationChain msgs = null;
-      if (rbx != null)
-        msgs = ((InternalEObject)rbx).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.INDEXED__RBX, null, msgs);
-      if (newRbx != null)
-        msgs = ((InternalEObject)newRbx).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.INDEXED__RBX, null, msgs);
-      msgs = basicSetRbx(newRbx, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.INDEXED__RBX, newRbx, newRbx));
+      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.INDEXED__RBX, oldRbx, rbx));
   }
 
   /**
@@ -238,10 +207,6 @@ public class IndexedImpl extends LdIndexedImpl implements Indexed
   {
     switch (featureID)
     {
-      case Pds16asmPackage.INDEXED__RD:
-        return basicSetRd(null, msgs);
-      case Pds16asmPackage.INDEXED__RBX:
-        return basicSetRbx(null, msgs);
       case Pds16asmPackage.INDEXED__IDX3:
         return basicSetIdx3(null, msgs);
     }
@@ -279,10 +244,10 @@ public class IndexedImpl extends LdIndexedImpl implements Indexed
     switch (featureID)
     {
       case Pds16asmPackage.INDEXED__RD:
-        setRd((Registers)newValue);
+        setRd((String)newValue);
         return;
       case Pds16asmPackage.INDEXED__RBX:
-        setRbx((Registers)newValue);
+        setRbx((String)newValue);
         return;
       case Pds16asmPackage.INDEXED__IDX3:
         setIdx3((Idx3OrLabel)newValue);
@@ -302,10 +267,10 @@ public class IndexedImpl extends LdIndexedImpl implements Indexed
     switch (featureID)
     {
       case Pds16asmPackage.INDEXED__RD:
-        setRd((Registers)null);
+        setRd(RD_EDEFAULT);
         return;
       case Pds16asmPackage.INDEXED__RBX:
-        setRbx((Registers)null);
+        setRbx(RBX_EDEFAULT);
         return;
       case Pds16asmPackage.INDEXED__IDX3:
         setIdx3((Idx3OrLabel)null);
@@ -325,13 +290,32 @@ public class IndexedImpl extends LdIndexedImpl implements Indexed
     switch (featureID)
     {
       case Pds16asmPackage.INDEXED__RD:
-        return rd != null;
+        return RD_EDEFAULT == null ? rd != null : !RD_EDEFAULT.equals(rd);
       case Pds16asmPackage.INDEXED__RBX:
-        return rbx != null;
+        return RBX_EDEFAULT == null ? rbx != null : !RBX_EDEFAULT.equals(rbx);
       case Pds16asmPackage.INDEXED__IDX3:
         return idx3 != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (rd: ");
+    result.append(rd);
+    result.append(", rbx: ");
+    result.append(rbx);
+    result.append(')');
+    return result.toString();
   }
 
 } //IndexedImpl

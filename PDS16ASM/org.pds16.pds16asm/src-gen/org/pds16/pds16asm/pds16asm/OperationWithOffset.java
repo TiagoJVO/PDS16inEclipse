@@ -24,30 +24,30 @@ package org.pds16.pds16asm.pds16asm;
 public interface OperationWithOffset extends JumpOp
 {
   /**
-   * Returns the value of the '<em><b>Rbx</b></em>' containment reference.
+   * Returns the value of the '<em><b>Rbx</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Rbx</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Rbx</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Rbx</em>' containment reference.
-   * @see #setRbx(Registers)
+   * @return the value of the '<em>Rbx</em>' attribute.
+   * @see #setRbx(String)
    * @see org.pds16.pds16asm.pds16asm.Pds16asmPackage#getOperationWithOffset_Rbx()
-   * @model containment="true"
+   * @model
    * @generated
    */
-  Registers getRbx();
+  String getRbx();
 
   /**
-   * Sets the value of the '{@link org.pds16.pds16asm.pds16asm.OperationWithOffset#getRbx <em>Rbx</em>}' containment reference.
+   * Sets the value of the '{@link org.pds16.pds16asm.pds16asm.OperationWithOffset#getRbx <em>Rbx</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Rbx</em>' containment reference.
+   * @param value the new value of the '<em>Rbx</em>' attribute.
    * @see #getRbx()
    * @generated
    */
-  void setRbx(Registers value);
+  void setRbx(String value);
 
   /**
    * Returns the value of the '<em><b>Offset8</b></em>' containment reference.

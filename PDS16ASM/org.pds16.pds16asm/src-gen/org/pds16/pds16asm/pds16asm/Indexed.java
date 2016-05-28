@@ -25,56 +25,56 @@ package org.pds16.pds16asm.pds16asm;
 public interface Indexed extends LdIndexed, StIndexed
 {
   /**
-   * Returns the value of the '<em><b>Rd</b></em>' containment reference.
+   * Returns the value of the '<em><b>Rd</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Rd</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Rd</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Rd</em>' containment reference.
-   * @see #setRd(Registers)
+   * @return the value of the '<em>Rd</em>' attribute.
+   * @see #setRd(String)
    * @see org.pds16.pds16asm.pds16asm.Pds16asmPackage#getIndexed_Rd()
-   * @model containment="true"
+   * @model
    * @generated
    */
-  Registers getRd();
+  String getRd();
 
   /**
-   * Sets the value of the '{@link org.pds16.pds16asm.pds16asm.Indexed#getRd <em>Rd</em>}' containment reference.
+   * Sets the value of the '{@link org.pds16.pds16asm.pds16asm.Indexed#getRd <em>Rd</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Rd</em>' containment reference.
+   * @param value the new value of the '<em>Rd</em>' attribute.
    * @see #getRd()
    * @generated
    */
-  void setRd(Registers value);
+  void setRd(String value);
 
   /**
-   * Returns the value of the '<em><b>Rbx</b></em>' containment reference.
+   * Returns the value of the '<em><b>Rbx</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Rbx</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Rbx</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Rbx</em>' containment reference.
-   * @see #setRbx(Registers)
+   * @return the value of the '<em>Rbx</em>' attribute.
+   * @see #setRbx(String)
    * @see org.pds16.pds16asm.pds16asm.Pds16asmPackage#getIndexed_Rbx()
-   * @model containment="true"
+   * @model
    * @generated
    */
-  Registers getRbx();
+  String getRbx();
 
   /**
-   * Sets the value of the '{@link org.pds16.pds16asm.pds16asm.Indexed#getRbx <em>Rbx</em>}' containment reference.
+   * Sets the value of the '{@link org.pds16.pds16asm.pds16asm.Indexed#getRbx <em>Rbx</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Rbx</em>' containment reference.
+   * @param value the new value of the '<em>Rbx</em>' attribute.
    * @see #getRbx()
    * @generated
    */
-  void setRbx(Registers value);
+  void setRbx(String value);
 
   /**
    * Returns the value of the '<em><b>Idx3</b></em>' containment reference.

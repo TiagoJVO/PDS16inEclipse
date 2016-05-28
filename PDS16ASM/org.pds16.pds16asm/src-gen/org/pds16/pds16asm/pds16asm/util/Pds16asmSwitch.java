@@ -52,7 +52,6 @@ import org.pds16.pds16asm.pds16asm.Orl;
 import org.pds16.pds16asm.pds16asm.PDS16ASM;
 import org.pds16.pds16asm.pds16asm.Pds16asmPackage;
 import org.pds16.pds16asm.pds16asm.Rc;
-import org.pds16.pds16asm.pds16asm.Registers;
 import org.pds16.pds16asm.pds16asm.Ret;
 import org.pds16.pds16asm.pds16asm.Rr;
 import org.pds16.pds16asm.pds16asm.Section;
@@ -711,23 +710,6 @@ public class Pds16asmSwitch<T> extends Switch<T>
       {
         LowOrHight lowOrHight = (LowOrHight)theEObject;
         T result = caseLowOrHight(lowOrHight);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case Pds16asmPackage.REGISTERS:
-      {
-        Registers registers = (Registers)theEObject;
-        T result = caseRegisters(registers);
-        if (result == null) result = caseAdd(registers);
-        if (result == null) result = caseSub(registers);
-        if (result == null) result = caseBasedIndexed(registers);
-        if (result == null) result = caseAritmetica(registers);
-        if (result == null) result = caseLdBasedIndexed(registers);
-        if (result == null) result = caseStBasedIndexed(registers);
-        if (result == null) result = caseLoad(registers);
-        if (result == null) result = caseStore(registers);
-        if (result == null) result = caseInstructions(registers);
-        if (result == null) result = caseStatement(registers);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1698,22 +1680,6 @@ public class Pds16asmSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseLowOrHight(LowOrHight object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Registers</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Registers</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseRegisters(Registers object)
   {
     return null;
   }

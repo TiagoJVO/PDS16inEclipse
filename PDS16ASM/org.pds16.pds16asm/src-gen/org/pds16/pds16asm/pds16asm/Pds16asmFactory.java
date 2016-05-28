@@ -564,15 +564,6 @@ public interface Pds16asmFactory extends EFactory
   LowOrHight createLowOrHight();
 
   /**
-   * Returns a new object of class '<em>Registers</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Registers</em>'.
-   * @generated
-   */
-  Registers createRegisters();
-
-  /**
    * Returns a new object of class '<em>Number</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.pds16.pds16asm.pds16asm.Direct;
 import org.pds16.pds16asm.pds16asm.DirectOrLabel;
 import org.pds16.pds16asm.pds16asm.Pds16asmPackage;
-import org.pds16.pds16asm.pds16asm.Registers;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,14 +32,24 @@ import org.pds16.pds16asm.pds16asm.Registers;
 public class DirectImpl extends LdDirectImpl implements Direct
 {
   /**
-   * The cached value of the '{@link #getRegister() <em>Register</em>}' containment reference.
+   * The default value of the '{@link #getRegister() <em>Register</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getRegister()
    * @generated
    * @ordered
    */
-  protected Registers register;
+  protected static final String REGISTER_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getRegister() <em>Register</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRegister()
+   * @generated
+   * @ordered
+   */
+  protected String register = REGISTER_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getDirect7() <em>Direct7</em>}' containment reference.
@@ -78,7 +87,7 @@ public class DirectImpl extends LdDirectImpl implements Direct
    * <!-- end-user-doc -->
    * @generated
    */
-  public Registers getRegister()
+  public String getRegister()
   {
     return register;
   }
@@ -88,37 +97,12 @@ public class DirectImpl extends LdDirectImpl implements Direct
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetRegister(Registers newRegister, NotificationChain msgs)
+  public void setRegister(String newRegister)
   {
-    Registers oldRegister = register;
+    String oldRegister = register;
     register = newRegister;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Pds16asmPackage.DIRECT__REGISTER, oldRegister, newRegister);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setRegister(Registers newRegister)
-  {
-    if (newRegister != register)
-    {
-      NotificationChain msgs = null;
-      if (register != null)
-        msgs = ((InternalEObject)register).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.DIRECT__REGISTER, null, msgs);
-      if (newRegister != null)
-        msgs = ((InternalEObject)newRegister).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.DIRECT__REGISTER, null, msgs);
-      msgs = basicSetRegister(newRegister, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.DIRECT__REGISTER, newRegister, newRegister));
+      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.DIRECT__REGISTER, oldRegister, register));
   }
 
   /**
@@ -179,8 +163,6 @@ public class DirectImpl extends LdDirectImpl implements Direct
   {
     switch (featureID)
     {
-      case Pds16asmPackage.DIRECT__REGISTER:
-        return basicSetRegister(null, msgs);
       case Pds16asmPackage.DIRECT__DIRECT7:
         return basicSetDirect7(null, msgs);
     }
@@ -216,7 +198,7 @@ public class DirectImpl extends LdDirectImpl implements Direct
     switch (featureID)
     {
       case Pds16asmPackage.DIRECT__REGISTER:
-        setRegister((Registers)newValue);
+        setRegister((String)newValue);
         return;
       case Pds16asmPackage.DIRECT__DIRECT7:
         setDirect7((DirectOrLabel)newValue);
@@ -236,7 +218,7 @@ public class DirectImpl extends LdDirectImpl implements Direct
     switch (featureID)
     {
       case Pds16asmPackage.DIRECT__REGISTER:
-        setRegister((Registers)null);
+        setRegister(REGISTER_EDEFAULT);
         return;
       case Pds16asmPackage.DIRECT__DIRECT7:
         setDirect7((DirectOrLabel)null);
@@ -256,11 +238,28 @@ public class DirectImpl extends LdDirectImpl implements Direct
     switch (featureID)
     {
       case Pds16asmPackage.DIRECT__REGISTER:
-        return register != null;
+        return REGISTER_EDEFAULT == null ? register != null : !REGISTER_EDEFAULT.equals(register);
       case Pds16asmPackage.DIRECT__DIRECT7:
         return direct7 != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (register: ");
+    result.append(register);
+    result.append(')');
+    return result.toString();
   }
 
 } //DirectImpl

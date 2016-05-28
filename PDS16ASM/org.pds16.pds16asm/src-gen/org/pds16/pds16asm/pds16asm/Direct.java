@@ -24,30 +24,30 @@ package org.pds16.pds16asm.pds16asm;
 public interface Direct extends LdDirect, StDirect
 {
   /**
-   * Returns the value of the '<em><b>Register</b></em>' containment reference.
+   * Returns the value of the '<em><b>Register</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Register</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Register</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Register</em>' containment reference.
-   * @see #setRegister(Registers)
+   * @return the value of the '<em>Register</em>' attribute.
+   * @see #setRegister(String)
    * @see org.pds16.pds16asm.pds16asm.Pds16asmPackage#getDirect_Register()
-   * @model containment="true"
+   * @model
    * @generated
    */
-  Registers getRegister();
+  String getRegister();
 
   /**
-   * Sets the value of the '{@link org.pds16.pds16asm.pds16asm.Direct#getRegister <em>Register</em>}' containment reference.
+   * Sets the value of the '{@link org.pds16.pds16asm.pds16asm.Direct#getRegister <em>Register</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Register</em>' containment reference.
+   * @param value the new value of the '<em>Register</em>' attribute.
    * @see #getRegister()
    * @generated
    */
-  void setRegister(Registers value);
+  void setRegister(String value);
 
   /**
    * Returns the value of the '<em><b>Direct7</b></em>' containment reference.

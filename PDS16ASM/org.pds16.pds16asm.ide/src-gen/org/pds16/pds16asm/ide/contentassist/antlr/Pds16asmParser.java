@@ -88,7 +88,6 @@ public class Pds16asmParser extends AbstractContentAssistParser {
 					put(grammarAccess.getExpressionAccess().getAlternatives(), "rule__Expression__Alternatives");
 					put(grammarAccess.getExpressionAccess().getNumericValueAlternatives_0_0(), "rule__Expression__NumericValueAlternatives_0_0");
 					put(grammarAccess.getLowOrHightAccess().getAlternatives_1(), "rule__LowOrHight__Alternatives_1");
-					put(grammarAccess.getRegistersAccess().getValueAlternatives_0(), "rule__Registers__ValueAlternatives_0");
 					put(grammarAccess.getNumberAccess().getValueAlternatives_0(), "rule__Number__ValueAlternatives_0");
 					put(grammarAccess.getLabelAccess().getGroup(), "rule__Label__Group__0");
 					put(grammarAccess.getAsciiAccess().getGroup(), "rule__Ascii__Group__0");
@@ -201,7 +200,6 @@ public class Pds16asmParser extends AbstractContentAssistParser {
 					put(grammarAccess.getExpressionAccess().getNumericValueAssignment_0(), "rule__Expression__NumericValueAssignment_0");
 					put(grammarAccess.getExpressionAccess().getIdValueAssignment_1(), "rule__Expression__IdValueAssignment_1");
 					put(grammarAccess.getLowOrHightAccess().getValueAssignment_3(), "rule__LowOrHight__ValueAssignment_3");
-					put(grammarAccess.getRegistersAccess().getValueAssignment(), "rule__Registers__ValueAssignment");
 					put(grammarAccess.getNumberAccess().getValueAssignment(), "rule__Number__ValueAssignment");
 				}
 			};

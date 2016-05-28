@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.pds16.pds16asm.pds16asm.Offset8OrLabel;
 import org.pds16.pds16asm.pds16asm.OperationWithOffset;
 import org.pds16.pds16asm.pds16asm.Pds16asmPackage;
-import org.pds16.pds16asm.pds16asm.Registers;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,14 +32,24 @@ import org.pds16.pds16asm.pds16asm.Registers;
 public class OperationWithOffsetImpl extends JumpOpImpl implements OperationWithOffset
 {
   /**
-   * The cached value of the '{@link #getRbx() <em>Rbx</em>}' containment reference.
+   * The default value of the '{@link #getRbx() <em>Rbx</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getRbx()
    * @generated
    * @ordered
    */
-  protected Registers rbx;
+  protected static final String RBX_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getRbx() <em>Rbx</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRbx()
+   * @generated
+   * @ordered
+   */
+  protected String rbx = RBX_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getOffset8() <em>Offset8</em>}' containment reference.
@@ -78,7 +87,7 @@ public class OperationWithOffsetImpl extends JumpOpImpl implements OperationWith
    * <!-- end-user-doc -->
    * @generated
    */
-  public Registers getRbx()
+  public String getRbx()
   {
     return rbx;
   }
@@ -88,37 +97,12 @@ public class OperationWithOffsetImpl extends JumpOpImpl implements OperationWith
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetRbx(Registers newRbx, NotificationChain msgs)
+  public void setRbx(String newRbx)
   {
-    Registers oldRbx = rbx;
+    String oldRbx = rbx;
     rbx = newRbx;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Pds16asmPackage.OPERATION_WITH_OFFSET__RBX, oldRbx, newRbx);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setRbx(Registers newRbx)
-  {
-    if (newRbx != rbx)
-    {
-      NotificationChain msgs = null;
-      if (rbx != null)
-        msgs = ((InternalEObject)rbx).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.OPERATION_WITH_OFFSET__RBX, null, msgs);
-      if (newRbx != null)
-        msgs = ((InternalEObject)newRbx).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.OPERATION_WITH_OFFSET__RBX, null, msgs);
-      msgs = basicSetRbx(newRbx, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.OPERATION_WITH_OFFSET__RBX, newRbx, newRbx));
+      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.OPERATION_WITH_OFFSET__RBX, oldRbx, rbx));
   }
 
   /**
@@ -179,8 +163,6 @@ public class OperationWithOffsetImpl extends JumpOpImpl implements OperationWith
   {
     switch (featureID)
     {
-      case Pds16asmPackage.OPERATION_WITH_OFFSET__RBX:
-        return basicSetRbx(null, msgs);
       case Pds16asmPackage.OPERATION_WITH_OFFSET__OFFSET8:
         return basicSetOffset8(null, msgs);
     }
@@ -216,7 +198,7 @@ public class OperationWithOffsetImpl extends JumpOpImpl implements OperationWith
     switch (featureID)
     {
       case Pds16asmPackage.OPERATION_WITH_OFFSET__RBX:
-        setRbx((Registers)newValue);
+        setRbx((String)newValue);
         return;
       case Pds16asmPackage.OPERATION_WITH_OFFSET__OFFSET8:
         setOffset8((Offset8OrLabel)newValue);
@@ -236,7 +218,7 @@ public class OperationWithOffsetImpl extends JumpOpImpl implements OperationWith
     switch (featureID)
     {
       case Pds16asmPackage.OPERATION_WITH_OFFSET__RBX:
-        setRbx((Registers)null);
+        setRbx(RBX_EDEFAULT);
         return;
       case Pds16asmPackage.OPERATION_WITH_OFFSET__OFFSET8:
         setOffset8((Offset8OrLabel)null);
@@ -256,11 +238,28 @@ public class OperationWithOffsetImpl extends JumpOpImpl implements OperationWith
     switch (featureID)
     {
       case Pds16asmPackage.OPERATION_WITH_OFFSET__RBX:
-        return rbx != null;
+        return RBX_EDEFAULT == null ? rbx != null : !RBX_EDEFAULT.equals(rbx);
       case Pds16asmPackage.OPERATION_WITH_OFFSET__OFFSET8:
         return offset8 != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (rbx: ");
+    result.append(rbx);
+    result.append(')');
+    return result.toString();
   }
 
 } //OperationWithOffsetImpl

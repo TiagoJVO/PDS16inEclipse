@@ -54,7 +54,6 @@ import org.pds16.pds16asm.pds16asm.Orl;
 import org.pds16.pds16asm.pds16asm.Pds16asmFactory;
 import org.pds16.pds16asm.pds16asm.Pds16asmPackage;
 import org.pds16.pds16asm.pds16asm.Rc;
-import org.pds16.pds16asm.pds16asm.Registers;
 import org.pds16.pds16asm.pds16asm.Ret;
 import org.pds16.pds16asm.pds16asm.Rr;
 import org.pds16.pds16asm.pds16asm.Section;
@@ -499,13 +498,6 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
    * @generated
    */
   private EClass lowOrHightEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass registersEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -1102,9 +1094,9 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getOrl_Rd()
+  public EAttribute getOrl_Rd()
   {
-    return (EReference)orlEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)orlEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1112,9 +1104,9 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getOrl_Rm()
+  public EAttribute getOrl_Rm()
   {
-    return (EReference)orlEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)orlEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1252,9 +1244,9 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getImmediate_Register()
+  public EAttribute getImmediate_Register()
   {
-    return (EReference)immediateEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)immediateEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1292,9 +1284,9 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getDirect_Register()
+  public EAttribute getDirect_Register()
   {
-    return (EReference)directEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)directEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1322,9 +1314,9 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getIndexed_Rd()
+  public EAttribute getIndexed_Rd()
   {
-    return (EReference)indexedEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)indexedEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1332,9 +1324,9 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getIndexed_Rbx()
+  public EAttribute getIndexed_Rbx()
   {
-    return (EReference)indexedEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)indexedEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1355,6 +1347,26 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
   public EClass getBasedIndexed()
   {
     return basedIndexedEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBasedIndexed_Rbx()
+  {
+    return (EAttribute)basedIndexedEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBasedIndexed_Rix()
+  {
+    return (EAttribute)basedIndexedEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1532,9 +1544,9 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getOperationsWithTreeRegisters_Rn()
+  public EAttribute getOperationsWithTreeRegisters_Rn()
   {
-    return (EReference)operationsWithTreeRegistersEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)operationsWithTreeRegistersEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1552,9 +1564,9 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getOperationsWithConstant_Rd()
+  public EAttribute getOperationsWithConstant_Rd()
   {
-    return (EReference)operationsWithConstantEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)operationsWithConstantEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1562,9 +1574,9 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getOperationsWithConstant_Rm()
+  public EAttribute getOperationsWithConstant_Rm()
   {
-    return (EReference)operationsWithConstantEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)operationsWithConstantEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1592,9 +1604,9 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getOperationShift_Rd()
+  public EAttribute getOperationShift_Rd()
   {
-    return (EReference)operationShiftEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)operationShiftEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1602,9 +1614,9 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getOperationShift_Rm()
+  public EAttribute getOperationShift_Rm()
   {
-    return (EReference)operationShiftEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)operationShiftEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1642,9 +1654,9 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getOperationWithOffset_Rbx()
+  public EAttribute getOperationWithOffset_Rbx()
   {
-    return (EReference)operationWithOffsetEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)operationWithOffsetEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1705,46 +1717,6 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
   public EReference getLowOrHight_Value()
   {
     return (EReference)lowOrHightEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getRegisters()
-  {
-    return registersEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getRegisters_Rbx()
-  {
-    return (EReference)registersEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getRegisters_Rix()
-  {
-    return (EReference)registersEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getRegisters_Value()
-  {
-    return (EAttribute)registersEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1883,8 +1855,8 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
     anlEClass = createEClass(ANL);
 
     orlEClass = createEClass(ORL);
-    createEReference(orlEClass, ORL__RD);
-    createEReference(orlEClass, ORL__RM);
+    createEAttribute(orlEClass, ORL__RD);
+    createEAttribute(orlEClass, ORL__RM);
 
     xrlEClass = createEClass(XRL);
 
@@ -1908,20 +1880,22 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
     createEAttribute(retEClass, RET__INSTRUCTION);
 
     immediateEClass = createEClass(IMMEDIATE);
-    createEReference(immediateEClass, IMMEDIATE__REGISTER);
+    createEAttribute(immediateEClass, IMMEDIATE__REGISTER);
     createEReference(immediateEClass, IMMEDIATE__IMMEDIATE8);
     createEReference(immediateEClass, IMMEDIATE__LOW_ORHIGH);
 
     directEClass = createEClass(DIRECT);
-    createEReference(directEClass, DIRECT__REGISTER);
+    createEAttribute(directEClass, DIRECT__REGISTER);
     createEReference(directEClass, DIRECT__DIRECT7);
 
     indexedEClass = createEClass(INDEXED);
-    createEReference(indexedEClass, INDEXED__RD);
-    createEReference(indexedEClass, INDEXED__RBX);
+    createEAttribute(indexedEClass, INDEXED__RD);
+    createEAttribute(indexedEClass, INDEXED__RBX);
     createEReference(indexedEClass, INDEXED__IDX3);
 
     basedIndexedEClass = createEClass(BASED_INDEXED);
+    createEAttribute(basedIndexedEClass, BASED_INDEXED__RBX);
+    createEAttribute(basedIndexedEClass, BASED_INDEXED__RIX);
 
     directOrLabelEClass = createEClass(DIRECT_OR_LABEL);
     createEReference(directOrLabelEClass, DIRECT_OR_LABEL__NUMBER);
@@ -1946,21 +1920,21 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
     operationWithTwoRegistersEClass = createEClass(OPERATION_WITH_TWO_REGISTERS);
 
     operationsWithTreeRegistersEClass = createEClass(OPERATIONS_WITH_TREE_REGISTERS);
-    createEReference(operationsWithTreeRegistersEClass, OPERATIONS_WITH_TREE_REGISTERS__RN);
+    createEAttribute(operationsWithTreeRegistersEClass, OPERATIONS_WITH_TREE_REGISTERS__RN);
 
     operationsWithConstantEClass = createEClass(OPERATIONS_WITH_CONSTANT);
-    createEReference(operationsWithConstantEClass, OPERATIONS_WITH_CONSTANT__RD);
-    createEReference(operationsWithConstantEClass, OPERATIONS_WITH_CONSTANT__RM);
+    createEAttribute(operationsWithConstantEClass, OPERATIONS_WITH_CONSTANT__RD);
+    createEAttribute(operationsWithConstantEClass, OPERATIONS_WITH_CONSTANT__RM);
     createEReference(operationsWithConstantEClass, OPERATIONS_WITH_CONSTANT__CONST4);
 
     operationShiftEClass = createEClass(OPERATION_SHIFT);
-    createEReference(operationShiftEClass, OPERATION_SHIFT__RD);
-    createEReference(operationShiftEClass, OPERATION_SHIFT__RM);
+    createEAttribute(operationShiftEClass, OPERATION_SHIFT__RD);
+    createEAttribute(operationShiftEClass, OPERATION_SHIFT__RM);
     createEReference(operationShiftEClass, OPERATION_SHIFT__CONST4);
     createEAttribute(operationShiftEClass, OPERATION_SHIFT__SIN);
 
     operationWithOffsetEClass = createEClass(OPERATION_WITH_OFFSET);
-    createEReference(operationWithOffsetEClass, OPERATION_WITH_OFFSET__RBX);
+    createEAttribute(operationWithOffsetEClass, OPERATION_WITH_OFFSET__RBX);
     createEReference(operationWithOffsetEClass, OPERATION_WITH_OFFSET__OFFSET8);
 
     expressionEClass = createEClass(EXPRESSION);
@@ -1969,11 +1943,6 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
 
     lowOrHightEClass = createEClass(LOW_OR_HIGHT);
     createEReference(lowOrHightEClass, LOW_OR_HIGHT__VALUE);
-
-    registersEClass = createEClass(REGISTERS);
-    createEReference(registersEClass, REGISTERS__RBX);
-    createEReference(registersEClass, REGISTERS__RIX);
-    createEAttribute(registersEClass, REGISTERS__VALUE);
 
     numberEClass = createEClass(NUMBER);
     createEAttribute(numberEClass, NUMBER__VALUE);
@@ -2073,9 +2042,6 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
     operationWithOffsetEClass.getESuperTypes().add(this.getJumpOp());
     expressionEClass.getESuperTypes().add(this.getOrg());
     expressionEClass.getESuperTypes().add(this.getEqu());
-    registersEClass.getESuperTypes().add(this.getAdd());
-    registersEClass.getESuperTypes().add(this.getSub());
-    registersEClass.getESuperTypes().add(this.getBasedIndexed());
 
     // Initialize classes and features; add operations and parameters
     initEClass(pds16ASMEClass, org.pds16.pds16asm.pds16asm.PDS16ASM.class, "PDS16ASM", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2164,8 +2130,8 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
     initEClass(anlEClass, Anl.class, "Anl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(orlEClass, Orl.class, "Orl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getOrl_Rd(), this.getRegisters(), null, "rd", null, 0, 1, Orl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getOrl_Rm(), this.getRegisters(), null, "rm", null, 0, 1, Orl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getOrl_Rd(), ecorePackage.getEString(), "rd", null, 0, 1, Orl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getOrl_Rm(), ecorePackage.getEString(), "rm", null, 0, 1, Orl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(xrlEClass, Xrl.class, "Xrl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2189,20 +2155,22 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
     initEAttribute(getRet_Instruction(), ecorePackage.getEString(), "instruction", null, 0, 1, Ret.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(immediateEClass, Immediate.class, "Immediate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getImmediate_Register(), this.getRegisters(), null, "register", null, 0, 1, Immediate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getImmediate_Register(), ecorePackage.getEString(), "register", null, 0, 1, Immediate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getImmediate_Immediate8(), this.getImmediate8OrLabel(), null, "immediate8", null, 0, 1, Immediate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getImmediate_LowORhigh(), this.getLowOrHight(), null, "lowORhigh", null, 0, 1, Immediate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(directEClass, Direct.class, "Direct", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getDirect_Register(), this.getRegisters(), null, "register", null, 0, 1, Direct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDirect_Register(), ecorePackage.getEString(), "register", null, 0, 1, Direct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDirect_Direct7(), this.getDirectOrLabel(), null, "direct7", null, 0, 1, Direct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(indexedEClass, Indexed.class, "Indexed", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getIndexed_Rd(), this.getRegisters(), null, "rd", null, 0, 1, Indexed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getIndexed_Rbx(), this.getRegisters(), null, "rbx", null, 0, 1, Indexed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getIndexed_Rd(), ecorePackage.getEString(), "rd", null, 0, 1, Indexed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getIndexed_Rbx(), ecorePackage.getEString(), "rbx", null, 0, 1, Indexed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getIndexed_Idx3(), this.getIdx3OrLabel(), null, "idx3", null, 0, 1, Indexed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(basedIndexedEClass, BasedIndexed.class, "BasedIndexed", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getBasedIndexed_Rbx(), ecorePackage.getEString(), "rbx", null, 0, 1, BasedIndexed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getBasedIndexed_Rix(), ecorePackage.getEString(), "rix", null, 0, 1, BasedIndexed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(directOrLabelEClass, DirectOrLabel.class, "DirectOrLabel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getDirectOrLabel_Number(), this.getNumber(), null, "number", null, 0, 1, DirectOrLabel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2227,21 +2195,21 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
     initEClass(operationWithTwoRegistersEClass, OperationWithTwoRegisters.class, "OperationWithTwoRegisters", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(operationsWithTreeRegistersEClass, OperationsWithTreeRegisters.class, "OperationsWithTreeRegisters", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getOperationsWithTreeRegisters_Rn(), this.getRegisters(), null, "rn", null, 0, 1, OperationsWithTreeRegisters.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getOperationsWithTreeRegisters_Rn(), ecorePackage.getEString(), "rn", null, 0, 1, OperationsWithTreeRegisters.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(operationsWithConstantEClass, OperationsWithConstant.class, "OperationsWithConstant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getOperationsWithConstant_Rd(), this.getRegisters(), null, "rd", null, 0, 1, OperationsWithConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getOperationsWithConstant_Rm(), this.getRegisters(), null, "rm", null, 0, 1, OperationsWithConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getOperationsWithConstant_Rd(), ecorePackage.getEString(), "rd", null, 0, 1, OperationsWithConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getOperationsWithConstant_Rm(), ecorePackage.getEString(), "rm", null, 0, 1, OperationsWithConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getOperationsWithConstant_Const4(), this.getConst4OrLabel(), null, "const4", null, 0, 1, OperationsWithConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(operationShiftEClass, OperationShift.class, "OperationShift", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getOperationShift_Rd(), this.getRegisters(), null, "rd", null, 0, 1, OperationShift.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getOperationShift_Rm(), this.getRegisters(), null, "rm", null, 0, 1, OperationShift.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getOperationShift_Rd(), ecorePackage.getEString(), "rd", null, 0, 1, OperationShift.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getOperationShift_Rm(), ecorePackage.getEString(), "rm", null, 0, 1, OperationShift.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getOperationShift_Const4(), this.getConst4OrLabel(), null, "const4", null, 0, 1, OperationShift.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getOperationShift_Sin(), ecorePackage.getEInt(), "sin", null, 0, 1, OperationShift.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(operationWithOffsetEClass, OperationWithOffset.class, "OperationWithOffset", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getOperationWithOffset_Rbx(), this.getRegisters(), null, "rbx", null, 0, 1, OperationWithOffset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getOperationWithOffset_Rbx(), ecorePackage.getEString(), "rbx", null, 0, 1, OperationWithOffset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getOperationWithOffset_Offset8(), this.getOffset8OrLabel(), null, "offset8", null, 0, 1, OperationWithOffset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2250,11 +2218,6 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
 
     initEClass(lowOrHightEClass, LowOrHight.class, "LowOrHight", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getLowOrHight_Value(), this.getExpression(), null, "value", null, 0, 1, LowOrHight.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(registersEClass, Registers.class, "Registers", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getRegisters_Rbx(), this.getRegisters(), null, "rbx", null, 0, 1, Registers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getRegisters_Rix(), this.getRegisters(), null, "rix", null, 0, 1, Registers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRegisters_Value(), ecorePackage.getEString(), "value", null, 0, 1, Registers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(numberEClass, org.pds16.pds16asm.pds16asm.Number.class, "Number", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getNumber_Value(), ecorePackage.getEInt(), "value", null, 0, 1, org.pds16.pds16asm.pds16asm.Number.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

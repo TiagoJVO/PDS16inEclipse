@@ -4,16 +4,13 @@
 package org.pds16.pds16asm.pds16asm.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.pds16.pds16asm.pds16asm.Orl;
 import org.pds16.pds16asm.pds16asm.Pds16asmPackage;
-import org.pds16.pds16asm.pds16asm.Registers;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,24 +29,44 @@ import org.pds16.pds16asm.pds16asm.Registers;
 public class OrlImpl extends LogicaImpl implements Orl
 {
   /**
-   * The cached value of the '{@link #getRd() <em>Rd</em>}' containment reference.
+   * The default value of the '{@link #getRd() <em>Rd</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getRd()
    * @generated
    * @ordered
    */
-  protected Registers rd;
+  protected static final String RD_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getRm() <em>Rm</em>}' containment reference.
+   * The cached value of the '{@link #getRd() <em>Rd</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRd()
+   * @generated
+   * @ordered
+   */
+  protected String rd = RD_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getRm() <em>Rm</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getRm()
    * @generated
    * @ordered
    */
-  protected Registers rm;
+  protected static final String RM_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getRm() <em>Rm</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRm()
+   * @generated
+   * @ordered
+   */
+  protected String rm = RM_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -77,7 +94,7 @@ public class OrlImpl extends LogicaImpl implements Orl
    * <!-- end-user-doc -->
    * @generated
    */
-  public Registers getRd()
+  public String getRd()
   {
     return rd;
   }
@@ -87,16 +104,12 @@ public class OrlImpl extends LogicaImpl implements Orl
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetRd(Registers newRd, NotificationChain msgs)
+  public void setRd(String newRd)
   {
-    Registers oldRd = rd;
+    String oldRd = rd;
     rd = newRd;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Pds16asmPackage.ORL__RD, oldRd, newRd);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
+      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.ORL__RD, oldRd, rd));
   }
 
   /**
@@ -104,28 +117,7 @@ public class OrlImpl extends LogicaImpl implements Orl
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setRd(Registers newRd)
-  {
-    if (newRd != rd)
-    {
-      NotificationChain msgs = null;
-      if (rd != null)
-        msgs = ((InternalEObject)rd).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.ORL__RD, null, msgs);
-      if (newRd != null)
-        msgs = ((InternalEObject)newRd).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.ORL__RD, null, msgs);
-      msgs = basicSetRd(newRd, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.ORL__RD, newRd, newRd));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Registers getRm()
+  public String getRm()
   {
     return rm;
   }
@@ -135,55 +127,12 @@ public class OrlImpl extends LogicaImpl implements Orl
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetRm(Registers newRm, NotificationChain msgs)
+  public void setRm(String newRm)
   {
-    Registers oldRm = rm;
+    String oldRm = rm;
     rm = newRm;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Pds16asmPackage.ORL__RM, oldRm, newRm);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setRm(Registers newRm)
-  {
-    if (newRm != rm)
-    {
-      NotificationChain msgs = null;
-      if (rm != null)
-        msgs = ((InternalEObject)rm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.ORL__RM, null, msgs);
-      if (newRm != null)
-        msgs = ((InternalEObject)newRm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.ORL__RM, null, msgs);
-      msgs = basicSetRm(newRm, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.ORL__RM, newRm, newRm));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case Pds16asmPackage.ORL__RD:
-        return basicSetRd(null, msgs);
-      case Pds16asmPackage.ORL__RM:
-        return basicSetRm(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
+      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.ORL__RM, oldRm, rm));
   }
 
   /**
@@ -215,10 +164,10 @@ public class OrlImpl extends LogicaImpl implements Orl
     switch (featureID)
     {
       case Pds16asmPackage.ORL__RD:
-        setRd((Registers)newValue);
+        setRd((String)newValue);
         return;
       case Pds16asmPackage.ORL__RM:
-        setRm((Registers)newValue);
+        setRm((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -235,10 +184,10 @@ public class OrlImpl extends LogicaImpl implements Orl
     switch (featureID)
     {
       case Pds16asmPackage.ORL__RD:
-        setRd((Registers)null);
+        setRd(RD_EDEFAULT);
         return;
       case Pds16asmPackage.ORL__RM:
-        setRm((Registers)null);
+        setRm(RM_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -255,11 +204,30 @@ public class OrlImpl extends LogicaImpl implements Orl
     switch (featureID)
     {
       case Pds16asmPackage.ORL__RD:
-        return rd != null;
+        return RD_EDEFAULT == null ? rd != null : !RD_EDEFAULT.equals(rd);
       case Pds16asmPackage.ORL__RM:
-        return rm != null;
+        return RM_EDEFAULT == null ? rm != null : !RM_EDEFAULT.equals(rm);
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (rd: ");
+    result.append(rd);
+    result.append(", rm: ");
+    result.append(rm);
+    result.append(')');
+    return result.toString();
   }
 
 } //OrlImpl

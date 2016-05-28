@@ -2064,13 +2064,9 @@ ruleAdd returns [EObject current=null]
 					newLeafNode(otherlv_7, grammarAccess.getAddAccess().getIncfKeyword_1_0_1());
 				}
 			)
+			this_REGISTERS_8=RULE_REGISTERS
 			{
-				newCompositeNode(grammarAccess.getAddAccess().getRegistersParserRuleCall_1_1());
-			}
-			this_Registers_8=ruleRegisters
-			{
-				$current = $this_Registers_8.current;
-				afterParserOrEnumRuleCall();
+				newLeafNode(this_REGISTERS_8, grammarAccess.getAddAccess().getREGISTERSTerminalRuleCall_1_1());
 			}
 		)
 	)
@@ -2162,13 +2158,9 @@ ruleSub returns [EObject current=null]
 					newLeafNode(otherlv_9, grammarAccess.getSubAccess().getDecfKeyword_2_0_1());
 				}
 			)
+			this_REGISTERS_10=RULE_REGISTERS
 			{
-				newCompositeNode(grammarAccess.getSubAccess().getRegistersParserRuleCall_2_1());
-			}
-			this_Registers_10=ruleRegisters
-			{
-				$current = $this_Registers_10.current;
-				afterParserOrEnumRuleCall();
+				newLeafNode(this_REGISTERS_10, grammarAccess.getSubAccess().getREGISTERSTerminalRuleCall_2_1());
 			}
 		)
 	)
@@ -2685,20 +2677,19 @@ ruleImmediate returns [EObject current=null]
 	(
 		(
 			(
+				lv_register_0_0=RULE_REGISTERS
 				{
-					newCompositeNode(grammarAccess.getImmediateAccess().getRegisterRegistersParserRuleCall_0_0());
+					newLeafNode(lv_register_0_0, grammarAccess.getImmediateAccess().getRegisterREGISTERSTerminalRuleCall_0_0());
 				}
-				lv_register_0_0=ruleRegisters
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getImmediateRule());
+						$current = createModelElement(grammarAccess.getImmediateRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"register",
 						lv_register_0_0,
-						"org.pds16.pds16asm.Pds16asm.Registers");
-					afterParserOrEnumRuleCall();
+						"org.pds16.pds16asm.Pds16asm.REGISTERS");
 				}
 			)
 		)
@@ -2768,20 +2759,19 @@ ruleDirect returns [EObject current=null]
 	(
 		(
 			(
+				lv_register_0_0=RULE_REGISTERS
 				{
-					newCompositeNode(grammarAccess.getDirectAccess().getRegisterRegistersParserRuleCall_0_0());
+					newLeafNode(lv_register_0_0, grammarAccess.getDirectAccess().getRegisterREGISTERSTerminalRuleCall_0_0());
 				}
-				lv_register_0_0=ruleRegisters
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getDirectRule());
+						$current = createModelElement(grammarAccess.getDirectRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"register",
 						lv_register_0_0,
-						"org.pds16.pds16asm.Pds16asm.Registers");
-					afterParserOrEnumRuleCall();
+						"org.pds16.pds16asm.Pds16asm.REGISTERS");
 				}
 			)
 		)
@@ -2829,20 +2819,19 @@ ruleIndexed returns [EObject current=null]
 	(
 		(
 			(
+				lv_rd_0_0=RULE_REGISTERS
 				{
-					newCompositeNode(grammarAccess.getIndexedAccess().getRdRegistersParserRuleCall_0_0());
+					newLeafNode(lv_rd_0_0, grammarAccess.getIndexedAccess().getRdREGISTERSTerminalRuleCall_0_0());
 				}
-				lv_rd_0_0=ruleRegisters
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getIndexedRule());
+						$current = createModelElement(grammarAccess.getIndexedRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"rd",
 						lv_rd_0_0,
-						"org.pds16.pds16asm.Pds16asm.Registers");
-					afterParserOrEnumRuleCall();
+						"org.pds16.pds16asm.Pds16asm.REGISTERS");
 				}
 			)
 		)
@@ -2856,20 +2845,19 @@ ruleIndexed returns [EObject current=null]
 		}
 		(
 			(
+				lv_rbx_3_0=RULE_REGISTERS
 				{
-					newCompositeNode(grammarAccess.getIndexedAccess().getRbxRegistersParserRuleCall_3_0());
+					newLeafNode(lv_rbx_3_0, grammarAccess.getIndexedAccess().getRbxREGISTERSTerminalRuleCall_3_0());
 				}
-				lv_rbx_3_0=ruleRegisters
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getIndexedRule());
+						$current = createModelElement(grammarAccess.getIndexedRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"rbx",
 						lv_rbx_3_0,
-						"org.pds16.pds16asm.Pds16asm.Registers");
-					afterParserOrEnumRuleCall();
+						"org.pds16.pds16asm.Pds16asm.REGISTERS");
 				}
 			)
 		)
@@ -2919,13 +2907,9 @@ ruleBasedIndexed returns [EObject current=null]
 	leaveRule();
 }:
 	(
+		this_REGISTERS_0=RULE_REGISTERS
 		{
-			newCompositeNode(grammarAccess.getBasedIndexedAccess().getRegistersParserRuleCall_0());
-		}
-		this_Registers_0=ruleRegisters
-		{
-			$current = $this_Registers_0.current;
-			afterParserOrEnumRuleCall();
+			newLeafNode(this_REGISTERS_0, grammarAccess.getBasedIndexedAccess().getREGISTERSTerminalRuleCall_0());
 		}
 		otherlv_1=Comma
 		{
@@ -2937,20 +2921,19 @@ ruleBasedIndexed returns [EObject current=null]
 		}
 		(
 			(
+				lv_rbx_3_0=RULE_REGISTERS
 				{
-					newCompositeNode(grammarAccess.getBasedIndexedAccess().getRbxRegistersParserRuleCall_3_0());
+					newLeafNode(lv_rbx_3_0, grammarAccess.getBasedIndexedAccess().getRbxREGISTERSTerminalRuleCall_3_0());
 				}
-				lv_rbx_3_0=ruleRegisters
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getBasedIndexedRule());
+						$current = createModelElement(grammarAccess.getBasedIndexedRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"rbx",
 						lv_rbx_3_0,
-						"org.pds16.pds16asm.Pds16asm.Registers");
-					afterParserOrEnumRuleCall();
+						"org.pds16.pds16asm.Pds16asm.REGISTERS");
 				}
 			)
 		)
@@ -2960,20 +2943,19 @@ ruleBasedIndexed returns [EObject current=null]
 		}
 		(
 			(
+				lv_rix_5_0=RULE_REGISTERS
 				{
-					newCompositeNode(grammarAccess.getBasedIndexedAccess().getRixRegistersParserRuleCall_5_0());
+					newLeafNode(lv_rix_5_0, grammarAccess.getBasedIndexedAccess().getRixREGISTERSTerminalRuleCall_5_0());
 				}
-				lv_rix_5_0=ruleRegisters
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getBasedIndexedRule());
+						$current = createModelElement(grammarAccess.getBasedIndexedRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"rix",
 						lv_rix_5_0,
-						"org.pds16.pds16asm.Pds16asm.Registers");
-					afterParserOrEnumRuleCall();
+						"org.pds16.pds16asm.Pds16asm.REGISTERS");
 				}
 			)
 		)
@@ -3311,20 +3293,19 @@ ruleOperationWithTwoRegisters returns [EObject current=null]
 	(
 		(
 			(
+				lv_rd_0_0=RULE_REGISTERS
 				{
-					newCompositeNode(grammarAccess.getOperationWithTwoRegistersAccess().getRdRegistersParserRuleCall_0_0());
+					newLeafNode(lv_rd_0_0, grammarAccess.getOperationWithTwoRegistersAccess().getRdREGISTERSTerminalRuleCall_0_0());
 				}
-				lv_rd_0_0=ruleRegisters
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getOperationWithTwoRegistersRule());
+						$current = createModelElement(grammarAccess.getOperationWithTwoRegistersRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"rd",
 						lv_rd_0_0,
-						"org.pds16.pds16asm.Pds16asm.Registers");
-					afterParserOrEnumRuleCall();
+						"org.pds16.pds16asm.Pds16asm.REGISTERS");
 				}
 			)
 		)
@@ -3334,20 +3315,19 @@ ruleOperationWithTwoRegisters returns [EObject current=null]
 		}
 		(
 			(
+				lv_rm_2_0=RULE_REGISTERS
 				{
-					newCompositeNode(grammarAccess.getOperationWithTwoRegistersAccess().getRmRegistersParserRuleCall_2_0());
+					newLeafNode(lv_rm_2_0, grammarAccess.getOperationWithTwoRegistersAccess().getRmREGISTERSTerminalRuleCall_2_0());
 				}
-				lv_rm_2_0=ruleRegisters
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getOperationWithTwoRegistersRule());
+						$current = createModelElement(grammarAccess.getOperationWithTwoRegistersRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"rm",
 						lv_rm_2_0,
-						"org.pds16.pds16asm.Pds16asm.Registers");
-					afterParserOrEnumRuleCall();
+						"org.pds16.pds16asm.Pds16asm.REGISTERS");
 				}
 			)
 		)
@@ -3372,20 +3352,19 @@ ruleOperationsWithTreeRegisters returns [EObject current=null]
 	(
 		(
 			(
+				lv_rd_0_0=RULE_REGISTERS
 				{
-					newCompositeNode(grammarAccess.getOperationsWithTreeRegistersAccess().getRdRegistersParserRuleCall_0_0());
+					newLeafNode(lv_rd_0_0, grammarAccess.getOperationsWithTreeRegistersAccess().getRdREGISTERSTerminalRuleCall_0_0());
 				}
-				lv_rd_0_0=ruleRegisters
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getOperationsWithTreeRegistersRule());
+						$current = createModelElement(grammarAccess.getOperationsWithTreeRegistersRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"rd",
 						lv_rd_0_0,
-						"org.pds16.pds16asm.Pds16asm.Registers");
-					afterParserOrEnumRuleCall();
+						"org.pds16.pds16asm.Pds16asm.REGISTERS");
 				}
 			)
 		)
@@ -3395,20 +3374,19 @@ ruleOperationsWithTreeRegisters returns [EObject current=null]
 		}
 		(
 			(
+				lv_rm_2_0=RULE_REGISTERS
 				{
-					newCompositeNode(grammarAccess.getOperationsWithTreeRegistersAccess().getRmRegistersParserRuleCall_2_0());
+					newLeafNode(lv_rm_2_0, grammarAccess.getOperationsWithTreeRegistersAccess().getRmREGISTERSTerminalRuleCall_2_0());
 				}
-				lv_rm_2_0=ruleRegisters
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getOperationsWithTreeRegistersRule());
+						$current = createModelElement(grammarAccess.getOperationsWithTreeRegistersRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"rm",
 						lv_rm_2_0,
-						"org.pds16.pds16asm.Pds16asm.Registers");
-					afterParserOrEnumRuleCall();
+						"org.pds16.pds16asm.Pds16asm.REGISTERS");
 				}
 			)
 		)
@@ -3418,20 +3396,19 @@ ruleOperationsWithTreeRegisters returns [EObject current=null]
 		}
 		(
 			(
+				lv_rn_4_0=RULE_REGISTERS
 				{
-					newCompositeNode(grammarAccess.getOperationsWithTreeRegistersAccess().getRnRegistersParserRuleCall_4_0());
+					newLeafNode(lv_rn_4_0, grammarAccess.getOperationsWithTreeRegistersAccess().getRnREGISTERSTerminalRuleCall_4_0());
 				}
-				lv_rn_4_0=ruleRegisters
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getOperationsWithTreeRegistersRule());
+						$current = createModelElement(grammarAccess.getOperationsWithTreeRegistersRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"rn",
 						lv_rn_4_0,
-						"org.pds16.pds16asm.Pds16asm.Registers");
-					afterParserOrEnumRuleCall();
+						"org.pds16.pds16asm.Pds16asm.REGISTERS");
 				}
 			)
 		)
@@ -3456,20 +3433,19 @@ ruleOperationsWithConstant returns [EObject current=null]
 	(
 		(
 			(
+				lv_rd_0_0=RULE_REGISTERS
 				{
-					newCompositeNode(grammarAccess.getOperationsWithConstantAccess().getRdRegistersParserRuleCall_0_0());
+					newLeafNode(lv_rd_0_0, grammarAccess.getOperationsWithConstantAccess().getRdREGISTERSTerminalRuleCall_0_0());
 				}
-				lv_rd_0_0=ruleRegisters
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getOperationsWithConstantRule());
+						$current = createModelElement(grammarAccess.getOperationsWithConstantRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"rd",
 						lv_rd_0_0,
-						"org.pds16.pds16asm.Pds16asm.Registers");
-					afterParserOrEnumRuleCall();
+						"org.pds16.pds16asm.Pds16asm.REGISTERS");
 				}
 			)
 		)
@@ -3479,20 +3455,19 @@ ruleOperationsWithConstant returns [EObject current=null]
 		}
 		(
 			(
+				lv_rm_2_0=RULE_REGISTERS
 				{
-					newCompositeNode(grammarAccess.getOperationsWithConstantAccess().getRmRegistersParserRuleCall_2_0());
+					newLeafNode(lv_rm_2_0, grammarAccess.getOperationsWithConstantAccess().getRmREGISTERSTerminalRuleCall_2_0());
 				}
-				lv_rm_2_0=ruleRegisters
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getOperationsWithConstantRule());
+						$current = createModelElement(grammarAccess.getOperationsWithConstantRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"rm",
 						lv_rm_2_0,
-						"org.pds16.pds16asm.Pds16asm.Registers");
-					afterParserOrEnumRuleCall();
+						"org.pds16.pds16asm.Pds16asm.REGISTERS");
 				}
 			)
 		)
@@ -3540,20 +3515,19 @@ ruleOperationShift returns [EObject current=null]
 	(
 		(
 			(
+				lv_rd_0_0=RULE_REGISTERS
 				{
-					newCompositeNode(grammarAccess.getOperationShiftAccess().getRdRegistersParserRuleCall_0_0());
+					newLeafNode(lv_rd_0_0, grammarAccess.getOperationShiftAccess().getRdREGISTERSTerminalRuleCall_0_0());
 				}
-				lv_rd_0_0=ruleRegisters
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getOperationShiftRule());
+						$current = createModelElement(grammarAccess.getOperationShiftRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"rd",
 						lv_rd_0_0,
-						"org.pds16.pds16asm.Pds16asm.Registers");
-					afterParserOrEnumRuleCall();
+						"org.pds16.pds16asm.Pds16asm.REGISTERS");
 				}
 			)
 		)
@@ -3563,20 +3537,19 @@ ruleOperationShift returns [EObject current=null]
 		}
 		(
 			(
+				lv_rm_2_0=RULE_REGISTERS
 				{
-					newCompositeNode(grammarAccess.getOperationShiftAccess().getRmRegistersParserRuleCall_2_0());
+					newLeafNode(lv_rm_2_0, grammarAccess.getOperationShiftAccess().getRmREGISTERSTerminalRuleCall_2_0());
 				}
-				lv_rm_2_0=ruleRegisters
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getOperationShiftRule());
+						$current = createModelElement(grammarAccess.getOperationShiftRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"rm",
 						lv_rm_2_0,
-						"org.pds16.pds16asm.Pds16asm.Registers");
-					afterParserOrEnumRuleCall();
+						"org.pds16.pds16asm.Pds16asm.REGISTERS");
 				}
 			)
 		)
@@ -3708,20 +3681,19 @@ ruleOperationWithOffset returns [EObject current=null]
 	(
 		(
 			(
+				lv_rbx_0_0=RULE_REGISTERS
 				{
-					newCompositeNode(grammarAccess.getOperationWithOffsetAccess().getRbxRegistersParserRuleCall_0_0());
+					newLeafNode(lv_rbx_0_0, grammarAccess.getOperationWithOffsetAccess().getRbxREGISTERSTerminalRuleCall_0_0());
 				}
-				lv_rbx_0_0=ruleRegisters
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getOperationWithOffsetRule());
+						$current = createModelElement(grammarAccess.getOperationWithOffsetRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"rbx",
 						lv_rbx_0_0,
-						"org.pds16.pds16asm.Pds16asm.Registers");
-					afterParserOrEnumRuleCall();
+						"org.pds16.pds16asm.Pds16asm.REGISTERS");
 				}
 			)
 		)
@@ -3927,127 +3899,6 @@ ruleLowOrHight returns [EObject current=null]
 		{
 			newLeafNode(otherlv_5, grammarAccess.getLowOrHightAccess().getRightParenthesisKeyword_4());
 		}
-	)
-;
-
-// Entry rule entryRuleRegisters
-entryRuleRegisters returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getRegistersRule()); }
-	iv_ruleRegisters=ruleRegisters
-	{ $current=$iv_ruleRegisters.current; }
-	EOF;
-
-// Rule Registers
-ruleRegisters returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			(
-				lv_value_0_1=R0
-				{
-					newLeafNode(lv_value_0_1, grammarAccess.getRegistersAccess().getValueR0Keyword_0_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getRegistersRule());
-					}
-					setWithLastConsumed($current, "value", lv_value_0_1, null);
-				}
-				    |
-				lv_value_0_2=R1
-				{
-					newLeafNode(lv_value_0_2, grammarAccess.getRegistersAccess().getValueR1Keyword_0_1());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getRegistersRule());
-					}
-					setWithLastConsumed($current, "value", lv_value_0_2, null);
-				}
-				    |
-				lv_value_0_3=R2
-				{
-					newLeafNode(lv_value_0_3, grammarAccess.getRegistersAccess().getValueR2Keyword_0_2());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getRegistersRule());
-					}
-					setWithLastConsumed($current, "value", lv_value_0_3, null);
-				}
-				    |
-				lv_value_0_4=R3
-				{
-					newLeafNode(lv_value_0_4, grammarAccess.getRegistersAccess().getValueR3Keyword_0_3());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getRegistersRule());
-					}
-					setWithLastConsumed($current, "value", lv_value_0_4, null);
-				}
-				    |
-				lv_value_0_5=R4
-				{
-					newLeafNode(lv_value_0_5, grammarAccess.getRegistersAccess().getValueR4Keyword_0_4());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getRegistersRule());
-					}
-					setWithLastConsumed($current, "value", lv_value_0_5, null);
-				}
-				    |
-				lv_value_0_6=R5
-				{
-					newLeafNode(lv_value_0_6, grammarAccess.getRegistersAccess().getValueR5Keyword_0_5());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getRegistersRule());
-					}
-					setWithLastConsumed($current, "value", lv_value_0_6, null);
-				}
-				    |
-				lv_value_0_7=R6
-				{
-					newLeafNode(lv_value_0_7, grammarAccess.getRegistersAccess().getValueR6Keyword_0_6());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getRegistersRule());
-					}
-					setWithLastConsumed($current, "value", lv_value_0_7, null);
-				}
-				    |
-				lv_value_0_8=R7
-				{
-					newLeafNode(lv_value_0_8, grammarAccess.getRegistersAccess().getValueR7Keyword_0_7());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getRegistersRule());
-					}
-					setWithLastConsumed($current, "value", lv_value_0_8, null);
-				}
-				    |
-				lv_value_0_9=PSW
-				{
-					newLeafNode(lv_value_0_9, grammarAccess.getRegistersAccess().getValuePSWKeyword_0_8());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getRegistersRule());
-					}
-					setWithLastConsumed($current, "value", lv_value_0_9, null);
-				}
-			)
-		)
 	)
 ;
 

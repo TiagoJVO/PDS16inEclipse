@@ -15,7 +15,6 @@ import org.pds16.pds16asm.pds16asm.Immediate;
 import org.pds16.pds16asm.pds16asm.Immediate8OrLabel;
 import org.pds16.pds16asm.pds16asm.LowOrHight;
 import org.pds16.pds16asm.pds16asm.Pds16asmPackage;
-import org.pds16.pds16asm.pds16asm.Registers;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,14 +34,24 @@ import org.pds16.pds16asm.pds16asm.Registers;
 public class ImmediateImpl extends LdImmediateImpl implements Immediate
 {
   /**
-   * The cached value of the '{@link #getRegister() <em>Register</em>}' containment reference.
+   * The default value of the '{@link #getRegister() <em>Register</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getRegister()
    * @generated
    * @ordered
    */
-  protected Registers register;
+  protected static final String REGISTER_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getRegister() <em>Register</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRegister()
+   * @generated
+   * @ordered
+   */
+  protected String register = REGISTER_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getImmediate8() <em>Immediate8</em>}' containment reference.
@@ -90,7 +99,7 @@ public class ImmediateImpl extends LdImmediateImpl implements Immediate
    * <!-- end-user-doc -->
    * @generated
    */
-  public Registers getRegister()
+  public String getRegister()
   {
     return register;
   }
@@ -100,37 +109,12 @@ public class ImmediateImpl extends LdImmediateImpl implements Immediate
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetRegister(Registers newRegister, NotificationChain msgs)
+  public void setRegister(String newRegister)
   {
-    Registers oldRegister = register;
+    String oldRegister = register;
     register = newRegister;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Pds16asmPackage.IMMEDIATE__REGISTER, oldRegister, newRegister);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setRegister(Registers newRegister)
-  {
-    if (newRegister != register)
-    {
-      NotificationChain msgs = null;
-      if (register != null)
-        msgs = ((InternalEObject)register).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.IMMEDIATE__REGISTER, null, msgs);
-      if (newRegister != null)
-        msgs = ((InternalEObject)newRegister).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.IMMEDIATE__REGISTER, null, msgs);
-      msgs = basicSetRegister(newRegister, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.IMMEDIATE__REGISTER, newRegister, newRegister));
+      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.IMMEDIATE__REGISTER, oldRegister, register));
   }
 
   /**
@@ -239,8 +223,6 @@ public class ImmediateImpl extends LdImmediateImpl implements Immediate
   {
     switch (featureID)
     {
-      case Pds16asmPackage.IMMEDIATE__REGISTER:
-        return basicSetRegister(null, msgs);
       case Pds16asmPackage.IMMEDIATE__IMMEDIATE8:
         return basicSetImmediate8(null, msgs);
       case Pds16asmPackage.IMMEDIATE__LOW_ORHIGH:
@@ -280,7 +262,7 @@ public class ImmediateImpl extends LdImmediateImpl implements Immediate
     switch (featureID)
     {
       case Pds16asmPackage.IMMEDIATE__REGISTER:
-        setRegister((Registers)newValue);
+        setRegister((String)newValue);
         return;
       case Pds16asmPackage.IMMEDIATE__IMMEDIATE8:
         setImmediate8((Immediate8OrLabel)newValue);
@@ -303,7 +285,7 @@ public class ImmediateImpl extends LdImmediateImpl implements Immediate
     switch (featureID)
     {
       case Pds16asmPackage.IMMEDIATE__REGISTER:
-        setRegister((Registers)null);
+        setRegister(REGISTER_EDEFAULT);
         return;
       case Pds16asmPackage.IMMEDIATE__IMMEDIATE8:
         setImmediate8((Immediate8OrLabel)null);
@@ -326,13 +308,30 @@ public class ImmediateImpl extends LdImmediateImpl implements Immediate
     switch (featureID)
     {
       case Pds16asmPackage.IMMEDIATE__REGISTER:
-        return register != null;
+        return REGISTER_EDEFAULT == null ? register != null : !REGISTER_EDEFAULT.equals(register);
       case Pds16asmPackage.IMMEDIATE__IMMEDIATE8:
         return immediate8 != null;
       case Pds16asmPackage.IMMEDIATE__LOW_ORHIGH:
         return lowORhigh != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (register: ");
+    result.append(register);
+    result.append(')');
+    return result.toString();
   }
 
 } //ImmediateImpl
