@@ -18,13 +18,13 @@ class Pds16asmHighlightingConfiguration extends DefaultHighlightingConfiguration
 	public static final String SIMBOL_CARACTER = "Simbol_Caracter";
 	
 	override configure(IHighlightingConfigurationAcceptor acceptor) {
-		addType(acceptor,DIRECTIVES, 26, 121, 216, SWT.BOLD);
-		addType(acceptor,RULES, 26, 26, 222, SWT.BOLD);
-		addType(acceptor,NUMBERS, 235, 75, 9, SWT.NORMAL);
+		addType(acceptor,DIRECTIVES, 127, 0, 85, SWT.NORMAL);
+		addType(acceptor,RULES, 127, 0, 85, SWT.BOLD);
+		addType(acceptor,NUMBERS, 125, 125, 125, SWT.NORMAL);
 		addType(acceptor,COMMENTS, 2, 172, 13, SWT.NORMAL);
-		addType(acceptor,REGISTERS, 151, 7, 223, SWT.NORMAL);
-		addType(acceptor,LABEL, 210, 4, 4, SWT.BOLD);
-		addType(acceptor,TEXT, 212, 212, 0, SWT.NORMAL);
+		addType(acceptor,REGISTERS, 0, 0, 0, SWT.BOLD);
+		addType(acceptor,LABEL, 128, 0, 0, SWT.BOLD);
+		addType(acceptor,TEXT, 42, 0, 255, SWT.NORMAL);
 		addType(acceptor,SIMBOL_CARACTER, 0, 0, 0, SWT.NORMAL);
 	}
 	

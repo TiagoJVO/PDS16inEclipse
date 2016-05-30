@@ -26,13 +26,13 @@ public class Pds16asmHighlightingConfiguration extends DefaultHighlightingConfig
   
   @Override
   public void configure(final IHighlightingConfigurationAcceptor acceptor) {
-    this.addType(acceptor, Pds16asmHighlightingConfiguration.DIRECTIVES, 26, 121, 216, SWT.BOLD);
-    this.addType(acceptor, Pds16asmHighlightingConfiguration.RULES, 26, 26, 222, SWT.BOLD);
-    this.addType(acceptor, Pds16asmHighlightingConfiguration.NUMBERS, 235, 75, 9, SWT.NORMAL);
+    this.addType(acceptor, Pds16asmHighlightingConfiguration.DIRECTIVES, 127, 0, 85, SWT.NORMAL);
+    this.addType(acceptor, Pds16asmHighlightingConfiguration.RULES, 127, 0, 85, SWT.BOLD);
+    this.addType(acceptor, Pds16asmHighlightingConfiguration.NUMBERS, 125, 125, 125, SWT.NORMAL);
     this.addType(acceptor, Pds16asmHighlightingConfiguration.COMMENTS, 2, 172, 13, SWT.NORMAL);
-    this.addType(acceptor, Pds16asmHighlightingConfiguration.REGISTERS, 151, 7, 223, SWT.NORMAL);
-    this.addType(acceptor, Pds16asmHighlightingConfiguration.LABEL, 210, 4, 4, SWT.BOLD);
-    this.addType(acceptor, Pds16asmHighlightingConfiguration.TEXT, 212, 212, 0, SWT.NORMAL);
+    this.addType(acceptor, Pds16asmHighlightingConfiguration.REGISTERS, 0, 0, 0, SWT.BOLD);
+    this.addType(acceptor, Pds16asmHighlightingConfiguration.LABEL, 128, 0, 0, SWT.BOLD);
+    this.addType(acceptor, Pds16asmHighlightingConfiguration.TEXT, 42, 0, 255, SWT.NORMAL);
     this.addType(acceptor, Pds16asmHighlightingConfiguration.SIMBOL_CARACTER, 0, 0, 0, SWT.NORMAL);
   }
   
