@@ -131,7 +131,7 @@ class Pds16asmValidator extends AbstractPds16asmValidator {
 			return;
 		val list = w.numbers;
 		var int size = list.size();
-		
+		if(size>0)
 		(0..size-1).forEach[i | 
 			var item = list.get(i);
 				if(item.value < MIN_16BIT_WITH_SIGNAL  || item.value > MAX_16BIT_WITH_SIGNAL)

@@ -191,25 +191,27 @@ public class Pds16asmValidator extends AbstractPds16asmValidator {
     }
     final EList<org.pds16.pds16asm.pds16asm.Number> list = w.getNumbers();
     int size = list.size();
-    IntegerRange _upTo = new IntegerRange(0, (size - 1));
-    final Consumer<Integer> _function = (Integer i) -> {
-      org.pds16.pds16asm.pds16asm.Number item = list.get((i).intValue());
-      boolean _or = false;
-      int _value = item.getValue();
-      boolean _lessThan = (_value < this.MIN_16BIT_WITH_SIGNAL);
-      if (_lessThan) {
-        _or = true;
-      } else {
-        int _value_1 = item.getValue();
-        boolean _greaterThan = (_value_1 > this.MAX_16BIT_WITH_SIGNAL);
-        _or = _greaterThan;
-      }
-      if (_or) {
-        this.warning(((("One of the declared values isn\'t be between" + Integer.valueOf(this.MIN_16BIT_WITH_SIGNAL)) + " and ") + Integer.valueOf(this.MAX_16BIT_WITH_SIGNAL)), 
-          Pds16asmPackage.Literals.WORD__TAG, 
-          "Invalid Number");
-      }
-    };
-    _upTo.forEach(_function);
+    if ((size > 0)) {
+      IntegerRange _upTo = new IntegerRange(0, (size - 1));
+      final Consumer<Integer> _function = (Integer i) -> {
+        org.pds16.pds16asm.pds16asm.Number item = list.get((i).intValue());
+        boolean _or = false;
+        int _value = item.getValue();
+        boolean _lessThan = (_value < this.MIN_16BIT_WITH_SIGNAL);
+        if (_lessThan) {
+          _or = true;
+        } else {
+          int _value_1 = item.getValue();
+          boolean _greaterThan = (_value_1 > this.MAX_16BIT_WITH_SIGNAL);
+          _or = _greaterThan;
+        }
+        if (_or) {
+          this.warning(((("One of the declared values isn\'t be between" + Integer.valueOf(this.MIN_16BIT_WITH_SIGNAL)) + " and ") + Integer.valueOf(this.MAX_16BIT_WITH_SIGNAL)), 
+            Pds16asmPackage.Literals.WORD__TAG, 
+            "Invalid Number");
+        }
+      };
+      _upTo.forEach(_function);
+    }
   }
 }
