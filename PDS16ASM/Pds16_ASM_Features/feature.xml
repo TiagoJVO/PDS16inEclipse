@@ -2,7 +2,7 @@
 <feature
       id="Pds16_ASM_Features"
       label="Pds16_ASM_Features"
-      version="1.0.2">
+      version="1.0.4">
 
    <description url="http://www.example.com/description">
       [Enter Feature Description here.]
@@ -40,27 +40,29 @@
       <import plugin="org.eclipse.ui"/>
       <import plugin="org.eclipse.compare"/>
       <import plugin="org.eclipse.xtext.builder"/>
+      <import plugin="org.pds16.pds16asm"/>
+      <import plugin="org.pds16.pds16asm.ide"/>
    </requires>
 
    <plugin
          id="org.pds16.pds16asm"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.3"
          unpack="false"/>
 
    <plugin
          id="org.pds16.pds16asm.ide"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.3"
          unpack="false"/>
 
    <plugin
          id="org.pds16.pds16asm.ui"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.3"
          unpack="false"/>
 
 </feature>

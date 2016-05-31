@@ -30,7 +30,7 @@ Ascii:	tag='.ascii' (values+=STRING (',' values+=STRING)*)?;
 
 Asciiz:	tag='.asciiz' (values+=STRING (',' values+=STRING)*)?;
 
-Byte:	tag='.byte' ( ((numbers+=Number) | (s+=STRING))  (',' ((numbers+=Number) | (s+=STRING)) )*)?;
+Byte:	tag='.byte' (((numbers+=Number) | (s+=STRING))  (',' ((numbers+=Number) | (s+=STRING)) )*)?;
 					
 Word:	tag='.word' ((values+=ID | numbers+=Number)  (',' (values+= ID | numbers+=Number))*)?;
 
