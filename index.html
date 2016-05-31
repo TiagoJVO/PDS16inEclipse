@@ -32,29 +32,29 @@
 
         <section id="main_content">
           <h3>
-<a id="projeto" class="anchor" href="#projeto" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Projeto.</h3>
+<a id="projeto" class="anchor" href="#projeto" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Projeto</h3>
 
-<p>O projeto PDS16inEcplise consiste no desenvolvimento de uma ferramenta que visa facilitar a escrita de programas para o processador PDS16 usando a sua linguagem assembly. Este plug-in é, essencialmente, um editor de texto que integra funcionalidades para fazer uma verificação da semântica e da sintaxe em tempo de escrita de código. O desenvolvimento desta ferramenta é baseado na framework Xtext <a href="https://eclipse.org/Xtext/">Xtext</a> integrada no Ambiente Integrado de Desenvolvimento (IDE) <a href="https://eclipse.org/">Ecplise</a>. </p>
+<p>O projeto PDS16inEcplise consiste no desenvolvimento de uma ferramenta que visa facilitar a escrita de programas para o processador PDS16 [1] usando a sua linguagem assembly. Este <em>plug-in</em> é, essencialmente, um editor de texto que integra funcionalidades para fazer uma verificação da semântica e da sintaxe em tempo de escrita de código. O desenvolvimento desta ferramenta é baseado na framework <a href="https://eclipse.org/Xtext/">Xtext</a> integrada no Ambiente Integrado de Desenvolvimento (IDE) <a href="https://eclipse.org/">Ecplise</a>. </p>
 
 <h3>
 <a id="assembly-pds16" class="anchor" href="#assembly-pds16" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Assembly PDS16</h3>
 
-<p>A arquitetura <a href="http://pwp.net.ipl.pt/cc.isel/ezeq/arquitetura/sistemas_didaticos/pds16/hardware/QuickRef_V2.pdf">PDS16</a> foi desenvolvida no Instituto Superior de Engenharia de Lisboa (ISEL), em 2008, com o objetivo de suportar não só uma mais fácil compreensão mas também o ensino experimental dos conceitos básicos subjacentes ao tema “Arquitetura de Computadores”. Esta arquitetura a 16 bits adota a mesma filosofia das máquinas do tipo Reduced Instruction Set Computer (RISC), oferecendo o seu Instruction Set Architecture (ISA) ao programador 6 registos de uso geral e cerca de 40 instruções distintas, organizadas em três classes: 6 instruções para controlo do fluxo de execução, 18 instruções de processamento de dados e 12 instruções de transferência de dados. </p>
+<p>A arquitetura PDS16 [2] foi desenvolvida no Instituto Superior de Engenharia de Lisboa (ISEL), em 2008, com o objetivo de suportar não só uma mais fácil compreensão mas também o ensino experimental dos conceitos básicos subjacentes ao tema “Arquitetura de Computadores”. Esta arquitetura a 16 bits adota a mesma filosofia das máquinas do tipo <em>Reduced Instruction Set Computer</em> (RISC), oferecendo o seu <em>Instruction Set Architecture</em> (ISA) ao programador 6 registos de uso geral e cerca de 40 instruções distintas, organizadas em três classes: 6 instruções para controlo do fluxo de execução, 18 instruções de processamento de dados e 12 instruções de transferência de dados, (ver [2]). </p>
 
 <h3>
 <a id="processo-de-instalação" class="anchor" href="#processo-de-instala%C3%A7%C3%A3o" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Processo de Instalação</h3>
 
-<p>Para fazer o correto uso do editor de texto é necessario instalar o plug-in e defenir uma variavel de ambiente do assembler DASM.
-O plug-in pode ser instalado no IDE Eclipse de duas maneiras, fazendo download ficheiro ZIP ou instalar usando o este <a href="http://tiagojvo.github.io/PDS16inEclipse/">link</a>.
-Para a instalação do plug-in seja qual for a fonte é necessario seguir os seguintes passos:</p>
+<p>Para fazer uso correto do editor de texto PDS16inEclipse é necessário instalar o <em>plug-in</em> e definir uma variável de ambiente do sistema operativo para utilização do assembler DASM [3].
+<em>Plug-in</em> PDS16inEclipse pode ser instalado no IDE Eclipse de duas formas: 1) fazendo o download de um ficheiro ZIP ou instalar diretamente usando o <a href="http://tiagojvo.github.io/PDS16inEclipse/">link</a>.
+Para qualquer dos casos, para instalar o <em>plug-in</em> é necessário seguir os seguintes passos:</p>
 
 <ul>
-<li>Começar por defenir uma variavel de ambiente com o nome "DASM_PATH" com a respetiva path do assembler;</li>
-<li>De seguinda efetuar os seguintes passos no IDE Eclipse: 
+<li>Definir uma variável de ambiente do sistema operativo com o nome "DASM_PATH" que identifica a path para o assembler DASM;</li>
+<li>No IDE Eclipse, efetuar os seguintes passos: 
 
 <ul>
-<li>Ir a tab "Help" -&gt; "Install New Software";</li>
-<li>Cicar em "Add" e no campo "Location" colocar o endereço web do plug-in ou a path da pasta descompactada;</li>
+<li>Ir à tab "Help" -&gt; "Install New Software";</li>
+<li>Clicar em "Add" e no campo "Location" colocar o endereço web do <em>plug-in</em> ou em alternativa a <em>path</em> para a diretoria para onde foi  descompactado o ficheiro zip;</li>
 <li>Selecionar o software "Pds16inEclipse" e prosseguir a instalação.</li>
 </ul>
 </li>
@@ -63,7 +63,7 @@ Para a instalação do plug-in seja qual for a fonte é necessario seguir os seg
 <h3>
 <a id="autores" class="anchor" href="#autores" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Autores</h3>
 
-<p>Este plug-in foi desenvolvido por alunos do Instituto Superior de Engenharia de Lisboa (ISEL) no ambito da cadeira de Projeto e Seminario. Os contribuidores do projeto são: André Ramanlal (<a href="https://github.com/22mramanlal" class="user-mention">@22mramanlal</a>) e Tiago Oliveira (<a href="https://github.com/Tiagojvo" class="user-mention">@Tiagojvo</a>) coordenado pelos docentes Tiago Dias (<a href="https://github.com/tmdias" class="user-mention">@tmdias</a>) e Pedro Sampaio (<a href="https://github.com/pmfsampaio" class="user-mention">@pmfsampaio</a>).</p>
+<p>Este plug-in foi desenvolvido por dois alunos do Instituto Superior de Engenharia de Lisboa (ISEL) no âmbito da unidade curricular Projeto e Seminário. Os autores do projeto são André Ramanlal (<a href="https://github.com/22mramanlal" class="user-mention">@22mramanlal</a>) e Tiago Oliveira (<a href="https://github.com/Tiagojvo" class="user-mention">@Tiagojvo</a>) e os seus coordenadores são os docentes Tiago Dias (<a href="https://github.com/tmdias" class="user-mention">@tmdias</a>) e Pedro Sampaio (<a href="https://github.com/pmfsampaio" class="user-mention">@pmfsampaio</a>).</p>
         </section>
 
         <footer>
