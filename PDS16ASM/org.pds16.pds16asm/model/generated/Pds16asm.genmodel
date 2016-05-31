@@ -17,33 +17,38 @@
     <genClasses ecoreClass="Pds16asm.ecore#//Directive"/>
     <genClasses ecoreClass="Pds16asm.ecore#//LabelDirective"/>
     <genClasses ecoreClass="Pds16asm.ecore#//Bss">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Bss/val"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Bss/value"/>
     </genClasses>
     <genClasses ecoreClass="Pds16asm.ecore#//Data">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Data/val"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Data/value"/>
     </genClasses>
     <genClasses ecoreClass="Pds16asm.ecore#//End">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//End/val"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//End/value"/>
     </genClasses>
     <genClasses ecoreClass="Pds16asm.ecore#//Text">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Text/val"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Text/value"/>
     </genClasses>
     <genClasses ecoreClass="Pds16asm.ecore#//Ascii">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Ascii/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Ascii/tag"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Ascii/values"/>
     </genClasses>
     <genClasses ecoreClass="Pds16asm.ecore#//Asciiz">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Asciiz/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Asciiz/tag"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Asciiz/values"/>
     </genClasses>
     <genClasses ecoreClass="Pds16asm.ecore#//Byte">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Byte/number"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Byte/tag"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//Byte/numbers"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Byte/s"/>
     </genClasses>
     <genClasses ecoreClass="Pds16asm.ecore#//Word">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Word/value"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Word/number"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Word/tag"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Word/values"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//Word/numbers"/>
     </genClasses>
     <genClasses ecoreClass="Pds16asm.ecore#//Space">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Space/size"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Space/byteValeu"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//Space/size"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//Space/byteValue"/>
     </genClasses>
     <genClasses ecoreClass="Pds16asm.ecore#//Set">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Set/value1"/>
@@ -81,7 +86,9 @@
     <genClasses ecoreClass="Pds16asm.ecore#//Rr"/>
     <genClasses ecoreClass="Pds16asm.ecore#//Rc"/>
     <genClasses ecoreClass="Pds16asm.ecore#//JumpOp">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//JumpOp/op"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//JumpOp/tag"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//JumpOp/opOff"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//JumpOp/opId"/>
     </genClasses>
     <genClasses ecoreClass="Pds16asm.ecore#//Nop">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Nop/instruction"/>

@@ -30,9 +30,7 @@ public class Pds16asmSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_Add_Sub_AdcKeyword_0_0_2_or_AdcfKeyword_0_0_3_or_AddKeyword_0_0_0_or_AddfKeyword_0_0_1_or_SbbKeyword_0_0_2_or_SbbfKeyword_0_0_3_or_SubKeyword_0_0_0_or_SubfKeyword_0_0_1_or_SubrKeyword_1_0;
 	protected AbstractElementAlias match_Anl_AnlKeyword_0_0_or_AnlfKeyword_0_1;
 	protected AbstractElementAlias match_Anl_Orl_Xrl_AnlKeyword_0_0_or_AnlfKeyword_0_1_or_OrlKeyword_0_0_0_or_OrlfKeyword_0_0_1_or_XrlKeyword_0_0_or_XrlfKeyword_0_1;
-	protected AbstractElementAlias match_Asciiz___CommaKeyword_1_1_0_STRINGTerminalRuleCall_1_1_1__a;
 	protected AbstractElementAlias match_Equ_Org_OrgKeyword_0_or___EquKeyword_0_IDTerminalRuleCall_1_CommaKeyword_2__;
-	protected AbstractElementAlias match_JumpOp_JaeKeyword_0_7_or_JblKeyword_0_5_or_JcKeyword_0_4_or_JeKeyword_0_1_or_JmpKeyword_0_8_or_JmplKeyword_0_9_or_JncKeyword_0_6_or_JneKeyword_0_3_or_JnzKeyword_0_2_or_JzKeyword_0_0;
 	protected AbstractElementAlias match_LdBasedIndexed_LdKeyword_0_0_or_LdbKeyword_0_1;
 	protected AbstractElementAlias match_LdBasedIndexed_StBasedIndexed_LdKeyword_0_0_or_LdbKeyword_0_1_or_StKeyword_0_0_or_StbKeyword_0_1;
 	protected AbstractElementAlias match_LdDirect_LdKeyword_0_0_or_LdbKeyword_0_1;
@@ -67,9 +65,7 @@ public class Pds16asmSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_Add_Sub_AdcKeyword_0_0_2_or_AdcfKeyword_0_0_3_or_AddKeyword_0_0_0_or_AddfKeyword_0_0_1_or_SbbKeyword_0_0_2_or_SbbfKeyword_0_0_3_or_SubKeyword_0_0_0_or_SubfKeyword_0_0_1_or_SubrKeyword_1_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getAddAccess().getAdcKeyword_0_0_2()), new TokenAlias(false, false, grammarAccess.getAddAccess().getAdcfKeyword_0_0_3()), new TokenAlias(false, false, grammarAccess.getAddAccess().getAddKeyword_0_0_0()), new TokenAlias(false, false, grammarAccess.getAddAccess().getAddfKeyword_0_0_1()), new TokenAlias(false, false, grammarAccess.getSubAccess().getSbbKeyword_0_0_2()), new TokenAlias(false, false, grammarAccess.getSubAccess().getSbbfKeyword_0_0_3()), new TokenAlias(false, false, grammarAccess.getSubAccess().getSubKeyword_0_0_0()), new TokenAlias(false, false, grammarAccess.getSubAccess().getSubfKeyword_0_0_1()), new TokenAlias(false, false, grammarAccess.getSubAccess().getSubrKeyword_1_0()));
 		match_Anl_AnlKeyword_0_0_or_AnlfKeyword_0_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getAnlAccess().getAnlKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getAnlAccess().getAnlfKeyword_0_1()));
 		match_Anl_Orl_Xrl_AnlKeyword_0_0_or_AnlfKeyword_0_1_or_OrlKeyword_0_0_0_or_OrlfKeyword_0_0_1_or_XrlKeyword_0_0_or_XrlfKeyword_0_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getAnlAccess().getAnlKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getAnlAccess().getAnlfKeyword_0_1()), new TokenAlias(false, false, grammarAccess.getOrlAccess().getOrlKeyword_0_0_0()), new TokenAlias(false, false, grammarAccess.getOrlAccess().getOrlfKeyword_0_0_1()), new TokenAlias(false, false, grammarAccess.getXrlAccess().getXrlKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getXrlAccess().getXrlfKeyword_0_1()));
-		match_Asciiz___CommaKeyword_1_1_0_STRINGTerminalRuleCall_1_1_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getAsciizAccess().getCommaKeyword_1_1_0()), new TokenAlias(false, false, grammarAccess.getAsciizAccess().getSTRINGTerminalRuleCall_1_1_1()));
 		match_Equ_Org_OrgKeyword_0_or___EquKeyword_0_IDTerminalRuleCall_1_CommaKeyword_2__ = new AlternativeAlias(false, false, new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getEquAccess().getEquKeyword_0()), new TokenAlias(false, false, grammarAccess.getEquAccess().getIDTerminalRuleCall_1()), new TokenAlias(false, false, grammarAccess.getEquAccess().getCommaKeyword_2())), new TokenAlias(false, false, grammarAccess.getOrgAccess().getOrgKeyword_0()));
-		match_JumpOp_JaeKeyword_0_7_or_JblKeyword_0_5_or_JcKeyword_0_4_or_JeKeyword_0_1_or_JmpKeyword_0_8_or_JmplKeyword_0_9_or_JncKeyword_0_6_or_JneKeyword_0_3_or_JnzKeyword_0_2_or_JzKeyword_0_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getJumpOpAccess().getJaeKeyword_0_7()), new TokenAlias(false, false, grammarAccess.getJumpOpAccess().getJblKeyword_0_5()), new TokenAlias(false, false, grammarAccess.getJumpOpAccess().getJcKeyword_0_4()), new TokenAlias(false, false, grammarAccess.getJumpOpAccess().getJeKeyword_0_1()), new TokenAlias(false, false, grammarAccess.getJumpOpAccess().getJmpKeyword_0_8()), new TokenAlias(false, false, grammarAccess.getJumpOpAccess().getJmplKeyword_0_9()), new TokenAlias(false, false, grammarAccess.getJumpOpAccess().getJncKeyword_0_6()), new TokenAlias(false, false, grammarAccess.getJumpOpAccess().getJneKeyword_0_3()), new TokenAlias(false, false, grammarAccess.getJumpOpAccess().getJnzKeyword_0_2()), new TokenAlias(false, false, grammarAccess.getJumpOpAccess().getJzKeyword_0_0()));
 		match_LdBasedIndexed_LdKeyword_0_0_or_LdbKeyword_0_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getLdBasedIndexedAccess().getLdKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getLdBasedIndexedAccess().getLdbKeyword_0_1()));
 		match_LdBasedIndexed_StBasedIndexed_LdKeyword_0_0_or_LdbKeyword_0_1_or_StKeyword_0_0_or_StbKeyword_0_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getLdBasedIndexedAccess().getLdKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getLdBasedIndexedAccess().getLdbKeyword_0_1()), new TokenAlias(false, false, grammarAccess.getStBasedIndexedAccess().getStKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getStBasedIndexedAccess().getStbKeyword_0_1()));
 		match_LdDirect_LdKeyword_0_0_or_LdbKeyword_0_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getLdDirectAccess().getLdKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getLdDirectAccess().getLdbKeyword_0_1()));
@@ -100,8 +96,6 @@ public class Pds16asmSyntacticSequencer extends AbstractSyntacticSequencer {
 			return getIDToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getREGISTERSRule())
 			return getREGISTERSToken(semanticObject, ruleCall, node);
-		else if (ruleCall.getRule() == grammarAccess.getSTRINGRule())
-			return getSTRINGToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
@@ -116,24 +110,12 @@ public class Pds16asmSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * terminal REGISTERS:
-	 * 			('r0' | 'r1' | 'r2' | 'r3' | 'r4' | 'r5' | 'r6' | 'r7' | 'PSW');
+	 * 			('r0' | 'r1' | 'r2' | 'r3' | 'r4' | 'r5' | 'r6' | 'r7' | 'LR' |'PSW' |'PC');
 	 */
 	protected String getREGISTERSToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (node != null)
 			return getTokenText(node);
 		return "r0";
-	}
-	
-	/**
-	 * terminal STRING	: 
-	 * 			'"' ( '\\' .  | !('\\'|'"') )* '"' |
-	 * 			"'" ( '\\' .  | !('\\'|"'") )* "'"
-	 * 		;
-	 */
-	protected String getSTRINGToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "\"\"";
 	}
 	
 	@Override
@@ -158,12 +140,8 @@ public class Pds16asmSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_Anl_AnlKeyword_0_0_or_AnlfKeyword_0_1(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Anl_Orl_Xrl_AnlKeyword_0_0_or_AnlfKeyword_0_1_or_OrlKeyword_0_0_0_or_OrlfKeyword_0_0_1_or_XrlKeyword_0_0_or_XrlfKeyword_0_1.equals(syntax))
 				emit_Anl_Orl_Xrl_AnlKeyword_0_0_or_AnlfKeyword_0_1_or_OrlKeyword_0_0_0_or_OrlfKeyword_0_0_1_or_XrlKeyword_0_0_or_XrlfKeyword_0_1(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Asciiz___CommaKeyword_1_1_0_STRINGTerminalRuleCall_1_1_1__a.equals(syntax))
-				emit_Asciiz___CommaKeyword_1_1_0_STRINGTerminalRuleCall_1_1_1__a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Equ_Org_OrgKeyword_0_or___EquKeyword_0_IDTerminalRuleCall_1_CommaKeyword_2__.equals(syntax))
 				emit_Equ_Org_OrgKeyword_0_or___EquKeyword_0_IDTerminalRuleCall_1_CommaKeyword_2__(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_JumpOp_JaeKeyword_0_7_or_JblKeyword_0_5_or_JcKeyword_0_4_or_JeKeyword_0_1_or_JmpKeyword_0_8_or_JmplKeyword_0_9_or_JncKeyword_0_6_or_JneKeyword_0_3_or_JnzKeyword_0_2_or_JzKeyword_0_0.equals(syntax))
-				emit_JumpOp_JaeKeyword_0_7_or_JblKeyword_0_5_or_JcKeyword_0_4_or_JeKeyword_0_1_or_JmpKeyword_0_8_or_JmplKeyword_0_9_or_JncKeyword_0_6_or_JneKeyword_0_3_or_JnzKeyword_0_2_or_JzKeyword_0_0(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_LdBasedIndexed_LdKeyword_0_0_or_LdbKeyword_0_1.equals(syntax))
 				emit_LdBasedIndexed_LdKeyword_0_0_or_LdbKeyword_0_1(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_LdBasedIndexed_StBasedIndexed_LdKeyword_0_0_or_LdbKeyword_0_1_or_StKeyword_0_0_or_StbKeyword_0_1.equals(syntax))
@@ -355,17 +333,6 @@ public class Pds16asmSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     (',' STRING)*
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     value=STRING (ambiguity) (rule end)
-	 */
-	protected void emit_Asciiz___CommaKeyword_1_1_0_STRINGTerminalRuleCall_1_1_1__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
 	 *     '.org' | ('.equ' ID ',')
 	 *
 	 * This ambiguous syntax occurs at:
@@ -377,30 +344,6 @@ public class Pds16asmSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (rule start) (ambiguity) numericValue+=OCT
 	 */
 	protected void emit_Equ_Org_OrgKeyword_0_or___EquKeyword_0_IDTerminalRuleCall_1_CommaKeyword_2__(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     (
-	  *         'jz' | 
-	  *         'je' | 
-	  *         'jnz' | 
-	  *         'jne' | 
-	  *         'jc' | 
-	  *         'jbl' | 
-	  *         'jnc' | 
-	  *         'jae' | 
-	  *         'jmp' | 
-	  *         'jmpl'
-	  *     )
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) '$' (rule start)
-	 *     (rule start) (ambiguity) op=ID
-	 *     (rule start) (ambiguity) rbx=REGISTERS
-	 */
-	protected void emit_JumpOp_JaeKeyword_0_7_or_JblKeyword_0_5_or_JcKeyword_0_4_or_JeKeyword_0_1_or_JmpKeyword_0_8_or_JmplKeyword_0_9_or_JncKeyword_0_6_or_JneKeyword_0_3_or_JnzKeyword_0_2_or_JzKeyword_0_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

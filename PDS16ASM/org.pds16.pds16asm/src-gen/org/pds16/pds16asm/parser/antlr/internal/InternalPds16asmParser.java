@@ -1312,34 +1312,34 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBss"
-    // InternalPds16asmParser.g:397:1: ruleBss returns [EObject current=null] : ( (lv_val_0_0= Bss ) ) ;
+    // InternalPds16asmParser.g:397:1: ruleBss returns [EObject current=null] : ( (lv_value_0_0= Bss ) ) ;
     public final EObject ruleBss() throws RecognitionException {
         EObject current = null;
 
-        Token lv_val_0_0=null;
+        Token lv_value_0_0=null;
 
 
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:403:2: ( ( (lv_val_0_0= Bss ) ) )
-            // InternalPds16asmParser.g:404:2: ( (lv_val_0_0= Bss ) )
+            // InternalPds16asmParser.g:403:2: ( ( (lv_value_0_0= Bss ) ) )
+            // InternalPds16asmParser.g:404:2: ( (lv_value_0_0= Bss ) )
             {
-            // InternalPds16asmParser.g:404:2: ( (lv_val_0_0= Bss ) )
-            // InternalPds16asmParser.g:405:3: (lv_val_0_0= Bss )
+            // InternalPds16asmParser.g:404:2: ( (lv_value_0_0= Bss ) )
+            // InternalPds16asmParser.g:405:3: (lv_value_0_0= Bss )
             {
-            // InternalPds16asmParser.g:405:3: (lv_val_0_0= Bss )
-            // InternalPds16asmParser.g:406:4: lv_val_0_0= Bss
+            // InternalPds16asmParser.g:405:3: (lv_value_0_0= Bss )
+            // InternalPds16asmParser.g:406:4: lv_value_0_0= Bss
             {
-            lv_val_0_0=(Token)match(input,Bss,FOLLOW_2); 
+            lv_value_0_0=(Token)match(input,Bss,FOLLOW_2); 
 
-            				newLeafNode(lv_val_0_0, grammarAccess.getBssAccess().getValBssKeyword_0());
+            				newLeafNode(lv_value_0_0, grammarAccess.getBssAccess().getValueBssKeyword_0());
             			
 
             				if (current==null) {
             					current = createModelElement(grammarAccess.getBssRule());
             				}
-            				setWithLastConsumed(current, "val", lv_val_0_0, ".bss");
+            				setWithLastConsumed(current, "value", lv_value_0_0, ".bss");
             			
 
             }
@@ -1403,34 +1403,34 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleData"
-    // InternalPds16asmParser.g:428:1: ruleData returns [EObject current=null] : ( (lv_val_0_0= Data ) ) ;
+    // InternalPds16asmParser.g:428:1: ruleData returns [EObject current=null] : ( (lv_value_0_0= Data ) ) ;
     public final EObject ruleData() throws RecognitionException {
         EObject current = null;
 
-        Token lv_val_0_0=null;
+        Token lv_value_0_0=null;
 
 
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:434:2: ( ( (lv_val_0_0= Data ) ) )
-            // InternalPds16asmParser.g:435:2: ( (lv_val_0_0= Data ) )
+            // InternalPds16asmParser.g:434:2: ( ( (lv_value_0_0= Data ) ) )
+            // InternalPds16asmParser.g:435:2: ( (lv_value_0_0= Data ) )
             {
-            // InternalPds16asmParser.g:435:2: ( (lv_val_0_0= Data ) )
-            // InternalPds16asmParser.g:436:3: (lv_val_0_0= Data )
+            // InternalPds16asmParser.g:435:2: ( (lv_value_0_0= Data ) )
+            // InternalPds16asmParser.g:436:3: (lv_value_0_0= Data )
             {
-            // InternalPds16asmParser.g:436:3: (lv_val_0_0= Data )
-            // InternalPds16asmParser.g:437:4: lv_val_0_0= Data
+            // InternalPds16asmParser.g:436:3: (lv_value_0_0= Data )
+            // InternalPds16asmParser.g:437:4: lv_value_0_0= Data
             {
-            lv_val_0_0=(Token)match(input,Data,FOLLOW_2); 
+            lv_value_0_0=(Token)match(input,Data,FOLLOW_2); 
 
-            				newLeafNode(lv_val_0_0, grammarAccess.getDataAccess().getValDataKeyword_0());
+            				newLeafNode(lv_value_0_0, grammarAccess.getDataAccess().getValueDataKeyword_0());
             			
 
             				if (current==null) {
             					current = createModelElement(grammarAccess.getDataRule());
             				}
-            				setWithLastConsumed(current, "val", lv_val_0_0, ".data");
+            				setWithLastConsumed(current, "value", lv_value_0_0, ".data");
             			
 
             }
@@ -1494,34 +1494,34 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEnd"
-    // InternalPds16asmParser.g:459:1: ruleEnd returns [EObject current=null] : ( (lv_val_0_0= End ) ) ;
+    // InternalPds16asmParser.g:459:1: ruleEnd returns [EObject current=null] : ( (lv_value_0_0= End ) ) ;
     public final EObject ruleEnd() throws RecognitionException {
         EObject current = null;
 
-        Token lv_val_0_0=null;
+        Token lv_value_0_0=null;
 
 
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:465:2: ( ( (lv_val_0_0= End ) ) )
-            // InternalPds16asmParser.g:466:2: ( (lv_val_0_0= End ) )
+            // InternalPds16asmParser.g:465:2: ( ( (lv_value_0_0= End ) ) )
+            // InternalPds16asmParser.g:466:2: ( (lv_value_0_0= End ) )
             {
-            // InternalPds16asmParser.g:466:2: ( (lv_val_0_0= End ) )
-            // InternalPds16asmParser.g:467:3: (lv_val_0_0= End )
+            // InternalPds16asmParser.g:466:2: ( (lv_value_0_0= End ) )
+            // InternalPds16asmParser.g:467:3: (lv_value_0_0= End )
             {
-            // InternalPds16asmParser.g:467:3: (lv_val_0_0= End )
-            // InternalPds16asmParser.g:468:4: lv_val_0_0= End
+            // InternalPds16asmParser.g:467:3: (lv_value_0_0= End )
+            // InternalPds16asmParser.g:468:4: lv_value_0_0= End
             {
-            lv_val_0_0=(Token)match(input,End,FOLLOW_2); 
+            lv_value_0_0=(Token)match(input,End,FOLLOW_2); 
 
-            				newLeafNode(lv_val_0_0, grammarAccess.getEndAccess().getValEndKeyword_0());
+            				newLeafNode(lv_value_0_0, grammarAccess.getEndAccess().getValueEndKeyword_0());
             			
 
             				if (current==null) {
             					current = createModelElement(grammarAccess.getEndRule());
             				}
-            				setWithLastConsumed(current, "val", lv_val_0_0, ".end");
+            				setWithLastConsumed(current, "value", lv_value_0_0, ".end");
             			
 
             }
@@ -1585,34 +1585,34 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleText"
-    // InternalPds16asmParser.g:490:1: ruleText returns [EObject current=null] : ( (lv_val_0_0= Text ) ) ;
+    // InternalPds16asmParser.g:490:1: ruleText returns [EObject current=null] : ( (lv_value_0_0= Text ) ) ;
     public final EObject ruleText() throws RecognitionException {
         EObject current = null;
 
-        Token lv_val_0_0=null;
+        Token lv_value_0_0=null;
 
 
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:496:2: ( ( (lv_val_0_0= Text ) ) )
-            // InternalPds16asmParser.g:497:2: ( (lv_val_0_0= Text ) )
+            // InternalPds16asmParser.g:496:2: ( ( (lv_value_0_0= Text ) ) )
+            // InternalPds16asmParser.g:497:2: ( (lv_value_0_0= Text ) )
             {
-            // InternalPds16asmParser.g:497:2: ( (lv_val_0_0= Text ) )
-            // InternalPds16asmParser.g:498:3: (lv_val_0_0= Text )
+            // InternalPds16asmParser.g:497:2: ( (lv_value_0_0= Text ) )
+            // InternalPds16asmParser.g:498:3: (lv_value_0_0= Text )
             {
-            // InternalPds16asmParser.g:498:3: (lv_val_0_0= Text )
-            // InternalPds16asmParser.g:499:4: lv_val_0_0= Text
+            // InternalPds16asmParser.g:498:3: (lv_value_0_0= Text )
+            // InternalPds16asmParser.g:499:4: lv_value_0_0= Text
             {
-            lv_val_0_0=(Token)match(input,Text,FOLLOW_2); 
+            lv_value_0_0=(Token)match(input,Text,FOLLOW_2); 
 
-            				newLeafNode(lv_val_0_0, grammarAccess.getTextAccess().getValTextKeyword_0());
+            				newLeafNode(lv_value_0_0, grammarAccess.getTextAccess().getValueTextKeyword_0());
             			
 
             				if (current==null) {
             					current = createModelElement(grammarAccess.getTextRule());
             				}
-            				setWithLastConsumed(current, "val", lv_val_0_0, ".text");
+            				setWithLastConsumed(current, "value", lv_value_0_0, ".text");
             			
 
             }
@@ -1676,58 +1676,76 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAscii"
-    // InternalPds16asmParser.g:521:1: ruleAscii returns [EObject current=null] : (otherlv_0= Ascii ( ( (lv_value_1_0= RULE_STRING ) ) (otherlv_2= Comma this_STRING_3= RULE_STRING ) )? ) ;
+    // InternalPds16asmParser.g:521:1: ruleAscii returns [EObject current=null] : ( ( (lv_tag_0_0= Ascii ) ) ( ( (lv_values_1_0= RULE_STRING ) ) (otherlv_2= Comma ( (lv_values_3_0= RULE_STRING ) ) )* )? ) ;
     public final EObject ruleAscii() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_0=null;
-        Token lv_value_1_0=null;
+        Token lv_tag_0_0=null;
+        Token lv_values_1_0=null;
         Token otherlv_2=null;
-        Token this_STRING_3=null;
+        Token lv_values_3_0=null;
 
 
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:527:2: ( (otherlv_0= Ascii ( ( (lv_value_1_0= RULE_STRING ) ) (otherlv_2= Comma this_STRING_3= RULE_STRING ) )? ) )
-            // InternalPds16asmParser.g:528:2: (otherlv_0= Ascii ( ( (lv_value_1_0= RULE_STRING ) ) (otherlv_2= Comma this_STRING_3= RULE_STRING ) )? )
+            // InternalPds16asmParser.g:527:2: ( ( ( (lv_tag_0_0= Ascii ) ) ( ( (lv_values_1_0= RULE_STRING ) ) (otherlv_2= Comma ( (lv_values_3_0= RULE_STRING ) ) )* )? ) )
+            // InternalPds16asmParser.g:528:2: ( ( (lv_tag_0_0= Ascii ) ) ( ( (lv_values_1_0= RULE_STRING ) ) (otherlv_2= Comma ( (lv_values_3_0= RULE_STRING ) ) )* )? )
             {
-            // InternalPds16asmParser.g:528:2: (otherlv_0= Ascii ( ( (lv_value_1_0= RULE_STRING ) ) (otherlv_2= Comma this_STRING_3= RULE_STRING ) )? )
-            // InternalPds16asmParser.g:529:3: otherlv_0= Ascii ( ( (lv_value_1_0= RULE_STRING ) ) (otherlv_2= Comma this_STRING_3= RULE_STRING ) )?
+            // InternalPds16asmParser.g:528:2: ( ( (lv_tag_0_0= Ascii ) ) ( ( (lv_values_1_0= RULE_STRING ) ) (otherlv_2= Comma ( (lv_values_3_0= RULE_STRING ) ) )* )? )
+            // InternalPds16asmParser.g:529:3: ( (lv_tag_0_0= Ascii ) ) ( ( (lv_values_1_0= RULE_STRING ) ) (otherlv_2= Comma ( (lv_values_3_0= RULE_STRING ) ) )* )?
             {
-            otherlv_0=(Token)match(input,Ascii,FOLLOW_5); 
+            // InternalPds16asmParser.g:529:3: ( (lv_tag_0_0= Ascii ) )
+            // InternalPds16asmParser.g:530:4: (lv_tag_0_0= Ascii )
+            {
+            // InternalPds16asmParser.g:530:4: (lv_tag_0_0= Ascii )
+            // InternalPds16asmParser.g:531:5: lv_tag_0_0= Ascii
+            {
+            lv_tag_0_0=(Token)match(input,Ascii,FOLLOW_5); 
 
-            			newLeafNode(otherlv_0, grammarAccess.getAsciiAccess().getAsciiKeyword_0());
-            		
-            // InternalPds16asmParser.g:533:3: ( ( (lv_value_1_0= RULE_STRING ) ) (otherlv_2= Comma this_STRING_3= RULE_STRING ) )?
-            int alt6=2;
-            int LA6_0 = input.LA(1);
+            					newLeafNode(lv_tag_0_0, grammarAccess.getAsciiAccess().getTagAsciiKeyword_0_0());
+            				
 
-            if ( (LA6_0==RULE_STRING) ) {
-                alt6=1;
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getAsciiRule());
+            					}
+            					setWithLastConsumed(current, "tag", lv_tag_0_0, ".ascii");
+            				
+
             }
-            switch (alt6) {
-                case 1 :
-                    // InternalPds16asmParser.g:534:4: ( (lv_value_1_0= RULE_STRING ) ) (otherlv_2= Comma this_STRING_3= RULE_STRING )
-                    {
-                    // InternalPds16asmParser.g:534:4: ( (lv_value_1_0= RULE_STRING ) )
-                    // InternalPds16asmParser.g:535:5: (lv_value_1_0= RULE_STRING )
-                    {
-                    // InternalPds16asmParser.g:535:5: (lv_value_1_0= RULE_STRING )
-                    // InternalPds16asmParser.g:536:6: lv_value_1_0= RULE_STRING
-                    {
-                    lv_value_1_0=(Token)match(input,RULE_STRING,FOLLOW_6); 
 
-                    						newLeafNode(lv_value_1_0, grammarAccess.getAsciiAccess().getValueSTRINGTerminalRuleCall_1_0_0());
+
+            }
+
+            // InternalPds16asmParser.g:543:3: ( ( (lv_values_1_0= RULE_STRING ) ) (otherlv_2= Comma ( (lv_values_3_0= RULE_STRING ) ) )* )?
+            int alt7=2;
+            int LA7_0 = input.LA(1);
+
+            if ( (LA7_0==RULE_STRING) ) {
+                alt7=1;
+            }
+            switch (alt7) {
+                case 1 :
+                    // InternalPds16asmParser.g:544:4: ( (lv_values_1_0= RULE_STRING ) ) (otherlv_2= Comma ( (lv_values_3_0= RULE_STRING ) ) )*
+                    {
+                    // InternalPds16asmParser.g:544:4: ( (lv_values_1_0= RULE_STRING ) )
+                    // InternalPds16asmParser.g:545:5: (lv_values_1_0= RULE_STRING )
+                    {
+                    // InternalPds16asmParser.g:545:5: (lv_values_1_0= RULE_STRING )
+                    // InternalPds16asmParser.g:546:6: lv_values_1_0= RULE_STRING
+                    {
+                    lv_values_1_0=(Token)match(input,RULE_STRING,FOLLOW_6); 
+
+                    						newLeafNode(lv_values_1_0, grammarAccess.getAsciiAccess().getValuesSTRINGTerminalRuleCall_1_0_0());
                     					
 
                     						if (current==null) {
                     							current = createModelElement(grammarAccess.getAsciiRule());
                     						}
-                    						setWithLastConsumed(
+                    						addWithLastConsumed(
                     							current,
-                    							"value",
-                    							lv_value_1_0,
+                    							"values",
+                    							lv_values_1_0,
                     							"org.pds16.pds16asm.Pds16asm.STRING");
                     					
 
@@ -1736,19 +1754,59 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalPds16asmParser.g:552:4: (otherlv_2= Comma this_STRING_3= RULE_STRING )
-                    // InternalPds16asmParser.g:553:5: otherlv_2= Comma this_STRING_3= RULE_STRING
-                    {
-                    otherlv_2=(Token)match(input,Comma,FOLLOW_7); 
+                    // InternalPds16asmParser.g:562:4: (otherlv_2= Comma ( (lv_values_3_0= RULE_STRING ) ) )*
+                    loop6:
+                    do {
+                        int alt6=2;
+                        int LA6_0 = input.LA(1);
 
-                    					newLeafNode(otherlv_2, grammarAccess.getAsciiAccess().getCommaKeyword_1_1_0());
-                    				
-                    this_STRING_3=(Token)match(input,RULE_STRING,FOLLOW_2); 
+                        if ( (LA6_0==Comma) ) {
+                            alt6=1;
+                        }
 
-                    					newLeafNode(this_STRING_3, grammarAccess.getAsciiAccess().getSTRINGTerminalRuleCall_1_1_1());
-                    				
 
-                    }
+                        switch (alt6) {
+                    	case 1 :
+                    	    // InternalPds16asmParser.g:563:5: otherlv_2= Comma ( (lv_values_3_0= RULE_STRING ) )
+                    	    {
+                    	    otherlv_2=(Token)match(input,Comma,FOLLOW_7); 
+
+                    	    					newLeafNode(otherlv_2, grammarAccess.getAsciiAccess().getCommaKeyword_1_1_0());
+                    	    				
+                    	    // InternalPds16asmParser.g:567:5: ( (lv_values_3_0= RULE_STRING ) )
+                    	    // InternalPds16asmParser.g:568:6: (lv_values_3_0= RULE_STRING )
+                    	    {
+                    	    // InternalPds16asmParser.g:568:6: (lv_values_3_0= RULE_STRING )
+                    	    // InternalPds16asmParser.g:569:7: lv_values_3_0= RULE_STRING
+                    	    {
+                    	    lv_values_3_0=(Token)match(input,RULE_STRING,FOLLOW_6); 
+
+                    	    							newLeafNode(lv_values_3_0, grammarAccess.getAsciiAccess().getValuesSTRINGTerminalRuleCall_1_1_1_0());
+                    	    						
+
+                    	    							if (current==null) {
+                    	    								current = createModelElement(grammarAccess.getAsciiRule());
+                    	    							}
+                    	    							addWithLastConsumed(
+                    	    								current,
+                    	    								"values",
+                    	    								lv_values_3_0,
+                    	    								"org.pds16.pds16asm.Pds16asm.STRING");
+                    	    						
+
+                    	    }
+
+
+                    	    }
+
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop6;
+                        }
+                    } while (true);
 
 
                     }
@@ -1779,7 +1837,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAsciiz"
-    // InternalPds16asmParser.g:567:1: entryRuleAsciiz returns [EObject current=null] : iv_ruleAsciiz= ruleAsciiz EOF ;
+    // InternalPds16asmParser.g:591:1: entryRuleAsciiz returns [EObject current=null] : iv_ruleAsciiz= ruleAsciiz EOF ;
     public final EObject entryRuleAsciiz() throws RecognitionException {
         EObject current = null;
 
@@ -1787,8 +1845,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:567:47: (iv_ruleAsciiz= ruleAsciiz EOF )
-            // InternalPds16asmParser.g:568:2: iv_ruleAsciiz= ruleAsciiz EOF
+            // InternalPds16asmParser.g:591:47: (iv_ruleAsciiz= ruleAsciiz EOF )
+            // InternalPds16asmParser.g:592:2: iv_ruleAsciiz= ruleAsciiz EOF
             {
              newCompositeNode(grammarAccess.getAsciizRule()); 
             pushFollow(FOLLOW_1);
@@ -1815,58 +1873,76 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAsciiz"
-    // InternalPds16asmParser.g:574:1: ruleAsciiz returns [EObject current=null] : (otherlv_0= Asciiz ( ( (lv_value_1_0= RULE_STRING ) ) (otherlv_2= Comma this_STRING_3= RULE_STRING )* )? ) ;
+    // InternalPds16asmParser.g:598:1: ruleAsciiz returns [EObject current=null] : ( ( (lv_tag_0_0= Asciiz ) ) ( ( (lv_values_1_0= RULE_STRING ) ) (otherlv_2= Comma ( (lv_values_3_0= RULE_STRING ) ) )* )? ) ;
     public final EObject ruleAsciiz() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_0=null;
-        Token lv_value_1_0=null;
+        Token lv_tag_0_0=null;
+        Token lv_values_1_0=null;
         Token otherlv_2=null;
-        Token this_STRING_3=null;
+        Token lv_values_3_0=null;
 
 
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:580:2: ( (otherlv_0= Asciiz ( ( (lv_value_1_0= RULE_STRING ) ) (otherlv_2= Comma this_STRING_3= RULE_STRING )* )? ) )
-            // InternalPds16asmParser.g:581:2: (otherlv_0= Asciiz ( ( (lv_value_1_0= RULE_STRING ) ) (otherlv_2= Comma this_STRING_3= RULE_STRING )* )? )
+            // InternalPds16asmParser.g:604:2: ( ( ( (lv_tag_0_0= Asciiz ) ) ( ( (lv_values_1_0= RULE_STRING ) ) (otherlv_2= Comma ( (lv_values_3_0= RULE_STRING ) ) )* )? ) )
+            // InternalPds16asmParser.g:605:2: ( ( (lv_tag_0_0= Asciiz ) ) ( ( (lv_values_1_0= RULE_STRING ) ) (otherlv_2= Comma ( (lv_values_3_0= RULE_STRING ) ) )* )? )
             {
-            // InternalPds16asmParser.g:581:2: (otherlv_0= Asciiz ( ( (lv_value_1_0= RULE_STRING ) ) (otherlv_2= Comma this_STRING_3= RULE_STRING )* )? )
-            // InternalPds16asmParser.g:582:3: otherlv_0= Asciiz ( ( (lv_value_1_0= RULE_STRING ) ) (otherlv_2= Comma this_STRING_3= RULE_STRING )* )?
+            // InternalPds16asmParser.g:605:2: ( ( (lv_tag_0_0= Asciiz ) ) ( ( (lv_values_1_0= RULE_STRING ) ) (otherlv_2= Comma ( (lv_values_3_0= RULE_STRING ) ) )* )? )
+            // InternalPds16asmParser.g:606:3: ( (lv_tag_0_0= Asciiz ) ) ( ( (lv_values_1_0= RULE_STRING ) ) (otherlv_2= Comma ( (lv_values_3_0= RULE_STRING ) ) )* )?
             {
-            otherlv_0=(Token)match(input,Asciiz,FOLLOW_5); 
+            // InternalPds16asmParser.g:606:3: ( (lv_tag_0_0= Asciiz ) )
+            // InternalPds16asmParser.g:607:4: (lv_tag_0_0= Asciiz )
+            {
+            // InternalPds16asmParser.g:607:4: (lv_tag_0_0= Asciiz )
+            // InternalPds16asmParser.g:608:5: lv_tag_0_0= Asciiz
+            {
+            lv_tag_0_0=(Token)match(input,Asciiz,FOLLOW_5); 
 
-            			newLeafNode(otherlv_0, grammarAccess.getAsciizAccess().getAsciizKeyword_0());
-            		
-            // InternalPds16asmParser.g:586:3: ( ( (lv_value_1_0= RULE_STRING ) ) (otherlv_2= Comma this_STRING_3= RULE_STRING )* )?
-            int alt8=2;
-            int LA8_0 = input.LA(1);
+            					newLeafNode(lv_tag_0_0, grammarAccess.getAsciizAccess().getTagAsciizKeyword_0_0());
+            				
 
-            if ( (LA8_0==RULE_STRING) ) {
-                alt8=1;
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getAsciizRule());
+            					}
+            					setWithLastConsumed(current, "tag", lv_tag_0_0, ".asciiz");
+            				
+
             }
-            switch (alt8) {
-                case 1 :
-                    // InternalPds16asmParser.g:587:4: ( (lv_value_1_0= RULE_STRING ) ) (otherlv_2= Comma this_STRING_3= RULE_STRING )*
-                    {
-                    // InternalPds16asmParser.g:587:4: ( (lv_value_1_0= RULE_STRING ) )
-                    // InternalPds16asmParser.g:588:5: (lv_value_1_0= RULE_STRING )
-                    {
-                    // InternalPds16asmParser.g:588:5: (lv_value_1_0= RULE_STRING )
-                    // InternalPds16asmParser.g:589:6: lv_value_1_0= RULE_STRING
-                    {
-                    lv_value_1_0=(Token)match(input,RULE_STRING,FOLLOW_8); 
 
-                    						newLeafNode(lv_value_1_0, grammarAccess.getAsciizAccess().getValueSTRINGTerminalRuleCall_1_0_0());
+
+            }
+
+            // InternalPds16asmParser.g:620:3: ( ( (lv_values_1_0= RULE_STRING ) ) (otherlv_2= Comma ( (lv_values_3_0= RULE_STRING ) ) )* )?
+            int alt9=2;
+            int LA9_0 = input.LA(1);
+
+            if ( (LA9_0==RULE_STRING) ) {
+                alt9=1;
+            }
+            switch (alt9) {
+                case 1 :
+                    // InternalPds16asmParser.g:621:4: ( (lv_values_1_0= RULE_STRING ) ) (otherlv_2= Comma ( (lv_values_3_0= RULE_STRING ) ) )*
+                    {
+                    // InternalPds16asmParser.g:621:4: ( (lv_values_1_0= RULE_STRING ) )
+                    // InternalPds16asmParser.g:622:5: (lv_values_1_0= RULE_STRING )
+                    {
+                    // InternalPds16asmParser.g:622:5: (lv_values_1_0= RULE_STRING )
+                    // InternalPds16asmParser.g:623:6: lv_values_1_0= RULE_STRING
+                    {
+                    lv_values_1_0=(Token)match(input,RULE_STRING,FOLLOW_6); 
+
+                    						newLeafNode(lv_values_1_0, grammarAccess.getAsciizAccess().getValuesSTRINGTerminalRuleCall_1_0_0());
                     					
 
                     						if (current==null) {
                     							current = createModelElement(grammarAccess.getAsciizRule());
                     						}
-                    						setWithLastConsumed(
+                    						addWithLastConsumed(
                     							current,
-                    							"value",
-                    							lv_value_1_0,
+                    							"values",
+                    							lv_values_1_0,
                     							"org.pds16.pds16asm.Pds16asm.STRING");
                     					
 
@@ -1875,35 +1951,57 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalPds16asmParser.g:605:4: (otherlv_2= Comma this_STRING_3= RULE_STRING )*
-                    loop7:
+                    // InternalPds16asmParser.g:639:4: (otherlv_2= Comma ( (lv_values_3_0= RULE_STRING ) ) )*
+                    loop8:
                     do {
-                        int alt7=2;
-                        int LA7_0 = input.LA(1);
+                        int alt8=2;
+                        int LA8_0 = input.LA(1);
 
-                        if ( (LA7_0==Comma) ) {
-                            alt7=1;
+                        if ( (LA8_0==Comma) ) {
+                            alt8=1;
                         }
 
 
-                        switch (alt7) {
+                        switch (alt8) {
                     	case 1 :
-                    	    // InternalPds16asmParser.g:606:5: otherlv_2= Comma this_STRING_3= RULE_STRING
+                    	    // InternalPds16asmParser.g:640:5: otherlv_2= Comma ( (lv_values_3_0= RULE_STRING ) )
                     	    {
                     	    otherlv_2=(Token)match(input,Comma,FOLLOW_7); 
 
                     	    					newLeafNode(otherlv_2, grammarAccess.getAsciizAccess().getCommaKeyword_1_1_0());
                     	    				
-                    	    this_STRING_3=(Token)match(input,RULE_STRING,FOLLOW_8); 
+                    	    // InternalPds16asmParser.g:644:5: ( (lv_values_3_0= RULE_STRING ) )
+                    	    // InternalPds16asmParser.g:645:6: (lv_values_3_0= RULE_STRING )
+                    	    {
+                    	    // InternalPds16asmParser.g:645:6: (lv_values_3_0= RULE_STRING )
+                    	    // InternalPds16asmParser.g:646:7: lv_values_3_0= RULE_STRING
+                    	    {
+                    	    lv_values_3_0=(Token)match(input,RULE_STRING,FOLLOW_6); 
 
-                    	    					newLeafNode(this_STRING_3, grammarAccess.getAsciizAccess().getSTRINGTerminalRuleCall_1_1_1());
-                    	    				
+                    	    							newLeafNode(lv_values_3_0, grammarAccess.getAsciizAccess().getValuesSTRINGTerminalRuleCall_1_1_1_0());
+                    	    						
+
+                    	    							if (current==null) {
+                    	    								current = createModelElement(grammarAccess.getAsciizRule());
+                    	    							}
+                    	    							addWithLastConsumed(
+                    	    								current,
+                    	    								"values",
+                    	    								lv_values_3_0,
+                    	    								"org.pds16.pds16asm.Pds16asm.STRING");
+                    	    						
+
+                    	    }
+
+
+                    	    }
+
 
                     	    }
                     	    break;
 
                     	default :
-                    	    break loop7;
+                    	    break loop8;
                         }
                     } while (true);
 
@@ -1936,7 +2034,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleByte"
-    // InternalPds16asmParser.g:620:1: entryRuleByte returns [EObject current=null] : iv_ruleByte= ruleByte EOF ;
+    // InternalPds16asmParser.g:668:1: entryRuleByte returns [EObject current=null] : iv_ruleByte= ruleByte EOF ;
     public final EObject entryRuleByte() throws RecognitionException {
         EObject current = null;
 
@@ -1944,8 +2042,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:620:45: (iv_ruleByte= ruleByte EOF )
-            // InternalPds16asmParser.g:621:2: iv_ruleByte= ruleByte EOF
+            // InternalPds16asmParser.g:668:45: (iv_ruleByte= ruleByte EOF )
+            // InternalPds16asmParser.g:669:2: iv_ruleByte= ruleByte EOF
             {
              newCompositeNode(grammarAccess.getByteRule()); 
             pushFollow(FOLLOW_1);
@@ -1972,116 +2070,128 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleByte"
-    // InternalPds16asmParser.g:627:1: ruleByte returns [EObject current=null] : (otherlv_0= Byte ( ( ( (lv_number_1_1= RULE_INT | lv_number_1_2= RULE_HEX | lv_number_1_3= RULE_OCT | lv_number_1_4= RULE_BIN | lv_number_1_5= RULE_CHAR ) ) ) (otherlv_2= Comma ( ( (lv_number_3_1= RULE_INT | lv_number_3_2= RULE_HEX | lv_number_3_3= RULE_OCT | lv_number_3_4= RULE_BIN | lv_number_3_5= RULE_CHAR ) ) ) )* )? ) ;
+    // InternalPds16asmParser.g:675:1: ruleByte returns [EObject current=null] : ( ( (lv_tag_0_0= Byte ) ) ( ( ( (lv_numbers_1_0= ruleNumber ) ) | ( (lv_s_2_0= RULE_STRING ) ) ) (otherlv_3= Comma ( ( (lv_numbers_4_0= ruleNumber ) ) | ( (lv_s_5_0= RULE_STRING ) ) ) )* )? ) ;
     public final EObject ruleByte() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_0=null;
-        Token lv_number_1_1=null;
-        Token lv_number_1_2=null;
-        Token lv_number_1_3=null;
-        Token lv_number_1_4=null;
-        Token lv_number_1_5=null;
-        Token otherlv_2=null;
-        Token lv_number_3_1=null;
-        Token lv_number_3_2=null;
-        Token lv_number_3_3=null;
-        Token lv_number_3_4=null;
-        Token lv_number_3_5=null;
+        Token lv_tag_0_0=null;
+        Token lv_s_2_0=null;
+        Token otherlv_3=null;
+        Token lv_s_5_0=null;
+        EObject lv_numbers_1_0 = null;
+
+        EObject lv_numbers_4_0 = null;
+
 
 
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:633:2: ( (otherlv_0= Byte ( ( ( (lv_number_1_1= RULE_INT | lv_number_1_2= RULE_HEX | lv_number_1_3= RULE_OCT | lv_number_1_4= RULE_BIN | lv_number_1_5= RULE_CHAR ) ) ) (otherlv_2= Comma ( ( (lv_number_3_1= RULE_INT | lv_number_3_2= RULE_HEX | lv_number_3_3= RULE_OCT | lv_number_3_4= RULE_BIN | lv_number_3_5= RULE_CHAR ) ) ) )* )? ) )
-            // InternalPds16asmParser.g:634:2: (otherlv_0= Byte ( ( ( (lv_number_1_1= RULE_INT | lv_number_1_2= RULE_HEX | lv_number_1_3= RULE_OCT | lv_number_1_4= RULE_BIN | lv_number_1_5= RULE_CHAR ) ) ) (otherlv_2= Comma ( ( (lv_number_3_1= RULE_INT | lv_number_3_2= RULE_HEX | lv_number_3_3= RULE_OCT | lv_number_3_4= RULE_BIN | lv_number_3_5= RULE_CHAR ) ) ) )* )? )
+            // InternalPds16asmParser.g:681:2: ( ( ( (lv_tag_0_0= Byte ) ) ( ( ( (lv_numbers_1_0= ruleNumber ) ) | ( (lv_s_2_0= RULE_STRING ) ) ) (otherlv_3= Comma ( ( (lv_numbers_4_0= ruleNumber ) ) | ( (lv_s_5_0= RULE_STRING ) ) ) )* )? ) )
+            // InternalPds16asmParser.g:682:2: ( ( (lv_tag_0_0= Byte ) ) ( ( ( (lv_numbers_1_0= ruleNumber ) ) | ( (lv_s_2_0= RULE_STRING ) ) ) (otherlv_3= Comma ( ( (lv_numbers_4_0= ruleNumber ) ) | ( (lv_s_5_0= RULE_STRING ) ) ) )* )? )
             {
-            // InternalPds16asmParser.g:634:2: (otherlv_0= Byte ( ( ( (lv_number_1_1= RULE_INT | lv_number_1_2= RULE_HEX | lv_number_1_3= RULE_OCT | lv_number_1_4= RULE_BIN | lv_number_1_5= RULE_CHAR ) ) ) (otherlv_2= Comma ( ( (lv_number_3_1= RULE_INT | lv_number_3_2= RULE_HEX | lv_number_3_3= RULE_OCT | lv_number_3_4= RULE_BIN | lv_number_3_5= RULE_CHAR ) ) ) )* )? )
-            // InternalPds16asmParser.g:635:3: otherlv_0= Byte ( ( ( (lv_number_1_1= RULE_INT | lv_number_1_2= RULE_HEX | lv_number_1_3= RULE_OCT | lv_number_1_4= RULE_BIN | lv_number_1_5= RULE_CHAR ) ) ) (otherlv_2= Comma ( ( (lv_number_3_1= RULE_INT | lv_number_3_2= RULE_HEX | lv_number_3_3= RULE_OCT | lv_number_3_4= RULE_BIN | lv_number_3_5= RULE_CHAR ) ) ) )* )?
+            // InternalPds16asmParser.g:682:2: ( ( (lv_tag_0_0= Byte ) ) ( ( ( (lv_numbers_1_0= ruleNumber ) ) | ( (lv_s_2_0= RULE_STRING ) ) ) (otherlv_3= Comma ( ( (lv_numbers_4_0= ruleNumber ) ) | ( (lv_s_5_0= RULE_STRING ) ) ) )* )? )
+            // InternalPds16asmParser.g:683:3: ( (lv_tag_0_0= Byte ) ) ( ( ( (lv_numbers_1_0= ruleNumber ) ) | ( (lv_s_2_0= RULE_STRING ) ) ) (otherlv_3= Comma ( ( (lv_numbers_4_0= ruleNumber ) ) | ( (lv_s_5_0= RULE_STRING ) ) ) )* )?
             {
-            otherlv_0=(Token)match(input,Byte,FOLLOW_9); 
+            // InternalPds16asmParser.g:683:3: ( (lv_tag_0_0= Byte ) )
+            // InternalPds16asmParser.g:684:4: (lv_tag_0_0= Byte )
+            {
+            // InternalPds16asmParser.g:684:4: (lv_tag_0_0= Byte )
+            // InternalPds16asmParser.g:685:5: lv_tag_0_0= Byte
+            {
+            lv_tag_0_0=(Token)match(input,Byte,FOLLOW_8); 
 
-            			newLeafNode(otherlv_0, grammarAccess.getByteAccess().getByteKeyword_0());
-            		
-            // InternalPds16asmParser.g:639:3: ( ( ( (lv_number_1_1= RULE_INT | lv_number_1_2= RULE_HEX | lv_number_1_3= RULE_OCT | lv_number_1_4= RULE_BIN | lv_number_1_5= RULE_CHAR ) ) ) (otherlv_2= Comma ( ( (lv_number_3_1= RULE_INT | lv_number_3_2= RULE_HEX | lv_number_3_3= RULE_OCT | lv_number_3_4= RULE_BIN | lv_number_3_5= RULE_CHAR ) ) ) )* )?
-            int alt12=2;
-            int LA12_0 = input.LA(1);
+            					newLeafNode(lv_tag_0_0, grammarAccess.getByteAccess().getTagByteKeyword_0_0());
+            				
 
-            if ( ((LA12_0>=RULE_HEX && LA12_0<=RULE_BIN)||LA12_0==RULE_CHAR||LA12_0==RULE_INT) ) {
-                alt12=1;
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getByteRule());
+            					}
+            					setWithLastConsumed(current, "tag", lv_tag_0_0, ".byte");
+            				
+
             }
-            switch (alt12) {
+
+
+            }
+
+            // InternalPds16asmParser.g:697:3: ( ( ( (lv_numbers_1_0= ruleNumber ) ) | ( (lv_s_2_0= RULE_STRING ) ) ) (otherlv_3= Comma ( ( (lv_numbers_4_0= ruleNumber ) ) | ( (lv_s_5_0= RULE_STRING ) ) ) )* )?
+            int alt13=2;
+            int LA13_0 = input.LA(1);
+
+            if ( ((LA13_0>=RULE_HEX && LA13_0<=RULE_BIN)||LA13_0==RULE_CHAR||(LA13_0>=RULE_INT && LA13_0<=RULE_STRING)) ) {
+                alt13=1;
+            }
+            switch (alt13) {
                 case 1 :
-                    // InternalPds16asmParser.g:640:4: ( ( (lv_number_1_1= RULE_INT | lv_number_1_2= RULE_HEX | lv_number_1_3= RULE_OCT | lv_number_1_4= RULE_BIN | lv_number_1_5= RULE_CHAR ) ) ) (otherlv_2= Comma ( ( (lv_number_3_1= RULE_INT | lv_number_3_2= RULE_HEX | lv_number_3_3= RULE_OCT | lv_number_3_4= RULE_BIN | lv_number_3_5= RULE_CHAR ) ) ) )*
+                    // InternalPds16asmParser.g:698:4: ( ( (lv_numbers_1_0= ruleNumber ) ) | ( (lv_s_2_0= RULE_STRING ) ) ) (otherlv_3= Comma ( ( (lv_numbers_4_0= ruleNumber ) ) | ( (lv_s_5_0= RULE_STRING ) ) ) )*
                     {
-                    // InternalPds16asmParser.g:640:4: ( ( (lv_number_1_1= RULE_INT | lv_number_1_2= RULE_HEX | lv_number_1_3= RULE_OCT | lv_number_1_4= RULE_BIN | lv_number_1_5= RULE_CHAR ) ) )
-                    // InternalPds16asmParser.g:641:5: ( (lv_number_1_1= RULE_INT | lv_number_1_2= RULE_HEX | lv_number_1_3= RULE_OCT | lv_number_1_4= RULE_BIN | lv_number_1_5= RULE_CHAR ) )
-                    {
-                    // InternalPds16asmParser.g:641:5: ( (lv_number_1_1= RULE_INT | lv_number_1_2= RULE_HEX | lv_number_1_3= RULE_OCT | lv_number_1_4= RULE_BIN | lv_number_1_5= RULE_CHAR ) )
-                    // InternalPds16asmParser.g:642:6: (lv_number_1_1= RULE_INT | lv_number_1_2= RULE_HEX | lv_number_1_3= RULE_OCT | lv_number_1_4= RULE_BIN | lv_number_1_5= RULE_CHAR )
-                    {
-                    // InternalPds16asmParser.g:642:6: (lv_number_1_1= RULE_INT | lv_number_1_2= RULE_HEX | lv_number_1_3= RULE_OCT | lv_number_1_4= RULE_BIN | lv_number_1_5= RULE_CHAR )
-                    int alt9=5;
-                    switch ( input.LA(1) ) {
-                    case RULE_INT:
-                        {
-                        alt9=1;
-                        }
-                        break;
-                    case RULE_HEX:
-                        {
-                        alt9=2;
-                        }
-                        break;
-                    case RULE_OCT:
-                        {
-                        alt9=3;
-                        }
-                        break;
-                    case RULE_BIN:
-                        {
-                        alt9=4;
-                        }
-                        break;
-                    case RULE_CHAR:
-                        {
-                        alt9=5;
-                        }
-                        break;
-                    default:
+                    // InternalPds16asmParser.g:698:4: ( ( (lv_numbers_1_0= ruleNumber ) ) | ( (lv_s_2_0= RULE_STRING ) ) )
+                    int alt10=2;
+                    int LA10_0 = input.LA(1);
+
+                    if ( ((LA10_0>=RULE_HEX && LA10_0<=RULE_BIN)||LA10_0==RULE_CHAR||LA10_0==RULE_INT) ) {
+                        alt10=1;
+                    }
+                    else if ( (LA10_0==RULE_STRING) ) {
+                        alt10=2;
+                    }
+                    else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 9, 0, input);
+                            new NoViableAltException("", 10, 0, input);
 
                         throw nvae;
                     }
-
-                    switch (alt9) {
+                    switch (alt10) {
                         case 1 :
-                            // InternalPds16asmParser.g:643:7: lv_number_1_1= RULE_INT
+                            // InternalPds16asmParser.g:699:5: ( (lv_numbers_1_0= ruleNumber ) )
                             {
-                            lv_number_1_1=(Token)match(input,RULE_INT,FOLLOW_8); 
+                            // InternalPds16asmParser.g:699:5: ( (lv_numbers_1_0= ruleNumber ) )
+                            // InternalPds16asmParser.g:700:6: (lv_numbers_1_0= ruleNumber )
+                            {
+                            // InternalPds16asmParser.g:700:6: (lv_numbers_1_0= ruleNumber )
+                            // InternalPds16asmParser.g:701:7: lv_numbers_1_0= ruleNumber
+                            {
 
-                            							newLeafNode(lv_number_1_1, grammarAccess.getByteAccess().getNumberINTTerminalRuleCall_1_0_0_0());
+                            							newCompositeNode(grammarAccess.getByteAccess().getNumbersNumberParserRuleCall_1_0_0_0());
                             						
+                            pushFollow(FOLLOW_6);
+                            lv_numbers_1_0=ruleNumber();
+
+                            state._fsp--;
+
 
                             							if (current==null) {
-                            								current = createModelElement(grammarAccess.getByteRule());
+                            								current = createModelElementForParent(grammarAccess.getByteRule());
                             							}
-                            							addWithLastConsumed(
+                            							add(
                             								current,
-                            								"number",
-                            								lv_number_1_1,
-                            								"org.pds16.pds16asm.Pds16asm.INT");
+                            								"numbers",
+                            								lv_numbers_1_0,
+                            								"org.pds16.pds16asm.Pds16asm.Number");
+                            							afterParserOrEnumRuleCall();
                             						
+
+                            }
+
+
+                            }
+
 
                             }
                             break;
                         case 2 :
-                            // InternalPds16asmParser.g:658:7: lv_number_1_2= RULE_HEX
+                            // InternalPds16asmParser.g:719:5: ( (lv_s_2_0= RULE_STRING ) )
                             {
-                            lv_number_1_2=(Token)match(input,RULE_HEX,FOLLOW_8); 
+                            // InternalPds16asmParser.g:719:5: ( (lv_s_2_0= RULE_STRING ) )
+                            // InternalPds16asmParser.g:720:6: (lv_s_2_0= RULE_STRING )
+                            {
+                            // InternalPds16asmParser.g:720:6: (lv_s_2_0= RULE_STRING )
+                            // InternalPds16asmParser.g:721:7: lv_s_2_0= RULE_STRING
+                            {
+                            lv_s_2_0=(Token)match(input,RULE_STRING,FOLLOW_6); 
 
-                            							newLeafNode(lv_number_1_2, grammarAccess.getByteAccess().getNumberHEXTerminalRuleCall_1_0_0_1());
+                            							newLeafNode(lv_s_2_0, grammarAccess.getByteAccess().getSSTRINGTerminalRuleCall_1_0_1_0());
                             						
 
                             							if (current==null) {
@@ -2089,169 +2199,107 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                             							}
                             							addWithLastConsumed(
                             								current,
-                            								"number",
-                            								lv_number_1_2,
-                            								"org.pds16.pds16asm.Pds16asm.HEX");
+                            								"s",
+                            								lv_s_2_0,
+                            								"org.pds16.pds16asm.Pds16asm.STRING");
                             						
 
                             }
-                            break;
-                        case 3 :
-                            // InternalPds16asmParser.g:673:7: lv_number_1_3= RULE_OCT
-                            {
-                            lv_number_1_3=(Token)match(input,RULE_OCT,FOLLOW_8); 
 
-                            							newLeafNode(lv_number_1_3, grammarAccess.getByteAccess().getNumberOCTTerminalRuleCall_1_0_0_2());
-                            						
-
-                            							if (current==null) {
-                            								current = createModelElement(grammarAccess.getByteRule());
-                            							}
-                            							addWithLastConsumed(
-                            								current,
-                            								"number",
-                            								lv_number_1_3,
-                            								"org.pds16.pds16asm.Pds16asm.OCT");
-                            						
 
                             }
-                            break;
-                        case 4 :
-                            // InternalPds16asmParser.g:688:7: lv_number_1_4= RULE_BIN
-                            {
-                            lv_number_1_4=(Token)match(input,RULE_BIN,FOLLOW_8); 
 
-                            							newLeafNode(lv_number_1_4, grammarAccess.getByteAccess().getNumberBINTerminalRuleCall_1_0_0_3());
-                            						
-
-                            							if (current==null) {
-                            								current = createModelElement(grammarAccess.getByteRule());
-                            							}
-                            							addWithLastConsumed(
-                            								current,
-                            								"number",
-                            								lv_number_1_4,
-                            								"org.pds16.pds16asm.Pds16asm.BIN");
-                            						
-
-                            }
-                            break;
-                        case 5 :
-                            // InternalPds16asmParser.g:703:7: lv_number_1_5= RULE_CHAR
-                            {
-                            lv_number_1_5=(Token)match(input,RULE_CHAR,FOLLOW_8); 
-
-                            							newLeafNode(lv_number_1_5, grammarAccess.getByteAccess().getNumberCHARTerminalRuleCall_1_0_0_4());
-                            						
-
-                            							if (current==null) {
-                            								current = createModelElement(grammarAccess.getByteRule());
-                            							}
-                            							addWithLastConsumed(
-                            								current,
-                            								"number",
-                            								lv_number_1_5,
-                            								"org.pds16.pds16asm.Pds16asm.CHAR");
-                            						
 
                             }
                             break;
 
                     }
 
-
-                    }
-
-
-                    }
-
-                    // InternalPds16asmParser.g:720:4: (otherlv_2= Comma ( ( (lv_number_3_1= RULE_INT | lv_number_3_2= RULE_HEX | lv_number_3_3= RULE_OCT | lv_number_3_4= RULE_BIN | lv_number_3_5= RULE_CHAR ) ) ) )*
-                    loop11:
+                    // InternalPds16asmParser.g:738:4: (otherlv_3= Comma ( ( (lv_numbers_4_0= ruleNumber ) ) | ( (lv_s_5_0= RULE_STRING ) ) ) )*
+                    loop12:
                     do {
-                        int alt11=2;
-                        int LA11_0 = input.LA(1);
+                        int alt12=2;
+                        int LA12_0 = input.LA(1);
 
-                        if ( (LA11_0==Comma) ) {
-                            alt11=1;
+                        if ( (LA12_0==Comma) ) {
+                            alt12=1;
                         }
 
 
-                        switch (alt11) {
+                        switch (alt12) {
                     	case 1 :
-                    	    // InternalPds16asmParser.g:721:5: otherlv_2= Comma ( ( (lv_number_3_1= RULE_INT | lv_number_3_2= RULE_HEX | lv_number_3_3= RULE_OCT | lv_number_3_4= RULE_BIN | lv_number_3_5= RULE_CHAR ) ) )
+                    	    // InternalPds16asmParser.g:739:5: otherlv_3= Comma ( ( (lv_numbers_4_0= ruleNumber ) ) | ( (lv_s_5_0= RULE_STRING ) ) )
                     	    {
-                    	    otherlv_2=(Token)match(input,Comma,FOLLOW_10); 
+                    	    otherlv_3=(Token)match(input,Comma,FOLLOW_9); 
 
-                    	    					newLeafNode(otherlv_2, grammarAccess.getByteAccess().getCommaKeyword_1_1_0());
+                    	    					newLeafNode(otherlv_3, grammarAccess.getByteAccess().getCommaKeyword_1_1_0());
                     	    				
-                    	    // InternalPds16asmParser.g:725:5: ( ( (lv_number_3_1= RULE_INT | lv_number_3_2= RULE_HEX | lv_number_3_3= RULE_OCT | lv_number_3_4= RULE_BIN | lv_number_3_5= RULE_CHAR ) ) )
-                    	    // InternalPds16asmParser.g:726:6: ( (lv_number_3_1= RULE_INT | lv_number_3_2= RULE_HEX | lv_number_3_3= RULE_OCT | lv_number_3_4= RULE_BIN | lv_number_3_5= RULE_CHAR ) )
-                    	    {
-                    	    // InternalPds16asmParser.g:726:6: ( (lv_number_3_1= RULE_INT | lv_number_3_2= RULE_HEX | lv_number_3_3= RULE_OCT | lv_number_3_4= RULE_BIN | lv_number_3_5= RULE_CHAR ) )
-                    	    // InternalPds16asmParser.g:727:7: (lv_number_3_1= RULE_INT | lv_number_3_2= RULE_HEX | lv_number_3_3= RULE_OCT | lv_number_3_4= RULE_BIN | lv_number_3_5= RULE_CHAR )
-                    	    {
-                    	    // InternalPds16asmParser.g:727:7: (lv_number_3_1= RULE_INT | lv_number_3_2= RULE_HEX | lv_number_3_3= RULE_OCT | lv_number_3_4= RULE_BIN | lv_number_3_5= RULE_CHAR )
-                    	    int alt10=5;
-                    	    switch ( input.LA(1) ) {
-                    	    case RULE_INT:
-                    	        {
-                    	        alt10=1;
-                    	        }
-                    	        break;
-                    	    case RULE_HEX:
-                    	        {
-                    	        alt10=2;
-                    	        }
-                    	        break;
-                    	    case RULE_OCT:
-                    	        {
-                    	        alt10=3;
-                    	        }
-                    	        break;
-                    	    case RULE_BIN:
-                    	        {
-                    	        alt10=4;
-                    	        }
-                    	        break;
-                    	    case RULE_CHAR:
-                    	        {
-                    	        alt10=5;
-                    	        }
-                    	        break;
-                    	    default:
+                    	    // InternalPds16asmParser.g:743:5: ( ( (lv_numbers_4_0= ruleNumber ) ) | ( (lv_s_5_0= RULE_STRING ) ) )
+                    	    int alt11=2;
+                    	    int LA11_0 = input.LA(1);
+
+                    	    if ( ((LA11_0>=RULE_HEX && LA11_0<=RULE_BIN)||LA11_0==RULE_CHAR||LA11_0==RULE_INT) ) {
+                    	        alt11=1;
+                    	    }
+                    	    else if ( (LA11_0==RULE_STRING) ) {
+                    	        alt11=2;
+                    	    }
+                    	    else {
                     	        NoViableAltException nvae =
-                    	            new NoViableAltException("", 10, 0, input);
+                    	            new NoViableAltException("", 11, 0, input);
 
                     	        throw nvae;
                     	    }
-
-                    	    switch (alt10) {
+                    	    switch (alt11) {
                     	        case 1 :
-                    	            // InternalPds16asmParser.g:728:8: lv_number_3_1= RULE_INT
+                    	            // InternalPds16asmParser.g:744:6: ( (lv_numbers_4_0= ruleNumber ) )
                     	            {
-                    	            lv_number_3_1=(Token)match(input,RULE_INT,FOLLOW_8); 
+                    	            // InternalPds16asmParser.g:744:6: ( (lv_numbers_4_0= ruleNumber ) )
+                    	            // InternalPds16asmParser.g:745:7: (lv_numbers_4_0= ruleNumber )
+                    	            {
+                    	            // InternalPds16asmParser.g:745:7: (lv_numbers_4_0= ruleNumber )
+                    	            // InternalPds16asmParser.g:746:8: lv_numbers_4_0= ruleNumber
+                    	            {
 
-                    	            								newLeafNode(lv_number_3_1, grammarAccess.getByteAccess().getNumberINTTerminalRuleCall_1_1_1_0_0());
+                    	            								newCompositeNode(grammarAccess.getByteAccess().getNumbersNumberParserRuleCall_1_1_1_0_0());
                     	            							
+                    	            pushFollow(FOLLOW_6);
+                    	            lv_numbers_4_0=ruleNumber();
+
+                    	            state._fsp--;
+
 
                     	            								if (current==null) {
-                    	            									current = createModelElement(grammarAccess.getByteRule());
+                    	            									current = createModelElementForParent(grammarAccess.getByteRule());
                     	            								}
-                    	            								addWithLastConsumed(
+                    	            								add(
                     	            									current,
-                    	            									"number",
-                    	            									lv_number_3_1,
-                    	            									"org.pds16.pds16asm.Pds16asm.INT");
+                    	            									"numbers",
+                    	            									lv_numbers_4_0,
+                    	            									"org.pds16.pds16asm.Pds16asm.Number");
+                    	            								afterParserOrEnumRuleCall();
                     	            							
+
+                    	            }
+
+
+                    	            }
+
 
                     	            }
                     	            break;
                     	        case 2 :
-                    	            // InternalPds16asmParser.g:743:8: lv_number_3_2= RULE_HEX
+                    	            // InternalPds16asmParser.g:764:6: ( (lv_s_5_0= RULE_STRING ) )
                     	            {
-                    	            lv_number_3_2=(Token)match(input,RULE_HEX,FOLLOW_8); 
+                    	            // InternalPds16asmParser.g:764:6: ( (lv_s_5_0= RULE_STRING ) )
+                    	            // InternalPds16asmParser.g:765:7: (lv_s_5_0= RULE_STRING )
+                    	            {
+                    	            // InternalPds16asmParser.g:765:7: (lv_s_5_0= RULE_STRING )
+                    	            // InternalPds16asmParser.g:766:8: lv_s_5_0= RULE_STRING
+                    	            {
+                    	            lv_s_5_0=(Token)match(input,RULE_STRING,FOLLOW_6); 
 
-                    	            								newLeafNode(lv_number_3_2, grammarAccess.getByteAccess().getNumberHEXTerminalRuleCall_1_1_1_0_1());
+                    	            								newLeafNode(lv_s_5_0, grammarAccess.getByteAccess().getSSTRINGTerminalRuleCall_1_1_1_1_0());
                     	            							
 
                     	            								if (current==null) {
@@ -2259,79 +2307,19 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     	            								}
                     	            								addWithLastConsumed(
                     	            									current,
-                    	            									"number",
-                    	            									lv_number_3_2,
-                    	            									"org.pds16.pds16asm.Pds16asm.HEX");
+                    	            									"s",
+                    	            									lv_s_5_0,
+                    	            									"org.pds16.pds16asm.Pds16asm.STRING");
                     	            							
 
                     	            }
-                    	            break;
-                    	        case 3 :
-                    	            // InternalPds16asmParser.g:758:8: lv_number_3_3= RULE_OCT
-                    	            {
-                    	            lv_number_3_3=(Token)match(input,RULE_OCT,FOLLOW_8); 
 
-                    	            								newLeafNode(lv_number_3_3, grammarAccess.getByteAccess().getNumberOCTTerminalRuleCall_1_1_1_0_2());
-                    	            							
 
-                    	            								if (current==null) {
-                    	            									current = createModelElement(grammarAccess.getByteRule());
-                    	            								}
-                    	            								addWithLastConsumed(
-                    	            									current,
-                    	            									"number",
-                    	            									lv_number_3_3,
-                    	            									"org.pds16.pds16asm.Pds16asm.OCT");
-                    	            							
+                    	            }
+
 
                     	            }
                     	            break;
-                    	        case 4 :
-                    	            // InternalPds16asmParser.g:773:8: lv_number_3_4= RULE_BIN
-                    	            {
-                    	            lv_number_3_4=(Token)match(input,RULE_BIN,FOLLOW_8); 
-
-                    	            								newLeafNode(lv_number_3_4, grammarAccess.getByteAccess().getNumberBINTerminalRuleCall_1_1_1_0_3());
-                    	            							
-
-                    	            								if (current==null) {
-                    	            									current = createModelElement(grammarAccess.getByteRule());
-                    	            								}
-                    	            								addWithLastConsumed(
-                    	            									current,
-                    	            									"number",
-                    	            									lv_number_3_4,
-                    	            									"org.pds16.pds16asm.Pds16asm.BIN");
-                    	            							
-
-                    	            }
-                    	            break;
-                    	        case 5 :
-                    	            // InternalPds16asmParser.g:788:8: lv_number_3_5= RULE_CHAR
-                    	            {
-                    	            lv_number_3_5=(Token)match(input,RULE_CHAR,FOLLOW_8); 
-
-                    	            								newLeafNode(lv_number_3_5, grammarAccess.getByteAccess().getNumberCHARTerminalRuleCall_1_1_1_0_4());
-                    	            							
-
-                    	            								if (current==null) {
-                    	            									current = createModelElement(grammarAccess.getByteRule());
-                    	            								}
-                    	            								addWithLastConsumed(
-                    	            									current,
-                    	            									"number",
-                    	            									lv_number_3_5,
-                    	            									"org.pds16.pds16asm.Pds16asm.CHAR");
-                    	            							
-
-                    	            }
-                    	            break;
-
-                    	    }
-
-
-                    	    }
-
 
                     	    }
 
@@ -2340,7 +2328,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop11;
+                    	    break loop12;
                         }
                     } while (true);
 
@@ -2373,7 +2361,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleWord"
-    // InternalPds16asmParser.g:811:1: entryRuleWord returns [EObject current=null] : iv_ruleWord= ruleWord EOF ;
+    // InternalPds16asmParser.g:789:1: entryRuleWord returns [EObject current=null] : iv_ruleWord= ruleWord EOF ;
     public final EObject entryRuleWord() throws RecognitionException {
         EObject current = null;
 
@@ -2381,8 +2369,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:811:45: (iv_ruleWord= ruleWord EOF )
-            // InternalPds16asmParser.g:812:2: iv_ruleWord= ruleWord EOF
+            // InternalPds16asmParser.g:789:45: (iv_ruleWord= ruleWord EOF )
+            // InternalPds16asmParser.g:790:2: iv_ruleWord= ruleWord EOF
             {
              newCompositeNode(grammarAccess.getWordRule()); 
             pushFollow(FOLLOW_1);
@@ -2409,51 +2397,63 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleWord"
-    // InternalPds16asmParser.g:818:1: ruleWord returns [EObject current=null] : (otherlv_0= Word ( ( ( (lv_value_1_0= RULE_ID ) ) | ( ( (lv_number_2_1= RULE_INT | lv_number_2_2= RULE_HEX | lv_number_2_3= RULE_OCT | lv_number_2_4= RULE_BIN | lv_number_2_5= RULE_CHAR ) ) ) ) (otherlv_3= Comma ( ( (lv_value_4_0= RULE_ID ) ) | ( ( (lv_number_5_1= RULE_INT | lv_number_5_2= RULE_HEX | lv_number_5_3= RULE_OCT | lv_number_5_4= RULE_BIN | lv_number_5_5= RULE_CHAR ) ) ) ) )* )? ) ;
+    // InternalPds16asmParser.g:796:1: ruleWord returns [EObject current=null] : ( ( (lv_tag_0_0= Word ) ) ( ( ( (lv_values_1_0= RULE_ID ) ) | ( (lv_numbers_2_0= ruleNumber ) ) ) (otherlv_3= Comma ( ( (lv_values_4_0= RULE_ID ) ) | ( (lv_numbers_5_0= ruleNumber ) ) ) )* )? ) ;
     public final EObject ruleWord() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_0=null;
-        Token lv_value_1_0=null;
-        Token lv_number_2_1=null;
-        Token lv_number_2_2=null;
-        Token lv_number_2_3=null;
-        Token lv_number_2_4=null;
-        Token lv_number_2_5=null;
+        Token lv_tag_0_0=null;
+        Token lv_values_1_0=null;
         Token otherlv_3=null;
-        Token lv_value_4_0=null;
-        Token lv_number_5_1=null;
-        Token lv_number_5_2=null;
-        Token lv_number_5_3=null;
-        Token lv_number_5_4=null;
-        Token lv_number_5_5=null;
+        Token lv_values_4_0=null;
+        EObject lv_numbers_2_0 = null;
+
+        EObject lv_numbers_5_0 = null;
+
 
 
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:824:2: ( (otherlv_0= Word ( ( ( (lv_value_1_0= RULE_ID ) ) | ( ( (lv_number_2_1= RULE_INT | lv_number_2_2= RULE_HEX | lv_number_2_3= RULE_OCT | lv_number_2_4= RULE_BIN | lv_number_2_5= RULE_CHAR ) ) ) ) (otherlv_3= Comma ( ( (lv_value_4_0= RULE_ID ) ) | ( ( (lv_number_5_1= RULE_INT | lv_number_5_2= RULE_HEX | lv_number_5_3= RULE_OCT | lv_number_5_4= RULE_BIN | lv_number_5_5= RULE_CHAR ) ) ) ) )* )? ) )
-            // InternalPds16asmParser.g:825:2: (otherlv_0= Word ( ( ( (lv_value_1_0= RULE_ID ) ) | ( ( (lv_number_2_1= RULE_INT | lv_number_2_2= RULE_HEX | lv_number_2_3= RULE_OCT | lv_number_2_4= RULE_BIN | lv_number_2_5= RULE_CHAR ) ) ) ) (otherlv_3= Comma ( ( (lv_value_4_0= RULE_ID ) ) | ( ( (lv_number_5_1= RULE_INT | lv_number_5_2= RULE_HEX | lv_number_5_3= RULE_OCT | lv_number_5_4= RULE_BIN | lv_number_5_5= RULE_CHAR ) ) ) ) )* )? )
+            // InternalPds16asmParser.g:802:2: ( ( ( (lv_tag_0_0= Word ) ) ( ( ( (lv_values_1_0= RULE_ID ) ) | ( (lv_numbers_2_0= ruleNumber ) ) ) (otherlv_3= Comma ( ( (lv_values_4_0= RULE_ID ) ) | ( (lv_numbers_5_0= ruleNumber ) ) ) )* )? ) )
+            // InternalPds16asmParser.g:803:2: ( ( (lv_tag_0_0= Word ) ) ( ( ( (lv_values_1_0= RULE_ID ) ) | ( (lv_numbers_2_0= ruleNumber ) ) ) (otherlv_3= Comma ( ( (lv_values_4_0= RULE_ID ) ) | ( (lv_numbers_5_0= ruleNumber ) ) ) )* )? )
             {
-            // InternalPds16asmParser.g:825:2: (otherlv_0= Word ( ( ( (lv_value_1_0= RULE_ID ) ) | ( ( (lv_number_2_1= RULE_INT | lv_number_2_2= RULE_HEX | lv_number_2_3= RULE_OCT | lv_number_2_4= RULE_BIN | lv_number_2_5= RULE_CHAR ) ) ) ) (otherlv_3= Comma ( ( (lv_value_4_0= RULE_ID ) ) | ( ( (lv_number_5_1= RULE_INT | lv_number_5_2= RULE_HEX | lv_number_5_3= RULE_OCT | lv_number_5_4= RULE_BIN | lv_number_5_5= RULE_CHAR ) ) ) ) )* )? )
-            // InternalPds16asmParser.g:826:3: otherlv_0= Word ( ( ( (lv_value_1_0= RULE_ID ) ) | ( ( (lv_number_2_1= RULE_INT | lv_number_2_2= RULE_HEX | lv_number_2_3= RULE_OCT | lv_number_2_4= RULE_BIN | lv_number_2_5= RULE_CHAR ) ) ) ) (otherlv_3= Comma ( ( (lv_value_4_0= RULE_ID ) ) | ( ( (lv_number_5_1= RULE_INT | lv_number_5_2= RULE_HEX | lv_number_5_3= RULE_OCT | lv_number_5_4= RULE_BIN | lv_number_5_5= RULE_CHAR ) ) ) ) )* )?
+            // InternalPds16asmParser.g:803:2: ( ( (lv_tag_0_0= Word ) ) ( ( ( (lv_values_1_0= RULE_ID ) ) | ( (lv_numbers_2_0= ruleNumber ) ) ) (otherlv_3= Comma ( ( (lv_values_4_0= RULE_ID ) ) | ( (lv_numbers_5_0= ruleNumber ) ) ) )* )? )
+            // InternalPds16asmParser.g:804:3: ( (lv_tag_0_0= Word ) ) ( ( ( (lv_values_1_0= RULE_ID ) ) | ( (lv_numbers_2_0= ruleNumber ) ) ) (otherlv_3= Comma ( ( (lv_values_4_0= RULE_ID ) ) | ( (lv_numbers_5_0= ruleNumber ) ) ) )* )?
             {
-            otherlv_0=(Token)match(input,Word,FOLLOW_11); 
+            // InternalPds16asmParser.g:804:3: ( (lv_tag_0_0= Word ) )
+            // InternalPds16asmParser.g:805:4: (lv_tag_0_0= Word )
+            {
+            // InternalPds16asmParser.g:805:4: (lv_tag_0_0= Word )
+            // InternalPds16asmParser.g:806:5: lv_tag_0_0= Word
+            {
+            lv_tag_0_0=(Token)match(input,Word,FOLLOW_10); 
 
-            			newLeafNode(otherlv_0, grammarAccess.getWordAccess().getWordKeyword_0());
-            		
-            // InternalPds16asmParser.g:830:3: ( ( ( (lv_value_1_0= RULE_ID ) ) | ( ( (lv_number_2_1= RULE_INT | lv_number_2_2= RULE_HEX | lv_number_2_3= RULE_OCT | lv_number_2_4= RULE_BIN | lv_number_2_5= RULE_CHAR ) ) ) ) (otherlv_3= Comma ( ( (lv_value_4_0= RULE_ID ) ) | ( ( (lv_number_5_1= RULE_INT | lv_number_5_2= RULE_HEX | lv_number_5_3= RULE_OCT | lv_number_5_4= RULE_BIN | lv_number_5_5= RULE_CHAR ) ) ) ) )* )?
-            int alt18=2;
-            int LA18_0 = input.LA(1);
+            					newLeafNode(lv_tag_0_0, grammarAccess.getWordAccess().getTagWordKeyword_0_0());
+            				
 
-            if ( ((LA18_0>=RULE_HEX && LA18_0<=RULE_BIN)||(LA18_0>=RULE_CHAR && LA18_0<=RULE_ID)||LA18_0==RULE_INT) ) {
-                alt18=1;
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getWordRule());
+            					}
+            					setWithLastConsumed(current, "tag", lv_tag_0_0, ".word");
+            				
+
             }
-            switch (alt18) {
+
+
+            }
+
+            // InternalPds16asmParser.g:818:3: ( ( ( (lv_values_1_0= RULE_ID ) ) | ( (lv_numbers_2_0= ruleNumber ) ) ) (otherlv_3= Comma ( ( (lv_values_4_0= RULE_ID ) ) | ( (lv_numbers_5_0= ruleNumber ) ) ) )* )?
+            int alt17=2;
+            int LA17_0 = input.LA(1);
+
+            if ( ((LA17_0>=RULE_HEX && LA17_0<=RULE_BIN)||(LA17_0>=RULE_CHAR && LA17_0<=RULE_ID)||LA17_0==RULE_INT) ) {
+                alt17=1;
+            }
+            switch (alt17) {
                 case 1 :
-                    // InternalPds16asmParser.g:831:4: ( ( (lv_value_1_0= RULE_ID ) ) | ( ( (lv_number_2_1= RULE_INT | lv_number_2_2= RULE_HEX | lv_number_2_3= RULE_OCT | lv_number_2_4= RULE_BIN | lv_number_2_5= RULE_CHAR ) ) ) ) (otherlv_3= Comma ( ( (lv_value_4_0= RULE_ID ) ) | ( ( (lv_number_5_1= RULE_INT | lv_number_5_2= RULE_HEX | lv_number_5_3= RULE_OCT | lv_number_5_4= RULE_BIN | lv_number_5_5= RULE_CHAR ) ) ) ) )*
+                    // InternalPds16asmParser.g:819:4: ( ( (lv_values_1_0= RULE_ID ) ) | ( (lv_numbers_2_0= ruleNumber ) ) ) (otherlv_3= Comma ( ( (lv_values_4_0= RULE_ID ) ) | ( (lv_numbers_5_0= ruleNumber ) ) ) )*
                     {
-                    // InternalPds16asmParser.g:831:4: ( ( (lv_value_1_0= RULE_ID ) ) | ( ( (lv_number_2_1= RULE_INT | lv_number_2_2= RULE_HEX | lv_number_2_3= RULE_OCT | lv_number_2_4= RULE_BIN | lv_number_2_5= RULE_CHAR ) ) ) )
+                    // InternalPds16asmParser.g:819:4: ( ( (lv_values_1_0= RULE_ID ) ) | ( (lv_numbers_2_0= ruleNumber ) ) )
                     int alt14=2;
                     int LA14_0 = input.LA(1);
 
@@ -2471,17 +2471,17 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt14) {
                         case 1 :
-                            // InternalPds16asmParser.g:832:5: ( (lv_value_1_0= RULE_ID ) )
+                            // InternalPds16asmParser.g:820:5: ( (lv_values_1_0= RULE_ID ) )
                             {
-                            // InternalPds16asmParser.g:832:5: ( (lv_value_1_0= RULE_ID ) )
-                            // InternalPds16asmParser.g:833:6: (lv_value_1_0= RULE_ID )
+                            // InternalPds16asmParser.g:820:5: ( (lv_values_1_0= RULE_ID ) )
+                            // InternalPds16asmParser.g:821:6: (lv_values_1_0= RULE_ID )
                             {
-                            // InternalPds16asmParser.g:833:6: (lv_value_1_0= RULE_ID )
-                            // InternalPds16asmParser.g:834:7: lv_value_1_0= RULE_ID
+                            // InternalPds16asmParser.g:821:6: (lv_values_1_0= RULE_ID )
+                            // InternalPds16asmParser.g:822:7: lv_values_1_0= RULE_ID
                             {
-                            lv_value_1_0=(Token)match(input,RULE_ID,FOLLOW_8); 
+                            lv_values_1_0=(Token)match(input,RULE_ID,FOLLOW_6); 
 
-                            							newLeafNode(lv_value_1_0, grammarAccess.getWordAccess().getValueIDTerminalRuleCall_1_0_0_0());
+                            							newLeafNode(lv_values_1_0, grammarAccess.getWordAccess().getValuesIDTerminalRuleCall_1_0_0_0());
                             						
 
                             							if (current==null) {
@@ -2489,8 +2489,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                             							}
                             							addWithLastConsumed(
                             								current,
-                            								"value",
-                            								lv_value_1_0,
+                            								"values",
+                            								lv_values_1_0,
                             								"org.pds16.pds16asm.Pds16asm.ID");
                             						
 
@@ -2503,153 +2503,33 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // InternalPds16asmParser.g:851:5: ( ( (lv_number_2_1= RULE_INT | lv_number_2_2= RULE_HEX | lv_number_2_3= RULE_OCT | lv_number_2_4= RULE_BIN | lv_number_2_5= RULE_CHAR ) ) )
+                            // InternalPds16asmParser.g:839:5: ( (lv_numbers_2_0= ruleNumber ) )
                             {
-                            // InternalPds16asmParser.g:851:5: ( ( (lv_number_2_1= RULE_INT | lv_number_2_2= RULE_HEX | lv_number_2_3= RULE_OCT | lv_number_2_4= RULE_BIN | lv_number_2_5= RULE_CHAR ) ) )
-                            // InternalPds16asmParser.g:852:6: ( (lv_number_2_1= RULE_INT | lv_number_2_2= RULE_HEX | lv_number_2_3= RULE_OCT | lv_number_2_4= RULE_BIN | lv_number_2_5= RULE_CHAR ) )
+                            // InternalPds16asmParser.g:839:5: ( (lv_numbers_2_0= ruleNumber ) )
+                            // InternalPds16asmParser.g:840:6: (lv_numbers_2_0= ruleNumber )
                             {
-                            // InternalPds16asmParser.g:852:6: ( (lv_number_2_1= RULE_INT | lv_number_2_2= RULE_HEX | lv_number_2_3= RULE_OCT | lv_number_2_4= RULE_BIN | lv_number_2_5= RULE_CHAR ) )
-                            // InternalPds16asmParser.g:853:7: (lv_number_2_1= RULE_INT | lv_number_2_2= RULE_HEX | lv_number_2_3= RULE_OCT | lv_number_2_4= RULE_BIN | lv_number_2_5= RULE_CHAR )
+                            // InternalPds16asmParser.g:840:6: (lv_numbers_2_0= ruleNumber )
+                            // InternalPds16asmParser.g:841:7: lv_numbers_2_0= ruleNumber
                             {
-                            // InternalPds16asmParser.g:853:7: (lv_number_2_1= RULE_INT | lv_number_2_2= RULE_HEX | lv_number_2_3= RULE_OCT | lv_number_2_4= RULE_BIN | lv_number_2_5= RULE_CHAR )
-                            int alt13=5;
-                            switch ( input.LA(1) ) {
-                            case RULE_INT:
-                                {
-                                alt13=1;
-                                }
-                                break;
-                            case RULE_HEX:
-                                {
-                                alt13=2;
-                                }
-                                break;
-                            case RULE_OCT:
-                                {
-                                alt13=3;
-                                }
-                                break;
-                            case RULE_BIN:
-                                {
-                                alt13=4;
-                                }
-                                break;
-                            case RULE_CHAR:
-                                {
-                                alt13=5;
-                                }
-                                break;
-                            default:
-                                NoViableAltException nvae =
-                                    new NoViableAltException("", 13, 0, input);
 
-                                throw nvae;
-                            }
+                            							newCompositeNode(grammarAccess.getWordAccess().getNumbersNumberParserRuleCall_1_0_1_0());
+                            						
+                            pushFollow(FOLLOW_6);
+                            lv_numbers_2_0=ruleNumber();
 
-                            switch (alt13) {
-                                case 1 :
-                                    // InternalPds16asmParser.g:854:8: lv_number_2_1= RULE_INT
-                                    {
-                                    lv_number_2_1=(Token)match(input,RULE_INT,FOLLOW_8); 
+                            state._fsp--;
 
-                                    								newLeafNode(lv_number_2_1, grammarAccess.getWordAccess().getNumberINTTerminalRuleCall_1_0_1_0_0());
-                                    							
 
-                                    								if (current==null) {
-                                    									current = createModelElement(grammarAccess.getWordRule());
-                                    								}
-                                    								addWithLastConsumed(
-                                    									current,
-                                    									"number",
-                                    									lv_number_2_1,
-                                    									"org.pds16.pds16asm.Pds16asm.INT");
-                                    							
-
-                                    }
-                                    break;
-                                case 2 :
-                                    // InternalPds16asmParser.g:869:8: lv_number_2_2= RULE_HEX
-                                    {
-                                    lv_number_2_2=(Token)match(input,RULE_HEX,FOLLOW_8); 
-
-                                    								newLeafNode(lv_number_2_2, grammarAccess.getWordAccess().getNumberHEXTerminalRuleCall_1_0_1_0_1());
-                                    							
-
-                                    								if (current==null) {
-                                    									current = createModelElement(grammarAccess.getWordRule());
-                                    								}
-                                    								addWithLastConsumed(
-                                    									current,
-                                    									"number",
-                                    									lv_number_2_2,
-                                    									"org.pds16.pds16asm.Pds16asm.HEX");
-                                    							
-
-                                    }
-                                    break;
-                                case 3 :
-                                    // InternalPds16asmParser.g:884:8: lv_number_2_3= RULE_OCT
-                                    {
-                                    lv_number_2_3=(Token)match(input,RULE_OCT,FOLLOW_8); 
-
-                                    								newLeafNode(lv_number_2_3, grammarAccess.getWordAccess().getNumberOCTTerminalRuleCall_1_0_1_0_2());
-                                    							
-
-                                    								if (current==null) {
-                                    									current = createModelElement(grammarAccess.getWordRule());
-                                    								}
-                                    								addWithLastConsumed(
-                                    									current,
-                                    									"number",
-                                    									lv_number_2_3,
-                                    									"org.pds16.pds16asm.Pds16asm.OCT");
-                                    							
-
-                                    }
-                                    break;
-                                case 4 :
-                                    // InternalPds16asmParser.g:899:8: lv_number_2_4= RULE_BIN
-                                    {
-                                    lv_number_2_4=(Token)match(input,RULE_BIN,FOLLOW_8); 
-
-                                    								newLeafNode(lv_number_2_4, grammarAccess.getWordAccess().getNumberBINTerminalRuleCall_1_0_1_0_3());
-                                    							
-
-                                    								if (current==null) {
-                                    									current = createModelElement(grammarAccess.getWordRule());
-                                    								}
-                                    								addWithLastConsumed(
-                                    									current,
-                                    									"number",
-                                    									lv_number_2_4,
-                                    									"org.pds16.pds16asm.Pds16asm.BIN");
-                                    							
-
-                                    }
-                                    break;
-                                case 5 :
-                                    // InternalPds16asmParser.g:914:8: lv_number_2_5= RULE_CHAR
-                                    {
-                                    lv_number_2_5=(Token)match(input,RULE_CHAR,FOLLOW_8); 
-
-                                    								newLeafNode(lv_number_2_5, grammarAccess.getWordAccess().getNumberCHARTerminalRuleCall_1_0_1_0_4());
-                                    							
-
-                                    								if (current==null) {
-                                    									current = createModelElement(grammarAccess.getWordRule());
-                                    								}
-                                    								addWithLastConsumed(
-                                    									current,
-                                    									"number",
-                                    									lv_number_2_5,
-                                    									"org.pds16.pds16asm.Pds16asm.CHAR");
-                                    							
-
-                                    }
-                                    break;
-
-                            }
-
+                            							if (current==null) {
+                            								current = createModelElementForParent(grammarAccess.getWordRule());
+                            							}
+                            							add(
+                            								current,
+                            								"numbers",
+                            								lv_numbers_2_0,
+                            								"org.pds16.pds16asm.Pds16asm.Number");
+                            							afterParserOrEnumRuleCall();
+                            						
 
                             }
 
@@ -2662,54 +2542,54 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalPds16asmParser.g:932:4: (otherlv_3= Comma ( ( (lv_value_4_0= RULE_ID ) ) | ( ( (lv_number_5_1= RULE_INT | lv_number_5_2= RULE_HEX | lv_number_5_3= RULE_OCT | lv_number_5_4= RULE_BIN | lv_number_5_5= RULE_CHAR ) ) ) ) )*
-                    loop17:
+                    // InternalPds16asmParser.g:859:4: (otherlv_3= Comma ( ( (lv_values_4_0= RULE_ID ) ) | ( (lv_numbers_5_0= ruleNumber ) ) ) )*
+                    loop16:
                     do {
-                        int alt17=2;
-                        int LA17_0 = input.LA(1);
+                        int alt16=2;
+                        int LA16_0 = input.LA(1);
 
-                        if ( (LA17_0==Comma) ) {
-                            alt17=1;
+                        if ( (LA16_0==Comma) ) {
+                            alt16=1;
                         }
 
 
-                        switch (alt17) {
+                        switch (alt16) {
                     	case 1 :
-                    	    // InternalPds16asmParser.g:933:5: otherlv_3= Comma ( ( (lv_value_4_0= RULE_ID ) ) | ( ( (lv_number_5_1= RULE_INT | lv_number_5_2= RULE_HEX | lv_number_5_3= RULE_OCT | lv_number_5_4= RULE_BIN | lv_number_5_5= RULE_CHAR ) ) ) )
+                    	    // InternalPds16asmParser.g:860:5: otherlv_3= Comma ( ( (lv_values_4_0= RULE_ID ) ) | ( (lv_numbers_5_0= ruleNumber ) ) )
                     	    {
-                    	    otherlv_3=(Token)match(input,Comma,FOLLOW_12); 
+                    	    otherlv_3=(Token)match(input,Comma,FOLLOW_11); 
 
                     	    					newLeafNode(otherlv_3, grammarAccess.getWordAccess().getCommaKeyword_1_1_0());
                     	    				
-                    	    // InternalPds16asmParser.g:937:5: ( ( (lv_value_4_0= RULE_ID ) ) | ( ( (lv_number_5_1= RULE_INT | lv_number_5_2= RULE_HEX | lv_number_5_3= RULE_OCT | lv_number_5_4= RULE_BIN | lv_number_5_5= RULE_CHAR ) ) ) )
-                    	    int alt16=2;
-                    	    int LA16_0 = input.LA(1);
+                    	    // InternalPds16asmParser.g:864:5: ( ( (lv_values_4_0= RULE_ID ) ) | ( (lv_numbers_5_0= ruleNumber ) ) )
+                    	    int alt15=2;
+                    	    int LA15_0 = input.LA(1);
 
-                    	    if ( (LA16_0==RULE_ID) ) {
-                    	        alt16=1;
+                    	    if ( (LA15_0==RULE_ID) ) {
+                    	        alt15=1;
                     	    }
-                    	    else if ( ((LA16_0>=RULE_HEX && LA16_0<=RULE_BIN)||LA16_0==RULE_CHAR||LA16_0==RULE_INT) ) {
-                    	        alt16=2;
+                    	    else if ( ((LA15_0>=RULE_HEX && LA15_0<=RULE_BIN)||LA15_0==RULE_CHAR||LA15_0==RULE_INT) ) {
+                    	        alt15=2;
                     	    }
                     	    else {
                     	        NoViableAltException nvae =
-                    	            new NoViableAltException("", 16, 0, input);
+                    	            new NoViableAltException("", 15, 0, input);
 
                     	        throw nvae;
                     	    }
-                    	    switch (alt16) {
+                    	    switch (alt15) {
                     	        case 1 :
-                    	            // InternalPds16asmParser.g:938:6: ( (lv_value_4_0= RULE_ID ) )
+                    	            // InternalPds16asmParser.g:865:6: ( (lv_values_4_0= RULE_ID ) )
                     	            {
-                    	            // InternalPds16asmParser.g:938:6: ( (lv_value_4_0= RULE_ID ) )
-                    	            // InternalPds16asmParser.g:939:7: (lv_value_4_0= RULE_ID )
+                    	            // InternalPds16asmParser.g:865:6: ( (lv_values_4_0= RULE_ID ) )
+                    	            // InternalPds16asmParser.g:866:7: (lv_values_4_0= RULE_ID )
                     	            {
-                    	            // InternalPds16asmParser.g:939:7: (lv_value_4_0= RULE_ID )
-                    	            // InternalPds16asmParser.g:940:8: lv_value_4_0= RULE_ID
+                    	            // InternalPds16asmParser.g:866:7: (lv_values_4_0= RULE_ID )
+                    	            // InternalPds16asmParser.g:867:8: lv_values_4_0= RULE_ID
                     	            {
-                    	            lv_value_4_0=(Token)match(input,RULE_ID,FOLLOW_8); 
+                    	            lv_values_4_0=(Token)match(input,RULE_ID,FOLLOW_6); 
 
-                    	            								newLeafNode(lv_value_4_0, grammarAccess.getWordAccess().getValueIDTerminalRuleCall_1_1_1_0_0());
+                    	            								newLeafNode(lv_values_4_0, grammarAccess.getWordAccess().getValuesIDTerminalRuleCall_1_1_1_0_0());
                     	            							
 
                     	            								if (current==null) {
@@ -2717,8 +2597,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     	            								}
                     	            								addWithLastConsumed(
                     	            									current,
-                    	            									"value",
-                    	            									lv_value_4_0,
+                    	            									"values",
+                    	            									lv_values_4_0,
                     	            									"org.pds16.pds16asm.Pds16asm.ID");
                     	            							
 
@@ -2731,153 +2611,33 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     	            }
                     	            break;
                     	        case 2 :
-                    	            // InternalPds16asmParser.g:957:6: ( ( (lv_number_5_1= RULE_INT | lv_number_5_2= RULE_HEX | lv_number_5_3= RULE_OCT | lv_number_5_4= RULE_BIN | lv_number_5_5= RULE_CHAR ) ) )
+                    	            // InternalPds16asmParser.g:884:6: ( (lv_numbers_5_0= ruleNumber ) )
                     	            {
-                    	            // InternalPds16asmParser.g:957:6: ( ( (lv_number_5_1= RULE_INT | lv_number_5_2= RULE_HEX | lv_number_5_3= RULE_OCT | lv_number_5_4= RULE_BIN | lv_number_5_5= RULE_CHAR ) ) )
-                    	            // InternalPds16asmParser.g:958:7: ( (lv_number_5_1= RULE_INT | lv_number_5_2= RULE_HEX | lv_number_5_3= RULE_OCT | lv_number_5_4= RULE_BIN | lv_number_5_5= RULE_CHAR ) )
+                    	            // InternalPds16asmParser.g:884:6: ( (lv_numbers_5_0= ruleNumber ) )
+                    	            // InternalPds16asmParser.g:885:7: (lv_numbers_5_0= ruleNumber )
                     	            {
-                    	            // InternalPds16asmParser.g:958:7: ( (lv_number_5_1= RULE_INT | lv_number_5_2= RULE_HEX | lv_number_5_3= RULE_OCT | lv_number_5_4= RULE_BIN | lv_number_5_5= RULE_CHAR ) )
-                    	            // InternalPds16asmParser.g:959:8: (lv_number_5_1= RULE_INT | lv_number_5_2= RULE_HEX | lv_number_5_3= RULE_OCT | lv_number_5_4= RULE_BIN | lv_number_5_5= RULE_CHAR )
+                    	            // InternalPds16asmParser.g:885:7: (lv_numbers_5_0= ruleNumber )
+                    	            // InternalPds16asmParser.g:886:8: lv_numbers_5_0= ruleNumber
                     	            {
-                    	            // InternalPds16asmParser.g:959:8: (lv_number_5_1= RULE_INT | lv_number_5_2= RULE_HEX | lv_number_5_3= RULE_OCT | lv_number_5_4= RULE_BIN | lv_number_5_5= RULE_CHAR )
-                    	            int alt15=5;
-                    	            switch ( input.LA(1) ) {
-                    	            case RULE_INT:
-                    	                {
-                    	                alt15=1;
-                    	                }
-                    	                break;
-                    	            case RULE_HEX:
-                    	                {
-                    	                alt15=2;
-                    	                }
-                    	                break;
-                    	            case RULE_OCT:
-                    	                {
-                    	                alt15=3;
-                    	                }
-                    	                break;
-                    	            case RULE_BIN:
-                    	                {
-                    	                alt15=4;
-                    	                }
-                    	                break;
-                    	            case RULE_CHAR:
-                    	                {
-                    	                alt15=5;
-                    	                }
-                    	                break;
-                    	            default:
-                    	                NoViableAltException nvae =
-                    	                    new NoViableAltException("", 15, 0, input);
 
-                    	                throw nvae;
-                    	            }
+                    	            								newCompositeNode(grammarAccess.getWordAccess().getNumbersNumberParserRuleCall_1_1_1_1_0());
+                    	            							
+                    	            pushFollow(FOLLOW_6);
+                    	            lv_numbers_5_0=ruleNumber();
 
-                    	            switch (alt15) {
-                    	                case 1 :
-                    	                    // InternalPds16asmParser.g:960:9: lv_number_5_1= RULE_INT
-                    	                    {
-                    	                    lv_number_5_1=(Token)match(input,RULE_INT,FOLLOW_8); 
+                    	            state._fsp--;
 
-                    	                    									newLeafNode(lv_number_5_1, grammarAccess.getWordAccess().getNumberINTTerminalRuleCall_1_1_1_1_0_0());
-                    	                    								
 
-                    	                    									if (current==null) {
-                    	                    										current = createModelElement(grammarAccess.getWordRule());
-                    	                    									}
-                    	                    									addWithLastConsumed(
-                    	                    										current,
-                    	                    										"number",
-                    	                    										lv_number_5_1,
-                    	                    										"org.pds16.pds16asm.Pds16asm.INT");
-                    	                    								
-
-                    	                    }
-                    	                    break;
-                    	                case 2 :
-                    	                    // InternalPds16asmParser.g:975:9: lv_number_5_2= RULE_HEX
-                    	                    {
-                    	                    lv_number_5_2=(Token)match(input,RULE_HEX,FOLLOW_8); 
-
-                    	                    									newLeafNode(lv_number_5_2, grammarAccess.getWordAccess().getNumberHEXTerminalRuleCall_1_1_1_1_0_1());
-                    	                    								
-
-                    	                    									if (current==null) {
-                    	                    										current = createModelElement(grammarAccess.getWordRule());
-                    	                    									}
-                    	                    									addWithLastConsumed(
-                    	                    										current,
-                    	                    										"number",
-                    	                    										lv_number_5_2,
-                    	                    										"org.pds16.pds16asm.Pds16asm.HEX");
-                    	                    								
-
-                    	                    }
-                    	                    break;
-                    	                case 3 :
-                    	                    // InternalPds16asmParser.g:990:9: lv_number_5_3= RULE_OCT
-                    	                    {
-                    	                    lv_number_5_3=(Token)match(input,RULE_OCT,FOLLOW_8); 
-
-                    	                    									newLeafNode(lv_number_5_3, grammarAccess.getWordAccess().getNumberOCTTerminalRuleCall_1_1_1_1_0_2());
-                    	                    								
-
-                    	                    									if (current==null) {
-                    	                    										current = createModelElement(grammarAccess.getWordRule());
-                    	                    									}
-                    	                    									addWithLastConsumed(
-                    	                    										current,
-                    	                    										"number",
-                    	                    										lv_number_5_3,
-                    	                    										"org.pds16.pds16asm.Pds16asm.OCT");
-                    	                    								
-
-                    	                    }
-                    	                    break;
-                    	                case 4 :
-                    	                    // InternalPds16asmParser.g:1005:9: lv_number_5_4= RULE_BIN
-                    	                    {
-                    	                    lv_number_5_4=(Token)match(input,RULE_BIN,FOLLOW_8); 
-
-                    	                    									newLeafNode(lv_number_5_4, grammarAccess.getWordAccess().getNumberBINTerminalRuleCall_1_1_1_1_0_3());
-                    	                    								
-
-                    	                    									if (current==null) {
-                    	                    										current = createModelElement(grammarAccess.getWordRule());
-                    	                    									}
-                    	                    									addWithLastConsumed(
-                    	                    										current,
-                    	                    										"number",
-                    	                    										lv_number_5_4,
-                    	                    										"org.pds16.pds16asm.Pds16asm.BIN");
-                    	                    								
-
-                    	                    }
-                    	                    break;
-                    	                case 5 :
-                    	                    // InternalPds16asmParser.g:1020:9: lv_number_5_5= RULE_CHAR
-                    	                    {
-                    	                    lv_number_5_5=(Token)match(input,RULE_CHAR,FOLLOW_8); 
-
-                    	                    									newLeafNode(lv_number_5_5, grammarAccess.getWordAccess().getNumberCHARTerminalRuleCall_1_1_1_1_0_4());
-                    	                    								
-
-                    	                    									if (current==null) {
-                    	                    										current = createModelElement(grammarAccess.getWordRule());
-                    	                    									}
-                    	                    									addWithLastConsumed(
-                    	                    										current,
-                    	                    										"number",
-                    	                    										lv_number_5_5,
-                    	                    										"org.pds16.pds16asm.Pds16asm.CHAR");
-                    	                    								
-
-                    	                    }
-                    	                    break;
-
-                    	            }
-
+                    	            								if (current==null) {
+                    	            									current = createModelElementForParent(grammarAccess.getWordRule());
+                    	            								}
+                    	            								add(
+                    	            									current,
+                    	            									"numbers",
+                    	            									lv_numbers_5_0,
+                    	            									"org.pds16.pds16asm.Pds16asm.Number");
+                    	            								afterParserOrEnumRuleCall();
+                    	            							
 
                     	            }
 
@@ -2895,7 +2655,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop17;
+                    	    break loop16;
                         }
                     } while (true);
 
@@ -2928,7 +2688,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSpace"
-    // InternalPds16asmParser.g:1044:1: entryRuleSpace returns [EObject current=null] : iv_ruleSpace= ruleSpace EOF ;
+    // InternalPds16asmParser.g:910:1: entryRuleSpace returns [EObject current=null] : iv_ruleSpace= ruleSpace EOF ;
     public final EObject entryRuleSpace() throws RecognitionException {
         EObject current = null;
 
@@ -2936,8 +2696,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:1044:46: (iv_ruleSpace= ruleSpace EOF )
-            // InternalPds16asmParser.g:1045:2: iv_ruleSpace= ruleSpace EOF
+            // InternalPds16asmParser.g:910:46: (iv_ruleSpace= ruleSpace EOF )
+            // InternalPds16asmParser.g:911:2: iv_ruleSpace= ruleSpace EOF
             {
              newCompositeNode(grammarAccess.getSpaceRule()); 
             pushFollow(FOLLOW_1);
@@ -2964,348 +2724,102 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSpace"
-    // InternalPds16asmParser.g:1051:1: ruleSpace returns [EObject current=null] : (otherlv_0= Space ( ( (lv_size_1_1= RULE_INT | lv_size_1_2= RULE_HEX | lv_size_1_3= RULE_OCT | lv_size_1_4= RULE_BIN | lv_size_1_5= RULE_CHAR ) ) ) (otherlv_2= Comma ( ( (lv_byteValeu_3_1= RULE_INT | lv_byteValeu_3_2= RULE_HEX | lv_byteValeu_3_3= RULE_OCT | lv_byteValeu_3_4= RULE_BIN | lv_byteValeu_3_5= RULE_CHAR ) ) ) )? ) ;
+    // InternalPds16asmParser.g:917:1: ruleSpace returns [EObject current=null] : (otherlv_0= Space ( (lv_size_1_0= ruleNumber ) ) (otherlv_2= Comma ( (lv_byteValue_3_0= ruleNumber ) ) )? ) ;
     public final EObject ruleSpace() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
-        Token lv_size_1_1=null;
-        Token lv_size_1_2=null;
-        Token lv_size_1_3=null;
-        Token lv_size_1_4=null;
-        Token lv_size_1_5=null;
         Token otherlv_2=null;
-        Token lv_byteValeu_3_1=null;
-        Token lv_byteValeu_3_2=null;
-        Token lv_byteValeu_3_3=null;
-        Token lv_byteValeu_3_4=null;
-        Token lv_byteValeu_3_5=null;
+        EObject lv_size_1_0 = null;
+
+        EObject lv_byteValue_3_0 = null;
+
 
 
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:1057:2: ( (otherlv_0= Space ( ( (lv_size_1_1= RULE_INT | lv_size_1_2= RULE_HEX | lv_size_1_3= RULE_OCT | lv_size_1_4= RULE_BIN | lv_size_1_5= RULE_CHAR ) ) ) (otherlv_2= Comma ( ( (lv_byteValeu_3_1= RULE_INT | lv_byteValeu_3_2= RULE_HEX | lv_byteValeu_3_3= RULE_OCT | lv_byteValeu_3_4= RULE_BIN | lv_byteValeu_3_5= RULE_CHAR ) ) ) )? ) )
-            // InternalPds16asmParser.g:1058:2: (otherlv_0= Space ( ( (lv_size_1_1= RULE_INT | lv_size_1_2= RULE_HEX | lv_size_1_3= RULE_OCT | lv_size_1_4= RULE_BIN | lv_size_1_5= RULE_CHAR ) ) ) (otherlv_2= Comma ( ( (lv_byteValeu_3_1= RULE_INT | lv_byteValeu_3_2= RULE_HEX | lv_byteValeu_3_3= RULE_OCT | lv_byteValeu_3_4= RULE_BIN | lv_byteValeu_3_5= RULE_CHAR ) ) ) )? )
+            // InternalPds16asmParser.g:923:2: ( (otherlv_0= Space ( (lv_size_1_0= ruleNumber ) ) (otherlv_2= Comma ( (lv_byteValue_3_0= ruleNumber ) ) )? ) )
+            // InternalPds16asmParser.g:924:2: (otherlv_0= Space ( (lv_size_1_0= ruleNumber ) ) (otherlv_2= Comma ( (lv_byteValue_3_0= ruleNumber ) ) )? )
             {
-            // InternalPds16asmParser.g:1058:2: (otherlv_0= Space ( ( (lv_size_1_1= RULE_INT | lv_size_1_2= RULE_HEX | lv_size_1_3= RULE_OCT | lv_size_1_4= RULE_BIN | lv_size_1_5= RULE_CHAR ) ) ) (otherlv_2= Comma ( ( (lv_byteValeu_3_1= RULE_INT | lv_byteValeu_3_2= RULE_HEX | lv_byteValeu_3_3= RULE_OCT | lv_byteValeu_3_4= RULE_BIN | lv_byteValeu_3_5= RULE_CHAR ) ) ) )? )
-            // InternalPds16asmParser.g:1059:3: otherlv_0= Space ( ( (lv_size_1_1= RULE_INT | lv_size_1_2= RULE_HEX | lv_size_1_3= RULE_OCT | lv_size_1_4= RULE_BIN | lv_size_1_5= RULE_CHAR ) ) ) (otherlv_2= Comma ( ( (lv_byteValeu_3_1= RULE_INT | lv_byteValeu_3_2= RULE_HEX | lv_byteValeu_3_3= RULE_OCT | lv_byteValeu_3_4= RULE_BIN | lv_byteValeu_3_5= RULE_CHAR ) ) ) )?
+            // InternalPds16asmParser.g:924:2: (otherlv_0= Space ( (lv_size_1_0= ruleNumber ) ) (otherlv_2= Comma ( (lv_byteValue_3_0= ruleNumber ) ) )? )
+            // InternalPds16asmParser.g:925:3: otherlv_0= Space ( (lv_size_1_0= ruleNumber ) ) (otherlv_2= Comma ( (lv_byteValue_3_0= ruleNumber ) ) )?
             {
-            otherlv_0=(Token)match(input,Space,FOLLOW_10); 
+            otherlv_0=(Token)match(input,Space,FOLLOW_12); 
 
             			newLeafNode(otherlv_0, grammarAccess.getSpaceAccess().getSpaceKeyword_0());
             		
-            // InternalPds16asmParser.g:1063:3: ( ( (lv_size_1_1= RULE_INT | lv_size_1_2= RULE_HEX | lv_size_1_3= RULE_OCT | lv_size_1_4= RULE_BIN | lv_size_1_5= RULE_CHAR ) ) )
-            // InternalPds16asmParser.g:1064:4: ( (lv_size_1_1= RULE_INT | lv_size_1_2= RULE_HEX | lv_size_1_3= RULE_OCT | lv_size_1_4= RULE_BIN | lv_size_1_5= RULE_CHAR ) )
+            // InternalPds16asmParser.g:929:3: ( (lv_size_1_0= ruleNumber ) )
+            // InternalPds16asmParser.g:930:4: (lv_size_1_0= ruleNumber )
             {
-            // InternalPds16asmParser.g:1064:4: ( (lv_size_1_1= RULE_INT | lv_size_1_2= RULE_HEX | lv_size_1_3= RULE_OCT | lv_size_1_4= RULE_BIN | lv_size_1_5= RULE_CHAR ) )
-            // InternalPds16asmParser.g:1065:5: (lv_size_1_1= RULE_INT | lv_size_1_2= RULE_HEX | lv_size_1_3= RULE_OCT | lv_size_1_4= RULE_BIN | lv_size_1_5= RULE_CHAR )
+            // InternalPds16asmParser.g:930:4: (lv_size_1_0= ruleNumber )
+            // InternalPds16asmParser.g:931:5: lv_size_1_0= ruleNumber
             {
-            // InternalPds16asmParser.g:1065:5: (lv_size_1_1= RULE_INT | lv_size_1_2= RULE_HEX | lv_size_1_3= RULE_OCT | lv_size_1_4= RULE_BIN | lv_size_1_5= RULE_CHAR )
-            int alt19=5;
-            switch ( input.LA(1) ) {
-            case RULE_INT:
-                {
-                alt19=1;
-                }
-                break;
-            case RULE_HEX:
-                {
-                alt19=2;
-                }
-                break;
-            case RULE_OCT:
-                {
-                alt19=3;
-                }
-                break;
-            case RULE_BIN:
-                {
-                alt19=4;
-                }
-                break;
-            case RULE_CHAR:
-                {
-                alt19=5;
-                }
-                break;
-            default:
-                NoViableAltException nvae =
-                    new NoViableAltException("", 19, 0, input);
 
-                throw nvae;
+            					newCompositeNode(grammarAccess.getSpaceAccess().getSizeNumberParserRuleCall_1_0());
+            				
+            pushFollow(FOLLOW_6);
+            lv_size_1_0=ruleNumber();
+
+            state._fsp--;
+
+
+            					if (current==null) {
+            						current = createModelElementForParent(grammarAccess.getSpaceRule());
+            					}
+            					set(
+            						current,
+            						"size",
+            						lv_size_1_0,
+            						"org.pds16.pds16asm.Pds16asm.Number");
+            					afterParserOrEnumRuleCall();
+            				
+
             }
 
-            switch (alt19) {
+
+            }
+
+            // InternalPds16asmParser.g:948:3: (otherlv_2= Comma ( (lv_byteValue_3_0= ruleNumber ) ) )?
+            int alt18=2;
+            int LA18_0 = input.LA(1);
+
+            if ( (LA18_0==Comma) ) {
+                alt18=1;
+            }
+            switch (alt18) {
                 case 1 :
-                    // InternalPds16asmParser.g:1066:6: lv_size_1_1= RULE_INT
+                    // InternalPds16asmParser.g:949:4: otherlv_2= Comma ( (lv_byteValue_3_0= ruleNumber ) )
                     {
-                    lv_size_1_1=(Token)match(input,RULE_INT,FOLLOW_8); 
-
-                    						newLeafNode(lv_size_1_1, grammarAccess.getSpaceAccess().getSizeINTTerminalRuleCall_1_0_0());
-                    					
-
-                    						if (current==null) {
-                    							current = createModelElement(grammarAccess.getSpaceRule());
-                    						}
-                    						setWithLastConsumed(
-                    							current,
-                    							"size",
-                    							lv_size_1_1,
-                    							"org.pds16.pds16asm.Pds16asm.INT");
-                    					
-
-                    }
-                    break;
-                case 2 :
-                    // InternalPds16asmParser.g:1081:6: lv_size_1_2= RULE_HEX
-                    {
-                    lv_size_1_2=(Token)match(input,RULE_HEX,FOLLOW_8); 
-
-                    						newLeafNode(lv_size_1_2, grammarAccess.getSpaceAccess().getSizeHEXTerminalRuleCall_1_0_1());
-                    					
-
-                    						if (current==null) {
-                    							current = createModelElement(grammarAccess.getSpaceRule());
-                    						}
-                    						setWithLastConsumed(
-                    							current,
-                    							"size",
-                    							lv_size_1_2,
-                    							"org.pds16.pds16asm.Pds16asm.HEX");
-                    					
-
-                    }
-                    break;
-                case 3 :
-                    // InternalPds16asmParser.g:1096:6: lv_size_1_3= RULE_OCT
-                    {
-                    lv_size_1_3=(Token)match(input,RULE_OCT,FOLLOW_8); 
-
-                    						newLeafNode(lv_size_1_3, grammarAccess.getSpaceAccess().getSizeOCTTerminalRuleCall_1_0_2());
-                    					
-
-                    						if (current==null) {
-                    							current = createModelElement(grammarAccess.getSpaceRule());
-                    						}
-                    						setWithLastConsumed(
-                    							current,
-                    							"size",
-                    							lv_size_1_3,
-                    							"org.pds16.pds16asm.Pds16asm.OCT");
-                    					
-
-                    }
-                    break;
-                case 4 :
-                    // InternalPds16asmParser.g:1111:6: lv_size_1_4= RULE_BIN
-                    {
-                    lv_size_1_4=(Token)match(input,RULE_BIN,FOLLOW_8); 
-
-                    						newLeafNode(lv_size_1_4, grammarAccess.getSpaceAccess().getSizeBINTerminalRuleCall_1_0_3());
-                    					
-
-                    						if (current==null) {
-                    							current = createModelElement(grammarAccess.getSpaceRule());
-                    						}
-                    						setWithLastConsumed(
-                    							current,
-                    							"size",
-                    							lv_size_1_4,
-                    							"org.pds16.pds16asm.Pds16asm.BIN");
-                    					
-
-                    }
-                    break;
-                case 5 :
-                    // InternalPds16asmParser.g:1126:6: lv_size_1_5= RULE_CHAR
-                    {
-                    lv_size_1_5=(Token)match(input,RULE_CHAR,FOLLOW_8); 
-
-                    						newLeafNode(lv_size_1_5, grammarAccess.getSpaceAccess().getSizeCHARTerminalRuleCall_1_0_4());
-                    					
-
-                    						if (current==null) {
-                    							current = createModelElement(grammarAccess.getSpaceRule());
-                    						}
-                    						setWithLastConsumed(
-                    							current,
-                    							"size",
-                    							lv_size_1_5,
-                    							"org.pds16.pds16asm.Pds16asm.CHAR");
-                    					
-
-                    }
-                    break;
-
-            }
-
-
-            }
-
-
-            }
-
-            // InternalPds16asmParser.g:1143:3: (otherlv_2= Comma ( ( (lv_byteValeu_3_1= RULE_INT | lv_byteValeu_3_2= RULE_HEX | lv_byteValeu_3_3= RULE_OCT | lv_byteValeu_3_4= RULE_BIN | lv_byteValeu_3_5= RULE_CHAR ) ) ) )?
-            int alt21=2;
-            int LA21_0 = input.LA(1);
-
-            if ( (LA21_0==Comma) ) {
-                alt21=1;
-            }
-            switch (alt21) {
-                case 1 :
-                    // InternalPds16asmParser.g:1144:4: otherlv_2= Comma ( ( (lv_byteValeu_3_1= RULE_INT | lv_byteValeu_3_2= RULE_HEX | lv_byteValeu_3_3= RULE_OCT | lv_byteValeu_3_4= RULE_BIN | lv_byteValeu_3_5= RULE_CHAR ) ) )
-                    {
-                    otherlv_2=(Token)match(input,Comma,FOLLOW_10); 
+                    otherlv_2=(Token)match(input,Comma,FOLLOW_12); 
 
                     				newLeafNode(otherlv_2, grammarAccess.getSpaceAccess().getCommaKeyword_2_0());
                     			
-                    // InternalPds16asmParser.g:1148:4: ( ( (lv_byteValeu_3_1= RULE_INT | lv_byteValeu_3_2= RULE_HEX | lv_byteValeu_3_3= RULE_OCT | lv_byteValeu_3_4= RULE_BIN | lv_byteValeu_3_5= RULE_CHAR ) ) )
-                    // InternalPds16asmParser.g:1149:5: ( (lv_byteValeu_3_1= RULE_INT | lv_byteValeu_3_2= RULE_HEX | lv_byteValeu_3_3= RULE_OCT | lv_byteValeu_3_4= RULE_BIN | lv_byteValeu_3_5= RULE_CHAR ) )
+                    // InternalPds16asmParser.g:953:4: ( (lv_byteValue_3_0= ruleNumber ) )
+                    // InternalPds16asmParser.g:954:5: (lv_byteValue_3_0= ruleNumber )
                     {
-                    // InternalPds16asmParser.g:1149:5: ( (lv_byteValeu_3_1= RULE_INT | lv_byteValeu_3_2= RULE_HEX | lv_byteValeu_3_3= RULE_OCT | lv_byteValeu_3_4= RULE_BIN | lv_byteValeu_3_5= RULE_CHAR ) )
-                    // InternalPds16asmParser.g:1150:6: (lv_byteValeu_3_1= RULE_INT | lv_byteValeu_3_2= RULE_HEX | lv_byteValeu_3_3= RULE_OCT | lv_byteValeu_3_4= RULE_BIN | lv_byteValeu_3_5= RULE_CHAR )
+                    // InternalPds16asmParser.g:954:5: (lv_byteValue_3_0= ruleNumber )
+                    // InternalPds16asmParser.g:955:6: lv_byteValue_3_0= ruleNumber
                     {
-                    // InternalPds16asmParser.g:1150:6: (lv_byteValeu_3_1= RULE_INT | lv_byteValeu_3_2= RULE_HEX | lv_byteValeu_3_3= RULE_OCT | lv_byteValeu_3_4= RULE_BIN | lv_byteValeu_3_5= RULE_CHAR )
-                    int alt20=5;
-                    switch ( input.LA(1) ) {
-                    case RULE_INT:
-                        {
-                        alt20=1;
-                        }
-                        break;
-                    case RULE_HEX:
-                        {
-                        alt20=2;
-                        }
-                        break;
-                    case RULE_OCT:
-                        {
-                        alt20=3;
-                        }
-                        break;
-                    case RULE_BIN:
-                        {
-                        alt20=4;
-                        }
-                        break;
-                    case RULE_CHAR:
-                        {
-                        alt20=5;
-                        }
-                        break;
-                    default:
-                        NoViableAltException nvae =
-                            new NoViableAltException("", 20, 0, input);
 
-                        throw nvae;
-                    }
+                    						newCompositeNode(grammarAccess.getSpaceAccess().getByteValueNumberParserRuleCall_2_1_0());
+                    					
+                    pushFollow(FOLLOW_2);
+                    lv_byteValue_3_0=ruleNumber();
 
-                    switch (alt20) {
-                        case 1 :
-                            // InternalPds16asmParser.g:1151:7: lv_byteValeu_3_1= RULE_INT
-                            {
-                            lv_byteValeu_3_1=(Token)match(input,RULE_INT,FOLLOW_2); 
+                    state._fsp--;
 
-                            							newLeafNode(lv_byteValeu_3_1, grammarAccess.getSpaceAccess().getByteValeuINTTerminalRuleCall_2_1_0_0());
-                            						
 
-                            							if (current==null) {
-                            								current = createModelElement(grammarAccess.getSpaceRule());
-                            							}
-                            							setWithLastConsumed(
-                            								current,
-                            								"byteValeu",
-                            								lv_byteValeu_3_1,
-                            								"org.pds16.pds16asm.Pds16asm.INT");
-                            						
-
-                            }
-                            break;
-                        case 2 :
-                            // InternalPds16asmParser.g:1166:7: lv_byteValeu_3_2= RULE_HEX
-                            {
-                            lv_byteValeu_3_2=(Token)match(input,RULE_HEX,FOLLOW_2); 
-
-                            							newLeafNode(lv_byteValeu_3_2, grammarAccess.getSpaceAccess().getByteValeuHEXTerminalRuleCall_2_1_0_1());
-                            						
-
-                            							if (current==null) {
-                            								current = createModelElement(grammarAccess.getSpaceRule());
-                            							}
-                            							setWithLastConsumed(
-                            								current,
-                            								"byteValeu",
-                            								lv_byteValeu_3_2,
-                            								"org.pds16.pds16asm.Pds16asm.HEX");
-                            						
-
-                            }
-                            break;
-                        case 3 :
-                            // InternalPds16asmParser.g:1181:7: lv_byteValeu_3_3= RULE_OCT
-                            {
-                            lv_byteValeu_3_3=(Token)match(input,RULE_OCT,FOLLOW_2); 
-
-                            							newLeafNode(lv_byteValeu_3_3, grammarAccess.getSpaceAccess().getByteValeuOCTTerminalRuleCall_2_1_0_2());
-                            						
-
-                            							if (current==null) {
-                            								current = createModelElement(grammarAccess.getSpaceRule());
-                            							}
-                            							setWithLastConsumed(
-                            								current,
-                            								"byteValeu",
-                            								lv_byteValeu_3_3,
-                            								"org.pds16.pds16asm.Pds16asm.OCT");
-                            						
-
-                            }
-                            break;
-                        case 4 :
-                            // InternalPds16asmParser.g:1196:7: lv_byteValeu_3_4= RULE_BIN
-                            {
-                            lv_byteValeu_3_4=(Token)match(input,RULE_BIN,FOLLOW_2); 
-
-                            							newLeafNode(lv_byteValeu_3_4, grammarAccess.getSpaceAccess().getByteValeuBINTerminalRuleCall_2_1_0_3());
-                            						
-
-                            							if (current==null) {
-                            								current = createModelElement(grammarAccess.getSpaceRule());
-                            							}
-                            							setWithLastConsumed(
-                            								current,
-                            								"byteValeu",
-                            								lv_byteValeu_3_4,
-                            								"org.pds16.pds16asm.Pds16asm.BIN");
-                            						
-
-                            }
-                            break;
-                        case 5 :
-                            // InternalPds16asmParser.g:1211:7: lv_byteValeu_3_5= RULE_CHAR
-                            {
-                            lv_byteValeu_3_5=(Token)match(input,RULE_CHAR,FOLLOW_2); 
-
-                            							newLeafNode(lv_byteValeu_3_5, grammarAccess.getSpaceAccess().getByteValeuCHARTerminalRuleCall_2_1_0_4());
-                            						
-
-                            							if (current==null) {
-                            								current = createModelElement(grammarAccess.getSpaceRule());
-                            							}
-                            							setWithLastConsumed(
-                            								current,
-                            								"byteValeu",
-                            								lv_byteValeu_3_5,
-                            								"org.pds16.pds16asm.Pds16asm.CHAR");
-                            						
-
-                            }
-                            break;
-
-                    }
-
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getSpaceRule());
+                    						}
+                    						set(
+                    							current,
+                    							"byteValue",
+                    							lv_byteValue_3_0,
+                    							"org.pds16.pds16asm.Pds16asm.Number");
+                    						afterParserOrEnumRuleCall();
+                    					
 
                     }
 
@@ -3341,7 +2855,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSet"
-    // InternalPds16asmParser.g:1233:1: entryRuleSet returns [EObject current=null] : iv_ruleSet= ruleSet EOF ;
+    // InternalPds16asmParser.g:977:1: entryRuleSet returns [EObject current=null] : iv_ruleSet= ruleSet EOF ;
     public final EObject entryRuleSet() throws RecognitionException {
         EObject current = null;
 
@@ -3349,8 +2863,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:1233:44: (iv_ruleSet= ruleSet EOF )
-            // InternalPds16asmParser.g:1234:2: iv_ruleSet= ruleSet EOF
+            // InternalPds16asmParser.g:977:44: (iv_ruleSet= ruleSet EOF )
+            // InternalPds16asmParser.g:978:2: iv_ruleSet= ruleSet EOF
             {
              newCompositeNode(grammarAccess.getSetRule()); 
             pushFollow(FOLLOW_1);
@@ -3377,7 +2891,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSet"
-    // InternalPds16asmParser.g:1240:1: ruleSet returns [EObject current=null] : (otherlv_0= Set ( (lv_value1_1_0= RULE_ID ) ) otherlv_2= Comma ( (lv_value2_3_0= ruleExpression ) ) ) ;
+    // InternalPds16asmParser.g:984:1: ruleSet returns [EObject current=null] : (otherlv_0= Set ( (lv_value1_1_0= RULE_ID ) ) otherlv_2= Comma ( (lv_value2_3_0= ruleExpression ) ) ) ;
     public final EObject ruleSet() throws RecognitionException {
         EObject current = null;
 
@@ -3391,23 +2905,23 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:1246:2: ( (otherlv_0= Set ( (lv_value1_1_0= RULE_ID ) ) otherlv_2= Comma ( (lv_value2_3_0= ruleExpression ) ) ) )
-            // InternalPds16asmParser.g:1247:2: (otherlv_0= Set ( (lv_value1_1_0= RULE_ID ) ) otherlv_2= Comma ( (lv_value2_3_0= ruleExpression ) ) )
+            // InternalPds16asmParser.g:990:2: ( (otherlv_0= Set ( (lv_value1_1_0= RULE_ID ) ) otherlv_2= Comma ( (lv_value2_3_0= ruleExpression ) ) ) )
+            // InternalPds16asmParser.g:991:2: (otherlv_0= Set ( (lv_value1_1_0= RULE_ID ) ) otherlv_2= Comma ( (lv_value2_3_0= ruleExpression ) ) )
             {
-            // InternalPds16asmParser.g:1247:2: (otherlv_0= Set ( (lv_value1_1_0= RULE_ID ) ) otherlv_2= Comma ( (lv_value2_3_0= ruleExpression ) ) )
-            // InternalPds16asmParser.g:1248:3: otherlv_0= Set ( (lv_value1_1_0= RULE_ID ) ) otherlv_2= Comma ( (lv_value2_3_0= ruleExpression ) )
+            // InternalPds16asmParser.g:991:2: (otherlv_0= Set ( (lv_value1_1_0= RULE_ID ) ) otherlv_2= Comma ( (lv_value2_3_0= ruleExpression ) ) )
+            // InternalPds16asmParser.g:992:3: otherlv_0= Set ( (lv_value1_1_0= RULE_ID ) ) otherlv_2= Comma ( (lv_value2_3_0= ruleExpression ) )
             {
             otherlv_0=(Token)match(input,Set,FOLLOW_13); 
 
             			newLeafNode(otherlv_0, grammarAccess.getSetAccess().getSetKeyword_0());
             		
-            // InternalPds16asmParser.g:1252:3: ( (lv_value1_1_0= RULE_ID ) )
-            // InternalPds16asmParser.g:1253:4: (lv_value1_1_0= RULE_ID )
+            // InternalPds16asmParser.g:996:3: ( (lv_value1_1_0= RULE_ID ) )
+            // InternalPds16asmParser.g:997:4: (lv_value1_1_0= RULE_ID )
             {
-            // InternalPds16asmParser.g:1253:4: (lv_value1_1_0= RULE_ID )
-            // InternalPds16asmParser.g:1254:5: lv_value1_1_0= RULE_ID
+            // InternalPds16asmParser.g:997:4: (lv_value1_1_0= RULE_ID )
+            // InternalPds16asmParser.g:998:5: lv_value1_1_0= RULE_ID
             {
-            lv_value1_1_0=(Token)match(input,RULE_ID,FOLLOW_6); 
+            lv_value1_1_0=(Token)match(input,RULE_ID,FOLLOW_14); 
 
             					newLeafNode(lv_value1_1_0, grammarAccess.getSetAccess().getValue1IDTerminalRuleCall_1_0());
             				
@@ -3427,15 +2941,15 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,Comma,FOLLOW_12); 
+            otherlv_2=(Token)match(input,Comma,FOLLOW_11); 
 
             			newLeafNode(otherlv_2, grammarAccess.getSetAccess().getCommaKeyword_2());
             		
-            // InternalPds16asmParser.g:1274:3: ( (lv_value2_3_0= ruleExpression ) )
-            // InternalPds16asmParser.g:1275:4: (lv_value2_3_0= ruleExpression )
+            // InternalPds16asmParser.g:1018:3: ( (lv_value2_3_0= ruleExpression ) )
+            // InternalPds16asmParser.g:1019:4: (lv_value2_3_0= ruleExpression )
             {
-            // InternalPds16asmParser.g:1275:4: (lv_value2_3_0= ruleExpression )
-            // InternalPds16asmParser.g:1276:5: lv_value2_3_0= ruleExpression
+            // InternalPds16asmParser.g:1019:4: (lv_value2_3_0= ruleExpression )
+            // InternalPds16asmParser.g:1020:5: lv_value2_3_0= ruleExpression
             {
 
             					newCompositeNode(grammarAccess.getSetAccess().getValue2ExpressionParserRuleCall_3_0());
@@ -3485,7 +2999,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSection"
-    // InternalPds16asmParser.g:1297:1: entryRuleSection returns [EObject current=null] : iv_ruleSection= ruleSection EOF ;
+    // InternalPds16asmParser.g:1041:1: entryRuleSection returns [EObject current=null] : iv_ruleSection= ruleSection EOF ;
     public final EObject entryRuleSection() throws RecognitionException {
         EObject current = null;
 
@@ -3493,8 +3007,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:1297:48: (iv_ruleSection= ruleSection EOF )
-            // InternalPds16asmParser.g:1298:2: iv_ruleSection= ruleSection EOF
+            // InternalPds16asmParser.g:1041:48: (iv_ruleSection= ruleSection EOF )
+            // InternalPds16asmParser.g:1042:2: iv_ruleSection= ruleSection EOF
             {
              newCompositeNode(grammarAccess.getSectionRule()); 
             pushFollow(FOLLOW_1);
@@ -3521,7 +3035,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSection"
-    // InternalPds16asmParser.g:1304:1: ruleSection returns [EObject current=null] : (otherlv_0= Section ( (lv_value_1_0= RULE_ID ) ) ) ;
+    // InternalPds16asmParser.g:1048:1: ruleSection returns [EObject current=null] : (otherlv_0= Section ( (lv_value_1_0= RULE_ID ) ) ) ;
     public final EObject ruleSection() throws RecognitionException {
         EObject current = null;
 
@@ -3532,21 +3046,21 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:1310:2: ( (otherlv_0= Section ( (lv_value_1_0= RULE_ID ) ) ) )
-            // InternalPds16asmParser.g:1311:2: (otherlv_0= Section ( (lv_value_1_0= RULE_ID ) ) )
+            // InternalPds16asmParser.g:1054:2: ( (otherlv_0= Section ( (lv_value_1_0= RULE_ID ) ) ) )
+            // InternalPds16asmParser.g:1055:2: (otherlv_0= Section ( (lv_value_1_0= RULE_ID ) ) )
             {
-            // InternalPds16asmParser.g:1311:2: (otherlv_0= Section ( (lv_value_1_0= RULE_ID ) ) )
-            // InternalPds16asmParser.g:1312:3: otherlv_0= Section ( (lv_value_1_0= RULE_ID ) )
+            // InternalPds16asmParser.g:1055:2: (otherlv_0= Section ( (lv_value_1_0= RULE_ID ) ) )
+            // InternalPds16asmParser.g:1056:3: otherlv_0= Section ( (lv_value_1_0= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,Section,FOLLOW_13); 
 
             			newLeafNode(otherlv_0, grammarAccess.getSectionAccess().getSectionKeyword_0());
             		
-            // InternalPds16asmParser.g:1316:3: ( (lv_value_1_0= RULE_ID ) )
-            // InternalPds16asmParser.g:1317:4: (lv_value_1_0= RULE_ID )
+            // InternalPds16asmParser.g:1060:3: ( (lv_value_1_0= RULE_ID ) )
+            // InternalPds16asmParser.g:1061:4: (lv_value_1_0= RULE_ID )
             {
-            // InternalPds16asmParser.g:1317:4: (lv_value_1_0= RULE_ID )
-            // InternalPds16asmParser.g:1318:5: lv_value_1_0= RULE_ID
+            // InternalPds16asmParser.g:1061:4: (lv_value_1_0= RULE_ID )
+            // InternalPds16asmParser.g:1062:5: lv_value_1_0= RULE_ID
             {
             lv_value_1_0=(Token)match(input,RULE_ID,FOLLOW_2); 
 
@@ -3591,7 +3105,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOrg"
-    // InternalPds16asmParser.g:1338:1: entryRuleOrg returns [EObject current=null] : iv_ruleOrg= ruleOrg EOF ;
+    // InternalPds16asmParser.g:1082:1: entryRuleOrg returns [EObject current=null] : iv_ruleOrg= ruleOrg EOF ;
     public final EObject entryRuleOrg() throws RecognitionException {
         EObject current = null;
 
@@ -3599,8 +3113,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:1338:44: (iv_ruleOrg= ruleOrg EOF )
-            // InternalPds16asmParser.g:1339:2: iv_ruleOrg= ruleOrg EOF
+            // InternalPds16asmParser.g:1082:44: (iv_ruleOrg= ruleOrg EOF )
+            // InternalPds16asmParser.g:1083:2: iv_ruleOrg= ruleOrg EOF
             {
              newCompositeNode(grammarAccess.getOrgRule()); 
             pushFollow(FOLLOW_1);
@@ -3627,7 +3141,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOrg"
-    // InternalPds16asmParser.g:1345:1: ruleOrg returns [EObject current=null] : (otherlv_0= Org this_Expression_1= ruleExpression ) ;
+    // InternalPds16asmParser.g:1089:1: ruleOrg returns [EObject current=null] : (otherlv_0= Org this_Expression_1= ruleExpression ) ;
     public final EObject ruleOrg() throws RecognitionException {
         EObject current = null;
 
@@ -3639,13 +3153,13 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:1351:2: ( (otherlv_0= Org this_Expression_1= ruleExpression ) )
-            // InternalPds16asmParser.g:1352:2: (otherlv_0= Org this_Expression_1= ruleExpression )
+            // InternalPds16asmParser.g:1095:2: ( (otherlv_0= Org this_Expression_1= ruleExpression ) )
+            // InternalPds16asmParser.g:1096:2: (otherlv_0= Org this_Expression_1= ruleExpression )
             {
-            // InternalPds16asmParser.g:1352:2: (otherlv_0= Org this_Expression_1= ruleExpression )
-            // InternalPds16asmParser.g:1353:3: otherlv_0= Org this_Expression_1= ruleExpression
+            // InternalPds16asmParser.g:1096:2: (otherlv_0= Org this_Expression_1= ruleExpression )
+            // InternalPds16asmParser.g:1097:3: otherlv_0= Org this_Expression_1= ruleExpression
             {
-            otherlv_0=(Token)match(input,Org,FOLLOW_12); 
+            otherlv_0=(Token)match(input,Org,FOLLOW_11); 
 
             			newLeafNode(otherlv_0, grammarAccess.getOrgAccess().getOrgKeyword_0());
             		
@@ -3684,7 +3198,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEqu"
-    // InternalPds16asmParser.g:1369:1: entryRuleEqu returns [EObject current=null] : iv_ruleEqu= ruleEqu EOF ;
+    // InternalPds16asmParser.g:1113:1: entryRuleEqu returns [EObject current=null] : iv_ruleEqu= ruleEqu EOF ;
     public final EObject entryRuleEqu() throws RecognitionException {
         EObject current = null;
 
@@ -3692,8 +3206,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:1369:44: (iv_ruleEqu= ruleEqu EOF )
-            // InternalPds16asmParser.g:1370:2: iv_ruleEqu= ruleEqu EOF
+            // InternalPds16asmParser.g:1113:44: (iv_ruleEqu= ruleEqu EOF )
+            // InternalPds16asmParser.g:1114:2: iv_ruleEqu= ruleEqu EOF
             {
              newCompositeNode(grammarAccess.getEquRule()); 
             pushFollow(FOLLOW_1);
@@ -3720,7 +3234,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEqu"
-    // InternalPds16asmParser.g:1376:1: ruleEqu returns [EObject current=null] : (otherlv_0= Equ this_ID_1= RULE_ID otherlv_2= Comma this_Expression_3= ruleExpression ) ;
+    // InternalPds16asmParser.g:1120:1: ruleEqu returns [EObject current=null] : (otherlv_0= Equ this_ID_1= RULE_ID otherlv_2= Comma this_Expression_3= ruleExpression ) ;
     public final EObject ruleEqu() throws RecognitionException {
         EObject current = null;
 
@@ -3734,21 +3248,21 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:1382:2: ( (otherlv_0= Equ this_ID_1= RULE_ID otherlv_2= Comma this_Expression_3= ruleExpression ) )
-            // InternalPds16asmParser.g:1383:2: (otherlv_0= Equ this_ID_1= RULE_ID otherlv_2= Comma this_Expression_3= ruleExpression )
+            // InternalPds16asmParser.g:1126:2: ( (otherlv_0= Equ this_ID_1= RULE_ID otherlv_2= Comma this_Expression_3= ruleExpression ) )
+            // InternalPds16asmParser.g:1127:2: (otherlv_0= Equ this_ID_1= RULE_ID otherlv_2= Comma this_Expression_3= ruleExpression )
             {
-            // InternalPds16asmParser.g:1383:2: (otherlv_0= Equ this_ID_1= RULE_ID otherlv_2= Comma this_Expression_3= ruleExpression )
-            // InternalPds16asmParser.g:1384:3: otherlv_0= Equ this_ID_1= RULE_ID otherlv_2= Comma this_Expression_3= ruleExpression
+            // InternalPds16asmParser.g:1127:2: (otherlv_0= Equ this_ID_1= RULE_ID otherlv_2= Comma this_Expression_3= ruleExpression )
+            // InternalPds16asmParser.g:1128:3: otherlv_0= Equ this_ID_1= RULE_ID otherlv_2= Comma this_Expression_3= ruleExpression
             {
             otherlv_0=(Token)match(input,Equ,FOLLOW_13); 
 
             			newLeafNode(otherlv_0, grammarAccess.getEquAccess().getEquKeyword_0());
             		
-            this_ID_1=(Token)match(input,RULE_ID,FOLLOW_6); 
+            this_ID_1=(Token)match(input,RULE_ID,FOLLOW_14); 
 
             			newLeafNode(this_ID_1, grammarAccess.getEquAccess().getIDTerminalRuleCall_1());
             		
-            otherlv_2=(Token)match(input,Comma,FOLLOW_12); 
+            otherlv_2=(Token)match(input,Comma,FOLLOW_11); 
 
             			newLeafNode(otherlv_2, grammarAccess.getEquAccess().getCommaKeyword_2());
             		
@@ -3787,7 +3301,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInstructions"
-    // InternalPds16asmParser.g:1408:1: entryRuleInstructions returns [EObject current=null] : iv_ruleInstructions= ruleInstructions EOF ;
+    // InternalPds16asmParser.g:1152:1: entryRuleInstructions returns [EObject current=null] : iv_ruleInstructions= ruleInstructions EOF ;
     public final EObject entryRuleInstructions() throws RecognitionException {
         EObject current = null;
 
@@ -3795,8 +3309,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:1408:53: (iv_ruleInstructions= ruleInstructions EOF )
-            // InternalPds16asmParser.g:1409:2: iv_ruleInstructions= ruleInstructions EOF
+            // InternalPds16asmParser.g:1152:53: (iv_ruleInstructions= ruleInstructions EOF )
+            // InternalPds16asmParser.g:1153:2: iv_ruleInstructions= ruleInstructions EOF
             {
              newCompositeNode(grammarAccess.getInstructionsRule()); 
             pushFollow(FOLLOW_1);
@@ -3823,7 +3337,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInstructions"
-    // InternalPds16asmParser.g:1415:1: ruleInstructions returns [EObject current=null] : (this_Load_0= ruleLoad | this_Store_1= ruleStore | this_Aritmetica_2= ruleAritmetica | this_Logica_3= ruleLogica | this_Jump_4= ruleJump | this_Nop_5= ruleNop | this_Ret_6= ruleRet ) ;
+    // InternalPds16asmParser.g:1159:1: ruleInstructions returns [EObject current=null] : (this_Load_0= ruleLoad | this_Store_1= ruleStore | this_Aritmetica_2= ruleAritmetica | this_Logica_3= ruleLogica | this_Jump_4= ruleJump | this_Nop_5= ruleNop | this_Ret_6= ruleRet ) ;
     public final EObject ruleInstructions() throws RecognitionException {
         EObject current = null;
 
@@ -3846,24 +3360,24 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:1421:2: ( (this_Load_0= ruleLoad | this_Store_1= ruleStore | this_Aritmetica_2= ruleAritmetica | this_Logica_3= ruleLogica | this_Jump_4= ruleJump | this_Nop_5= ruleNop | this_Ret_6= ruleRet ) )
-            // InternalPds16asmParser.g:1422:2: (this_Load_0= ruleLoad | this_Store_1= ruleStore | this_Aritmetica_2= ruleAritmetica | this_Logica_3= ruleLogica | this_Jump_4= ruleJump | this_Nop_5= ruleNop | this_Ret_6= ruleRet )
+            // InternalPds16asmParser.g:1165:2: ( (this_Load_0= ruleLoad | this_Store_1= ruleStore | this_Aritmetica_2= ruleAritmetica | this_Logica_3= ruleLogica | this_Jump_4= ruleJump | this_Nop_5= ruleNop | this_Ret_6= ruleRet ) )
+            // InternalPds16asmParser.g:1166:2: (this_Load_0= ruleLoad | this_Store_1= ruleStore | this_Aritmetica_2= ruleAritmetica | this_Logica_3= ruleLogica | this_Jump_4= ruleJump | this_Nop_5= ruleNop | this_Ret_6= ruleRet )
             {
-            // InternalPds16asmParser.g:1422:2: (this_Load_0= ruleLoad | this_Store_1= ruleStore | this_Aritmetica_2= ruleAritmetica | this_Logica_3= ruleLogica | this_Jump_4= ruleJump | this_Nop_5= ruleNop | this_Ret_6= ruleRet )
-            int alt22=7;
+            // InternalPds16asmParser.g:1166:2: (this_Load_0= ruleLoad | this_Store_1= ruleStore | this_Aritmetica_2= ruleAritmetica | this_Logica_3= ruleLogica | this_Jump_4= ruleJump | this_Nop_5= ruleNop | this_Ret_6= ruleRet )
+            int alt19=7;
             switch ( input.LA(1) ) {
             case Ldih:
             case Ldb:
             case Ldi:
             case Ld:
                 {
-                alt22=1;
+                alt19=1;
                 }
                 break;
             case Stb:
             case St:
                 {
-                alt22=2;
+                alt19=2;
                 }
                 break;
             case Adcf:
@@ -3880,7 +3394,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
             case Sbb:
             case Sub:
                 {
-                alt22=3;
+                alt19=3;
                 }
                 break;
             case Anlf:
@@ -3900,7 +3414,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
             case Shr:
             case Xrl:
                 {
-                alt22=4;
+                alt19=4;
                 }
                 break;
             case Jmpl:
@@ -3914,30 +3428,30 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
             case Je:
             case Jz:
                 {
-                alt22=5;
+                alt19=5;
                 }
                 break;
             case Nop:
                 {
-                alt22=6;
+                alt19=6;
                 }
                 break;
             case Iret:
             case Ret:
                 {
-                alt22=7;
+                alt19=7;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 22, 0, input);
+                    new NoViableAltException("", 19, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt22) {
+            switch (alt19) {
                 case 1 :
-                    // InternalPds16asmParser.g:1423:3: this_Load_0= ruleLoad
+                    // InternalPds16asmParser.g:1167:3: this_Load_0= ruleLoad
                     {
 
                     			newCompositeNode(grammarAccess.getInstructionsAccess().getLoadParserRuleCall_0());
@@ -3955,7 +3469,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:1432:3: this_Store_1= ruleStore
+                    // InternalPds16asmParser.g:1176:3: this_Store_1= ruleStore
                     {
 
                     			newCompositeNode(grammarAccess.getInstructionsAccess().getStoreParserRuleCall_1());
@@ -3973,7 +3487,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalPds16asmParser.g:1441:3: this_Aritmetica_2= ruleAritmetica
+                    // InternalPds16asmParser.g:1185:3: this_Aritmetica_2= ruleAritmetica
                     {
 
                     			newCompositeNode(grammarAccess.getInstructionsAccess().getAritmeticaParserRuleCall_2());
@@ -3991,7 +3505,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalPds16asmParser.g:1450:3: this_Logica_3= ruleLogica
+                    // InternalPds16asmParser.g:1194:3: this_Logica_3= ruleLogica
                     {
 
                     			newCompositeNode(grammarAccess.getInstructionsAccess().getLogicaParserRuleCall_3());
@@ -4009,7 +3523,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalPds16asmParser.g:1459:3: this_Jump_4= ruleJump
+                    // InternalPds16asmParser.g:1203:3: this_Jump_4= ruleJump
                     {
 
                     			newCompositeNode(grammarAccess.getInstructionsAccess().getJumpParserRuleCall_4());
@@ -4027,7 +3541,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalPds16asmParser.g:1468:3: this_Nop_5= ruleNop
+                    // InternalPds16asmParser.g:1212:3: this_Nop_5= ruleNop
                     {
 
                     			newCompositeNode(grammarAccess.getInstructionsAccess().getNopParserRuleCall_5());
@@ -4045,7 +3559,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalPds16asmParser.g:1477:3: this_Ret_6= ruleRet
+                    // InternalPds16asmParser.g:1221:3: this_Ret_6= ruleRet
                     {
 
                     			newCompositeNode(grammarAccess.getInstructionsAccess().getRetParserRuleCall_6());
@@ -4085,7 +3599,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLoad"
-    // InternalPds16asmParser.g:1489:1: entryRuleLoad returns [EObject current=null] : iv_ruleLoad= ruleLoad EOF ;
+    // InternalPds16asmParser.g:1233:1: entryRuleLoad returns [EObject current=null] : iv_ruleLoad= ruleLoad EOF ;
     public final EObject entryRuleLoad() throws RecognitionException {
         EObject current = null;
 
@@ -4093,8 +3607,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:1489:45: (iv_ruleLoad= ruleLoad EOF )
-            // InternalPds16asmParser.g:1490:2: iv_ruleLoad= ruleLoad EOF
+            // InternalPds16asmParser.g:1233:45: (iv_ruleLoad= ruleLoad EOF )
+            // InternalPds16asmParser.g:1234:2: iv_ruleLoad= ruleLoad EOF
             {
              newCompositeNode(grammarAccess.getLoadRule()); 
             pushFollow(FOLLOW_1);
@@ -4121,7 +3635,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLoad"
-    // InternalPds16asmParser.g:1496:1: ruleLoad returns [EObject current=null] : (this_LdImmediate_0= ruleLdImmediate | this_LdDirect_1= ruleLdDirect | this_LdIndexed_2= ruleLdIndexed | this_LdBasedIndexed_3= ruleLdBasedIndexed ) ;
+    // InternalPds16asmParser.g:1240:1: ruleLoad returns [EObject current=null] : (this_LdImmediate_0= ruleLdImmediate | this_LdDirect_1= ruleLdDirect | this_LdIndexed_2= ruleLdIndexed | this_LdBasedIndexed_3= ruleLdBasedIndexed ) ;
     public final EObject ruleLoad() throws RecognitionException {
         EObject current = null;
 
@@ -4138,15 +3652,15 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:1502:2: ( (this_LdImmediate_0= ruleLdImmediate | this_LdDirect_1= ruleLdDirect | this_LdIndexed_2= ruleLdIndexed | this_LdBasedIndexed_3= ruleLdBasedIndexed ) )
-            // InternalPds16asmParser.g:1503:2: (this_LdImmediate_0= ruleLdImmediate | this_LdDirect_1= ruleLdDirect | this_LdIndexed_2= ruleLdIndexed | this_LdBasedIndexed_3= ruleLdBasedIndexed )
+            // InternalPds16asmParser.g:1246:2: ( (this_LdImmediate_0= ruleLdImmediate | this_LdDirect_1= ruleLdDirect | this_LdIndexed_2= ruleLdIndexed | this_LdBasedIndexed_3= ruleLdBasedIndexed ) )
+            // InternalPds16asmParser.g:1247:2: (this_LdImmediate_0= ruleLdImmediate | this_LdDirect_1= ruleLdDirect | this_LdIndexed_2= ruleLdIndexed | this_LdBasedIndexed_3= ruleLdBasedIndexed )
             {
-            // InternalPds16asmParser.g:1503:2: (this_LdImmediate_0= ruleLdImmediate | this_LdDirect_1= ruleLdDirect | this_LdIndexed_2= ruleLdIndexed | this_LdBasedIndexed_3= ruleLdBasedIndexed )
-            int alt23=4;
-            alt23 = dfa23.predict(input);
-            switch (alt23) {
+            // InternalPds16asmParser.g:1247:2: (this_LdImmediate_0= ruleLdImmediate | this_LdDirect_1= ruleLdDirect | this_LdIndexed_2= ruleLdIndexed | this_LdBasedIndexed_3= ruleLdBasedIndexed )
+            int alt20=4;
+            alt20 = dfa20.predict(input);
+            switch (alt20) {
                 case 1 :
-                    // InternalPds16asmParser.g:1504:3: this_LdImmediate_0= ruleLdImmediate
+                    // InternalPds16asmParser.g:1248:3: this_LdImmediate_0= ruleLdImmediate
                     {
 
                     			newCompositeNode(grammarAccess.getLoadAccess().getLdImmediateParserRuleCall_0());
@@ -4164,7 +3678,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:1513:3: this_LdDirect_1= ruleLdDirect
+                    // InternalPds16asmParser.g:1257:3: this_LdDirect_1= ruleLdDirect
                     {
 
                     			newCompositeNode(grammarAccess.getLoadAccess().getLdDirectParserRuleCall_1());
@@ -4182,7 +3696,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalPds16asmParser.g:1522:3: this_LdIndexed_2= ruleLdIndexed
+                    // InternalPds16asmParser.g:1266:3: this_LdIndexed_2= ruleLdIndexed
                     {
 
                     			newCompositeNode(grammarAccess.getLoadAccess().getLdIndexedParserRuleCall_2());
@@ -4200,7 +3714,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalPds16asmParser.g:1531:3: this_LdBasedIndexed_3= ruleLdBasedIndexed
+                    // InternalPds16asmParser.g:1275:3: this_LdBasedIndexed_3= ruleLdBasedIndexed
                     {
 
                     			newCompositeNode(grammarAccess.getLoadAccess().getLdBasedIndexedParserRuleCall_3());
@@ -4240,7 +3754,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStore"
-    // InternalPds16asmParser.g:1543:1: entryRuleStore returns [EObject current=null] : iv_ruleStore= ruleStore EOF ;
+    // InternalPds16asmParser.g:1287:1: entryRuleStore returns [EObject current=null] : iv_ruleStore= ruleStore EOF ;
     public final EObject entryRuleStore() throws RecognitionException {
         EObject current = null;
 
@@ -4248,8 +3762,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:1543:46: (iv_ruleStore= ruleStore EOF )
-            // InternalPds16asmParser.g:1544:2: iv_ruleStore= ruleStore EOF
+            // InternalPds16asmParser.g:1287:46: (iv_ruleStore= ruleStore EOF )
+            // InternalPds16asmParser.g:1288:2: iv_ruleStore= ruleStore EOF
             {
              newCompositeNode(grammarAccess.getStoreRule()); 
             pushFollow(FOLLOW_1);
@@ -4276,7 +3790,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStore"
-    // InternalPds16asmParser.g:1550:1: ruleStore returns [EObject current=null] : (this_StDirect_0= ruleStDirect | this_StIndexed_1= ruleStIndexed | this_StBasedIndexed_2= ruleStBasedIndexed ) ;
+    // InternalPds16asmParser.g:1294:1: ruleStore returns [EObject current=null] : (this_StDirect_0= ruleStDirect | this_StIndexed_1= ruleStIndexed | this_StBasedIndexed_2= ruleStBasedIndexed ) ;
     public final EObject ruleStore() throws RecognitionException {
         EObject current = null;
 
@@ -4291,15 +3805,15 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:1556:2: ( (this_StDirect_0= ruleStDirect | this_StIndexed_1= ruleStIndexed | this_StBasedIndexed_2= ruleStBasedIndexed ) )
-            // InternalPds16asmParser.g:1557:2: (this_StDirect_0= ruleStDirect | this_StIndexed_1= ruleStIndexed | this_StBasedIndexed_2= ruleStBasedIndexed )
+            // InternalPds16asmParser.g:1300:2: ( (this_StDirect_0= ruleStDirect | this_StIndexed_1= ruleStIndexed | this_StBasedIndexed_2= ruleStBasedIndexed ) )
+            // InternalPds16asmParser.g:1301:2: (this_StDirect_0= ruleStDirect | this_StIndexed_1= ruleStIndexed | this_StBasedIndexed_2= ruleStBasedIndexed )
             {
-            // InternalPds16asmParser.g:1557:2: (this_StDirect_0= ruleStDirect | this_StIndexed_1= ruleStIndexed | this_StBasedIndexed_2= ruleStBasedIndexed )
-            int alt24=3;
-            alt24 = dfa24.predict(input);
-            switch (alt24) {
+            // InternalPds16asmParser.g:1301:2: (this_StDirect_0= ruleStDirect | this_StIndexed_1= ruleStIndexed | this_StBasedIndexed_2= ruleStBasedIndexed )
+            int alt21=3;
+            alt21 = dfa21.predict(input);
+            switch (alt21) {
                 case 1 :
-                    // InternalPds16asmParser.g:1558:3: this_StDirect_0= ruleStDirect
+                    // InternalPds16asmParser.g:1302:3: this_StDirect_0= ruleStDirect
                     {
 
                     			newCompositeNode(grammarAccess.getStoreAccess().getStDirectParserRuleCall_0());
@@ -4317,7 +3831,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:1567:3: this_StIndexed_1= ruleStIndexed
+                    // InternalPds16asmParser.g:1311:3: this_StIndexed_1= ruleStIndexed
                     {
 
                     			newCompositeNode(grammarAccess.getStoreAccess().getStIndexedParserRuleCall_1());
@@ -4335,7 +3849,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalPds16asmParser.g:1576:3: this_StBasedIndexed_2= ruleStBasedIndexed
+                    // InternalPds16asmParser.g:1320:3: this_StBasedIndexed_2= ruleStBasedIndexed
                     {
 
                     			newCompositeNode(grammarAccess.getStoreAccess().getStBasedIndexedParserRuleCall_2());
@@ -4375,7 +3889,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAritmetica"
-    // InternalPds16asmParser.g:1588:1: entryRuleAritmetica returns [EObject current=null] : iv_ruleAritmetica= ruleAritmetica EOF ;
+    // InternalPds16asmParser.g:1332:1: entryRuleAritmetica returns [EObject current=null] : iv_ruleAritmetica= ruleAritmetica EOF ;
     public final EObject entryRuleAritmetica() throws RecognitionException {
         EObject current = null;
 
@@ -4383,8 +3897,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:1588:51: (iv_ruleAritmetica= ruleAritmetica EOF )
-            // InternalPds16asmParser.g:1589:2: iv_ruleAritmetica= ruleAritmetica EOF
+            // InternalPds16asmParser.g:1332:51: (iv_ruleAritmetica= ruleAritmetica EOF )
+            // InternalPds16asmParser.g:1333:2: iv_ruleAritmetica= ruleAritmetica EOF
             {
              newCompositeNode(grammarAccess.getAritmeticaRule()); 
             pushFollow(FOLLOW_1);
@@ -4411,7 +3925,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAritmetica"
-    // InternalPds16asmParser.g:1595:1: ruleAritmetica returns [EObject current=null] : (this_Add_0= ruleAdd | this_Sub_1= ruleSub ) ;
+    // InternalPds16asmParser.g:1339:1: ruleAritmetica returns [EObject current=null] : (this_Add_0= ruleAdd | this_Sub_1= ruleSub ) ;
     public final EObject ruleAritmetica() throws RecognitionException {
         EObject current = null;
 
@@ -4424,28 +3938,28 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:1601:2: ( (this_Add_0= ruleAdd | this_Sub_1= ruleSub ) )
-            // InternalPds16asmParser.g:1602:2: (this_Add_0= ruleAdd | this_Sub_1= ruleSub )
+            // InternalPds16asmParser.g:1345:2: ( (this_Add_0= ruleAdd | this_Sub_1= ruleSub ) )
+            // InternalPds16asmParser.g:1346:2: (this_Add_0= ruleAdd | this_Sub_1= ruleSub )
             {
-            // InternalPds16asmParser.g:1602:2: (this_Add_0= ruleAdd | this_Sub_1= ruleSub )
-            int alt25=2;
-            int LA25_0 = input.LA(1);
+            // InternalPds16asmParser.g:1346:2: (this_Add_0= ruleAdd | this_Sub_1= ruleSub )
+            int alt22=2;
+            int LA22_0 = input.LA(1);
 
-            if ( ((LA25_0>=Adcf && LA25_0<=Addf)||LA25_0==Incf||(LA25_0>=Adc && LA25_0<=Add)||LA25_0==Inc) ) {
-                alt25=1;
+            if ( ((LA22_0>=Adcf && LA22_0<=Addf)||LA22_0==Incf||(LA22_0>=Adc && LA22_0<=Add)||LA22_0==Inc) ) {
+                alt22=1;
             }
-            else if ( (LA25_0==Decf||(LA25_0>=Sbbf && LA25_0<=Subr)||LA25_0==Dec||LA25_0==Sbb||LA25_0==Sub) ) {
-                alt25=2;
+            else if ( (LA22_0==Decf||(LA22_0>=Sbbf && LA22_0<=Subr)||LA22_0==Dec||LA22_0==Sbb||LA22_0==Sub) ) {
+                alt22=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 25, 0, input);
+                    new NoViableAltException("", 22, 0, input);
 
                 throw nvae;
             }
-            switch (alt25) {
+            switch (alt22) {
                 case 1 :
-                    // InternalPds16asmParser.g:1603:3: this_Add_0= ruleAdd
+                    // InternalPds16asmParser.g:1347:3: this_Add_0= ruleAdd
                     {
 
                     			newCompositeNode(grammarAccess.getAritmeticaAccess().getAddParserRuleCall_0());
@@ -4463,7 +3977,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:1612:3: this_Sub_1= ruleSub
+                    // InternalPds16asmParser.g:1356:3: this_Sub_1= ruleSub
                     {
 
                     			newCompositeNode(grammarAccess.getAritmeticaAccess().getSubParserRuleCall_1());
@@ -4503,7 +4017,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLogica"
-    // InternalPds16asmParser.g:1624:1: entryRuleLogica returns [EObject current=null] : iv_ruleLogica= ruleLogica EOF ;
+    // InternalPds16asmParser.g:1368:1: entryRuleLogica returns [EObject current=null] : iv_ruleLogica= ruleLogica EOF ;
     public final EObject entryRuleLogica() throws RecognitionException {
         EObject current = null;
 
@@ -4511,8 +4025,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:1624:47: (iv_ruleLogica= ruleLogica EOF )
-            // InternalPds16asmParser.g:1625:2: iv_ruleLogica= ruleLogica EOF
+            // InternalPds16asmParser.g:1368:47: (iv_ruleLogica= ruleLogica EOF )
+            // InternalPds16asmParser.g:1369:2: iv_ruleLogica= ruleLogica EOF
             {
              newCompositeNode(grammarAccess.getLogicaRule()); 
             pushFollow(FOLLOW_1);
@@ -4539,7 +4053,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLogica"
-    // InternalPds16asmParser.g:1631:1: ruleLogica returns [EObject current=null] : (this_Anl_0= ruleAnl | this_Orl_1= ruleOrl | this_Xrl_2= ruleXrl | this_Not_3= ruleNot | this_Shl_4= ruleShl | this_Shr_5= ruleShr | this_Rr_6= ruleRr | this_Rc_7= ruleRc ) ;
+    // InternalPds16asmParser.g:1375:1: ruleLogica returns [EObject current=null] : (this_Anl_0= ruleAnl | this_Orl_1= ruleOrl | this_Xrl_2= ruleXrl | this_Not_3= ruleNot | this_Shl_4= ruleShl | this_Shr_5= ruleShr | this_Rr_6= ruleRr | this_Rc_7= ruleRc ) ;
     public final EObject ruleLogica() throws RecognitionException {
         EObject current = null;
 
@@ -4564,16 +4078,16 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:1637:2: ( (this_Anl_0= ruleAnl | this_Orl_1= ruleOrl | this_Xrl_2= ruleXrl | this_Not_3= ruleNot | this_Shl_4= ruleShl | this_Shr_5= ruleShr | this_Rr_6= ruleRr | this_Rc_7= ruleRc ) )
-            // InternalPds16asmParser.g:1638:2: (this_Anl_0= ruleAnl | this_Orl_1= ruleOrl | this_Xrl_2= ruleXrl | this_Not_3= ruleNot | this_Shl_4= ruleShl | this_Shr_5= ruleShr | this_Rr_6= ruleRr | this_Rc_7= ruleRc )
+            // InternalPds16asmParser.g:1381:2: ( (this_Anl_0= ruleAnl | this_Orl_1= ruleOrl | this_Xrl_2= ruleXrl | this_Not_3= ruleNot | this_Shl_4= ruleShl | this_Shr_5= ruleShr | this_Rr_6= ruleRr | this_Rc_7= ruleRc ) )
+            // InternalPds16asmParser.g:1382:2: (this_Anl_0= ruleAnl | this_Orl_1= ruleOrl | this_Xrl_2= ruleXrl | this_Not_3= ruleNot | this_Shl_4= ruleShl | this_Shr_5= ruleShr | this_Rr_6= ruleRr | this_Rc_7= ruleRc )
             {
-            // InternalPds16asmParser.g:1638:2: (this_Anl_0= ruleAnl | this_Orl_1= ruleOrl | this_Xrl_2= ruleXrl | this_Not_3= ruleNot | this_Shl_4= ruleShl | this_Shr_5= ruleShr | this_Rr_6= ruleRr | this_Rc_7= ruleRc )
-            int alt26=8;
+            // InternalPds16asmParser.g:1382:2: (this_Anl_0= ruleAnl | this_Orl_1= ruleOrl | this_Xrl_2= ruleXrl | this_Not_3= ruleNot | this_Shl_4= ruleShl | this_Shr_5= ruleShr | this_Rr_6= ruleRr | this_Rc_7= ruleRc )
+            int alt23=8;
             switch ( input.LA(1) ) {
             case Anlf:
             case Anl:
                 {
-                alt26=1;
+                alt23=1;
                 }
                 break;
             case Movf:
@@ -4581,53 +4095,53 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
             case Mov:
             case Orl:
                 {
-                alt26=2;
+                alt23=2;
                 }
                 break;
             case Xrlf:
             case Xrl:
                 {
-                alt26=3;
+                alt23=3;
                 }
                 break;
             case Notf:
             case Not:
                 {
-                alt26=4;
+                alt23=4;
                 }
                 break;
             case Shl:
                 {
-                alt26=5;
+                alt23=5;
                 }
                 break;
             case Shr:
                 {
-                alt26=6;
+                alt23=6;
                 }
                 break;
             case Rrl:
             case Rrm:
                 {
-                alt26=7;
+                alt23=7;
                 }
                 break;
             case Rcl:
             case Rcr:
                 {
-                alt26=8;
+                alt23=8;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 26, 0, input);
+                    new NoViableAltException("", 23, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt26) {
+            switch (alt23) {
                 case 1 :
-                    // InternalPds16asmParser.g:1639:3: this_Anl_0= ruleAnl
+                    // InternalPds16asmParser.g:1383:3: this_Anl_0= ruleAnl
                     {
 
                     			newCompositeNode(grammarAccess.getLogicaAccess().getAnlParserRuleCall_0());
@@ -4645,7 +4159,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:1648:3: this_Orl_1= ruleOrl
+                    // InternalPds16asmParser.g:1392:3: this_Orl_1= ruleOrl
                     {
 
                     			newCompositeNode(grammarAccess.getLogicaAccess().getOrlParserRuleCall_1());
@@ -4663,7 +4177,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalPds16asmParser.g:1657:3: this_Xrl_2= ruleXrl
+                    // InternalPds16asmParser.g:1401:3: this_Xrl_2= ruleXrl
                     {
 
                     			newCompositeNode(grammarAccess.getLogicaAccess().getXrlParserRuleCall_2());
@@ -4681,7 +4195,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalPds16asmParser.g:1666:3: this_Not_3= ruleNot
+                    // InternalPds16asmParser.g:1410:3: this_Not_3= ruleNot
                     {
 
                     			newCompositeNode(grammarAccess.getLogicaAccess().getNotParserRuleCall_3());
@@ -4699,7 +4213,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalPds16asmParser.g:1675:3: this_Shl_4= ruleShl
+                    // InternalPds16asmParser.g:1419:3: this_Shl_4= ruleShl
                     {
 
                     			newCompositeNode(grammarAccess.getLogicaAccess().getShlParserRuleCall_4());
@@ -4717,7 +4231,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalPds16asmParser.g:1684:3: this_Shr_5= ruleShr
+                    // InternalPds16asmParser.g:1428:3: this_Shr_5= ruleShr
                     {
 
                     			newCompositeNode(grammarAccess.getLogicaAccess().getShrParserRuleCall_5());
@@ -4735,7 +4249,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalPds16asmParser.g:1693:3: this_Rr_6= ruleRr
+                    // InternalPds16asmParser.g:1437:3: this_Rr_6= ruleRr
                     {
 
                     			newCompositeNode(grammarAccess.getLogicaAccess().getRrParserRuleCall_6());
@@ -4753,7 +4267,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalPds16asmParser.g:1702:3: this_Rc_7= ruleRc
+                    // InternalPds16asmParser.g:1446:3: this_Rc_7= ruleRc
                     {
 
                     			newCompositeNode(grammarAccess.getLogicaAccess().getRcParserRuleCall_7());
@@ -4793,7 +4307,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleJump"
-    // InternalPds16asmParser.g:1714:1: entryRuleJump returns [EObject current=null] : iv_ruleJump= ruleJump EOF ;
+    // InternalPds16asmParser.g:1458:1: entryRuleJump returns [EObject current=null] : iv_ruleJump= ruleJump EOF ;
     public final EObject entryRuleJump() throws RecognitionException {
         EObject current = null;
 
@@ -4801,8 +4315,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:1714:45: (iv_ruleJump= ruleJump EOF )
-            // InternalPds16asmParser.g:1715:2: iv_ruleJump= ruleJump EOF
+            // InternalPds16asmParser.g:1458:45: (iv_ruleJump= ruleJump EOF )
+            // InternalPds16asmParser.g:1459:2: iv_ruleJump= ruleJump EOF
             {
              newCompositeNode(grammarAccess.getJumpRule()); 
             pushFollow(FOLLOW_1);
@@ -4829,7 +4343,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleJump"
-    // InternalPds16asmParser.g:1721:1: ruleJump returns [EObject current=null] : this_JumpOp_0= ruleJumpOp ;
+    // InternalPds16asmParser.g:1465:1: ruleJump returns [EObject current=null] : this_JumpOp_0= ruleJumpOp ;
     public final EObject ruleJump() throws RecognitionException {
         EObject current = null;
 
@@ -4840,8 +4354,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:1727:2: (this_JumpOp_0= ruleJumpOp )
-            // InternalPds16asmParser.g:1728:2: this_JumpOp_0= ruleJumpOp
+            // InternalPds16asmParser.g:1471:2: (this_JumpOp_0= ruleJumpOp )
+            // InternalPds16asmParser.g:1472:2: this_JumpOp_0= ruleJumpOp
             {
 
             		newCompositeNode(grammarAccess.getJumpAccess().getJumpOpParserRuleCall());
@@ -4875,7 +4389,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLdImmediate"
-    // InternalPds16asmParser.g:1739:1: entryRuleLdImmediate returns [EObject current=null] : iv_ruleLdImmediate= ruleLdImmediate EOF ;
+    // InternalPds16asmParser.g:1483:1: entryRuleLdImmediate returns [EObject current=null] : iv_ruleLdImmediate= ruleLdImmediate EOF ;
     public final EObject entryRuleLdImmediate() throws RecognitionException {
         EObject current = null;
 
@@ -4883,8 +4397,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:1739:52: (iv_ruleLdImmediate= ruleLdImmediate EOF )
-            // InternalPds16asmParser.g:1740:2: iv_ruleLdImmediate= ruleLdImmediate EOF
+            // InternalPds16asmParser.g:1483:52: (iv_ruleLdImmediate= ruleLdImmediate EOF )
+            // InternalPds16asmParser.g:1484:2: iv_ruleLdImmediate= ruleLdImmediate EOF
             {
              newCompositeNode(grammarAccess.getLdImmediateRule()); 
             pushFollow(FOLLOW_1);
@@ -4911,7 +4425,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLdImmediate"
-    // InternalPds16asmParser.g:1746:1: ruleLdImmediate returns [EObject current=null] : ( (otherlv_0= Ldi | otherlv_1= Ldih ) this_Immediate_2= ruleImmediate ) ;
+    // InternalPds16asmParser.g:1490:1: ruleLdImmediate returns [EObject current=null] : ( (otherlv_0= Ldi | otherlv_1= Ldih ) this_Immediate_2= ruleImmediate ) ;
     public final EObject ruleLdImmediate() throws RecognitionException {
         EObject current = null;
 
@@ -4924,33 +4438,33 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:1752:2: ( ( (otherlv_0= Ldi | otherlv_1= Ldih ) this_Immediate_2= ruleImmediate ) )
-            // InternalPds16asmParser.g:1753:2: ( (otherlv_0= Ldi | otherlv_1= Ldih ) this_Immediate_2= ruleImmediate )
+            // InternalPds16asmParser.g:1496:2: ( ( (otherlv_0= Ldi | otherlv_1= Ldih ) this_Immediate_2= ruleImmediate ) )
+            // InternalPds16asmParser.g:1497:2: ( (otherlv_0= Ldi | otherlv_1= Ldih ) this_Immediate_2= ruleImmediate )
             {
-            // InternalPds16asmParser.g:1753:2: ( (otherlv_0= Ldi | otherlv_1= Ldih ) this_Immediate_2= ruleImmediate )
-            // InternalPds16asmParser.g:1754:3: (otherlv_0= Ldi | otherlv_1= Ldih ) this_Immediate_2= ruleImmediate
+            // InternalPds16asmParser.g:1497:2: ( (otherlv_0= Ldi | otherlv_1= Ldih ) this_Immediate_2= ruleImmediate )
+            // InternalPds16asmParser.g:1498:3: (otherlv_0= Ldi | otherlv_1= Ldih ) this_Immediate_2= ruleImmediate
             {
-            // InternalPds16asmParser.g:1754:3: (otherlv_0= Ldi | otherlv_1= Ldih )
-            int alt27=2;
-            int LA27_0 = input.LA(1);
+            // InternalPds16asmParser.g:1498:3: (otherlv_0= Ldi | otherlv_1= Ldih )
+            int alt24=2;
+            int LA24_0 = input.LA(1);
 
-            if ( (LA27_0==Ldi) ) {
-                alt27=1;
+            if ( (LA24_0==Ldi) ) {
+                alt24=1;
             }
-            else if ( (LA27_0==Ldih) ) {
-                alt27=2;
+            else if ( (LA24_0==Ldih) ) {
+                alt24=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 27, 0, input);
+                    new NoViableAltException("", 24, 0, input);
 
                 throw nvae;
             }
-            switch (alt27) {
+            switch (alt24) {
                 case 1 :
-                    // InternalPds16asmParser.g:1755:4: otherlv_0= Ldi
+                    // InternalPds16asmParser.g:1499:4: otherlv_0= Ldi
                     {
-                    otherlv_0=(Token)match(input,Ldi,FOLLOW_14); 
+                    otherlv_0=(Token)match(input,Ldi,FOLLOW_15); 
 
                     				newLeafNode(otherlv_0, grammarAccess.getLdImmediateAccess().getLdiKeyword_0_0());
                     			
@@ -4958,9 +4472,9 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:1760:4: otherlv_1= Ldih
+                    // InternalPds16asmParser.g:1504:4: otherlv_1= Ldih
                     {
-                    otherlv_1=(Token)match(input,Ldih,FOLLOW_14); 
+                    otherlv_1=(Token)match(input,Ldih,FOLLOW_15); 
 
                     				newLeafNode(otherlv_1, grammarAccess.getLdImmediateAccess().getLdihKeyword_0_1());
                     			
@@ -5005,7 +4519,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLdDirect"
-    // InternalPds16asmParser.g:1777:1: entryRuleLdDirect returns [EObject current=null] : iv_ruleLdDirect= ruleLdDirect EOF ;
+    // InternalPds16asmParser.g:1521:1: entryRuleLdDirect returns [EObject current=null] : iv_ruleLdDirect= ruleLdDirect EOF ;
     public final EObject entryRuleLdDirect() throws RecognitionException {
         EObject current = null;
 
@@ -5013,8 +4527,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:1777:49: (iv_ruleLdDirect= ruleLdDirect EOF )
-            // InternalPds16asmParser.g:1778:2: iv_ruleLdDirect= ruleLdDirect EOF
+            // InternalPds16asmParser.g:1521:49: (iv_ruleLdDirect= ruleLdDirect EOF )
+            // InternalPds16asmParser.g:1522:2: iv_ruleLdDirect= ruleLdDirect EOF
             {
              newCompositeNode(grammarAccess.getLdDirectRule()); 
             pushFollow(FOLLOW_1);
@@ -5041,7 +4555,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLdDirect"
-    // InternalPds16asmParser.g:1784:1: ruleLdDirect returns [EObject current=null] : ( (otherlv_0= Ld | otherlv_1= Ldb ) this_Direct_2= ruleDirect ) ;
+    // InternalPds16asmParser.g:1528:1: ruleLdDirect returns [EObject current=null] : ( (otherlv_0= Ld | otherlv_1= Ldb ) this_Direct_2= ruleDirect ) ;
     public final EObject ruleLdDirect() throws RecognitionException {
         EObject current = null;
 
@@ -5054,33 +4568,33 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:1790:2: ( ( (otherlv_0= Ld | otherlv_1= Ldb ) this_Direct_2= ruleDirect ) )
-            // InternalPds16asmParser.g:1791:2: ( (otherlv_0= Ld | otherlv_1= Ldb ) this_Direct_2= ruleDirect )
+            // InternalPds16asmParser.g:1534:2: ( ( (otherlv_0= Ld | otherlv_1= Ldb ) this_Direct_2= ruleDirect ) )
+            // InternalPds16asmParser.g:1535:2: ( (otherlv_0= Ld | otherlv_1= Ldb ) this_Direct_2= ruleDirect )
             {
-            // InternalPds16asmParser.g:1791:2: ( (otherlv_0= Ld | otherlv_1= Ldb ) this_Direct_2= ruleDirect )
-            // InternalPds16asmParser.g:1792:3: (otherlv_0= Ld | otherlv_1= Ldb ) this_Direct_2= ruleDirect
+            // InternalPds16asmParser.g:1535:2: ( (otherlv_0= Ld | otherlv_1= Ldb ) this_Direct_2= ruleDirect )
+            // InternalPds16asmParser.g:1536:3: (otherlv_0= Ld | otherlv_1= Ldb ) this_Direct_2= ruleDirect
             {
-            // InternalPds16asmParser.g:1792:3: (otherlv_0= Ld | otherlv_1= Ldb )
-            int alt28=2;
-            int LA28_0 = input.LA(1);
+            // InternalPds16asmParser.g:1536:3: (otherlv_0= Ld | otherlv_1= Ldb )
+            int alt25=2;
+            int LA25_0 = input.LA(1);
 
-            if ( (LA28_0==Ld) ) {
-                alt28=1;
+            if ( (LA25_0==Ld) ) {
+                alt25=1;
             }
-            else if ( (LA28_0==Ldb) ) {
-                alt28=2;
+            else if ( (LA25_0==Ldb) ) {
+                alt25=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 28, 0, input);
+                    new NoViableAltException("", 25, 0, input);
 
                 throw nvae;
             }
-            switch (alt28) {
+            switch (alt25) {
                 case 1 :
-                    // InternalPds16asmParser.g:1793:4: otherlv_0= Ld
+                    // InternalPds16asmParser.g:1537:4: otherlv_0= Ld
                     {
-                    otherlv_0=(Token)match(input,Ld,FOLLOW_14); 
+                    otherlv_0=(Token)match(input,Ld,FOLLOW_15); 
 
                     				newLeafNode(otherlv_0, grammarAccess.getLdDirectAccess().getLdKeyword_0_0());
                     			
@@ -5088,9 +4602,9 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:1798:4: otherlv_1= Ldb
+                    // InternalPds16asmParser.g:1542:4: otherlv_1= Ldb
                     {
-                    otherlv_1=(Token)match(input,Ldb,FOLLOW_14); 
+                    otherlv_1=(Token)match(input,Ldb,FOLLOW_15); 
 
                     				newLeafNode(otherlv_1, grammarAccess.getLdDirectAccess().getLdbKeyword_0_1());
                     			
@@ -5135,7 +4649,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLdIndexed"
-    // InternalPds16asmParser.g:1815:1: entryRuleLdIndexed returns [EObject current=null] : iv_ruleLdIndexed= ruleLdIndexed EOF ;
+    // InternalPds16asmParser.g:1559:1: entryRuleLdIndexed returns [EObject current=null] : iv_ruleLdIndexed= ruleLdIndexed EOF ;
     public final EObject entryRuleLdIndexed() throws RecognitionException {
         EObject current = null;
 
@@ -5143,8 +4657,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:1815:50: (iv_ruleLdIndexed= ruleLdIndexed EOF )
-            // InternalPds16asmParser.g:1816:2: iv_ruleLdIndexed= ruleLdIndexed EOF
+            // InternalPds16asmParser.g:1559:50: (iv_ruleLdIndexed= ruleLdIndexed EOF )
+            // InternalPds16asmParser.g:1560:2: iv_ruleLdIndexed= ruleLdIndexed EOF
             {
              newCompositeNode(grammarAccess.getLdIndexedRule()); 
             pushFollow(FOLLOW_1);
@@ -5171,7 +4685,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLdIndexed"
-    // InternalPds16asmParser.g:1822:1: ruleLdIndexed returns [EObject current=null] : ( (otherlv_0= Ld | otherlv_1= Ldb ) this_Indexed_2= ruleIndexed ) ;
+    // InternalPds16asmParser.g:1566:1: ruleLdIndexed returns [EObject current=null] : ( (otherlv_0= Ld | otherlv_1= Ldb ) this_Indexed_2= ruleIndexed ) ;
     public final EObject ruleLdIndexed() throws RecognitionException {
         EObject current = null;
 
@@ -5184,33 +4698,33 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:1828:2: ( ( (otherlv_0= Ld | otherlv_1= Ldb ) this_Indexed_2= ruleIndexed ) )
-            // InternalPds16asmParser.g:1829:2: ( (otherlv_0= Ld | otherlv_1= Ldb ) this_Indexed_2= ruleIndexed )
+            // InternalPds16asmParser.g:1572:2: ( ( (otherlv_0= Ld | otherlv_1= Ldb ) this_Indexed_2= ruleIndexed ) )
+            // InternalPds16asmParser.g:1573:2: ( (otherlv_0= Ld | otherlv_1= Ldb ) this_Indexed_2= ruleIndexed )
             {
-            // InternalPds16asmParser.g:1829:2: ( (otherlv_0= Ld | otherlv_1= Ldb ) this_Indexed_2= ruleIndexed )
-            // InternalPds16asmParser.g:1830:3: (otherlv_0= Ld | otherlv_1= Ldb ) this_Indexed_2= ruleIndexed
+            // InternalPds16asmParser.g:1573:2: ( (otherlv_0= Ld | otherlv_1= Ldb ) this_Indexed_2= ruleIndexed )
+            // InternalPds16asmParser.g:1574:3: (otherlv_0= Ld | otherlv_1= Ldb ) this_Indexed_2= ruleIndexed
             {
-            // InternalPds16asmParser.g:1830:3: (otherlv_0= Ld | otherlv_1= Ldb )
-            int alt29=2;
-            int LA29_0 = input.LA(1);
+            // InternalPds16asmParser.g:1574:3: (otherlv_0= Ld | otherlv_1= Ldb )
+            int alt26=2;
+            int LA26_0 = input.LA(1);
 
-            if ( (LA29_0==Ld) ) {
-                alt29=1;
+            if ( (LA26_0==Ld) ) {
+                alt26=1;
             }
-            else if ( (LA29_0==Ldb) ) {
-                alt29=2;
+            else if ( (LA26_0==Ldb) ) {
+                alt26=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 29, 0, input);
+                    new NoViableAltException("", 26, 0, input);
 
                 throw nvae;
             }
-            switch (alt29) {
+            switch (alt26) {
                 case 1 :
-                    // InternalPds16asmParser.g:1831:4: otherlv_0= Ld
+                    // InternalPds16asmParser.g:1575:4: otherlv_0= Ld
                     {
-                    otherlv_0=(Token)match(input,Ld,FOLLOW_14); 
+                    otherlv_0=(Token)match(input,Ld,FOLLOW_15); 
 
                     				newLeafNode(otherlv_0, grammarAccess.getLdIndexedAccess().getLdKeyword_0_0());
                     			
@@ -5218,9 +4732,9 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:1836:4: otherlv_1= Ldb
+                    // InternalPds16asmParser.g:1580:4: otherlv_1= Ldb
                     {
-                    otherlv_1=(Token)match(input,Ldb,FOLLOW_14); 
+                    otherlv_1=(Token)match(input,Ldb,FOLLOW_15); 
 
                     				newLeafNode(otherlv_1, grammarAccess.getLdIndexedAccess().getLdbKeyword_0_1());
                     			
@@ -5265,7 +4779,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLdBasedIndexed"
-    // InternalPds16asmParser.g:1853:1: entryRuleLdBasedIndexed returns [EObject current=null] : iv_ruleLdBasedIndexed= ruleLdBasedIndexed EOF ;
+    // InternalPds16asmParser.g:1597:1: entryRuleLdBasedIndexed returns [EObject current=null] : iv_ruleLdBasedIndexed= ruleLdBasedIndexed EOF ;
     public final EObject entryRuleLdBasedIndexed() throws RecognitionException {
         EObject current = null;
 
@@ -5273,8 +4787,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:1853:55: (iv_ruleLdBasedIndexed= ruleLdBasedIndexed EOF )
-            // InternalPds16asmParser.g:1854:2: iv_ruleLdBasedIndexed= ruleLdBasedIndexed EOF
+            // InternalPds16asmParser.g:1597:55: (iv_ruleLdBasedIndexed= ruleLdBasedIndexed EOF )
+            // InternalPds16asmParser.g:1598:2: iv_ruleLdBasedIndexed= ruleLdBasedIndexed EOF
             {
              newCompositeNode(grammarAccess.getLdBasedIndexedRule()); 
             pushFollow(FOLLOW_1);
@@ -5301,7 +4815,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLdBasedIndexed"
-    // InternalPds16asmParser.g:1860:1: ruleLdBasedIndexed returns [EObject current=null] : ( (otherlv_0= Ld | otherlv_1= Ldb ) this_BasedIndexed_2= ruleBasedIndexed ) ;
+    // InternalPds16asmParser.g:1604:1: ruleLdBasedIndexed returns [EObject current=null] : ( (otherlv_0= Ld | otherlv_1= Ldb ) this_BasedIndexed_2= ruleBasedIndexed ) ;
     public final EObject ruleLdBasedIndexed() throws RecognitionException {
         EObject current = null;
 
@@ -5314,33 +4828,33 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:1866:2: ( ( (otherlv_0= Ld | otherlv_1= Ldb ) this_BasedIndexed_2= ruleBasedIndexed ) )
-            // InternalPds16asmParser.g:1867:2: ( (otherlv_0= Ld | otherlv_1= Ldb ) this_BasedIndexed_2= ruleBasedIndexed )
+            // InternalPds16asmParser.g:1610:2: ( ( (otherlv_0= Ld | otherlv_1= Ldb ) this_BasedIndexed_2= ruleBasedIndexed ) )
+            // InternalPds16asmParser.g:1611:2: ( (otherlv_0= Ld | otherlv_1= Ldb ) this_BasedIndexed_2= ruleBasedIndexed )
             {
-            // InternalPds16asmParser.g:1867:2: ( (otherlv_0= Ld | otherlv_1= Ldb ) this_BasedIndexed_2= ruleBasedIndexed )
-            // InternalPds16asmParser.g:1868:3: (otherlv_0= Ld | otherlv_1= Ldb ) this_BasedIndexed_2= ruleBasedIndexed
+            // InternalPds16asmParser.g:1611:2: ( (otherlv_0= Ld | otherlv_1= Ldb ) this_BasedIndexed_2= ruleBasedIndexed )
+            // InternalPds16asmParser.g:1612:3: (otherlv_0= Ld | otherlv_1= Ldb ) this_BasedIndexed_2= ruleBasedIndexed
             {
-            // InternalPds16asmParser.g:1868:3: (otherlv_0= Ld | otherlv_1= Ldb )
-            int alt30=2;
-            int LA30_0 = input.LA(1);
+            // InternalPds16asmParser.g:1612:3: (otherlv_0= Ld | otherlv_1= Ldb )
+            int alt27=2;
+            int LA27_0 = input.LA(1);
 
-            if ( (LA30_0==Ld) ) {
-                alt30=1;
+            if ( (LA27_0==Ld) ) {
+                alt27=1;
             }
-            else if ( (LA30_0==Ldb) ) {
-                alt30=2;
+            else if ( (LA27_0==Ldb) ) {
+                alt27=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 30, 0, input);
+                    new NoViableAltException("", 27, 0, input);
 
                 throw nvae;
             }
-            switch (alt30) {
+            switch (alt27) {
                 case 1 :
-                    // InternalPds16asmParser.g:1869:4: otherlv_0= Ld
+                    // InternalPds16asmParser.g:1613:4: otherlv_0= Ld
                     {
-                    otherlv_0=(Token)match(input,Ld,FOLLOW_14); 
+                    otherlv_0=(Token)match(input,Ld,FOLLOW_15); 
 
                     				newLeafNode(otherlv_0, grammarAccess.getLdBasedIndexedAccess().getLdKeyword_0_0());
                     			
@@ -5348,9 +4862,9 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:1874:4: otherlv_1= Ldb
+                    // InternalPds16asmParser.g:1618:4: otherlv_1= Ldb
                     {
-                    otherlv_1=(Token)match(input,Ldb,FOLLOW_14); 
+                    otherlv_1=(Token)match(input,Ldb,FOLLOW_15); 
 
                     				newLeafNode(otherlv_1, grammarAccess.getLdBasedIndexedAccess().getLdbKeyword_0_1());
                     			
@@ -5395,7 +4909,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStDirect"
-    // InternalPds16asmParser.g:1891:1: entryRuleStDirect returns [EObject current=null] : iv_ruleStDirect= ruleStDirect EOF ;
+    // InternalPds16asmParser.g:1635:1: entryRuleStDirect returns [EObject current=null] : iv_ruleStDirect= ruleStDirect EOF ;
     public final EObject entryRuleStDirect() throws RecognitionException {
         EObject current = null;
 
@@ -5403,8 +4917,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:1891:49: (iv_ruleStDirect= ruleStDirect EOF )
-            // InternalPds16asmParser.g:1892:2: iv_ruleStDirect= ruleStDirect EOF
+            // InternalPds16asmParser.g:1635:49: (iv_ruleStDirect= ruleStDirect EOF )
+            // InternalPds16asmParser.g:1636:2: iv_ruleStDirect= ruleStDirect EOF
             {
              newCompositeNode(grammarAccess.getStDirectRule()); 
             pushFollow(FOLLOW_1);
@@ -5431,7 +4945,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStDirect"
-    // InternalPds16asmParser.g:1898:1: ruleStDirect returns [EObject current=null] : ( (otherlv_0= St | otherlv_1= Stb ) this_Direct_2= ruleDirect ) ;
+    // InternalPds16asmParser.g:1642:1: ruleStDirect returns [EObject current=null] : ( (otherlv_0= St | otherlv_1= Stb ) this_Direct_2= ruleDirect ) ;
     public final EObject ruleStDirect() throws RecognitionException {
         EObject current = null;
 
@@ -5444,33 +4958,33 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:1904:2: ( ( (otherlv_0= St | otherlv_1= Stb ) this_Direct_2= ruleDirect ) )
-            // InternalPds16asmParser.g:1905:2: ( (otherlv_0= St | otherlv_1= Stb ) this_Direct_2= ruleDirect )
+            // InternalPds16asmParser.g:1648:2: ( ( (otherlv_0= St | otherlv_1= Stb ) this_Direct_2= ruleDirect ) )
+            // InternalPds16asmParser.g:1649:2: ( (otherlv_0= St | otherlv_1= Stb ) this_Direct_2= ruleDirect )
             {
-            // InternalPds16asmParser.g:1905:2: ( (otherlv_0= St | otherlv_1= Stb ) this_Direct_2= ruleDirect )
-            // InternalPds16asmParser.g:1906:3: (otherlv_0= St | otherlv_1= Stb ) this_Direct_2= ruleDirect
+            // InternalPds16asmParser.g:1649:2: ( (otherlv_0= St | otherlv_1= Stb ) this_Direct_2= ruleDirect )
+            // InternalPds16asmParser.g:1650:3: (otherlv_0= St | otherlv_1= Stb ) this_Direct_2= ruleDirect
             {
-            // InternalPds16asmParser.g:1906:3: (otherlv_0= St | otherlv_1= Stb )
-            int alt31=2;
-            int LA31_0 = input.LA(1);
+            // InternalPds16asmParser.g:1650:3: (otherlv_0= St | otherlv_1= Stb )
+            int alt28=2;
+            int LA28_0 = input.LA(1);
 
-            if ( (LA31_0==St) ) {
-                alt31=1;
+            if ( (LA28_0==St) ) {
+                alt28=1;
             }
-            else if ( (LA31_0==Stb) ) {
-                alt31=2;
+            else if ( (LA28_0==Stb) ) {
+                alt28=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 31, 0, input);
+                    new NoViableAltException("", 28, 0, input);
 
                 throw nvae;
             }
-            switch (alt31) {
+            switch (alt28) {
                 case 1 :
-                    // InternalPds16asmParser.g:1907:4: otherlv_0= St
+                    // InternalPds16asmParser.g:1651:4: otherlv_0= St
                     {
-                    otherlv_0=(Token)match(input,St,FOLLOW_14); 
+                    otherlv_0=(Token)match(input,St,FOLLOW_15); 
 
                     				newLeafNode(otherlv_0, grammarAccess.getStDirectAccess().getStKeyword_0_0());
                     			
@@ -5478,9 +4992,9 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:1912:4: otherlv_1= Stb
+                    // InternalPds16asmParser.g:1656:4: otherlv_1= Stb
                     {
-                    otherlv_1=(Token)match(input,Stb,FOLLOW_14); 
+                    otherlv_1=(Token)match(input,Stb,FOLLOW_15); 
 
                     				newLeafNode(otherlv_1, grammarAccess.getStDirectAccess().getStbKeyword_0_1());
                     			
@@ -5525,7 +5039,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStIndexed"
-    // InternalPds16asmParser.g:1929:1: entryRuleStIndexed returns [EObject current=null] : iv_ruleStIndexed= ruleStIndexed EOF ;
+    // InternalPds16asmParser.g:1673:1: entryRuleStIndexed returns [EObject current=null] : iv_ruleStIndexed= ruleStIndexed EOF ;
     public final EObject entryRuleStIndexed() throws RecognitionException {
         EObject current = null;
 
@@ -5533,8 +5047,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:1929:50: (iv_ruleStIndexed= ruleStIndexed EOF )
-            // InternalPds16asmParser.g:1930:2: iv_ruleStIndexed= ruleStIndexed EOF
+            // InternalPds16asmParser.g:1673:50: (iv_ruleStIndexed= ruleStIndexed EOF )
+            // InternalPds16asmParser.g:1674:2: iv_ruleStIndexed= ruleStIndexed EOF
             {
              newCompositeNode(grammarAccess.getStIndexedRule()); 
             pushFollow(FOLLOW_1);
@@ -5561,7 +5075,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStIndexed"
-    // InternalPds16asmParser.g:1936:1: ruleStIndexed returns [EObject current=null] : ( (otherlv_0= St | otherlv_1= Stb ) this_Indexed_2= ruleIndexed ) ;
+    // InternalPds16asmParser.g:1680:1: ruleStIndexed returns [EObject current=null] : ( (otherlv_0= St | otherlv_1= Stb ) this_Indexed_2= ruleIndexed ) ;
     public final EObject ruleStIndexed() throws RecognitionException {
         EObject current = null;
 
@@ -5574,33 +5088,33 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:1942:2: ( ( (otherlv_0= St | otherlv_1= Stb ) this_Indexed_2= ruleIndexed ) )
-            // InternalPds16asmParser.g:1943:2: ( (otherlv_0= St | otherlv_1= Stb ) this_Indexed_2= ruleIndexed )
+            // InternalPds16asmParser.g:1686:2: ( ( (otherlv_0= St | otherlv_1= Stb ) this_Indexed_2= ruleIndexed ) )
+            // InternalPds16asmParser.g:1687:2: ( (otherlv_0= St | otherlv_1= Stb ) this_Indexed_2= ruleIndexed )
             {
-            // InternalPds16asmParser.g:1943:2: ( (otherlv_0= St | otherlv_1= Stb ) this_Indexed_2= ruleIndexed )
-            // InternalPds16asmParser.g:1944:3: (otherlv_0= St | otherlv_1= Stb ) this_Indexed_2= ruleIndexed
+            // InternalPds16asmParser.g:1687:2: ( (otherlv_0= St | otherlv_1= Stb ) this_Indexed_2= ruleIndexed )
+            // InternalPds16asmParser.g:1688:3: (otherlv_0= St | otherlv_1= Stb ) this_Indexed_2= ruleIndexed
             {
-            // InternalPds16asmParser.g:1944:3: (otherlv_0= St | otherlv_1= Stb )
-            int alt32=2;
-            int LA32_0 = input.LA(1);
+            // InternalPds16asmParser.g:1688:3: (otherlv_0= St | otherlv_1= Stb )
+            int alt29=2;
+            int LA29_0 = input.LA(1);
 
-            if ( (LA32_0==St) ) {
-                alt32=1;
+            if ( (LA29_0==St) ) {
+                alt29=1;
             }
-            else if ( (LA32_0==Stb) ) {
-                alt32=2;
+            else if ( (LA29_0==Stb) ) {
+                alt29=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 32, 0, input);
+                    new NoViableAltException("", 29, 0, input);
 
                 throw nvae;
             }
-            switch (alt32) {
+            switch (alt29) {
                 case 1 :
-                    // InternalPds16asmParser.g:1945:4: otherlv_0= St
+                    // InternalPds16asmParser.g:1689:4: otherlv_0= St
                     {
-                    otherlv_0=(Token)match(input,St,FOLLOW_14); 
+                    otherlv_0=(Token)match(input,St,FOLLOW_15); 
 
                     				newLeafNode(otherlv_0, grammarAccess.getStIndexedAccess().getStKeyword_0_0());
                     			
@@ -5608,9 +5122,9 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:1950:4: otherlv_1= Stb
+                    // InternalPds16asmParser.g:1694:4: otherlv_1= Stb
                     {
-                    otherlv_1=(Token)match(input,Stb,FOLLOW_14); 
+                    otherlv_1=(Token)match(input,Stb,FOLLOW_15); 
 
                     				newLeafNode(otherlv_1, grammarAccess.getStIndexedAccess().getStbKeyword_0_1());
                     			
@@ -5655,7 +5169,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStBasedIndexed"
-    // InternalPds16asmParser.g:1967:1: entryRuleStBasedIndexed returns [EObject current=null] : iv_ruleStBasedIndexed= ruleStBasedIndexed EOF ;
+    // InternalPds16asmParser.g:1711:1: entryRuleStBasedIndexed returns [EObject current=null] : iv_ruleStBasedIndexed= ruleStBasedIndexed EOF ;
     public final EObject entryRuleStBasedIndexed() throws RecognitionException {
         EObject current = null;
 
@@ -5663,8 +5177,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:1967:55: (iv_ruleStBasedIndexed= ruleStBasedIndexed EOF )
-            // InternalPds16asmParser.g:1968:2: iv_ruleStBasedIndexed= ruleStBasedIndexed EOF
+            // InternalPds16asmParser.g:1711:55: (iv_ruleStBasedIndexed= ruleStBasedIndexed EOF )
+            // InternalPds16asmParser.g:1712:2: iv_ruleStBasedIndexed= ruleStBasedIndexed EOF
             {
              newCompositeNode(grammarAccess.getStBasedIndexedRule()); 
             pushFollow(FOLLOW_1);
@@ -5691,7 +5205,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStBasedIndexed"
-    // InternalPds16asmParser.g:1974:1: ruleStBasedIndexed returns [EObject current=null] : ( (otherlv_0= St | otherlv_1= Stb ) this_BasedIndexed_2= ruleBasedIndexed ) ;
+    // InternalPds16asmParser.g:1718:1: ruleStBasedIndexed returns [EObject current=null] : ( (otherlv_0= St | otherlv_1= Stb ) this_BasedIndexed_2= ruleBasedIndexed ) ;
     public final EObject ruleStBasedIndexed() throws RecognitionException {
         EObject current = null;
 
@@ -5704,33 +5218,33 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:1980:2: ( ( (otherlv_0= St | otherlv_1= Stb ) this_BasedIndexed_2= ruleBasedIndexed ) )
-            // InternalPds16asmParser.g:1981:2: ( (otherlv_0= St | otherlv_1= Stb ) this_BasedIndexed_2= ruleBasedIndexed )
+            // InternalPds16asmParser.g:1724:2: ( ( (otherlv_0= St | otherlv_1= Stb ) this_BasedIndexed_2= ruleBasedIndexed ) )
+            // InternalPds16asmParser.g:1725:2: ( (otherlv_0= St | otherlv_1= Stb ) this_BasedIndexed_2= ruleBasedIndexed )
             {
-            // InternalPds16asmParser.g:1981:2: ( (otherlv_0= St | otherlv_1= Stb ) this_BasedIndexed_2= ruleBasedIndexed )
-            // InternalPds16asmParser.g:1982:3: (otherlv_0= St | otherlv_1= Stb ) this_BasedIndexed_2= ruleBasedIndexed
+            // InternalPds16asmParser.g:1725:2: ( (otherlv_0= St | otherlv_1= Stb ) this_BasedIndexed_2= ruleBasedIndexed )
+            // InternalPds16asmParser.g:1726:3: (otherlv_0= St | otherlv_1= Stb ) this_BasedIndexed_2= ruleBasedIndexed
             {
-            // InternalPds16asmParser.g:1982:3: (otherlv_0= St | otherlv_1= Stb )
-            int alt33=2;
-            int LA33_0 = input.LA(1);
+            // InternalPds16asmParser.g:1726:3: (otherlv_0= St | otherlv_1= Stb )
+            int alt30=2;
+            int LA30_0 = input.LA(1);
 
-            if ( (LA33_0==St) ) {
-                alt33=1;
+            if ( (LA30_0==St) ) {
+                alt30=1;
             }
-            else if ( (LA33_0==Stb) ) {
-                alt33=2;
+            else if ( (LA30_0==Stb) ) {
+                alt30=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 33, 0, input);
+                    new NoViableAltException("", 30, 0, input);
 
                 throw nvae;
             }
-            switch (alt33) {
+            switch (alt30) {
                 case 1 :
-                    // InternalPds16asmParser.g:1983:4: otherlv_0= St
+                    // InternalPds16asmParser.g:1727:4: otherlv_0= St
                     {
-                    otherlv_0=(Token)match(input,St,FOLLOW_14); 
+                    otherlv_0=(Token)match(input,St,FOLLOW_15); 
 
                     				newLeafNode(otherlv_0, grammarAccess.getStBasedIndexedAccess().getStKeyword_0_0());
                     			
@@ -5738,9 +5252,9 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:1988:4: otherlv_1= Stb
+                    // InternalPds16asmParser.g:1732:4: otherlv_1= Stb
                     {
-                    otherlv_1=(Token)match(input,Stb,FOLLOW_14); 
+                    otherlv_1=(Token)match(input,Stb,FOLLOW_15); 
 
                     				newLeafNode(otherlv_1, grammarAccess.getStBasedIndexedAccess().getStbKeyword_0_1());
                     			
@@ -5785,7 +5299,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAdd"
-    // InternalPds16asmParser.g:2005:1: entryRuleAdd returns [EObject current=null] : iv_ruleAdd= ruleAdd EOF ;
+    // InternalPds16asmParser.g:1749:1: entryRuleAdd returns [EObject current=null] : iv_ruleAdd= ruleAdd EOF ;
     public final EObject entryRuleAdd() throws RecognitionException {
         EObject current = null;
 
@@ -5793,8 +5307,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:2005:44: (iv_ruleAdd= ruleAdd EOF )
-            // InternalPds16asmParser.g:2006:2: iv_ruleAdd= ruleAdd EOF
+            // InternalPds16asmParser.g:1749:44: (iv_ruleAdd= ruleAdd EOF )
+            // InternalPds16asmParser.g:1750:2: iv_ruleAdd= ruleAdd EOF
             {
              newCompositeNode(grammarAccess.getAddRule()); 
             pushFollow(FOLLOW_1);
@@ -5821,7 +5335,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAdd"
-    // InternalPds16asmParser.g:2012:1: ruleAdd returns [EObject current=null] : ( ( (otherlv_0= Add | otherlv_1= Addf | otherlv_2= Adc | otherlv_3= Adcf ) (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters ) ) | ( (otherlv_6= Inc | otherlv_7= Incf ) this_REGISTERS_8= RULE_REGISTERS ) ) ;
+    // InternalPds16asmParser.g:1756:1: ruleAdd returns [EObject current=null] : ( ( (otherlv_0= Add | otherlv_1= Addf | otherlv_2= Adc | otherlv_3= Adcf ) (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters ) ) | ( (otherlv_6= Inc | otherlv_7= Incf ) this_REGISTERS_8= RULE_REGISTERS ) ) ;
     public final EObject ruleAdd() throws RecognitionException {
         EObject current = null;
 
@@ -5841,67 +5355,67 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:2018:2: ( ( ( (otherlv_0= Add | otherlv_1= Addf | otherlv_2= Adc | otherlv_3= Adcf ) (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters ) ) | ( (otherlv_6= Inc | otherlv_7= Incf ) this_REGISTERS_8= RULE_REGISTERS ) ) )
-            // InternalPds16asmParser.g:2019:2: ( ( (otherlv_0= Add | otherlv_1= Addf | otherlv_2= Adc | otherlv_3= Adcf ) (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters ) ) | ( (otherlv_6= Inc | otherlv_7= Incf ) this_REGISTERS_8= RULE_REGISTERS ) )
+            // InternalPds16asmParser.g:1762:2: ( ( ( (otherlv_0= Add | otherlv_1= Addf | otherlv_2= Adc | otherlv_3= Adcf ) (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters ) ) | ( (otherlv_6= Inc | otherlv_7= Incf ) this_REGISTERS_8= RULE_REGISTERS ) ) )
+            // InternalPds16asmParser.g:1763:2: ( ( (otherlv_0= Add | otherlv_1= Addf | otherlv_2= Adc | otherlv_3= Adcf ) (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters ) ) | ( (otherlv_6= Inc | otherlv_7= Incf ) this_REGISTERS_8= RULE_REGISTERS ) )
             {
-            // InternalPds16asmParser.g:2019:2: ( ( (otherlv_0= Add | otherlv_1= Addf | otherlv_2= Adc | otherlv_3= Adcf ) (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters ) ) | ( (otherlv_6= Inc | otherlv_7= Incf ) this_REGISTERS_8= RULE_REGISTERS ) )
-            int alt37=2;
-            int LA37_0 = input.LA(1);
+            // InternalPds16asmParser.g:1763:2: ( ( (otherlv_0= Add | otherlv_1= Addf | otherlv_2= Adc | otherlv_3= Adcf ) (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters ) ) | ( (otherlv_6= Inc | otherlv_7= Incf ) this_REGISTERS_8= RULE_REGISTERS ) )
+            int alt34=2;
+            int LA34_0 = input.LA(1);
 
-            if ( ((LA37_0>=Adcf && LA37_0<=Addf)||(LA37_0>=Adc && LA37_0<=Add)) ) {
-                alt37=1;
+            if ( ((LA34_0>=Adcf && LA34_0<=Addf)||(LA34_0>=Adc && LA34_0<=Add)) ) {
+                alt34=1;
             }
-            else if ( (LA37_0==Incf||LA37_0==Inc) ) {
-                alt37=2;
+            else if ( (LA34_0==Incf||LA34_0==Inc) ) {
+                alt34=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 37, 0, input);
+                    new NoViableAltException("", 34, 0, input);
 
                 throw nvae;
             }
-            switch (alt37) {
+            switch (alt34) {
                 case 1 :
-                    // InternalPds16asmParser.g:2020:3: ( (otherlv_0= Add | otherlv_1= Addf | otherlv_2= Adc | otherlv_3= Adcf ) (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters ) )
+                    // InternalPds16asmParser.g:1764:3: ( (otherlv_0= Add | otherlv_1= Addf | otherlv_2= Adc | otherlv_3= Adcf ) (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters ) )
                     {
-                    // InternalPds16asmParser.g:2020:3: ( (otherlv_0= Add | otherlv_1= Addf | otherlv_2= Adc | otherlv_3= Adcf ) (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters ) )
-                    // InternalPds16asmParser.g:2021:4: (otherlv_0= Add | otherlv_1= Addf | otherlv_2= Adc | otherlv_3= Adcf ) (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters )
+                    // InternalPds16asmParser.g:1764:3: ( (otherlv_0= Add | otherlv_1= Addf | otherlv_2= Adc | otherlv_3= Adcf ) (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters ) )
+                    // InternalPds16asmParser.g:1765:4: (otherlv_0= Add | otherlv_1= Addf | otherlv_2= Adc | otherlv_3= Adcf ) (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters )
                     {
-                    // InternalPds16asmParser.g:2021:4: (otherlv_0= Add | otherlv_1= Addf | otherlv_2= Adc | otherlv_3= Adcf )
-                    int alt34=4;
+                    // InternalPds16asmParser.g:1765:4: (otherlv_0= Add | otherlv_1= Addf | otherlv_2= Adc | otherlv_3= Adcf )
+                    int alt31=4;
                     switch ( input.LA(1) ) {
                     case Add:
                         {
-                        alt34=1;
+                        alt31=1;
                         }
                         break;
                     case Addf:
                         {
-                        alt34=2;
+                        alt31=2;
                         }
                         break;
                     case Adc:
                         {
-                        alt34=3;
+                        alt31=3;
                         }
                         break;
                     case Adcf:
                         {
-                        alt34=4;
+                        alt31=4;
                         }
                         break;
                     default:
                         NoViableAltException nvae =
-                            new NoViableAltException("", 34, 0, input);
+                            new NoViableAltException("", 31, 0, input);
 
                         throw nvae;
                     }
 
-                    switch (alt34) {
+                    switch (alt31) {
                         case 1 :
-                            // InternalPds16asmParser.g:2022:5: otherlv_0= Add
+                            // InternalPds16asmParser.g:1766:5: otherlv_0= Add
                             {
-                            otherlv_0=(Token)match(input,Add,FOLLOW_14); 
+                            otherlv_0=(Token)match(input,Add,FOLLOW_15); 
 
                             					newLeafNode(otherlv_0, grammarAccess.getAddAccess().getAddKeyword_0_0_0());
                             				
@@ -5909,9 +5423,9 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // InternalPds16asmParser.g:2027:5: otherlv_1= Addf
+                            // InternalPds16asmParser.g:1771:5: otherlv_1= Addf
                             {
-                            otherlv_1=(Token)match(input,Addf,FOLLOW_14); 
+                            otherlv_1=(Token)match(input,Addf,FOLLOW_15); 
 
                             					newLeafNode(otherlv_1, grammarAccess.getAddAccess().getAddfKeyword_0_0_1());
                             				
@@ -5919,9 +5433,9 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 3 :
-                            // InternalPds16asmParser.g:2032:5: otherlv_2= Adc
+                            // InternalPds16asmParser.g:1776:5: otherlv_2= Adc
                             {
-                            otherlv_2=(Token)match(input,Adc,FOLLOW_14); 
+                            otherlv_2=(Token)match(input,Adc,FOLLOW_15); 
 
                             					newLeafNode(otherlv_2, grammarAccess.getAddAccess().getAdcKeyword_0_0_2());
                             				
@@ -5929,9 +5443,9 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 4 :
-                            // InternalPds16asmParser.g:2037:5: otherlv_3= Adcf
+                            // InternalPds16asmParser.g:1781:5: otherlv_3= Adcf
                             {
-                            otherlv_3=(Token)match(input,Adcf,FOLLOW_14); 
+                            otherlv_3=(Token)match(input,Adcf,FOLLOW_15); 
 
                             					newLeafNode(otherlv_3, grammarAccess.getAddAccess().getAdcfKeyword_0_0_3());
                             				
@@ -5941,65 +5455,65 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalPds16asmParser.g:2042:4: (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters )
-                    int alt35=2;
-                    int LA35_0 = input.LA(1);
+                    // InternalPds16asmParser.g:1786:4: (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters )
+                    int alt32=2;
+                    int LA32_0 = input.LA(1);
 
-                    if ( (LA35_0==RULE_REGISTERS) ) {
-                        int LA35_1 = input.LA(2);
+                    if ( (LA32_0==RULE_REGISTERS) ) {
+                        int LA32_1 = input.LA(2);
 
-                        if ( (LA35_1==Comma) ) {
-                            int LA35_2 = input.LA(3);
+                        if ( (LA32_1==Comma) ) {
+                            int LA32_2 = input.LA(3);
 
-                            if ( (LA35_2==RULE_REGISTERS) ) {
-                                int LA35_3 = input.LA(4);
+                            if ( (LA32_2==RULE_REGISTERS) ) {
+                                int LA32_3 = input.LA(4);
 
-                                if ( (LA35_3==Comma) ) {
-                                    int LA35_4 = input.LA(5);
+                                if ( (LA32_3==Comma) ) {
+                                    int LA32_4 = input.LA(5);
 
-                                    if ( (LA35_4==NumberSign) ) {
-                                        alt35=1;
+                                    if ( (LA32_4==RULE_REGISTERS) ) {
+                                        alt32=2;
                                     }
-                                    else if ( (LA35_4==RULE_REGISTERS) ) {
-                                        alt35=2;
+                                    else if ( (LA32_4==NumberSign) ) {
+                                        alt32=1;
                                     }
                                     else {
                                         NoViableAltException nvae =
-                                            new NoViableAltException("", 35, 4, input);
+                                            new NoViableAltException("", 32, 4, input);
 
                                         throw nvae;
                                     }
                                 }
                                 else {
                                     NoViableAltException nvae =
-                                        new NoViableAltException("", 35, 3, input);
+                                        new NoViableAltException("", 32, 3, input);
 
                                     throw nvae;
                                 }
                             }
                             else {
                                 NoViableAltException nvae =
-                                    new NoViableAltException("", 35, 2, input);
+                                    new NoViableAltException("", 32, 2, input);
 
                                 throw nvae;
                             }
                         }
                         else {
                             NoViableAltException nvae =
-                                new NoViableAltException("", 35, 1, input);
+                                new NoViableAltException("", 32, 1, input);
 
                             throw nvae;
                         }
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 35, 0, input);
+                            new NoViableAltException("", 32, 0, input);
 
                         throw nvae;
                     }
-                    switch (alt35) {
+                    switch (alt32) {
                         case 1 :
-                            // InternalPds16asmParser.g:2043:5: this_OperationsWithConstant_4= ruleOperationsWithConstant
+                            // InternalPds16asmParser.g:1787:5: this_OperationsWithConstant_4= ruleOperationsWithConstant
                             {
 
                             					newCompositeNode(grammarAccess.getAddAccess().getOperationsWithConstantParserRuleCall_0_1_0());
@@ -6017,7 +5531,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // InternalPds16asmParser.g:2052:5: this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters
+                            // InternalPds16asmParser.g:1796:5: this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters
                             {
 
                             					newCompositeNode(grammarAccess.getAddAccess().getOperationsWithTreeRegistersParserRuleCall_0_1_1());
@@ -6044,32 +5558,32 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:2063:3: ( (otherlv_6= Inc | otherlv_7= Incf ) this_REGISTERS_8= RULE_REGISTERS )
+                    // InternalPds16asmParser.g:1807:3: ( (otherlv_6= Inc | otherlv_7= Incf ) this_REGISTERS_8= RULE_REGISTERS )
                     {
-                    // InternalPds16asmParser.g:2063:3: ( (otherlv_6= Inc | otherlv_7= Incf ) this_REGISTERS_8= RULE_REGISTERS )
-                    // InternalPds16asmParser.g:2064:4: (otherlv_6= Inc | otherlv_7= Incf ) this_REGISTERS_8= RULE_REGISTERS
+                    // InternalPds16asmParser.g:1807:3: ( (otherlv_6= Inc | otherlv_7= Incf ) this_REGISTERS_8= RULE_REGISTERS )
+                    // InternalPds16asmParser.g:1808:4: (otherlv_6= Inc | otherlv_7= Incf ) this_REGISTERS_8= RULE_REGISTERS
                     {
-                    // InternalPds16asmParser.g:2064:4: (otherlv_6= Inc | otherlv_7= Incf )
-                    int alt36=2;
-                    int LA36_0 = input.LA(1);
+                    // InternalPds16asmParser.g:1808:4: (otherlv_6= Inc | otherlv_7= Incf )
+                    int alt33=2;
+                    int LA33_0 = input.LA(1);
 
-                    if ( (LA36_0==Inc) ) {
-                        alt36=1;
+                    if ( (LA33_0==Inc) ) {
+                        alt33=1;
                     }
-                    else if ( (LA36_0==Incf) ) {
-                        alt36=2;
+                    else if ( (LA33_0==Incf) ) {
+                        alt33=2;
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 36, 0, input);
+                            new NoViableAltException("", 33, 0, input);
 
                         throw nvae;
                     }
-                    switch (alt36) {
+                    switch (alt33) {
                         case 1 :
-                            // InternalPds16asmParser.g:2065:5: otherlv_6= Inc
+                            // InternalPds16asmParser.g:1809:5: otherlv_6= Inc
                             {
-                            otherlv_6=(Token)match(input,Inc,FOLLOW_14); 
+                            otherlv_6=(Token)match(input,Inc,FOLLOW_15); 
 
                             					newLeafNode(otherlv_6, grammarAccess.getAddAccess().getIncKeyword_1_0_0());
                             				
@@ -6077,9 +5591,9 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // InternalPds16asmParser.g:2070:5: otherlv_7= Incf
+                            // InternalPds16asmParser.g:1814:5: otherlv_7= Incf
                             {
-                            otherlv_7=(Token)match(input,Incf,FOLLOW_14); 
+                            otherlv_7=(Token)match(input,Incf,FOLLOW_15); 
 
                             					newLeafNode(otherlv_7, grammarAccess.getAddAccess().getIncfKeyword_1_0_1());
                             				
@@ -6122,7 +5636,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSub"
-    // InternalPds16asmParser.g:2084:1: entryRuleSub returns [EObject current=null] : iv_ruleSub= ruleSub EOF ;
+    // InternalPds16asmParser.g:1828:1: entryRuleSub returns [EObject current=null] : iv_ruleSub= ruleSub EOF ;
     public final EObject entryRuleSub() throws RecognitionException {
         EObject current = null;
 
@@ -6130,8 +5644,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:2084:44: (iv_ruleSub= ruleSub EOF )
-            // InternalPds16asmParser.g:2085:2: iv_ruleSub= ruleSub EOF
+            // InternalPds16asmParser.g:1828:44: (iv_ruleSub= ruleSub EOF )
+            // InternalPds16asmParser.g:1829:2: iv_ruleSub= ruleSub EOF
             {
              newCompositeNode(grammarAccess.getSubRule()); 
             pushFollow(FOLLOW_1);
@@ -6158,7 +5672,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSub"
-    // InternalPds16asmParser.g:2091:1: ruleSub returns [EObject current=null] : ( ( (otherlv_0= Sub | otherlv_1= Subf | otherlv_2= Sbb | otherlv_3= Sbbf ) (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters ) ) | (otherlv_6= Subr this_OperationsWithTreeRegisters_7= ruleOperationsWithTreeRegisters ) | ( (otherlv_8= Dec | otherlv_9= Decf ) this_REGISTERS_10= RULE_REGISTERS ) ) ;
+    // InternalPds16asmParser.g:1835:1: ruleSub returns [EObject current=null] : ( ( (otherlv_0= Sub | otherlv_1= Subf | otherlv_2= Sbb | otherlv_3= Sbbf ) (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters ) ) | (otherlv_6= Subr this_OperationsWithTreeRegisters_7= ruleOperationsWithTreeRegisters ) | ( (otherlv_8= Dec | otherlv_9= Decf ) this_REGISTERS_10= RULE_REGISTERS ) ) ;
     public final EObject ruleSub() throws RecognitionException {
         EObject current = null;
 
@@ -6181,80 +5695,80 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:2097:2: ( ( ( (otherlv_0= Sub | otherlv_1= Subf | otherlv_2= Sbb | otherlv_3= Sbbf ) (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters ) ) | (otherlv_6= Subr this_OperationsWithTreeRegisters_7= ruleOperationsWithTreeRegisters ) | ( (otherlv_8= Dec | otherlv_9= Decf ) this_REGISTERS_10= RULE_REGISTERS ) ) )
-            // InternalPds16asmParser.g:2098:2: ( ( (otherlv_0= Sub | otherlv_1= Subf | otherlv_2= Sbb | otherlv_3= Sbbf ) (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters ) ) | (otherlv_6= Subr this_OperationsWithTreeRegisters_7= ruleOperationsWithTreeRegisters ) | ( (otherlv_8= Dec | otherlv_9= Decf ) this_REGISTERS_10= RULE_REGISTERS ) )
+            // InternalPds16asmParser.g:1841:2: ( ( ( (otherlv_0= Sub | otherlv_1= Subf | otherlv_2= Sbb | otherlv_3= Sbbf ) (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters ) ) | (otherlv_6= Subr this_OperationsWithTreeRegisters_7= ruleOperationsWithTreeRegisters ) | ( (otherlv_8= Dec | otherlv_9= Decf ) this_REGISTERS_10= RULE_REGISTERS ) ) )
+            // InternalPds16asmParser.g:1842:2: ( ( (otherlv_0= Sub | otherlv_1= Subf | otherlv_2= Sbb | otherlv_3= Sbbf ) (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters ) ) | (otherlv_6= Subr this_OperationsWithTreeRegisters_7= ruleOperationsWithTreeRegisters ) | ( (otherlv_8= Dec | otherlv_9= Decf ) this_REGISTERS_10= RULE_REGISTERS ) )
             {
-            // InternalPds16asmParser.g:2098:2: ( ( (otherlv_0= Sub | otherlv_1= Subf | otherlv_2= Sbb | otherlv_3= Sbbf ) (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters ) ) | (otherlv_6= Subr this_OperationsWithTreeRegisters_7= ruleOperationsWithTreeRegisters ) | ( (otherlv_8= Dec | otherlv_9= Decf ) this_REGISTERS_10= RULE_REGISTERS ) )
-            int alt41=3;
+            // InternalPds16asmParser.g:1842:2: ( ( (otherlv_0= Sub | otherlv_1= Subf | otherlv_2= Sbb | otherlv_3= Sbbf ) (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters ) ) | (otherlv_6= Subr this_OperationsWithTreeRegisters_7= ruleOperationsWithTreeRegisters ) | ( (otherlv_8= Dec | otherlv_9= Decf ) this_REGISTERS_10= RULE_REGISTERS ) )
+            int alt38=3;
             switch ( input.LA(1) ) {
             case Sbbf:
             case Subf:
             case Sbb:
             case Sub:
                 {
-                alt41=1;
+                alt38=1;
                 }
                 break;
             case Subr:
                 {
-                alt41=2;
+                alt38=2;
                 }
                 break;
             case Decf:
             case Dec:
                 {
-                alt41=3;
+                alt38=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 41, 0, input);
+                    new NoViableAltException("", 38, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt41) {
+            switch (alt38) {
                 case 1 :
-                    // InternalPds16asmParser.g:2099:3: ( (otherlv_0= Sub | otherlv_1= Subf | otherlv_2= Sbb | otherlv_3= Sbbf ) (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters ) )
+                    // InternalPds16asmParser.g:1843:3: ( (otherlv_0= Sub | otherlv_1= Subf | otherlv_2= Sbb | otherlv_3= Sbbf ) (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters ) )
                     {
-                    // InternalPds16asmParser.g:2099:3: ( (otherlv_0= Sub | otherlv_1= Subf | otherlv_2= Sbb | otherlv_3= Sbbf ) (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters ) )
-                    // InternalPds16asmParser.g:2100:4: (otherlv_0= Sub | otherlv_1= Subf | otherlv_2= Sbb | otherlv_3= Sbbf ) (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters )
+                    // InternalPds16asmParser.g:1843:3: ( (otherlv_0= Sub | otherlv_1= Subf | otherlv_2= Sbb | otherlv_3= Sbbf ) (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters ) )
+                    // InternalPds16asmParser.g:1844:4: (otherlv_0= Sub | otherlv_1= Subf | otherlv_2= Sbb | otherlv_3= Sbbf ) (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters )
                     {
-                    // InternalPds16asmParser.g:2100:4: (otherlv_0= Sub | otherlv_1= Subf | otherlv_2= Sbb | otherlv_3= Sbbf )
-                    int alt38=4;
+                    // InternalPds16asmParser.g:1844:4: (otherlv_0= Sub | otherlv_1= Subf | otherlv_2= Sbb | otherlv_3= Sbbf )
+                    int alt35=4;
                     switch ( input.LA(1) ) {
                     case Sub:
                         {
-                        alt38=1;
+                        alt35=1;
                         }
                         break;
                     case Subf:
                         {
-                        alt38=2;
+                        alt35=2;
                         }
                         break;
                     case Sbb:
                         {
-                        alt38=3;
+                        alt35=3;
                         }
                         break;
                     case Sbbf:
                         {
-                        alt38=4;
+                        alt35=4;
                         }
                         break;
                     default:
                         NoViableAltException nvae =
-                            new NoViableAltException("", 38, 0, input);
+                            new NoViableAltException("", 35, 0, input);
 
                         throw nvae;
                     }
 
-                    switch (alt38) {
+                    switch (alt35) {
                         case 1 :
-                            // InternalPds16asmParser.g:2101:5: otherlv_0= Sub
+                            // InternalPds16asmParser.g:1845:5: otherlv_0= Sub
                             {
-                            otherlv_0=(Token)match(input,Sub,FOLLOW_14); 
+                            otherlv_0=(Token)match(input,Sub,FOLLOW_15); 
 
                             					newLeafNode(otherlv_0, grammarAccess.getSubAccess().getSubKeyword_0_0_0());
                             				
@@ -6262,9 +5776,9 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // InternalPds16asmParser.g:2106:5: otherlv_1= Subf
+                            // InternalPds16asmParser.g:1850:5: otherlv_1= Subf
                             {
-                            otherlv_1=(Token)match(input,Subf,FOLLOW_14); 
+                            otherlv_1=(Token)match(input,Subf,FOLLOW_15); 
 
                             					newLeafNode(otherlv_1, grammarAccess.getSubAccess().getSubfKeyword_0_0_1());
                             				
@@ -6272,9 +5786,9 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 3 :
-                            // InternalPds16asmParser.g:2111:5: otherlv_2= Sbb
+                            // InternalPds16asmParser.g:1855:5: otherlv_2= Sbb
                             {
-                            otherlv_2=(Token)match(input,Sbb,FOLLOW_14); 
+                            otherlv_2=(Token)match(input,Sbb,FOLLOW_15); 
 
                             					newLeafNode(otherlv_2, grammarAccess.getSubAccess().getSbbKeyword_0_0_2());
                             				
@@ -6282,9 +5796,9 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 4 :
-                            // InternalPds16asmParser.g:2116:5: otherlv_3= Sbbf
+                            // InternalPds16asmParser.g:1860:5: otherlv_3= Sbbf
                             {
-                            otherlv_3=(Token)match(input,Sbbf,FOLLOW_14); 
+                            otherlv_3=(Token)match(input,Sbbf,FOLLOW_15); 
 
                             					newLeafNode(otherlv_3, grammarAccess.getSubAccess().getSbbfKeyword_0_0_3());
                             				
@@ -6294,65 +5808,65 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalPds16asmParser.g:2121:4: (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters )
-                    int alt39=2;
-                    int LA39_0 = input.LA(1);
+                    // InternalPds16asmParser.g:1865:4: (this_OperationsWithConstant_4= ruleOperationsWithConstant | this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters )
+                    int alt36=2;
+                    int LA36_0 = input.LA(1);
 
-                    if ( (LA39_0==RULE_REGISTERS) ) {
-                        int LA39_1 = input.LA(2);
+                    if ( (LA36_0==RULE_REGISTERS) ) {
+                        int LA36_1 = input.LA(2);
 
-                        if ( (LA39_1==Comma) ) {
-                            int LA39_2 = input.LA(3);
+                        if ( (LA36_1==Comma) ) {
+                            int LA36_2 = input.LA(3);
 
-                            if ( (LA39_2==RULE_REGISTERS) ) {
-                                int LA39_3 = input.LA(4);
+                            if ( (LA36_2==RULE_REGISTERS) ) {
+                                int LA36_3 = input.LA(4);
 
-                                if ( (LA39_3==Comma) ) {
-                                    int LA39_4 = input.LA(5);
+                                if ( (LA36_3==Comma) ) {
+                                    int LA36_4 = input.LA(5);
 
-                                    if ( (LA39_4==RULE_REGISTERS) ) {
-                                        alt39=2;
+                                    if ( (LA36_4==NumberSign) ) {
+                                        alt36=1;
                                     }
-                                    else if ( (LA39_4==NumberSign) ) {
-                                        alt39=1;
+                                    else if ( (LA36_4==RULE_REGISTERS) ) {
+                                        alt36=2;
                                     }
                                     else {
                                         NoViableAltException nvae =
-                                            new NoViableAltException("", 39, 4, input);
+                                            new NoViableAltException("", 36, 4, input);
 
                                         throw nvae;
                                     }
                                 }
                                 else {
                                     NoViableAltException nvae =
-                                        new NoViableAltException("", 39, 3, input);
+                                        new NoViableAltException("", 36, 3, input);
 
                                     throw nvae;
                                 }
                             }
                             else {
                                 NoViableAltException nvae =
-                                    new NoViableAltException("", 39, 2, input);
+                                    new NoViableAltException("", 36, 2, input);
 
                                 throw nvae;
                             }
                         }
                         else {
                             NoViableAltException nvae =
-                                new NoViableAltException("", 39, 1, input);
+                                new NoViableAltException("", 36, 1, input);
 
                             throw nvae;
                         }
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 39, 0, input);
+                            new NoViableAltException("", 36, 0, input);
 
                         throw nvae;
                     }
-                    switch (alt39) {
+                    switch (alt36) {
                         case 1 :
-                            // InternalPds16asmParser.g:2122:5: this_OperationsWithConstant_4= ruleOperationsWithConstant
+                            // InternalPds16asmParser.g:1866:5: this_OperationsWithConstant_4= ruleOperationsWithConstant
                             {
 
                             					newCompositeNode(grammarAccess.getSubAccess().getOperationsWithConstantParserRuleCall_0_1_0());
@@ -6370,7 +5884,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // InternalPds16asmParser.g:2131:5: this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters
+                            // InternalPds16asmParser.g:1875:5: this_OperationsWithTreeRegisters_5= ruleOperationsWithTreeRegisters
                             {
 
                             					newCompositeNode(grammarAccess.getSubAccess().getOperationsWithTreeRegistersParserRuleCall_0_1_1());
@@ -6397,12 +5911,12 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:2142:3: (otherlv_6= Subr this_OperationsWithTreeRegisters_7= ruleOperationsWithTreeRegisters )
+                    // InternalPds16asmParser.g:1886:3: (otherlv_6= Subr this_OperationsWithTreeRegisters_7= ruleOperationsWithTreeRegisters )
                     {
-                    // InternalPds16asmParser.g:2142:3: (otherlv_6= Subr this_OperationsWithTreeRegisters_7= ruleOperationsWithTreeRegisters )
-                    // InternalPds16asmParser.g:2143:4: otherlv_6= Subr this_OperationsWithTreeRegisters_7= ruleOperationsWithTreeRegisters
+                    // InternalPds16asmParser.g:1886:3: (otherlv_6= Subr this_OperationsWithTreeRegisters_7= ruleOperationsWithTreeRegisters )
+                    // InternalPds16asmParser.g:1887:4: otherlv_6= Subr this_OperationsWithTreeRegisters_7= ruleOperationsWithTreeRegisters
                     {
-                    otherlv_6=(Token)match(input,Subr,FOLLOW_14); 
+                    otherlv_6=(Token)match(input,Subr,FOLLOW_15); 
 
                     				newLeafNode(otherlv_6, grammarAccess.getSubAccess().getSubrKeyword_1_0());
                     			
@@ -6425,32 +5939,32 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalPds16asmParser.g:2157:3: ( (otherlv_8= Dec | otherlv_9= Decf ) this_REGISTERS_10= RULE_REGISTERS )
+                    // InternalPds16asmParser.g:1901:3: ( (otherlv_8= Dec | otherlv_9= Decf ) this_REGISTERS_10= RULE_REGISTERS )
                     {
-                    // InternalPds16asmParser.g:2157:3: ( (otherlv_8= Dec | otherlv_9= Decf ) this_REGISTERS_10= RULE_REGISTERS )
-                    // InternalPds16asmParser.g:2158:4: (otherlv_8= Dec | otherlv_9= Decf ) this_REGISTERS_10= RULE_REGISTERS
+                    // InternalPds16asmParser.g:1901:3: ( (otherlv_8= Dec | otherlv_9= Decf ) this_REGISTERS_10= RULE_REGISTERS )
+                    // InternalPds16asmParser.g:1902:4: (otherlv_8= Dec | otherlv_9= Decf ) this_REGISTERS_10= RULE_REGISTERS
                     {
-                    // InternalPds16asmParser.g:2158:4: (otherlv_8= Dec | otherlv_9= Decf )
-                    int alt40=2;
-                    int LA40_0 = input.LA(1);
+                    // InternalPds16asmParser.g:1902:4: (otherlv_8= Dec | otherlv_9= Decf )
+                    int alt37=2;
+                    int LA37_0 = input.LA(1);
 
-                    if ( (LA40_0==Dec) ) {
-                        alt40=1;
+                    if ( (LA37_0==Dec) ) {
+                        alt37=1;
                     }
-                    else if ( (LA40_0==Decf) ) {
-                        alt40=2;
+                    else if ( (LA37_0==Decf) ) {
+                        alt37=2;
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 40, 0, input);
+                            new NoViableAltException("", 37, 0, input);
 
                         throw nvae;
                     }
-                    switch (alt40) {
+                    switch (alt37) {
                         case 1 :
-                            // InternalPds16asmParser.g:2159:5: otherlv_8= Dec
+                            // InternalPds16asmParser.g:1903:5: otherlv_8= Dec
                             {
-                            otherlv_8=(Token)match(input,Dec,FOLLOW_14); 
+                            otherlv_8=(Token)match(input,Dec,FOLLOW_15); 
 
                             					newLeafNode(otherlv_8, grammarAccess.getSubAccess().getDecKeyword_2_0_0());
                             				
@@ -6458,9 +5972,9 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // InternalPds16asmParser.g:2164:5: otherlv_9= Decf
+                            // InternalPds16asmParser.g:1908:5: otherlv_9= Decf
                             {
-                            otherlv_9=(Token)match(input,Decf,FOLLOW_14); 
+                            otherlv_9=(Token)match(input,Decf,FOLLOW_15); 
 
                             					newLeafNode(otherlv_9, grammarAccess.getSubAccess().getDecfKeyword_2_0_1());
                             				
@@ -6503,7 +6017,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAnl"
-    // InternalPds16asmParser.g:2178:1: entryRuleAnl returns [EObject current=null] : iv_ruleAnl= ruleAnl EOF ;
+    // InternalPds16asmParser.g:1922:1: entryRuleAnl returns [EObject current=null] : iv_ruleAnl= ruleAnl EOF ;
     public final EObject entryRuleAnl() throws RecognitionException {
         EObject current = null;
 
@@ -6511,8 +6025,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:2178:44: (iv_ruleAnl= ruleAnl EOF )
-            // InternalPds16asmParser.g:2179:2: iv_ruleAnl= ruleAnl EOF
+            // InternalPds16asmParser.g:1922:44: (iv_ruleAnl= ruleAnl EOF )
+            // InternalPds16asmParser.g:1923:2: iv_ruleAnl= ruleAnl EOF
             {
              newCompositeNode(grammarAccess.getAnlRule()); 
             pushFollow(FOLLOW_1);
@@ -6539,7 +6053,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAnl"
-    // InternalPds16asmParser.g:2185:1: ruleAnl returns [EObject current=null] : ( (otherlv_0= Anl | otherlv_1= Anlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters ) ;
+    // InternalPds16asmParser.g:1929:1: ruleAnl returns [EObject current=null] : ( (otherlv_0= Anl | otherlv_1= Anlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters ) ;
     public final EObject ruleAnl() throws RecognitionException {
         EObject current = null;
 
@@ -6552,33 +6066,33 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:2191:2: ( ( (otherlv_0= Anl | otherlv_1= Anlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters ) )
-            // InternalPds16asmParser.g:2192:2: ( (otherlv_0= Anl | otherlv_1= Anlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters )
+            // InternalPds16asmParser.g:1935:2: ( ( (otherlv_0= Anl | otherlv_1= Anlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters ) )
+            // InternalPds16asmParser.g:1936:2: ( (otherlv_0= Anl | otherlv_1= Anlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters )
             {
-            // InternalPds16asmParser.g:2192:2: ( (otherlv_0= Anl | otherlv_1= Anlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters )
-            // InternalPds16asmParser.g:2193:3: (otherlv_0= Anl | otherlv_1= Anlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters
+            // InternalPds16asmParser.g:1936:2: ( (otherlv_0= Anl | otherlv_1= Anlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters )
+            // InternalPds16asmParser.g:1937:3: (otherlv_0= Anl | otherlv_1= Anlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters
             {
-            // InternalPds16asmParser.g:2193:3: (otherlv_0= Anl | otherlv_1= Anlf )
-            int alt42=2;
-            int LA42_0 = input.LA(1);
+            // InternalPds16asmParser.g:1937:3: (otherlv_0= Anl | otherlv_1= Anlf )
+            int alt39=2;
+            int LA39_0 = input.LA(1);
 
-            if ( (LA42_0==Anl) ) {
-                alt42=1;
+            if ( (LA39_0==Anl) ) {
+                alt39=1;
             }
-            else if ( (LA42_0==Anlf) ) {
-                alt42=2;
+            else if ( (LA39_0==Anlf) ) {
+                alt39=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 42, 0, input);
+                    new NoViableAltException("", 39, 0, input);
 
                 throw nvae;
             }
-            switch (alt42) {
+            switch (alt39) {
                 case 1 :
-                    // InternalPds16asmParser.g:2194:4: otherlv_0= Anl
+                    // InternalPds16asmParser.g:1938:4: otherlv_0= Anl
                     {
-                    otherlv_0=(Token)match(input,Anl,FOLLOW_14); 
+                    otherlv_0=(Token)match(input,Anl,FOLLOW_15); 
 
                     				newLeafNode(otherlv_0, grammarAccess.getAnlAccess().getAnlKeyword_0_0());
                     			
@@ -6586,9 +6100,9 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:2199:4: otherlv_1= Anlf
+                    // InternalPds16asmParser.g:1943:4: otherlv_1= Anlf
                     {
-                    otherlv_1=(Token)match(input,Anlf,FOLLOW_14); 
+                    otherlv_1=(Token)match(input,Anlf,FOLLOW_15); 
 
                     				newLeafNode(otherlv_1, grammarAccess.getAnlAccess().getAnlfKeyword_0_1());
                     			
@@ -6633,7 +6147,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOrl"
-    // InternalPds16asmParser.g:2216:1: entryRuleOrl returns [EObject current=null] : iv_ruleOrl= ruleOrl EOF ;
+    // InternalPds16asmParser.g:1960:1: entryRuleOrl returns [EObject current=null] : iv_ruleOrl= ruleOrl EOF ;
     public final EObject entryRuleOrl() throws RecognitionException {
         EObject current = null;
 
@@ -6641,8 +6155,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:2216:44: (iv_ruleOrl= ruleOrl EOF )
-            // InternalPds16asmParser.g:2217:2: iv_ruleOrl= ruleOrl EOF
+            // InternalPds16asmParser.g:1960:44: (iv_ruleOrl= ruleOrl EOF )
+            // InternalPds16asmParser.g:1961:2: iv_ruleOrl= ruleOrl EOF
             {
              newCompositeNode(grammarAccess.getOrlRule()); 
             pushFollow(FOLLOW_1);
@@ -6669,7 +6183,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOrl"
-    // InternalPds16asmParser.g:2223:1: ruleOrl returns [EObject current=null] : ( ( (otherlv_0= Orl | otherlv_1= Orlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters ) | ( (otherlv_3= Mov | otherlv_4= Movf ) this_OperationWithTwoRegisters_5= ruleOperationWithTwoRegisters ) ) ;
+    // InternalPds16asmParser.g:1967:1: ruleOrl returns [EObject current=null] : ( ( (otherlv_0= Orl | otherlv_1= Orlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters ) | ( (otherlv_3= Mov | otherlv_4= Movf ) this_OperationWithTwoRegisters_5= ruleOperationWithTwoRegisters ) ) ;
     public final EObject ruleOrl() throws RecognitionException {
         EObject current = null;
 
@@ -6686,53 +6200,53 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:2229:2: ( ( ( (otherlv_0= Orl | otherlv_1= Orlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters ) | ( (otherlv_3= Mov | otherlv_4= Movf ) this_OperationWithTwoRegisters_5= ruleOperationWithTwoRegisters ) ) )
-            // InternalPds16asmParser.g:2230:2: ( ( (otherlv_0= Orl | otherlv_1= Orlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters ) | ( (otherlv_3= Mov | otherlv_4= Movf ) this_OperationWithTwoRegisters_5= ruleOperationWithTwoRegisters ) )
+            // InternalPds16asmParser.g:1973:2: ( ( ( (otherlv_0= Orl | otherlv_1= Orlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters ) | ( (otherlv_3= Mov | otherlv_4= Movf ) this_OperationWithTwoRegisters_5= ruleOperationWithTwoRegisters ) ) )
+            // InternalPds16asmParser.g:1974:2: ( ( (otherlv_0= Orl | otherlv_1= Orlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters ) | ( (otherlv_3= Mov | otherlv_4= Movf ) this_OperationWithTwoRegisters_5= ruleOperationWithTwoRegisters ) )
             {
-            // InternalPds16asmParser.g:2230:2: ( ( (otherlv_0= Orl | otherlv_1= Orlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters ) | ( (otherlv_3= Mov | otherlv_4= Movf ) this_OperationWithTwoRegisters_5= ruleOperationWithTwoRegisters ) )
-            int alt45=2;
-            int LA45_0 = input.LA(1);
+            // InternalPds16asmParser.g:1974:2: ( ( (otherlv_0= Orl | otherlv_1= Orlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters ) | ( (otherlv_3= Mov | otherlv_4= Movf ) this_OperationWithTwoRegisters_5= ruleOperationWithTwoRegisters ) )
+            int alt42=2;
+            int LA42_0 = input.LA(1);
 
-            if ( (LA45_0==Orlf||LA45_0==Orl) ) {
-                alt45=1;
+            if ( (LA42_0==Orlf||LA42_0==Orl) ) {
+                alt42=1;
             }
-            else if ( (LA45_0==Movf||LA45_0==Mov) ) {
-                alt45=2;
+            else if ( (LA42_0==Movf||LA42_0==Mov) ) {
+                alt42=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 45, 0, input);
+                    new NoViableAltException("", 42, 0, input);
 
                 throw nvae;
             }
-            switch (alt45) {
+            switch (alt42) {
                 case 1 :
-                    // InternalPds16asmParser.g:2231:3: ( (otherlv_0= Orl | otherlv_1= Orlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters )
+                    // InternalPds16asmParser.g:1975:3: ( (otherlv_0= Orl | otherlv_1= Orlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters )
                     {
-                    // InternalPds16asmParser.g:2231:3: ( (otherlv_0= Orl | otherlv_1= Orlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters )
-                    // InternalPds16asmParser.g:2232:4: (otherlv_0= Orl | otherlv_1= Orlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters
+                    // InternalPds16asmParser.g:1975:3: ( (otherlv_0= Orl | otherlv_1= Orlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters )
+                    // InternalPds16asmParser.g:1976:4: (otherlv_0= Orl | otherlv_1= Orlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters
                     {
-                    // InternalPds16asmParser.g:2232:4: (otherlv_0= Orl | otherlv_1= Orlf )
-                    int alt43=2;
-                    int LA43_0 = input.LA(1);
+                    // InternalPds16asmParser.g:1976:4: (otherlv_0= Orl | otherlv_1= Orlf )
+                    int alt40=2;
+                    int LA40_0 = input.LA(1);
 
-                    if ( (LA43_0==Orl) ) {
-                        alt43=1;
+                    if ( (LA40_0==Orl) ) {
+                        alt40=1;
                     }
-                    else if ( (LA43_0==Orlf) ) {
-                        alt43=2;
+                    else if ( (LA40_0==Orlf) ) {
+                        alt40=2;
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 43, 0, input);
+                            new NoViableAltException("", 40, 0, input);
 
                         throw nvae;
                     }
-                    switch (alt43) {
+                    switch (alt40) {
                         case 1 :
-                            // InternalPds16asmParser.g:2233:5: otherlv_0= Orl
+                            // InternalPds16asmParser.g:1977:5: otherlv_0= Orl
                             {
-                            otherlv_0=(Token)match(input,Orl,FOLLOW_14); 
+                            otherlv_0=(Token)match(input,Orl,FOLLOW_15); 
 
                             					newLeafNode(otherlv_0, grammarAccess.getOrlAccess().getOrlKeyword_0_0_0());
                             				
@@ -6740,9 +6254,9 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // InternalPds16asmParser.g:2238:5: otherlv_1= Orlf
+                            // InternalPds16asmParser.g:1982:5: otherlv_1= Orlf
                             {
-                            otherlv_1=(Token)match(input,Orlf,FOLLOW_14); 
+                            otherlv_1=(Token)match(input,Orlf,FOLLOW_15); 
 
                             					newLeafNode(otherlv_1, grammarAccess.getOrlAccess().getOrlfKeyword_0_0_1());
                             				
@@ -6771,32 +6285,32 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:2253:3: ( (otherlv_3= Mov | otherlv_4= Movf ) this_OperationWithTwoRegisters_5= ruleOperationWithTwoRegisters )
+                    // InternalPds16asmParser.g:1997:3: ( (otherlv_3= Mov | otherlv_4= Movf ) this_OperationWithTwoRegisters_5= ruleOperationWithTwoRegisters )
                     {
-                    // InternalPds16asmParser.g:2253:3: ( (otherlv_3= Mov | otherlv_4= Movf ) this_OperationWithTwoRegisters_5= ruleOperationWithTwoRegisters )
-                    // InternalPds16asmParser.g:2254:4: (otherlv_3= Mov | otherlv_4= Movf ) this_OperationWithTwoRegisters_5= ruleOperationWithTwoRegisters
+                    // InternalPds16asmParser.g:1997:3: ( (otherlv_3= Mov | otherlv_4= Movf ) this_OperationWithTwoRegisters_5= ruleOperationWithTwoRegisters )
+                    // InternalPds16asmParser.g:1998:4: (otherlv_3= Mov | otherlv_4= Movf ) this_OperationWithTwoRegisters_5= ruleOperationWithTwoRegisters
                     {
-                    // InternalPds16asmParser.g:2254:4: (otherlv_3= Mov | otherlv_4= Movf )
-                    int alt44=2;
-                    int LA44_0 = input.LA(1);
+                    // InternalPds16asmParser.g:1998:4: (otherlv_3= Mov | otherlv_4= Movf )
+                    int alt41=2;
+                    int LA41_0 = input.LA(1);
 
-                    if ( (LA44_0==Mov) ) {
-                        alt44=1;
+                    if ( (LA41_0==Mov) ) {
+                        alt41=1;
                     }
-                    else if ( (LA44_0==Movf) ) {
-                        alt44=2;
+                    else if ( (LA41_0==Movf) ) {
+                        alt41=2;
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 44, 0, input);
+                            new NoViableAltException("", 41, 0, input);
 
                         throw nvae;
                     }
-                    switch (alt44) {
+                    switch (alt41) {
                         case 1 :
-                            // InternalPds16asmParser.g:2255:5: otherlv_3= Mov
+                            // InternalPds16asmParser.g:1999:5: otherlv_3= Mov
                             {
-                            otherlv_3=(Token)match(input,Mov,FOLLOW_14); 
+                            otherlv_3=(Token)match(input,Mov,FOLLOW_15); 
 
                             					newLeafNode(otherlv_3, grammarAccess.getOrlAccess().getMovKeyword_1_0_0());
                             				
@@ -6804,9 +6318,9 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // InternalPds16asmParser.g:2260:5: otherlv_4= Movf
+                            // InternalPds16asmParser.g:2004:5: otherlv_4= Movf
                             {
-                            otherlv_4=(Token)match(input,Movf,FOLLOW_14); 
+                            otherlv_4=(Token)match(input,Movf,FOLLOW_15); 
 
                             					newLeafNode(otherlv_4, grammarAccess.getOrlAccess().getMovfKeyword_1_0_1());
                             				
@@ -6857,7 +6371,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXrl"
-    // InternalPds16asmParser.g:2278:1: entryRuleXrl returns [EObject current=null] : iv_ruleXrl= ruleXrl EOF ;
+    // InternalPds16asmParser.g:2022:1: entryRuleXrl returns [EObject current=null] : iv_ruleXrl= ruleXrl EOF ;
     public final EObject entryRuleXrl() throws RecognitionException {
         EObject current = null;
 
@@ -6865,8 +6379,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:2278:44: (iv_ruleXrl= ruleXrl EOF )
-            // InternalPds16asmParser.g:2279:2: iv_ruleXrl= ruleXrl EOF
+            // InternalPds16asmParser.g:2022:44: (iv_ruleXrl= ruleXrl EOF )
+            // InternalPds16asmParser.g:2023:2: iv_ruleXrl= ruleXrl EOF
             {
              newCompositeNode(grammarAccess.getXrlRule()); 
             pushFollow(FOLLOW_1);
@@ -6893,7 +6407,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXrl"
-    // InternalPds16asmParser.g:2285:1: ruleXrl returns [EObject current=null] : ( (otherlv_0= Xrl | otherlv_1= Xrlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters ) ;
+    // InternalPds16asmParser.g:2029:1: ruleXrl returns [EObject current=null] : ( (otherlv_0= Xrl | otherlv_1= Xrlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters ) ;
     public final EObject ruleXrl() throws RecognitionException {
         EObject current = null;
 
@@ -6906,33 +6420,33 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:2291:2: ( ( (otherlv_0= Xrl | otherlv_1= Xrlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters ) )
-            // InternalPds16asmParser.g:2292:2: ( (otherlv_0= Xrl | otherlv_1= Xrlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters )
+            // InternalPds16asmParser.g:2035:2: ( ( (otherlv_0= Xrl | otherlv_1= Xrlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters ) )
+            // InternalPds16asmParser.g:2036:2: ( (otherlv_0= Xrl | otherlv_1= Xrlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters )
             {
-            // InternalPds16asmParser.g:2292:2: ( (otherlv_0= Xrl | otherlv_1= Xrlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters )
-            // InternalPds16asmParser.g:2293:3: (otherlv_0= Xrl | otherlv_1= Xrlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters
+            // InternalPds16asmParser.g:2036:2: ( (otherlv_0= Xrl | otherlv_1= Xrlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters )
+            // InternalPds16asmParser.g:2037:3: (otherlv_0= Xrl | otherlv_1= Xrlf ) this_OperationsWithTreeRegisters_2= ruleOperationsWithTreeRegisters
             {
-            // InternalPds16asmParser.g:2293:3: (otherlv_0= Xrl | otherlv_1= Xrlf )
-            int alt46=2;
-            int LA46_0 = input.LA(1);
+            // InternalPds16asmParser.g:2037:3: (otherlv_0= Xrl | otherlv_1= Xrlf )
+            int alt43=2;
+            int LA43_0 = input.LA(1);
 
-            if ( (LA46_0==Xrl) ) {
-                alt46=1;
+            if ( (LA43_0==Xrl) ) {
+                alt43=1;
             }
-            else if ( (LA46_0==Xrlf) ) {
-                alt46=2;
+            else if ( (LA43_0==Xrlf) ) {
+                alt43=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 46, 0, input);
+                    new NoViableAltException("", 43, 0, input);
 
                 throw nvae;
             }
-            switch (alt46) {
+            switch (alt43) {
                 case 1 :
-                    // InternalPds16asmParser.g:2294:4: otherlv_0= Xrl
+                    // InternalPds16asmParser.g:2038:4: otherlv_0= Xrl
                     {
-                    otherlv_0=(Token)match(input,Xrl,FOLLOW_14); 
+                    otherlv_0=(Token)match(input,Xrl,FOLLOW_15); 
 
                     				newLeafNode(otherlv_0, grammarAccess.getXrlAccess().getXrlKeyword_0_0());
                     			
@@ -6940,9 +6454,9 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:2299:4: otherlv_1= Xrlf
+                    // InternalPds16asmParser.g:2043:4: otherlv_1= Xrlf
                     {
-                    otherlv_1=(Token)match(input,Xrlf,FOLLOW_14); 
+                    otherlv_1=(Token)match(input,Xrlf,FOLLOW_15); 
 
                     				newLeafNode(otherlv_1, grammarAccess.getXrlAccess().getXrlfKeyword_0_1());
                     			
@@ -6987,7 +6501,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNot"
-    // InternalPds16asmParser.g:2316:1: entryRuleNot returns [EObject current=null] : iv_ruleNot= ruleNot EOF ;
+    // InternalPds16asmParser.g:2060:1: entryRuleNot returns [EObject current=null] : iv_ruleNot= ruleNot EOF ;
     public final EObject entryRuleNot() throws RecognitionException {
         EObject current = null;
 
@@ -6995,8 +6509,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:2316:44: (iv_ruleNot= ruleNot EOF )
-            // InternalPds16asmParser.g:2317:2: iv_ruleNot= ruleNot EOF
+            // InternalPds16asmParser.g:2060:44: (iv_ruleNot= ruleNot EOF )
+            // InternalPds16asmParser.g:2061:2: iv_ruleNot= ruleNot EOF
             {
              newCompositeNode(grammarAccess.getNotRule()); 
             pushFollow(FOLLOW_1);
@@ -7023,7 +6537,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNot"
-    // InternalPds16asmParser.g:2323:1: ruleNot returns [EObject current=null] : ( (otherlv_0= Not | otherlv_1= Notf ) this_OperationWithTwoRegisters_2= ruleOperationWithTwoRegisters ) ;
+    // InternalPds16asmParser.g:2067:1: ruleNot returns [EObject current=null] : ( (otherlv_0= Not | otherlv_1= Notf ) this_OperationWithTwoRegisters_2= ruleOperationWithTwoRegisters ) ;
     public final EObject ruleNot() throws RecognitionException {
         EObject current = null;
 
@@ -7036,33 +6550,33 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:2329:2: ( ( (otherlv_0= Not | otherlv_1= Notf ) this_OperationWithTwoRegisters_2= ruleOperationWithTwoRegisters ) )
-            // InternalPds16asmParser.g:2330:2: ( (otherlv_0= Not | otherlv_1= Notf ) this_OperationWithTwoRegisters_2= ruleOperationWithTwoRegisters )
+            // InternalPds16asmParser.g:2073:2: ( ( (otherlv_0= Not | otherlv_1= Notf ) this_OperationWithTwoRegisters_2= ruleOperationWithTwoRegisters ) )
+            // InternalPds16asmParser.g:2074:2: ( (otherlv_0= Not | otherlv_1= Notf ) this_OperationWithTwoRegisters_2= ruleOperationWithTwoRegisters )
             {
-            // InternalPds16asmParser.g:2330:2: ( (otherlv_0= Not | otherlv_1= Notf ) this_OperationWithTwoRegisters_2= ruleOperationWithTwoRegisters )
-            // InternalPds16asmParser.g:2331:3: (otherlv_0= Not | otherlv_1= Notf ) this_OperationWithTwoRegisters_2= ruleOperationWithTwoRegisters
+            // InternalPds16asmParser.g:2074:2: ( (otherlv_0= Not | otherlv_1= Notf ) this_OperationWithTwoRegisters_2= ruleOperationWithTwoRegisters )
+            // InternalPds16asmParser.g:2075:3: (otherlv_0= Not | otherlv_1= Notf ) this_OperationWithTwoRegisters_2= ruleOperationWithTwoRegisters
             {
-            // InternalPds16asmParser.g:2331:3: (otherlv_0= Not | otherlv_1= Notf )
-            int alt47=2;
-            int LA47_0 = input.LA(1);
+            // InternalPds16asmParser.g:2075:3: (otherlv_0= Not | otherlv_1= Notf )
+            int alt44=2;
+            int LA44_0 = input.LA(1);
 
-            if ( (LA47_0==Not) ) {
-                alt47=1;
+            if ( (LA44_0==Not) ) {
+                alt44=1;
             }
-            else if ( (LA47_0==Notf) ) {
-                alt47=2;
+            else if ( (LA44_0==Notf) ) {
+                alt44=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 47, 0, input);
+                    new NoViableAltException("", 44, 0, input);
 
                 throw nvae;
             }
-            switch (alt47) {
+            switch (alt44) {
                 case 1 :
-                    // InternalPds16asmParser.g:2332:4: otherlv_0= Not
+                    // InternalPds16asmParser.g:2076:4: otherlv_0= Not
                     {
-                    otherlv_0=(Token)match(input,Not,FOLLOW_14); 
+                    otherlv_0=(Token)match(input,Not,FOLLOW_15); 
 
                     				newLeafNode(otherlv_0, grammarAccess.getNotAccess().getNotKeyword_0_0());
                     			
@@ -7070,9 +6584,9 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:2337:4: otherlv_1= Notf
+                    // InternalPds16asmParser.g:2081:4: otherlv_1= Notf
                     {
-                    otherlv_1=(Token)match(input,Notf,FOLLOW_14); 
+                    otherlv_1=(Token)match(input,Notf,FOLLOW_15); 
 
                     				newLeafNode(otherlv_1, grammarAccess.getNotAccess().getNotfKeyword_0_1());
                     			
@@ -7117,7 +6631,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleShl"
-    // InternalPds16asmParser.g:2354:1: entryRuleShl returns [EObject current=null] : iv_ruleShl= ruleShl EOF ;
+    // InternalPds16asmParser.g:2098:1: entryRuleShl returns [EObject current=null] : iv_ruleShl= ruleShl EOF ;
     public final EObject entryRuleShl() throws RecognitionException {
         EObject current = null;
 
@@ -7125,8 +6639,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:2354:44: (iv_ruleShl= ruleShl EOF )
-            // InternalPds16asmParser.g:2355:2: iv_ruleShl= ruleShl EOF
+            // InternalPds16asmParser.g:2098:44: (iv_ruleShl= ruleShl EOF )
+            // InternalPds16asmParser.g:2099:2: iv_ruleShl= ruleShl EOF
             {
              newCompositeNode(grammarAccess.getShlRule()); 
             pushFollow(FOLLOW_1);
@@ -7153,7 +6667,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleShl"
-    // InternalPds16asmParser.g:2361:1: ruleShl returns [EObject current=null] : (otherlv_0= Shl this_OperationShift_1= ruleOperationShift ) ;
+    // InternalPds16asmParser.g:2105:1: ruleShl returns [EObject current=null] : (otherlv_0= Shl this_OperationShift_1= ruleOperationShift ) ;
     public final EObject ruleShl() throws RecognitionException {
         EObject current = null;
 
@@ -7165,13 +6679,13 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:2367:2: ( (otherlv_0= Shl this_OperationShift_1= ruleOperationShift ) )
-            // InternalPds16asmParser.g:2368:2: (otherlv_0= Shl this_OperationShift_1= ruleOperationShift )
+            // InternalPds16asmParser.g:2111:2: ( (otherlv_0= Shl this_OperationShift_1= ruleOperationShift ) )
+            // InternalPds16asmParser.g:2112:2: (otherlv_0= Shl this_OperationShift_1= ruleOperationShift )
             {
-            // InternalPds16asmParser.g:2368:2: (otherlv_0= Shl this_OperationShift_1= ruleOperationShift )
-            // InternalPds16asmParser.g:2369:3: otherlv_0= Shl this_OperationShift_1= ruleOperationShift
+            // InternalPds16asmParser.g:2112:2: (otherlv_0= Shl this_OperationShift_1= ruleOperationShift )
+            // InternalPds16asmParser.g:2113:3: otherlv_0= Shl this_OperationShift_1= ruleOperationShift
             {
-            otherlv_0=(Token)match(input,Shl,FOLLOW_14); 
+            otherlv_0=(Token)match(input,Shl,FOLLOW_15); 
 
             			newLeafNode(otherlv_0, grammarAccess.getShlAccess().getShlKeyword_0());
             		
@@ -7210,7 +6724,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleShr"
-    // InternalPds16asmParser.g:2385:1: entryRuleShr returns [EObject current=null] : iv_ruleShr= ruleShr EOF ;
+    // InternalPds16asmParser.g:2129:1: entryRuleShr returns [EObject current=null] : iv_ruleShr= ruleShr EOF ;
     public final EObject entryRuleShr() throws RecognitionException {
         EObject current = null;
 
@@ -7218,8 +6732,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:2385:44: (iv_ruleShr= ruleShr EOF )
-            // InternalPds16asmParser.g:2386:2: iv_ruleShr= ruleShr EOF
+            // InternalPds16asmParser.g:2129:44: (iv_ruleShr= ruleShr EOF )
+            // InternalPds16asmParser.g:2130:2: iv_ruleShr= ruleShr EOF
             {
              newCompositeNode(grammarAccess.getShrRule()); 
             pushFollow(FOLLOW_1);
@@ -7246,7 +6760,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleShr"
-    // InternalPds16asmParser.g:2392:1: ruleShr returns [EObject current=null] : (otherlv_0= Shr this_OperationShift_1= ruleOperationShift ) ;
+    // InternalPds16asmParser.g:2136:1: ruleShr returns [EObject current=null] : (otherlv_0= Shr this_OperationShift_1= ruleOperationShift ) ;
     public final EObject ruleShr() throws RecognitionException {
         EObject current = null;
 
@@ -7258,13 +6772,13 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:2398:2: ( (otherlv_0= Shr this_OperationShift_1= ruleOperationShift ) )
-            // InternalPds16asmParser.g:2399:2: (otherlv_0= Shr this_OperationShift_1= ruleOperationShift )
+            // InternalPds16asmParser.g:2142:2: ( (otherlv_0= Shr this_OperationShift_1= ruleOperationShift ) )
+            // InternalPds16asmParser.g:2143:2: (otherlv_0= Shr this_OperationShift_1= ruleOperationShift )
             {
-            // InternalPds16asmParser.g:2399:2: (otherlv_0= Shr this_OperationShift_1= ruleOperationShift )
-            // InternalPds16asmParser.g:2400:3: otherlv_0= Shr this_OperationShift_1= ruleOperationShift
+            // InternalPds16asmParser.g:2143:2: (otherlv_0= Shr this_OperationShift_1= ruleOperationShift )
+            // InternalPds16asmParser.g:2144:3: otherlv_0= Shr this_OperationShift_1= ruleOperationShift
             {
-            otherlv_0=(Token)match(input,Shr,FOLLOW_14); 
+            otherlv_0=(Token)match(input,Shr,FOLLOW_15); 
 
             			newLeafNode(otherlv_0, grammarAccess.getShrAccess().getShrKeyword_0());
             		
@@ -7303,7 +6817,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRr"
-    // InternalPds16asmParser.g:2416:1: entryRuleRr returns [EObject current=null] : iv_ruleRr= ruleRr EOF ;
+    // InternalPds16asmParser.g:2160:1: entryRuleRr returns [EObject current=null] : iv_ruleRr= ruleRr EOF ;
     public final EObject entryRuleRr() throws RecognitionException {
         EObject current = null;
 
@@ -7311,8 +6825,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:2416:43: (iv_ruleRr= ruleRr EOF )
-            // InternalPds16asmParser.g:2417:2: iv_ruleRr= ruleRr EOF
+            // InternalPds16asmParser.g:2160:43: (iv_ruleRr= ruleRr EOF )
+            // InternalPds16asmParser.g:2161:2: iv_ruleRr= ruleRr EOF
             {
              newCompositeNode(grammarAccess.getRrRule()); 
             pushFollow(FOLLOW_1);
@@ -7339,7 +6853,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRr"
-    // InternalPds16asmParser.g:2423:1: ruleRr returns [EObject current=null] : ( (otherlv_0= Rrl | otherlv_1= Rrm ) this_OperationsWithConstant_2= ruleOperationsWithConstant ) ;
+    // InternalPds16asmParser.g:2167:1: ruleRr returns [EObject current=null] : ( (otherlv_0= Rrl | otherlv_1= Rrm ) this_OperationsWithConstant_2= ruleOperationsWithConstant ) ;
     public final EObject ruleRr() throws RecognitionException {
         EObject current = null;
 
@@ -7352,33 +6866,33 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:2429:2: ( ( (otherlv_0= Rrl | otherlv_1= Rrm ) this_OperationsWithConstant_2= ruleOperationsWithConstant ) )
-            // InternalPds16asmParser.g:2430:2: ( (otherlv_0= Rrl | otherlv_1= Rrm ) this_OperationsWithConstant_2= ruleOperationsWithConstant )
+            // InternalPds16asmParser.g:2173:2: ( ( (otherlv_0= Rrl | otherlv_1= Rrm ) this_OperationsWithConstant_2= ruleOperationsWithConstant ) )
+            // InternalPds16asmParser.g:2174:2: ( (otherlv_0= Rrl | otherlv_1= Rrm ) this_OperationsWithConstant_2= ruleOperationsWithConstant )
             {
-            // InternalPds16asmParser.g:2430:2: ( (otherlv_0= Rrl | otherlv_1= Rrm ) this_OperationsWithConstant_2= ruleOperationsWithConstant )
-            // InternalPds16asmParser.g:2431:3: (otherlv_0= Rrl | otherlv_1= Rrm ) this_OperationsWithConstant_2= ruleOperationsWithConstant
+            // InternalPds16asmParser.g:2174:2: ( (otherlv_0= Rrl | otherlv_1= Rrm ) this_OperationsWithConstant_2= ruleOperationsWithConstant )
+            // InternalPds16asmParser.g:2175:3: (otherlv_0= Rrl | otherlv_1= Rrm ) this_OperationsWithConstant_2= ruleOperationsWithConstant
             {
-            // InternalPds16asmParser.g:2431:3: (otherlv_0= Rrl | otherlv_1= Rrm )
-            int alt48=2;
-            int LA48_0 = input.LA(1);
+            // InternalPds16asmParser.g:2175:3: (otherlv_0= Rrl | otherlv_1= Rrm )
+            int alt45=2;
+            int LA45_0 = input.LA(1);
 
-            if ( (LA48_0==Rrl) ) {
-                alt48=1;
+            if ( (LA45_0==Rrl) ) {
+                alt45=1;
             }
-            else if ( (LA48_0==Rrm) ) {
-                alt48=2;
+            else if ( (LA45_0==Rrm) ) {
+                alt45=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 48, 0, input);
+                    new NoViableAltException("", 45, 0, input);
 
                 throw nvae;
             }
-            switch (alt48) {
+            switch (alt45) {
                 case 1 :
-                    // InternalPds16asmParser.g:2432:4: otherlv_0= Rrl
+                    // InternalPds16asmParser.g:2176:4: otherlv_0= Rrl
                     {
-                    otherlv_0=(Token)match(input,Rrl,FOLLOW_14); 
+                    otherlv_0=(Token)match(input,Rrl,FOLLOW_15); 
 
                     				newLeafNode(otherlv_0, grammarAccess.getRrAccess().getRrlKeyword_0_0());
                     			
@@ -7386,9 +6900,9 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:2437:4: otherlv_1= Rrm
+                    // InternalPds16asmParser.g:2181:4: otherlv_1= Rrm
                     {
-                    otherlv_1=(Token)match(input,Rrm,FOLLOW_14); 
+                    otherlv_1=(Token)match(input,Rrm,FOLLOW_15); 
 
                     				newLeafNode(otherlv_1, grammarAccess.getRrAccess().getRrmKeyword_0_1());
                     			
@@ -7433,7 +6947,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRc"
-    // InternalPds16asmParser.g:2454:1: entryRuleRc returns [EObject current=null] : iv_ruleRc= ruleRc EOF ;
+    // InternalPds16asmParser.g:2198:1: entryRuleRc returns [EObject current=null] : iv_ruleRc= ruleRc EOF ;
     public final EObject entryRuleRc() throws RecognitionException {
         EObject current = null;
 
@@ -7441,8 +6955,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:2454:43: (iv_ruleRc= ruleRc EOF )
-            // InternalPds16asmParser.g:2455:2: iv_ruleRc= ruleRc EOF
+            // InternalPds16asmParser.g:2198:43: (iv_ruleRc= ruleRc EOF )
+            // InternalPds16asmParser.g:2199:2: iv_ruleRc= ruleRc EOF
             {
              newCompositeNode(grammarAccess.getRcRule()); 
             pushFollow(FOLLOW_1);
@@ -7469,7 +6983,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRc"
-    // InternalPds16asmParser.g:2461:1: ruleRc returns [EObject current=null] : ( (otherlv_0= Rcr | otherlv_1= Rcl ) this_OperationWithTwoRegisters_2= ruleOperationWithTwoRegisters ) ;
+    // InternalPds16asmParser.g:2205:1: ruleRc returns [EObject current=null] : ( (otherlv_0= Rcr | otherlv_1= Rcl ) this_OperationWithTwoRegisters_2= ruleOperationWithTwoRegisters ) ;
     public final EObject ruleRc() throws RecognitionException {
         EObject current = null;
 
@@ -7482,33 +6996,33 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:2467:2: ( ( (otherlv_0= Rcr | otherlv_1= Rcl ) this_OperationWithTwoRegisters_2= ruleOperationWithTwoRegisters ) )
-            // InternalPds16asmParser.g:2468:2: ( (otherlv_0= Rcr | otherlv_1= Rcl ) this_OperationWithTwoRegisters_2= ruleOperationWithTwoRegisters )
+            // InternalPds16asmParser.g:2211:2: ( ( (otherlv_0= Rcr | otherlv_1= Rcl ) this_OperationWithTwoRegisters_2= ruleOperationWithTwoRegisters ) )
+            // InternalPds16asmParser.g:2212:2: ( (otherlv_0= Rcr | otherlv_1= Rcl ) this_OperationWithTwoRegisters_2= ruleOperationWithTwoRegisters )
             {
-            // InternalPds16asmParser.g:2468:2: ( (otherlv_0= Rcr | otherlv_1= Rcl ) this_OperationWithTwoRegisters_2= ruleOperationWithTwoRegisters )
-            // InternalPds16asmParser.g:2469:3: (otherlv_0= Rcr | otherlv_1= Rcl ) this_OperationWithTwoRegisters_2= ruleOperationWithTwoRegisters
+            // InternalPds16asmParser.g:2212:2: ( (otherlv_0= Rcr | otherlv_1= Rcl ) this_OperationWithTwoRegisters_2= ruleOperationWithTwoRegisters )
+            // InternalPds16asmParser.g:2213:3: (otherlv_0= Rcr | otherlv_1= Rcl ) this_OperationWithTwoRegisters_2= ruleOperationWithTwoRegisters
             {
-            // InternalPds16asmParser.g:2469:3: (otherlv_0= Rcr | otherlv_1= Rcl )
-            int alt49=2;
-            int LA49_0 = input.LA(1);
+            // InternalPds16asmParser.g:2213:3: (otherlv_0= Rcr | otherlv_1= Rcl )
+            int alt46=2;
+            int LA46_0 = input.LA(1);
 
-            if ( (LA49_0==Rcr) ) {
-                alt49=1;
+            if ( (LA46_0==Rcr) ) {
+                alt46=1;
             }
-            else if ( (LA49_0==Rcl) ) {
-                alt49=2;
+            else if ( (LA46_0==Rcl) ) {
+                alt46=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 49, 0, input);
+                    new NoViableAltException("", 46, 0, input);
 
                 throw nvae;
             }
-            switch (alt49) {
+            switch (alt46) {
                 case 1 :
-                    // InternalPds16asmParser.g:2470:4: otherlv_0= Rcr
+                    // InternalPds16asmParser.g:2214:4: otherlv_0= Rcr
                     {
-                    otherlv_0=(Token)match(input,Rcr,FOLLOW_14); 
+                    otherlv_0=(Token)match(input,Rcr,FOLLOW_15); 
 
                     				newLeafNode(otherlv_0, grammarAccess.getRcAccess().getRcrKeyword_0_0());
                     			
@@ -7516,9 +7030,9 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:2475:4: otherlv_1= Rcl
+                    // InternalPds16asmParser.g:2219:4: otherlv_1= Rcl
                     {
-                    otherlv_1=(Token)match(input,Rcl,FOLLOW_14); 
+                    otherlv_1=(Token)match(input,Rcl,FOLLOW_15); 
 
                     				newLeafNode(otherlv_1, grammarAccess.getRcAccess().getRclKeyword_0_1());
                     			
@@ -7563,7 +7077,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleJumpOp"
-    // InternalPds16asmParser.g:2492:1: entryRuleJumpOp returns [EObject current=null] : iv_ruleJumpOp= ruleJumpOp EOF ;
+    // InternalPds16asmParser.g:2236:1: entryRuleJumpOp returns [EObject current=null] : iv_ruleJumpOp= ruleJumpOp EOF ;
     public final EObject entryRuleJumpOp() throws RecognitionException {
         EObject current = null;
 
@@ -7571,8 +7085,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:2492:47: (iv_ruleJumpOp= ruleJumpOp EOF )
-            // InternalPds16asmParser.g:2493:2: iv_ruleJumpOp= ruleJumpOp EOF
+            // InternalPds16asmParser.g:2236:47: (iv_ruleJumpOp= ruleJumpOp EOF )
+            // InternalPds16asmParser.g:2237:2: iv_ruleJumpOp= ruleJumpOp EOF
             {
              newCompositeNode(grammarAccess.getJumpOpRule()); 
             pushFollow(FOLLOW_1);
@@ -7599,255 +7113,346 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleJumpOp"
-    // InternalPds16asmParser.g:2499:1: ruleJumpOp returns [EObject current=null] : ( (otherlv_0= Jz | otherlv_1= Je | otherlv_2= Jnz | otherlv_3= Jne | otherlv_4= Jc | otherlv_5= Jbl | otherlv_6= Jnc | otherlv_7= Jae | otherlv_8= Jmp | otherlv_9= Jmpl ) (this_OperationWithOffset_10= ruleOperationWithOffset | ( (lv_op_11_0= RULE_ID ) ) | otherlv_12= DollarSign ) ) ;
+    // InternalPds16asmParser.g:2243:1: ruleJumpOp returns [EObject current=null] : ( ( ( (lv_tag_0_1= Jz | lv_tag_0_2= Je | lv_tag_0_3= Jnz | lv_tag_0_4= Jne | lv_tag_0_5= Jc | lv_tag_0_6= Jbl | lv_tag_0_7= Jnc | lv_tag_0_8= Jae | lv_tag_0_9= Jmp | lv_tag_0_10= Jmpl ) ) ) ( ( (lv_opOff_1_0= ruleOperationWithOffset ) ) | ( (lv_opId_2_0= RULE_ID ) ) | otherlv_3= DollarSign ) ) ;
     public final EObject ruleJumpOp() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_0=null;
-        Token otherlv_1=null;
-        Token otherlv_2=null;
+        Token lv_tag_0_1=null;
+        Token lv_tag_0_2=null;
+        Token lv_tag_0_3=null;
+        Token lv_tag_0_4=null;
+        Token lv_tag_0_5=null;
+        Token lv_tag_0_6=null;
+        Token lv_tag_0_7=null;
+        Token lv_tag_0_8=null;
+        Token lv_tag_0_9=null;
+        Token lv_tag_0_10=null;
+        Token lv_opId_2_0=null;
         Token otherlv_3=null;
-        Token otherlv_4=null;
-        Token otherlv_5=null;
-        Token otherlv_6=null;
-        Token otherlv_7=null;
-        Token otherlv_8=null;
-        Token otherlv_9=null;
-        Token lv_op_11_0=null;
-        Token otherlv_12=null;
-        EObject this_OperationWithOffset_10 = null;
+        EObject lv_opOff_1_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:2505:2: ( ( (otherlv_0= Jz | otherlv_1= Je | otherlv_2= Jnz | otherlv_3= Jne | otherlv_4= Jc | otherlv_5= Jbl | otherlv_6= Jnc | otherlv_7= Jae | otherlv_8= Jmp | otherlv_9= Jmpl ) (this_OperationWithOffset_10= ruleOperationWithOffset | ( (lv_op_11_0= RULE_ID ) ) | otherlv_12= DollarSign ) ) )
-            // InternalPds16asmParser.g:2506:2: ( (otherlv_0= Jz | otherlv_1= Je | otherlv_2= Jnz | otherlv_3= Jne | otherlv_4= Jc | otherlv_5= Jbl | otherlv_6= Jnc | otherlv_7= Jae | otherlv_8= Jmp | otherlv_9= Jmpl ) (this_OperationWithOffset_10= ruleOperationWithOffset | ( (lv_op_11_0= RULE_ID ) ) | otherlv_12= DollarSign ) )
+            // InternalPds16asmParser.g:2249:2: ( ( ( ( (lv_tag_0_1= Jz | lv_tag_0_2= Je | lv_tag_0_3= Jnz | lv_tag_0_4= Jne | lv_tag_0_5= Jc | lv_tag_0_6= Jbl | lv_tag_0_7= Jnc | lv_tag_0_8= Jae | lv_tag_0_9= Jmp | lv_tag_0_10= Jmpl ) ) ) ( ( (lv_opOff_1_0= ruleOperationWithOffset ) ) | ( (lv_opId_2_0= RULE_ID ) ) | otherlv_3= DollarSign ) ) )
+            // InternalPds16asmParser.g:2250:2: ( ( ( (lv_tag_0_1= Jz | lv_tag_0_2= Je | lv_tag_0_3= Jnz | lv_tag_0_4= Jne | lv_tag_0_5= Jc | lv_tag_0_6= Jbl | lv_tag_0_7= Jnc | lv_tag_0_8= Jae | lv_tag_0_9= Jmp | lv_tag_0_10= Jmpl ) ) ) ( ( (lv_opOff_1_0= ruleOperationWithOffset ) ) | ( (lv_opId_2_0= RULE_ID ) ) | otherlv_3= DollarSign ) )
             {
-            // InternalPds16asmParser.g:2506:2: ( (otherlv_0= Jz | otherlv_1= Je | otherlv_2= Jnz | otherlv_3= Jne | otherlv_4= Jc | otherlv_5= Jbl | otherlv_6= Jnc | otherlv_7= Jae | otherlv_8= Jmp | otherlv_9= Jmpl ) (this_OperationWithOffset_10= ruleOperationWithOffset | ( (lv_op_11_0= RULE_ID ) ) | otherlv_12= DollarSign ) )
-            // InternalPds16asmParser.g:2507:3: (otherlv_0= Jz | otherlv_1= Je | otherlv_2= Jnz | otherlv_3= Jne | otherlv_4= Jc | otherlv_5= Jbl | otherlv_6= Jnc | otherlv_7= Jae | otherlv_8= Jmp | otherlv_9= Jmpl ) (this_OperationWithOffset_10= ruleOperationWithOffset | ( (lv_op_11_0= RULE_ID ) ) | otherlv_12= DollarSign )
+            // InternalPds16asmParser.g:2250:2: ( ( ( (lv_tag_0_1= Jz | lv_tag_0_2= Je | lv_tag_0_3= Jnz | lv_tag_0_4= Jne | lv_tag_0_5= Jc | lv_tag_0_6= Jbl | lv_tag_0_7= Jnc | lv_tag_0_8= Jae | lv_tag_0_9= Jmp | lv_tag_0_10= Jmpl ) ) ) ( ( (lv_opOff_1_0= ruleOperationWithOffset ) ) | ( (lv_opId_2_0= RULE_ID ) ) | otherlv_3= DollarSign ) )
+            // InternalPds16asmParser.g:2251:3: ( ( (lv_tag_0_1= Jz | lv_tag_0_2= Je | lv_tag_0_3= Jnz | lv_tag_0_4= Jne | lv_tag_0_5= Jc | lv_tag_0_6= Jbl | lv_tag_0_7= Jnc | lv_tag_0_8= Jae | lv_tag_0_9= Jmp | lv_tag_0_10= Jmpl ) ) ) ( ( (lv_opOff_1_0= ruleOperationWithOffset ) ) | ( (lv_opId_2_0= RULE_ID ) ) | otherlv_3= DollarSign )
             {
-            // InternalPds16asmParser.g:2507:3: (otherlv_0= Jz | otherlv_1= Je | otherlv_2= Jnz | otherlv_3= Jne | otherlv_4= Jc | otherlv_5= Jbl | otherlv_6= Jnc | otherlv_7= Jae | otherlv_8= Jmp | otherlv_9= Jmpl )
-            int alt50=10;
+            // InternalPds16asmParser.g:2251:3: ( ( (lv_tag_0_1= Jz | lv_tag_0_2= Je | lv_tag_0_3= Jnz | lv_tag_0_4= Jne | lv_tag_0_5= Jc | lv_tag_0_6= Jbl | lv_tag_0_7= Jnc | lv_tag_0_8= Jae | lv_tag_0_9= Jmp | lv_tag_0_10= Jmpl ) ) )
+            // InternalPds16asmParser.g:2252:4: ( (lv_tag_0_1= Jz | lv_tag_0_2= Je | lv_tag_0_3= Jnz | lv_tag_0_4= Jne | lv_tag_0_5= Jc | lv_tag_0_6= Jbl | lv_tag_0_7= Jnc | lv_tag_0_8= Jae | lv_tag_0_9= Jmp | lv_tag_0_10= Jmpl ) )
+            {
+            // InternalPds16asmParser.g:2252:4: ( (lv_tag_0_1= Jz | lv_tag_0_2= Je | lv_tag_0_3= Jnz | lv_tag_0_4= Jne | lv_tag_0_5= Jc | lv_tag_0_6= Jbl | lv_tag_0_7= Jnc | lv_tag_0_8= Jae | lv_tag_0_9= Jmp | lv_tag_0_10= Jmpl ) )
+            // InternalPds16asmParser.g:2253:5: (lv_tag_0_1= Jz | lv_tag_0_2= Je | lv_tag_0_3= Jnz | lv_tag_0_4= Jne | lv_tag_0_5= Jc | lv_tag_0_6= Jbl | lv_tag_0_7= Jnc | lv_tag_0_8= Jae | lv_tag_0_9= Jmp | lv_tag_0_10= Jmpl )
+            {
+            // InternalPds16asmParser.g:2253:5: (lv_tag_0_1= Jz | lv_tag_0_2= Je | lv_tag_0_3= Jnz | lv_tag_0_4= Jne | lv_tag_0_5= Jc | lv_tag_0_6= Jbl | lv_tag_0_7= Jnc | lv_tag_0_8= Jae | lv_tag_0_9= Jmp | lv_tag_0_10= Jmpl )
+            int alt47=10;
             switch ( input.LA(1) ) {
             case Jz:
                 {
-                alt50=1;
+                alt47=1;
                 }
                 break;
             case Je:
                 {
-                alt50=2;
+                alt47=2;
                 }
                 break;
             case Jnz:
                 {
-                alt50=3;
+                alt47=3;
                 }
                 break;
             case Jne:
                 {
-                alt50=4;
+                alt47=4;
                 }
                 break;
             case Jc:
                 {
-                alt50=5;
+                alt47=5;
                 }
                 break;
             case Jbl:
                 {
-                alt50=6;
+                alt47=6;
                 }
                 break;
             case Jnc:
                 {
-                alt50=7;
+                alt47=7;
                 }
                 break;
             case Jae:
                 {
-                alt50=8;
+                alt47=8;
                 }
                 break;
             case Jmp:
                 {
-                alt50=9;
+                alt47=9;
                 }
                 break;
             case Jmpl:
                 {
-                alt50=10;
+                alt47=10;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 50, 0, input);
+                    new NoViableAltException("", 47, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt50) {
+            switch (alt47) {
                 case 1 :
-                    // InternalPds16asmParser.g:2508:4: otherlv_0= Jz
+                    // InternalPds16asmParser.g:2254:6: lv_tag_0_1= Jz
                     {
-                    otherlv_0=(Token)match(input,Jz,FOLLOW_15); 
+                    lv_tag_0_1=(Token)match(input,Jz,FOLLOW_16); 
 
-                    				newLeafNode(otherlv_0, grammarAccess.getJumpOpAccess().getJzKeyword_0_0());
-                    			
+                    						newLeafNode(lv_tag_0_1, grammarAccess.getJumpOpAccess().getTagJzKeyword_0_0_0());
+                    					
+
+                    						if (current==null) {
+                    							current = createModelElement(grammarAccess.getJumpOpRule());
+                    						}
+                    						setWithLastConsumed(current, "tag", lv_tag_0_1, null);
+                    					
 
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:2513:4: otherlv_1= Je
+                    // InternalPds16asmParser.g:2265:6: lv_tag_0_2= Je
                     {
-                    otherlv_1=(Token)match(input,Je,FOLLOW_15); 
+                    lv_tag_0_2=(Token)match(input,Je,FOLLOW_16); 
 
-                    				newLeafNode(otherlv_1, grammarAccess.getJumpOpAccess().getJeKeyword_0_1());
-                    			
+                    						newLeafNode(lv_tag_0_2, grammarAccess.getJumpOpAccess().getTagJeKeyword_0_0_1());
+                    					
+
+                    						if (current==null) {
+                    							current = createModelElement(grammarAccess.getJumpOpRule());
+                    						}
+                    						setWithLastConsumed(current, "tag", lv_tag_0_2, null);
+                    					
 
                     }
                     break;
                 case 3 :
-                    // InternalPds16asmParser.g:2518:4: otherlv_2= Jnz
+                    // InternalPds16asmParser.g:2276:6: lv_tag_0_3= Jnz
                     {
-                    otherlv_2=(Token)match(input,Jnz,FOLLOW_15); 
+                    lv_tag_0_3=(Token)match(input,Jnz,FOLLOW_16); 
 
-                    				newLeafNode(otherlv_2, grammarAccess.getJumpOpAccess().getJnzKeyword_0_2());
-                    			
+                    						newLeafNode(lv_tag_0_3, grammarAccess.getJumpOpAccess().getTagJnzKeyword_0_0_2());
+                    					
+
+                    						if (current==null) {
+                    							current = createModelElement(grammarAccess.getJumpOpRule());
+                    						}
+                    						setWithLastConsumed(current, "tag", lv_tag_0_3, null);
+                    					
 
                     }
                     break;
                 case 4 :
-                    // InternalPds16asmParser.g:2523:4: otherlv_3= Jne
+                    // InternalPds16asmParser.g:2287:6: lv_tag_0_4= Jne
                     {
-                    otherlv_3=(Token)match(input,Jne,FOLLOW_15); 
+                    lv_tag_0_4=(Token)match(input,Jne,FOLLOW_16); 
 
-                    				newLeafNode(otherlv_3, grammarAccess.getJumpOpAccess().getJneKeyword_0_3());
-                    			
+                    						newLeafNode(lv_tag_0_4, grammarAccess.getJumpOpAccess().getTagJneKeyword_0_0_3());
+                    					
+
+                    						if (current==null) {
+                    							current = createModelElement(grammarAccess.getJumpOpRule());
+                    						}
+                    						setWithLastConsumed(current, "tag", lv_tag_0_4, null);
+                    					
 
                     }
                     break;
                 case 5 :
-                    // InternalPds16asmParser.g:2528:4: otherlv_4= Jc
+                    // InternalPds16asmParser.g:2298:6: lv_tag_0_5= Jc
                     {
-                    otherlv_4=(Token)match(input,Jc,FOLLOW_15); 
+                    lv_tag_0_5=(Token)match(input,Jc,FOLLOW_16); 
 
-                    				newLeafNode(otherlv_4, grammarAccess.getJumpOpAccess().getJcKeyword_0_4());
-                    			
+                    						newLeafNode(lv_tag_0_5, grammarAccess.getJumpOpAccess().getTagJcKeyword_0_0_4());
+                    					
+
+                    						if (current==null) {
+                    							current = createModelElement(grammarAccess.getJumpOpRule());
+                    						}
+                    						setWithLastConsumed(current, "tag", lv_tag_0_5, null);
+                    					
 
                     }
                     break;
                 case 6 :
-                    // InternalPds16asmParser.g:2533:4: otherlv_5= Jbl
+                    // InternalPds16asmParser.g:2309:6: lv_tag_0_6= Jbl
                     {
-                    otherlv_5=(Token)match(input,Jbl,FOLLOW_15); 
+                    lv_tag_0_6=(Token)match(input,Jbl,FOLLOW_16); 
 
-                    				newLeafNode(otherlv_5, grammarAccess.getJumpOpAccess().getJblKeyword_0_5());
-                    			
+                    						newLeafNode(lv_tag_0_6, grammarAccess.getJumpOpAccess().getTagJblKeyword_0_0_5());
+                    					
+
+                    						if (current==null) {
+                    							current = createModelElement(grammarAccess.getJumpOpRule());
+                    						}
+                    						setWithLastConsumed(current, "tag", lv_tag_0_6, null);
+                    					
 
                     }
                     break;
                 case 7 :
-                    // InternalPds16asmParser.g:2538:4: otherlv_6= Jnc
+                    // InternalPds16asmParser.g:2320:6: lv_tag_0_7= Jnc
                     {
-                    otherlv_6=(Token)match(input,Jnc,FOLLOW_15); 
+                    lv_tag_0_7=(Token)match(input,Jnc,FOLLOW_16); 
 
-                    				newLeafNode(otherlv_6, grammarAccess.getJumpOpAccess().getJncKeyword_0_6());
-                    			
+                    						newLeafNode(lv_tag_0_7, grammarAccess.getJumpOpAccess().getTagJncKeyword_0_0_6());
+                    					
+
+                    						if (current==null) {
+                    							current = createModelElement(grammarAccess.getJumpOpRule());
+                    						}
+                    						setWithLastConsumed(current, "tag", lv_tag_0_7, null);
+                    					
 
                     }
                     break;
                 case 8 :
-                    // InternalPds16asmParser.g:2543:4: otherlv_7= Jae
+                    // InternalPds16asmParser.g:2331:6: lv_tag_0_8= Jae
                     {
-                    otherlv_7=(Token)match(input,Jae,FOLLOW_15); 
+                    lv_tag_0_8=(Token)match(input,Jae,FOLLOW_16); 
 
-                    				newLeafNode(otherlv_7, grammarAccess.getJumpOpAccess().getJaeKeyword_0_7());
-                    			
+                    						newLeafNode(lv_tag_0_8, grammarAccess.getJumpOpAccess().getTagJaeKeyword_0_0_7());
+                    					
+
+                    						if (current==null) {
+                    							current = createModelElement(grammarAccess.getJumpOpRule());
+                    						}
+                    						setWithLastConsumed(current, "tag", lv_tag_0_8, null);
+                    					
 
                     }
                     break;
                 case 9 :
-                    // InternalPds16asmParser.g:2548:4: otherlv_8= Jmp
+                    // InternalPds16asmParser.g:2342:6: lv_tag_0_9= Jmp
                     {
-                    otherlv_8=(Token)match(input,Jmp,FOLLOW_15); 
+                    lv_tag_0_9=(Token)match(input,Jmp,FOLLOW_16); 
 
-                    				newLeafNode(otherlv_8, grammarAccess.getJumpOpAccess().getJmpKeyword_0_8());
-                    			
+                    						newLeafNode(lv_tag_0_9, grammarAccess.getJumpOpAccess().getTagJmpKeyword_0_0_8());
+                    					
+
+                    						if (current==null) {
+                    							current = createModelElement(grammarAccess.getJumpOpRule());
+                    						}
+                    						setWithLastConsumed(current, "tag", lv_tag_0_9, null);
+                    					
 
                     }
                     break;
                 case 10 :
-                    // InternalPds16asmParser.g:2553:4: otherlv_9= Jmpl
+                    // InternalPds16asmParser.g:2353:6: lv_tag_0_10= Jmpl
                     {
-                    otherlv_9=(Token)match(input,Jmpl,FOLLOW_15); 
+                    lv_tag_0_10=(Token)match(input,Jmpl,FOLLOW_16); 
 
-                    				newLeafNode(otherlv_9, grammarAccess.getJumpOpAccess().getJmplKeyword_0_9());
-                    			
+                    						newLeafNode(lv_tag_0_10, grammarAccess.getJumpOpAccess().getTagJmplKeyword_0_0_9());
+                    					
+
+                    						if (current==null) {
+                    							current = createModelElement(grammarAccess.getJumpOpRule());
+                    						}
+                    						setWithLastConsumed(current, "tag", lv_tag_0_10, null);
+                    					
 
                     }
                     break;
 
             }
 
-            // InternalPds16asmParser.g:2558:3: (this_OperationWithOffset_10= ruleOperationWithOffset | ( (lv_op_11_0= RULE_ID ) ) | otherlv_12= DollarSign )
-            int alt51=3;
+
+            }
+
+
+            }
+
+            // InternalPds16asmParser.g:2366:3: ( ( (lv_opOff_1_0= ruleOperationWithOffset ) ) | ( (lv_opId_2_0= RULE_ID ) ) | otherlv_3= DollarSign )
+            int alt48=3;
             switch ( input.LA(1) ) {
             case RULE_REGISTERS:
                 {
-                alt51=1;
+                alt48=1;
                 }
                 break;
             case RULE_ID:
                 {
-                alt51=2;
+                alt48=2;
                 }
                 break;
             case DollarSign:
                 {
-                alt51=3;
+                alt48=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 51, 0, input);
+                    new NoViableAltException("", 48, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt51) {
+            switch (alt48) {
                 case 1 :
-                    // InternalPds16asmParser.g:2559:4: this_OperationWithOffset_10= ruleOperationWithOffset
+                    // InternalPds16asmParser.g:2367:4: ( (lv_opOff_1_0= ruleOperationWithOffset ) )
+                    {
+                    // InternalPds16asmParser.g:2367:4: ( (lv_opOff_1_0= ruleOperationWithOffset ) )
+                    // InternalPds16asmParser.g:2368:5: (lv_opOff_1_0= ruleOperationWithOffset )
+                    {
+                    // InternalPds16asmParser.g:2368:5: (lv_opOff_1_0= ruleOperationWithOffset )
+                    // InternalPds16asmParser.g:2369:6: lv_opOff_1_0= ruleOperationWithOffset
                     {
 
-                    				newCompositeNode(grammarAccess.getJumpOpAccess().getOperationWithOffsetParserRuleCall_1_0());
-                    			
+                    						newCompositeNode(grammarAccess.getJumpOpAccess().getOpOffOperationWithOffsetParserRuleCall_1_0_0());
+                    					
                     pushFollow(FOLLOW_2);
-                    this_OperationWithOffset_10=ruleOperationWithOffset();
+                    lv_opOff_1_0=ruleOperationWithOffset();
 
                     state._fsp--;
 
 
-                    				current = this_OperationWithOffset_10;
-                    				afterParserOrEnumRuleCall();
-                    			
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getJumpOpRule());
+                    						}
+                    						set(
+                    							current,
+                    							"opOff",
+                    							lv_opOff_1_0,
+                    							"org.pds16.pds16asm.Pds16asm.OperationWithOffset");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+
 
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:2568:4: ( (lv_op_11_0= RULE_ID ) )
+                    // InternalPds16asmParser.g:2387:4: ( (lv_opId_2_0= RULE_ID ) )
                     {
-                    // InternalPds16asmParser.g:2568:4: ( (lv_op_11_0= RULE_ID ) )
-                    // InternalPds16asmParser.g:2569:5: (lv_op_11_0= RULE_ID )
+                    // InternalPds16asmParser.g:2387:4: ( (lv_opId_2_0= RULE_ID ) )
+                    // InternalPds16asmParser.g:2388:5: (lv_opId_2_0= RULE_ID )
                     {
-                    // InternalPds16asmParser.g:2569:5: (lv_op_11_0= RULE_ID )
-                    // InternalPds16asmParser.g:2570:6: lv_op_11_0= RULE_ID
+                    // InternalPds16asmParser.g:2388:5: (lv_opId_2_0= RULE_ID )
+                    // InternalPds16asmParser.g:2389:6: lv_opId_2_0= RULE_ID
                     {
-                    lv_op_11_0=(Token)match(input,RULE_ID,FOLLOW_2); 
+                    lv_opId_2_0=(Token)match(input,RULE_ID,FOLLOW_2); 
 
-                    						newLeafNode(lv_op_11_0, grammarAccess.getJumpOpAccess().getOpIDTerminalRuleCall_1_1_0());
+                    						newLeafNode(lv_opId_2_0, grammarAccess.getJumpOpAccess().getOpIdIDTerminalRuleCall_1_1_0());
                     					
 
                     						if (current==null) {
@@ -7855,8 +7460,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     						}
                     						setWithLastConsumed(
                     							current,
-                    							"op",
-                    							lv_op_11_0,
+                    							"opId",
+                    							lv_opId_2_0,
                     							"org.pds16.pds16asm.Pds16asm.ID");
                     					
 
@@ -7869,11 +7474,11 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalPds16asmParser.g:2587:4: otherlv_12= DollarSign
+                    // InternalPds16asmParser.g:2406:4: otherlv_3= DollarSign
                     {
-                    otherlv_12=(Token)match(input,DollarSign,FOLLOW_2); 
+                    otherlv_3=(Token)match(input,DollarSign,FOLLOW_2); 
 
-                    				newLeafNode(otherlv_12, grammarAccess.getJumpOpAccess().getDollarSignKeyword_1_2());
+                    				newLeafNode(otherlv_3, grammarAccess.getJumpOpAccess().getDollarSignKeyword_1_2());
                     			
 
                     }
@@ -7904,7 +7509,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNop"
-    // InternalPds16asmParser.g:2596:1: entryRuleNop returns [EObject current=null] : iv_ruleNop= ruleNop EOF ;
+    // InternalPds16asmParser.g:2415:1: entryRuleNop returns [EObject current=null] : iv_ruleNop= ruleNop EOF ;
     public final EObject entryRuleNop() throws RecognitionException {
         EObject current = null;
 
@@ -7912,8 +7517,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:2596:44: (iv_ruleNop= ruleNop EOF )
-            // InternalPds16asmParser.g:2597:2: iv_ruleNop= ruleNop EOF
+            // InternalPds16asmParser.g:2415:44: (iv_ruleNop= ruleNop EOF )
+            // InternalPds16asmParser.g:2416:2: iv_ruleNop= ruleNop EOF
             {
              newCompositeNode(grammarAccess.getNopRule()); 
             pushFollow(FOLLOW_1);
@@ -7940,7 +7545,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNop"
-    // InternalPds16asmParser.g:2603:1: ruleNop returns [EObject current=null] : ( (lv_instruction_0_0= Nop ) ) ;
+    // InternalPds16asmParser.g:2422:1: ruleNop returns [EObject current=null] : ( (lv_instruction_0_0= Nop ) ) ;
     public final EObject ruleNop() throws RecognitionException {
         EObject current = null;
 
@@ -7950,14 +7555,14 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:2609:2: ( ( (lv_instruction_0_0= Nop ) ) )
-            // InternalPds16asmParser.g:2610:2: ( (lv_instruction_0_0= Nop ) )
+            // InternalPds16asmParser.g:2428:2: ( ( (lv_instruction_0_0= Nop ) ) )
+            // InternalPds16asmParser.g:2429:2: ( (lv_instruction_0_0= Nop ) )
             {
-            // InternalPds16asmParser.g:2610:2: ( (lv_instruction_0_0= Nop ) )
-            // InternalPds16asmParser.g:2611:3: (lv_instruction_0_0= Nop )
+            // InternalPds16asmParser.g:2429:2: ( (lv_instruction_0_0= Nop ) )
+            // InternalPds16asmParser.g:2430:3: (lv_instruction_0_0= Nop )
             {
-            // InternalPds16asmParser.g:2611:3: (lv_instruction_0_0= Nop )
-            // InternalPds16asmParser.g:2612:4: lv_instruction_0_0= Nop
+            // InternalPds16asmParser.g:2430:3: (lv_instruction_0_0= Nop )
+            // InternalPds16asmParser.g:2431:4: lv_instruction_0_0= Nop
             {
             lv_instruction_0_0=(Token)match(input,Nop,FOLLOW_2); 
 
@@ -7995,7 +7600,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRet"
-    // InternalPds16asmParser.g:2627:1: entryRuleRet returns [EObject current=null] : iv_ruleRet= ruleRet EOF ;
+    // InternalPds16asmParser.g:2446:1: entryRuleRet returns [EObject current=null] : iv_ruleRet= ruleRet EOF ;
     public final EObject entryRuleRet() throws RecognitionException {
         EObject current = null;
 
@@ -8003,8 +7608,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:2627:44: (iv_ruleRet= ruleRet EOF )
-            // InternalPds16asmParser.g:2628:2: iv_ruleRet= ruleRet EOF
+            // InternalPds16asmParser.g:2446:44: (iv_ruleRet= ruleRet EOF )
+            // InternalPds16asmParser.g:2447:2: iv_ruleRet= ruleRet EOF
             {
              newCompositeNode(grammarAccess.getRetRule()); 
             pushFollow(FOLLOW_1);
@@ -8031,7 +7636,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRet"
-    // InternalPds16asmParser.g:2634:1: ruleRet returns [EObject current=null] : ( ( (lv_instruction_0_1= Ret | lv_instruction_0_2= Iret ) ) ) ;
+    // InternalPds16asmParser.g:2453:1: ruleRet returns [EObject current=null] : ( ( (lv_instruction_0_1= Ret | lv_instruction_0_2= Iret ) ) ) ;
     public final EObject ruleRet() throws RecognitionException {
         EObject current = null;
 
@@ -8042,34 +7647,34 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:2640:2: ( ( ( (lv_instruction_0_1= Ret | lv_instruction_0_2= Iret ) ) ) )
-            // InternalPds16asmParser.g:2641:2: ( ( (lv_instruction_0_1= Ret | lv_instruction_0_2= Iret ) ) )
+            // InternalPds16asmParser.g:2459:2: ( ( ( (lv_instruction_0_1= Ret | lv_instruction_0_2= Iret ) ) ) )
+            // InternalPds16asmParser.g:2460:2: ( ( (lv_instruction_0_1= Ret | lv_instruction_0_2= Iret ) ) )
             {
-            // InternalPds16asmParser.g:2641:2: ( ( (lv_instruction_0_1= Ret | lv_instruction_0_2= Iret ) ) )
-            // InternalPds16asmParser.g:2642:3: ( (lv_instruction_0_1= Ret | lv_instruction_0_2= Iret ) )
+            // InternalPds16asmParser.g:2460:2: ( ( (lv_instruction_0_1= Ret | lv_instruction_0_2= Iret ) ) )
+            // InternalPds16asmParser.g:2461:3: ( (lv_instruction_0_1= Ret | lv_instruction_0_2= Iret ) )
             {
-            // InternalPds16asmParser.g:2642:3: ( (lv_instruction_0_1= Ret | lv_instruction_0_2= Iret ) )
-            // InternalPds16asmParser.g:2643:4: (lv_instruction_0_1= Ret | lv_instruction_0_2= Iret )
+            // InternalPds16asmParser.g:2461:3: ( (lv_instruction_0_1= Ret | lv_instruction_0_2= Iret ) )
+            // InternalPds16asmParser.g:2462:4: (lv_instruction_0_1= Ret | lv_instruction_0_2= Iret )
             {
-            // InternalPds16asmParser.g:2643:4: (lv_instruction_0_1= Ret | lv_instruction_0_2= Iret )
-            int alt52=2;
-            int LA52_0 = input.LA(1);
+            // InternalPds16asmParser.g:2462:4: (lv_instruction_0_1= Ret | lv_instruction_0_2= Iret )
+            int alt49=2;
+            int LA49_0 = input.LA(1);
 
-            if ( (LA52_0==Ret) ) {
-                alt52=1;
+            if ( (LA49_0==Ret) ) {
+                alt49=1;
             }
-            else if ( (LA52_0==Iret) ) {
-                alt52=2;
+            else if ( (LA49_0==Iret) ) {
+                alt49=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 52, 0, input);
+                    new NoViableAltException("", 49, 0, input);
 
                 throw nvae;
             }
-            switch (alt52) {
+            switch (alt49) {
                 case 1 :
-                    // InternalPds16asmParser.g:2644:5: lv_instruction_0_1= Ret
+                    // InternalPds16asmParser.g:2463:5: lv_instruction_0_1= Ret
                     {
                     lv_instruction_0_1=(Token)match(input,Ret,FOLLOW_2); 
 
@@ -8085,7 +7690,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:2655:5: lv_instruction_0_2= Iret
+                    // InternalPds16asmParser.g:2474:5: lv_instruction_0_2= Iret
                     {
                     lv_instruction_0_2=(Token)match(input,Iret,FOLLOW_2); 
 
@@ -8129,7 +7734,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleImmediate"
-    // InternalPds16asmParser.g:2671:1: entryRuleImmediate returns [EObject current=null] : iv_ruleImmediate= ruleImmediate EOF ;
+    // InternalPds16asmParser.g:2490:1: entryRuleImmediate returns [EObject current=null] : iv_ruleImmediate= ruleImmediate EOF ;
     public final EObject entryRuleImmediate() throws RecognitionException {
         EObject current = null;
 
@@ -8137,8 +7742,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:2671:50: (iv_ruleImmediate= ruleImmediate EOF )
-            // InternalPds16asmParser.g:2672:2: iv_ruleImmediate= ruleImmediate EOF
+            // InternalPds16asmParser.g:2490:50: (iv_ruleImmediate= ruleImmediate EOF )
+            // InternalPds16asmParser.g:2491:2: iv_ruleImmediate= ruleImmediate EOF
             {
              newCompositeNode(grammarAccess.getImmediateRule()); 
             pushFollow(FOLLOW_1);
@@ -8165,7 +7770,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleImmediate"
-    // InternalPds16asmParser.g:2678:1: ruleImmediate returns [EObject current=null] : ( ( (lv_register_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( ( (lv_immediate8_2_0= ruleImmediate8OrLabel ) ) | ( (lv_lowORhigh_3_0= ruleLowOrHight ) ) ) ) ;
+    // InternalPds16asmParser.g:2497:1: ruleImmediate returns [EObject current=null] : ( ( (lv_register_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( ( (lv_immediate8_2_0= ruleImmediate8OrLabel ) ) | ( (lv_lowORhigh_3_0= ruleLowOrHight ) ) ) ) ;
     public final EObject ruleImmediate() throws RecognitionException {
         EObject current = null;
 
@@ -8180,19 +7785,19 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:2684:2: ( ( ( (lv_register_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( ( (lv_immediate8_2_0= ruleImmediate8OrLabel ) ) | ( (lv_lowORhigh_3_0= ruleLowOrHight ) ) ) ) )
-            // InternalPds16asmParser.g:2685:2: ( ( (lv_register_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( ( (lv_immediate8_2_0= ruleImmediate8OrLabel ) ) | ( (lv_lowORhigh_3_0= ruleLowOrHight ) ) ) )
+            // InternalPds16asmParser.g:2503:2: ( ( ( (lv_register_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( ( (lv_immediate8_2_0= ruleImmediate8OrLabel ) ) | ( (lv_lowORhigh_3_0= ruleLowOrHight ) ) ) ) )
+            // InternalPds16asmParser.g:2504:2: ( ( (lv_register_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( ( (lv_immediate8_2_0= ruleImmediate8OrLabel ) ) | ( (lv_lowORhigh_3_0= ruleLowOrHight ) ) ) )
             {
-            // InternalPds16asmParser.g:2685:2: ( ( (lv_register_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( ( (lv_immediate8_2_0= ruleImmediate8OrLabel ) ) | ( (lv_lowORhigh_3_0= ruleLowOrHight ) ) ) )
-            // InternalPds16asmParser.g:2686:3: ( (lv_register_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( ( (lv_immediate8_2_0= ruleImmediate8OrLabel ) ) | ( (lv_lowORhigh_3_0= ruleLowOrHight ) ) )
+            // InternalPds16asmParser.g:2504:2: ( ( (lv_register_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( ( (lv_immediate8_2_0= ruleImmediate8OrLabel ) ) | ( (lv_lowORhigh_3_0= ruleLowOrHight ) ) ) )
+            // InternalPds16asmParser.g:2505:3: ( (lv_register_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( ( (lv_immediate8_2_0= ruleImmediate8OrLabel ) ) | ( (lv_lowORhigh_3_0= ruleLowOrHight ) ) )
             {
-            // InternalPds16asmParser.g:2686:3: ( (lv_register_0_0= RULE_REGISTERS ) )
-            // InternalPds16asmParser.g:2687:4: (lv_register_0_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:2505:3: ( (lv_register_0_0= RULE_REGISTERS ) )
+            // InternalPds16asmParser.g:2506:4: (lv_register_0_0= RULE_REGISTERS )
             {
-            // InternalPds16asmParser.g:2687:4: (lv_register_0_0= RULE_REGISTERS )
-            // InternalPds16asmParser.g:2688:5: lv_register_0_0= RULE_REGISTERS
+            // InternalPds16asmParser.g:2506:4: (lv_register_0_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:2507:5: lv_register_0_0= RULE_REGISTERS
             {
-            lv_register_0_0=(Token)match(input,RULE_REGISTERS,FOLLOW_6); 
+            lv_register_0_0=(Token)match(input,RULE_REGISTERS,FOLLOW_14); 
 
             					newLeafNode(lv_register_0_0, grammarAccess.getImmediateAccess().getRegisterREGISTERSTerminalRuleCall_0_0());
             				
@@ -8212,45 +7817,45 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,Comma,FOLLOW_16); 
+            otherlv_1=(Token)match(input,Comma,FOLLOW_17); 
 
             			newLeafNode(otherlv_1, grammarAccess.getImmediateAccess().getCommaKeyword_1());
             		
-            // InternalPds16asmParser.g:2708:3: ( ( (lv_immediate8_2_0= ruleImmediate8OrLabel ) ) | ( (lv_lowORhigh_3_0= ruleLowOrHight ) ) )
-            int alt53=2;
-            int LA53_0 = input.LA(1);
+            // InternalPds16asmParser.g:2527:3: ( ( (lv_immediate8_2_0= ruleImmediate8OrLabel ) ) | ( (lv_lowORhigh_3_0= ruleLowOrHight ) ) )
+            int alt50=2;
+            int LA50_0 = input.LA(1);
 
-            if ( (LA53_0==NumberSign) ) {
-                int LA53_1 = input.LA(2);
+            if ( (LA50_0==NumberSign) ) {
+                int LA50_1 = input.LA(2);
 
-                if ( (LA53_1==High||LA53_1==Low) ) {
-                    alt53=2;
+                if ( (LA50_1==High||LA50_1==Low) ) {
+                    alt50=2;
                 }
-                else if ( ((LA53_1>=RULE_HEX && LA53_1<=RULE_BIN)||(LA53_1>=RULE_CHAR && LA53_1<=RULE_ID)||LA53_1==RULE_INT) ) {
-                    alt53=1;
+                else if ( ((LA50_1>=RULE_HEX && LA50_1<=RULE_BIN)||(LA50_1>=RULE_CHAR && LA50_1<=RULE_ID)||LA50_1==RULE_INT) ) {
+                    alt50=1;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 53, 1, input);
+                        new NoViableAltException("", 50, 1, input);
 
                     throw nvae;
                 }
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 53, 0, input);
+                    new NoViableAltException("", 50, 0, input);
 
                 throw nvae;
             }
-            switch (alt53) {
+            switch (alt50) {
                 case 1 :
-                    // InternalPds16asmParser.g:2709:4: ( (lv_immediate8_2_0= ruleImmediate8OrLabel ) )
+                    // InternalPds16asmParser.g:2528:4: ( (lv_immediate8_2_0= ruleImmediate8OrLabel ) )
                     {
-                    // InternalPds16asmParser.g:2709:4: ( (lv_immediate8_2_0= ruleImmediate8OrLabel ) )
-                    // InternalPds16asmParser.g:2710:5: (lv_immediate8_2_0= ruleImmediate8OrLabel )
+                    // InternalPds16asmParser.g:2528:4: ( (lv_immediate8_2_0= ruleImmediate8OrLabel ) )
+                    // InternalPds16asmParser.g:2529:5: (lv_immediate8_2_0= ruleImmediate8OrLabel )
                     {
-                    // InternalPds16asmParser.g:2710:5: (lv_immediate8_2_0= ruleImmediate8OrLabel )
-                    // InternalPds16asmParser.g:2711:6: lv_immediate8_2_0= ruleImmediate8OrLabel
+                    // InternalPds16asmParser.g:2529:5: (lv_immediate8_2_0= ruleImmediate8OrLabel )
+                    // InternalPds16asmParser.g:2530:6: lv_immediate8_2_0= ruleImmediate8OrLabel
                     {
 
                     						newCompositeNode(grammarAccess.getImmediateAccess().getImmediate8Immediate8OrLabelParserRuleCall_2_0_0());
@@ -8281,13 +7886,13 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:2729:4: ( (lv_lowORhigh_3_0= ruleLowOrHight ) )
+                    // InternalPds16asmParser.g:2548:4: ( (lv_lowORhigh_3_0= ruleLowOrHight ) )
                     {
-                    // InternalPds16asmParser.g:2729:4: ( (lv_lowORhigh_3_0= ruleLowOrHight ) )
-                    // InternalPds16asmParser.g:2730:5: (lv_lowORhigh_3_0= ruleLowOrHight )
+                    // InternalPds16asmParser.g:2548:4: ( (lv_lowORhigh_3_0= ruleLowOrHight ) )
+                    // InternalPds16asmParser.g:2549:5: (lv_lowORhigh_3_0= ruleLowOrHight )
                     {
-                    // InternalPds16asmParser.g:2730:5: (lv_lowORhigh_3_0= ruleLowOrHight )
-                    // InternalPds16asmParser.g:2731:6: lv_lowORhigh_3_0= ruleLowOrHight
+                    // InternalPds16asmParser.g:2549:5: (lv_lowORhigh_3_0= ruleLowOrHight )
+                    // InternalPds16asmParser.g:2550:6: lv_lowORhigh_3_0= ruleLowOrHight
                     {
 
                     						newCompositeNode(grammarAccess.getImmediateAccess().getLowORhighLowOrHightParserRuleCall_2_1_0());
@@ -8343,7 +7948,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDirect"
-    // InternalPds16asmParser.g:2753:1: entryRuleDirect returns [EObject current=null] : iv_ruleDirect= ruleDirect EOF ;
+    // InternalPds16asmParser.g:2572:1: entryRuleDirect returns [EObject current=null] : iv_ruleDirect= ruleDirect EOF ;
     public final EObject entryRuleDirect() throws RecognitionException {
         EObject current = null;
 
@@ -8351,8 +7956,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:2753:47: (iv_ruleDirect= ruleDirect EOF )
-            // InternalPds16asmParser.g:2754:2: iv_ruleDirect= ruleDirect EOF
+            // InternalPds16asmParser.g:2572:47: (iv_ruleDirect= ruleDirect EOF )
+            // InternalPds16asmParser.g:2573:2: iv_ruleDirect= ruleDirect EOF
             {
              newCompositeNode(grammarAccess.getDirectRule()); 
             pushFollow(FOLLOW_1);
@@ -8379,7 +7984,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDirect"
-    // InternalPds16asmParser.g:2760:1: ruleDirect returns [EObject current=null] : ( ( (lv_register_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_direct7_2_0= ruleDirectOrLabel ) ) ) ;
+    // InternalPds16asmParser.g:2579:1: ruleDirect returns [EObject current=null] : ( ( (lv_register_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_direct7_2_0= ruleDirectOrLabel ) ) ) ;
     public final EObject ruleDirect() throws RecognitionException {
         EObject current = null;
 
@@ -8392,19 +7997,19 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:2766:2: ( ( ( (lv_register_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_direct7_2_0= ruleDirectOrLabel ) ) ) )
-            // InternalPds16asmParser.g:2767:2: ( ( (lv_register_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_direct7_2_0= ruleDirectOrLabel ) ) )
+            // InternalPds16asmParser.g:2585:2: ( ( ( (lv_register_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_direct7_2_0= ruleDirectOrLabel ) ) ) )
+            // InternalPds16asmParser.g:2586:2: ( ( (lv_register_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_direct7_2_0= ruleDirectOrLabel ) ) )
             {
-            // InternalPds16asmParser.g:2767:2: ( ( (lv_register_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_direct7_2_0= ruleDirectOrLabel ) ) )
-            // InternalPds16asmParser.g:2768:3: ( (lv_register_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_direct7_2_0= ruleDirectOrLabel ) )
+            // InternalPds16asmParser.g:2586:2: ( ( (lv_register_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_direct7_2_0= ruleDirectOrLabel ) ) )
+            // InternalPds16asmParser.g:2587:3: ( (lv_register_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_direct7_2_0= ruleDirectOrLabel ) )
             {
-            // InternalPds16asmParser.g:2768:3: ( (lv_register_0_0= RULE_REGISTERS ) )
-            // InternalPds16asmParser.g:2769:4: (lv_register_0_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:2587:3: ( (lv_register_0_0= RULE_REGISTERS ) )
+            // InternalPds16asmParser.g:2588:4: (lv_register_0_0= RULE_REGISTERS )
             {
-            // InternalPds16asmParser.g:2769:4: (lv_register_0_0= RULE_REGISTERS )
-            // InternalPds16asmParser.g:2770:5: lv_register_0_0= RULE_REGISTERS
+            // InternalPds16asmParser.g:2588:4: (lv_register_0_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:2589:5: lv_register_0_0= RULE_REGISTERS
             {
-            lv_register_0_0=(Token)match(input,RULE_REGISTERS,FOLLOW_6); 
+            lv_register_0_0=(Token)match(input,RULE_REGISTERS,FOLLOW_14); 
 
             					newLeafNode(lv_register_0_0, grammarAccess.getDirectAccess().getRegisterREGISTERSTerminalRuleCall_0_0());
             				
@@ -8424,15 +8029,15 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,Comma,FOLLOW_12); 
+            otherlv_1=(Token)match(input,Comma,FOLLOW_11); 
 
             			newLeafNode(otherlv_1, grammarAccess.getDirectAccess().getCommaKeyword_1());
             		
-            // InternalPds16asmParser.g:2790:3: ( (lv_direct7_2_0= ruleDirectOrLabel ) )
-            // InternalPds16asmParser.g:2791:4: (lv_direct7_2_0= ruleDirectOrLabel )
+            // InternalPds16asmParser.g:2609:3: ( (lv_direct7_2_0= ruleDirectOrLabel ) )
+            // InternalPds16asmParser.g:2610:4: (lv_direct7_2_0= ruleDirectOrLabel )
             {
-            // InternalPds16asmParser.g:2791:4: (lv_direct7_2_0= ruleDirectOrLabel )
-            // InternalPds16asmParser.g:2792:5: lv_direct7_2_0= ruleDirectOrLabel
+            // InternalPds16asmParser.g:2610:4: (lv_direct7_2_0= ruleDirectOrLabel )
+            // InternalPds16asmParser.g:2611:5: lv_direct7_2_0= ruleDirectOrLabel
             {
 
             					newCompositeNode(grammarAccess.getDirectAccess().getDirect7DirectOrLabelParserRuleCall_2_0());
@@ -8482,7 +8087,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIndexed"
-    // InternalPds16asmParser.g:2813:1: entryRuleIndexed returns [EObject current=null] : iv_ruleIndexed= ruleIndexed EOF ;
+    // InternalPds16asmParser.g:2632:1: entryRuleIndexed returns [EObject current=null] : iv_ruleIndexed= ruleIndexed EOF ;
     public final EObject entryRuleIndexed() throws RecognitionException {
         EObject current = null;
 
@@ -8490,8 +8095,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:2813:48: (iv_ruleIndexed= ruleIndexed EOF )
-            // InternalPds16asmParser.g:2814:2: iv_ruleIndexed= ruleIndexed EOF
+            // InternalPds16asmParser.g:2632:48: (iv_ruleIndexed= ruleIndexed EOF )
+            // InternalPds16asmParser.g:2633:2: iv_ruleIndexed= ruleIndexed EOF
             {
              newCompositeNode(grammarAccess.getIndexedRule()); 
             pushFollow(FOLLOW_1);
@@ -8518,7 +8123,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIndexed"
-    // InternalPds16asmParser.g:2820:1: ruleIndexed returns [EObject current=null] : ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma otherlv_2= LeftSquareBracket ( (lv_rbx_3_0= RULE_REGISTERS ) ) otherlv_4= Comma ( (lv_idx3_5_0= ruleIdx3OrLabel ) ) otherlv_6= RightSquareBracket ) ;
+    // InternalPds16asmParser.g:2639:1: ruleIndexed returns [EObject current=null] : ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma otherlv_2= LeftSquareBracket ( (lv_rbx_3_0= RULE_REGISTERS ) ) otherlv_4= Comma ( (lv_idx3_5_0= ruleIdx3OrLabel ) ) otherlv_6= RightSquareBracket ) ;
     public final EObject ruleIndexed() throws RecognitionException {
         EObject current = null;
 
@@ -8535,19 +8140,19 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:2826:2: ( ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma otherlv_2= LeftSquareBracket ( (lv_rbx_3_0= RULE_REGISTERS ) ) otherlv_4= Comma ( (lv_idx3_5_0= ruleIdx3OrLabel ) ) otherlv_6= RightSquareBracket ) )
-            // InternalPds16asmParser.g:2827:2: ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma otherlv_2= LeftSquareBracket ( (lv_rbx_3_0= RULE_REGISTERS ) ) otherlv_4= Comma ( (lv_idx3_5_0= ruleIdx3OrLabel ) ) otherlv_6= RightSquareBracket )
+            // InternalPds16asmParser.g:2645:2: ( ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma otherlv_2= LeftSquareBracket ( (lv_rbx_3_0= RULE_REGISTERS ) ) otherlv_4= Comma ( (lv_idx3_5_0= ruleIdx3OrLabel ) ) otherlv_6= RightSquareBracket ) )
+            // InternalPds16asmParser.g:2646:2: ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma otherlv_2= LeftSquareBracket ( (lv_rbx_3_0= RULE_REGISTERS ) ) otherlv_4= Comma ( (lv_idx3_5_0= ruleIdx3OrLabel ) ) otherlv_6= RightSquareBracket )
             {
-            // InternalPds16asmParser.g:2827:2: ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma otherlv_2= LeftSquareBracket ( (lv_rbx_3_0= RULE_REGISTERS ) ) otherlv_4= Comma ( (lv_idx3_5_0= ruleIdx3OrLabel ) ) otherlv_6= RightSquareBracket )
-            // InternalPds16asmParser.g:2828:3: ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma otherlv_2= LeftSquareBracket ( (lv_rbx_3_0= RULE_REGISTERS ) ) otherlv_4= Comma ( (lv_idx3_5_0= ruleIdx3OrLabel ) ) otherlv_6= RightSquareBracket
+            // InternalPds16asmParser.g:2646:2: ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma otherlv_2= LeftSquareBracket ( (lv_rbx_3_0= RULE_REGISTERS ) ) otherlv_4= Comma ( (lv_idx3_5_0= ruleIdx3OrLabel ) ) otherlv_6= RightSquareBracket )
+            // InternalPds16asmParser.g:2647:3: ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma otherlv_2= LeftSquareBracket ( (lv_rbx_3_0= RULE_REGISTERS ) ) otherlv_4= Comma ( (lv_idx3_5_0= ruleIdx3OrLabel ) ) otherlv_6= RightSquareBracket
             {
-            // InternalPds16asmParser.g:2828:3: ( (lv_rd_0_0= RULE_REGISTERS ) )
-            // InternalPds16asmParser.g:2829:4: (lv_rd_0_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:2647:3: ( (lv_rd_0_0= RULE_REGISTERS ) )
+            // InternalPds16asmParser.g:2648:4: (lv_rd_0_0= RULE_REGISTERS )
             {
-            // InternalPds16asmParser.g:2829:4: (lv_rd_0_0= RULE_REGISTERS )
-            // InternalPds16asmParser.g:2830:5: lv_rd_0_0= RULE_REGISTERS
+            // InternalPds16asmParser.g:2648:4: (lv_rd_0_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:2649:5: lv_rd_0_0= RULE_REGISTERS
             {
-            lv_rd_0_0=(Token)match(input,RULE_REGISTERS,FOLLOW_6); 
+            lv_rd_0_0=(Token)match(input,RULE_REGISTERS,FOLLOW_14); 
 
             					newLeafNode(lv_rd_0_0, grammarAccess.getIndexedAccess().getRdREGISTERSTerminalRuleCall_0_0());
             				
@@ -8567,21 +8172,21 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,Comma,FOLLOW_17); 
+            otherlv_1=(Token)match(input,Comma,FOLLOW_18); 
 
             			newLeafNode(otherlv_1, grammarAccess.getIndexedAccess().getCommaKeyword_1());
             		
-            otherlv_2=(Token)match(input,LeftSquareBracket,FOLLOW_14); 
+            otherlv_2=(Token)match(input,LeftSquareBracket,FOLLOW_15); 
 
             			newLeafNode(otherlv_2, grammarAccess.getIndexedAccess().getLeftSquareBracketKeyword_2());
             		
-            // InternalPds16asmParser.g:2854:3: ( (lv_rbx_3_0= RULE_REGISTERS ) )
-            // InternalPds16asmParser.g:2855:4: (lv_rbx_3_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:2673:3: ( (lv_rbx_3_0= RULE_REGISTERS ) )
+            // InternalPds16asmParser.g:2674:4: (lv_rbx_3_0= RULE_REGISTERS )
             {
-            // InternalPds16asmParser.g:2855:4: (lv_rbx_3_0= RULE_REGISTERS )
-            // InternalPds16asmParser.g:2856:5: lv_rbx_3_0= RULE_REGISTERS
+            // InternalPds16asmParser.g:2674:4: (lv_rbx_3_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:2675:5: lv_rbx_3_0= RULE_REGISTERS
             {
-            lv_rbx_3_0=(Token)match(input,RULE_REGISTERS,FOLLOW_6); 
+            lv_rbx_3_0=(Token)match(input,RULE_REGISTERS,FOLLOW_14); 
 
             					newLeafNode(lv_rbx_3_0, grammarAccess.getIndexedAccess().getRbxREGISTERSTerminalRuleCall_3_0());
             				
@@ -8601,20 +8206,20 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,Comma,FOLLOW_16); 
+            otherlv_4=(Token)match(input,Comma,FOLLOW_17); 
 
             			newLeafNode(otherlv_4, grammarAccess.getIndexedAccess().getCommaKeyword_4());
             		
-            // InternalPds16asmParser.g:2876:3: ( (lv_idx3_5_0= ruleIdx3OrLabel ) )
-            // InternalPds16asmParser.g:2877:4: (lv_idx3_5_0= ruleIdx3OrLabel )
+            // InternalPds16asmParser.g:2695:3: ( (lv_idx3_5_0= ruleIdx3OrLabel ) )
+            // InternalPds16asmParser.g:2696:4: (lv_idx3_5_0= ruleIdx3OrLabel )
             {
-            // InternalPds16asmParser.g:2877:4: (lv_idx3_5_0= ruleIdx3OrLabel )
-            // InternalPds16asmParser.g:2878:5: lv_idx3_5_0= ruleIdx3OrLabel
+            // InternalPds16asmParser.g:2696:4: (lv_idx3_5_0= ruleIdx3OrLabel )
+            // InternalPds16asmParser.g:2697:5: lv_idx3_5_0= ruleIdx3OrLabel
             {
 
             					newCompositeNode(grammarAccess.getIndexedAccess().getIdx3Idx3OrLabelParserRuleCall_5_0());
             				
-            pushFollow(FOLLOW_18);
+            pushFollow(FOLLOW_19);
             lv_idx3_5_0=ruleIdx3OrLabel();
 
             state._fsp--;
@@ -8663,7 +8268,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBasedIndexed"
-    // InternalPds16asmParser.g:2903:1: entryRuleBasedIndexed returns [EObject current=null] : iv_ruleBasedIndexed= ruleBasedIndexed EOF ;
+    // InternalPds16asmParser.g:2722:1: entryRuleBasedIndexed returns [EObject current=null] : iv_ruleBasedIndexed= ruleBasedIndexed EOF ;
     public final EObject entryRuleBasedIndexed() throws RecognitionException {
         EObject current = null;
 
@@ -8671,8 +8276,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:2903:53: (iv_ruleBasedIndexed= ruleBasedIndexed EOF )
-            // InternalPds16asmParser.g:2904:2: iv_ruleBasedIndexed= ruleBasedIndexed EOF
+            // InternalPds16asmParser.g:2722:53: (iv_ruleBasedIndexed= ruleBasedIndexed EOF )
+            // InternalPds16asmParser.g:2723:2: iv_ruleBasedIndexed= ruleBasedIndexed EOF
             {
              newCompositeNode(grammarAccess.getBasedIndexedRule()); 
             pushFollow(FOLLOW_1);
@@ -8699,7 +8304,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBasedIndexed"
-    // InternalPds16asmParser.g:2910:1: ruleBasedIndexed returns [EObject current=null] : (this_REGISTERS_0= RULE_REGISTERS otherlv_1= Comma otherlv_2= LeftSquareBracket ( (lv_rbx_3_0= RULE_REGISTERS ) ) otherlv_4= Comma ( (lv_rix_5_0= RULE_REGISTERS ) ) otherlv_6= RightSquareBracket ) ;
+    // InternalPds16asmParser.g:2729:1: ruleBasedIndexed returns [EObject current=null] : (this_REGISTERS_0= RULE_REGISTERS otherlv_1= Comma otherlv_2= LeftSquareBracket ( (lv_rbx_3_0= RULE_REGISTERS ) ) otherlv_4= Comma ( (lv_rix_5_0= RULE_REGISTERS ) ) otherlv_6= RightSquareBracket ) ;
     public final EObject ruleBasedIndexed() throws RecognitionException {
         EObject current = null;
 
@@ -8715,31 +8320,31 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:2916:2: ( (this_REGISTERS_0= RULE_REGISTERS otherlv_1= Comma otherlv_2= LeftSquareBracket ( (lv_rbx_3_0= RULE_REGISTERS ) ) otherlv_4= Comma ( (lv_rix_5_0= RULE_REGISTERS ) ) otherlv_6= RightSquareBracket ) )
-            // InternalPds16asmParser.g:2917:2: (this_REGISTERS_0= RULE_REGISTERS otherlv_1= Comma otherlv_2= LeftSquareBracket ( (lv_rbx_3_0= RULE_REGISTERS ) ) otherlv_4= Comma ( (lv_rix_5_0= RULE_REGISTERS ) ) otherlv_6= RightSquareBracket )
+            // InternalPds16asmParser.g:2735:2: ( (this_REGISTERS_0= RULE_REGISTERS otherlv_1= Comma otherlv_2= LeftSquareBracket ( (lv_rbx_3_0= RULE_REGISTERS ) ) otherlv_4= Comma ( (lv_rix_5_0= RULE_REGISTERS ) ) otherlv_6= RightSquareBracket ) )
+            // InternalPds16asmParser.g:2736:2: (this_REGISTERS_0= RULE_REGISTERS otherlv_1= Comma otherlv_2= LeftSquareBracket ( (lv_rbx_3_0= RULE_REGISTERS ) ) otherlv_4= Comma ( (lv_rix_5_0= RULE_REGISTERS ) ) otherlv_6= RightSquareBracket )
             {
-            // InternalPds16asmParser.g:2917:2: (this_REGISTERS_0= RULE_REGISTERS otherlv_1= Comma otherlv_2= LeftSquareBracket ( (lv_rbx_3_0= RULE_REGISTERS ) ) otherlv_4= Comma ( (lv_rix_5_0= RULE_REGISTERS ) ) otherlv_6= RightSquareBracket )
-            // InternalPds16asmParser.g:2918:3: this_REGISTERS_0= RULE_REGISTERS otherlv_1= Comma otherlv_2= LeftSquareBracket ( (lv_rbx_3_0= RULE_REGISTERS ) ) otherlv_4= Comma ( (lv_rix_5_0= RULE_REGISTERS ) ) otherlv_6= RightSquareBracket
+            // InternalPds16asmParser.g:2736:2: (this_REGISTERS_0= RULE_REGISTERS otherlv_1= Comma otherlv_2= LeftSquareBracket ( (lv_rbx_3_0= RULE_REGISTERS ) ) otherlv_4= Comma ( (lv_rix_5_0= RULE_REGISTERS ) ) otherlv_6= RightSquareBracket )
+            // InternalPds16asmParser.g:2737:3: this_REGISTERS_0= RULE_REGISTERS otherlv_1= Comma otherlv_2= LeftSquareBracket ( (lv_rbx_3_0= RULE_REGISTERS ) ) otherlv_4= Comma ( (lv_rix_5_0= RULE_REGISTERS ) ) otherlv_6= RightSquareBracket
             {
-            this_REGISTERS_0=(Token)match(input,RULE_REGISTERS,FOLLOW_6); 
+            this_REGISTERS_0=(Token)match(input,RULE_REGISTERS,FOLLOW_14); 
 
             			newLeafNode(this_REGISTERS_0, grammarAccess.getBasedIndexedAccess().getREGISTERSTerminalRuleCall_0());
             		
-            otherlv_1=(Token)match(input,Comma,FOLLOW_17); 
+            otherlv_1=(Token)match(input,Comma,FOLLOW_18); 
 
             			newLeafNode(otherlv_1, grammarAccess.getBasedIndexedAccess().getCommaKeyword_1());
             		
-            otherlv_2=(Token)match(input,LeftSquareBracket,FOLLOW_14); 
+            otherlv_2=(Token)match(input,LeftSquareBracket,FOLLOW_15); 
 
             			newLeafNode(otherlv_2, grammarAccess.getBasedIndexedAccess().getLeftSquareBracketKeyword_2());
             		
-            // InternalPds16asmParser.g:2930:3: ( (lv_rbx_3_0= RULE_REGISTERS ) )
-            // InternalPds16asmParser.g:2931:4: (lv_rbx_3_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:2749:3: ( (lv_rbx_3_0= RULE_REGISTERS ) )
+            // InternalPds16asmParser.g:2750:4: (lv_rbx_3_0= RULE_REGISTERS )
             {
-            // InternalPds16asmParser.g:2931:4: (lv_rbx_3_0= RULE_REGISTERS )
-            // InternalPds16asmParser.g:2932:5: lv_rbx_3_0= RULE_REGISTERS
+            // InternalPds16asmParser.g:2750:4: (lv_rbx_3_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:2751:5: lv_rbx_3_0= RULE_REGISTERS
             {
-            lv_rbx_3_0=(Token)match(input,RULE_REGISTERS,FOLLOW_6); 
+            lv_rbx_3_0=(Token)match(input,RULE_REGISTERS,FOLLOW_14); 
 
             					newLeafNode(lv_rbx_3_0, grammarAccess.getBasedIndexedAccess().getRbxREGISTERSTerminalRuleCall_3_0());
             				
@@ -8759,17 +8364,17 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,Comma,FOLLOW_14); 
+            otherlv_4=(Token)match(input,Comma,FOLLOW_15); 
 
             			newLeafNode(otherlv_4, grammarAccess.getBasedIndexedAccess().getCommaKeyword_4());
             		
-            // InternalPds16asmParser.g:2952:3: ( (lv_rix_5_0= RULE_REGISTERS ) )
-            // InternalPds16asmParser.g:2953:4: (lv_rix_5_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:2771:3: ( (lv_rix_5_0= RULE_REGISTERS ) )
+            // InternalPds16asmParser.g:2772:4: (lv_rix_5_0= RULE_REGISTERS )
             {
-            // InternalPds16asmParser.g:2953:4: (lv_rix_5_0= RULE_REGISTERS )
-            // InternalPds16asmParser.g:2954:5: lv_rix_5_0= RULE_REGISTERS
+            // InternalPds16asmParser.g:2772:4: (lv_rix_5_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:2773:5: lv_rix_5_0= RULE_REGISTERS
             {
-            lv_rix_5_0=(Token)match(input,RULE_REGISTERS,FOLLOW_18); 
+            lv_rix_5_0=(Token)match(input,RULE_REGISTERS,FOLLOW_19); 
 
             					newLeafNode(lv_rix_5_0, grammarAccess.getBasedIndexedAccess().getRixREGISTERSTerminalRuleCall_5_0());
             				
@@ -8816,7 +8421,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDirectOrLabel"
-    // InternalPds16asmParser.g:2978:1: entryRuleDirectOrLabel returns [EObject current=null] : iv_ruleDirectOrLabel= ruleDirectOrLabel EOF ;
+    // InternalPds16asmParser.g:2797:1: entryRuleDirectOrLabel returns [EObject current=null] : iv_ruleDirectOrLabel= ruleDirectOrLabel EOF ;
     public final EObject entryRuleDirectOrLabel() throws RecognitionException {
         EObject current = null;
 
@@ -8824,8 +8429,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:2978:54: (iv_ruleDirectOrLabel= ruleDirectOrLabel EOF )
-            // InternalPds16asmParser.g:2979:2: iv_ruleDirectOrLabel= ruleDirectOrLabel EOF
+            // InternalPds16asmParser.g:2797:54: (iv_ruleDirectOrLabel= ruleDirectOrLabel EOF )
+            // InternalPds16asmParser.g:2798:2: iv_ruleDirectOrLabel= ruleDirectOrLabel EOF
             {
              newCompositeNode(grammarAccess.getDirectOrLabelRule()); 
             pushFollow(FOLLOW_1);
@@ -8852,7 +8457,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDirectOrLabel"
-    // InternalPds16asmParser.g:2985:1: ruleDirectOrLabel returns [EObject current=null] : ( ( (lv_number_0_0= ruleNumber ) ) | ( (lv_label_1_0= RULE_ID ) ) ) ;
+    // InternalPds16asmParser.g:2804:1: ruleDirectOrLabel returns [EObject current=null] : ( ( (lv_number_0_0= ruleNumber ) ) | ( (lv_label_1_0= RULE_ID ) ) ) ;
     public final EObject ruleDirectOrLabel() throws RecognitionException {
         EObject current = null;
 
@@ -8864,34 +8469,34 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:2991:2: ( ( ( (lv_number_0_0= ruleNumber ) ) | ( (lv_label_1_0= RULE_ID ) ) ) )
-            // InternalPds16asmParser.g:2992:2: ( ( (lv_number_0_0= ruleNumber ) ) | ( (lv_label_1_0= RULE_ID ) ) )
+            // InternalPds16asmParser.g:2810:2: ( ( ( (lv_number_0_0= ruleNumber ) ) | ( (lv_label_1_0= RULE_ID ) ) ) )
+            // InternalPds16asmParser.g:2811:2: ( ( (lv_number_0_0= ruleNumber ) ) | ( (lv_label_1_0= RULE_ID ) ) )
             {
-            // InternalPds16asmParser.g:2992:2: ( ( (lv_number_0_0= ruleNumber ) ) | ( (lv_label_1_0= RULE_ID ) ) )
-            int alt54=2;
-            int LA54_0 = input.LA(1);
+            // InternalPds16asmParser.g:2811:2: ( ( (lv_number_0_0= ruleNumber ) ) | ( (lv_label_1_0= RULE_ID ) ) )
+            int alt51=2;
+            int LA51_0 = input.LA(1);
 
-            if ( ((LA54_0>=RULE_HEX && LA54_0<=RULE_BIN)||LA54_0==RULE_CHAR||LA54_0==RULE_INT) ) {
-                alt54=1;
+            if ( ((LA51_0>=RULE_HEX && LA51_0<=RULE_BIN)||LA51_0==RULE_CHAR||LA51_0==RULE_INT) ) {
+                alt51=1;
             }
-            else if ( (LA54_0==RULE_ID) ) {
-                alt54=2;
+            else if ( (LA51_0==RULE_ID) ) {
+                alt51=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 54, 0, input);
+                    new NoViableAltException("", 51, 0, input);
 
                 throw nvae;
             }
-            switch (alt54) {
+            switch (alt51) {
                 case 1 :
-                    // InternalPds16asmParser.g:2993:3: ( (lv_number_0_0= ruleNumber ) )
+                    // InternalPds16asmParser.g:2812:3: ( (lv_number_0_0= ruleNumber ) )
                     {
-                    // InternalPds16asmParser.g:2993:3: ( (lv_number_0_0= ruleNumber ) )
-                    // InternalPds16asmParser.g:2994:4: (lv_number_0_0= ruleNumber )
+                    // InternalPds16asmParser.g:2812:3: ( (lv_number_0_0= ruleNumber ) )
+                    // InternalPds16asmParser.g:2813:4: (lv_number_0_0= ruleNumber )
                     {
-                    // InternalPds16asmParser.g:2994:4: (lv_number_0_0= ruleNumber )
-                    // InternalPds16asmParser.g:2995:5: lv_number_0_0= ruleNumber
+                    // InternalPds16asmParser.g:2813:4: (lv_number_0_0= ruleNumber )
+                    // InternalPds16asmParser.g:2814:5: lv_number_0_0= ruleNumber
                     {
 
                     					newCompositeNode(grammarAccess.getDirectOrLabelAccess().getNumberNumberParserRuleCall_0_0());
@@ -8922,13 +8527,13 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:3013:3: ( (lv_label_1_0= RULE_ID ) )
+                    // InternalPds16asmParser.g:2832:3: ( (lv_label_1_0= RULE_ID ) )
                     {
-                    // InternalPds16asmParser.g:3013:3: ( (lv_label_1_0= RULE_ID ) )
-                    // InternalPds16asmParser.g:3014:4: (lv_label_1_0= RULE_ID )
+                    // InternalPds16asmParser.g:2832:3: ( (lv_label_1_0= RULE_ID ) )
+                    // InternalPds16asmParser.g:2833:4: (lv_label_1_0= RULE_ID )
                     {
-                    // InternalPds16asmParser.g:3014:4: (lv_label_1_0= RULE_ID )
-                    // InternalPds16asmParser.g:3015:5: lv_label_1_0= RULE_ID
+                    // InternalPds16asmParser.g:2833:4: (lv_label_1_0= RULE_ID )
+                    // InternalPds16asmParser.g:2834:5: lv_label_1_0= RULE_ID
                     {
                     lv_label_1_0=(Token)match(input,RULE_ID,FOLLOW_2); 
 
@@ -8976,7 +8581,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleImmediate8OrLabel"
-    // InternalPds16asmParser.g:3035:1: entryRuleImmediate8OrLabel returns [EObject current=null] : iv_ruleImmediate8OrLabel= ruleImmediate8OrLabel EOF ;
+    // InternalPds16asmParser.g:2854:1: entryRuleImmediate8OrLabel returns [EObject current=null] : iv_ruleImmediate8OrLabel= ruleImmediate8OrLabel EOF ;
     public final EObject entryRuleImmediate8OrLabel() throws RecognitionException {
         EObject current = null;
 
@@ -8984,8 +8589,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:3035:58: (iv_ruleImmediate8OrLabel= ruleImmediate8OrLabel EOF )
-            // InternalPds16asmParser.g:3036:2: iv_ruleImmediate8OrLabel= ruleImmediate8OrLabel EOF
+            // InternalPds16asmParser.g:2854:58: (iv_ruleImmediate8OrLabel= ruleImmediate8OrLabel EOF )
+            // InternalPds16asmParser.g:2855:2: iv_ruleImmediate8OrLabel= ruleImmediate8OrLabel EOF
             {
              newCompositeNode(grammarAccess.getImmediate8OrLabelRule()); 
             pushFollow(FOLLOW_1);
@@ -9012,7 +8617,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleImmediate8OrLabel"
-    // InternalPds16asmParser.g:3042:1: ruleImmediate8OrLabel returns [EObject current=null] : (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) ) ;
+    // InternalPds16asmParser.g:2861:1: ruleImmediate8OrLabel returns [EObject current=null] : (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) ) ;
     public final EObject ruleImmediate8OrLabel() throws RecognitionException {
         EObject current = null;
 
@@ -9025,41 +8630,41 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:3048:2: ( (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) ) )
-            // InternalPds16asmParser.g:3049:2: (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) )
+            // InternalPds16asmParser.g:2867:2: ( (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) ) )
+            // InternalPds16asmParser.g:2868:2: (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) )
             {
-            // InternalPds16asmParser.g:3049:2: (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) )
-            // InternalPds16asmParser.g:3050:3: otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) )
+            // InternalPds16asmParser.g:2868:2: (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) )
+            // InternalPds16asmParser.g:2869:3: otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) )
             {
-            otherlv_0=(Token)match(input,NumberSign,FOLLOW_12); 
+            otherlv_0=(Token)match(input,NumberSign,FOLLOW_11); 
 
             			newLeafNode(otherlv_0, grammarAccess.getImmediate8OrLabelAccess().getNumberSignKeyword_0());
             		
-            // InternalPds16asmParser.g:3054:3: ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) )
-            int alt55=2;
-            int LA55_0 = input.LA(1);
+            // InternalPds16asmParser.g:2873:3: ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) )
+            int alt52=2;
+            int LA52_0 = input.LA(1);
 
-            if ( ((LA55_0>=RULE_HEX && LA55_0<=RULE_BIN)||LA55_0==RULE_CHAR||LA55_0==RULE_INT) ) {
-                alt55=1;
+            if ( ((LA52_0>=RULE_HEX && LA52_0<=RULE_BIN)||LA52_0==RULE_CHAR||LA52_0==RULE_INT) ) {
+                alt52=1;
             }
-            else if ( (LA55_0==RULE_ID) ) {
-                alt55=2;
+            else if ( (LA52_0==RULE_ID) ) {
+                alt52=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 55, 0, input);
+                    new NoViableAltException("", 52, 0, input);
 
                 throw nvae;
             }
-            switch (alt55) {
+            switch (alt52) {
                 case 1 :
-                    // InternalPds16asmParser.g:3055:4: ( (lv_number_1_0= ruleNumber ) )
+                    // InternalPds16asmParser.g:2874:4: ( (lv_number_1_0= ruleNumber ) )
                     {
-                    // InternalPds16asmParser.g:3055:4: ( (lv_number_1_0= ruleNumber ) )
-                    // InternalPds16asmParser.g:3056:5: (lv_number_1_0= ruleNumber )
+                    // InternalPds16asmParser.g:2874:4: ( (lv_number_1_0= ruleNumber ) )
+                    // InternalPds16asmParser.g:2875:5: (lv_number_1_0= ruleNumber )
                     {
-                    // InternalPds16asmParser.g:3056:5: (lv_number_1_0= ruleNumber )
-                    // InternalPds16asmParser.g:3057:6: lv_number_1_0= ruleNumber
+                    // InternalPds16asmParser.g:2875:5: (lv_number_1_0= ruleNumber )
+                    // InternalPds16asmParser.g:2876:6: lv_number_1_0= ruleNumber
                     {
 
                     						newCompositeNode(grammarAccess.getImmediate8OrLabelAccess().getNumberNumberParserRuleCall_1_0_0());
@@ -9090,13 +8695,13 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:3075:4: ( (lv_label_2_0= RULE_ID ) )
+                    // InternalPds16asmParser.g:2894:4: ( (lv_label_2_0= RULE_ID ) )
                     {
-                    // InternalPds16asmParser.g:3075:4: ( (lv_label_2_0= RULE_ID ) )
-                    // InternalPds16asmParser.g:3076:5: (lv_label_2_0= RULE_ID )
+                    // InternalPds16asmParser.g:2894:4: ( (lv_label_2_0= RULE_ID ) )
+                    // InternalPds16asmParser.g:2895:5: (lv_label_2_0= RULE_ID )
                     {
-                    // InternalPds16asmParser.g:3076:5: (lv_label_2_0= RULE_ID )
-                    // InternalPds16asmParser.g:3077:6: lv_label_2_0= RULE_ID
+                    // InternalPds16asmParser.g:2895:5: (lv_label_2_0= RULE_ID )
+                    // InternalPds16asmParser.g:2896:6: lv_label_2_0= RULE_ID
                     {
                     lv_label_2_0=(Token)match(input,RULE_ID,FOLLOW_2); 
 
@@ -9147,7 +8752,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIdx3OrLabel"
-    // InternalPds16asmParser.g:3098:1: entryRuleIdx3OrLabel returns [EObject current=null] : iv_ruleIdx3OrLabel= ruleIdx3OrLabel EOF ;
+    // InternalPds16asmParser.g:2917:1: entryRuleIdx3OrLabel returns [EObject current=null] : iv_ruleIdx3OrLabel= ruleIdx3OrLabel EOF ;
     public final EObject entryRuleIdx3OrLabel() throws RecognitionException {
         EObject current = null;
 
@@ -9155,8 +8760,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:3098:52: (iv_ruleIdx3OrLabel= ruleIdx3OrLabel EOF )
-            // InternalPds16asmParser.g:3099:2: iv_ruleIdx3OrLabel= ruleIdx3OrLabel EOF
+            // InternalPds16asmParser.g:2917:52: (iv_ruleIdx3OrLabel= ruleIdx3OrLabel EOF )
+            // InternalPds16asmParser.g:2918:2: iv_ruleIdx3OrLabel= ruleIdx3OrLabel EOF
             {
              newCompositeNode(grammarAccess.getIdx3OrLabelRule()); 
             pushFollow(FOLLOW_1);
@@ -9183,7 +8788,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIdx3OrLabel"
-    // InternalPds16asmParser.g:3105:1: ruleIdx3OrLabel returns [EObject current=null] : (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) ) ;
+    // InternalPds16asmParser.g:2924:1: ruleIdx3OrLabel returns [EObject current=null] : (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) ) ;
     public final EObject ruleIdx3OrLabel() throws RecognitionException {
         EObject current = null;
 
@@ -9196,41 +8801,41 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:3111:2: ( (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) ) )
-            // InternalPds16asmParser.g:3112:2: (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) )
+            // InternalPds16asmParser.g:2930:2: ( (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) ) )
+            // InternalPds16asmParser.g:2931:2: (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) )
             {
-            // InternalPds16asmParser.g:3112:2: (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) )
-            // InternalPds16asmParser.g:3113:3: otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) )
+            // InternalPds16asmParser.g:2931:2: (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) )
+            // InternalPds16asmParser.g:2932:3: otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) )
             {
-            otherlv_0=(Token)match(input,NumberSign,FOLLOW_12); 
+            otherlv_0=(Token)match(input,NumberSign,FOLLOW_11); 
 
             			newLeafNode(otherlv_0, grammarAccess.getIdx3OrLabelAccess().getNumberSignKeyword_0());
             		
-            // InternalPds16asmParser.g:3117:3: ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) )
-            int alt56=2;
-            int LA56_0 = input.LA(1);
+            // InternalPds16asmParser.g:2936:3: ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) )
+            int alt53=2;
+            int LA53_0 = input.LA(1);
 
-            if ( ((LA56_0>=RULE_HEX && LA56_0<=RULE_BIN)||LA56_0==RULE_CHAR||LA56_0==RULE_INT) ) {
-                alt56=1;
+            if ( ((LA53_0>=RULE_HEX && LA53_0<=RULE_BIN)||LA53_0==RULE_CHAR||LA53_0==RULE_INT) ) {
+                alt53=1;
             }
-            else if ( (LA56_0==RULE_ID) ) {
-                alt56=2;
+            else if ( (LA53_0==RULE_ID) ) {
+                alt53=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 56, 0, input);
+                    new NoViableAltException("", 53, 0, input);
 
                 throw nvae;
             }
-            switch (alt56) {
+            switch (alt53) {
                 case 1 :
-                    // InternalPds16asmParser.g:3118:4: ( (lv_number_1_0= ruleNumber ) )
+                    // InternalPds16asmParser.g:2937:4: ( (lv_number_1_0= ruleNumber ) )
                     {
-                    // InternalPds16asmParser.g:3118:4: ( (lv_number_1_0= ruleNumber ) )
-                    // InternalPds16asmParser.g:3119:5: (lv_number_1_0= ruleNumber )
+                    // InternalPds16asmParser.g:2937:4: ( (lv_number_1_0= ruleNumber ) )
+                    // InternalPds16asmParser.g:2938:5: (lv_number_1_0= ruleNumber )
                     {
-                    // InternalPds16asmParser.g:3119:5: (lv_number_1_0= ruleNumber )
-                    // InternalPds16asmParser.g:3120:6: lv_number_1_0= ruleNumber
+                    // InternalPds16asmParser.g:2938:5: (lv_number_1_0= ruleNumber )
+                    // InternalPds16asmParser.g:2939:6: lv_number_1_0= ruleNumber
                     {
 
                     						newCompositeNode(grammarAccess.getIdx3OrLabelAccess().getNumberNumberParserRuleCall_1_0_0());
@@ -9261,13 +8866,13 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:3138:4: ( (lv_label_2_0= RULE_ID ) )
+                    // InternalPds16asmParser.g:2957:4: ( (lv_label_2_0= RULE_ID ) )
                     {
-                    // InternalPds16asmParser.g:3138:4: ( (lv_label_2_0= RULE_ID ) )
-                    // InternalPds16asmParser.g:3139:5: (lv_label_2_0= RULE_ID )
+                    // InternalPds16asmParser.g:2957:4: ( (lv_label_2_0= RULE_ID ) )
+                    // InternalPds16asmParser.g:2958:5: (lv_label_2_0= RULE_ID )
                     {
-                    // InternalPds16asmParser.g:3139:5: (lv_label_2_0= RULE_ID )
-                    // InternalPds16asmParser.g:3140:6: lv_label_2_0= RULE_ID
+                    // InternalPds16asmParser.g:2958:5: (lv_label_2_0= RULE_ID )
+                    // InternalPds16asmParser.g:2959:6: lv_label_2_0= RULE_ID
                     {
                     lv_label_2_0=(Token)match(input,RULE_ID,FOLLOW_2); 
 
@@ -9318,7 +8923,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleConst4OrLabel"
-    // InternalPds16asmParser.g:3161:1: entryRuleConst4OrLabel returns [EObject current=null] : iv_ruleConst4OrLabel= ruleConst4OrLabel EOF ;
+    // InternalPds16asmParser.g:2980:1: entryRuleConst4OrLabel returns [EObject current=null] : iv_ruleConst4OrLabel= ruleConst4OrLabel EOF ;
     public final EObject entryRuleConst4OrLabel() throws RecognitionException {
         EObject current = null;
 
@@ -9326,8 +8931,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:3161:54: (iv_ruleConst4OrLabel= ruleConst4OrLabel EOF )
-            // InternalPds16asmParser.g:3162:2: iv_ruleConst4OrLabel= ruleConst4OrLabel EOF
+            // InternalPds16asmParser.g:2980:54: (iv_ruleConst4OrLabel= ruleConst4OrLabel EOF )
+            // InternalPds16asmParser.g:2981:2: iv_ruleConst4OrLabel= ruleConst4OrLabel EOF
             {
              newCompositeNode(grammarAccess.getConst4OrLabelRule()); 
             pushFollow(FOLLOW_1);
@@ -9354,7 +8959,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleConst4OrLabel"
-    // InternalPds16asmParser.g:3168:1: ruleConst4OrLabel returns [EObject current=null] : (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) ) ;
+    // InternalPds16asmParser.g:2987:1: ruleConst4OrLabel returns [EObject current=null] : (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) ) ;
     public final EObject ruleConst4OrLabel() throws RecognitionException {
         EObject current = null;
 
@@ -9367,41 +8972,41 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:3174:2: ( (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) ) )
-            // InternalPds16asmParser.g:3175:2: (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) )
+            // InternalPds16asmParser.g:2993:2: ( (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) ) )
+            // InternalPds16asmParser.g:2994:2: (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) )
             {
-            // InternalPds16asmParser.g:3175:2: (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) )
-            // InternalPds16asmParser.g:3176:3: otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) )
+            // InternalPds16asmParser.g:2994:2: (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) )
+            // InternalPds16asmParser.g:2995:3: otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) )
             {
-            otherlv_0=(Token)match(input,NumberSign,FOLLOW_12); 
+            otherlv_0=(Token)match(input,NumberSign,FOLLOW_11); 
 
             			newLeafNode(otherlv_0, grammarAccess.getConst4OrLabelAccess().getNumberSignKeyword_0());
             		
-            // InternalPds16asmParser.g:3180:3: ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) )
-            int alt57=2;
-            int LA57_0 = input.LA(1);
+            // InternalPds16asmParser.g:2999:3: ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) )
+            int alt54=2;
+            int LA54_0 = input.LA(1);
 
-            if ( ((LA57_0>=RULE_HEX && LA57_0<=RULE_BIN)||LA57_0==RULE_CHAR||LA57_0==RULE_INT) ) {
-                alt57=1;
+            if ( ((LA54_0>=RULE_HEX && LA54_0<=RULE_BIN)||LA54_0==RULE_CHAR||LA54_0==RULE_INT) ) {
+                alt54=1;
             }
-            else if ( (LA57_0==RULE_ID) ) {
-                alt57=2;
+            else if ( (LA54_0==RULE_ID) ) {
+                alt54=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 57, 0, input);
+                    new NoViableAltException("", 54, 0, input);
 
                 throw nvae;
             }
-            switch (alt57) {
+            switch (alt54) {
                 case 1 :
-                    // InternalPds16asmParser.g:3181:4: ( (lv_number_1_0= ruleNumber ) )
+                    // InternalPds16asmParser.g:3000:4: ( (lv_number_1_0= ruleNumber ) )
                     {
-                    // InternalPds16asmParser.g:3181:4: ( (lv_number_1_0= ruleNumber ) )
-                    // InternalPds16asmParser.g:3182:5: (lv_number_1_0= ruleNumber )
+                    // InternalPds16asmParser.g:3000:4: ( (lv_number_1_0= ruleNumber ) )
+                    // InternalPds16asmParser.g:3001:5: (lv_number_1_0= ruleNumber )
                     {
-                    // InternalPds16asmParser.g:3182:5: (lv_number_1_0= ruleNumber )
-                    // InternalPds16asmParser.g:3183:6: lv_number_1_0= ruleNumber
+                    // InternalPds16asmParser.g:3001:5: (lv_number_1_0= ruleNumber )
+                    // InternalPds16asmParser.g:3002:6: lv_number_1_0= ruleNumber
                     {
 
                     						newCompositeNode(grammarAccess.getConst4OrLabelAccess().getNumberNumberParserRuleCall_1_0_0());
@@ -9432,13 +9037,13 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:3201:4: ( (lv_label_2_0= RULE_ID ) )
+                    // InternalPds16asmParser.g:3020:4: ( (lv_label_2_0= RULE_ID ) )
                     {
-                    // InternalPds16asmParser.g:3201:4: ( (lv_label_2_0= RULE_ID ) )
-                    // InternalPds16asmParser.g:3202:5: (lv_label_2_0= RULE_ID )
+                    // InternalPds16asmParser.g:3020:4: ( (lv_label_2_0= RULE_ID ) )
+                    // InternalPds16asmParser.g:3021:5: (lv_label_2_0= RULE_ID )
                     {
-                    // InternalPds16asmParser.g:3202:5: (lv_label_2_0= RULE_ID )
-                    // InternalPds16asmParser.g:3203:6: lv_label_2_0= RULE_ID
+                    // InternalPds16asmParser.g:3021:5: (lv_label_2_0= RULE_ID )
+                    // InternalPds16asmParser.g:3022:6: lv_label_2_0= RULE_ID
                     {
                     lv_label_2_0=(Token)match(input,RULE_ID,FOLLOW_2); 
 
@@ -9489,7 +9094,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOffset8OrLabel"
-    // InternalPds16asmParser.g:3224:1: entryRuleOffset8OrLabel returns [EObject current=null] : iv_ruleOffset8OrLabel= ruleOffset8OrLabel EOF ;
+    // InternalPds16asmParser.g:3043:1: entryRuleOffset8OrLabel returns [EObject current=null] : iv_ruleOffset8OrLabel= ruleOffset8OrLabel EOF ;
     public final EObject entryRuleOffset8OrLabel() throws RecognitionException {
         EObject current = null;
 
@@ -9497,8 +9102,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:3224:55: (iv_ruleOffset8OrLabel= ruleOffset8OrLabel EOF )
-            // InternalPds16asmParser.g:3225:2: iv_ruleOffset8OrLabel= ruleOffset8OrLabel EOF
+            // InternalPds16asmParser.g:3043:55: (iv_ruleOffset8OrLabel= ruleOffset8OrLabel EOF )
+            // InternalPds16asmParser.g:3044:2: iv_ruleOffset8OrLabel= ruleOffset8OrLabel EOF
             {
              newCompositeNode(grammarAccess.getOffset8OrLabelRule()); 
             pushFollow(FOLLOW_1);
@@ -9525,7 +9130,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOffset8OrLabel"
-    // InternalPds16asmParser.g:3231:1: ruleOffset8OrLabel returns [EObject current=null] : (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) ) ;
+    // InternalPds16asmParser.g:3050:1: ruleOffset8OrLabel returns [EObject current=null] : (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) ) ;
     public final EObject ruleOffset8OrLabel() throws RecognitionException {
         EObject current = null;
 
@@ -9538,41 +9143,41 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:3237:2: ( (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) ) )
-            // InternalPds16asmParser.g:3238:2: (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) )
+            // InternalPds16asmParser.g:3056:2: ( (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) ) )
+            // InternalPds16asmParser.g:3057:2: (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) )
             {
-            // InternalPds16asmParser.g:3238:2: (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) )
-            // InternalPds16asmParser.g:3239:3: otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) )
+            // InternalPds16asmParser.g:3057:2: (otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) ) )
+            // InternalPds16asmParser.g:3058:3: otherlv_0= NumberSign ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) )
             {
-            otherlv_0=(Token)match(input,NumberSign,FOLLOW_12); 
+            otherlv_0=(Token)match(input,NumberSign,FOLLOW_11); 
 
             			newLeafNode(otherlv_0, grammarAccess.getOffset8OrLabelAccess().getNumberSignKeyword_0());
             		
-            // InternalPds16asmParser.g:3243:3: ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) )
-            int alt58=2;
-            int LA58_0 = input.LA(1);
+            // InternalPds16asmParser.g:3062:3: ( ( (lv_number_1_0= ruleNumber ) ) | ( (lv_label_2_0= RULE_ID ) ) )
+            int alt55=2;
+            int LA55_0 = input.LA(1);
 
-            if ( ((LA58_0>=RULE_HEX && LA58_0<=RULE_BIN)||LA58_0==RULE_CHAR||LA58_0==RULE_INT) ) {
-                alt58=1;
+            if ( ((LA55_0>=RULE_HEX && LA55_0<=RULE_BIN)||LA55_0==RULE_CHAR||LA55_0==RULE_INT) ) {
+                alt55=1;
             }
-            else if ( (LA58_0==RULE_ID) ) {
-                alt58=2;
+            else if ( (LA55_0==RULE_ID) ) {
+                alt55=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 58, 0, input);
+                    new NoViableAltException("", 55, 0, input);
 
                 throw nvae;
             }
-            switch (alt58) {
+            switch (alt55) {
                 case 1 :
-                    // InternalPds16asmParser.g:3244:4: ( (lv_number_1_0= ruleNumber ) )
+                    // InternalPds16asmParser.g:3063:4: ( (lv_number_1_0= ruleNumber ) )
                     {
-                    // InternalPds16asmParser.g:3244:4: ( (lv_number_1_0= ruleNumber ) )
-                    // InternalPds16asmParser.g:3245:5: (lv_number_1_0= ruleNumber )
+                    // InternalPds16asmParser.g:3063:4: ( (lv_number_1_0= ruleNumber ) )
+                    // InternalPds16asmParser.g:3064:5: (lv_number_1_0= ruleNumber )
                     {
-                    // InternalPds16asmParser.g:3245:5: (lv_number_1_0= ruleNumber )
-                    // InternalPds16asmParser.g:3246:6: lv_number_1_0= ruleNumber
+                    // InternalPds16asmParser.g:3064:5: (lv_number_1_0= ruleNumber )
+                    // InternalPds16asmParser.g:3065:6: lv_number_1_0= ruleNumber
                     {
 
                     						newCompositeNode(grammarAccess.getOffset8OrLabelAccess().getNumberNumberParserRuleCall_1_0_0());
@@ -9603,13 +9208,13 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:3264:4: ( (lv_label_2_0= RULE_ID ) )
+                    // InternalPds16asmParser.g:3083:4: ( (lv_label_2_0= RULE_ID ) )
                     {
-                    // InternalPds16asmParser.g:3264:4: ( (lv_label_2_0= RULE_ID ) )
-                    // InternalPds16asmParser.g:3265:5: (lv_label_2_0= RULE_ID )
+                    // InternalPds16asmParser.g:3083:4: ( (lv_label_2_0= RULE_ID ) )
+                    // InternalPds16asmParser.g:3084:5: (lv_label_2_0= RULE_ID )
                     {
-                    // InternalPds16asmParser.g:3265:5: (lv_label_2_0= RULE_ID )
-                    // InternalPds16asmParser.g:3266:6: lv_label_2_0= RULE_ID
+                    // InternalPds16asmParser.g:3084:5: (lv_label_2_0= RULE_ID )
+                    // InternalPds16asmParser.g:3085:6: lv_label_2_0= RULE_ID
                     {
                     lv_label_2_0=(Token)match(input,RULE_ID,FOLLOW_2); 
 
@@ -9660,7 +9265,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOperationWithTwoRegisters"
-    // InternalPds16asmParser.g:3287:1: entryRuleOperationWithTwoRegisters returns [EObject current=null] : iv_ruleOperationWithTwoRegisters= ruleOperationWithTwoRegisters EOF ;
+    // InternalPds16asmParser.g:3106:1: entryRuleOperationWithTwoRegisters returns [EObject current=null] : iv_ruleOperationWithTwoRegisters= ruleOperationWithTwoRegisters EOF ;
     public final EObject entryRuleOperationWithTwoRegisters() throws RecognitionException {
         EObject current = null;
 
@@ -9668,8 +9273,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:3287:66: (iv_ruleOperationWithTwoRegisters= ruleOperationWithTwoRegisters EOF )
-            // InternalPds16asmParser.g:3288:2: iv_ruleOperationWithTwoRegisters= ruleOperationWithTwoRegisters EOF
+            // InternalPds16asmParser.g:3106:66: (iv_ruleOperationWithTwoRegisters= ruleOperationWithTwoRegisters EOF )
+            // InternalPds16asmParser.g:3107:2: iv_ruleOperationWithTwoRegisters= ruleOperationWithTwoRegisters EOF
             {
              newCompositeNode(grammarAccess.getOperationWithTwoRegistersRule()); 
             pushFollow(FOLLOW_1);
@@ -9696,7 +9301,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOperationWithTwoRegisters"
-    // InternalPds16asmParser.g:3294:1: ruleOperationWithTwoRegisters returns [EObject current=null] : ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) ) ;
+    // InternalPds16asmParser.g:3113:1: ruleOperationWithTwoRegisters returns [EObject current=null] : ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) ) ;
     public final EObject ruleOperationWithTwoRegisters() throws RecognitionException {
         EObject current = null;
 
@@ -9708,19 +9313,19 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:3300:2: ( ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) ) )
-            // InternalPds16asmParser.g:3301:2: ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) )
+            // InternalPds16asmParser.g:3119:2: ( ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) ) )
+            // InternalPds16asmParser.g:3120:2: ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) )
             {
-            // InternalPds16asmParser.g:3301:2: ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) )
-            // InternalPds16asmParser.g:3302:3: ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) )
+            // InternalPds16asmParser.g:3120:2: ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) )
+            // InternalPds16asmParser.g:3121:3: ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) )
             {
-            // InternalPds16asmParser.g:3302:3: ( (lv_rd_0_0= RULE_REGISTERS ) )
-            // InternalPds16asmParser.g:3303:4: (lv_rd_0_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:3121:3: ( (lv_rd_0_0= RULE_REGISTERS ) )
+            // InternalPds16asmParser.g:3122:4: (lv_rd_0_0= RULE_REGISTERS )
             {
-            // InternalPds16asmParser.g:3303:4: (lv_rd_0_0= RULE_REGISTERS )
-            // InternalPds16asmParser.g:3304:5: lv_rd_0_0= RULE_REGISTERS
+            // InternalPds16asmParser.g:3122:4: (lv_rd_0_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:3123:5: lv_rd_0_0= RULE_REGISTERS
             {
-            lv_rd_0_0=(Token)match(input,RULE_REGISTERS,FOLLOW_6); 
+            lv_rd_0_0=(Token)match(input,RULE_REGISTERS,FOLLOW_14); 
 
             					newLeafNode(lv_rd_0_0, grammarAccess.getOperationWithTwoRegistersAccess().getRdREGISTERSTerminalRuleCall_0_0());
             				
@@ -9740,15 +9345,15 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,Comma,FOLLOW_14); 
+            otherlv_1=(Token)match(input,Comma,FOLLOW_15); 
 
             			newLeafNode(otherlv_1, grammarAccess.getOperationWithTwoRegistersAccess().getCommaKeyword_1());
             		
-            // InternalPds16asmParser.g:3324:3: ( (lv_rm_2_0= RULE_REGISTERS ) )
-            // InternalPds16asmParser.g:3325:4: (lv_rm_2_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:3143:3: ( (lv_rm_2_0= RULE_REGISTERS ) )
+            // InternalPds16asmParser.g:3144:4: (lv_rm_2_0= RULE_REGISTERS )
             {
-            // InternalPds16asmParser.g:3325:4: (lv_rm_2_0= RULE_REGISTERS )
-            // InternalPds16asmParser.g:3326:5: lv_rm_2_0= RULE_REGISTERS
+            // InternalPds16asmParser.g:3144:4: (lv_rm_2_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:3145:5: lv_rm_2_0= RULE_REGISTERS
             {
             lv_rm_2_0=(Token)match(input,RULE_REGISTERS,FOLLOW_2); 
 
@@ -9793,7 +9398,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOperationsWithTreeRegisters"
-    // InternalPds16asmParser.g:3346:1: entryRuleOperationsWithTreeRegisters returns [EObject current=null] : iv_ruleOperationsWithTreeRegisters= ruleOperationsWithTreeRegisters EOF ;
+    // InternalPds16asmParser.g:3165:1: entryRuleOperationsWithTreeRegisters returns [EObject current=null] : iv_ruleOperationsWithTreeRegisters= ruleOperationsWithTreeRegisters EOF ;
     public final EObject entryRuleOperationsWithTreeRegisters() throws RecognitionException {
         EObject current = null;
 
@@ -9801,8 +9406,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:3346:68: (iv_ruleOperationsWithTreeRegisters= ruleOperationsWithTreeRegisters EOF )
-            // InternalPds16asmParser.g:3347:2: iv_ruleOperationsWithTreeRegisters= ruleOperationsWithTreeRegisters EOF
+            // InternalPds16asmParser.g:3165:68: (iv_ruleOperationsWithTreeRegisters= ruleOperationsWithTreeRegisters EOF )
+            // InternalPds16asmParser.g:3166:2: iv_ruleOperationsWithTreeRegisters= ruleOperationsWithTreeRegisters EOF
             {
              newCompositeNode(grammarAccess.getOperationsWithTreeRegistersRule()); 
             pushFollow(FOLLOW_1);
@@ -9829,7 +9434,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOperationsWithTreeRegisters"
-    // InternalPds16asmParser.g:3353:1: ruleOperationsWithTreeRegisters returns [EObject current=null] : ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) otherlv_3= Comma ( (lv_rn_4_0= RULE_REGISTERS ) ) ) ;
+    // InternalPds16asmParser.g:3172:1: ruleOperationsWithTreeRegisters returns [EObject current=null] : ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) otherlv_3= Comma ( (lv_rn_4_0= RULE_REGISTERS ) ) ) ;
     public final EObject ruleOperationsWithTreeRegisters() throws RecognitionException {
         EObject current = null;
 
@@ -9843,19 +9448,19 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:3359:2: ( ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) otherlv_3= Comma ( (lv_rn_4_0= RULE_REGISTERS ) ) ) )
-            // InternalPds16asmParser.g:3360:2: ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) otherlv_3= Comma ( (lv_rn_4_0= RULE_REGISTERS ) ) )
+            // InternalPds16asmParser.g:3178:2: ( ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) otherlv_3= Comma ( (lv_rn_4_0= RULE_REGISTERS ) ) ) )
+            // InternalPds16asmParser.g:3179:2: ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) otherlv_3= Comma ( (lv_rn_4_0= RULE_REGISTERS ) ) )
             {
-            // InternalPds16asmParser.g:3360:2: ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) otherlv_3= Comma ( (lv_rn_4_0= RULE_REGISTERS ) ) )
-            // InternalPds16asmParser.g:3361:3: ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) otherlv_3= Comma ( (lv_rn_4_0= RULE_REGISTERS ) )
+            // InternalPds16asmParser.g:3179:2: ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) otherlv_3= Comma ( (lv_rn_4_0= RULE_REGISTERS ) ) )
+            // InternalPds16asmParser.g:3180:3: ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) otherlv_3= Comma ( (lv_rn_4_0= RULE_REGISTERS ) )
             {
-            // InternalPds16asmParser.g:3361:3: ( (lv_rd_0_0= RULE_REGISTERS ) )
-            // InternalPds16asmParser.g:3362:4: (lv_rd_0_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:3180:3: ( (lv_rd_0_0= RULE_REGISTERS ) )
+            // InternalPds16asmParser.g:3181:4: (lv_rd_0_0= RULE_REGISTERS )
             {
-            // InternalPds16asmParser.g:3362:4: (lv_rd_0_0= RULE_REGISTERS )
-            // InternalPds16asmParser.g:3363:5: lv_rd_0_0= RULE_REGISTERS
+            // InternalPds16asmParser.g:3181:4: (lv_rd_0_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:3182:5: lv_rd_0_0= RULE_REGISTERS
             {
-            lv_rd_0_0=(Token)match(input,RULE_REGISTERS,FOLLOW_6); 
+            lv_rd_0_0=(Token)match(input,RULE_REGISTERS,FOLLOW_14); 
 
             					newLeafNode(lv_rd_0_0, grammarAccess.getOperationsWithTreeRegistersAccess().getRdREGISTERSTerminalRuleCall_0_0());
             				
@@ -9875,17 +9480,17 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,Comma,FOLLOW_14); 
+            otherlv_1=(Token)match(input,Comma,FOLLOW_15); 
 
             			newLeafNode(otherlv_1, grammarAccess.getOperationsWithTreeRegistersAccess().getCommaKeyword_1());
             		
-            // InternalPds16asmParser.g:3383:3: ( (lv_rm_2_0= RULE_REGISTERS ) )
-            // InternalPds16asmParser.g:3384:4: (lv_rm_2_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:3202:3: ( (lv_rm_2_0= RULE_REGISTERS ) )
+            // InternalPds16asmParser.g:3203:4: (lv_rm_2_0= RULE_REGISTERS )
             {
-            // InternalPds16asmParser.g:3384:4: (lv_rm_2_0= RULE_REGISTERS )
-            // InternalPds16asmParser.g:3385:5: lv_rm_2_0= RULE_REGISTERS
+            // InternalPds16asmParser.g:3203:4: (lv_rm_2_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:3204:5: lv_rm_2_0= RULE_REGISTERS
             {
-            lv_rm_2_0=(Token)match(input,RULE_REGISTERS,FOLLOW_6); 
+            lv_rm_2_0=(Token)match(input,RULE_REGISTERS,FOLLOW_14); 
 
             					newLeafNode(lv_rm_2_0, grammarAccess.getOperationsWithTreeRegistersAccess().getRmREGISTERSTerminalRuleCall_2_0());
             				
@@ -9905,15 +9510,15 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,Comma,FOLLOW_14); 
+            otherlv_3=(Token)match(input,Comma,FOLLOW_15); 
 
             			newLeafNode(otherlv_3, grammarAccess.getOperationsWithTreeRegistersAccess().getCommaKeyword_3());
             		
-            // InternalPds16asmParser.g:3405:3: ( (lv_rn_4_0= RULE_REGISTERS ) )
-            // InternalPds16asmParser.g:3406:4: (lv_rn_4_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:3224:3: ( (lv_rn_4_0= RULE_REGISTERS ) )
+            // InternalPds16asmParser.g:3225:4: (lv_rn_4_0= RULE_REGISTERS )
             {
-            // InternalPds16asmParser.g:3406:4: (lv_rn_4_0= RULE_REGISTERS )
-            // InternalPds16asmParser.g:3407:5: lv_rn_4_0= RULE_REGISTERS
+            // InternalPds16asmParser.g:3225:4: (lv_rn_4_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:3226:5: lv_rn_4_0= RULE_REGISTERS
             {
             lv_rn_4_0=(Token)match(input,RULE_REGISTERS,FOLLOW_2); 
 
@@ -9958,7 +9563,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOperationsWithConstant"
-    // InternalPds16asmParser.g:3427:1: entryRuleOperationsWithConstant returns [EObject current=null] : iv_ruleOperationsWithConstant= ruleOperationsWithConstant EOF ;
+    // InternalPds16asmParser.g:3246:1: entryRuleOperationsWithConstant returns [EObject current=null] : iv_ruleOperationsWithConstant= ruleOperationsWithConstant EOF ;
     public final EObject entryRuleOperationsWithConstant() throws RecognitionException {
         EObject current = null;
 
@@ -9966,8 +9571,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:3427:63: (iv_ruleOperationsWithConstant= ruleOperationsWithConstant EOF )
-            // InternalPds16asmParser.g:3428:2: iv_ruleOperationsWithConstant= ruleOperationsWithConstant EOF
+            // InternalPds16asmParser.g:3246:63: (iv_ruleOperationsWithConstant= ruleOperationsWithConstant EOF )
+            // InternalPds16asmParser.g:3247:2: iv_ruleOperationsWithConstant= ruleOperationsWithConstant EOF
             {
              newCompositeNode(grammarAccess.getOperationsWithConstantRule()); 
             pushFollow(FOLLOW_1);
@@ -9994,7 +9599,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOperationsWithConstant"
-    // InternalPds16asmParser.g:3434:1: ruleOperationsWithConstant returns [EObject current=null] : ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) otherlv_3= Comma ( (lv_const4_4_0= ruleConst4OrLabel ) ) ) ;
+    // InternalPds16asmParser.g:3253:1: ruleOperationsWithConstant returns [EObject current=null] : ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) otherlv_3= Comma ( (lv_const4_4_0= ruleConst4OrLabel ) ) ) ;
     public final EObject ruleOperationsWithConstant() throws RecognitionException {
         EObject current = null;
 
@@ -10009,19 +9614,19 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:3440:2: ( ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) otherlv_3= Comma ( (lv_const4_4_0= ruleConst4OrLabel ) ) ) )
-            // InternalPds16asmParser.g:3441:2: ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) otherlv_3= Comma ( (lv_const4_4_0= ruleConst4OrLabel ) ) )
+            // InternalPds16asmParser.g:3259:2: ( ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) otherlv_3= Comma ( (lv_const4_4_0= ruleConst4OrLabel ) ) ) )
+            // InternalPds16asmParser.g:3260:2: ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) otherlv_3= Comma ( (lv_const4_4_0= ruleConst4OrLabel ) ) )
             {
-            // InternalPds16asmParser.g:3441:2: ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) otherlv_3= Comma ( (lv_const4_4_0= ruleConst4OrLabel ) ) )
-            // InternalPds16asmParser.g:3442:3: ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) otherlv_3= Comma ( (lv_const4_4_0= ruleConst4OrLabel ) )
+            // InternalPds16asmParser.g:3260:2: ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) otherlv_3= Comma ( (lv_const4_4_0= ruleConst4OrLabel ) ) )
+            // InternalPds16asmParser.g:3261:3: ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) otherlv_3= Comma ( (lv_const4_4_0= ruleConst4OrLabel ) )
             {
-            // InternalPds16asmParser.g:3442:3: ( (lv_rd_0_0= RULE_REGISTERS ) )
-            // InternalPds16asmParser.g:3443:4: (lv_rd_0_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:3261:3: ( (lv_rd_0_0= RULE_REGISTERS ) )
+            // InternalPds16asmParser.g:3262:4: (lv_rd_0_0= RULE_REGISTERS )
             {
-            // InternalPds16asmParser.g:3443:4: (lv_rd_0_0= RULE_REGISTERS )
-            // InternalPds16asmParser.g:3444:5: lv_rd_0_0= RULE_REGISTERS
+            // InternalPds16asmParser.g:3262:4: (lv_rd_0_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:3263:5: lv_rd_0_0= RULE_REGISTERS
             {
-            lv_rd_0_0=(Token)match(input,RULE_REGISTERS,FOLLOW_6); 
+            lv_rd_0_0=(Token)match(input,RULE_REGISTERS,FOLLOW_14); 
 
             					newLeafNode(lv_rd_0_0, grammarAccess.getOperationsWithConstantAccess().getRdREGISTERSTerminalRuleCall_0_0());
             				
@@ -10041,17 +9646,17 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,Comma,FOLLOW_14); 
+            otherlv_1=(Token)match(input,Comma,FOLLOW_15); 
 
             			newLeafNode(otherlv_1, grammarAccess.getOperationsWithConstantAccess().getCommaKeyword_1());
             		
-            // InternalPds16asmParser.g:3464:3: ( (lv_rm_2_0= RULE_REGISTERS ) )
-            // InternalPds16asmParser.g:3465:4: (lv_rm_2_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:3283:3: ( (lv_rm_2_0= RULE_REGISTERS ) )
+            // InternalPds16asmParser.g:3284:4: (lv_rm_2_0= RULE_REGISTERS )
             {
-            // InternalPds16asmParser.g:3465:4: (lv_rm_2_0= RULE_REGISTERS )
-            // InternalPds16asmParser.g:3466:5: lv_rm_2_0= RULE_REGISTERS
+            // InternalPds16asmParser.g:3284:4: (lv_rm_2_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:3285:5: lv_rm_2_0= RULE_REGISTERS
             {
-            lv_rm_2_0=(Token)match(input,RULE_REGISTERS,FOLLOW_6); 
+            lv_rm_2_0=(Token)match(input,RULE_REGISTERS,FOLLOW_14); 
 
             					newLeafNode(lv_rm_2_0, grammarAccess.getOperationsWithConstantAccess().getRmREGISTERSTerminalRuleCall_2_0());
             				
@@ -10071,15 +9676,15 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,Comma,FOLLOW_16); 
+            otherlv_3=(Token)match(input,Comma,FOLLOW_17); 
 
             			newLeafNode(otherlv_3, grammarAccess.getOperationsWithConstantAccess().getCommaKeyword_3());
             		
-            // InternalPds16asmParser.g:3486:3: ( (lv_const4_4_0= ruleConst4OrLabel ) )
-            // InternalPds16asmParser.g:3487:4: (lv_const4_4_0= ruleConst4OrLabel )
+            // InternalPds16asmParser.g:3305:3: ( (lv_const4_4_0= ruleConst4OrLabel ) )
+            // InternalPds16asmParser.g:3306:4: (lv_const4_4_0= ruleConst4OrLabel )
             {
-            // InternalPds16asmParser.g:3487:4: (lv_const4_4_0= ruleConst4OrLabel )
-            // InternalPds16asmParser.g:3488:5: lv_const4_4_0= ruleConst4OrLabel
+            // InternalPds16asmParser.g:3306:4: (lv_const4_4_0= ruleConst4OrLabel )
+            // InternalPds16asmParser.g:3307:5: lv_const4_4_0= ruleConst4OrLabel
             {
 
             					newCompositeNode(grammarAccess.getOperationsWithConstantAccess().getConst4Const4OrLabelParserRuleCall_4_0());
@@ -10129,7 +9734,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOperationShift"
-    // InternalPds16asmParser.g:3509:1: entryRuleOperationShift returns [EObject current=null] : iv_ruleOperationShift= ruleOperationShift EOF ;
+    // InternalPds16asmParser.g:3328:1: entryRuleOperationShift returns [EObject current=null] : iv_ruleOperationShift= ruleOperationShift EOF ;
     public final EObject entryRuleOperationShift() throws RecognitionException {
         EObject current = null;
 
@@ -10137,8 +9742,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:3509:55: (iv_ruleOperationShift= ruleOperationShift EOF )
-            // InternalPds16asmParser.g:3510:2: iv_ruleOperationShift= ruleOperationShift EOF
+            // InternalPds16asmParser.g:3328:55: (iv_ruleOperationShift= ruleOperationShift EOF )
+            // InternalPds16asmParser.g:3329:2: iv_ruleOperationShift= ruleOperationShift EOF
             {
              newCompositeNode(grammarAccess.getOperationShiftRule()); 
             pushFollow(FOLLOW_1);
@@ -10165,7 +9770,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOperationShift"
-    // InternalPds16asmParser.g:3516:1: ruleOperationShift returns [EObject current=null] : ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) otherlv_3= Comma ( (lv_const4_4_0= ruleConst4OrLabel ) ) otherlv_5= Comma ( ( (lv_sin_6_1= RULE_INT | lv_sin_6_2= RULE_HEX | lv_sin_6_3= RULE_OCT | lv_sin_6_4= RULE_BIN | lv_sin_6_5= RULE_CHAR ) ) ) ) ;
+    // InternalPds16asmParser.g:3335:1: ruleOperationShift returns [EObject current=null] : ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) otherlv_3= Comma ( (lv_const4_4_0= ruleConst4OrLabel ) ) otherlv_5= Comma ( ( (lv_sin_6_1= RULE_INT | lv_sin_6_2= RULE_HEX | lv_sin_6_3= RULE_OCT | lv_sin_6_4= RULE_BIN | lv_sin_6_5= RULE_CHAR ) ) ) ) ;
     public final EObject ruleOperationShift() throws RecognitionException {
         EObject current = null;
 
@@ -10186,19 +9791,19 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:3522:2: ( ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) otherlv_3= Comma ( (lv_const4_4_0= ruleConst4OrLabel ) ) otherlv_5= Comma ( ( (lv_sin_6_1= RULE_INT | lv_sin_6_2= RULE_HEX | lv_sin_6_3= RULE_OCT | lv_sin_6_4= RULE_BIN | lv_sin_6_5= RULE_CHAR ) ) ) ) )
-            // InternalPds16asmParser.g:3523:2: ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) otherlv_3= Comma ( (lv_const4_4_0= ruleConst4OrLabel ) ) otherlv_5= Comma ( ( (lv_sin_6_1= RULE_INT | lv_sin_6_2= RULE_HEX | lv_sin_6_3= RULE_OCT | lv_sin_6_4= RULE_BIN | lv_sin_6_5= RULE_CHAR ) ) ) )
+            // InternalPds16asmParser.g:3341:2: ( ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) otherlv_3= Comma ( (lv_const4_4_0= ruleConst4OrLabel ) ) otherlv_5= Comma ( ( (lv_sin_6_1= RULE_INT | lv_sin_6_2= RULE_HEX | lv_sin_6_3= RULE_OCT | lv_sin_6_4= RULE_BIN | lv_sin_6_5= RULE_CHAR ) ) ) ) )
+            // InternalPds16asmParser.g:3342:2: ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) otherlv_3= Comma ( (lv_const4_4_0= ruleConst4OrLabel ) ) otherlv_5= Comma ( ( (lv_sin_6_1= RULE_INT | lv_sin_6_2= RULE_HEX | lv_sin_6_3= RULE_OCT | lv_sin_6_4= RULE_BIN | lv_sin_6_5= RULE_CHAR ) ) ) )
             {
-            // InternalPds16asmParser.g:3523:2: ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) otherlv_3= Comma ( (lv_const4_4_0= ruleConst4OrLabel ) ) otherlv_5= Comma ( ( (lv_sin_6_1= RULE_INT | lv_sin_6_2= RULE_HEX | lv_sin_6_3= RULE_OCT | lv_sin_6_4= RULE_BIN | lv_sin_6_5= RULE_CHAR ) ) ) )
-            // InternalPds16asmParser.g:3524:3: ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) otherlv_3= Comma ( (lv_const4_4_0= ruleConst4OrLabel ) ) otherlv_5= Comma ( ( (lv_sin_6_1= RULE_INT | lv_sin_6_2= RULE_HEX | lv_sin_6_3= RULE_OCT | lv_sin_6_4= RULE_BIN | lv_sin_6_5= RULE_CHAR ) ) )
+            // InternalPds16asmParser.g:3342:2: ( ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) otherlv_3= Comma ( (lv_const4_4_0= ruleConst4OrLabel ) ) otherlv_5= Comma ( ( (lv_sin_6_1= RULE_INT | lv_sin_6_2= RULE_HEX | lv_sin_6_3= RULE_OCT | lv_sin_6_4= RULE_BIN | lv_sin_6_5= RULE_CHAR ) ) ) )
+            // InternalPds16asmParser.g:3343:3: ( (lv_rd_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_rm_2_0= RULE_REGISTERS ) ) otherlv_3= Comma ( (lv_const4_4_0= ruleConst4OrLabel ) ) otherlv_5= Comma ( ( (lv_sin_6_1= RULE_INT | lv_sin_6_2= RULE_HEX | lv_sin_6_3= RULE_OCT | lv_sin_6_4= RULE_BIN | lv_sin_6_5= RULE_CHAR ) ) )
             {
-            // InternalPds16asmParser.g:3524:3: ( (lv_rd_0_0= RULE_REGISTERS ) )
-            // InternalPds16asmParser.g:3525:4: (lv_rd_0_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:3343:3: ( (lv_rd_0_0= RULE_REGISTERS ) )
+            // InternalPds16asmParser.g:3344:4: (lv_rd_0_0= RULE_REGISTERS )
             {
-            // InternalPds16asmParser.g:3525:4: (lv_rd_0_0= RULE_REGISTERS )
-            // InternalPds16asmParser.g:3526:5: lv_rd_0_0= RULE_REGISTERS
+            // InternalPds16asmParser.g:3344:4: (lv_rd_0_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:3345:5: lv_rd_0_0= RULE_REGISTERS
             {
-            lv_rd_0_0=(Token)match(input,RULE_REGISTERS,FOLLOW_6); 
+            lv_rd_0_0=(Token)match(input,RULE_REGISTERS,FOLLOW_14); 
 
             					newLeafNode(lv_rd_0_0, grammarAccess.getOperationShiftAccess().getRdREGISTERSTerminalRuleCall_0_0());
             				
@@ -10218,17 +9823,17 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,Comma,FOLLOW_14); 
+            otherlv_1=(Token)match(input,Comma,FOLLOW_15); 
 
             			newLeafNode(otherlv_1, grammarAccess.getOperationShiftAccess().getCommaKeyword_1());
             		
-            // InternalPds16asmParser.g:3546:3: ( (lv_rm_2_0= RULE_REGISTERS ) )
-            // InternalPds16asmParser.g:3547:4: (lv_rm_2_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:3365:3: ( (lv_rm_2_0= RULE_REGISTERS ) )
+            // InternalPds16asmParser.g:3366:4: (lv_rm_2_0= RULE_REGISTERS )
             {
-            // InternalPds16asmParser.g:3547:4: (lv_rm_2_0= RULE_REGISTERS )
-            // InternalPds16asmParser.g:3548:5: lv_rm_2_0= RULE_REGISTERS
+            // InternalPds16asmParser.g:3366:4: (lv_rm_2_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:3367:5: lv_rm_2_0= RULE_REGISTERS
             {
-            lv_rm_2_0=(Token)match(input,RULE_REGISTERS,FOLLOW_6); 
+            lv_rm_2_0=(Token)match(input,RULE_REGISTERS,FOLLOW_14); 
 
             					newLeafNode(lv_rm_2_0, grammarAccess.getOperationShiftAccess().getRmREGISTERSTerminalRuleCall_2_0());
             				
@@ -10248,20 +9853,20 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,Comma,FOLLOW_16); 
+            otherlv_3=(Token)match(input,Comma,FOLLOW_17); 
 
             			newLeafNode(otherlv_3, grammarAccess.getOperationShiftAccess().getCommaKeyword_3());
             		
-            // InternalPds16asmParser.g:3568:3: ( (lv_const4_4_0= ruleConst4OrLabel ) )
-            // InternalPds16asmParser.g:3569:4: (lv_const4_4_0= ruleConst4OrLabel )
+            // InternalPds16asmParser.g:3387:3: ( (lv_const4_4_0= ruleConst4OrLabel ) )
+            // InternalPds16asmParser.g:3388:4: (lv_const4_4_0= ruleConst4OrLabel )
             {
-            // InternalPds16asmParser.g:3569:4: (lv_const4_4_0= ruleConst4OrLabel )
-            // InternalPds16asmParser.g:3570:5: lv_const4_4_0= ruleConst4OrLabel
+            // InternalPds16asmParser.g:3388:4: (lv_const4_4_0= ruleConst4OrLabel )
+            // InternalPds16asmParser.g:3389:5: lv_const4_4_0= ruleConst4OrLabel
             {
 
             					newCompositeNode(grammarAccess.getOperationShiftAccess().getConst4Const4OrLabelParserRuleCall_4_0());
             				
-            pushFollow(FOLLOW_6);
+            pushFollow(FOLLOW_14);
             lv_const4_4_0=ruleConst4OrLabel();
 
             state._fsp--;
@@ -10283,54 +9888,54 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,Comma,FOLLOW_10); 
+            otherlv_5=(Token)match(input,Comma,FOLLOW_12); 
 
             			newLeafNode(otherlv_5, grammarAccess.getOperationShiftAccess().getCommaKeyword_5());
             		
-            // InternalPds16asmParser.g:3591:3: ( ( (lv_sin_6_1= RULE_INT | lv_sin_6_2= RULE_HEX | lv_sin_6_3= RULE_OCT | lv_sin_6_4= RULE_BIN | lv_sin_6_5= RULE_CHAR ) ) )
-            // InternalPds16asmParser.g:3592:4: ( (lv_sin_6_1= RULE_INT | lv_sin_6_2= RULE_HEX | lv_sin_6_3= RULE_OCT | lv_sin_6_4= RULE_BIN | lv_sin_6_5= RULE_CHAR ) )
+            // InternalPds16asmParser.g:3410:3: ( ( (lv_sin_6_1= RULE_INT | lv_sin_6_2= RULE_HEX | lv_sin_6_3= RULE_OCT | lv_sin_6_4= RULE_BIN | lv_sin_6_5= RULE_CHAR ) ) )
+            // InternalPds16asmParser.g:3411:4: ( (lv_sin_6_1= RULE_INT | lv_sin_6_2= RULE_HEX | lv_sin_6_3= RULE_OCT | lv_sin_6_4= RULE_BIN | lv_sin_6_5= RULE_CHAR ) )
             {
-            // InternalPds16asmParser.g:3592:4: ( (lv_sin_6_1= RULE_INT | lv_sin_6_2= RULE_HEX | lv_sin_6_3= RULE_OCT | lv_sin_6_4= RULE_BIN | lv_sin_6_5= RULE_CHAR ) )
-            // InternalPds16asmParser.g:3593:5: (lv_sin_6_1= RULE_INT | lv_sin_6_2= RULE_HEX | lv_sin_6_3= RULE_OCT | lv_sin_6_4= RULE_BIN | lv_sin_6_5= RULE_CHAR )
+            // InternalPds16asmParser.g:3411:4: ( (lv_sin_6_1= RULE_INT | lv_sin_6_2= RULE_HEX | lv_sin_6_3= RULE_OCT | lv_sin_6_4= RULE_BIN | lv_sin_6_5= RULE_CHAR ) )
+            // InternalPds16asmParser.g:3412:5: (lv_sin_6_1= RULE_INT | lv_sin_6_2= RULE_HEX | lv_sin_6_3= RULE_OCT | lv_sin_6_4= RULE_BIN | lv_sin_6_5= RULE_CHAR )
             {
-            // InternalPds16asmParser.g:3593:5: (lv_sin_6_1= RULE_INT | lv_sin_6_2= RULE_HEX | lv_sin_6_3= RULE_OCT | lv_sin_6_4= RULE_BIN | lv_sin_6_5= RULE_CHAR )
-            int alt59=5;
+            // InternalPds16asmParser.g:3412:5: (lv_sin_6_1= RULE_INT | lv_sin_6_2= RULE_HEX | lv_sin_6_3= RULE_OCT | lv_sin_6_4= RULE_BIN | lv_sin_6_5= RULE_CHAR )
+            int alt56=5;
             switch ( input.LA(1) ) {
             case RULE_INT:
                 {
-                alt59=1;
+                alt56=1;
                 }
                 break;
             case RULE_HEX:
                 {
-                alt59=2;
+                alt56=2;
                 }
                 break;
             case RULE_OCT:
                 {
-                alt59=3;
+                alt56=3;
                 }
                 break;
             case RULE_BIN:
                 {
-                alt59=4;
+                alt56=4;
                 }
                 break;
             case RULE_CHAR:
                 {
-                alt59=5;
+                alt56=5;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 59, 0, input);
+                    new NoViableAltException("", 56, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt59) {
+            switch (alt56) {
                 case 1 :
-                    // InternalPds16asmParser.g:3594:6: lv_sin_6_1= RULE_INT
+                    // InternalPds16asmParser.g:3413:6: lv_sin_6_1= RULE_INT
                     {
                     lv_sin_6_1=(Token)match(input,RULE_INT,FOLLOW_2); 
 
@@ -10350,7 +9955,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:3609:6: lv_sin_6_2= RULE_HEX
+                    // InternalPds16asmParser.g:3428:6: lv_sin_6_2= RULE_HEX
                     {
                     lv_sin_6_2=(Token)match(input,RULE_HEX,FOLLOW_2); 
 
@@ -10370,7 +9975,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalPds16asmParser.g:3624:6: lv_sin_6_3= RULE_OCT
+                    // InternalPds16asmParser.g:3443:6: lv_sin_6_3= RULE_OCT
                     {
                     lv_sin_6_3=(Token)match(input,RULE_OCT,FOLLOW_2); 
 
@@ -10390,7 +9995,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalPds16asmParser.g:3639:6: lv_sin_6_4= RULE_BIN
+                    // InternalPds16asmParser.g:3458:6: lv_sin_6_4= RULE_BIN
                     {
                     lv_sin_6_4=(Token)match(input,RULE_BIN,FOLLOW_2); 
 
@@ -10410,7 +10015,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalPds16asmParser.g:3654:6: lv_sin_6_5= RULE_CHAR
+                    // InternalPds16asmParser.g:3473:6: lv_sin_6_5= RULE_CHAR
                     {
                     lv_sin_6_5=(Token)match(input,RULE_CHAR,FOLLOW_2); 
 
@@ -10461,7 +10066,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOperationWithOffset"
-    // InternalPds16asmParser.g:3675:1: entryRuleOperationWithOffset returns [EObject current=null] : iv_ruleOperationWithOffset= ruleOperationWithOffset EOF ;
+    // InternalPds16asmParser.g:3494:1: entryRuleOperationWithOffset returns [EObject current=null] : iv_ruleOperationWithOffset= ruleOperationWithOffset EOF ;
     public final EObject entryRuleOperationWithOffset() throws RecognitionException {
         EObject current = null;
 
@@ -10469,8 +10074,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:3675:60: (iv_ruleOperationWithOffset= ruleOperationWithOffset EOF )
-            // InternalPds16asmParser.g:3676:2: iv_ruleOperationWithOffset= ruleOperationWithOffset EOF
+            // InternalPds16asmParser.g:3494:60: (iv_ruleOperationWithOffset= ruleOperationWithOffset EOF )
+            // InternalPds16asmParser.g:3495:2: iv_ruleOperationWithOffset= ruleOperationWithOffset EOF
             {
              newCompositeNode(grammarAccess.getOperationWithOffsetRule()); 
             pushFollow(FOLLOW_1);
@@ -10497,7 +10102,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOperationWithOffset"
-    // InternalPds16asmParser.g:3682:1: ruleOperationWithOffset returns [EObject current=null] : ( ( (lv_rbx_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_offset8_2_0= ruleOffset8OrLabel ) ) ) ;
+    // InternalPds16asmParser.g:3501:1: ruleOperationWithOffset returns [EObject current=null] : ( ( (lv_rbx_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_offset8_2_0= ruleOffset8OrLabel ) ) ) ;
     public final EObject ruleOperationWithOffset() throws RecognitionException {
         EObject current = null;
 
@@ -10510,19 +10115,19 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:3688:2: ( ( ( (lv_rbx_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_offset8_2_0= ruleOffset8OrLabel ) ) ) )
-            // InternalPds16asmParser.g:3689:2: ( ( (lv_rbx_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_offset8_2_0= ruleOffset8OrLabel ) ) )
+            // InternalPds16asmParser.g:3507:2: ( ( ( (lv_rbx_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_offset8_2_0= ruleOffset8OrLabel ) ) ) )
+            // InternalPds16asmParser.g:3508:2: ( ( (lv_rbx_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_offset8_2_0= ruleOffset8OrLabel ) ) )
             {
-            // InternalPds16asmParser.g:3689:2: ( ( (lv_rbx_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_offset8_2_0= ruleOffset8OrLabel ) ) )
-            // InternalPds16asmParser.g:3690:3: ( (lv_rbx_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_offset8_2_0= ruleOffset8OrLabel ) )
+            // InternalPds16asmParser.g:3508:2: ( ( (lv_rbx_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_offset8_2_0= ruleOffset8OrLabel ) ) )
+            // InternalPds16asmParser.g:3509:3: ( (lv_rbx_0_0= RULE_REGISTERS ) ) otherlv_1= Comma ( (lv_offset8_2_0= ruleOffset8OrLabel ) )
             {
-            // InternalPds16asmParser.g:3690:3: ( (lv_rbx_0_0= RULE_REGISTERS ) )
-            // InternalPds16asmParser.g:3691:4: (lv_rbx_0_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:3509:3: ( (lv_rbx_0_0= RULE_REGISTERS ) )
+            // InternalPds16asmParser.g:3510:4: (lv_rbx_0_0= RULE_REGISTERS )
             {
-            // InternalPds16asmParser.g:3691:4: (lv_rbx_0_0= RULE_REGISTERS )
-            // InternalPds16asmParser.g:3692:5: lv_rbx_0_0= RULE_REGISTERS
+            // InternalPds16asmParser.g:3510:4: (lv_rbx_0_0= RULE_REGISTERS )
+            // InternalPds16asmParser.g:3511:5: lv_rbx_0_0= RULE_REGISTERS
             {
-            lv_rbx_0_0=(Token)match(input,RULE_REGISTERS,FOLLOW_6); 
+            lv_rbx_0_0=(Token)match(input,RULE_REGISTERS,FOLLOW_14); 
 
             					newLeafNode(lv_rbx_0_0, grammarAccess.getOperationWithOffsetAccess().getRbxREGISTERSTerminalRuleCall_0_0());
             				
@@ -10542,15 +10147,15 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,Comma,FOLLOW_16); 
+            otherlv_1=(Token)match(input,Comma,FOLLOW_17); 
 
             			newLeafNode(otherlv_1, grammarAccess.getOperationWithOffsetAccess().getCommaKeyword_1());
             		
-            // InternalPds16asmParser.g:3712:3: ( (lv_offset8_2_0= ruleOffset8OrLabel ) )
-            // InternalPds16asmParser.g:3713:4: (lv_offset8_2_0= ruleOffset8OrLabel )
+            // InternalPds16asmParser.g:3531:3: ( (lv_offset8_2_0= ruleOffset8OrLabel ) )
+            // InternalPds16asmParser.g:3532:4: (lv_offset8_2_0= ruleOffset8OrLabel )
             {
-            // InternalPds16asmParser.g:3713:4: (lv_offset8_2_0= ruleOffset8OrLabel )
-            // InternalPds16asmParser.g:3714:5: lv_offset8_2_0= ruleOffset8OrLabel
+            // InternalPds16asmParser.g:3532:4: (lv_offset8_2_0= ruleOffset8OrLabel )
+            // InternalPds16asmParser.g:3533:5: lv_offset8_2_0= ruleOffset8OrLabel
             {
 
             					newCompositeNode(grammarAccess.getOperationWithOffsetAccess().getOffset8Offset8OrLabelParserRuleCall_2_0());
@@ -10600,7 +10205,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleExpression"
-    // InternalPds16asmParser.g:3735:1: entryRuleExpression returns [EObject current=null] : iv_ruleExpression= ruleExpression EOF ;
+    // InternalPds16asmParser.g:3554:1: entryRuleExpression returns [EObject current=null] : iv_ruleExpression= ruleExpression EOF ;
     public final EObject entryRuleExpression() throws RecognitionException {
         EObject current = null;
 
@@ -10608,8 +10213,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:3735:51: (iv_ruleExpression= ruleExpression EOF )
-            // InternalPds16asmParser.g:3736:2: iv_ruleExpression= ruleExpression EOF
+            // InternalPds16asmParser.g:3554:51: (iv_ruleExpression= ruleExpression EOF )
+            // InternalPds16asmParser.g:3555:2: iv_ruleExpression= ruleExpression EOF
             {
              newCompositeNode(grammarAccess.getExpressionRule()); 
             pushFollow(FOLLOW_1);
@@ -10636,7 +10241,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleExpression"
-    // InternalPds16asmParser.g:3742:1: ruleExpression returns [EObject current=null] : ( ( ( (lv_numericValue_0_1= RULE_INT | lv_numericValue_0_2= RULE_HEX | lv_numericValue_0_3= RULE_OCT | lv_numericValue_0_4= RULE_BIN | lv_numericValue_0_5= RULE_CHAR ) ) ) | ( (lv_idValue_1_0= RULE_ID ) ) )+ ;
+    // InternalPds16asmParser.g:3561:1: ruleExpression returns [EObject current=null] : ( ( ( (lv_numericValue_0_1= RULE_INT | lv_numericValue_0_2= RULE_HEX | lv_numericValue_0_3= RULE_OCT | lv_numericValue_0_4= RULE_BIN | lv_numericValue_0_5= RULE_CHAR ) ) ) | ( (lv_idValue_1_0= RULE_ID ) ) )+ ;
     public final EObject ruleExpression() throws RecognitionException {
         EObject current = null;
 
@@ -10651,74 +10256,74 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:3748:2: ( ( ( ( (lv_numericValue_0_1= RULE_INT | lv_numericValue_0_2= RULE_HEX | lv_numericValue_0_3= RULE_OCT | lv_numericValue_0_4= RULE_BIN | lv_numericValue_0_5= RULE_CHAR ) ) ) | ( (lv_idValue_1_0= RULE_ID ) ) )+ )
-            // InternalPds16asmParser.g:3749:2: ( ( ( (lv_numericValue_0_1= RULE_INT | lv_numericValue_0_2= RULE_HEX | lv_numericValue_0_3= RULE_OCT | lv_numericValue_0_4= RULE_BIN | lv_numericValue_0_5= RULE_CHAR ) ) ) | ( (lv_idValue_1_0= RULE_ID ) ) )+
+            // InternalPds16asmParser.g:3567:2: ( ( ( ( (lv_numericValue_0_1= RULE_INT | lv_numericValue_0_2= RULE_HEX | lv_numericValue_0_3= RULE_OCT | lv_numericValue_0_4= RULE_BIN | lv_numericValue_0_5= RULE_CHAR ) ) ) | ( (lv_idValue_1_0= RULE_ID ) ) )+ )
+            // InternalPds16asmParser.g:3568:2: ( ( ( (lv_numericValue_0_1= RULE_INT | lv_numericValue_0_2= RULE_HEX | lv_numericValue_0_3= RULE_OCT | lv_numericValue_0_4= RULE_BIN | lv_numericValue_0_5= RULE_CHAR ) ) ) | ( (lv_idValue_1_0= RULE_ID ) ) )+
             {
-            // InternalPds16asmParser.g:3749:2: ( ( ( (lv_numericValue_0_1= RULE_INT | lv_numericValue_0_2= RULE_HEX | lv_numericValue_0_3= RULE_OCT | lv_numericValue_0_4= RULE_BIN | lv_numericValue_0_5= RULE_CHAR ) ) ) | ( (lv_idValue_1_0= RULE_ID ) ) )+
-            int cnt61=0;
-            loop61:
+            // InternalPds16asmParser.g:3568:2: ( ( ( (lv_numericValue_0_1= RULE_INT | lv_numericValue_0_2= RULE_HEX | lv_numericValue_0_3= RULE_OCT | lv_numericValue_0_4= RULE_BIN | lv_numericValue_0_5= RULE_CHAR ) ) ) | ( (lv_idValue_1_0= RULE_ID ) ) )+
+            int cnt58=0;
+            loop58:
             do {
-                int alt61=3;
-                int LA61_0 = input.LA(1);
+                int alt58=3;
+                int LA58_0 = input.LA(1);
 
-                if ( ((LA61_0>=RULE_HEX && LA61_0<=RULE_BIN)||LA61_0==RULE_CHAR||LA61_0==RULE_INT) ) {
-                    alt61=1;
+                if ( ((LA58_0>=RULE_HEX && LA58_0<=RULE_BIN)||LA58_0==RULE_CHAR||LA58_0==RULE_INT) ) {
+                    alt58=1;
                 }
-                else if ( (LA61_0==RULE_ID) ) {
-                    alt61=2;
+                else if ( (LA58_0==RULE_ID) ) {
+                    alt58=2;
                 }
 
 
-                switch (alt61) {
+                switch (alt58) {
             	case 1 :
-            	    // InternalPds16asmParser.g:3750:3: ( ( (lv_numericValue_0_1= RULE_INT | lv_numericValue_0_2= RULE_HEX | lv_numericValue_0_3= RULE_OCT | lv_numericValue_0_4= RULE_BIN | lv_numericValue_0_5= RULE_CHAR ) ) )
+            	    // InternalPds16asmParser.g:3569:3: ( ( (lv_numericValue_0_1= RULE_INT | lv_numericValue_0_2= RULE_HEX | lv_numericValue_0_3= RULE_OCT | lv_numericValue_0_4= RULE_BIN | lv_numericValue_0_5= RULE_CHAR ) ) )
             	    {
-            	    // InternalPds16asmParser.g:3750:3: ( ( (lv_numericValue_0_1= RULE_INT | lv_numericValue_0_2= RULE_HEX | lv_numericValue_0_3= RULE_OCT | lv_numericValue_0_4= RULE_BIN | lv_numericValue_0_5= RULE_CHAR ) ) )
-            	    // InternalPds16asmParser.g:3751:4: ( (lv_numericValue_0_1= RULE_INT | lv_numericValue_0_2= RULE_HEX | lv_numericValue_0_3= RULE_OCT | lv_numericValue_0_4= RULE_BIN | lv_numericValue_0_5= RULE_CHAR ) )
+            	    // InternalPds16asmParser.g:3569:3: ( ( (lv_numericValue_0_1= RULE_INT | lv_numericValue_0_2= RULE_HEX | lv_numericValue_0_3= RULE_OCT | lv_numericValue_0_4= RULE_BIN | lv_numericValue_0_5= RULE_CHAR ) ) )
+            	    // InternalPds16asmParser.g:3570:4: ( (lv_numericValue_0_1= RULE_INT | lv_numericValue_0_2= RULE_HEX | lv_numericValue_0_3= RULE_OCT | lv_numericValue_0_4= RULE_BIN | lv_numericValue_0_5= RULE_CHAR ) )
             	    {
-            	    // InternalPds16asmParser.g:3751:4: ( (lv_numericValue_0_1= RULE_INT | lv_numericValue_0_2= RULE_HEX | lv_numericValue_0_3= RULE_OCT | lv_numericValue_0_4= RULE_BIN | lv_numericValue_0_5= RULE_CHAR ) )
-            	    // InternalPds16asmParser.g:3752:5: (lv_numericValue_0_1= RULE_INT | lv_numericValue_0_2= RULE_HEX | lv_numericValue_0_3= RULE_OCT | lv_numericValue_0_4= RULE_BIN | lv_numericValue_0_5= RULE_CHAR )
+            	    // InternalPds16asmParser.g:3570:4: ( (lv_numericValue_0_1= RULE_INT | lv_numericValue_0_2= RULE_HEX | lv_numericValue_0_3= RULE_OCT | lv_numericValue_0_4= RULE_BIN | lv_numericValue_0_5= RULE_CHAR ) )
+            	    // InternalPds16asmParser.g:3571:5: (lv_numericValue_0_1= RULE_INT | lv_numericValue_0_2= RULE_HEX | lv_numericValue_0_3= RULE_OCT | lv_numericValue_0_4= RULE_BIN | lv_numericValue_0_5= RULE_CHAR )
             	    {
-            	    // InternalPds16asmParser.g:3752:5: (lv_numericValue_0_1= RULE_INT | lv_numericValue_0_2= RULE_HEX | lv_numericValue_0_3= RULE_OCT | lv_numericValue_0_4= RULE_BIN | lv_numericValue_0_5= RULE_CHAR )
-            	    int alt60=5;
+            	    // InternalPds16asmParser.g:3571:5: (lv_numericValue_0_1= RULE_INT | lv_numericValue_0_2= RULE_HEX | lv_numericValue_0_3= RULE_OCT | lv_numericValue_0_4= RULE_BIN | lv_numericValue_0_5= RULE_CHAR )
+            	    int alt57=5;
             	    switch ( input.LA(1) ) {
             	    case RULE_INT:
             	        {
-            	        alt60=1;
+            	        alt57=1;
             	        }
             	        break;
             	    case RULE_HEX:
             	        {
-            	        alt60=2;
+            	        alt57=2;
             	        }
             	        break;
             	    case RULE_OCT:
             	        {
-            	        alt60=3;
+            	        alt57=3;
             	        }
             	        break;
             	    case RULE_BIN:
             	        {
-            	        alt60=4;
+            	        alt57=4;
             	        }
             	        break;
             	    case RULE_CHAR:
             	        {
-            	        alt60=5;
+            	        alt57=5;
             	        }
             	        break;
             	    default:
             	        NoViableAltException nvae =
-            	            new NoViableAltException("", 60, 0, input);
+            	            new NoViableAltException("", 57, 0, input);
 
             	        throw nvae;
             	    }
 
-            	    switch (alt60) {
+            	    switch (alt57) {
             	        case 1 :
-            	            // InternalPds16asmParser.g:3753:6: lv_numericValue_0_1= RULE_INT
+            	            // InternalPds16asmParser.g:3572:6: lv_numericValue_0_1= RULE_INT
             	            {
-            	            lv_numericValue_0_1=(Token)match(input,RULE_INT,FOLLOW_11); 
+            	            lv_numericValue_0_1=(Token)match(input,RULE_INT,FOLLOW_10); 
 
             	            						newLeafNode(lv_numericValue_0_1, grammarAccess.getExpressionAccess().getNumericValueINTTerminalRuleCall_0_0_0());
             	            					
@@ -10736,9 +10341,9 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // InternalPds16asmParser.g:3768:6: lv_numericValue_0_2= RULE_HEX
+            	            // InternalPds16asmParser.g:3587:6: lv_numericValue_0_2= RULE_HEX
             	            {
-            	            lv_numericValue_0_2=(Token)match(input,RULE_HEX,FOLLOW_11); 
+            	            lv_numericValue_0_2=(Token)match(input,RULE_HEX,FOLLOW_10); 
 
             	            						newLeafNode(lv_numericValue_0_2, grammarAccess.getExpressionAccess().getNumericValueHEXTerminalRuleCall_0_0_1());
             	            					
@@ -10756,9 +10361,9 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 3 :
-            	            // InternalPds16asmParser.g:3783:6: lv_numericValue_0_3= RULE_OCT
+            	            // InternalPds16asmParser.g:3602:6: lv_numericValue_0_3= RULE_OCT
             	            {
-            	            lv_numericValue_0_3=(Token)match(input,RULE_OCT,FOLLOW_11); 
+            	            lv_numericValue_0_3=(Token)match(input,RULE_OCT,FOLLOW_10); 
 
             	            						newLeafNode(lv_numericValue_0_3, grammarAccess.getExpressionAccess().getNumericValueOCTTerminalRuleCall_0_0_2());
             	            					
@@ -10776,9 +10381,9 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 4 :
-            	            // InternalPds16asmParser.g:3798:6: lv_numericValue_0_4= RULE_BIN
+            	            // InternalPds16asmParser.g:3617:6: lv_numericValue_0_4= RULE_BIN
             	            {
-            	            lv_numericValue_0_4=(Token)match(input,RULE_BIN,FOLLOW_11); 
+            	            lv_numericValue_0_4=(Token)match(input,RULE_BIN,FOLLOW_10); 
 
             	            						newLeafNode(lv_numericValue_0_4, grammarAccess.getExpressionAccess().getNumericValueBINTerminalRuleCall_0_0_3());
             	            					
@@ -10796,9 +10401,9 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 5 :
-            	            // InternalPds16asmParser.g:3813:6: lv_numericValue_0_5= RULE_CHAR
+            	            // InternalPds16asmParser.g:3632:6: lv_numericValue_0_5= RULE_CHAR
             	            {
-            	            lv_numericValue_0_5=(Token)match(input,RULE_CHAR,FOLLOW_11); 
+            	            lv_numericValue_0_5=(Token)match(input,RULE_CHAR,FOLLOW_10); 
 
             	            						newLeafNode(lv_numericValue_0_5, grammarAccess.getExpressionAccess().getNumericValueCHARTerminalRuleCall_0_0_4());
             	            					
@@ -10828,15 +10433,15 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // InternalPds16asmParser.g:3831:3: ( (lv_idValue_1_0= RULE_ID ) )
+            	    // InternalPds16asmParser.g:3650:3: ( (lv_idValue_1_0= RULE_ID ) )
             	    {
-            	    // InternalPds16asmParser.g:3831:3: ( (lv_idValue_1_0= RULE_ID ) )
-            	    // InternalPds16asmParser.g:3832:4: (lv_idValue_1_0= RULE_ID )
+            	    // InternalPds16asmParser.g:3650:3: ( (lv_idValue_1_0= RULE_ID ) )
+            	    // InternalPds16asmParser.g:3651:4: (lv_idValue_1_0= RULE_ID )
             	    {
-            	    // InternalPds16asmParser.g:3832:4: (lv_idValue_1_0= RULE_ID )
-            	    // InternalPds16asmParser.g:3833:5: lv_idValue_1_0= RULE_ID
+            	    // InternalPds16asmParser.g:3651:4: (lv_idValue_1_0= RULE_ID )
+            	    // InternalPds16asmParser.g:3652:5: lv_idValue_1_0= RULE_ID
             	    {
-            	    lv_idValue_1_0=(Token)match(input,RULE_ID,FOLLOW_11); 
+            	    lv_idValue_1_0=(Token)match(input,RULE_ID,FOLLOW_10); 
 
             	    					newLeafNode(lv_idValue_1_0, grammarAccess.getExpressionAccess().getIdValueIDTerminalRuleCall_1_0());
             	    				
@@ -10861,12 +10466,12 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt61 >= 1 ) break loop61;
+            	    if ( cnt58 >= 1 ) break loop58;
                         EarlyExitException eee =
-                            new EarlyExitException(61, input);
+                            new EarlyExitException(58, input);
                         throw eee;
                 }
-                cnt61++;
+                cnt58++;
             } while (true);
 
 
@@ -10889,7 +10494,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLowOrHight"
-    // InternalPds16asmParser.g:3853:1: entryRuleLowOrHight returns [EObject current=null] : iv_ruleLowOrHight= ruleLowOrHight EOF ;
+    // InternalPds16asmParser.g:3672:1: entryRuleLowOrHight returns [EObject current=null] : iv_ruleLowOrHight= ruleLowOrHight EOF ;
     public final EObject entryRuleLowOrHight() throws RecognitionException {
         EObject current = null;
 
@@ -10897,8 +10502,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:3853:51: (iv_ruleLowOrHight= ruleLowOrHight EOF )
-            // InternalPds16asmParser.g:3854:2: iv_ruleLowOrHight= ruleLowOrHight EOF
+            // InternalPds16asmParser.g:3672:51: (iv_ruleLowOrHight= ruleLowOrHight EOF )
+            // InternalPds16asmParser.g:3673:2: iv_ruleLowOrHight= ruleLowOrHight EOF
             {
              newCompositeNode(grammarAccess.getLowOrHightRule()); 
             pushFollow(FOLLOW_1);
@@ -10925,7 +10530,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLowOrHight"
-    // InternalPds16asmParser.g:3860:1: ruleLowOrHight returns [EObject current=null] : (otherlv_0= NumberSign (otherlv_1= Low | otherlv_2= High ) otherlv_3= LeftParenthesis ( (lv_value_4_0= ruleExpression ) ) otherlv_5= RightParenthesis ) ;
+    // InternalPds16asmParser.g:3679:1: ruleLowOrHight returns [EObject current=null] : (otherlv_0= NumberSign (otherlv_1= Low | otherlv_2= High ) otherlv_3= LeftParenthesis ( (lv_value_4_0= ruleExpression ) ) otherlv_5= RightParenthesis ) ;
     public final EObject ruleLowOrHight() throws RecognitionException {
         EObject current = null;
 
@@ -10941,37 +10546,37 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:3866:2: ( (otherlv_0= NumberSign (otherlv_1= Low | otherlv_2= High ) otherlv_3= LeftParenthesis ( (lv_value_4_0= ruleExpression ) ) otherlv_5= RightParenthesis ) )
-            // InternalPds16asmParser.g:3867:2: (otherlv_0= NumberSign (otherlv_1= Low | otherlv_2= High ) otherlv_3= LeftParenthesis ( (lv_value_4_0= ruleExpression ) ) otherlv_5= RightParenthesis )
+            // InternalPds16asmParser.g:3685:2: ( (otherlv_0= NumberSign (otherlv_1= Low | otherlv_2= High ) otherlv_3= LeftParenthesis ( (lv_value_4_0= ruleExpression ) ) otherlv_5= RightParenthesis ) )
+            // InternalPds16asmParser.g:3686:2: (otherlv_0= NumberSign (otherlv_1= Low | otherlv_2= High ) otherlv_3= LeftParenthesis ( (lv_value_4_0= ruleExpression ) ) otherlv_5= RightParenthesis )
             {
-            // InternalPds16asmParser.g:3867:2: (otherlv_0= NumberSign (otherlv_1= Low | otherlv_2= High ) otherlv_3= LeftParenthesis ( (lv_value_4_0= ruleExpression ) ) otherlv_5= RightParenthesis )
-            // InternalPds16asmParser.g:3868:3: otherlv_0= NumberSign (otherlv_1= Low | otherlv_2= High ) otherlv_3= LeftParenthesis ( (lv_value_4_0= ruleExpression ) ) otherlv_5= RightParenthesis
+            // InternalPds16asmParser.g:3686:2: (otherlv_0= NumberSign (otherlv_1= Low | otherlv_2= High ) otherlv_3= LeftParenthesis ( (lv_value_4_0= ruleExpression ) ) otherlv_5= RightParenthesis )
+            // InternalPds16asmParser.g:3687:3: otherlv_0= NumberSign (otherlv_1= Low | otherlv_2= High ) otherlv_3= LeftParenthesis ( (lv_value_4_0= ruleExpression ) ) otherlv_5= RightParenthesis
             {
-            otherlv_0=(Token)match(input,NumberSign,FOLLOW_19); 
+            otherlv_0=(Token)match(input,NumberSign,FOLLOW_20); 
 
             			newLeafNode(otherlv_0, grammarAccess.getLowOrHightAccess().getNumberSignKeyword_0());
             		
-            // InternalPds16asmParser.g:3872:3: (otherlv_1= Low | otherlv_2= High )
-            int alt62=2;
-            int LA62_0 = input.LA(1);
+            // InternalPds16asmParser.g:3691:3: (otherlv_1= Low | otherlv_2= High )
+            int alt59=2;
+            int LA59_0 = input.LA(1);
 
-            if ( (LA62_0==Low) ) {
-                alt62=1;
+            if ( (LA59_0==Low) ) {
+                alt59=1;
             }
-            else if ( (LA62_0==High) ) {
-                alt62=2;
+            else if ( (LA59_0==High) ) {
+                alt59=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 62, 0, input);
+                    new NoViableAltException("", 59, 0, input);
 
                 throw nvae;
             }
-            switch (alt62) {
+            switch (alt59) {
                 case 1 :
-                    // InternalPds16asmParser.g:3873:4: otherlv_1= Low
+                    // InternalPds16asmParser.g:3692:4: otherlv_1= Low
                     {
-                    otherlv_1=(Token)match(input,Low,FOLLOW_20); 
+                    otherlv_1=(Token)match(input,Low,FOLLOW_21); 
 
                     				newLeafNode(otherlv_1, grammarAccess.getLowOrHightAccess().getLowKeyword_1_0());
                     			
@@ -10979,9 +10584,9 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:3878:4: otherlv_2= High
+                    // InternalPds16asmParser.g:3697:4: otherlv_2= High
                     {
-                    otherlv_2=(Token)match(input,High,FOLLOW_20); 
+                    otherlv_2=(Token)match(input,High,FOLLOW_21); 
 
                     				newLeafNode(otherlv_2, grammarAccess.getLowOrHightAccess().getHighKeyword_1_1());
                     			
@@ -10991,20 +10596,20 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,LeftParenthesis,FOLLOW_12); 
+            otherlv_3=(Token)match(input,LeftParenthesis,FOLLOW_11); 
 
             			newLeafNode(otherlv_3, grammarAccess.getLowOrHightAccess().getLeftParenthesisKeyword_2());
             		
-            // InternalPds16asmParser.g:3887:3: ( (lv_value_4_0= ruleExpression ) )
-            // InternalPds16asmParser.g:3888:4: (lv_value_4_0= ruleExpression )
+            // InternalPds16asmParser.g:3706:3: ( (lv_value_4_0= ruleExpression ) )
+            // InternalPds16asmParser.g:3707:4: (lv_value_4_0= ruleExpression )
             {
-            // InternalPds16asmParser.g:3888:4: (lv_value_4_0= ruleExpression )
-            // InternalPds16asmParser.g:3889:5: lv_value_4_0= ruleExpression
+            // InternalPds16asmParser.g:3707:4: (lv_value_4_0= ruleExpression )
+            // InternalPds16asmParser.g:3708:5: lv_value_4_0= ruleExpression
             {
 
             					newCompositeNode(grammarAccess.getLowOrHightAccess().getValueExpressionParserRuleCall_3_0());
             				
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_22);
             lv_value_4_0=ruleExpression();
 
             state._fsp--;
@@ -11053,7 +10658,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNumber"
-    // InternalPds16asmParser.g:3914:1: entryRuleNumber returns [EObject current=null] : iv_ruleNumber= ruleNumber EOF ;
+    // InternalPds16asmParser.g:3733:1: entryRuleNumber returns [EObject current=null] : iv_ruleNumber= ruleNumber EOF ;
     public final EObject entryRuleNumber() throws RecognitionException {
         EObject current = null;
 
@@ -11061,8 +10666,8 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPds16asmParser.g:3914:47: (iv_ruleNumber= ruleNumber EOF )
-            // InternalPds16asmParser.g:3915:2: iv_ruleNumber= ruleNumber EOF
+            // InternalPds16asmParser.g:3733:47: (iv_ruleNumber= ruleNumber EOF )
+            // InternalPds16asmParser.g:3734:2: iv_ruleNumber= ruleNumber EOF
             {
              newCompositeNode(grammarAccess.getNumberRule()); 
             pushFollow(FOLLOW_1);
@@ -11089,7 +10694,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNumber"
-    // InternalPds16asmParser.g:3921:1: ruleNumber returns [EObject current=null] : ( ( (lv_value_0_1= RULE_INT | lv_value_0_2= RULE_HEX | lv_value_0_3= RULE_OCT | lv_value_0_4= RULE_BIN | lv_value_0_5= RULE_CHAR ) ) ) ;
+    // InternalPds16asmParser.g:3740:1: ruleNumber returns [EObject current=null] : ( ( (lv_value_0_1= RULE_INT | lv_value_0_2= RULE_HEX | lv_value_0_3= RULE_OCT | lv_value_0_4= RULE_BIN | lv_value_0_5= RULE_CHAR ) ) ) ;
     public final EObject ruleNumber() throws RecognitionException {
         EObject current = null;
 
@@ -11103,53 +10708,53 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPds16asmParser.g:3927:2: ( ( ( (lv_value_0_1= RULE_INT | lv_value_0_2= RULE_HEX | lv_value_0_3= RULE_OCT | lv_value_0_4= RULE_BIN | lv_value_0_5= RULE_CHAR ) ) ) )
-            // InternalPds16asmParser.g:3928:2: ( ( (lv_value_0_1= RULE_INT | lv_value_0_2= RULE_HEX | lv_value_0_3= RULE_OCT | lv_value_0_4= RULE_BIN | lv_value_0_5= RULE_CHAR ) ) )
+            // InternalPds16asmParser.g:3746:2: ( ( ( (lv_value_0_1= RULE_INT | lv_value_0_2= RULE_HEX | lv_value_0_3= RULE_OCT | lv_value_0_4= RULE_BIN | lv_value_0_5= RULE_CHAR ) ) ) )
+            // InternalPds16asmParser.g:3747:2: ( ( (lv_value_0_1= RULE_INT | lv_value_0_2= RULE_HEX | lv_value_0_3= RULE_OCT | lv_value_0_4= RULE_BIN | lv_value_0_5= RULE_CHAR ) ) )
             {
-            // InternalPds16asmParser.g:3928:2: ( ( (lv_value_0_1= RULE_INT | lv_value_0_2= RULE_HEX | lv_value_0_3= RULE_OCT | lv_value_0_4= RULE_BIN | lv_value_0_5= RULE_CHAR ) ) )
-            // InternalPds16asmParser.g:3929:3: ( (lv_value_0_1= RULE_INT | lv_value_0_2= RULE_HEX | lv_value_0_3= RULE_OCT | lv_value_0_4= RULE_BIN | lv_value_0_5= RULE_CHAR ) )
+            // InternalPds16asmParser.g:3747:2: ( ( (lv_value_0_1= RULE_INT | lv_value_0_2= RULE_HEX | lv_value_0_3= RULE_OCT | lv_value_0_4= RULE_BIN | lv_value_0_5= RULE_CHAR ) ) )
+            // InternalPds16asmParser.g:3748:3: ( (lv_value_0_1= RULE_INT | lv_value_0_2= RULE_HEX | lv_value_0_3= RULE_OCT | lv_value_0_4= RULE_BIN | lv_value_0_5= RULE_CHAR ) )
             {
-            // InternalPds16asmParser.g:3929:3: ( (lv_value_0_1= RULE_INT | lv_value_0_2= RULE_HEX | lv_value_0_3= RULE_OCT | lv_value_0_4= RULE_BIN | lv_value_0_5= RULE_CHAR ) )
-            // InternalPds16asmParser.g:3930:4: (lv_value_0_1= RULE_INT | lv_value_0_2= RULE_HEX | lv_value_0_3= RULE_OCT | lv_value_0_4= RULE_BIN | lv_value_0_5= RULE_CHAR )
+            // InternalPds16asmParser.g:3748:3: ( (lv_value_0_1= RULE_INT | lv_value_0_2= RULE_HEX | lv_value_0_3= RULE_OCT | lv_value_0_4= RULE_BIN | lv_value_0_5= RULE_CHAR ) )
+            // InternalPds16asmParser.g:3749:4: (lv_value_0_1= RULE_INT | lv_value_0_2= RULE_HEX | lv_value_0_3= RULE_OCT | lv_value_0_4= RULE_BIN | lv_value_0_5= RULE_CHAR )
             {
-            // InternalPds16asmParser.g:3930:4: (lv_value_0_1= RULE_INT | lv_value_0_2= RULE_HEX | lv_value_0_3= RULE_OCT | lv_value_0_4= RULE_BIN | lv_value_0_5= RULE_CHAR )
-            int alt63=5;
+            // InternalPds16asmParser.g:3749:4: (lv_value_0_1= RULE_INT | lv_value_0_2= RULE_HEX | lv_value_0_3= RULE_OCT | lv_value_0_4= RULE_BIN | lv_value_0_5= RULE_CHAR )
+            int alt60=5;
             switch ( input.LA(1) ) {
             case RULE_INT:
                 {
-                alt63=1;
+                alt60=1;
                 }
                 break;
             case RULE_HEX:
                 {
-                alt63=2;
+                alt60=2;
                 }
                 break;
             case RULE_OCT:
                 {
-                alt63=3;
+                alt60=3;
                 }
                 break;
             case RULE_BIN:
                 {
-                alt63=4;
+                alt60=4;
                 }
                 break;
             case RULE_CHAR:
                 {
-                alt63=5;
+                alt60=5;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 63, 0, input);
+                    new NoViableAltException("", 60, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt63) {
+            switch (alt60) {
                 case 1 :
-                    // InternalPds16asmParser.g:3931:5: lv_value_0_1= RULE_INT
+                    // InternalPds16asmParser.g:3750:5: lv_value_0_1= RULE_INT
                     {
                     lv_value_0_1=(Token)match(input,RULE_INT,FOLLOW_2); 
 
@@ -11169,7 +10774,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPds16asmParser.g:3946:5: lv_value_0_2= RULE_HEX
+                    // InternalPds16asmParser.g:3765:5: lv_value_0_2= RULE_HEX
                     {
                     lv_value_0_2=(Token)match(input,RULE_HEX,FOLLOW_2); 
 
@@ -11189,7 +10794,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalPds16asmParser.g:3961:5: lv_value_0_3= RULE_OCT
+                    // InternalPds16asmParser.g:3780:5: lv_value_0_3= RULE_OCT
                     {
                     lv_value_0_3=(Token)match(input,RULE_OCT,FOLLOW_2); 
 
@@ -11209,7 +10814,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalPds16asmParser.g:3976:5: lv_value_0_4= RULE_BIN
+                    // InternalPds16asmParser.g:3795:5: lv_value_0_4= RULE_BIN
                     {
                     lv_value_0_4=(Token)match(input,RULE_BIN,FOLLOW_2); 
 
@@ -11229,7 +10834,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalPds16asmParser.g:3991:5: lv_value_0_5= RULE_CHAR
+                    // InternalPds16asmParser.g:3810:5: lv_value_0_5= RULE_CHAR
                     {
                     lv_value_0_5=(Token)match(input,RULE_CHAR,FOLLOW_2); 
 
@@ -11278,12 +10883,12 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
     // Delegated rules
 
 
-    protected DFA23 dfa23 = new DFA23(this);
-    protected DFA24 dfa24 = new DFA24(this);
+    protected DFA20 dfa20 = new DFA20(this);
+    protected DFA21 dfa21 = new DFA21(this);
     static final String dfa_1s = "\14\uffff";
-    static final String dfa_2s = "\1\31\1\uffff\2\112\1\107\1\110\1\uffff\1\112\1\107\1\103\2\uffff";
-    static final String dfa_3s = "\1\101\1\uffff\2\112\1\107\1\123\1\uffff\1\112\1\107\1\112\2\uffff";
-    static final String dfa_4s = "\1\uffff\1\1\4\uffff\1\2\3\uffff\1\3\1\4";
+    static final String dfa_2s = "\1\31\1\uffff\2\112\1\107\1\110\1\112\1\uffff\1\107\1\103\2\uffff";
+    static final String dfa_3s = "\1\101\1\uffff\2\112\1\107\1\123\1\112\1\uffff\1\107\1\112\2\uffff";
+    static final String dfa_4s = "\1\uffff\1\1\5\uffff\1\2\2\uffff\1\3\1\4";
     static final String dfa_5s = "\14\uffff}>";
     static final String[] dfa_6s = {
             "\1\1\22\uffff\1\3\1\1\23\uffff\1\2",
@@ -11291,9 +10896,9 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
             "\1\4",
             "\1\4",
             "\1\5",
-            "\1\7\3\uffff\3\6\1\uffff\2\6\1\uffff\1\6",
-            "",
+            "\1\6\3\uffff\3\7\1\uffff\2\7\1\uffff\1\7",
             "\1\10",
+            "",
             "\1\11",
             "\1\12\6\uffff\1\13",
             "",
@@ -11307,11 +10912,11 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
     static final short[] dfa_5 = DFA.unpackEncodedString(dfa_5s);
     static final short[][] dfa_6 = unpackEncodedStringArray(dfa_6s);
 
-    class DFA23 extends DFA {
+    class DFA20 extends DFA {
 
-        public DFA23(BaseRecognizer recognizer) {
+        public DFA20(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 23;
+            this.decisionNumber = 20;
             this.eot = dfa_1;
             this.eof = dfa_1;
             this.min = dfa_2;
@@ -11321,7 +10926,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
             this.transition = dfa_6;
         }
         public String getDescription() {
-            return "1503:2: (this_LdImmediate_0= ruleLdImmediate | this_LdDirect_1= ruleLdDirect | this_LdIndexed_2= ruleLdIndexed | this_LdBasedIndexed_3= ruleLdBasedIndexed )";
+            return "1247:2: (this_LdImmediate_0= ruleLdImmediate | this_LdDirect_1= ruleLdDirect | this_LdIndexed_2= ruleLdIndexed | this_LdBasedIndexed_3= ruleLdBasedIndexed )";
         }
     }
     static final String dfa_7s = "\13\uffff";
@@ -11350,11 +10955,11 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
     static final short[] dfa_11 = DFA.unpackEncodedString(dfa_11s);
     static final short[][] dfa_12 = unpackEncodedStringArray(dfa_12s);
 
-    class DFA24 extends DFA {
+    class DFA21 extends DFA {
 
-        public DFA24(BaseRecognizer recognizer) {
+        public DFA21(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 24;
+            this.decisionNumber = 21;
             this.eot = dfa_7;
             this.eof = dfa_7;
             this.min = dfa_8;
@@ -11364,7 +10969,7 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
             this.transition = dfa_12;
         }
         public String getDescription() {
-            return "1557:2: (this_StDirect_0= ruleStDirect | this_StIndexed_1= ruleStIndexed | this_StBasedIndexed_2= ruleStBasedIndexed )";
+            return "1301:2: (this_StDirect_0= ruleStDirect | this_StIndexed_1= ruleStIndexed | this_StBasedIndexed_2= ruleStBasedIndexed )";
         }
     }
  
@@ -11374,21 +10979,22 @@ public class InternalPds16asmParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0xFFFFBFFFFFDFFFF2L,0x0000000000040007L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0xFFFFBFFFFFDFFFF0L,0x0000000000040007L});
     public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000000002L,0x0000000000100000L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000080L});
     public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000080L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000000002L,0x0000000000097000L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000000000L,0x0000000000097000L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000000002L,0x00000000000B7000L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000000000L,0x00000000000B7000L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000002L,0x0000000000197000L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000000000L,0x0000000000197000L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000000002L,0x00000000000B7000L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000000000L,0x00000000000B7000L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000000000L,0x0000000000097000L});
     public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000400L});
-    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020410L});
-    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
-    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
-    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000200L});
-    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000400000200000L});
-    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
-    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000040L});
+    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
+    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000400L});
+    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020410L});
+    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
+    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
+    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000200L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000400000200000L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
+    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000040L});
 
 }

@@ -20,7 +20,7 @@ import org.pds16.pds16asm.pds16asm.Text;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.pds16.pds16asm.pds16asm.impl.TextImpl#getVal <em>Val</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.pds16asm.impl.TextImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +28,24 @@ import org.pds16.pds16asm.pds16asm.Text;
 public class TextImpl extends DirectiveImpl implements Text
 {
   /**
-   * The default value of the '{@link #getVal() <em>Val</em>}' attribute.
+   * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVal()
+   * @see #getValue()
    * @generated
    * @ordered
    */
-  protected static final String VAL_EDEFAULT = null;
+  protected static final String VALUE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getVal() <em>Val</em>}' attribute.
+   * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVal()
+   * @see #getValue()
    * @generated
    * @ordered
    */
-  protected String val = VAL_EDEFAULT;
+  protected String value = VALUE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -73,9 +73,9 @@ public class TextImpl extends DirectiveImpl implements Text
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getVal()
+  public String getValue()
   {
-    return val;
+    return value;
   }
 
   /**
@@ -83,12 +83,12 @@ public class TextImpl extends DirectiveImpl implements Text
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setVal(String newVal)
+  public void setValue(String newValue)
   {
-    String oldVal = val;
-    val = newVal;
+    String oldValue = value;
+    value = newValue;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.TEXT__VAL, oldVal, val));
+      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.TEXT__VALUE, oldValue, value));
   }
 
   /**
@@ -101,8 +101,8 @@ public class TextImpl extends DirectiveImpl implements Text
   {
     switch (featureID)
     {
-      case Pds16asmPackage.TEXT__VAL:
-        return getVal();
+      case Pds16asmPackage.TEXT__VALUE:
+        return getValue();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -117,8 +117,8 @@ public class TextImpl extends DirectiveImpl implements Text
   {
     switch (featureID)
     {
-      case Pds16asmPackage.TEXT__VAL:
-        setVal((String)newValue);
+      case Pds16asmPackage.TEXT__VALUE:
+        setValue((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -134,8 +134,8 @@ public class TextImpl extends DirectiveImpl implements Text
   {
     switch (featureID)
     {
-      case Pds16asmPackage.TEXT__VAL:
-        setVal(VAL_EDEFAULT);
+      case Pds16asmPackage.TEXT__VALUE:
+        setValue(VALUE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -151,8 +151,8 @@ public class TextImpl extends DirectiveImpl implements Text
   {
     switch (featureID)
     {
-      case Pds16asmPackage.TEXT__VAL:
-        return VAL_EDEFAULT == null ? val != null : !VAL_EDEFAULT.equals(val);
+      case Pds16asmPackage.TEXT__VALUE:
+        return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
     }
     return super.eIsSet(featureID);
   }
@@ -168,8 +168,8 @@ public class TextImpl extends DirectiveImpl implements Text
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (val: ");
-    result.append(val);
+    result.append(" (value: ");
+    result.append(value);
     result.append(')');
     return result.toString();
   }

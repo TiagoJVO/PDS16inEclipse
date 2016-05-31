@@ -18,6 +18,7 @@ import org.pds16.pds16asm.pds16asm.PDS16ASM
 import org.eclipse.core.resources.ResourcesPlugin
 import org.eclipse.core.resources.IMarker
 import org.eclipse.core.resources.IResource
+import org.eclipse.emf.common.util.EList
 
 /**
  * This class contains custom validation rules. 
@@ -45,7 +46,7 @@ class Pds16asmValidator extends AbstractPds16asmValidator {
 	def checkShift(OperationShift os){
 		var int a = os.getSin();
 		if(a<0 || a>1){
-				error('SIN should be only 0 or 1', 
+				warning('SIN should be only 0 or 1', 
 						Pds16asmPackage.Literals.OPERATION_SHIFT__SIN,
 						"Invalid Number")
 		}
@@ -57,7 +58,7 @@ class Pds16asmValidator extends AbstractPds16asmValidator {
 			return;
 		var Integer value = i.number.value;
 		if(value < 0 || value > MAX_8BIT_NO_SIGNAL )
-			error('Number should be between 0 and ' + MAX_8BIT_NO_SIGNAL, 
+			warning('Number should be between 0 and ' + MAX_8BIT_NO_SIGNAL, 
 					Pds16asmPackage.Literals.IMMEDIATE8_OR_LABEL__NUMBER,
 					"Invalid Number")
 	
@@ -69,7 +70,7 @@ class Pds16asmValidator extends AbstractPds16asmValidator {
 			return;
 		var Integer value = d.number.value;
 		if(value < 0  || value > MAX_7BIT_NO_SIGNAL)
-			error('Number should be between 0 and ' + MAX_7BIT_NO_SIGNAL, 
+			warning('Number should be between 0 and ' + MAX_7BIT_NO_SIGNAL, 
 					Pds16asmPackage.Literals.DIRECT_OR_LABEL__NUMBER,
 					"Invalid Number")
 	}
@@ -80,7 +81,7 @@ class Pds16asmValidator extends AbstractPds16asmValidator {
 			return;		
 		var Integer value = c.number.value;
 		if(value < 0  || value > MAX_4BIT_NO_SIGNAL)
-			error('Number should be between 0 and ' + MAX_4BIT_NO_SIGNAL, 
+			warning('Number should be between 0 and ' + MAX_4BIT_NO_SIGNAL, 
 					Pds16asmPackage.Literals.CONST4_OR_LABEL__NUMBER,
 					"Invalid Number")
 	}
@@ -91,7 +92,7 @@ class Pds16asmValidator extends AbstractPds16asmValidator {
 			return;	
 		var Integer value = i.number.value;
 		if(value < 0  || value > MAX_3BIT_NO_SIGNAL)
-			error('Number should be between 0 and ' + MAX_3BIT_NO_SIGNAL, 
+			warning('Number should be between 0 and ' + MAX_3BIT_NO_SIGNAL, 
 					Pds16asmPackage.Literals.IDX3_OR_LABEL__NUMBER,
 					"Invalid Number")
 	}
@@ -102,23 +103,23 @@ class Pds16asmValidator extends AbstractPds16asmValidator {
 			return;
 		var Integer value = o.number.value;
 		if(value < MIN_8BIT_WITH_SIGNAL  || value > MAX_8BIT_WITH_SIGNAL)
-			error('Number should be between' + MIN_8BIT_WITH_SIGNAL + ' and ' + MAX_8BIT_WITH_SIGNAL, 
+			warning('Number should be between' + MIN_8BIT_WITH_SIGNAL + ' and ' + MAX_8BIT_WITH_SIGNAL, 
 					Pds16asmPackage.Literals.OFFSET8_OR_LABEL__NUMBER,
 					"Invalid Number")
 	}
 	
 	@Check
 	def checkByte(Byte b){
-		if(b.number == null)
+		if(b.numbers == null)
 			return;
-		val List<Integer> list = b.getNumber();
+		val list = b.numbers;
 		var int size = list.size();
-		
+		if(size>0)
 		(0..size-1).forEach[i | 
-			var value = list.get(i);
-				if(value < MIN_8BIT_WITH_SIGNAL  || value > MAX_8BIT_WITH_SIGNAL)
-					error('Number should be between' + MIN_8BIT_WITH_SIGNAL + ' and ' + MAX_8BIT_WITH_SIGNAL, 
-						Pds16asmPackage.Literals.BYTE__NUMBER,
+			var item = list.get(i);
+				if(item.value < MIN_8BIT_WITH_SIGNAL  || item.value > MAX_8BIT_WITH_SIGNAL)
+					warning("One of the declared values isn't be between" + MIN_8BIT_WITH_SIGNAL + ' and ' + MAX_8BIT_WITH_SIGNAL, 
+						Pds16asmPackage.Literals.BYTE__TAG,
 						"Invalid Number")
 		]	
 
@@ -126,16 +127,16 @@ class Pds16asmValidator extends AbstractPds16asmValidator {
 	
 	@Check
 	def checkWord(Word w){
-		if(w.number == null)
+		if(w.numbers == null)
 			return;
-		val List<Integer> list = w.getNumber();
+		val list = w.numbers;
 		var int size = list.size();
 		
 		(0..size-1).forEach[i | 
-			var value = list.get(i);
-				if(value < MIN_16BIT_WITH_SIGNAL  || value > MAX_16BIT_WITH_SIGNAL)
-					error('Number should be between' + MIN_16BIT_WITH_SIGNAL + ' and ' + MAX_16BIT_WITH_SIGNAL, 
-						Pds16asmPackage.Literals.WORD__NUMBER,
+			var item = list.get(i);
+				if(item.value < MIN_16BIT_WITH_SIGNAL  || item.value > MAX_16BIT_WITH_SIGNAL)
+					warning("One of the declared values isn't be between" + MIN_16BIT_WITH_SIGNAL + ' and ' + MAX_16BIT_WITH_SIGNAL, 
+						Pds16asmPackage.Literals.WORD__TAG,
 						"Invalid Number")
 		]	
 

@@ -14,7 +14,7 @@ package org.pds16.pds16asm.pds16asm;
  * </p>
  * <ul>
  *   <li>{@link org.pds16.pds16asm.pds16asm.Space#getSize <em>Size</em>}</li>
- *   <li>{@link org.pds16.pds16asm.pds16asm.Space#getByteValeu <em>Byte Valeu</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.pds16asm.Space#getByteValue <em>Byte Value</em>}</li>
  * </ul>
  *
  * @see org.pds16.pds16asm.pds16asm.Pds16asmPackage#getSpace()
@@ -24,55 +24,55 @@ package org.pds16.pds16asm.pds16asm;
 public interface Space extends LabelDirective
 {
   /**
-   * Returns the value of the '<em><b>Size</b></em>' attribute.
+   * Returns the value of the '<em><b>Size</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Size</em>' attribute isn't clear,
+   * If the meaning of the '<em>Size</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Size</em>' attribute.
-   * @see #setSize(int)
+   * @return the value of the '<em>Size</em>' containment reference.
+   * @see #setSize(org.pds16.pds16asm.pds16asm.Number)
    * @see org.pds16.pds16asm.pds16asm.Pds16asmPackage#getSpace_Size()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  int getSize();
+  org.pds16.pds16asm.pds16asm.Number getSize();
 
   /**
-   * Sets the value of the '{@link org.pds16.pds16asm.pds16asm.Space#getSize <em>Size</em>}' attribute.
+   * Sets the value of the '{@link org.pds16.pds16asm.pds16asm.Space#getSize <em>Size</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Size</em>' attribute.
+   * @param value the new value of the '<em>Size</em>' containment reference.
    * @see #getSize()
    * @generated
    */
-  void setSize(int value);
+  void setSize(org.pds16.pds16asm.pds16asm.Number value);
 
   /**
-   * Returns the value of the '<em><b>Byte Valeu</b></em>' attribute.
+   * Returns the value of the '<em><b>Byte Value</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Byte Valeu</em>' attribute isn't clear,
+   * If the meaning of the '<em>Byte Value</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Byte Valeu</em>' attribute.
-   * @see #setByteValeu(int)
-   * @see org.pds16.pds16asm.pds16asm.Pds16asmPackage#getSpace_ByteValeu()
-   * @model
+   * @return the value of the '<em>Byte Value</em>' containment reference.
+   * @see #setByteValue(org.pds16.pds16asm.pds16asm.Number)
+   * @see org.pds16.pds16asm.pds16asm.Pds16asmPackage#getSpace_ByteValue()
+   * @model containment="true"
    * @generated
    */
-  int getByteValeu();
+  org.pds16.pds16asm.pds16asm.Number getByteValue();
 
   /**
-   * Sets the value of the '{@link org.pds16.pds16asm.pds16asm.Space#getByteValeu <em>Byte Valeu</em>}' attribute.
+   * Sets the value of the '{@link org.pds16.pds16asm.pds16asm.Space#getByteValue <em>Byte Value</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Byte Valeu</em>' attribute.
-   * @see #getByteValeu()
+   * @param value the new value of the '<em>Byte Value</em>' containment reference.
+   * @see #getByteValue()
    * @generated
    */
-  void setByteValeu(int value);
+  void setByteValue(org.pds16.pds16asm.pds16asm.Number value);
 
 } // Space

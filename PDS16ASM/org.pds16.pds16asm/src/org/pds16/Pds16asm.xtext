@@ -18,23 +18,23 @@ Directive:
 
 LabelDirective: Ascii | Asciiz | Byte | Word | Space;
 		
-Bss: val='.bss';
+Bss: value='.bss';
 
-Data: val='.data';
+Data: value='.data';
 
-End: val='.end';
+End: value='.end';
 
-Text: val='.text';		
+Text: value='.text';		
 
-Ascii:	'.ascii' (value=STRING (',' STRING)*)?;
+Ascii:	tag='.ascii' (values+=STRING (',' values+=STRING)*)?;
 
-Asciiz:	'.asciiz' (value=STRING (',' STRING)*)?;
+Asciiz:	tag='.asciiz' (values+=STRING (',' values+=STRING)*)?;
 
-Byte:	'.byte' (number+=(INT | HEX | OCT | BIN | CHAR) (',' number+= (INT | HEX | OCT | BIN | CHAR))*)?;
+Byte:	tag='.byte' ( ((numbers+=Number) | (s+=STRING))  (',' ((numbers+=Number) | (s+=STRING)) )*)?;
 					
-Word:	'.word' ((value+= ID | number+=(INT | HEX | OCT | BIN | CHAR))  (',' (value+= ID | number+=(INT | HEX | OCT | BIN | CHAR)))*)?;
+Word:	tag='.word' ((values+=ID | numbers+=Number)  (',' (values+= ID | numbers+=Number))*)?;
 
-Space:	'.space' size=(INT | HEX | OCT | BIN | CHAR) (',' byteValeu=(INT | HEX | OCT | BIN | CHAR))?;
+Space:	'.space' size=Number (',' byteValue=Number)?;
 
 Set:    '.set' value1=ID ',' value2=Expression;
 
@@ -103,8 +103,8 @@ Rc: ('rcr' | 'rcl') OperationWithTwoRegisters;
 
 /************************************** Jump **********************************************/
 JumpOp: 
-	('jz' | 'je' | 'jnz' | 'jne' | 'jc' | 'jbl' | 'jnc' | 'jae' | 'jmp' | 'jmpl')
-		(OperationWithOffset | op=ID | '$');
+	tag=('jz' | 'je' | 'jnz' | 'jne' | 'jc' | 'jbl' | 'jnc' | 'jae' | 'jmp' | 'jmpl')
+		(opOff=OperationWithOffset | opId=ID | '$');
 /******************************************************************************************/
 
 /*************************** Others Instuctions *******************************************/
@@ -145,9 +145,7 @@ OperationShift: rd=REGISTERS ',' rm=REGISTERS ',' const4=Const4OrLabel ',' sin=(
 
 OperationWithOffset: rbx=REGISTERS ',' offset8=Offset8OrLabel;
 
-Expression: (numericValue+=(INT | HEX | OCT | BIN | CHAR) | idValue+=ID)+
-	//para a string temos que fazer um validator que verifique se é realmente uma expressão
-;
+Expression: (numericValue+=(INT | HEX | OCT | BIN | CHAR) | idValue+=ID)+;
 
 LowOrHight: '#' ('low' | 'high') '(' value=Expression ')' ;
 /******************************************************************************************/

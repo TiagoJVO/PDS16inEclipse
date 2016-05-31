@@ -153,7 +153,7 @@ RightSquareBracket : ']';
 
 // Rules duplicated to allow inter-rule references
 
-RULE_REGISTERS : ('r0'|'r1'|'r2'|'r3'|'r4'|'r5'|'r6'|'r7'|'PSW');
+RULE_REGISTERS : ('r0'|'r1'|'r2'|'r3'|'r4'|'r5'|'r6'|'r7'|'LR'|'PSW'|'PC');
 
 RULE_HEX : RULE_SIGN? ('0x'|'0X') ('0'..'9'|'a'..'f'|'A'..'F')+;
 

@@ -4,8 +4,10 @@
 package org.pds16.pds16asm.pds16asm.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -21,7 +23,7 @@ import org.pds16.pds16asm.pds16asm.Space;
  * </p>
  * <ul>
  *   <li>{@link org.pds16.pds16asm.pds16asm.impl.SpaceImpl#getSize <em>Size</em>}</li>
- *   <li>{@link org.pds16.pds16asm.pds16asm.impl.SpaceImpl#getByteValeu <em>Byte Valeu</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.pds16asm.impl.SpaceImpl#getByteValue <em>Byte Value</em>}</li>
  * </ul>
  *
  * @generated
@@ -29,44 +31,24 @@ import org.pds16.pds16asm.pds16asm.Space;
 public class SpaceImpl extends LabelDirectiveImpl implements Space
 {
   /**
-   * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
+   * The cached value of the '{@link #getSize() <em>Size</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getSize()
    * @generated
    * @ordered
    */
-  protected static final int SIZE_EDEFAULT = 0;
+  protected org.pds16.pds16asm.pds16asm.Number size;
 
   /**
-   * The cached value of the '{@link #getSize() <em>Size</em>}' attribute.
+   * The cached value of the '{@link #getByteValue() <em>Byte Value</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSize()
+   * @see #getByteValue()
    * @generated
    * @ordered
    */
-  protected int size = SIZE_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getByteValeu() <em>Byte Valeu</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getByteValeu()
-   * @generated
-   * @ordered
-   */
-  protected static final int BYTE_VALEU_EDEFAULT = 0;
-
-  /**
-   * The cached value of the '{@link #getByteValeu() <em>Byte Valeu</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getByteValeu()
-   * @generated
-   * @ordered
-   */
-  protected int byteValeu = BYTE_VALEU_EDEFAULT;
+  protected org.pds16.pds16asm.pds16asm.Number byteValue;
 
   /**
    * <!-- begin-user-doc -->
@@ -94,7 +76,7 @@ public class SpaceImpl extends LabelDirectiveImpl implements Space
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getSize()
+  public org.pds16.pds16asm.pds16asm.Number getSize()
   {
     return size;
   }
@@ -104,12 +86,16 @@ public class SpaceImpl extends LabelDirectiveImpl implements Space
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setSize(int newSize)
+  public NotificationChain basicSetSize(org.pds16.pds16asm.pds16asm.Number newSize, NotificationChain msgs)
   {
-    int oldSize = size;
+    org.pds16.pds16asm.pds16asm.Number oldSize = size;
     size = newSize;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.SPACE__SIZE, oldSize, size));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Pds16asmPackage.SPACE__SIZE, oldSize, newSize);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -117,9 +103,20 @@ public class SpaceImpl extends LabelDirectiveImpl implements Space
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getByteValeu()
+  public void setSize(org.pds16.pds16asm.pds16asm.Number newSize)
   {
-    return byteValeu;
+    if (newSize != size)
+    {
+      NotificationChain msgs = null;
+      if (size != null)
+        msgs = ((InternalEObject)size).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.SPACE__SIZE, null, msgs);
+      if (newSize != null)
+        msgs = ((InternalEObject)newSize).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.SPACE__SIZE, null, msgs);
+      msgs = basicSetSize(newSize, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.SPACE__SIZE, newSize, newSize));
   }
 
   /**
@@ -127,12 +124,65 @@ public class SpaceImpl extends LabelDirectiveImpl implements Space
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setByteValeu(int newByteValeu)
+  public org.pds16.pds16asm.pds16asm.Number getByteValue()
   {
-    int oldByteValeu = byteValeu;
-    byteValeu = newByteValeu;
+    return byteValue;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetByteValue(org.pds16.pds16asm.pds16asm.Number newByteValue, NotificationChain msgs)
+  {
+    org.pds16.pds16asm.pds16asm.Number oldByteValue = byteValue;
+    byteValue = newByteValue;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.SPACE__BYTE_VALEU, oldByteValeu, byteValeu));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Pds16asmPackage.SPACE__BYTE_VALUE, oldByteValue, newByteValue);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setByteValue(org.pds16.pds16asm.pds16asm.Number newByteValue)
+  {
+    if (newByteValue != byteValue)
+    {
+      NotificationChain msgs = null;
+      if (byteValue != null)
+        msgs = ((InternalEObject)byteValue).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.SPACE__BYTE_VALUE, null, msgs);
+      if (newByteValue != null)
+        msgs = ((InternalEObject)newByteValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.SPACE__BYTE_VALUE, null, msgs);
+      msgs = basicSetByteValue(newByteValue, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.SPACE__BYTE_VALUE, newByteValue, newByteValue));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case Pds16asmPackage.SPACE__SIZE:
+        return basicSetSize(null, msgs);
+      case Pds16asmPackage.SPACE__BYTE_VALUE:
+        return basicSetByteValue(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -147,8 +197,8 @@ public class SpaceImpl extends LabelDirectiveImpl implements Space
     {
       case Pds16asmPackage.SPACE__SIZE:
         return getSize();
-      case Pds16asmPackage.SPACE__BYTE_VALEU:
-        return getByteValeu();
+      case Pds16asmPackage.SPACE__BYTE_VALUE:
+        return getByteValue();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -164,10 +214,10 @@ public class SpaceImpl extends LabelDirectiveImpl implements Space
     switch (featureID)
     {
       case Pds16asmPackage.SPACE__SIZE:
-        setSize((Integer)newValue);
+        setSize((org.pds16.pds16asm.pds16asm.Number)newValue);
         return;
-      case Pds16asmPackage.SPACE__BYTE_VALEU:
-        setByteValeu((Integer)newValue);
+      case Pds16asmPackage.SPACE__BYTE_VALUE:
+        setByteValue((org.pds16.pds16asm.pds16asm.Number)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -184,10 +234,10 @@ public class SpaceImpl extends LabelDirectiveImpl implements Space
     switch (featureID)
     {
       case Pds16asmPackage.SPACE__SIZE:
-        setSize(SIZE_EDEFAULT);
+        setSize((org.pds16.pds16asm.pds16asm.Number)null);
         return;
-      case Pds16asmPackage.SPACE__BYTE_VALEU:
-        setByteValeu(BYTE_VALEU_EDEFAULT);
+      case Pds16asmPackage.SPACE__BYTE_VALUE:
+        setByteValue((org.pds16.pds16asm.pds16asm.Number)null);
         return;
     }
     super.eUnset(featureID);
@@ -204,30 +254,11 @@ public class SpaceImpl extends LabelDirectiveImpl implements Space
     switch (featureID)
     {
       case Pds16asmPackage.SPACE__SIZE:
-        return size != SIZE_EDEFAULT;
-      case Pds16asmPackage.SPACE__BYTE_VALEU:
-        return byteValeu != BYTE_VALEU_EDEFAULT;
+        return size != null;
+      case Pds16asmPackage.SPACE__BYTE_VALUE:
+        return byteValue != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (size: ");
-    result.append(size);
-    result.append(", byteValeu: ");
-    result.append(byteValeu);
-    result.append(')');
-    return result.toString();
   }
 
 } //SpaceImpl

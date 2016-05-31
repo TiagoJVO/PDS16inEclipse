@@ -28,7 +28,7 @@ public class CHARValueConverter extends AbstractLexerBasedConverter<Integer> {
         char _charAt_1 = string.charAt(2);
         intValue = _charAt_1;
         this.checkIfIsAscii(intValue, node);
-        intValue = (intValue - this.CHAR_MAX);
+        intValue = (-intValue);
       }
       return Integer.valueOf(intValue);
     } catch (final Throwable _t) {

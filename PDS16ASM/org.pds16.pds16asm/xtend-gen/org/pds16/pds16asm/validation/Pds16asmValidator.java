@@ -4,7 +4,6 @@
 package org.pds16.pds16asm.validation;
 
 import com.google.common.base.Objects;
-import java.util.List;
 import java.util.function.Consumer;
 import org.eclipse.core.resources.IMarker;
 import org.eclipse.core.resources.IResource;
@@ -64,7 +63,7 @@ public class Pds16asmValidator extends AbstractPds16asmValidator {
   public void checkShift(final OperationShift os) {
     int a = os.getSin();
     if (((a < 0) || (a > 1))) {
-      this.error("SIN should be only 0 or 1", 
+      this.warning("SIN should be only 0 or 1", 
         Pds16asmPackage.Literals.OPERATION_SHIFT__SIN, 
         "Invalid Number");
     }
@@ -80,7 +79,7 @@ public class Pds16asmValidator extends AbstractPds16asmValidator {
     org.pds16.pds16asm.pds16asm.Number _number_1 = i.getNumber();
     Integer value = Integer.valueOf(_number_1.getValue());
     if ((((value).intValue() < 0) || ((value).intValue() > this.MAX_8BIT_NO_SIGNAL))) {
-      this.error(("Number should be between 0 and " + Integer.valueOf(this.MAX_8BIT_NO_SIGNAL)), 
+      this.warning(("Number should be between 0 and " + Integer.valueOf(this.MAX_8BIT_NO_SIGNAL)), 
         Pds16asmPackage.Literals.IMMEDIATE8_OR_LABEL__NUMBER, 
         "Invalid Number");
     }
@@ -96,7 +95,7 @@ public class Pds16asmValidator extends AbstractPds16asmValidator {
     org.pds16.pds16asm.pds16asm.Number _number_1 = d.getNumber();
     Integer value = Integer.valueOf(_number_1.getValue());
     if ((((value).intValue() < 0) || ((value).intValue() > this.MAX_7BIT_NO_SIGNAL))) {
-      this.error(("Number should be between 0 and " + Integer.valueOf(this.MAX_7BIT_NO_SIGNAL)), 
+      this.warning(("Number should be between 0 and " + Integer.valueOf(this.MAX_7BIT_NO_SIGNAL)), 
         Pds16asmPackage.Literals.DIRECT_OR_LABEL__NUMBER, 
         "Invalid Number");
     }
@@ -112,7 +111,7 @@ public class Pds16asmValidator extends AbstractPds16asmValidator {
     org.pds16.pds16asm.pds16asm.Number _number_1 = c.getNumber();
     Integer value = Integer.valueOf(_number_1.getValue());
     if ((((value).intValue() < 0) || ((value).intValue() > this.MAX_4BIT_NO_SIGNAL))) {
-      this.error(("Number should be between 0 and " + Integer.valueOf(this.MAX_4BIT_NO_SIGNAL)), 
+      this.warning(("Number should be between 0 and " + Integer.valueOf(this.MAX_4BIT_NO_SIGNAL)), 
         Pds16asmPackage.Literals.CONST4_OR_LABEL__NUMBER, 
         "Invalid Number");
     }
@@ -128,7 +127,7 @@ public class Pds16asmValidator extends AbstractPds16asmValidator {
     org.pds16.pds16asm.pds16asm.Number _number_1 = i.getNumber();
     Integer value = Integer.valueOf(_number_1.getValue());
     if ((((value).intValue() < 0) || ((value).intValue() > this.MAX_3BIT_NO_SIGNAL))) {
-      this.error(("Number should be between 0 and " + Integer.valueOf(this.MAX_3BIT_NO_SIGNAL)), 
+      this.warning(("Number should be between 0 and " + Integer.valueOf(this.MAX_3BIT_NO_SIGNAL)), 
         Pds16asmPackage.Literals.IDX3_OR_LABEL__NUMBER, 
         "Invalid Number");
     }
@@ -144,7 +143,7 @@ public class Pds16asmValidator extends AbstractPds16asmValidator {
     org.pds16.pds16asm.pds16asm.Number _number_1 = o.getNumber();
     Integer value = Integer.valueOf(_number_1.getValue());
     if ((((value).intValue() < this.MIN_8BIT_WITH_SIGNAL) || ((value).intValue() > this.MAX_8BIT_WITH_SIGNAL))) {
-      this.error(((("Number should be between" + Integer.valueOf(this.MIN_8BIT_WITH_SIGNAL)) + " and ") + Integer.valueOf(this.MAX_8BIT_WITH_SIGNAL)), 
+      this.warning(((("Number should be between" + Integer.valueOf(this.MIN_8BIT_WITH_SIGNAL)) + " and ") + Integer.valueOf(this.MAX_8BIT_WITH_SIGNAL)), 
         Pds16asmPackage.Literals.OFFSET8_OR_LABEL__NUMBER, 
         "Invalid Number");
     }
@@ -152,40 +151,62 @@ public class Pds16asmValidator extends AbstractPds16asmValidator {
   
   @Check
   public void checkByte(final org.pds16.pds16asm.pds16asm.Byte b) {
-    EList<Integer> _number = b.getNumber();
-    boolean _equals = Objects.equal(_number, null);
+    EList<org.pds16.pds16asm.pds16asm.Number> _numbers = b.getNumbers();
+    boolean _equals = Objects.equal(_numbers, null);
     if (_equals) {
       return;
     }
-    final List<Integer> list = b.getNumber();
+    final EList<org.pds16.pds16asm.pds16asm.Number> list = b.getNumbers();
     int size = list.size();
-    IntegerRange _upTo = new IntegerRange(0, (size - 1));
-    final Consumer<Integer> _function = (Integer i) -> {
-      Integer value = list.get((i).intValue());
-      if ((((value).intValue() < this.MIN_8BIT_WITH_SIGNAL) || ((value).intValue() > this.MAX_8BIT_WITH_SIGNAL))) {
-        this.error(((("Number should be between" + Integer.valueOf(this.MIN_8BIT_WITH_SIGNAL)) + " and ") + Integer.valueOf(this.MAX_8BIT_WITH_SIGNAL)), 
-          Pds16asmPackage.Literals.BYTE__NUMBER, 
-          "Invalid Number");
-      }
-    };
-    _upTo.forEach(_function);
+    if ((size > 0)) {
+      IntegerRange _upTo = new IntegerRange(0, (size - 1));
+      final Consumer<Integer> _function = (Integer i) -> {
+        org.pds16.pds16asm.pds16asm.Number item = list.get((i).intValue());
+        boolean _or = false;
+        int _value = item.getValue();
+        boolean _lessThan = (_value < this.MIN_8BIT_WITH_SIGNAL);
+        if (_lessThan) {
+          _or = true;
+        } else {
+          int _value_1 = item.getValue();
+          boolean _greaterThan = (_value_1 > this.MAX_8BIT_WITH_SIGNAL);
+          _or = _greaterThan;
+        }
+        if (_or) {
+          this.warning(((("One of the declared values isn\'t be between" + Integer.valueOf(this.MIN_8BIT_WITH_SIGNAL)) + " and ") + Integer.valueOf(this.MAX_8BIT_WITH_SIGNAL)), 
+            Pds16asmPackage.Literals.BYTE__TAG, 
+            "Invalid Number");
+        }
+      };
+      _upTo.forEach(_function);
+    }
   }
   
   @Check
   public void checkWord(final Word w) {
-    EList<Integer> _number = w.getNumber();
-    boolean _equals = Objects.equal(_number, null);
+    EList<org.pds16.pds16asm.pds16asm.Number> _numbers = w.getNumbers();
+    boolean _equals = Objects.equal(_numbers, null);
     if (_equals) {
       return;
     }
-    final List<Integer> list = w.getNumber();
+    final EList<org.pds16.pds16asm.pds16asm.Number> list = w.getNumbers();
     int size = list.size();
     IntegerRange _upTo = new IntegerRange(0, (size - 1));
     final Consumer<Integer> _function = (Integer i) -> {
-      Integer value = list.get((i).intValue());
-      if ((((value).intValue() < this.MIN_16BIT_WITH_SIGNAL) || ((value).intValue() > this.MAX_16BIT_WITH_SIGNAL))) {
-        this.error(((("Number should be between" + Integer.valueOf(this.MIN_16BIT_WITH_SIGNAL)) + " and ") + Integer.valueOf(this.MAX_16BIT_WITH_SIGNAL)), 
-          Pds16asmPackage.Literals.WORD__NUMBER, 
+      org.pds16.pds16asm.pds16asm.Number item = list.get((i).intValue());
+      boolean _or = false;
+      int _value = item.getValue();
+      boolean _lessThan = (_value < this.MIN_16BIT_WITH_SIGNAL);
+      if (_lessThan) {
+        _or = true;
+      } else {
+        int _value_1 = item.getValue();
+        boolean _greaterThan = (_value_1 > this.MAX_16BIT_WITH_SIGNAL);
+        _or = _greaterThan;
+      }
+      if (_or) {
+        this.warning(((("One of the declared values isn\'t be between" + Integer.valueOf(this.MIN_16BIT_WITH_SIGNAL)) + " and ") + Integer.valueOf(this.MAX_16BIT_WITH_SIGNAL)), 
+          Pds16asmPackage.Literals.WORD__TAG, 
           "Invalid Number");
       }
     };

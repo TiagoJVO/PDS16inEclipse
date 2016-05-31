@@ -190,13 +190,13 @@ public interface Pds16asmPackage extends EPackage
   int BSS = 5;
 
   /**
-   * The feature id for the '<em><b>Val</b></em>' attribute.
+   * The feature id for the '<em><b>Value</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BSS__VAL = DIRECTIVE_FEATURE_COUNT + 0;
+  int BSS__VALUE = DIRECTIVE_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Bss</em>' class.
@@ -218,13 +218,13 @@ public interface Pds16asmPackage extends EPackage
   int DATA = 6;
 
   /**
-   * The feature id for the '<em><b>Val</b></em>' attribute.
+   * The feature id for the '<em><b>Value</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DATA__VAL = DIRECTIVE_FEATURE_COUNT + 0;
+  int DATA__VALUE = DIRECTIVE_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Data</em>' class.
@@ -246,13 +246,13 @@ public interface Pds16asmPackage extends EPackage
   int END = 7;
 
   /**
-   * The feature id for the '<em><b>Val</b></em>' attribute.
+   * The feature id for the '<em><b>Value</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int END__VAL = DIRECTIVE_FEATURE_COUNT + 0;
+  int END__VALUE = DIRECTIVE_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>End</em>' class.
@@ -274,13 +274,13 @@ public interface Pds16asmPackage extends EPackage
   int TEXT = 8;
 
   /**
-   * The feature id for the '<em><b>Val</b></em>' attribute.
+   * The feature id for the '<em><b>Value</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TEXT__VAL = DIRECTIVE_FEATURE_COUNT + 0;
+  int TEXT__VALUE = DIRECTIVE_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Text</em>' class.
@@ -302,13 +302,22 @@ public interface Pds16asmPackage extends EPackage
   int ASCII = 9;
 
   /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * The feature id for the '<em><b>Tag</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ASCII__VALUE = LABEL_DIRECTIVE_FEATURE_COUNT + 0;
+  int ASCII__TAG = LABEL_DIRECTIVE_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Values</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASCII__VALUES = LABEL_DIRECTIVE_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Ascii</em>' class.
@@ -317,7 +326,7 @@ public interface Pds16asmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ASCII_FEATURE_COUNT = LABEL_DIRECTIVE_FEATURE_COUNT + 1;
+  int ASCII_FEATURE_COUNT = LABEL_DIRECTIVE_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.pds16.pds16asm.pds16asm.impl.AsciizImpl <em>Asciiz</em>}' class.
@@ -330,13 +339,22 @@ public interface Pds16asmPackage extends EPackage
   int ASCIIZ = 10;
 
   /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * The feature id for the '<em><b>Tag</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ASCIIZ__VALUE = LABEL_DIRECTIVE_FEATURE_COUNT + 0;
+  int ASCIIZ__TAG = LABEL_DIRECTIVE_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Values</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASCIIZ__VALUES = LABEL_DIRECTIVE_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Asciiz</em>' class.
@@ -345,7 +363,7 @@ public interface Pds16asmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ASCIIZ_FEATURE_COUNT = LABEL_DIRECTIVE_FEATURE_COUNT + 1;
+  int ASCIIZ_FEATURE_COUNT = LABEL_DIRECTIVE_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.pds16.pds16asm.pds16asm.impl.ByteImpl <em>Byte</em>}' class.
@@ -358,13 +376,31 @@ public interface Pds16asmPackage extends EPackage
   int BYTE = 11;
 
   /**
-   * The feature id for the '<em><b>Number</b></em>' attribute list.
+   * The feature id for the '<em><b>Tag</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BYTE__NUMBER = LABEL_DIRECTIVE_FEATURE_COUNT + 0;
+  int BYTE__TAG = LABEL_DIRECTIVE_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Numbers</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BYTE__NUMBERS = LABEL_DIRECTIVE_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>S</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BYTE__S = LABEL_DIRECTIVE_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Byte</em>' class.
@@ -373,7 +409,7 @@ public interface Pds16asmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BYTE_FEATURE_COUNT = LABEL_DIRECTIVE_FEATURE_COUNT + 1;
+  int BYTE_FEATURE_COUNT = LABEL_DIRECTIVE_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link org.pds16.pds16asm.pds16asm.impl.WordImpl <em>Word</em>}' class.
@@ -386,22 +422,31 @@ public interface Pds16asmPackage extends EPackage
   int WORD = 12;
 
   /**
-   * The feature id for the '<em><b>Value</b></em>' attribute list.
+   * The feature id for the '<em><b>Tag</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int WORD__VALUE = LABEL_DIRECTIVE_FEATURE_COUNT + 0;
+  int WORD__TAG = LABEL_DIRECTIVE_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Number</b></em>' attribute list.
+   * The feature id for the '<em><b>Values</b></em>' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int WORD__NUMBER = LABEL_DIRECTIVE_FEATURE_COUNT + 1;
+  int WORD__VALUES = LABEL_DIRECTIVE_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Numbers</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WORD__NUMBERS = LABEL_DIRECTIVE_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Word</em>' class.
@@ -410,7 +455,7 @@ public interface Pds16asmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int WORD_FEATURE_COUNT = LABEL_DIRECTIVE_FEATURE_COUNT + 2;
+  int WORD_FEATURE_COUNT = LABEL_DIRECTIVE_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link org.pds16.pds16asm.pds16asm.impl.SpaceImpl <em>Space</em>}' class.
@@ -423,7 +468,7 @@ public interface Pds16asmPackage extends EPackage
   int SPACE = 13;
 
   /**
-   * The feature id for the '<em><b>Size</b></em>' attribute.
+   * The feature id for the '<em><b>Size</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -432,13 +477,13 @@ public interface Pds16asmPackage extends EPackage
   int SPACE__SIZE = LABEL_DIRECTIVE_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Byte Valeu</b></em>' attribute.
+   * The feature id for the '<em><b>Byte Value</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SPACE__BYTE_VALEU = LABEL_DIRECTIVE_FEATURE_COUNT + 1;
+  int SPACE__BYTE_VALUE = LABEL_DIRECTIVE_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Space</em>' class.
@@ -1018,13 +1063,31 @@ public interface Pds16asmPackage extends EPackage
   int JUMP_OP = 41;
 
   /**
-   * The feature id for the '<em><b>Op</b></em>' attribute.
+   * The feature id for the '<em><b>Tag</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int JUMP_OP__OP = JUMP_FEATURE_COUNT + 0;
+  int JUMP_OP__TAG = JUMP_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Op Off</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int JUMP_OP__OP_OFF = JUMP_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Op Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int JUMP_OP__OP_ID = JUMP_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Jump Op</em>' class.
@@ -1033,7 +1096,7 @@ public interface Pds16asmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int JUMP_OP_FEATURE_COUNT = JUMP_FEATURE_COUNT + 1;
+  int JUMP_OP_FEATURE_COUNT = JUMP_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link org.pds16.pds16asm.pds16asm.impl.NopImpl <em>Nop</em>}' class.
@@ -1637,22 +1700,13 @@ public interface Pds16asmPackage extends EPackage
   int OPERATION_WITH_OFFSET = 57;
 
   /**
-   * The feature id for the '<em><b>Op</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OPERATION_WITH_OFFSET__OP = JUMP_OP__OP;
-
-  /**
    * The feature id for the '<em><b>Rbx</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OPERATION_WITH_OFFSET__RBX = JUMP_OP_FEATURE_COUNT + 0;
+  int OPERATION_WITH_OFFSET__RBX = 0;
 
   /**
    * The feature id for the '<em><b>Offset8</b></em>' containment reference.
@@ -1661,7 +1715,7 @@ public interface Pds16asmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OPERATION_WITH_OFFSET__OFFSET8 = JUMP_OP_FEATURE_COUNT + 1;
+  int OPERATION_WITH_OFFSET__OFFSET8 = 1;
 
   /**
    * The number of structural features of the '<em>Operation With Offset</em>' class.
@@ -1670,7 +1724,7 @@ public interface Pds16asmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OPERATION_WITH_OFFSET_FEATURE_COUNT = JUMP_OP_FEATURE_COUNT + 2;
+  int OPERATION_WITH_OFFSET_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.pds16.pds16asm.pds16asm.impl.ExpressionImpl <em>Expression</em>}' class.
@@ -1860,15 +1914,15 @@ public interface Pds16asmPackage extends EPackage
   EClass getBss();
 
   /**
-   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.Bss#getVal <em>Val</em>}'.
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.Bss#getValue <em>Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Val</em>'.
-   * @see org.pds16.pds16asm.pds16asm.Bss#getVal()
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.pds16.pds16asm.pds16asm.Bss#getValue()
    * @see #getBss()
    * @generated
    */
-  EAttribute getBss_Val();
+  EAttribute getBss_Value();
 
   /**
    * Returns the meta object for class '{@link org.pds16.pds16asm.pds16asm.Data <em>Data</em>}'.
@@ -1881,15 +1935,15 @@ public interface Pds16asmPackage extends EPackage
   EClass getData();
 
   /**
-   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.Data#getVal <em>Val</em>}'.
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.Data#getValue <em>Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Val</em>'.
-   * @see org.pds16.pds16asm.pds16asm.Data#getVal()
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.pds16.pds16asm.pds16asm.Data#getValue()
    * @see #getData()
    * @generated
    */
-  EAttribute getData_Val();
+  EAttribute getData_Value();
 
   /**
    * Returns the meta object for class '{@link org.pds16.pds16asm.pds16asm.End <em>End</em>}'.
@@ -1902,15 +1956,15 @@ public interface Pds16asmPackage extends EPackage
   EClass getEnd();
 
   /**
-   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.End#getVal <em>Val</em>}'.
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.End#getValue <em>Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Val</em>'.
-   * @see org.pds16.pds16asm.pds16asm.End#getVal()
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.pds16.pds16asm.pds16asm.End#getValue()
    * @see #getEnd()
    * @generated
    */
-  EAttribute getEnd_Val();
+  EAttribute getEnd_Value();
 
   /**
    * Returns the meta object for class '{@link org.pds16.pds16asm.pds16asm.Text <em>Text</em>}'.
@@ -1923,15 +1977,15 @@ public interface Pds16asmPackage extends EPackage
   EClass getText();
 
   /**
-   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.Text#getVal <em>Val</em>}'.
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.Text#getValue <em>Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Val</em>'.
-   * @see org.pds16.pds16asm.pds16asm.Text#getVal()
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.pds16.pds16asm.pds16asm.Text#getValue()
    * @see #getText()
    * @generated
    */
-  EAttribute getText_Val();
+  EAttribute getText_Value();
 
   /**
    * Returns the meta object for class '{@link org.pds16.pds16asm.pds16asm.Ascii <em>Ascii</em>}'.
@@ -1944,15 +1998,26 @@ public interface Pds16asmPackage extends EPackage
   EClass getAscii();
 
   /**
-   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.Ascii#getValue <em>Value</em>}'.
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.Ascii#getTag <em>Tag</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value</em>'.
-   * @see org.pds16.pds16asm.pds16asm.Ascii#getValue()
+   * @return the meta object for the attribute '<em>Tag</em>'.
+   * @see org.pds16.pds16asm.pds16asm.Ascii#getTag()
    * @see #getAscii()
    * @generated
    */
-  EAttribute getAscii_Value();
+  EAttribute getAscii_Tag();
+
+  /**
+   * Returns the meta object for the attribute list '{@link org.pds16.pds16asm.pds16asm.Ascii#getValues <em>Values</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Values</em>'.
+   * @see org.pds16.pds16asm.pds16asm.Ascii#getValues()
+   * @see #getAscii()
+   * @generated
+   */
+  EAttribute getAscii_Values();
 
   /**
    * Returns the meta object for class '{@link org.pds16.pds16asm.pds16asm.Asciiz <em>Asciiz</em>}'.
@@ -1965,15 +2030,26 @@ public interface Pds16asmPackage extends EPackage
   EClass getAsciiz();
 
   /**
-   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.Asciiz#getValue <em>Value</em>}'.
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.Asciiz#getTag <em>Tag</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value</em>'.
-   * @see org.pds16.pds16asm.pds16asm.Asciiz#getValue()
+   * @return the meta object for the attribute '<em>Tag</em>'.
+   * @see org.pds16.pds16asm.pds16asm.Asciiz#getTag()
    * @see #getAsciiz()
    * @generated
    */
-  EAttribute getAsciiz_Value();
+  EAttribute getAsciiz_Tag();
+
+  /**
+   * Returns the meta object for the attribute list '{@link org.pds16.pds16asm.pds16asm.Asciiz#getValues <em>Values</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Values</em>'.
+   * @see org.pds16.pds16asm.pds16asm.Asciiz#getValues()
+   * @see #getAsciiz()
+   * @generated
+   */
+  EAttribute getAsciiz_Values();
 
   /**
    * Returns the meta object for class '{@link org.pds16.pds16asm.pds16asm.Byte <em>Byte</em>}'.
@@ -1986,15 +2062,37 @@ public interface Pds16asmPackage extends EPackage
   EClass getByte();
 
   /**
-   * Returns the meta object for the attribute list '{@link org.pds16.pds16asm.pds16asm.Byte#getNumber <em>Number</em>}'.
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.Byte#getTag <em>Tag</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Number</em>'.
-   * @see org.pds16.pds16asm.pds16asm.Byte#getNumber()
+   * @return the meta object for the attribute '<em>Tag</em>'.
+   * @see org.pds16.pds16asm.pds16asm.Byte#getTag()
    * @see #getByte()
    * @generated
    */
-  EAttribute getByte_Number();
+  EAttribute getByte_Tag();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.pds16.pds16asm.pds16asm.Byte#getNumbers <em>Numbers</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Numbers</em>'.
+   * @see org.pds16.pds16asm.pds16asm.Byte#getNumbers()
+   * @see #getByte()
+   * @generated
+   */
+  EReference getByte_Numbers();
+
+  /**
+   * Returns the meta object for the attribute list '{@link org.pds16.pds16asm.pds16asm.Byte#getS <em>S</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>S</em>'.
+   * @see org.pds16.pds16asm.pds16asm.Byte#getS()
+   * @see #getByte()
+   * @generated
+   */
+  EAttribute getByte_S();
 
   /**
    * Returns the meta object for class '{@link org.pds16.pds16asm.pds16asm.Word <em>Word</em>}'.
@@ -2007,26 +2105,37 @@ public interface Pds16asmPackage extends EPackage
   EClass getWord();
 
   /**
-   * Returns the meta object for the attribute list '{@link org.pds16.pds16asm.pds16asm.Word#getValue <em>Value</em>}'.
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.Word#getTag <em>Tag</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Value</em>'.
-   * @see org.pds16.pds16asm.pds16asm.Word#getValue()
+   * @return the meta object for the attribute '<em>Tag</em>'.
+   * @see org.pds16.pds16asm.pds16asm.Word#getTag()
    * @see #getWord()
    * @generated
    */
-  EAttribute getWord_Value();
+  EAttribute getWord_Tag();
 
   /**
-   * Returns the meta object for the attribute list '{@link org.pds16.pds16asm.pds16asm.Word#getNumber <em>Number</em>}'.
+   * Returns the meta object for the attribute list '{@link org.pds16.pds16asm.pds16asm.Word#getValues <em>Values</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Number</em>'.
-   * @see org.pds16.pds16asm.pds16asm.Word#getNumber()
+   * @return the meta object for the attribute list '<em>Values</em>'.
+   * @see org.pds16.pds16asm.pds16asm.Word#getValues()
    * @see #getWord()
    * @generated
    */
-  EAttribute getWord_Number();
+  EAttribute getWord_Values();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.pds16.pds16asm.pds16asm.Word#getNumbers <em>Numbers</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Numbers</em>'.
+   * @see org.pds16.pds16asm.pds16asm.Word#getNumbers()
+   * @see #getWord()
+   * @generated
+   */
+  EReference getWord_Numbers();
 
   /**
    * Returns the meta object for class '{@link org.pds16.pds16asm.pds16asm.Space <em>Space</em>}'.
@@ -2039,26 +2148,26 @@ public interface Pds16asmPackage extends EPackage
   EClass getSpace();
 
   /**
-   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.Space#getSize <em>Size</em>}'.
+   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.pds16asm.Space#getSize <em>Size</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Size</em>'.
+   * @return the meta object for the containment reference '<em>Size</em>'.
    * @see org.pds16.pds16asm.pds16asm.Space#getSize()
    * @see #getSpace()
    * @generated
    */
-  EAttribute getSpace_Size();
+  EReference getSpace_Size();
 
   /**
-   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.Space#getByteValeu <em>Byte Valeu</em>}'.
+   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.pds16asm.Space#getByteValue <em>Byte Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Byte Valeu</em>'.
-   * @see org.pds16.pds16asm.pds16asm.Space#getByteValeu()
+   * @return the meta object for the containment reference '<em>Byte Value</em>'.
+   * @see org.pds16.pds16asm.pds16asm.Space#getByteValue()
    * @see #getSpace()
    * @generated
    */
-  EAttribute getSpace_ByteValeu();
+  EReference getSpace_ByteValue();
 
   /**
    * Returns the meta object for class '{@link org.pds16.pds16asm.pds16asm.Set <em>Set</em>}'.
@@ -2396,15 +2505,37 @@ public interface Pds16asmPackage extends EPackage
   EClass getJumpOp();
 
   /**
-   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.JumpOp#getOp <em>Op</em>}'.
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.JumpOp#getTag <em>Tag</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Op</em>'.
-   * @see org.pds16.pds16asm.pds16asm.JumpOp#getOp()
+   * @return the meta object for the attribute '<em>Tag</em>'.
+   * @see org.pds16.pds16asm.pds16asm.JumpOp#getTag()
    * @see #getJumpOp()
    * @generated
    */
-  EAttribute getJumpOp_Op();
+  EAttribute getJumpOp_Tag();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.pds16asm.JumpOp#getOpOff <em>Op Off</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Op Off</em>'.
+   * @see org.pds16.pds16asm.pds16asm.JumpOp#getOpOff()
+   * @see #getJumpOp()
+   * @generated
+   */
+  EReference getJumpOp_OpOff();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.pds16.pds16asm.pds16asm.JumpOp#getOpId <em>Op Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Op Id</em>'.
+   * @see org.pds16.pds16asm.pds16asm.JumpOp#getOpId()
+   * @see #getJumpOp()
+   * @generated
+   */
+  EAttribute getJumpOp_OpId();
 
   /**
    * Returns the meta object for class '{@link org.pds16.pds16asm.pds16asm.Nop <em>Nop</em>}'.
@@ -3100,12 +3231,12 @@ public interface Pds16asmPackage extends EPackage
     EClass BSS = eINSTANCE.getBss();
 
     /**
-     * The meta object literal for the '<em><b>Val</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute BSS__VAL = eINSTANCE.getBss_Val();
+    EAttribute BSS__VALUE = eINSTANCE.getBss_Value();
 
     /**
      * The meta object literal for the '{@link org.pds16.pds16asm.pds16asm.impl.DataImpl <em>Data</em>}' class.
@@ -3118,12 +3249,12 @@ public interface Pds16asmPackage extends EPackage
     EClass DATA = eINSTANCE.getData();
 
     /**
-     * The meta object literal for the '<em><b>Val</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute DATA__VAL = eINSTANCE.getData_Val();
+    EAttribute DATA__VALUE = eINSTANCE.getData_Value();
 
     /**
      * The meta object literal for the '{@link org.pds16.pds16asm.pds16asm.impl.EndImpl <em>End</em>}' class.
@@ -3136,12 +3267,12 @@ public interface Pds16asmPackage extends EPackage
     EClass END = eINSTANCE.getEnd();
 
     /**
-     * The meta object literal for the '<em><b>Val</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute END__VAL = eINSTANCE.getEnd_Val();
+    EAttribute END__VALUE = eINSTANCE.getEnd_Value();
 
     /**
      * The meta object literal for the '{@link org.pds16.pds16asm.pds16asm.impl.TextImpl <em>Text</em>}' class.
@@ -3154,12 +3285,12 @@ public interface Pds16asmPackage extends EPackage
     EClass TEXT = eINSTANCE.getText();
 
     /**
-     * The meta object literal for the '<em><b>Val</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TEXT__VAL = eINSTANCE.getText_Val();
+    EAttribute TEXT__VALUE = eINSTANCE.getText_Value();
 
     /**
      * The meta object literal for the '{@link org.pds16.pds16asm.pds16asm.impl.AsciiImpl <em>Ascii</em>}' class.
@@ -3172,12 +3303,20 @@ public interface Pds16asmPackage extends EPackage
     EClass ASCII = eINSTANCE.getAscii();
 
     /**
-     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Tag</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ASCII__VALUE = eINSTANCE.getAscii_Value();
+    EAttribute ASCII__TAG = eINSTANCE.getAscii_Tag();
+
+    /**
+     * The meta object literal for the '<em><b>Values</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ASCII__VALUES = eINSTANCE.getAscii_Values();
 
     /**
      * The meta object literal for the '{@link org.pds16.pds16asm.pds16asm.impl.AsciizImpl <em>Asciiz</em>}' class.
@@ -3190,12 +3329,20 @@ public interface Pds16asmPackage extends EPackage
     EClass ASCIIZ = eINSTANCE.getAsciiz();
 
     /**
-     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Tag</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ASCIIZ__VALUE = eINSTANCE.getAsciiz_Value();
+    EAttribute ASCIIZ__TAG = eINSTANCE.getAsciiz_Tag();
+
+    /**
+     * The meta object literal for the '<em><b>Values</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ASCIIZ__VALUES = eINSTANCE.getAsciiz_Values();
 
     /**
      * The meta object literal for the '{@link org.pds16.pds16asm.pds16asm.impl.ByteImpl <em>Byte</em>}' class.
@@ -3208,12 +3355,28 @@ public interface Pds16asmPackage extends EPackage
     EClass BYTE = eINSTANCE.getByte();
 
     /**
-     * The meta object literal for the '<em><b>Number</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Tag</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute BYTE__NUMBER = eINSTANCE.getByte_Number();
+    EAttribute BYTE__TAG = eINSTANCE.getByte_Tag();
+
+    /**
+     * The meta object literal for the '<em><b>Numbers</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BYTE__NUMBERS = eINSTANCE.getByte_Numbers();
+
+    /**
+     * The meta object literal for the '<em><b>S</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BYTE__S = eINSTANCE.getByte_S();
 
     /**
      * The meta object literal for the '{@link org.pds16.pds16asm.pds16asm.impl.WordImpl <em>Word</em>}' class.
@@ -3226,20 +3389,28 @@ public interface Pds16asmPackage extends EPackage
     EClass WORD = eINSTANCE.getWord();
 
     /**
-     * The meta object literal for the '<em><b>Value</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Tag</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute WORD__VALUE = eINSTANCE.getWord_Value();
+    EAttribute WORD__TAG = eINSTANCE.getWord_Tag();
 
     /**
-     * The meta object literal for the '<em><b>Number</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Values</b></em>' attribute list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute WORD__NUMBER = eINSTANCE.getWord_Number();
+    EAttribute WORD__VALUES = eINSTANCE.getWord_Values();
+
+    /**
+     * The meta object literal for the '<em><b>Numbers</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference WORD__NUMBERS = eINSTANCE.getWord_Numbers();
 
     /**
      * The meta object literal for the '{@link org.pds16.pds16asm.pds16asm.impl.SpaceImpl <em>Space</em>}' class.
@@ -3252,20 +3423,20 @@ public interface Pds16asmPackage extends EPackage
     EClass SPACE = eINSTANCE.getSpace();
 
     /**
-     * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Size</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute SPACE__SIZE = eINSTANCE.getSpace_Size();
+    EReference SPACE__SIZE = eINSTANCE.getSpace_Size();
 
     /**
-     * The meta object literal for the '<em><b>Byte Valeu</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Byte Value</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute SPACE__BYTE_VALEU = eINSTANCE.getSpace_ByteValeu();
+    EReference SPACE__BYTE_VALUE = eINSTANCE.getSpace_ByteValue();
 
     /**
      * The meta object literal for the '{@link org.pds16.pds16asm.pds16asm.impl.SetImpl <em>Set</em>}' class.
@@ -3588,12 +3759,28 @@ public interface Pds16asmPackage extends EPackage
     EClass JUMP_OP = eINSTANCE.getJumpOp();
 
     /**
-     * The meta object literal for the '<em><b>Op</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Tag</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute JUMP_OP__OP = eINSTANCE.getJumpOp_Op();
+    EAttribute JUMP_OP__TAG = eINSTANCE.getJumpOp_Tag();
+
+    /**
+     * The meta object literal for the '<em><b>Op Off</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference JUMP_OP__OP_OFF = eINSTANCE.getJumpOp_OpOff();
+
+    /**
+     * The meta object literal for the '<em><b>Op Id</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute JUMP_OP__OP_ID = eINSTANCE.getJumpOp_OpId();
 
     /**
      * The meta object literal for the '{@link org.pds16.pds16asm.pds16asm.impl.NopImpl <em>Nop</em>}' class.

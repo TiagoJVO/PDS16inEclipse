@@ -403,15 +403,15 @@ ruleBss returns [EObject current=null]
 }:
 	(
 		(
-			lv_val_0_0=Bss
+			lv_value_0_0=Bss
 			{
-				newLeafNode(lv_val_0_0, grammarAccess.getBssAccess().getValBssKeyword_0());
+				newLeafNode(lv_value_0_0, grammarAccess.getBssAccess().getValueBssKeyword_0());
 			}
 			{
 				if ($current==null) {
 					$current = createModelElement(grammarAccess.getBssRule());
 				}
-				setWithLastConsumed($current, "val", lv_val_0_0, ".bss");
+				setWithLastConsumed($current, "value", lv_value_0_0, ".bss");
 			}
 		)
 	)
@@ -434,15 +434,15 @@ ruleData returns [EObject current=null]
 }:
 	(
 		(
-			lv_val_0_0=Data
+			lv_value_0_0=Data
 			{
-				newLeafNode(lv_val_0_0, grammarAccess.getDataAccess().getValDataKeyword_0());
+				newLeafNode(lv_value_0_0, grammarAccess.getDataAccess().getValueDataKeyword_0());
 			}
 			{
 				if ($current==null) {
 					$current = createModelElement(grammarAccess.getDataRule());
 				}
-				setWithLastConsumed($current, "val", lv_val_0_0, ".data");
+				setWithLastConsumed($current, "value", lv_value_0_0, ".data");
 			}
 		)
 	)
@@ -465,15 +465,15 @@ ruleEnd returns [EObject current=null]
 }:
 	(
 		(
-			lv_val_0_0=End
+			lv_value_0_0=End
 			{
-				newLeafNode(lv_val_0_0, grammarAccess.getEndAccess().getValEndKeyword_0());
+				newLeafNode(lv_value_0_0, grammarAccess.getEndAccess().getValueEndKeyword_0());
 			}
 			{
 				if ($current==null) {
 					$current = createModelElement(grammarAccess.getEndRule());
 				}
-				setWithLastConsumed($current, "val", lv_val_0_0, ".end");
+				setWithLastConsumed($current, "value", lv_value_0_0, ".end");
 			}
 		)
 	)
@@ -496,15 +496,15 @@ ruleText returns [EObject current=null]
 }:
 	(
 		(
-			lv_val_0_0=Text
+			lv_value_0_0=Text
 			{
-				newLeafNode(lv_val_0_0, grammarAccess.getTextAccess().getValTextKeyword_0());
+				newLeafNode(lv_value_0_0, grammarAccess.getTextAccess().getValueTextKeyword_0());
 			}
 			{
 				if ($current==null) {
 					$current = createModelElement(grammarAccess.getTextRule());
 				}
-				setWithLastConsumed($current, "val", lv_val_0_0, ".text");
+				setWithLastConsumed($current, "value", lv_value_0_0, ".text");
 			}
 		)
 	)
@@ -526,25 +526,35 @@ ruleAscii returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0=Ascii
-		{
-			newLeafNode(otherlv_0, grammarAccess.getAsciiAccess().getAsciiKeyword_0());
-		}
+		(
+			(
+				lv_tag_0_0=Ascii
+				{
+					newLeafNode(lv_tag_0_0, grammarAccess.getAsciiAccess().getTagAsciiKeyword_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getAsciiRule());
+					}
+					setWithLastConsumed($current, "tag", lv_tag_0_0, ".ascii");
+				}
+			)
+		)
 		(
 			(
 				(
-					lv_value_1_0=RULE_STRING
+					lv_values_1_0=RULE_STRING
 					{
-						newLeafNode(lv_value_1_0, grammarAccess.getAsciiAccess().getValueSTRINGTerminalRuleCall_1_0_0());
+						newLeafNode(lv_values_1_0, grammarAccess.getAsciiAccess().getValuesSTRINGTerminalRuleCall_1_0_0());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getAsciiRule());
 						}
-						setWithLastConsumed(
+						addWithLastConsumed(
 							$current,
-							"value",
-							lv_value_1_0,
+							"values",
+							lv_values_1_0,
 							"org.pds16.pds16asm.Pds16asm.STRING");
 					}
 				)
@@ -554,11 +564,25 @@ ruleAscii returns [EObject current=null]
 				{
 					newLeafNode(otherlv_2, grammarAccess.getAsciiAccess().getCommaKeyword_1_1_0());
 				}
-				this_STRING_3=RULE_STRING
-				{
-					newLeafNode(this_STRING_3, grammarAccess.getAsciiAccess().getSTRINGTerminalRuleCall_1_1_1());
-				}
-			)
+				(
+					(
+						lv_values_3_0=RULE_STRING
+						{
+							newLeafNode(lv_values_3_0, grammarAccess.getAsciiAccess().getValuesSTRINGTerminalRuleCall_1_1_1_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getAsciiRule());
+							}
+							addWithLastConsumed(
+								$current,
+								"values",
+								lv_values_3_0,
+								"org.pds16.pds16asm.Pds16asm.STRING");
+						}
+					)
+				)
+			)*
 		)?
 	)
 ;
@@ -579,25 +603,35 @@ ruleAsciiz returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0=Asciiz
-		{
-			newLeafNode(otherlv_0, grammarAccess.getAsciizAccess().getAsciizKeyword_0());
-		}
+		(
+			(
+				lv_tag_0_0=Asciiz
+				{
+					newLeafNode(lv_tag_0_0, grammarAccess.getAsciizAccess().getTagAsciizKeyword_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getAsciizRule());
+					}
+					setWithLastConsumed($current, "tag", lv_tag_0_0, ".asciiz");
+				}
+			)
+		)
 		(
 			(
 				(
-					lv_value_1_0=RULE_STRING
+					lv_values_1_0=RULE_STRING
 					{
-						newLeafNode(lv_value_1_0, grammarAccess.getAsciizAccess().getValueSTRINGTerminalRuleCall_1_0_0());
+						newLeafNode(lv_values_1_0, grammarAccess.getAsciizAccess().getValuesSTRINGTerminalRuleCall_1_0_0());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getAsciizRule());
 						}
-						setWithLastConsumed(
+						addWithLastConsumed(
 							$current,
-							"value",
-							lv_value_1_0,
+							"values",
+							lv_values_1_0,
 							"org.pds16.pds16asm.Pds16asm.STRING");
 					}
 				)
@@ -607,10 +641,24 @@ ruleAsciiz returns [EObject current=null]
 				{
 					newLeafNode(otherlv_2, grammarAccess.getAsciizAccess().getCommaKeyword_1_1_0());
 				}
-				this_STRING_3=RULE_STRING
-				{
-					newLeafNode(this_STRING_3, grammarAccess.getAsciizAccess().getSTRINGTerminalRuleCall_1_1_1());
-				}
+				(
+					(
+						lv_values_3_0=RULE_STRING
+						{
+							newLeafNode(lv_values_3_0, grammarAccess.getAsciizAccess().getValuesSTRINGTerminalRuleCall_1_1_1_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getAsciizRule());
+							}
+							addWithLastConsumed(
+								$current,
+								"values",
+								lv_values_3_0,
+								"org.pds16.pds16asm.Pds16asm.STRING");
+						}
+					)
+				)
 			)*
 		)?
 	)
@@ -632,17 +680,47 @@ ruleByte returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0=Byte
-		{
-			newLeafNode(otherlv_0, grammarAccess.getByteAccess().getByteKeyword_0());
-		}
+		(
+			(
+				lv_tag_0_0=Byte
+				{
+					newLeafNode(lv_tag_0_0, grammarAccess.getByteAccess().getTagByteKeyword_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getByteRule());
+					}
+					setWithLastConsumed($current, "tag", lv_tag_0_0, ".byte");
+				}
+			)
+		)
 		(
 			(
 				(
 					(
-						lv_number_1_1=RULE_INT
 						{
-							newLeafNode(lv_number_1_1, grammarAccess.getByteAccess().getNumberINTTerminalRuleCall_1_0_0_0());
+							newCompositeNode(grammarAccess.getByteAccess().getNumbersNumberParserRuleCall_1_0_0_0());
+						}
+						lv_numbers_1_0=ruleNumber
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getByteRule());
+							}
+							add(
+								$current,
+								"numbers",
+								lv_numbers_1_0,
+								"org.pds16.pds16asm.Pds16asm.Number");
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)
+				    |
+				(
+					(
+						lv_s_2_0=RULE_STRING
+						{
+							newLeafNode(lv_s_2_0, grammarAccess.getByteAccess().getSSTRINGTerminalRuleCall_1_0_1_0());
 						}
 						{
 							if ($current==null) {
@@ -650,84 +728,44 @@ ruleByte returns [EObject current=null]
 							}
 							addWithLastConsumed(
 								$current,
-								"number",
-								lv_number_1_1,
-								"org.pds16.pds16asm.Pds16asm.INT");
-						}
-						    |
-						lv_number_1_2=RULE_HEX
-						{
-							newLeafNode(lv_number_1_2, grammarAccess.getByteAccess().getNumberHEXTerminalRuleCall_1_0_0_1());
-						}
-						{
-							if ($current==null) {
-								$current = createModelElement(grammarAccess.getByteRule());
-							}
-							addWithLastConsumed(
-								$current,
-								"number",
-								lv_number_1_2,
-								"org.pds16.pds16asm.Pds16asm.HEX");
-						}
-						    |
-						lv_number_1_3=RULE_OCT
-						{
-							newLeafNode(lv_number_1_3, grammarAccess.getByteAccess().getNumberOCTTerminalRuleCall_1_0_0_2());
-						}
-						{
-							if ($current==null) {
-								$current = createModelElement(grammarAccess.getByteRule());
-							}
-							addWithLastConsumed(
-								$current,
-								"number",
-								lv_number_1_3,
-								"org.pds16.pds16asm.Pds16asm.OCT");
-						}
-						    |
-						lv_number_1_4=RULE_BIN
-						{
-							newLeafNode(lv_number_1_4, grammarAccess.getByteAccess().getNumberBINTerminalRuleCall_1_0_0_3());
-						}
-						{
-							if ($current==null) {
-								$current = createModelElement(grammarAccess.getByteRule());
-							}
-							addWithLastConsumed(
-								$current,
-								"number",
-								lv_number_1_4,
-								"org.pds16.pds16asm.Pds16asm.BIN");
-						}
-						    |
-						lv_number_1_5=RULE_CHAR
-						{
-							newLeafNode(lv_number_1_5, grammarAccess.getByteAccess().getNumberCHARTerminalRuleCall_1_0_0_4());
-						}
-						{
-							if ($current==null) {
-								$current = createModelElement(grammarAccess.getByteRule());
-							}
-							addWithLastConsumed(
-								$current,
-								"number",
-								lv_number_1_5,
-								"org.pds16.pds16asm.Pds16asm.CHAR");
+								"s",
+								lv_s_2_0,
+								"org.pds16.pds16asm.Pds16asm.STRING");
 						}
 					)
 				)
 			)
 			(
-				otherlv_2=Comma
+				otherlv_3=Comma
 				{
-					newLeafNode(otherlv_2, grammarAccess.getByteAccess().getCommaKeyword_1_1_0());
+					newLeafNode(otherlv_3, grammarAccess.getByteAccess().getCommaKeyword_1_1_0());
 				}
 				(
 					(
 						(
-							lv_number_3_1=RULE_INT
 							{
-								newLeafNode(lv_number_3_1, grammarAccess.getByteAccess().getNumberINTTerminalRuleCall_1_1_1_0_0());
+								newCompositeNode(grammarAccess.getByteAccess().getNumbersNumberParserRuleCall_1_1_1_0_0());
+							}
+							lv_numbers_4_0=ruleNumber
+							{
+								if ($current==null) {
+									$current = createModelElementForParent(grammarAccess.getByteRule());
+								}
+								add(
+									$current,
+									"numbers",
+									lv_numbers_4_0,
+									"org.pds16.pds16asm.Pds16asm.Number");
+								afterParserOrEnumRuleCall();
+							}
+						)
+					)
+					    |
+					(
+						(
+							lv_s_5_0=RULE_STRING
+							{
+								newLeafNode(lv_s_5_0, grammarAccess.getByteAccess().getSSTRINGTerminalRuleCall_1_1_1_1_0());
 							}
 							{
 								if ($current==null) {
@@ -735,69 +773,9 @@ ruleByte returns [EObject current=null]
 								}
 								addWithLastConsumed(
 									$current,
-									"number",
-									lv_number_3_1,
-									"org.pds16.pds16asm.Pds16asm.INT");
-							}
-							    |
-							lv_number_3_2=RULE_HEX
-							{
-								newLeafNode(lv_number_3_2, grammarAccess.getByteAccess().getNumberHEXTerminalRuleCall_1_1_1_0_1());
-							}
-							{
-								if ($current==null) {
-									$current = createModelElement(grammarAccess.getByteRule());
-								}
-								addWithLastConsumed(
-									$current,
-									"number",
-									lv_number_3_2,
-									"org.pds16.pds16asm.Pds16asm.HEX");
-							}
-							    |
-							lv_number_3_3=RULE_OCT
-							{
-								newLeafNode(lv_number_3_3, grammarAccess.getByteAccess().getNumberOCTTerminalRuleCall_1_1_1_0_2());
-							}
-							{
-								if ($current==null) {
-									$current = createModelElement(grammarAccess.getByteRule());
-								}
-								addWithLastConsumed(
-									$current,
-									"number",
-									lv_number_3_3,
-									"org.pds16.pds16asm.Pds16asm.OCT");
-							}
-							    |
-							lv_number_3_4=RULE_BIN
-							{
-								newLeafNode(lv_number_3_4, grammarAccess.getByteAccess().getNumberBINTerminalRuleCall_1_1_1_0_3());
-							}
-							{
-								if ($current==null) {
-									$current = createModelElement(grammarAccess.getByteRule());
-								}
-								addWithLastConsumed(
-									$current,
-									"number",
-									lv_number_3_4,
-									"org.pds16.pds16asm.Pds16asm.BIN");
-							}
-							    |
-							lv_number_3_5=RULE_CHAR
-							{
-								newLeafNode(lv_number_3_5, grammarAccess.getByteAccess().getNumberCHARTerminalRuleCall_1_1_1_0_4());
-							}
-							{
-								if ($current==null) {
-									$current = createModelElement(grammarAccess.getByteRule());
-								}
-								addWithLastConsumed(
-									$current,
-									"number",
-									lv_number_3_5,
-									"org.pds16.pds16asm.Pds16asm.CHAR");
+									"s",
+									lv_s_5_0,
+									"org.pds16.pds16asm.Pds16asm.STRING");
 							}
 						)
 					)
@@ -823,17 +801,27 @@ ruleWord returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0=Word
-		{
-			newLeafNode(otherlv_0, grammarAccess.getWordAccess().getWordKeyword_0());
-		}
+		(
+			(
+				lv_tag_0_0=Word
+				{
+					newLeafNode(lv_tag_0_0, grammarAccess.getWordAccess().getTagWordKeyword_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getWordRule());
+					}
+					setWithLastConsumed($current, "tag", lv_tag_0_0, ".word");
+				}
+			)
+		)
 		(
 			(
 				(
 					(
-						lv_value_1_0=RULE_ID
+						lv_values_1_0=RULE_ID
 						{
-							newLeafNode(lv_value_1_0, grammarAccess.getWordAccess().getValueIDTerminalRuleCall_1_0_0_0());
+							newLeafNode(lv_values_1_0, grammarAccess.getWordAccess().getValuesIDTerminalRuleCall_1_0_0_0());
 						}
 						{
 							if ($current==null) {
@@ -841,8 +829,8 @@ ruleWord returns [EObject current=null]
 							}
 							addWithLastConsumed(
 								$current,
-								"value",
-								lv_value_1_0,
+								"values",
+								lv_values_1_0,
 								"org.pds16.pds16asm.Pds16asm.ID");
 						}
 					)
@@ -850,82 +838,21 @@ ruleWord returns [EObject current=null]
 				    |
 				(
 					(
-						(
-							lv_number_2_1=RULE_INT
-							{
-								newLeafNode(lv_number_2_1, grammarAccess.getWordAccess().getNumberINTTerminalRuleCall_1_0_1_0_0());
+						{
+							newCompositeNode(grammarAccess.getWordAccess().getNumbersNumberParserRuleCall_1_0_1_0());
+						}
+						lv_numbers_2_0=ruleNumber
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getWordRule());
 							}
-							{
-								if ($current==null) {
-									$current = createModelElement(grammarAccess.getWordRule());
-								}
-								addWithLastConsumed(
-									$current,
-									"number",
-									lv_number_2_1,
-									"org.pds16.pds16asm.Pds16asm.INT");
-							}
-							    |
-							lv_number_2_2=RULE_HEX
-							{
-								newLeafNode(lv_number_2_2, grammarAccess.getWordAccess().getNumberHEXTerminalRuleCall_1_0_1_0_1());
-							}
-							{
-								if ($current==null) {
-									$current = createModelElement(grammarAccess.getWordRule());
-								}
-								addWithLastConsumed(
-									$current,
-									"number",
-									lv_number_2_2,
-									"org.pds16.pds16asm.Pds16asm.HEX");
-							}
-							    |
-							lv_number_2_3=RULE_OCT
-							{
-								newLeafNode(lv_number_2_3, grammarAccess.getWordAccess().getNumberOCTTerminalRuleCall_1_0_1_0_2());
-							}
-							{
-								if ($current==null) {
-									$current = createModelElement(grammarAccess.getWordRule());
-								}
-								addWithLastConsumed(
-									$current,
-									"number",
-									lv_number_2_3,
-									"org.pds16.pds16asm.Pds16asm.OCT");
-							}
-							    |
-							lv_number_2_4=RULE_BIN
-							{
-								newLeafNode(lv_number_2_4, grammarAccess.getWordAccess().getNumberBINTerminalRuleCall_1_0_1_0_3());
-							}
-							{
-								if ($current==null) {
-									$current = createModelElement(grammarAccess.getWordRule());
-								}
-								addWithLastConsumed(
-									$current,
-									"number",
-									lv_number_2_4,
-									"org.pds16.pds16asm.Pds16asm.BIN");
-							}
-							    |
-							lv_number_2_5=RULE_CHAR
-							{
-								newLeafNode(lv_number_2_5, grammarAccess.getWordAccess().getNumberCHARTerminalRuleCall_1_0_1_0_4());
-							}
-							{
-								if ($current==null) {
-									$current = createModelElement(grammarAccess.getWordRule());
-								}
-								addWithLastConsumed(
-									$current,
-									"number",
-									lv_number_2_5,
-									"org.pds16.pds16asm.Pds16asm.CHAR");
-							}
-						)
+							add(
+								$current,
+								"numbers",
+								lv_numbers_2_0,
+								"org.pds16.pds16asm.Pds16asm.Number");
+							afterParserOrEnumRuleCall();
+						}
 					)
 				)
 			)
@@ -937,9 +864,9 @@ ruleWord returns [EObject current=null]
 				(
 					(
 						(
-							lv_value_4_0=RULE_ID
+							lv_values_4_0=RULE_ID
 							{
-								newLeafNode(lv_value_4_0, grammarAccess.getWordAccess().getValueIDTerminalRuleCall_1_1_1_0_0());
+								newLeafNode(lv_values_4_0, grammarAccess.getWordAccess().getValuesIDTerminalRuleCall_1_1_1_0_0());
 							}
 							{
 								if ($current==null) {
@@ -947,8 +874,8 @@ ruleWord returns [EObject current=null]
 								}
 								addWithLastConsumed(
 									$current,
-									"value",
-									lv_value_4_0,
+									"values",
+									lv_values_4_0,
 									"org.pds16.pds16asm.Pds16asm.ID");
 							}
 						)
@@ -956,82 +883,21 @@ ruleWord returns [EObject current=null]
 					    |
 					(
 						(
-							(
-								lv_number_5_1=RULE_INT
-								{
-									newLeafNode(lv_number_5_1, grammarAccess.getWordAccess().getNumberINTTerminalRuleCall_1_1_1_1_0_0());
+							{
+								newCompositeNode(grammarAccess.getWordAccess().getNumbersNumberParserRuleCall_1_1_1_1_0());
+							}
+							lv_numbers_5_0=ruleNumber
+							{
+								if ($current==null) {
+									$current = createModelElementForParent(grammarAccess.getWordRule());
 								}
-								{
-									if ($current==null) {
-										$current = createModelElement(grammarAccess.getWordRule());
-									}
-									addWithLastConsumed(
-										$current,
-										"number",
-										lv_number_5_1,
-										"org.pds16.pds16asm.Pds16asm.INT");
-								}
-								    |
-								lv_number_5_2=RULE_HEX
-								{
-									newLeafNode(lv_number_5_2, grammarAccess.getWordAccess().getNumberHEXTerminalRuleCall_1_1_1_1_0_1());
-								}
-								{
-									if ($current==null) {
-										$current = createModelElement(grammarAccess.getWordRule());
-									}
-									addWithLastConsumed(
-										$current,
-										"number",
-										lv_number_5_2,
-										"org.pds16.pds16asm.Pds16asm.HEX");
-								}
-								    |
-								lv_number_5_3=RULE_OCT
-								{
-									newLeafNode(lv_number_5_3, grammarAccess.getWordAccess().getNumberOCTTerminalRuleCall_1_1_1_1_0_2());
-								}
-								{
-									if ($current==null) {
-										$current = createModelElement(grammarAccess.getWordRule());
-									}
-									addWithLastConsumed(
-										$current,
-										"number",
-										lv_number_5_3,
-										"org.pds16.pds16asm.Pds16asm.OCT");
-								}
-								    |
-								lv_number_5_4=RULE_BIN
-								{
-									newLeafNode(lv_number_5_4, grammarAccess.getWordAccess().getNumberBINTerminalRuleCall_1_1_1_1_0_3());
-								}
-								{
-									if ($current==null) {
-										$current = createModelElement(grammarAccess.getWordRule());
-									}
-									addWithLastConsumed(
-										$current,
-										"number",
-										lv_number_5_4,
-										"org.pds16.pds16asm.Pds16asm.BIN");
-								}
-								    |
-								lv_number_5_5=RULE_CHAR
-								{
-									newLeafNode(lv_number_5_5, grammarAccess.getWordAccess().getNumberCHARTerminalRuleCall_1_1_1_1_0_4());
-								}
-								{
-									if ($current==null) {
-										$current = createModelElement(grammarAccess.getWordRule());
-									}
-									addWithLastConsumed(
-										$current,
-										"number",
-										lv_number_5_5,
-										"org.pds16.pds16asm.Pds16asm.CHAR");
-								}
-							)
+								add(
+									$current,
+									"numbers",
+									lv_numbers_5_0,
+									"org.pds16.pds16asm.Pds16asm.Number");
+								afterParserOrEnumRuleCall();
+							}
 						)
 					)
 				)
@@ -1062,82 +928,21 @@ ruleSpace returns [EObject current=null]
 		}
 		(
 			(
-				(
-					lv_size_1_1=RULE_INT
-					{
-						newLeafNode(lv_size_1_1, grammarAccess.getSpaceAccess().getSizeINTTerminalRuleCall_1_0_0());
+				{
+					newCompositeNode(grammarAccess.getSpaceAccess().getSizeNumberParserRuleCall_1_0());
+				}
+				lv_size_1_0=ruleNumber
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getSpaceRule());
 					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getSpaceRule());
-						}
-						setWithLastConsumed(
-							$current,
-							"size",
-							lv_size_1_1,
-							"org.pds16.pds16asm.Pds16asm.INT");
-					}
-					    |
-					lv_size_1_2=RULE_HEX
-					{
-						newLeafNode(lv_size_1_2, grammarAccess.getSpaceAccess().getSizeHEXTerminalRuleCall_1_0_1());
-					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getSpaceRule());
-						}
-						setWithLastConsumed(
-							$current,
-							"size",
-							lv_size_1_2,
-							"org.pds16.pds16asm.Pds16asm.HEX");
-					}
-					    |
-					lv_size_1_3=RULE_OCT
-					{
-						newLeafNode(lv_size_1_3, grammarAccess.getSpaceAccess().getSizeOCTTerminalRuleCall_1_0_2());
-					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getSpaceRule());
-						}
-						setWithLastConsumed(
-							$current,
-							"size",
-							lv_size_1_3,
-							"org.pds16.pds16asm.Pds16asm.OCT");
-					}
-					    |
-					lv_size_1_4=RULE_BIN
-					{
-						newLeafNode(lv_size_1_4, grammarAccess.getSpaceAccess().getSizeBINTerminalRuleCall_1_0_3());
-					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getSpaceRule());
-						}
-						setWithLastConsumed(
-							$current,
-							"size",
-							lv_size_1_4,
-							"org.pds16.pds16asm.Pds16asm.BIN");
-					}
-					    |
-					lv_size_1_5=RULE_CHAR
-					{
-						newLeafNode(lv_size_1_5, grammarAccess.getSpaceAccess().getSizeCHARTerminalRuleCall_1_0_4());
-					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getSpaceRule());
-						}
-						setWithLastConsumed(
-							$current,
-							"size",
-							lv_size_1_5,
-							"org.pds16.pds16asm.Pds16asm.CHAR");
-					}
-				)
+					set(
+						$current,
+						"size",
+						lv_size_1_0,
+						"org.pds16.pds16asm.Pds16asm.Number");
+					afterParserOrEnumRuleCall();
+				}
 			)
 		)
 		(
@@ -1147,82 +952,21 @@ ruleSpace returns [EObject current=null]
 			}
 			(
 				(
-					(
-						lv_byteValeu_3_1=RULE_INT
-						{
-							newLeafNode(lv_byteValeu_3_1, grammarAccess.getSpaceAccess().getByteValeuINTTerminalRuleCall_2_1_0_0());
+					{
+						newCompositeNode(grammarAccess.getSpaceAccess().getByteValueNumberParserRuleCall_2_1_0());
+					}
+					lv_byteValue_3_0=ruleNumber
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getSpaceRule());
 						}
-						{
-							if ($current==null) {
-								$current = createModelElement(grammarAccess.getSpaceRule());
-							}
-							setWithLastConsumed(
-								$current,
-								"byteValeu",
-								lv_byteValeu_3_1,
-								"org.pds16.pds16asm.Pds16asm.INT");
-						}
-						    |
-						lv_byteValeu_3_2=RULE_HEX
-						{
-							newLeafNode(lv_byteValeu_3_2, grammarAccess.getSpaceAccess().getByteValeuHEXTerminalRuleCall_2_1_0_1());
-						}
-						{
-							if ($current==null) {
-								$current = createModelElement(grammarAccess.getSpaceRule());
-							}
-							setWithLastConsumed(
-								$current,
-								"byteValeu",
-								lv_byteValeu_3_2,
-								"org.pds16.pds16asm.Pds16asm.HEX");
-						}
-						    |
-						lv_byteValeu_3_3=RULE_OCT
-						{
-							newLeafNode(lv_byteValeu_3_3, grammarAccess.getSpaceAccess().getByteValeuOCTTerminalRuleCall_2_1_0_2());
-						}
-						{
-							if ($current==null) {
-								$current = createModelElement(grammarAccess.getSpaceRule());
-							}
-							setWithLastConsumed(
-								$current,
-								"byteValeu",
-								lv_byteValeu_3_3,
-								"org.pds16.pds16asm.Pds16asm.OCT");
-						}
-						    |
-						lv_byteValeu_3_4=RULE_BIN
-						{
-							newLeafNode(lv_byteValeu_3_4, grammarAccess.getSpaceAccess().getByteValeuBINTerminalRuleCall_2_1_0_3());
-						}
-						{
-							if ($current==null) {
-								$current = createModelElement(grammarAccess.getSpaceRule());
-							}
-							setWithLastConsumed(
-								$current,
-								"byteValeu",
-								lv_byteValeu_3_4,
-								"org.pds16.pds16asm.Pds16asm.BIN");
-						}
-						    |
-						lv_byteValeu_3_5=RULE_CHAR
-						{
-							newLeafNode(lv_byteValeu_3_5, grammarAccess.getSpaceAccess().getByteValeuCHARTerminalRuleCall_2_1_0_4());
-						}
-						{
-							if ($current==null) {
-								$current = createModelElement(grammarAccess.getSpaceRule());
-							}
-							setWithLastConsumed(
-								$current,
-								"byteValeu",
-								lv_byteValeu_3_5,
-								"org.pds16.pds16asm.Pds16asm.CHAR");
-						}
-					)
+						set(
+							$current,
+							"byteValue",
+							lv_byteValue_3_0,
+							"org.pds16.pds16asm.Pds16asm.Number");
+						afterParserOrEnumRuleCall();
+					}
 				)
 			)
 		)?
@@ -2505,71 +2249,146 @@ ruleJumpOp returns [EObject current=null]
 }:
 	(
 		(
-			otherlv_0=Jz
-			{
-				newLeafNode(otherlv_0, grammarAccess.getJumpOpAccess().getJzKeyword_0_0());
-			}
-			    |
-			otherlv_1=Je
-			{
-				newLeafNode(otherlv_1, grammarAccess.getJumpOpAccess().getJeKeyword_0_1());
-			}
-			    |
-			otherlv_2=Jnz
-			{
-				newLeafNode(otherlv_2, grammarAccess.getJumpOpAccess().getJnzKeyword_0_2());
-			}
-			    |
-			otherlv_3=Jne
-			{
-				newLeafNode(otherlv_3, grammarAccess.getJumpOpAccess().getJneKeyword_0_3());
-			}
-			    |
-			otherlv_4=Jc
-			{
-				newLeafNode(otherlv_4, grammarAccess.getJumpOpAccess().getJcKeyword_0_4());
-			}
-			    |
-			otherlv_5=Jbl
-			{
-				newLeafNode(otherlv_5, grammarAccess.getJumpOpAccess().getJblKeyword_0_5());
-			}
-			    |
-			otherlv_6=Jnc
-			{
-				newLeafNode(otherlv_6, grammarAccess.getJumpOpAccess().getJncKeyword_0_6());
-			}
-			    |
-			otherlv_7=Jae
-			{
-				newLeafNode(otherlv_7, grammarAccess.getJumpOpAccess().getJaeKeyword_0_7());
-			}
-			    |
-			otherlv_8=Jmp
-			{
-				newLeafNode(otherlv_8, grammarAccess.getJumpOpAccess().getJmpKeyword_0_8());
-			}
-			    |
-			otherlv_9=Jmpl
-			{
-				newLeafNode(otherlv_9, grammarAccess.getJumpOpAccess().getJmplKeyword_0_9());
-			}
+			(
+				(
+					lv_tag_0_1=Jz
+					{
+						newLeafNode(lv_tag_0_1, grammarAccess.getJumpOpAccess().getTagJzKeyword_0_0_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getJumpOpRule());
+						}
+						setWithLastConsumed($current, "tag", lv_tag_0_1, null);
+					}
+					    |
+					lv_tag_0_2=Je
+					{
+						newLeafNode(lv_tag_0_2, grammarAccess.getJumpOpAccess().getTagJeKeyword_0_0_1());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getJumpOpRule());
+						}
+						setWithLastConsumed($current, "tag", lv_tag_0_2, null);
+					}
+					    |
+					lv_tag_0_3=Jnz
+					{
+						newLeafNode(lv_tag_0_3, grammarAccess.getJumpOpAccess().getTagJnzKeyword_0_0_2());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getJumpOpRule());
+						}
+						setWithLastConsumed($current, "tag", lv_tag_0_3, null);
+					}
+					    |
+					lv_tag_0_4=Jne
+					{
+						newLeafNode(lv_tag_0_4, grammarAccess.getJumpOpAccess().getTagJneKeyword_0_0_3());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getJumpOpRule());
+						}
+						setWithLastConsumed($current, "tag", lv_tag_0_4, null);
+					}
+					    |
+					lv_tag_0_5=Jc
+					{
+						newLeafNode(lv_tag_0_5, grammarAccess.getJumpOpAccess().getTagJcKeyword_0_0_4());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getJumpOpRule());
+						}
+						setWithLastConsumed($current, "tag", lv_tag_0_5, null);
+					}
+					    |
+					lv_tag_0_6=Jbl
+					{
+						newLeafNode(lv_tag_0_6, grammarAccess.getJumpOpAccess().getTagJblKeyword_0_0_5());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getJumpOpRule());
+						}
+						setWithLastConsumed($current, "tag", lv_tag_0_6, null);
+					}
+					    |
+					lv_tag_0_7=Jnc
+					{
+						newLeafNode(lv_tag_0_7, grammarAccess.getJumpOpAccess().getTagJncKeyword_0_0_6());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getJumpOpRule());
+						}
+						setWithLastConsumed($current, "tag", lv_tag_0_7, null);
+					}
+					    |
+					lv_tag_0_8=Jae
+					{
+						newLeafNode(lv_tag_0_8, grammarAccess.getJumpOpAccess().getTagJaeKeyword_0_0_7());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getJumpOpRule());
+						}
+						setWithLastConsumed($current, "tag", lv_tag_0_8, null);
+					}
+					    |
+					lv_tag_0_9=Jmp
+					{
+						newLeafNode(lv_tag_0_9, grammarAccess.getJumpOpAccess().getTagJmpKeyword_0_0_8());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getJumpOpRule());
+						}
+						setWithLastConsumed($current, "tag", lv_tag_0_9, null);
+					}
+					    |
+					lv_tag_0_10=Jmpl
+					{
+						newLeafNode(lv_tag_0_10, grammarAccess.getJumpOpAccess().getTagJmplKeyword_0_0_9());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getJumpOpRule());
+						}
+						setWithLastConsumed($current, "tag", lv_tag_0_10, null);
+					}
+				)
+			)
 		)
 		(
-			{
-				newCompositeNode(grammarAccess.getJumpOpAccess().getOperationWithOffsetParserRuleCall_1_0());
-			}
-			this_OperationWithOffset_10=ruleOperationWithOffset
-			{
-				$current = $this_OperationWithOffset_10.current;
-				afterParserOrEnumRuleCall();
-			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getJumpOpAccess().getOpOffOperationWithOffsetParserRuleCall_1_0_0());
+					}
+					lv_opOff_1_0=ruleOperationWithOffset
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getJumpOpRule());
+						}
+						set(
+							$current,
+							"opOff",
+							lv_opOff_1_0,
+							"org.pds16.pds16asm.Pds16asm.OperationWithOffset");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
 			    |
 			(
 				(
-					lv_op_11_0=RULE_ID
+					lv_opId_2_0=RULE_ID
 					{
-						newLeafNode(lv_op_11_0, grammarAccess.getJumpOpAccess().getOpIDTerminalRuleCall_1_1_0());
+						newLeafNode(lv_opId_2_0, grammarAccess.getJumpOpAccess().getOpIdIDTerminalRuleCall_1_1_0());
 					}
 					{
 						if ($current==null) {
@@ -2577,16 +2396,16 @@ ruleJumpOp returns [EObject current=null]
 						}
 						setWithLastConsumed(
 							$current,
-							"op",
-							lv_op_11_0,
+							"opId",
+							lv_opId_2_0,
 							"org.pds16.pds16asm.Pds16asm.ID");
 					}
 				)
 			)
 			    |
-			otherlv_12=DollarSign
+			otherlv_3=DollarSign
 			{
-				newLeafNode(otherlv_12, grammarAccess.getJumpOpAccess().getDollarSignKeyword_1_2());
+				newLeafNode(otherlv_3, grammarAccess.getJumpOpAccess().getDollarSignKeyword_1_2());
 			}
 		)
 	)

@@ -3,11 +3,17 @@
  */
 package org.pds16.pds16asm.pds16asm.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EDataTypeEList;
 
 import org.pds16.pds16asm.pds16asm.Ascii;
 import org.pds16.pds16asm.pds16asm.Pds16asmPackage;
@@ -20,7 +26,8 @@ import org.pds16.pds16asm.pds16asm.Pds16asmPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.pds16.pds16asm.pds16asm.impl.AsciiImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.pds16asm.impl.AsciiImpl#getTag <em>Tag</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.pds16asm.impl.AsciiImpl#getValues <em>Values</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +35,34 @@ import org.pds16.pds16asm.pds16asm.Pds16asmPackage;
 public class AsciiImpl extends LabelDirectiveImpl implements Ascii
 {
   /**
-   * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+   * The default value of the '{@link #getTag() <em>Tag</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getValue()
+   * @see #getTag()
    * @generated
    * @ordered
    */
-  protected static final String VALUE_EDEFAULT = null;
+  protected static final String TAG_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
+   * The cached value of the '{@link #getTag() <em>Tag</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getValue()
+   * @see #getTag()
    * @generated
    * @ordered
    */
-  protected String value = VALUE_EDEFAULT;
+  protected String tag = TAG_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getValues() <em>Values</em>}' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getValues()
+   * @generated
+   * @ordered
+   */
+  protected EList<String> values;
 
   /**
    * <!-- begin-user-doc -->
@@ -73,9 +90,9 @@ public class AsciiImpl extends LabelDirectiveImpl implements Ascii
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getValue()
+  public String getTag()
   {
-    return value;
+    return tag;
   }
 
   /**
@@ -83,12 +100,26 @@ public class AsciiImpl extends LabelDirectiveImpl implements Ascii
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setValue(String newValue)
+  public void setTag(String newTag)
   {
-    String oldValue = value;
-    value = newValue;
+    String oldTag = tag;
+    tag = newTag;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.ASCII__VALUE, oldValue, value));
+      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.ASCII__TAG, oldTag, tag));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<String> getValues()
+  {
+    if (values == null)
+    {
+      values = new EDataTypeEList<String>(String.class, this, Pds16asmPackage.ASCII__VALUES);
+    }
+    return values;
   }
 
   /**
@@ -101,8 +132,10 @@ public class AsciiImpl extends LabelDirectiveImpl implements Ascii
   {
     switch (featureID)
     {
-      case Pds16asmPackage.ASCII__VALUE:
-        return getValue();
+      case Pds16asmPackage.ASCII__TAG:
+        return getTag();
+      case Pds16asmPackage.ASCII__VALUES:
+        return getValues();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -112,13 +145,18 @@ public class AsciiImpl extends LabelDirectiveImpl implements Ascii
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case Pds16asmPackage.ASCII__VALUE:
-        setValue((String)newValue);
+      case Pds16asmPackage.ASCII__TAG:
+        setTag((String)newValue);
+        return;
+      case Pds16asmPackage.ASCII__VALUES:
+        getValues().clear();
+        getValues().addAll((Collection<? extends String>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -134,8 +172,11 @@ public class AsciiImpl extends LabelDirectiveImpl implements Ascii
   {
     switch (featureID)
     {
-      case Pds16asmPackage.ASCII__VALUE:
-        setValue(VALUE_EDEFAULT);
+      case Pds16asmPackage.ASCII__TAG:
+        setTag(TAG_EDEFAULT);
+        return;
+      case Pds16asmPackage.ASCII__VALUES:
+        getValues().clear();
         return;
     }
     super.eUnset(featureID);
@@ -151,8 +192,10 @@ public class AsciiImpl extends LabelDirectiveImpl implements Ascii
   {
     switch (featureID)
     {
-      case Pds16asmPackage.ASCII__VALUE:
-        return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+      case Pds16asmPackage.ASCII__TAG:
+        return TAG_EDEFAULT == null ? tag != null : !TAG_EDEFAULT.equals(tag);
+      case Pds16asmPackage.ASCII__VALUES:
+        return values != null && !values.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -168,8 +211,10 @@ public class AsciiImpl extends LabelDirectiveImpl implements Ascii
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (value: ");
-    result.append(value);
+    result.append(" (tag: ");
+    result.append(tag);
+    result.append(", values: ");
+    result.append(values);
     result.append(')');
     return result.toString();
   }

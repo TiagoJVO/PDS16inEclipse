@@ -3,6 +3,7 @@
  */
 package org.pds16.pds16asm.pds16asm;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +22,7 @@ package org.pds16.pds16asm.pds16asm;
  * @model
  * @generated
  */
-public interface OperationWithOffset extends JumpOp
+public interface OperationWithOffset extends EObject
 {
   /**
    * Returns the value of the '<em><b>Rbx</b></em>' attribute.

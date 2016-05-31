@@ -688,10 +688,6 @@ public class Pds16asmSwitch<T> extends Switch<T>
       {
         OperationWithOffset operationWithOffset = (OperationWithOffset)theEObject;
         T result = caseOperationWithOffset(operationWithOffset);
-        if (result == null) result = caseJumpOp(operationWithOffset);
-        if (result == null) result = caseJump(operationWithOffset);
-        if (result == null) result = caseInstructions(operationWithOffset);
-        if (result == null) result = caseStatement(operationWithOffset);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }

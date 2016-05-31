@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.pds16.pds16asm.pds16asm.Offset8OrLabel;
 import org.pds16.pds16asm.pds16asm.OperationWithOffset;
@@ -29,7 +30,7 @@ import org.pds16.pds16asm.pds16asm.Pds16asmPackage;
  *
  * @generated
  */
-public class OperationWithOffsetImpl extends JumpOpImpl implements OperationWithOffset
+public class OperationWithOffsetImpl extends MinimalEObjectImpl.Container implements OperationWithOffset
 {
   /**
    * The default value of the '{@link #getRbx() <em>Rbx</em>}' attribute.

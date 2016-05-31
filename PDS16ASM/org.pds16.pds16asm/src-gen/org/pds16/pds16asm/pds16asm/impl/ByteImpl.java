@@ -5,11 +5,19 @@ package org.pds16.pds16asm.pds16asm.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.pds16.pds16asm.pds16asm.Pds16asmPackage;
 
@@ -21,7 +29,9 @@ import org.pds16.pds16asm.pds16asm.Pds16asmPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.pds16.pds16asm.pds16asm.impl.ByteImpl#getNumber <em>Number</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.pds16asm.impl.ByteImpl#getTag <em>Tag</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.pds16asm.impl.ByteImpl#getNumbers <em>Numbers</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.pds16asm.impl.ByteImpl#getS <em>S</em>}</li>
  * </ul>
  *
  * @generated
@@ -29,14 +39,44 @@ import org.pds16.pds16asm.pds16asm.Pds16asmPackage;
 public class ByteImpl extends LabelDirectiveImpl implements org.pds16.pds16asm.pds16asm.Byte
 {
   /**
-   * The cached value of the '{@link #getNumber() <em>Number</em>}' attribute list.
+   * The default value of the '{@link #getTag() <em>Tag</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNumber()
+   * @see #getTag()
    * @generated
    * @ordered
    */
-  protected EList<Integer> number;
+  protected static final String TAG_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getTag() <em>Tag</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTag()
+   * @generated
+   * @ordered
+   */
+  protected String tag = TAG_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getNumbers() <em>Numbers</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getNumbers()
+   * @generated
+   * @ordered
+   */
+  protected EList<org.pds16.pds16asm.pds16asm.Number> numbers;
+
+  /**
+   * The cached value of the '{@link #getS() <em>S</em>}' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getS()
+   * @generated
+   * @ordered
+   */
+  protected EList<String> s;
 
   /**
    * <!-- begin-user-doc -->
@@ -64,13 +104,66 @@ public class ByteImpl extends LabelDirectiveImpl implements org.pds16.pds16asm.p
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Integer> getNumber()
+  public String getTag()
   {
-    if (number == null)
+    return tag;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setTag(String newTag)
+  {
+    String oldTag = tag;
+    tag = newTag;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.BYTE__TAG, oldTag, tag));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<org.pds16.pds16asm.pds16asm.Number> getNumbers()
+  {
+    if (numbers == null)
     {
-      number = new EDataTypeEList<Integer>(Integer.class, this, Pds16asmPackage.BYTE__NUMBER);
+      numbers = new EObjectContainmentEList<org.pds16.pds16asm.pds16asm.Number>(org.pds16.pds16asm.pds16asm.Number.class, this, Pds16asmPackage.BYTE__NUMBERS);
     }
-    return number;
+    return numbers;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<String> getS()
+  {
+    if (s == null)
+    {
+      s = new EDataTypeEList<String>(String.class, this, Pds16asmPackage.BYTE__S);
+    }
+    return s;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case Pds16asmPackage.BYTE__NUMBERS:
+        return ((InternalEList<?>)getNumbers()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -83,8 +176,12 @@ public class ByteImpl extends LabelDirectiveImpl implements org.pds16.pds16asm.p
   {
     switch (featureID)
     {
-      case Pds16asmPackage.BYTE__NUMBER:
-        return getNumber();
+      case Pds16asmPackage.BYTE__TAG:
+        return getTag();
+      case Pds16asmPackage.BYTE__NUMBERS:
+        return getNumbers();
+      case Pds16asmPackage.BYTE__S:
+        return getS();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -100,9 +197,16 @@ public class ByteImpl extends LabelDirectiveImpl implements org.pds16.pds16asm.p
   {
     switch (featureID)
     {
-      case Pds16asmPackage.BYTE__NUMBER:
-        getNumber().clear();
-        getNumber().addAll((Collection<? extends Integer>)newValue);
+      case Pds16asmPackage.BYTE__TAG:
+        setTag((String)newValue);
+        return;
+      case Pds16asmPackage.BYTE__NUMBERS:
+        getNumbers().clear();
+        getNumbers().addAll((Collection<? extends org.pds16.pds16asm.pds16asm.Number>)newValue);
+        return;
+      case Pds16asmPackage.BYTE__S:
+        getS().clear();
+        getS().addAll((Collection<? extends String>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -118,8 +222,14 @@ public class ByteImpl extends LabelDirectiveImpl implements org.pds16.pds16asm.p
   {
     switch (featureID)
     {
-      case Pds16asmPackage.BYTE__NUMBER:
-        getNumber().clear();
+      case Pds16asmPackage.BYTE__TAG:
+        setTag(TAG_EDEFAULT);
+        return;
+      case Pds16asmPackage.BYTE__NUMBERS:
+        getNumbers().clear();
+        return;
+      case Pds16asmPackage.BYTE__S:
+        getS().clear();
         return;
     }
     super.eUnset(featureID);
@@ -135,8 +245,12 @@ public class ByteImpl extends LabelDirectiveImpl implements org.pds16.pds16asm.p
   {
     switch (featureID)
     {
-      case Pds16asmPackage.BYTE__NUMBER:
-        return number != null && !number.isEmpty();
+      case Pds16asmPackage.BYTE__TAG:
+        return TAG_EDEFAULT == null ? tag != null : !TAG_EDEFAULT.equals(tag);
+      case Pds16asmPackage.BYTE__NUMBERS:
+        return numbers != null && !numbers.isEmpty();
+      case Pds16asmPackage.BYTE__S:
+        return s != null && !s.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -152,8 +266,10 @@ public class ByteImpl extends LabelDirectiveImpl implements org.pds16.pds16asm.p
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (number: ");
-    result.append(number);
+    result.append(" (tag: ");
+    result.append(tag);
+    result.append(", s: ");
+    result.append(s);
     result.append(')');
     return result.toString();
   }

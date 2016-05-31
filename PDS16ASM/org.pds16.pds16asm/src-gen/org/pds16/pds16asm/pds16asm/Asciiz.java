@@ -3,6 +3,7 @@
  */
 package org.pds16.pds16asm.pds16asm;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,7 +14,8 @@ package org.pds16.pds16asm.pds16asm;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.pds16.pds16asm.pds16asm.Asciiz#getValue <em>Value</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.pds16asm.Asciiz#getTag <em>Tag</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.pds16asm.Asciiz#getValues <em>Values</em>}</li>
  * </ul>
  *
  * @see org.pds16.pds16asm.pds16asm.Pds16asmPackage#getAsciiz()
@@ -23,29 +25,45 @@ package org.pds16.pds16asm.pds16asm;
 public interface Asciiz extends LabelDirective
 {
   /**
-   * Returns the value of the '<em><b>Value</b></em>' attribute.
+   * Returns the value of the '<em><b>Tag</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Value</em>' attribute isn't clear,
+   * If the meaning of the '<em>Tag</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Value</em>' attribute.
-   * @see #setValue(String)
-   * @see org.pds16.pds16asm.pds16asm.Pds16asmPackage#getAsciiz_Value()
+   * @return the value of the '<em>Tag</em>' attribute.
+   * @see #setTag(String)
+   * @see org.pds16.pds16asm.pds16asm.Pds16asmPackage#getAsciiz_Tag()
    * @model
    * @generated
    */
-  String getValue();
+  String getTag();
 
   /**
-   * Sets the value of the '{@link org.pds16.pds16asm.pds16asm.Asciiz#getValue <em>Value</em>}' attribute.
+   * Sets the value of the '{@link org.pds16.pds16asm.pds16asm.Asciiz#getTag <em>Tag</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Value</em>' attribute.
-   * @see #getValue()
+   * @param value the new value of the '<em>Tag</em>' attribute.
+   * @see #getTag()
    * @generated
    */
-  void setValue(String value);
+  void setTag(String value);
+
+  /**
+   * Returns the value of the '<em><b>Values</b></em>' attribute list.
+   * The list contents are of type {@link java.lang.String}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Values</em>' attribute list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Values</em>' attribute list.
+   * @see org.pds16.pds16asm.pds16asm.Pds16asmPackage#getAsciiz_Values()
+   * @model unique="false"
+   * @generated
+   */
+  EList<String> getValues();
 
 } // Asciiz
