@@ -26,13 +26,13 @@ End: val='.end';
 
 Text: val='.text';		
 
-Ascii:	'.ascii' value=STRING (',' STRING)*;
+Ascii:	'.ascii' (value=STRING (',' STRING)*)?;
 
-Asciiz:	'.asciiz' value=STRING (',' STRING)*;
+Asciiz:	'.asciiz' (value=STRING (',' STRING)*)?;
 
-Byte:	'.byte' number+=(INT | HEX | OCT | BIN | CHAR) (',' number+= (INT | HEX | OCT | BIN | CHAR))*;
+Byte:	'.byte' (number+=(INT | HEX | OCT | BIN | CHAR) (',' number+= (INT | HEX | OCT | BIN | CHAR))*)?;
 					
-Word:	'.word' (value+= ID | number+=(INT | HEX | OCT | BIN | CHAR))  (',' (value+= ID | number+=(INT | HEX | OCT | BIN | CHAR)))*;
+Word:	'.word' ((value+= ID | number+=(INT | HEX | OCT | BIN | CHAR))  (',' (value+= ID | number+=(INT | HEX | OCT | BIN | CHAR)))*)?;
 
 Space:	'.space' size=(INT | HEX | OCT | BIN | CHAR) (',' byteValeu=(INT | HEX | OCT | BIN | CHAR))?;
 
@@ -154,7 +154,7 @@ LowOrHight: '#' ('low' | 'high') '(' value=Expression ')' ;
 
 /***********************************************Utils**************************************/
 terminal REGISTERS:
-			('r0' | 'r1' | 'r2' | 'r3' | 'r4' | 'r5' | 'r6' | 'r7' | 'PSW');
+			('r0' | 'r1' | 'r2' | 'r3' | 'r4' | 'r5' | 'r6' | 'r7' | 'LR' |'PSW' |'PC');
 
 Number : value= (INT | HEX | OCT | BIN | CHAR);
 

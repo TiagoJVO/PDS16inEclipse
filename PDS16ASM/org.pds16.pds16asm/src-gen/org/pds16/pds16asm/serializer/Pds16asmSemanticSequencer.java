@@ -181,7 +181,7 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.ASCII__VALUE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getAsciiAccess().getValueSTRINGTerminalRuleCall_1_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getAsciiAccess().getValueSTRINGTerminalRuleCall_1_0_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
@@ -202,7 +202,7 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Pds16asmPackage.Literals.ASCIIZ__VALUE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getAsciizAccess().getValueSTRINGTerminalRuleCall_1_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getAsciizAccess().getValueSTRINGTerminalRuleCall_1_0_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
