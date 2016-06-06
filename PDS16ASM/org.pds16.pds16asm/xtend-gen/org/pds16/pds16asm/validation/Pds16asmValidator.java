@@ -162,17 +162,7 @@ public class Pds16asmValidator extends AbstractPds16asmValidator {
       IntegerRange _upTo = new IntegerRange(0, (size - 1));
       final Consumer<Integer> _function = (Integer i) -> {
         org.pds16.pds16asm.pds16asm.Number item = list.get((i).intValue());
-        boolean _or = false;
-        int _value = item.getValue();
-        boolean _lessThan = (_value < this.MIN_8BIT_WITH_SIGNAL);
-        if (_lessThan) {
-          _or = true;
-        } else {
-          int _value_1 = item.getValue();
-          boolean _greaterThan = (_value_1 > this.MAX_8BIT_WITH_SIGNAL);
-          _or = _greaterThan;
-        }
-        if (_or) {
+        if (((item.getValue() < this.MIN_8BIT_WITH_SIGNAL) || (item.getValue() > this.MAX_8BIT_WITH_SIGNAL))) {
           this.warning(((("One of the declared values isn\'t be between" + Integer.valueOf(this.MIN_8BIT_WITH_SIGNAL)) + " and ") + Integer.valueOf(this.MAX_8BIT_WITH_SIGNAL)), 
             Pds16asmPackage.Literals.BYTE__TAG, 
             "Invalid Number");
@@ -195,17 +185,7 @@ public class Pds16asmValidator extends AbstractPds16asmValidator {
       IntegerRange _upTo = new IntegerRange(0, (size - 1));
       final Consumer<Integer> _function = (Integer i) -> {
         org.pds16.pds16asm.pds16asm.Number item = list.get((i).intValue());
-        boolean _or = false;
-        int _value = item.getValue();
-        boolean _lessThan = (_value < this.MIN_16BIT_WITH_SIGNAL);
-        if (_lessThan) {
-          _or = true;
-        } else {
-          int _value_1 = item.getValue();
-          boolean _greaterThan = (_value_1 > this.MAX_16BIT_WITH_SIGNAL);
-          _or = _greaterThan;
-        }
-        if (_or) {
+        if (((item.getValue() < this.MIN_16BIT_WITH_SIGNAL) || (item.getValue() > this.MAX_16BIT_WITH_SIGNAL))) {
           this.warning(((("One of the declared values isn\'t be between" + Integer.valueOf(this.MIN_16BIT_WITH_SIGNAL)) + " and ") + Integer.valueOf(this.MAX_16BIT_WITH_SIGNAL)), 
             Pds16asmPackage.Literals.WORD__TAG, 
             "Invalid Number");

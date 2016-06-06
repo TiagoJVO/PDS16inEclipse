@@ -146,8 +146,29 @@ class Pds16asmTokenAtributeIdMapper extends DefaultAntlrTokenToAttributeIdMapper
 				return Pds16asmHighlightingConfiguration.NUMBERS
 			
 			
-			case InternalPds16asmLexer.RULE_REGISTERS:
-				return Pds16asmHighlightingConfiguration.REGISTERS		
+			case InternalPds16asmLexer.R0:
+				return Pds16asmHighlightingConfiguration.REGISTERS
+			case InternalPds16asmLexer.R1:
+				return Pds16asmHighlightingConfiguration.REGISTERS
+			case InternalPds16asmLexer.R2:
+				return Pds16asmHighlightingConfiguration.REGISTERS
+			case InternalPds16asmLexer.R3:
+				return Pds16asmHighlightingConfiguration.REGISTERS
+			case InternalPds16asmLexer.R4:
+				return Pds16asmHighlightingConfiguration.REGISTERS
+			case InternalPds16asmLexer.R5:
+				return Pds16asmHighlightingConfiguration.REGISTERS
+			case InternalPds16asmLexer.R6:
+				return Pds16asmHighlightingConfiguration.REGISTERS
+			case InternalPds16asmLexer.R7:
+				return Pds16asmHighlightingConfiguration.REGISTERS
+			case InternalPds16asmLexer.LR:
+				return Pds16asmHighlightingConfiguration.REGISTERS
+			case InternalPds16asmLexer.PSW:
+				return Pds16asmHighlightingConfiguration.REGISTERS
+			case InternalPds16asmLexer.PC:
+				return Pds16asmHighlightingConfiguration.REGISTERS
+				
 			
 			case InternalPds16asmLexer.RULE_SL_COMMENT:
 				return Pds16asmHighlightingConfiguration.COMMENTS
