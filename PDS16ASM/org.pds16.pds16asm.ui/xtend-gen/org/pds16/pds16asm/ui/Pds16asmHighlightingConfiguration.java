@@ -12,28 +12,19 @@ public class Pds16asmHighlightingConfiguration extends DefaultHighlightingConfig
   
   public final static String RULES = "Rules";
   
-  public final static String NUMBERS = "Numbers";
-  
   public final static String COMMENTS = "Comments";
-  
-  public final static String REGISTERS = "Registers";
   
   public final static String LABEL = "Label";
   
   public final static String TEXT = "Text";
   
-  public final static String SIMBOL_CARACTER = "Simbol_Caracter";
-  
   @Override
   public void configure(final IHighlightingConfigurationAcceptor acceptor) {
-    this.addType(acceptor, Pds16asmHighlightingConfiguration.DIRECTIVES, 127, 0, 85, SWT.NORMAL);
+    this.addType(acceptor, Pds16asmHighlightingConfiguration.DIRECTIVES, 127, 0, 85, SWT.BOLD);
     this.addType(acceptor, Pds16asmHighlightingConfiguration.RULES, 127, 0, 85, SWT.BOLD);
-    this.addType(acceptor, Pds16asmHighlightingConfiguration.NUMBERS, 125, 125, 125, SWT.NORMAL);
-    this.addType(acceptor, Pds16asmHighlightingConfiguration.COMMENTS, 2, 172, 13, SWT.NORMAL);
-    this.addType(acceptor, Pds16asmHighlightingConfiguration.REGISTERS, 0, 0, 0, SWT.BOLD);
-    this.addType(acceptor, Pds16asmHighlightingConfiguration.LABEL, 128, 0, 0, SWT.BOLD);
+    this.addType(acceptor, Pds16asmHighlightingConfiguration.COMMENTS, 63, 127, 95, SWT.NORMAL);
+    this.addType(acceptor, Pds16asmHighlightingConfiguration.LABEL, 127, 0, 85, SWT.BOLD);
     this.addType(acceptor, Pds16asmHighlightingConfiguration.TEXT, 42, 0, 255, SWT.NORMAL);
-    this.addType(acceptor, Pds16asmHighlightingConfiguration.SIMBOL_CARACTER, 0, 0, 0, SWT.NORMAL);
   }
   
   public void addType(final IHighlightingConfigurationAcceptor acceptor, final String s, final int r, final int g, final int b, final int style) {

@@ -10,22 +10,16 @@ class Pds16asmHighlightingConfiguration extends DefaultHighlightingConfiguration
 	
 	public static final String DIRECTIVES = "Directives";
 	public static final String RULES = "Rules";
-	public static final String NUMBERS = "Numbers";
 	public static final String COMMENTS = "Comments";
-	public static final String REGISTERS = "Registers";
 	public static final String LABEL = "Label";
 	public static final String TEXT = "Text";
-	public static final String SIMBOL_CARACTER = "Simbol_Caracter";
 	
 	override configure(IHighlightingConfigurationAcceptor acceptor) {
-		addType(acceptor,DIRECTIVES, 127, 0, 85, SWT.NORMAL);
+		addType(acceptor,DIRECTIVES, 127, 0, 85, SWT.BOLD);
 		addType(acceptor,RULES, 127, 0, 85, SWT.BOLD);
-		addType(acceptor,NUMBERS, 125, 125, 125, SWT.NORMAL);
-		addType(acceptor,COMMENTS, 2, 172, 13, SWT.NORMAL);
-		addType(acceptor,REGISTERS, 0, 0, 0, SWT.BOLD);
-		addType(acceptor,LABEL, 128, 0, 0, SWT.BOLD);
+		addType(acceptor,COMMENTS, 63, 127, 95, SWT.NORMAL);
+		addType(acceptor,LABEL, 127, 0, 85, SWT.BOLD);
 		addType(acceptor,TEXT, 42, 0, 255, SWT.NORMAL);
-		addType(acceptor,SIMBOL_CARACTER, 0, 0, 0, SWT.NORMAL);
 	}
 	
 	 def addType( IHighlightingConfigurationAcceptor acceptor, String s, int r, int g, int b, int style ){
