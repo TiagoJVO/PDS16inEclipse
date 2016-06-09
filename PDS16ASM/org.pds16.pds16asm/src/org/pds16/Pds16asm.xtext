@@ -74,12 +74,12 @@ StBasedIndexed: ('st' | 'stb') BasedIndexed ;
 /******************************************* Aritmetica ***********************************/
 Add: ('add' | 'addf' | 'adc' | 'adcf') 
 		(OperationsWithConstant | OperationsWithTreeRegisters)
-	 | ('inc' | 'incf') REGISTERS;
+	 | ('inc' | 'incf') Register;
 		
 Sub: (('sub' | 'subf' | 'sbb' | 'sbbf') 
 		(OperationsWithConstant | OperationsWithTreeRegisters))
 	 | 'subr' OperationsWithTreeRegisters
-	 |  ('dec' | 'decf') REGISTERS ;
+	 |  ('dec' | 'decf') Register ;
 /******************************************************************************************/
 
 /******************************************* Logica ***************************************/
@@ -115,15 +115,15 @@ Ret: instruction=('ret' | 'iret') ;
 
 
 /************************************Type Operations***************************************/
-Immediate: register=REGISTERS ',' (immediate8= Immediate8OrLabel | lowORhigh= LowOrHight) ;
+Immediate: register=Register ',' (immediate8= Immediate8OrLabel | lowORhigh= LowOrHight) ;
 
-Direct: register=REGISTERS ',' direct7=DirectOrLabel;
+Direct: register=Register ',' direct7=DirectOrLabel;
 
 Indexed:
-	rd=REGISTERS ',''[' rbx=REGISTERS ',' idx3=Idx3OrLabel ']' ;
+	rd=Register ',''[' rbx=Register ',' idx3=Idx3OrLabel ']' ;
 	
 BasedIndexed: 
-	REGISTERS ',' '[' rbx=REGISTERS ',' rix=REGISTERS ']';
+	Register ',' '[' rbx=Register ',' rix=Register ']';
 
 DirectOrLabel: number=Number | label=ID;
 
@@ -135,24 +135,24 @@ Const4OrLabel: '#'( number=Number | label=ID);
 
 Offset8OrLabel: '#'( number=Number | label=ID);
 
-OperationWithTwoRegisters: rd=REGISTERS ',' rm=REGISTERS;
+OperationWithTwoRegisters: rd=Register ',' rm=Register;
 
-OperationsWithTreeRegisters: rd=REGISTERS ',' rm=REGISTERS ',' rn=REGISTERS ;
+OperationsWithTreeRegisters: rd=Register ',' rm=Register ',' rn=Register ;
 
-OperationsWithConstant: rd=REGISTERS ',' rm=REGISTERS ',' const4=Const4OrLabel;
+OperationsWithConstant: rd=Register ',' rm=Register ',' const4=Const4OrLabel;
 
-OperationShift: rd=REGISTERS ',' rm=REGISTERS ',' const4=Const4OrLabel ',' sin=(INT | HEX | OCT | BIN | CHAR);
+OperationShift: rd=Register ',' rm=Register ',' const4=Const4OrLabel ',' sin=Number;
 
-OperationWithOffset: rbx=REGISTERS ',' offset8=Offset8OrLabel;
+OperationWithOffset: rbx=Register ',' offset8=Offset8OrLabel;
 
-Expression: (numericValue+=(INT | HEX | OCT | BIN | CHAR) | idValue+=ID)+;
+Expression: (numericValue+=(INT | HEX | OCT | BIN | CHAR) | idValue+=ID)+;//TODO: sinais
 
 LowOrHight: '#' ('low' | 'high') '(' value=Expression ')' ;
 /******************************************************************************************/
 
 /***********************************************Utils**************************************/
-REGISTERS:
-			('r0' | 'r1' | 'r2' | 'r3' | 'r4' | 'r5' | 'r6' | 'r7' | 'LR' |'PSW' |'PC');
+Register:
+			value=('r0' | 'r1' | 'r2' | 'r3' | 'r4' | 'r5' | 'r6' | 'r7' | 'LR' |'PSW' |'PC');
 
 Number : value= (INT | HEX | OCT | BIN | CHAR);
 

@@ -147,8 +147,7 @@ class Pds16asmTokenAtributeIdMapper extends DefaultAntlrTokenToAttributeIdMapper
 			case InternalPds16asmLexer.High:
 				return Pds16asmHighlightingConfiguration.TEXT
 			case InternalPds16asmLexer.Low:
-				return Pds16asmHighlightingConfiguration.TEXT
-			
+				return Pds16asmHighlightingConfiguration.TEXT			
 		}
 		return super.calculateId(tokenName,tokenType);
 	}

@@ -4920,20 +4920,20 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "ruleLowOrHight"
 
 
-    // $ANTLR start "entryRuleREGISTERS"
-    // InternalPds16asmParser.g:1643:1: entryRuleREGISTERS : ruleREGISTERS EOF ;
-    public final void entryRuleREGISTERS() throws RecognitionException {
+    // $ANTLR start "entryRuleRegister"
+    // InternalPds16asmParser.g:1643:1: entryRuleRegister : ruleRegister EOF ;
+    public final void entryRuleRegister() throws RecognitionException {
         try {
-            // InternalPds16asmParser.g:1644:1: ( ruleREGISTERS EOF )
-            // InternalPds16asmParser.g:1645:1: ruleREGISTERS EOF
+            // InternalPds16asmParser.g:1644:1: ( ruleRegister EOF )
+            // InternalPds16asmParser.g:1645:1: ruleRegister EOF
             {
-             before(grammarAccess.getREGISTERSRule()); 
+             before(grammarAccess.getRegisterRule()); 
             pushFollow(FOLLOW_1);
-            ruleREGISTERS();
+            ruleRegister();
 
             state._fsp--;
 
-             after(grammarAccess.getREGISTERSRule()); 
+             after(grammarAccess.getRegisterRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -4947,35 +4947,35 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "entryRuleREGISTERS"
+    // $ANTLR end "entryRuleRegister"
 
 
-    // $ANTLR start "ruleREGISTERS"
-    // InternalPds16asmParser.g:1652:1: ruleREGISTERS : ( ( rule__REGISTERS__Alternatives ) ) ;
-    public final void ruleREGISTERS() throws RecognitionException {
+    // $ANTLR start "ruleRegister"
+    // InternalPds16asmParser.g:1652:1: ruleRegister : ( ( rule__Register__ValueAssignment ) ) ;
+    public final void ruleRegister() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPds16asmParser.g:1656:2: ( ( ( rule__REGISTERS__Alternatives ) ) )
-            // InternalPds16asmParser.g:1657:2: ( ( rule__REGISTERS__Alternatives ) )
+            // InternalPds16asmParser.g:1656:2: ( ( ( rule__Register__ValueAssignment ) ) )
+            // InternalPds16asmParser.g:1657:2: ( ( rule__Register__ValueAssignment ) )
             {
-            // InternalPds16asmParser.g:1657:2: ( ( rule__REGISTERS__Alternatives ) )
-            // InternalPds16asmParser.g:1658:3: ( rule__REGISTERS__Alternatives )
+            // InternalPds16asmParser.g:1657:2: ( ( rule__Register__ValueAssignment ) )
+            // InternalPds16asmParser.g:1658:3: ( rule__Register__ValueAssignment )
             {
-             before(grammarAccess.getREGISTERSAccess().getAlternatives()); 
-            // InternalPds16asmParser.g:1659:3: ( rule__REGISTERS__Alternatives )
-            // InternalPds16asmParser.g:1659:4: rule__REGISTERS__Alternatives
+             before(grammarAccess.getRegisterAccess().getValueAssignment()); 
+            // InternalPds16asmParser.g:1659:3: ( rule__Register__ValueAssignment )
+            // InternalPds16asmParser.g:1659:4: rule__Register__ValueAssignment
             {
             pushFollow(FOLLOW_2);
-            rule__REGISTERS__Alternatives();
+            rule__Register__ValueAssignment();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getREGISTERSAccess().getAlternatives()); 
+             after(grammarAccess.getRegisterAccess().getValueAssignment()); 
 
             }
 
@@ -4994,7 +4994,7 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "ruleREGISTERS"
+    // $ANTLR end "ruleRegister"
 
 
     // $ANTLR start "entryRuleNumber"
@@ -9173,11 +9173,11 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
             if ( (LA42_0==NumberSign) ) {
                 int LA42_1 = input.LA(2);
 
-                if ( ((LA42_1>=RULE_HEX && LA42_1<=RULE_BIN)||(LA42_1>=RULE_CHAR && LA42_1<=RULE_ID)||LA42_1==RULE_INT) ) {
-                    alt42=1;
-                }
-                else if ( (LA42_1==High||LA42_1==Low) ) {
+                if ( (LA42_1==High||LA42_1==Low) ) {
                     alt42=2;
+                }
+                else if ( ((LA42_1>=RULE_HEX && LA42_1<=RULE_BIN)||(LA42_1>=RULE_CHAR && LA42_1<=RULE_ID)||LA42_1==RULE_INT) ) {
+                    alt42=1;
                 }
                 else {
                     NoViableAltException nvae =
@@ -10147,9 +10147,9 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__LowOrHight__Alternatives_1"
 
 
-    // $ANTLR start "rule__REGISTERS__Alternatives"
-    // InternalPds16asmParser.g:2997:1: rule__REGISTERS__Alternatives : ( ( R0 ) | ( R1 ) | ( R2 ) | ( R3 ) | ( R4 ) | ( R5 ) | ( R6 ) | ( R7 ) | ( LR ) | ( PSW ) | ( PC ) );
-    public final void rule__REGISTERS__Alternatives() throws RecognitionException {
+    // $ANTLR start "rule__Register__ValueAlternatives_0"
+    // InternalPds16asmParser.g:2997:1: rule__Register__ValueAlternatives_0 : ( ( R0 ) | ( R1 ) | ( R2 ) | ( R3 ) | ( R4 ) | ( R5 ) | ( R6 ) | ( R7 ) | ( LR ) | ( PSW ) | ( PC ) );
+    public final void rule__Register__ValueAlternatives_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -10226,9 +10226,9 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
                     // InternalPds16asmParser.g:3002:2: ( R0 )
                     // InternalPds16asmParser.g:3003:3: R0
                     {
-                     before(grammarAccess.getREGISTERSAccess().getR0Keyword_0()); 
+                     before(grammarAccess.getRegisterAccess().getValueR0Keyword_0_0()); 
                     match(input,R0,FOLLOW_2); 
-                     after(grammarAccess.getREGISTERSAccess().getR0Keyword_0()); 
+                     after(grammarAccess.getRegisterAccess().getValueR0Keyword_0_0()); 
 
                     }
 
@@ -10241,9 +10241,9 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
                     // InternalPds16asmParser.g:3008:2: ( R1 )
                     // InternalPds16asmParser.g:3009:3: R1
                     {
-                     before(grammarAccess.getREGISTERSAccess().getR1Keyword_1()); 
+                     before(grammarAccess.getRegisterAccess().getValueR1Keyword_0_1()); 
                     match(input,R1,FOLLOW_2); 
-                     after(grammarAccess.getREGISTERSAccess().getR1Keyword_1()); 
+                     after(grammarAccess.getRegisterAccess().getValueR1Keyword_0_1()); 
 
                     }
 
@@ -10256,9 +10256,9 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
                     // InternalPds16asmParser.g:3014:2: ( R2 )
                     // InternalPds16asmParser.g:3015:3: R2
                     {
-                     before(grammarAccess.getREGISTERSAccess().getR2Keyword_2()); 
+                     before(grammarAccess.getRegisterAccess().getValueR2Keyword_0_2()); 
                     match(input,R2,FOLLOW_2); 
-                     after(grammarAccess.getREGISTERSAccess().getR2Keyword_2()); 
+                     after(grammarAccess.getRegisterAccess().getValueR2Keyword_0_2()); 
 
                     }
 
@@ -10271,9 +10271,9 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
                     // InternalPds16asmParser.g:3020:2: ( R3 )
                     // InternalPds16asmParser.g:3021:3: R3
                     {
-                     before(grammarAccess.getREGISTERSAccess().getR3Keyword_3()); 
+                     before(grammarAccess.getRegisterAccess().getValueR3Keyword_0_3()); 
                     match(input,R3,FOLLOW_2); 
-                     after(grammarAccess.getREGISTERSAccess().getR3Keyword_3()); 
+                     after(grammarAccess.getRegisterAccess().getValueR3Keyword_0_3()); 
 
                     }
 
@@ -10286,9 +10286,9 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
                     // InternalPds16asmParser.g:3026:2: ( R4 )
                     // InternalPds16asmParser.g:3027:3: R4
                     {
-                     before(grammarAccess.getREGISTERSAccess().getR4Keyword_4()); 
+                     before(grammarAccess.getRegisterAccess().getValueR4Keyword_0_4()); 
                     match(input,R4,FOLLOW_2); 
-                     after(grammarAccess.getREGISTERSAccess().getR4Keyword_4()); 
+                     after(grammarAccess.getRegisterAccess().getValueR4Keyword_0_4()); 
 
                     }
 
@@ -10301,9 +10301,9 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
                     // InternalPds16asmParser.g:3032:2: ( R5 )
                     // InternalPds16asmParser.g:3033:3: R5
                     {
-                     before(grammarAccess.getREGISTERSAccess().getR5Keyword_5()); 
+                     before(grammarAccess.getRegisterAccess().getValueR5Keyword_0_5()); 
                     match(input,R5,FOLLOW_2); 
-                     after(grammarAccess.getREGISTERSAccess().getR5Keyword_5()); 
+                     after(grammarAccess.getRegisterAccess().getValueR5Keyword_0_5()); 
 
                     }
 
@@ -10316,9 +10316,9 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
                     // InternalPds16asmParser.g:3038:2: ( R6 )
                     // InternalPds16asmParser.g:3039:3: R6
                     {
-                     before(grammarAccess.getREGISTERSAccess().getR6Keyword_6()); 
+                     before(grammarAccess.getRegisterAccess().getValueR6Keyword_0_6()); 
                     match(input,R6,FOLLOW_2); 
-                     after(grammarAccess.getREGISTERSAccess().getR6Keyword_6()); 
+                     after(grammarAccess.getRegisterAccess().getValueR6Keyword_0_6()); 
 
                     }
 
@@ -10331,9 +10331,9 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
                     // InternalPds16asmParser.g:3044:2: ( R7 )
                     // InternalPds16asmParser.g:3045:3: R7
                     {
-                     before(grammarAccess.getREGISTERSAccess().getR7Keyword_7()); 
+                     before(grammarAccess.getRegisterAccess().getValueR7Keyword_0_7()); 
                     match(input,R7,FOLLOW_2); 
-                     after(grammarAccess.getREGISTERSAccess().getR7Keyword_7()); 
+                     after(grammarAccess.getRegisterAccess().getValueR7Keyword_0_7()); 
 
                     }
 
@@ -10346,9 +10346,9 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
                     // InternalPds16asmParser.g:3050:2: ( LR )
                     // InternalPds16asmParser.g:3051:3: LR
                     {
-                     before(grammarAccess.getREGISTERSAccess().getLRKeyword_8()); 
+                     before(grammarAccess.getRegisterAccess().getValueLRKeyword_0_8()); 
                     match(input,LR,FOLLOW_2); 
-                     after(grammarAccess.getREGISTERSAccess().getLRKeyword_8()); 
+                     after(grammarAccess.getRegisterAccess().getValueLRKeyword_0_8()); 
 
                     }
 
@@ -10361,9 +10361,9 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
                     // InternalPds16asmParser.g:3056:2: ( PSW )
                     // InternalPds16asmParser.g:3057:3: PSW
                     {
-                     before(grammarAccess.getREGISTERSAccess().getPSWKeyword_9()); 
+                     before(grammarAccess.getRegisterAccess().getValuePSWKeyword_0_9()); 
                     match(input,PSW,FOLLOW_2); 
-                     after(grammarAccess.getREGISTERSAccess().getPSWKeyword_9()); 
+                     after(grammarAccess.getRegisterAccess().getValuePSWKeyword_0_9()); 
 
                     }
 
@@ -10376,9 +10376,9 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
                     // InternalPds16asmParser.g:3062:2: ( PC )
                     // InternalPds16asmParser.g:3063:3: PC
                     {
-                     before(grammarAccess.getREGISTERSAccess().getPCKeyword_10()); 
+                     before(grammarAccess.getRegisterAccess().getValuePCKeyword_0_10()); 
                     match(input,PC,FOLLOW_2); 
-                     after(grammarAccess.getREGISTERSAccess().getPCKeyword_10()); 
+                     after(grammarAccess.getRegisterAccess().getValuePCKeyword_0_10()); 
 
                     }
 
@@ -10399,7 +10399,7 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__REGISTERS__Alternatives"
+    // $ANTLR end "rule__Register__ValueAlternatives_0"
 
 
     // $ANTLR start "rule__Number__ValueAlternatives_0"
@@ -15479,25 +15479,25 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Add__Group_1__1__Impl"
-    // InternalPds16asmParser.g:4742:1: rule__Add__Group_1__1__Impl : ( ruleREGISTERS ) ;
+    // InternalPds16asmParser.g:4742:1: rule__Add__Group_1__1__Impl : ( ruleRegister ) ;
     public final void rule__Add__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPds16asmParser.g:4746:1: ( ( ruleREGISTERS ) )
-            // InternalPds16asmParser.g:4747:1: ( ruleREGISTERS )
+            // InternalPds16asmParser.g:4746:1: ( ( ruleRegister ) )
+            // InternalPds16asmParser.g:4747:1: ( ruleRegister )
             {
-            // InternalPds16asmParser.g:4747:1: ( ruleREGISTERS )
-            // InternalPds16asmParser.g:4748:2: ruleREGISTERS
+            // InternalPds16asmParser.g:4747:1: ( ruleRegister )
+            // InternalPds16asmParser.g:4748:2: ruleRegister
             {
-             before(grammarAccess.getAddAccess().getREGISTERSParserRuleCall_1_1()); 
+             before(grammarAccess.getAddAccess().getRegisterParserRuleCall_1_1()); 
             pushFollow(FOLLOW_2);
-            ruleREGISTERS();
+            ruleRegister();
 
             state._fsp--;
 
-             after(grammarAccess.getAddAccess().getREGISTERSParserRuleCall_1_1()); 
+             after(grammarAccess.getAddAccess().getRegisterParserRuleCall_1_1()); 
 
             }
 
@@ -15952,25 +15952,25 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Sub__Group_2__1__Impl"
-    // InternalPds16asmParser.g:4904:1: rule__Sub__Group_2__1__Impl : ( ruleREGISTERS ) ;
+    // InternalPds16asmParser.g:4904:1: rule__Sub__Group_2__1__Impl : ( ruleRegister ) ;
     public final void rule__Sub__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPds16asmParser.g:4908:1: ( ( ruleREGISTERS ) )
-            // InternalPds16asmParser.g:4909:1: ( ruleREGISTERS )
+            // InternalPds16asmParser.g:4908:1: ( ( ruleRegister ) )
+            // InternalPds16asmParser.g:4909:1: ( ruleRegister )
             {
-            // InternalPds16asmParser.g:4909:1: ( ruleREGISTERS )
-            // InternalPds16asmParser.g:4910:2: ruleREGISTERS
+            // InternalPds16asmParser.g:4909:1: ( ruleRegister )
+            // InternalPds16asmParser.g:4910:2: ruleRegister
             {
-             before(grammarAccess.getSubAccess().getREGISTERSParserRuleCall_2_1()); 
+             before(grammarAccess.getSubAccess().getRegisterParserRuleCall_2_1()); 
             pushFollow(FOLLOW_2);
-            ruleREGISTERS();
+            ruleRegister();
 
             state._fsp--;
 
-             after(grammarAccess.getSubAccess().getREGISTERSParserRuleCall_2_1()); 
+             after(grammarAccess.getSubAccess().getRegisterParserRuleCall_2_1()); 
 
             }
 
@@ -18637,25 +18637,25 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BasedIndexed__Group__0__Impl"
-    // InternalPds16asmParser.g:5823:1: rule__BasedIndexed__Group__0__Impl : ( ruleREGISTERS ) ;
+    // InternalPds16asmParser.g:5823:1: rule__BasedIndexed__Group__0__Impl : ( ruleRegister ) ;
     public final void rule__BasedIndexed__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPds16asmParser.g:5827:1: ( ( ruleREGISTERS ) )
-            // InternalPds16asmParser.g:5828:1: ( ruleREGISTERS )
+            // InternalPds16asmParser.g:5827:1: ( ( ruleRegister ) )
+            // InternalPds16asmParser.g:5828:1: ( ruleRegister )
             {
-            // InternalPds16asmParser.g:5828:1: ( ruleREGISTERS )
-            // InternalPds16asmParser.g:5829:2: ruleREGISTERS
+            // InternalPds16asmParser.g:5828:1: ( ruleRegister )
+            // InternalPds16asmParser.g:5829:2: ruleRegister
             {
-             before(grammarAccess.getBasedIndexedAccess().getREGISTERSParserRuleCall_0()); 
+             before(grammarAccess.getBasedIndexedAccess().getRegisterParserRuleCall_0()); 
             pushFollow(FOLLOW_2);
-            ruleREGISTERS();
+            ruleRegister();
 
             state._fsp--;
 
-             after(grammarAccess.getBasedIndexedAccess().getREGISTERSParserRuleCall_0()); 
+             after(grammarAccess.getBasedIndexedAccess().getRegisterParserRuleCall_0()); 
 
             }
 
@@ -23352,25 +23352,25 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Immediate__RegisterAssignment_0"
-    // InternalPds16asmParser.g:7503:1: rule__Immediate__RegisterAssignment_0 : ( ruleREGISTERS ) ;
+    // InternalPds16asmParser.g:7503:1: rule__Immediate__RegisterAssignment_0 : ( ruleRegister ) ;
     public final void rule__Immediate__RegisterAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPds16asmParser.g:7507:1: ( ( ruleREGISTERS ) )
-            // InternalPds16asmParser.g:7508:2: ( ruleREGISTERS )
+            // InternalPds16asmParser.g:7507:1: ( ( ruleRegister ) )
+            // InternalPds16asmParser.g:7508:2: ( ruleRegister )
             {
-            // InternalPds16asmParser.g:7508:2: ( ruleREGISTERS )
-            // InternalPds16asmParser.g:7509:3: ruleREGISTERS
+            // InternalPds16asmParser.g:7508:2: ( ruleRegister )
+            // InternalPds16asmParser.g:7509:3: ruleRegister
             {
-             before(grammarAccess.getImmediateAccess().getRegisterREGISTERSParserRuleCall_0_0()); 
+             before(grammarAccess.getImmediateAccess().getRegisterRegisterParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
-            ruleREGISTERS();
+            ruleRegister();
 
             state._fsp--;
 
-             after(grammarAccess.getImmediateAccess().getRegisterREGISTERSParserRuleCall_0_0()); 
+             after(grammarAccess.getImmediateAccess().getRegisterRegisterParserRuleCall_0_0()); 
 
             }
 
@@ -23475,25 +23475,25 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Direct__RegisterAssignment_0"
-    // InternalPds16asmParser.g:7548:1: rule__Direct__RegisterAssignment_0 : ( ruleREGISTERS ) ;
+    // InternalPds16asmParser.g:7548:1: rule__Direct__RegisterAssignment_0 : ( ruleRegister ) ;
     public final void rule__Direct__RegisterAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPds16asmParser.g:7552:1: ( ( ruleREGISTERS ) )
-            // InternalPds16asmParser.g:7553:2: ( ruleREGISTERS )
+            // InternalPds16asmParser.g:7552:1: ( ( ruleRegister ) )
+            // InternalPds16asmParser.g:7553:2: ( ruleRegister )
             {
-            // InternalPds16asmParser.g:7553:2: ( ruleREGISTERS )
-            // InternalPds16asmParser.g:7554:3: ruleREGISTERS
+            // InternalPds16asmParser.g:7553:2: ( ruleRegister )
+            // InternalPds16asmParser.g:7554:3: ruleRegister
             {
-             before(grammarAccess.getDirectAccess().getRegisterREGISTERSParserRuleCall_0_0()); 
+             before(grammarAccess.getDirectAccess().getRegisterRegisterParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
-            ruleREGISTERS();
+            ruleRegister();
 
             state._fsp--;
 
-             after(grammarAccess.getDirectAccess().getRegisterREGISTERSParserRuleCall_0_0()); 
+             after(grammarAccess.getDirectAccess().getRegisterRegisterParserRuleCall_0_0()); 
 
             }
 
@@ -23557,25 +23557,25 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Indexed__RdAssignment_0"
-    // InternalPds16asmParser.g:7578:1: rule__Indexed__RdAssignment_0 : ( ruleREGISTERS ) ;
+    // InternalPds16asmParser.g:7578:1: rule__Indexed__RdAssignment_0 : ( ruleRegister ) ;
     public final void rule__Indexed__RdAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPds16asmParser.g:7582:1: ( ( ruleREGISTERS ) )
-            // InternalPds16asmParser.g:7583:2: ( ruleREGISTERS )
+            // InternalPds16asmParser.g:7582:1: ( ( ruleRegister ) )
+            // InternalPds16asmParser.g:7583:2: ( ruleRegister )
             {
-            // InternalPds16asmParser.g:7583:2: ( ruleREGISTERS )
-            // InternalPds16asmParser.g:7584:3: ruleREGISTERS
+            // InternalPds16asmParser.g:7583:2: ( ruleRegister )
+            // InternalPds16asmParser.g:7584:3: ruleRegister
             {
-             before(grammarAccess.getIndexedAccess().getRdREGISTERSParserRuleCall_0_0()); 
+             before(grammarAccess.getIndexedAccess().getRdRegisterParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
-            ruleREGISTERS();
+            ruleRegister();
 
             state._fsp--;
 
-             after(grammarAccess.getIndexedAccess().getRdREGISTERSParserRuleCall_0_0()); 
+             after(grammarAccess.getIndexedAccess().getRdRegisterParserRuleCall_0_0()); 
 
             }
 
@@ -23598,25 +23598,25 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Indexed__RbxAssignment_3"
-    // InternalPds16asmParser.g:7593:1: rule__Indexed__RbxAssignment_3 : ( ruleREGISTERS ) ;
+    // InternalPds16asmParser.g:7593:1: rule__Indexed__RbxAssignment_3 : ( ruleRegister ) ;
     public final void rule__Indexed__RbxAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPds16asmParser.g:7597:1: ( ( ruleREGISTERS ) )
-            // InternalPds16asmParser.g:7598:2: ( ruleREGISTERS )
+            // InternalPds16asmParser.g:7597:1: ( ( ruleRegister ) )
+            // InternalPds16asmParser.g:7598:2: ( ruleRegister )
             {
-            // InternalPds16asmParser.g:7598:2: ( ruleREGISTERS )
-            // InternalPds16asmParser.g:7599:3: ruleREGISTERS
+            // InternalPds16asmParser.g:7598:2: ( ruleRegister )
+            // InternalPds16asmParser.g:7599:3: ruleRegister
             {
-             before(grammarAccess.getIndexedAccess().getRbxREGISTERSParserRuleCall_3_0()); 
+             before(grammarAccess.getIndexedAccess().getRbxRegisterParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
-            ruleREGISTERS();
+            ruleRegister();
 
             state._fsp--;
 
-             after(grammarAccess.getIndexedAccess().getRbxREGISTERSParserRuleCall_3_0()); 
+             after(grammarAccess.getIndexedAccess().getRbxRegisterParserRuleCall_3_0()); 
 
             }
 
@@ -23680,25 +23680,25 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BasedIndexed__RbxAssignment_3"
-    // InternalPds16asmParser.g:7623:1: rule__BasedIndexed__RbxAssignment_3 : ( ruleREGISTERS ) ;
+    // InternalPds16asmParser.g:7623:1: rule__BasedIndexed__RbxAssignment_3 : ( ruleRegister ) ;
     public final void rule__BasedIndexed__RbxAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPds16asmParser.g:7627:1: ( ( ruleREGISTERS ) )
-            // InternalPds16asmParser.g:7628:2: ( ruleREGISTERS )
+            // InternalPds16asmParser.g:7627:1: ( ( ruleRegister ) )
+            // InternalPds16asmParser.g:7628:2: ( ruleRegister )
             {
-            // InternalPds16asmParser.g:7628:2: ( ruleREGISTERS )
-            // InternalPds16asmParser.g:7629:3: ruleREGISTERS
+            // InternalPds16asmParser.g:7628:2: ( ruleRegister )
+            // InternalPds16asmParser.g:7629:3: ruleRegister
             {
-             before(grammarAccess.getBasedIndexedAccess().getRbxREGISTERSParserRuleCall_3_0()); 
+             before(grammarAccess.getBasedIndexedAccess().getRbxRegisterParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
-            ruleREGISTERS();
+            ruleRegister();
 
             state._fsp--;
 
-             after(grammarAccess.getBasedIndexedAccess().getRbxREGISTERSParserRuleCall_3_0()); 
+             after(grammarAccess.getBasedIndexedAccess().getRbxRegisterParserRuleCall_3_0()); 
 
             }
 
@@ -23721,25 +23721,25 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BasedIndexed__RixAssignment_5"
-    // InternalPds16asmParser.g:7638:1: rule__BasedIndexed__RixAssignment_5 : ( ruleREGISTERS ) ;
+    // InternalPds16asmParser.g:7638:1: rule__BasedIndexed__RixAssignment_5 : ( ruleRegister ) ;
     public final void rule__BasedIndexed__RixAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPds16asmParser.g:7642:1: ( ( ruleREGISTERS ) )
-            // InternalPds16asmParser.g:7643:2: ( ruleREGISTERS )
+            // InternalPds16asmParser.g:7642:1: ( ( ruleRegister ) )
+            // InternalPds16asmParser.g:7643:2: ( ruleRegister )
             {
-            // InternalPds16asmParser.g:7643:2: ( ruleREGISTERS )
-            // InternalPds16asmParser.g:7644:3: ruleREGISTERS
+            // InternalPds16asmParser.g:7643:2: ( ruleRegister )
+            // InternalPds16asmParser.g:7644:3: ruleRegister
             {
-             before(grammarAccess.getBasedIndexedAccess().getRixREGISTERSParserRuleCall_5_0()); 
+             before(grammarAccess.getBasedIndexedAccess().getRixRegisterParserRuleCall_5_0()); 
             pushFollow(FOLLOW_2);
-            ruleREGISTERS();
+            ruleRegister();
 
             state._fsp--;
 
-             after(grammarAccess.getBasedIndexedAccess().getRixREGISTERSParserRuleCall_5_0()); 
+             after(grammarAccess.getBasedIndexedAccess().getRixRegisterParserRuleCall_5_0()); 
 
             }
 
@@ -24152,25 +24152,25 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__OperationWithTwoRegisters__RdAssignment_0"
-    // InternalPds16asmParser.g:7803:1: rule__OperationWithTwoRegisters__RdAssignment_0 : ( ruleREGISTERS ) ;
+    // InternalPds16asmParser.g:7803:1: rule__OperationWithTwoRegisters__RdAssignment_0 : ( ruleRegister ) ;
     public final void rule__OperationWithTwoRegisters__RdAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPds16asmParser.g:7807:1: ( ( ruleREGISTERS ) )
-            // InternalPds16asmParser.g:7808:2: ( ruleREGISTERS )
+            // InternalPds16asmParser.g:7807:1: ( ( ruleRegister ) )
+            // InternalPds16asmParser.g:7808:2: ( ruleRegister )
             {
-            // InternalPds16asmParser.g:7808:2: ( ruleREGISTERS )
-            // InternalPds16asmParser.g:7809:3: ruleREGISTERS
+            // InternalPds16asmParser.g:7808:2: ( ruleRegister )
+            // InternalPds16asmParser.g:7809:3: ruleRegister
             {
-             before(grammarAccess.getOperationWithTwoRegistersAccess().getRdREGISTERSParserRuleCall_0_0()); 
+             before(grammarAccess.getOperationWithTwoRegistersAccess().getRdRegisterParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
-            ruleREGISTERS();
+            ruleRegister();
 
             state._fsp--;
 
-             after(grammarAccess.getOperationWithTwoRegistersAccess().getRdREGISTERSParserRuleCall_0_0()); 
+             after(grammarAccess.getOperationWithTwoRegistersAccess().getRdRegisterParserRuleCall_0_0()); 
 
             }
 
@@ -24193,25 +24193,25 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__OperationWithTwoRegisters__RmAssignment_2"
-    // InternalPds16asmParser.g:7818:1: rule__OperationWithTwoRegisters__RmAssignment_2 : ( ruleREGISTERS ) ;
+    // InternalPds16asmParser.g:7818:1: rule__OperationWithTwoRegisters__RmAssignment_2 : ( ruleRegister ) ;
     public final void rule__OperationWithTwoRegisters__RmAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPds16asmParser.g:7822:1: ( ( ruleREGISTERS ) )
-            // InternalPds16asmParser.g:7823:2: ( ruleREGISTERS )
+            // InternalPds16asmParser.g:7822:1: ( ( ruleRegister ) )
+            // InternalPds16asmParser.g:7823:2: ( ruleRegister )
             {
-            // InternalPds16asmParser.g:7823:2: ( ruleREGISTERS )
-            // InternalPds16asmParser.g:7824:3: ruleREGISTERS
+            // InternalPds16asmParser.g:7823:2: ( ruleRegister )
+            // InternalPds16asmParser.g:7824:3: ruleRegister
             {
-             before(grammarAccess.getOperationWithTwoRegistersAccess().getRmREGISTERSParserRuleCall_2_0()); 
+             before(grammarAccess.getOperationWithTwoRegistersAccess().getRmRegisterParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
-            ruleREGISTERS();
+            ruleRegister();
 
             state._fsp--;
 
-             after(grammarAccess.getOperationWithTwoRegistersAccess().getRmREGISTERSParserRuleCall_2_0()); 
+             after(grammarAccess.getOperationWithTwoRegistersAccess().getRmRegisterParserRuleCall_2_0()); 
 
             }
 
@@ -24234,25 +24234,25 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__OperationsWithTreeRegisters__RdAssignment_0"
-    // InternalPds16asmParser.g:7833:1: rule__OperationsWithTreeRegisters__RdAssignment_0 : ( ruleREGISTERS ) ;
+    // InternalPds16asmParser.g:7833:1: rule__OperationsWithTreeRegisters__RdAssignment_0 : ( ruleRegister ) ;
     public final void rule__OperationsWithTreeRegisters__RdAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPds16asmParser.g:7837:1: ( ( ruleREGISTERS ) )
-            // InternalPds16asmParser.g:7838:2: ( ruleREGISTERS )
+            // InternalPds16asmParser.g:7837:1: ( ( ruleRegister ) )
+            // InternalPds16asmParser.g:7838:2: ( ruleRegister )
             {
-            // InternalPds16asmParser.g:7838:2: ( ruleREGISTERS )
-            // InternalPds16asmParser.g:7839:3: ruleREGISTERS
+            // InternalPds16asmParser.g:7838:2: ( ruleRegister )
+            // InternalPds16asmParser.g:7839:3: ruleRegister
             {
-             before(grammarAccess.getOperationsWithTreeRegistersAccess().getRdREGISTERSParserRuleCall_0_0()); 
+             before(grammarAccess.getOperationsWithTreeRegistersAccess().getRdRegisterParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
-            ruleREGISTERS();
+            ruleRegister();
 
             state._fsp--;
 
-             after(grammarAccess.getOperationsWithTreeRegistersAccess().getRdREGISTERSParserRuleCall_0_0()); 
+             after(grammarAccess.getOperationsWithTreeRegistersAccess().getRdRegisterParserRuleCall_0_0()); 
 
             }
 
@@ -24275,25 +24275,25 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__OperationsWithTreeRegisters__RmAssignment_2"
-    // InternalPds16asmParser.g:7848:1: rule__OperationsWithTreeRegisters__RmAssignment_2 : ( ruleREGISTERS ) ;
+    // InternalPds16asmParser.g:7848:1: rule__OperationsWithTreeRegisters__RmAssignment_2 : ( ruleRegister ) ;
     public final void rule__OperationsWithTreeRegisters__RmAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPds16asmParser.g:7852:1: ( ( ruleREGISTERS ) )
-            // InternalPds16asmParser.g:7853:2: ( ruleREGISTERS )
+            // InternalPds16asmParser.g:7852:1: ( ( ruleRegister ) )
+            // InternalPds16asmParser.g:7853:2: ( ruleRegister )
             {
-            // InternalPds16asmParser.g:7853:2: ( ruleREGISTERS )
-            // InternalPds16asmParser.g:7854:3: ruleREGISTERS
+            // InternalPds16asmParser.g:7853:2: ( ruleRegister )
+            // InternalPds16asmParser.g:7854:3: ruleRegister
             {
-             before(grammarAccess.getOperationsWithTreeRegistersAccess().getRmREGISTERSParserRuleCall_2_0()); 
+             before(grammarAccess.getOperationsWithTreeRegistersAccess().getRmRegisterParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
-            ruleREGISTERS();
+            ruleRegister();
 
             state._fsp--;
 
-             after(grammarAccess.getOperationsWithTreeRegistersAccess().getRmREGISTERSParserRuleCall_2_0()); 
+             after(grammarAccess.getOperationsWithTreeRegistersAccess().getRmRegisterParserRuleCall_2_0()); 
 
             }
 
@@ -24316,25 +24316,25 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__OperationsWithTreeRegisters__RnAssignment_4"
-    // InternalPds16asmParser.g:7863:1: rule__OperationsWithTreeRegisters__RnAssignment_4 : ( ruleREGISTERS ) ;
+    // InternalPds16asmParser.g:7863:1: rule__OperationsWithTreeRegisters__RnAssignment_4 : ( ruleRegister ) ;
     public final void rule__OperationsWithTreeRegisters__RnAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPds16asmParser.g:7867:1: ( ( ruleREGISTERS ) )
-            // InternalPds16asmParser.g:7868:2: ( ruleREGISTERS )
+            // InternalPds16asmParser.g:7867:1: ( ( ruleRegister ) )
+            // InternalPds16asmParser.g:7868:2: ( ruleRegister )
             {
-            // InternalPds16asmParser.g:7868:2: ( ruleREGISTERS )
-            // InternalPds16asmParser.g:7869:3: ruleREGISTERS
+            // InternalPds16asmParser.g:7868:2: ( ruleRegister )
+            // InternalPds16asmParser.g:7869:3: ruleRegister
             {
-             before(grammarAccess.getOperationsWithTreeRegistersAccess().getRnREGISTERSParserRuleCall_4_0()); 
+             before(grammarAccess.getOperationsWithTreeRegistersAccess().getRnRegisterParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
-            ruleREGISTERS();
+            ruleRegister();
 
             state._fsp--;
 
-             after(grammarAccess.getOperationsWithTreeRegistersAccess().getRnREGISTERSParserRuleCall_4_0()); 
+             after(grammarAccess.getOperationsWithTreeRegistersAccess().getRnRegisterParserRuleCall_4_0()); 
 
             }
 
@@ -24357,25 +24357,25 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__OperationsWithConstant__RdAssignment_0"
-    // InternalPds16asmParser.g:7878:1: rule__OperationsWithConstant__RdAssignment_0 : ( ruleREGISTERS ) ;
+    // InternalPds16asmParser.g:7878:1: rule__OperationsWithConstant__RdAssignment_0 : ( ruleRegister ) ;
     public final void rule__OperationsWithConstant__RdAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPds16asmParser.g:7882:1: ( ( ruleREGISTERS ) )
-            // InternalPds16asmParser.g:7883:2: ( ruleREGISTERS )
+            // InternalPds16asmParser.g:7882:1: ( ( ruleRegister ) )
+            // InternalPds16asmParser.g:7883:2: ( ruleRegister )
             {
-            // InternalPds16asmParser.g:7883:2: ( ruleREGISTERS )
-            // InternalPds16asmParser.g:7884:3: ruleREGISTERS
+            // InternalPds16asmParser.g:7883:2: ( ruleRegister )
+            // InternalPds16asmParser.g:7884:3: ruleRegister
             {
-             before(grammarAccess.getOperationsWithConstantAccess().getRdREGISTERSParserRuleCall_0_0()); 
+             before(grammarAccess.getOperationsWithConstantAccess().getRdRegisterParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
-            ruleREGISTERS();
+            ruleRegister();
 
             state._fsp--;
 
-             after(grammarAccess.getOperationsWithConstantAccess().getRdREGISTERSParserRuleCall_0_0()); 
+             after(grammarAccess.getOperationsWithConstantAccess().getRdRegisterParserRuleCall_0_0()); 
 
             }
 
@@ -24398,25 +24398,25 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__OperationsWithConstant__RmAssignment_2"
-    // InternalPds16asmParser.g:7893:1: rule__OperationsWithConstant__RmAssignment_2 : ( ruleREGISTERS ) ;
+    // InternalPds16asmParser.g:7893:1: rule__OperationsWithConstant__RmAssignment_2 : ( ruleRegister ) ;
     public final void rule__OperationsWithConstant__RmAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPds16asmParser.g:7897:1: ( ( ruleREGISTERS ) )
-            // InternalPds16asmParser.g:7898:2: ( ruleREGISTERS )
+            // InternalPds16asmParser.g:7897:1: ( ( ruleRegister ) )
+            // InternalPds16asmParser.g:7898:2: ( ruleRegister )
             {
-            // InternalPds16asmParser.g:7898:2: ( ruleREGISTERS )
-            // InternalPds16asmParser.g:7899:3: ruleREGISTERS
+            // InternalPds16asmParser.g:7898:2: ( ruleRegister )
+            // InternalPds16asmParser.g:7899:3: ruleRegister
             {
-             before(grammarAccess.getOperationsWithConstantAccess().getRmREGISTERSParserRuleCall_2_0()); 
+             before(grammarAccess.getOperationsWithConstantAccess().getRmRegisterParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
-            ruleREGISTERS();
+            ruleRegister();
 
             state._fsp--;
 
-             after(grammarAccess.getOperationsWithConstantAccess().getRmREGISTERSParserRuleCall_2_0()); 
+             after(grammarAccess.getOperationsWithConstantAccess().getRmRegisterParserRuleCall_2_0()); 
 
             }
 
@@ -24480,25 +24480,25 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__OperationShift__RdAssignment_0"
-    // InternalPds16asmParser.g:7923:1: rule__OperationShift__RdAssignment_0 : ( ruleREGISTERS ) ;
+    // InternalPds16asmParser.g:7923:1: rule__OperationShift__RdAssignment_0 : ( ruleRegister ) ;
     public final void rule__OperationShift__RdAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPds16asmParser.g:7927:1: ( ( ruleREGISTERS ) )
-            // InternalPds16asmParser.g:7928:2: ( ruleREGISTERS )
+            // InternalPds16asmParser.g:7927:1: ( ( ruleRegister ) )
+            // InternalPds16asmParser.g:7928:2: ( ruleRegister )
             {
-            // InternalPds16asmParser.g:7928:2: ( ruleREGISTERS )
-            // InternalPds16asmParser.g:7929:3: ruleREGISTERS
+            // InternalPds16asmParser.g:7928:2: ( ruleRegister )
+            // InternalPds16asmParser.g:7929:3: ruleRegister
             {
-             before(grammarAccess.getOperationShiftAccess().getRdREGISTERSParserRuleCall_0_0()); 
+             before(grammarAccess.getOperationShiftAccess().getRdRegisterParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
-            ruleREGISTERS();
+            ruleRegister();
 
             state._fsp--;
 
-             after(grammarAccess.getOperationShiftAccess().getRdREGISTERSParserRuleCall_0_0()); 
+             after(grammarAccess.getOperationShiftAccess().getRdRegisterParserRuleCall_0_0()); 
 
             }
 
@@ -24521,25 +24521,25 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__OperationShift__RmAssignment_2"
-    // InternalPds16asmParser.g:7938:1: rule__OperationShift__RmAssignment_2 : ( ruleREGISTERS ) ;
+    // InternalPds16asmParser.g:7938:1: rule__OperationShift__RmAssignment_2 : ( ruleRegister ) ;
     public final void rule__OperationShift__RmAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPds16asmParser.g:7942:1: ( ( ruleREGISTERS ) )
-            // InternalPds16asmParser.g:7943:2: ( ruleREGISTERS )
+            // InternalPds16asmParser.g:7942:1: ( ( ruleRegister ) )
+            // InternalPds16asmParser.g:7943:2: ( ruleRegister )
             {
-            // InternalPds16asmParser.g:7943:2: ( ruleREGISTERS )
-            // InternalPds16asmParser.g:7944:3: ruleREGISTERS
+            // InternalPds16asmParser.g:7943:2: ( ruleRegister )
+            // InternalPds16asmParser.g:7944:3: ruleRegister
             {
-             before(grammarAccess.getOperationShiftAccess().getRmREGISTERSParserRuleCall_2_0()); 
+             before(grammarAccess.getOperationShiftAccess().getRmRegisterParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
-            ruleREGISTERS();
+            ruleRegister();
 
             state._fsp--;
 
-             after(grammarAccess.getOperationShiftAccess().getRmREGISTERSParserRuleCall_2_0()); 
+             after(grammarAccess.getOperationShiftAccess().getRmRegisterParserRuleCall_2_0()); 
 
             }
 
@@ -24650,25 +24650,25 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__OperationWithOffset__RbxAssignment_0"
-    // InternalPds16asmParser.g:7983:1: rule__OperationWithOffset__RbxAssignment_0 : ( ruleREGISTERS ) ;
+    // InternalPds16asmParser.g:7983:1: rule__OperationWithOffset__RbxAssignment_0 : ( ruleRegister ) ;
     public final void rule__OperationWithOffset__RbxAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPds16asmParser.g:7987:1: ( ( ruleREGISTERS ) )
-            // InternalPds16asmParser.g:7988:2: ( ruleREGISTERS )
+            // InternalPds16asmParser.g:7987:1: ( ( ruleRegister ) )
+            // InternalPds16asmParser.g:7988:2: ( ruleRegister )
             {
-            // InternalPds16asmParser.g:7988:2: ( ruleREGISTERS )
-            // InternalPds16asmParser.g:7989:3: ruleREGISTERS
+            // InternalPds16asmParser.g:7988:2: ( ruleRegister )
+            // InternalPds16asmParser.g:7989:3: ruleRegister
             {
-             before(grammarAccess.getOperationWithOffsetAccess().getRbxREGISTERSParserRuleCall_0_0()); 
+             before(grammarAccess.getOperationWithOffsetAccess().getRbxRegisterParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
-            ruleREGISTERS();
+            ruleRegister();
 
             state._fsp--;
 
-             after(grammarAccess.getOperationWithOffsetAccess().getRbxREGISTERSParserRuleCall_0_0()); 
+             after(grammarAccess.getOperationWithOffsetAccess().getRbxRegisterParserRuleCall_0_0()); 
 
             }
 
@@ -24856,22 +24856,69 @@ public class InternalPds16asmParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__LowOrHight__ValueAssignment_3"
 
 
+    // $ANTLR start "rule__Register__ValueAssignment"
+    // InternalPds16asmParser.g:8058:1: rule__Register__ValueAssignment : ( ( rule__Register__ValueAlternatives_0 ) ) ;
+    public final void rule__Register__ValueAssignment() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalPds16asmParser.g:8062:1: ( ( ( rule__Register__ValueAlternatives_0 ) ) )
+            // InternalPds16asmParser.g:8063:2: ( ( rule__Register__ValueAlternatives_0 ) )
+            {
+            // InternalPds16asmParser.g:8063:2: ( ( rule__Register__ValueAlternatives_0 ) )
+            // InternalPds16asmParser.g:8064:3: ( rule__Register__ValueAlternatives_0 )
+            {
+             before(grammarAccess.getRegisterAccess().getValueAlternatives_0()); 
+            // InternalPds16asmParser.g:8065:3: ( rule__Register__ValueAlternatives_0 )
+            // InternalPds16asmParser.g:8065:4: rule__Register__ValueAlternatives_0
+            {
+            pushFollow(FOLLOW_2);
+            rule__Register__ValueAlternatives_0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getRegisterAccess().getValueAlternatives_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Register__ValueAssignment"
+
+
     // $ANTLR start "rule__Number__ValueAssignment"
-    // InternalPds16asmParser.g:8058:1: rule__Number__ValueAssignment : ( ( rule__Number__ValueAlternatives_0 ) ) ;
+    // InternalPds16asmParser.g:8073:1: rule__Number__ValueAssignment : ( ( rule__Number__ValueAlternatives_0 ) ) ;
     public final void rule__Number__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPds16asmParser.g:8062:1: ( ( ( rule__Number__ValueAlternatives_0 ) ) )
-            // InternalPds16asmParser.g:8063:2: ( ( rule__Number__ValueAlternatives_0 ) )
+            // InternalPds16asmParser.g:8077:1: ( ( ( rule__Number__ValueAlternatives_0 ) ) )
+            // InternalPds16asmParser.g:8078:2: ( ( rule__Number__ValueAlternatives_0 ) )
             {
-            // InternalPds16asmParser.g:8063:2: ( ( rule__Number__ValueAlternatives_0 ) )
-            // InternalPds16asmParser.g:8064:3: ( rule__Number__ValueAlternatives_0 )
+            // InternalPds16asmParser.g:8078:2: ( ( rule__Number__ValueAlternatives_0 ) )
+            // InternalPds16asmParser.g:8079:3: ( rule__Number__ValueAlternatives_0 )
             {
              before(grammarAccess.getNumberAccess().getValueAlternatives_0()); 
-            // InternalPds16asmParser.g:8065:3: ( rule__Number__ValueAlternatives_0 )
-            // InternalPds16asmParser.g:8065:4: rule__Number__ValueAlternatives_0
+            // InternalPds16asmParser.g:8080:3: ( rule__Number__ValueAlternatives_0 )
+            // InternalPds16asmParser.g:8080:4: rule__Number__ValueAlternatives_0
             {
             pushFollow(FOLLOW_2);
             rule__Number__ValueAlternatives_0();
