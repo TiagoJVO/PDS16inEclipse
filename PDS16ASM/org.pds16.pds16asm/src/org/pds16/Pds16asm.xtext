@@ -73,22 +73,22 @@ StBasedIndexed: ('st' | 'stb') BasedIndexed ;
 
 /******************************************* Aritmetica ***********************************/
 Add: ('add' | 'addf' | 'adc' | 'adcf') 
-		(OperationsWithConstant | OperationsWithTreeRegisters)
+		(OperationsWithConstant | OperationsWithThreeRegisters)
 	 | ('inc' | 'incf') Register;
 		
 Sub: (('sub' | 'subf' | 'sbb' | 'sbbf') 
-		(OperationsWithConstant | OperationsWithTreeRegisters))
-	 | 'subr' OperationsWithTreeRegisters
+		(OperationsWithConstant | OperationsWithThreeRegisters))
+	 | 'subr' OperationsWithThreeRegisters
 	 |  ('dec' | 'decf') Register ;
 /******************************************************************************************/
 
 /******************************************* Logica ***************************************/
-Anl: ('anl' | 'anlf') OperationsWithTreeRegisters;
+Anl: ('anl' | 'anlf') OperationsWithThreeRegisters;
 
-Orl: ('orl' | 'orlf') OperationsWithTreeRegisters
+Orl: ('orl' | 'orlf') OperationsWithThreeRegisters
 	  | ('mov' | 'movf') OperationWithTwoRegisters ;
 
-Xrl: ('xrl' | 'xrlf') OperationsWithTreeRegisters;
+Xrl: ('xrl' | 'xrlf') OperationsWithThreeRegisters;
 
 Not: ('not' | 'notf') OperationWithTwoRegisters;
 
@@ -137,7 +137,7 @@ Offset8OrLabel: '#'( number=Number | label=ID);
 
 OperationWithTwoRegisters: rd=Register ',' rm=Register;
 
-OperationsWithTreeRegisters: rd=Register ',' rm=Register ',' rn=Register ;
+OperationsWithThreeRegisters: rd=Register ',' rm=Register ',' rn=Register ;
 
 OperationsWithConstant: rd=Register ',' rm=Register ',' const4=Const4OrLabel;
 

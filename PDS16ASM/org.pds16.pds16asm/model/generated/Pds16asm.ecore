@@ -154,7 +154,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OperationWithTwoRegisters" eSuperTypes="#//Orl #//Not #//Rc"/>
-  <eClassifiers xsi:type="ecore:EClass" name="OperationsWithTreeRegisters" eSuperTypes="#//Add #//Sub #//Anl #//Orl #//Xrl">
+  <eClassifiers xsi:type="ecore:EClass" name="OperationsWithThreeRegisters" eSuperTypes="#//Add #//Sub #//Anl #//Orl #//Xrl">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rn" eType="#//Register"
         containment="true"/>
   </eClassifiers>
@@ -173,7 +173,8 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="const4" eType="#//Const4OrLabel"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sin" eType="#//Number"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OperationWithOffset">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rbx" eType="#//Register"

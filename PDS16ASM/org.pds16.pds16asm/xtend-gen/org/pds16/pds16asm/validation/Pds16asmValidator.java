@@ -61,7 +61,8 @@ public class Pds16asmValidator extends AbstractPds16asmValidator {
   
   @Check
   public void checkShift(final OperationShift os) {
-    int a = os.getSin();
+    org.pds16.pds16asm.pds16asm.Number _sin = os.getSin();
+    int a = _sin.getValue();
     if (((a < 0) || (a > 1))) {
       this.warning("SIN should be only 0 or 1", 
         Pds16asmPackage.Literals.OPERATION_SHIFT__SIN, 

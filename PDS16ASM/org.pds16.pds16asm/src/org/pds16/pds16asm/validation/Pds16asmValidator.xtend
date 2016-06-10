@@ -44,7 +44,7 @@ class Pds16asmValidator extends AbstractPds16asmValidator {
 	
 	@Check
 	def checkShift(OperationShift os){
-		var int a = os.getSin();
+		var int a = os.sin.value
 		if(a<0 || a>1){
 				warning('SIN should be only 0 or 1', 
 						Pds16asmPackage.Literals.OPERATION_SHIFT__SIN,
