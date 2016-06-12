@@ -14,6 +14,4 @@ class Pds16asmRuntimeModule extends AbstractPds16asmRuntimeModule {
 	override Class<? extends IValueConverterService> bindIValueConverterService() {
 	    return  Pds16asmValueConverter
 	}
-	
-	//TODO:variavel de ambiente do dasm.exe
 }

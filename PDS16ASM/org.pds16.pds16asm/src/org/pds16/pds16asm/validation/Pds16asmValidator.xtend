@@ -40,7 +40,7 @@ class Pds16asmValidator extends AbstractPds16asmValidator {
 	@Check
 	def checkShift(PDS16ASM general){
 		ResourcesPlugin.workspace.root.deleteMarkers(IMarker.PROBLEM,true,IResource.DEPTH_INFINITE)//TODO: nao apagar todas as marcas
-	}//saber a linha da onde to a editar e apagar a marcar
+	}
 	
 	@Check
 	def checkShift(OperationShift os){

@@ -9,7 +9,6 @@ import java.util.List;
 
 public class DasmErrorParser{
 	 public static List<LinedError> getErrorsFromStream(InputStream is) throws NumberFormatException, IOException{
-		 List<String> lines = new ArrayList<String>();
 		 BufferedReader r = new BufferedReader(new InputStreamReader(is));
 		 
 		 List<LinedError> errors = new ArrayList<LinedError>();

@@ -29,7 +29,7 @@ class CHARValueConverter extends AbstractLexerBasedConverter<Integer> {
 	}
 	
 	def checkIfIsAscii(int a, INode node){
-		if(a<0 || a > 255)
+		if(a<0 || a >= CHAR_MAX)
 			throw new ValueConverterException("Couldn't convert string to an ascii value.", node, null);
 	}
 	

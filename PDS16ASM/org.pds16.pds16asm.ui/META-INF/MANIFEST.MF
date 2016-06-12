@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: org.pds16.pds16asm.ui
 Bundle-Vendor: My Company
-Bundle-Version: 1.0.4
+Bundle-Version: 1.0.6
 Bundle-SymbolicName: org.pds16.pds16asm.ui; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.pds16.pds16asm,
