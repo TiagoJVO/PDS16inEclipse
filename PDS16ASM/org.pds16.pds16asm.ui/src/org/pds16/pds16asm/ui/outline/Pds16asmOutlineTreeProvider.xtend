@@ -3,7 +3,12 @@
  */
 package org.pds16.pds16asm.ui.outline
 
+import org.eclipse.emf.ecore.EObject
+import org.eclipse.swt.graphics.Image
+import org.eclipse.xtext.ui.editor.outline.IOutlineNode
 import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider
+import org.pds16.pds16asm.pds16asm.impl.LabelImpl
+import org.pds16.pds16asm.pds16asm.impl.DirectiveImpl
 
 /**
  * Customization of the default outline structure.
@@ -12,5 +17,17 @@ import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider
  */
 class Pds16asmOutlineTreeProvider extends DefaultOutlineTreeProvider{
 	
+	
+	override _createNode(IOutlineNode parentNode, EObject modelElement){
+		var Object text = textDispatcher.invoke(modelElement);
+		var boolean isLeaf = isLeafDispatcher.invoke(modelElement);
+		if (text == null && isLeaf)
+			return;
+					
+		if (modelElement instanceof LabelImpl){
+			var Image image = imageDispatcher.invoke(modelElement);
+			createEObjectNode(parentNode, modelElement, image, text, true);
+		}		
+	}
 	
 }
