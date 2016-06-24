@@ -11,10 +11,10 @@ Statement:
 	Instructions | Label | Directive;
 
 Label:
-	labelName=IDLABEL  value=(Label | LabelDirective | Instructions);
+	labelName=IDLABEL value=(Label | LabelDirective | Instructions);
 
 Directive:
-	Bss | Data | End | Text | Equ | Org | Section | Set | LabelDirective;
+	value =(Bss | Data | End | Text | Equ | Org | Section | Set | LabelDirective);
 
 LabelDirective: Ascii | Asciiz | Byte | Word | Space;
 		
@@ -42,7 +42,7 @@ Section:'.section' value=ID;
 
 Org:    '.org' Expression;
 
-Equ:    '.equ' ID ',' Expression;
+Equ:    '.equ' value1=ID ',' value2=Expression;
 
 Instructions:
 	Load | Store | Aritmetica | Logica | Jump | Nop | Ret;
@@ -169,7 +169,7 @@ terminal SIGN : '-' | '+';
 /******************************************************************************************/
 
 terminal ID : ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
-terminal IDLABEL : ('a'..'z'|'A'..'Z'|'_'|'0'..'9')+ ':';
+terminal IDLABEL : ('a'..'z'|'A'..'Z'|'_'|'0'..'9')+ ':' ;
 terminal INT returns ecore::EInt: SIGN? ('0'..'9')+;
 terminal STRING	: 
 			'"' ( '\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('\\'|'"') )* '"' |

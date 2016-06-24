@@ -8,21 +8,24 @@
   <eClassifiers xsi:type="ecore:EClass" name="Statement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Label" eSuperTypes="#//Statement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="labelName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//Statement"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Directive" eSuperTypes="#//Statement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="LabelDirective" eSuperTypes="#//Directive"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Bss" eSuperTypes="#//Directive">
+  <eClassifiers xsi:type="ecore:EClass" name="Directive" eSuperTypes="#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LabelDirective"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Bss">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Data" eSuperTypes="#//Directive">
+  <eClassifiers xsi:type="ecore:EClass" name="Data">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="End" eSuperTypes="#//Directive">
+  <eClassifiers xsi:type="ecore:EClass" name="End">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Text" eSuperTypes="#//Directive">
+  <eClassifiers xsi:type="ecore:EClass" name="Text">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Ascii" eSuperTypes="#//LabelDirective">
@@ -55,16 +58,20 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="byteValue" eType="#//Number"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Set" eSuperTypes="#//Directive">
+  <eClassifiers xsi:type="ecore:EClass" name="Set">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="value2" eType="#//Expression"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Section" eSuperTypes="#//Directive">
+  <eClassifiers xsi:type="ecore:EClass" name="Section">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Org" eSuperTypes="#//Directive"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Equ" eSuperTypes="#//Directive"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Org"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Equ">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value2" eType="#//Expression"
+        containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Instructions" eSuperTypes="#//Statement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Load" eSuperTypes="#//Instructions"/>
   <eClassifiers xsi:type="ecore:EClass" name="Store" eSuperTypes="#//Instructions"/>
@@ -182,7 +189,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="offset8" eType="#//Offset8OrLabel"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Expression" eSuperTypes="#//Org #//Equ">
+  <eClassifiers xsi:type="ecore:EClass" name="Expression" eSuperTypes="#//Org">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numericValue" unique="false"
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="idValue" unique="false"

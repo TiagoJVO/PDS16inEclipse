@@ -24,7 +24,7 @@ class Pds16asmOutlineTreeProvider extends DefaultOutlineTreeProvider{
 		if (text == null && isLeaf)
 			return;
 					
-		if (modelElement instanceof LabelImpl){
+		if (modelElement instanceof LabelImpl || modelElement instanceof DirectiveImpl){
 			var Image image = imageDispatcher.invoke(modelElement);
 			createEObjectNode(parentNode, modelElement, image, text, true);
 		}		

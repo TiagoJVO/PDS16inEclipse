@@ -6,6 +6,21 @@ package org.pds16.pds16asm.ui.labeling
 import com.google.inject.Inject
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider
 import org.eclipse.xtext.ui.label.DefaultEObjectLabelProvider
+import org.pds16.pds16asm.pds16asm.Bss
+import org.pds16.pds16asm.pds16asm.Directive
+import org.pds16.pds16asm.pds16asm.Label
+import org.pds16.pds16asm.pds16asm.Data
+import org.pds16.pds16asm.pds16asm.End
+import org.pds16.pds16asm.pds16asm.Text
+import org.pds16.pds16asm.pds16asm.Equ
+import org.pds16.pds16asm.pds16asm.Org
+import org.pds16.pds16asm.pds16asm.Section
+import org.pds16.pds16asm.pds16asm.Set
+import org.pds16.pds16asm.pds16asm.Ascii
+import org.pds16.pds16asm.pds16asm.Asciiz
+import org.pds16.pds16asm.pds16asm.Byte
+import org.pds16.pds16asm.pds16asm.Word
+import org.pds16.pds16asm.pds16asm.Space
 
 /**
  * Provides labels for EObjects.
@@ -21,11 +36,63 @@ class Pds16asmLabelProvider extends DefaultEObjectLabelProvider {
 
 	// Labels and icons can be computed like this:
 	
-//	def text(Greeting ele) {
-//		'A greeting to ' + ele.name
-//	}
-//
-//	def image(Greeting ele) {
-//		'Greeting.gif'
-//	}
+	def text(Label l) {
+		l.labelName.substring(0, l.labelName.length-1)  
+	}
+
+	def text(Directive ele) {
+		var value = ele.value;
+		switch (value) {
+			 case value instanceof Bss : return 'Bss'
+			 case value instanceof Data : return 'Data'
+			 case value instanceof End : return 'End'
+			 case value instanceof Text : return 'Text'
+			 case value instanceof Equ : return text(value as Equ)
+			 case value instanceof Org : return text(value as Org)
+			 case value instanceof Section : return text(value as Section)
+			 case value instanceof Set : return text(value as Set)
+			 case value instanceof Ascii : return text(value as Ascii)
+			 case value instanceof Asciiz : return text(value as Asciiz)
+			 case value instanceof Byte : return text(value as Byte)
+			 case value instanceof Word : return text(value as Word)
+			 case value instanceof Space : return text(value as Space)
+		}
+	}
+	
+	def text(Equ ele){
+		return 'Equ ' + ele.value1
+	}
+	
+	def text(Org ele){
+		return 'Org '
+	}
+	
+	def text(Section ele){
+		return 'Section ' + ele.value
+	}
+	
+	def text(Set ele){
+		return 'Set ' + ele.value1
+	}
+	
+	def text(Ascii ele){
+		return 'Ascii ' + ele.values
+	}
+	
+	def text(Asciiz ele){
+		return 'Ascizz ' + ele.values
+	}
+	
+	def text(Byte ele){
+		return 'Byte ' + ele.s
+	}
+	
+	def text(Word ele){
+		return 'Word ' + ele.values 
+	}
+	
+	def text(Space ele){
+		return 'Space ' + ele.size.value
+	}
+
 }

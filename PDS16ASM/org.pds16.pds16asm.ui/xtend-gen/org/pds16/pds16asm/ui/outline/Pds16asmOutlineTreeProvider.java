@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.xtext.ui.editor.outline.IOutlineNode;
 import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider;
+import org.pds16.pds16asm.pds16asm.impl.DirectiveImpl;
 import org.pds16.pds16asm.pds16asm.impl.LabelImpl;
 
 /**
@@ -24,7 +25,7 @@ public class Pds16asmOutlineTreeProvider extends DefaultOutlineTreeProvider {
     if ((Objects.equal(text, null) && isLeaf)) {
       return;
     }
-    if ((modelElement instanceof LabelImpl)) {
+    if (((modelElement instanceof LabelImpl) || (modelElement instanceof DirectiveImpl))) {
       Image image = this.imageDispatcher.invoke(modelElement);
       this.createEObjectNode(parentNode, modelElement, image, text, true);
     }

@@ -4,8 +4,24 @@
 package org.pds16.pds16asm.ui.labeling;
 
 import com.google.inject.Inject;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.xtext.ui.label.DefaultEObjectLabelProvider;
+import org.pds16.pds16asm.pds16asm.Ascii;
+import org.pds16.pds16asm.pds16asm.Asciiz;
+import org.pds16.pds16asm.pds16asm.Bss;
+import org.pds16.pds16asm.pds16asm.Data;
+import org.pds16.pds16asm.pds16asm.Directive;
+import org.pds16.pds16asm.pds16asm.End;
+import org.pds16.pds16asm.pds16asm.Equ;
+import org.pds16.pds16asm.pds16asm.Label;
+import org.pds16.pds16asm.pds16asm.Org;
+import org.pds16.pds16asm.pds16asm.Section;
+import org.pds16.pds16asm.pds16asm.Set;
+import org.pds16.pds16asm.pds16asm.Space;
+import org.pds16.pds16asm.pds16asm.Text;
+import org.pds16.pds16asm.pds16asm.Word;
 
 /**
  * Provides labels for EObjects.
@@ -17,5 +33,140 @@ public class Pds16asmLabelProvider extends DefaultEObjectLabelProvider {
   @Inject
   public Pds16asmLabelProvider(final AdapterFactoryLabelProvider delegate) {
     super(delegate);
+  }
+  
+  public String text(final Label l) {
+    String _labelName = l.getLabelName();
+    String _labelName_1 = l.getLabelName();
+    int _length = _labelName_1.length();
+    int _minus = (_length - 1);
+    return _labelName.substring(0, _minus);
+  }
+  
+  public String text(final Directive ele) {
+    EObject value = ele.getValue();
+    boolean _matched = false;
+    if ((value instanceof Bss)) {
+      _matched=true;
+      return "Bss";
+    }
+    if (!_matched) {
+      if ((value instanceof Data)) {
+        _matched=true;
+        return "Data";
+      }
+    }
+    if (!_matched) {
+      if ((value instanceof End)) {
+        _matched=true;
+        return "End";
+      }
+    }
+    if (!_matched) {
+      if ((value instanceof Text)) {
+        _matched=true;
+        return "Text";
+      }
+    }
+    if (!_matched) {
+      if ((value instanceof Equ)) {
+        _matched=true;
+        return this.text(((Equ) value));
+      }
+    }
+    if (!_matched) {
+      if ((value instanceof Org)) {
+        _matched=true;
+        return this.text(((Org) value));
+      }
+    }
+    if (!_matched) {
+      if ((value instanceof Section)) {
+        _matched=true;
+        return this.text(((Section) value));
+      }
+    }
+    if (!_matched) {
+      if ((value instanceof Set)) {
+        _matched=true;
+        return this.text(((Set) value));
+      }
+    }
+    if (!_matched) {
+      if ((value instanceof Ascii)) {
+        _matched=true;
+        return this.text(((Ascii) value));
+      }
+    }
+    if (!_matched) {
+      if ((value instanceof Asciiz)) {
+        _matched=true;
+        return this.text(((Asciiz) value));
+      }
+    }
+    if (!_matched) {
+      if ((value instanceof org.pds16.pds16asm.pds16asm.Byte)) {
+        _matched=true;
+        return this.text(((org.pds16.pds16asm.pds16asm.Byte) value));
+      }
+    }
+    if (!_matched) {
+      if ((value instanceof Word)) {
+        _matched=true;
+        return this.text(((Word) value));
+      }
+    }
+    if (!_matched) {
+      if ((value instanceof Space)) {
+        _matched=true;
+        return this.text(((Space) value));
+      }
+    }
+    return null;
+  }
+  
+  public String text(final Equ ele) {
+    String _value1 = ele.getValue1();
+    return ("Equ " + _value1);
+  }
+  
+  public String text(final Org ele) {
+    return "Org ";
+  }
+  
+  public String text(final Section ele) {
+    String _value = ele.getValue();
+    return ("Section " + _value);
+  }
+  
+  public String text(final Set ele) {
+    String _value1 = ele.getValue1();
+    return ("Set " + _value1);
+  }
+  
+  public String text(final Ascii ele) {
+    EList<String> _values = ele.getValues();
+    return ("Ascii " + _values);
+  }
+  
+  public String text(final Asciiz ele) {
+    EList<String> _values = ele.getValues();
+    return ("Ascizz " + _values);
+  }
+  
+  public String text(final org.pds16.pds16asm.pds16asm.Byte ele) {
+    EList<String> _s = ele.getS();
+    return ("Byte " + _s);
+  }
+  
+  public String text(final Word ele) {
+    EList<String> _values = ele.getValues();
+    return ("Word " + _values);
+  }
+  
+  public String text(final Space ele) {
+    org.pds16.pds16asm.pds16asm.Number _size = ele.getSize();
+    int _value = _size.getValue();
+    return ("Space " + Integer.valueOf(_value));
   }
 }
