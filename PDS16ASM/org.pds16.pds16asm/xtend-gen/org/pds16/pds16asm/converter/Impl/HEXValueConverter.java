@@ -15,17 +15,25 @@ public class HEXValueConverter extends AbstractLexerBasedConverter<Integer> {
       throw new ValueConverterException("Couldn\'t convert empty string to an hexadecimal value.", node, null);
     }
     try {
-      String _xifexpression = null;
+      String cut = "";
       boolean _startsWith = s.startsWith("-");
       if (_startsWith) {
         int _length = s.length();
         String _substring = s.substring(3, _length);
-        _xifexpression = ("-" + _substring);
+        String _plus = ("-" + _substring);
+        cut = _plus;
       } else {
-        int _length_1 = s.length();
-        _xifexpression = s.substring(2, _length_1);
+        boolean _startsWith_1 = s.startsWith("+");
+        if (_startsWith_1) {
+          int _length_1 = s.length();
+          String _substring_1 = s.substring(3, _length_1);
+          cut = _substring_1;
+        } else {
+          int _length_2 = s.length();
+          String _substring_2 = s.substring(2, _length_2);
+          cut = _substring_2;
+        }
       }
-      String cut = _xifexpression;
       int _parseInt = Integer.parseInt(cut, 16);
       short intValue = ((short) _parseInt);
       return Integer.valueOf(intValue);

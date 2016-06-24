@@ -11,7 +11,10 @@ class HEXValueConverter extends AbstractLexerBasedConverter<Integer>{
 		if (Strings.isEmpty(s))
 			throw new ValueConverterException("Couldn't convert empty string to an hexadecimal value.", node, null);
 		try {
-			var cut = if (s.startsWith("-")) "-" + s.substring(3,s.length) else s.substring(2,s.length)
+			var cut = ""; 
+			if (s.startsWith("-")) cut = "-" + s.substring(3,s.length)
+			else if(s.startsWith("+")) cut = s.substring(3,s.length) 	
+			else cut = s.substring(2,s.length)
 			var intValue = Integer.parseInt(cut,16) as short
 			return Integer.valueOf(intValue);
 		} catch (NumberFormatException e) {
