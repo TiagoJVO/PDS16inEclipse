@@ -1746,7 +1746,7 @@ public interface Pds16asmPackage extends EPackage
   int EXPRESSION = 58;
 
   /**
-   * The feature id for the '<em><b>Numeric Value</b></em>' attribute list.
+   * The feature id for the '<em><b>Numeric Value</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1764,13 +1764,22 @@ public interface Pds16asmPackage extends EPackage
   int EXPRESSION__ID_VALUE = ORG_FEATURE_COUNT + 1;
 
   /**
+   * The feature id for the '<em><b>Ex</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION__EX = ORG_FEATURE_COUNT + 2;
+
+  /**
    * The number of structural features of the '<em>Expression</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXPRESSION_FEATURE_COUNT = ORG_FEATURE_COUNT + 2;
+  int EXPRESSION_FEATURE_COUNT = ORG_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link org.pds16.pds16asm.pds16asm.impl.LowOrHightImpl <em>Low Or Hight</em>}' class.
@@ -3126,15 +3135,15 @@ public interface Pds16asmPackage extends EPackage
   EClass getExpression();
 
   /**
-   * Returns the meta object for the attribute list '{@link org.pds16.pds16asm.pds16asm.Expression#getNumericValue <em>Numeric Value</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.pds16.pds16asm.pds16asm.Expression#getNumericValue <em>Numeric Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Numeric Value</em>'.
+   * @return the meta object for the containment reference list '<em>Numeric Value</em>'.
    * @see org.pds16.pds16asm.pds16asm.Expression#getNumericValue()
    * @see #getExpression()
    * @generated
    */
-  EAttribute getExpression_NumericValue();
+  EReference getExpression_NumericValue();
 
   /**
    * Returns the meta object for the attribute list '{@link org.pds16.pds16asm.pds16asm.Expression#getIdValue <em>Id Value</em>}'.
@@ -3146,6 +3155,17 @@ public interface Pds16asmPackage extends EPackage
    * @generated
    */
   EAttribute getExpression_IdValue();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.pds16.pds16asm.pds16asm.Expression#getEx <em>Ex</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Ex</em>'.
+   * @see org.pds16.pds16asm.pds16asm.Expression#getEx()
+   * @see #getExpression()
+   * @generated
+   */
+  EReference getExpression_Ex();
 
   /**
    * Returns the meta object for class '{@link org.pds16.pds16asm.pds16asm.LowOrHight <em>Low Or Hight</em>}'.
@@ -4326,12 +4346,12 @@ public interface Pds16asmPackage extends EPackage
     EClass EXPRESSION = eINSTANCE.getExpression();
 
     /**
-     * The meta object literal for the '<em><b>Numeric Value</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Numeric Value</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute EXPRESSION__NUMERIC_VALUE = eINSTANCE.getExpression_NumericValue();
+    EReference EXPRESSION__NUMERIC_VALUE = eINSTANCE.getExpression_NumericValue();
 
     /**
      * The meta object literal for the '<em><b>Id Value</b></em>' attribute list feature.
@@ -4340,6 +4360,14 @@ public interface Pds16asmPackage extends EPackage
      * @generated
      */
     EAttribute EXPRESSION__ID_VALUE = eINSTANCE.getExpression_IdValue();
+
+    /**
+     * The meta object literal for the '<em><b>Ex</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXPRESSION__EX = eINSTANCE.getExpression_Ex();
 
     /**
      * The meta object literal for the '{@link org.pds16.pds16asm.pds16asm.impl.LowOrHightImpl <em>Low Or Hight</em>}' class.

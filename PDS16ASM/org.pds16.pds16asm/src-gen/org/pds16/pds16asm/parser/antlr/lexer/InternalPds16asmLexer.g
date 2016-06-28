@@ -167,6 +167,8 @@ LeftParenthesis : '(';
 
 RightParenthesis : ')';
 
+PlusSign : '+';
+
 Comma : ',';
 
 LeftSquareBracket : '[';
@@ -184,6 +186,8 @@ RULE_BIN : RULE_SIGN? ('0'|'1')+ 'b';
 RULE_CHAR : RULE_SIGN? '\'' RULE_ANY_OTHER '\'';
 
 fragment RULE_SIGN : ('-'|'+');
+
+RULE_OPERANDS : (RULE_SIGN|'*'|'/');
 
 RULE_ID : ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

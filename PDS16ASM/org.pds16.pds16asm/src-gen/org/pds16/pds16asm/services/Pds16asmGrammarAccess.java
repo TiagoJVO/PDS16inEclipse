@@ -2026,50 +2026,50 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	public class ExpressionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.pds16asm.Pds16asm.Expression");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Assignment cNumericValueAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
-		private final Alternatives cNumericValueAlternatives_0_0 = (Alternatives)cNumericValueAssignment_0.eContents().get(0);
-		private final RuleCall cNumericValueINTTerminalRuleCall_0_0_0 = (RuleCall)cNumericValueAlternatives_0_0.eContents().get(0);
-		private final RuleCall cNumericValueHEXTerminalRuleCall_0_0_1 = (RuleCall)cNumericValueAlternatives_0_0.eContents().get(1);
-		private final RuleCall cNumericValueOCTTerminalRuleCall_0_0_2 = (RuleCall)cNumericValueAlternatives_0_0.eContents().get(2);
-		private final RuleCall cNumericValueBINTerminalRuleCall_0_0_3 = (RuleCall)cNumericValueAlternatives_0_0.eContents().get(3);
-		private final RuleCall cNumericValueCHARTerminalRuleCall_0_0_4 = (RuleCall)cNumericValueAlternatives_0_0.eContents().get(4);
-		private final Assignment cIdValueAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
-		private final RuleCall cIdValueIDTerminalRuleCall_1_0 = (RuleCall)cIdValueAssignment_1.eContents().get(0);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
+		private final Assignment cNumericValueAssignment_0_0 = (Assignment)cAlternatives_0.eContents().get(0);
+		private final RuleCall cNumericValueNumberParserRuleCall_0_0_0 = (RuleCall)cNumericValueAssignment_0_0.eContents().get(0);
+		private final Assignment cIdValueAssignment_0_1 = (Assignment)cAlternatives_0.eContents().get(1);
+		private final RuleCall cIdValueIDTerminalRuleCall_0_1_0 = (RuleCall)cIdValueAssignment_0_1.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cPlusSignKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cExAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cExExpressionParserRuleCall_1_1_0 = (RuleCall)cExAssignment_1_1.eContents().get(0);
 		
 		//Expression:
-		//	(numericValue+=(INT | HEX | OCT | BIN | CHAR) | idValue+=ID)+;
+		//	(numericValue+=Number | idValue+=ID) ('+' ex=Expression)?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//(numericValue+=(INT | HEX | OCT | BIN | CHAR) | idValue+=ID)+
-		public Alternatives getAlternatives() { return cAlternatives; }
+		//(numericValue+=Number | idValue+=ID) ('+' ex=Expression)?
+		public Group getGroup() { return cGroup; }
 		
-		//numericValue+=(INT | HEX | OCT | BIN | CHAR)
-		public Assignment getNumericValueAssignment_0() { return cNumericValueAssignment_0; }
+		//(numericValue+=Number | idValue+=ID)
+		public Alternatives getAlternatives_0() { return cAlternatives_0; }
 		
-		//(INT | HEX | OCT | BIN | CHAR)
-		public Alternatives getNumericValueAlternatives_0_0() { return cNumericValueAlternatives_0_0; }
+		//numericValue+=Number
+		public Assignment getNumericValueAssignment_0_0() { return cNumericValueAssignment_0_0; }
 		
-		//INT
-		public RuleCall getNumericValueINTTerminalRuleCall_0_0_0() { return cNumericValueINTTerminalRuleCall_0_0_0; }
-		
-		//HEX
-		public RuleCall getNumericValueHEXTerminalRuleCall_0_0_1() { return cNumericValueHEXTerminalRuleCall_0_0_1; }
-		
-		//OCT
-		public RuleCall getNumericValueOCTTerminalRuleCall_0_0_2() { return cNumericValueOCTTerminalRuleCall_0_0_2; }
-		
-		//BIN
-		public RuleCall getNumericValueBINTerminalRuleCall_0_0_3() { return cNumericValueBINTerminalRuleCall_0_0_3; }
-		
-		//CHAR
-		public RuleCall getNumericValueCHARTerminalRuleCall_0_0_4() { return cNumericValueCHARTerminalRuleCall_0_0_4; }
+		//Number
+		public RuleCall getNumericValueNumberParserRuleCall_0_0_0() { return cNumericValueNumberParserRuleCall_0_0_0; }
 		
 		//idValue+=ID
-		public Assignment getIdValueAssignment_1() { return cIdValueAssignment_1; }
+		public Assignment getIdValueAssignment_0_1() { return cIdValueAssignment_0_1; }
 		
 		//ID
-		public RuleCall getIdValueIDTerminalRuleCall_1_0() { return cIdValueIDTerminalRuleCall_1_0; }
+		public RuleCall getIdValueIDTerminalRuleCall_0_1_0() { return cIdValueIDTerminalRuleCall_0_1_0; }
+		
+		//('+' ex=Expression)?
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//'+'
+		public Keyword getPlusSignKeyword_1_0() { return cPlusSignKeyword_1_0; }
+		
+		//ex=Expression
+		public Assignment getExAssignment_1_1() { return cExAssignment_1_1; }
+		
+		//Expression
+		public RuleCall getExExpressionParserRuleCall_1_1_0() { return cExExpressionParserRuleCall_1_1_0; }
 	}
 	public class LowOrHightElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.pds16asm.Pds16asm.LowOrHight");
@@ -2279,6 +2279,7 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 	private final TerminalRule tBIN;
 	private final TerminalRule tCHAR;
 	private final TerminalRule tSIGN;
+	private final TerminalRule tOPERANDS;
 	private final TerminalRule tID;
 	private final TerminalRule tIDLABEL;
 	private final TerminalRule tINT;
@@ -2360,6 +2361,7 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 		this.tBIN = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.pds16asm.Pds16asm.BIN");
 		this.tCHAR = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.pds16asm.Pds16asm.CHAR");
 		this.tSIGN = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.pds16asm.Pds16asm.SIGN");
+		this.tOPERANDS = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.pds16asm.Pds16asm.OPERANDS");
 		this.tID = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.pds16asm.Pds16asm.ID");
 		this.tIDLABEL = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.pds16asm.Pds16asm.IDLABEL");
 		this.tINT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.pds16.pds16asm.Pds16asm.INT");
@@ -2985,7 +2987,7 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Expression:
-	//	(numericValue+=(INT | HEX | OCT | BIN | CHAR) | idValue+=ID)+;
+	//	(numericValue+=Number | idValue+=ID) ('+' ex=Expression)?;
 	public ExpressionElements getExpressionAccess() {
 		return pExpression;
 	}
@@ -3054,6 +3056,12 @@ public class Pds16asmGrammarAccess extends AbstractGrammarElementFinder {
 	//	'-' | '+';
 	public TerminalRule getSIGNRule() {
 		return tSIGN;
+	}
+	
+	//terminal OPERANDS:
+	//	SIGN | '*' | '/';
+	public TerminalRule getOPERANDSRule() {
+		return tOPERANDS;
 	}
 	
 	//terminal ID:

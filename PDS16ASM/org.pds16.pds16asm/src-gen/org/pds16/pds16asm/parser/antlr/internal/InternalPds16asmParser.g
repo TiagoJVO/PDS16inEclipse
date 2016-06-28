@@ -3628,9 +3628,29 @@ ruleExpression returns [EObject current=null]
 		(
 			(
 				(
-					lv_numericValue_0_1=RULE_INT
 					{
-						newLeafNode(lv_numericValue_0_1, grammarAccess.getExpressionAccess().getNumericValueINTTerminalRuleCall_0_0_0());
+						newCompositeNode(grammarAccess.getExpressionAccess().getNumericValueNumberParserRuleCall_0_0_0());
+					}
+					lv_numericValue_0_0=ruleNumber
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getExpressionRule());
+						}
+						add(
+							$current,
+							"numericValue",
+							lv_numericValue_0_0,
+							"org.pds16.pds16asm.Pds16asm.Number");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			    |
+			(
+				(
+					lv_idValue_1_0=RULE_ID
+					{
+						newLeafNode(lv_idValue_1_0, grammarAccess.getExpressionAccess().getIdValueIDTerminalRuleCall_0_1_0());
 					}
 					{
 						if ($current==null) {
@@ -3638,93 +3658,39 @@ ruleExpression returns [EObject current=null]
 						}
 						addWithLastConsumed(
 							$current,
-							"numericValue",
-							lv_numericValue_0_1,
-							"org.pds16.pds16asm.Pds16asm.INT");
-					}
-					    |
-					lv_numericValue_0_2=RULE_HEX
-					{
-						newLeafNode(lv_numericValue_0_2, grammarAccess.getExpressionAccess().getNumericValueHEXTerminalRuleCall_0_0_1());
-					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getExpressionRule());
-						}
-						addWithLastConsumed(
-							$current,
-							"numericValue",
-							lv_numericValue_0_2,
-							"org.pds16.pds16asm.Pds16asm.HEX");
-					}
-					    |
-					lv_numericValue_0_3=RULE_OCT
-					{
-						newLeafNode(lv_numericValue_0_3, grammarAccess.getExpressionAccess().getNumericValueOCTTerminalRuleCall_0_0_2());
-					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getExpressionRule());
-						}
-						addWithLastConsumed(
-							$current,
-							"numericValue",
-							lv_numericValue_0_3,
-							"org.pds16.pds16asm.Pds16asm.OCT");
-					}
-					    |
-					lv_numericValue_0_4=RULE_BIN
-					{
-						newLeafNode(lv_numericValue_0_4, grammarAccess.getExpressionAccess().getNumericValueBINTerminalRuleCall_0_0_3());
-					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getExpressionRule());
-						}
-						addWithLastConsumed(
-							$current,
-							"numericValue",
-							lv_numericValue_0_4,
-							"org.pds16.pds16asm.Pds16asm.BIN");
-					}
-					    |
-					lv_numericValue_0_5=RULE_CHAR
-					{
-						newLeafNode(lv_numericValue_0_5, grammarAccess.getExpressionAccess().getNumericValueCHARTerminalRuleCall_0_0_4());
-					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getExpressionRule());
-						}
-						addWithLastConsumed(
-							$current,
-							"numericValue",
-							lv_numericValue_0_5,
-							"org.pds16.pds16asm.Pds16asm.CHAR");
+							"idValue",
+							lv_idValue_1_0,
+							"org.pds16.pds16asm.Pds16asm.ID");
 					}
 				)
 			)
 		)
-		    |
 		(
+			otherlv_2=PlusSign
+			{
+				newLeafNode(otherlv_2, grammarAccess.getExpressionAccess().getPlusSignKeyword_1_0());
+			}
 			(
-				lv_idValue_1_0=RULE_ID
-				{
-					newLeafNode(lv_idValue_1_0, grammarAccess.getExpressionAccess().getIdValueIDTerminalRuleCall_1_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getExpressionRule());
+				(
+					{
+						newCompositeNode(grammarAccess.getExpressionAccess().getExExpressionParserRuleCall_1_1_0());
 					}
-					addWithLastConsumed(
-						$current,
-						"idValue",
-						lv_idValue_1_0,
-						"org.pds16.pds16asm.Pds16asm.ID");
-				}
+					lv_ex_3_0=ruleExpression
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getExpressionRule());
+						}
+						set(
+							$current,
+							"ex",
+							lv_ex_3_0,
+							"org.pds16.pds16asm.Pds16asm.Expression");
+						afterParserOrEnumRuleCall();
+					}
+				)
 			)
-		)
-	)+
+		)?
+	)
 ;
 
 // Entry rule entryRuleLowOrHight

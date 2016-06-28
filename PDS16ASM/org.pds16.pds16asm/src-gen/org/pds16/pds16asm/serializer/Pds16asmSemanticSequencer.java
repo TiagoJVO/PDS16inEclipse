@@ -446,14 +446,7 @@ public class Pds16asmSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Expression returns Expression
 	 *
 	 * Constraint:
-	 *     (
-	 *         numericValue+=INT | 
-	 *         numericValue+=HEX | 
-	 *         numericValue+=OCT | 
-	 *         numericValue+=BIN | 
-	 *         numericValue+=CHAR | 
-	 *         idValue+=ID
-	 *     )+
+	 *     ((numericValue+=Number | idValue+=ID) ex=Expression?)
 	 */
 	protected void sequence_Expression(ISerializationContext context, Expression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

@@ -80,8 +80,7 @@ public class Pds16asmParser extends AbstractContentAssistParser {
 					put(grammarAccess.getIdx3OrLabelAccess().getAlternatives_1(), "rule__Idx3OrLabel__Alternatives_1");
 					put(grammarAccess.getConst4OrLabelAccess().getAlternatives_1(), "rule__Const4OrLabel__Alternatives_1");
 					put(grammarAccess.getOffset8OrLabelAccess().getAlternatives_1(), "rule__Offset8OrLabel__Alternatives_1");
-					put(grammarAccess.getExpressionAccess().getAlternatives(), "rule__Expression__Alternatives");
-					put(grammarAccess.getExpressionAccess().getNumericValueAlternatives_0_0(), "rule__Expression__NumericValueAlternatives_0_0");
+					put(grammarAccess.getExpressionAccess().getAlternatives_0(), "rule__Expression__Alternatives_0");
 					put(grammarAccess.getLowOrHightAccess().getAlternatives_1(), "rule__LowOrHight__Alternatives_1");
 					put(grammarAccess.getRegisterAccess().getValueAlternatives_0(), "rule__Register__ValueAlternatives_0");
 					put(grammarAccess.getNumberAccess().getValueAlternatives_0(), "rule__Number__ValueAlternatives_0");
@@ -139,6 +138,8 @@ public class Pds16asmParser extends AbstractContentAssistParser {
 					put(grammarAccess.getOperationsWithConstantAccess().getGroup(), "rule__OperationsWithConstant__Group__0");
 					put(grammarAccess.getOperationShiftAccess().getGroup(), "rule__OperationShift__Group__0");
 					put(grammarAccess.getOperationWithOffsetAccess().getGroup(), "rule__OperationWithOffset__Group__0");
+					put(grammarAccess.getExpressionAccess().getGroup(), "rule__Expression__Group__0");
+					put(grammarAccess.getExpressionAccess().getGroup_1(), "rule__Expression__Group_1__0");
 					put(grammarAccess.getLowOrHightAccess().getGroup(), "rule__LowOrHight__Group__0");
 					put(grammarAccess.getPDS16ASMAccess().getInstuctionsAssignment(), "rule__PDS16ASM__InstuctionsAssignment");
 					put(grammarAccess.getLabelAccess().getLabelNameAssignment_0(), "rule__Label__LabelNameAssignment_0");
@@ -210,8 +211,9 @@ public class Pds16asmParser extends AbstractContentAssistParser {
 					put(grammarAccess.getOperationShiftAccess().getSinAssignment_6(), "rule__OperationShift__SinAssignment_6");
 					put(grammarAccess.getOperationWithOffsetAccess().getRbxAssignment_0(), "rule__OperationWithOffset__RbxAssignment_0");
 					put(grammarAccess.getOperationWithOffsetAccess().getOffset8Assignment_2(), "rule__OperationWithOffset__Offset8Assignment_2");
-					put(grammarAccess.getExpressionAccess().getNumericValueAssignment_0(), "rule__Expression__NumericValueAssignment_0");
-					put(grammarAccess.getExpressionAccess().getIdValueAssignment_1(), "rule__Expression__IdValueAssignment_1");
+					put(grammarAccess.getExpressionAccess().getNumericValueAssignment_0_0(), "rule__Expression__NumericValueAssignment_0_0");
+					put(grammarAccess.getExpressionAccess().getIdValueAssignment_0_1(), "rule__Expression__IdValueAssignment_0_1");
+					put(grammarAccess.getExpressionAccess().getExAssignment_1_1(), "rule__Expression__ExAssignment_1_1");
 					put(grammarAccess.getLowOrHightAccess().getValueAssignment_3(), "rule__LowOrHight__ValueAssignment_3");
 					put(grammarAccess.getRegisterAccess().getValueAssignment(), "rule__Register__ValueAssignment");
 					put(grammarAccess.getNumberAccess().getValueAssignment(), "rule__Number__ValueAssignment");

@@ -145,7 +145,7 @@ OperationShift: rd=Register ',' rm=Register ',' const4=Const4OrLabel ',' sin=Num
 
 OperationWithOffset: rbx=Register ',' offset8=Offset8OrLabel;
 
-Expression: (numericValue+=(INT | HEX | OCT | BIN | CHAR) | idValue+=ID)+;//TODO: sinais
+Expression: (numericValue+=Number | idValue+=ID) (OPERANDS Expression)?;//TODO: bug sem espaços
 
 LowOrHight: '#' ('low' | 'high') '(' value=Expression ')' ;
 /******************************************************************************************/
@@ -165,7 +165,7 @@ terminal BIN returns ecore::EInt: SIGN? ('0' | '1')+ 'b';
 terminal CHAR returns ecore::EInt: SIGN? "'" ANY_OTHER "'";
 
 terminal SIGN : '-' | '+';
-
+terminal OPERANDS : SIGN | '*' | '/';
 /******************************************************************************************/
 
 terminal ID : ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;

@@ -190,10 +190,12 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Expression" eSuperTypes="#//Org">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numericValue" unique="false"
-        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="numericValue" upperBound="-1"
+        eType="#//Number" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="idValue" unique="false"
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ex" eType="#//Expression"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LowOrHight">
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//Expression"

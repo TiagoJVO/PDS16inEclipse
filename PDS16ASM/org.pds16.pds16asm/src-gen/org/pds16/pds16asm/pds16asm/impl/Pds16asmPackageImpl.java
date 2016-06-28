@@ -1772,9 +1772,9 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getExpression_NumericValue()
+  public EReference getExpression_NumericValue()
   {
-    return (EAttribute)expressionEClass.getEStructuralFeatures().get(0);
+    return (EReference)expressionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1785,6 +1785,16 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
   public EAttribute getExpression_IdValue()
   {
     return (EAttribute)expressionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getExpression_Ex()
+  {
+    return (EReference)expressionEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -2074,8 +2084,9 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
     createEReference(operationWithOffsetEClass, OPERATION_WITH_OFFSET__OFFSET8);
 
     expressionEClass = createEClass(EXPRESSION);
-    createEAttribute(expressionEClass, EXPRESSION__NUMERIC_VALUE);
+    createEReference(expressionEClass, EXPRESSION__NUMERIC_VALUE);
     createEAttribute(expressionEClass, EXPRESSION__ID_VALUE);
+    createEReference(expressionEClass, EXPRESSION__EX);
 
     lowOrHightEClass = createEClass(LOW_OR_HIGHT);
     createEReference(lowOrHightEClass, LOW_OR_HIGHT__VALUE);
@@ -2354,8 +2365,9 @@ public class Pds16asmPackageImpl extends EPackageImpl implements Pds16asmPackage
     initEReference(getOperationWithOffset_Offset8(), this.getOffset8OrLabel(), null, "offset8", null, 0, 1, OperationWithOffset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getExpression_NumericValue(), ecorePackage.getEInt(), "numericValue", null, 0, -1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExpression_NumericValue(), this.getNumber(), null, "numericValue", null, 0, -1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getExpression_IdValue(), ecorePackage.getEString(), "idValue", null, 0, -1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExpression_Ex(), this.getExpression(), null, "ex", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(lowOrHightEClass, LowOrHight.class, "LowOrHight", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getLowOrHight_Value(), this.getExpression(), null, "value", null, 0, 1, LowOrHight.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

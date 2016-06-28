@@ -5,11 +5,19 @@ package org.pds16.pds16asm.pds16asm.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.pds16.pds16asm.pds16asm.Expression;
 import org.pds16.pds16asm.pds16asm.Pds16asmPackage;
@@ -24,6 +32,7 @@ import org.pds16.pds16asm.pds16asm.Pds16asmPackage;
  * <ul>
  *   <li>{@link org.pds16.pds16asm.pds16asm.impl.ExpressionImpl#getNumericValue <em>Numeric Value</em>}</li>
  *   <li>{@link org.pds16.pds16asm.pds16asm.impl.ExpressionImpl#getIdValue <em>Id Value</em>}</li>
+ *   <li>{@link org.pds16.pds16asm.pds16asm.impl.ExpressionImpl#getEx <em>Ex</em>}</li>
  * </ul>
  *
  * @generated
@@ -31,14 +40,14 @@ import org.pds16.pds16asm.pds16asm.Pds16asmPackage;
 public class ExpressionImpl extends OrgImpl implements Expression
 {
   /**
-   * The cached value of the '{@link #getNumericValue() <em>Numeric Value</em>}' attribute list.
+   * The cached value of the '{@link #getNumericValue() <em>Numeric Value</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getNumericValue()
    * @generated
    * @ordered
    */
-  protected EList<Integer> numericValue;
+  protected EList<org.pds16.pds16asm.pds16asm.Number> numericValue;
 
   /**
    * The cached value of the '{@link #getIdValue() <em>Id Value</em>}' attribute list.
@@ -49,6 +58,16 @@ public class ExpressionImpl extends OrgImpl implements Expression
    * @ordered
    */
   protected EList<String> idValue;
+
+  /**
+   * The cached value of the '{@link #getEx() <em>Ex</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getEx()
+   * @generated
+   * @ordered
+   */
+  protected Expression ex;
 
   /**
    * <!-- begin-user-doc -->
@@ -76,11 +95,11 @@ public class ExpressionImpl extends OrgImpl implements Expression
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Integer> getNumericValue()
+  public EList<org.pds16.pds16asm.pds16asm.Number> getNumericValue()
   {
     if (numericValue == null)
     {
-      numericValue = new EDataTypeEList<Integer>(Integer.class, this, Pds16asmPackage.EXPRESSION__NUMERIC_VALUE);
+      numericValue = new EObjectContainmentEList<org.pds16.pds16asm.pds16asm.Number>(org.pds16.pds16asm.pds16asm.Number.class, this, Pds16asmPackage.EXPRESSION__NUMERIC_VALUE);
     }
     return numericValue;
   }
@@ -104,6 +123,72 @@ public class ExpressionImpl extends OrgImpl implements Expression
    * <!-- end-user-doc -->
    * @generated
    */
+  public Expression getEx()
+  {
+    return ex;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetEx(Expression newEx, NotificationChain msgs)
+  {
+    Expression oldEx = ex;
+    ex = newEx;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Pds16asmPackage.EXPRESSION__EX, oldEx, newEx);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setEx(Expression newEx)
+  {
+    if (newEx != ex)
+    {
+      NotificationChain msgs = null;
+      if (ex != null)
+        msgs = ((InternalEObject)ex).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.EXPRESSION__EX, null, msgs);
+      if (newEx != null)
+        msgs = ((InternalEObject)newEx).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Pds16asmPackage.EXPRESSION__EX, null, msgs);
+      msgs = basicSetEx(newEx, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, Pds16asmPackage.EXPRESSION__EX, newEx, newEx));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case Pds16asmPackage.EXPRESSION__NUMERIC_VALUE:
+        return ((InternalEList<?>)getNumericValue()).basicRemove(otherEnd, msgs);
+      case Pds16asmPackage.EXPRESSION__EX:
+        return basicSetEx(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -113,6 +198,8 @@ public class ExpressionImpl extends OrgImpl implements Expression
         return getNumericValue();
       case Pds16asmPackage.EXPRESSION__ID_VALUE:
         return getIdValue();
+      case Pds16asmPackage.EXPRESSION__EX:
+        return getEx();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -130,11 +217,14 @@ public class ExpressionImpl extends OrgImpl implements Expression
     {
       case Pds16asmPackage.EXPRESSION__NUMERIC_VALUE:
         getNumericValue().clear();
-        getNumericValue().addAll((Collection<? extends Integer>)newValue);
+        getNumericValue().addAll((Collection<? extends org.pds16.pds16asm.pds16asm.Number>)newValue);
         return;
       case Pds16asmPackage.EXPRESSION__ID_VALUE:
         getIdValue().clear();
         getIdValue().addAll((Collection<? extends String>)newValue);
+        return;
+      case Pds16asmPackage.EXPRESSION__EX:
+        setEx((Expression)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -156,6 +246,9 @@ public class ExpressionImpl extends OrgImpl implements Expression
       case Pds16asmPackage.EXPRESSION__ID_VALUE:
         getIdValue().clear();
         return;
+      case Pds16asmPackage.EXPRESSION__EX:
+        setEx((Expression)null);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -174,6 +267,8 @@ public class ExpressionImpl extends OrgImpl implements Expression
         return numericValue != null && !numericValue.isEmpty();
       case Pds16asmPackage.EXPRESSION__ID_VALUE:
         return idValue != null && !idValue.isEmpty();
+      case Pds16asmPackage.EXPRESSION__EX:
+        return ex != null;
     }
     return super.eIsSet(featureID);
   }
@@ -189,9 +284,7 @@ public class ExpressionImpl extends OrgImpl implements Expression
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (numericValue: ");
-    result.append(numericValue);
-    result.append(", idValue: ");
+    result.append(" (idValue: ");
     result.append(idValue);
     result.append(')');
     return result.toString();

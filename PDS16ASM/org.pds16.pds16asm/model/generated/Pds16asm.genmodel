@@ -156,8 +156,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//OperationWithOffset/offset8"/>
     </genClasses>
     <genClasses ecoreClass="Pds16asm.ecore#//Expression">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Expression/numericValue"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//Expression/numericValue"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pds16asm.ecore#//Expression/idValue"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//Expression/ex"/>
     </genClasses>
     <genClasses ecoreClass="Pds16asm.ecore#//LowOrHight">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pds16asm.ecore#//LowOrHight/value"/>
