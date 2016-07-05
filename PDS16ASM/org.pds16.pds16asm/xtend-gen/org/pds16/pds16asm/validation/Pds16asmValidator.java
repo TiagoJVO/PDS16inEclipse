@@ -165,7 +165,7 @@ public class Pds16asmValidator extends AbstractPds16asmValidator {
         org.pds16.pds16asm.pds16asm.Number item = list.get((i).intValue());
         if (((item.getValue() < this.MIN_8BIT_WITH_SIGNAL) || (item.getValue() > this.MAX_8BIT_WITH_SIGNAL))) {
           this.warning(((("One of the declared values isn\'t be between" + Integer.valueOf(this.MIN_8BIT_WITH_SIGNAL)) + " and ") + Integer.valueOf(this.MAX_8BIT_WITH_SIGNAL)), 
-            Pds16asmPackage.Literals.BYTE__TAG, 
+            Pds16asmPackage.Literals.BYTE__NUMBERS, 
             "Invalid Number");
         }
       };
@@ -188,7 +188,7 @@ public class Pds16asmValidator extends AbstractPds16asmValidator {
         org.pds16.pds16asm.pds16asm.Number item = list.get((i).intValue());
         if (((item.getValue() < this.MIN_16BIT_WITH_SIGNAL) || (item.getValue() > this.MAX_16BIT_WITH_SIGNAL))) {
           this.warning(((("One of the declared values isn\'t be between" + Integer.valueOf(this.MIN_16BIT_WITH_SIGNAL)) + " and ") + Integer.valueOf(this.MAX_16BIT_WITH_SIGNAL)), 
-            Pds16asmPackage.Literals.WORD__TAG, 
+            Pds16asmPackage.Literals.WORD__NUMBERS, 
             "Invalid Number");
         }
       };

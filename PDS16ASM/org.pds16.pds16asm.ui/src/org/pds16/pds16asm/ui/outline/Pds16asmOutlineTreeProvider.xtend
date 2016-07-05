@@ -9,6 +9,22 @@ import org.eclipse.xtext.ui.editor.outline.IOutlineNode
 import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider
 import org.pds16.pds16asm.pds16asm.impl.LabelImpl
 import org.pds16.pds16asm.pds16asm.impl.DirectiveImpl
+import org.pds16.pds16asm.pds16asm.impl.BssImpl
+import org.pds16.pds16asm.pds16asm.impl.DataImpl
+import org.pds16.pds16asm.pds16asm.impl.EndImpl
+import org.pds16.pds16asm.pds16asm.impl.TextImpl
+import org.pds16.pds16asm.pds16asm.impl.EquImpl
+import org.pds16.pds16asm.pds16asm.impl.OrgImpl
+import org.pds16.pds16asm.pds16asm.impl.SectionImpl
+import org.pds16.pds16asm.pds16asm.Directive
+import org.pds16.pds16asm.pds16asm.Label
+import org.pds16.pds16asm.pds16asm.Bss
+import org.pds16.pds16asm.pds16asm.Data
+import org.pds16.pds16asm.pds16asm.End
+import org.pds16.pds16asm.pds16asm.Text
+import org.pds16.pds16asm.pds16asm.Equ
+import org.pds16.pds16asm.pds16asm.Org
+import org.pds16.pds16asm.pds16asm.Section
 
 /**
  * Customization of the default outline structure.
@@ -18,16 +34,30 @@ import org.pds16.pds16asm.pds16asm.impl.DirectiveImpl
 class Pds16asmOutlineTreeProvider extends DefaultOutlineTreeProvider{
 	
 	
-	override _createNode(IOutlineNode parentNode, EObject modelElement){
-		var Object text = textDispatcher.invoke(modelElement);
-		var boolean isLeaf = isLeafDispatcher.invoke(modelElement);
-		if (text == null && isLeaf)
-			return;
-					
-		if (modelElement instanceof LabelImpl || modelElement instanceof DirectiveImpl){
-			var Image image = imageDispatcher.invoke(modelElement);
-			createEObjectNode(parentNode, modelElement, image, text, true);
-		}		
-	}
+	override _createNode(IOutlineNode parentNode, EObject modelElement){					
+		if (modelElement instanceof Label){
+			setOutline(parentNode,modelElement)
+		}	
+		
+		else if (modelElement instanceof Directive){
+			var element = (modelElement as DirectiveImpl).value
+			if(element instanceof Bss ||
+				element instanceof Data ||
+				element instanceof End ||
+				element instanceof Text ||
+				element instanceof Equ ||
+				element instanceof Org ||
+				element instanceof Section){
+					setOutline(parentNode,element)
+			}
+		}	
+	}	
 	
+	def setOutline(IOutlineNode parentNode, EObject obj){
+		var Object text = textDispatcher.invoke(obj);
+		if (text == null && isLeafDispatcher.invoke(obj))
+			return;
+		var Image image = imageDispatcher.invoke(obj);
+		createEObjectNode(parentNode, obj, image, text, true);
+	}
 }

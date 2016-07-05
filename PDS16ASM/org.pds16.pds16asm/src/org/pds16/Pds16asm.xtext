@@ -18,31 +18,31 @@ Directive:
 
 LabelDirective: Ascii | Asciiz | Byte | Word | Space;
 		
-Bss: value='.bss';
+Bss: tag='.bss';
 
-Data: value='.data';
+Data: tag='.data';
 
-End: value='.end';
+End: tag='.end';
 
-Text: value='.text';		
+Text: tag='.text';		
 
 Ascii:	tag='.ascii' (values+=STRING (',' values+=STRING)*)?;
 
 Asciiz:	tag='.asciiz' (values+=STRING (',' values+=STRING)*)?;
 
-Byte:	tag='.byte' (((numbers+=Number) | (s+=STRING))  (',' ((numbers+=Number) | (s+=STRING)) )*)?;
+Byte:	tag='.byte' ((values+=ID | numbers+=Number)  (',' (values+= ID | numbers+=Number))*)?;
 					
 Word:	tag='.word' ((values+=ID | numbers+=Number)  (',' (values+= ID | numbers+=Number))*)?;
 
-Space:	'.space' size=Number (',' byteValue=Number)?;
+Space:	tag='.space' size=Number (',' byteValue=Number)?;
 
-Set:    '.set' value1=ID ',' value2=Expression;
+Set:    tag='.set' id=ID ',' value=Expression;
 
-Section:'.section' value=ID;
+Section: tag='.section' id=ID;
 
-Org:    '.org' Expression;
+Org:    tag='.org' value=Expression;
 
-Equ:    '.equ' value1=ID ',' value2=Expression;
+Equ:    tag='.equ' id=ID ',' value=Expression;
 
 Instructions:
 	Load | Store | Aritmetica | Logica | Jump | Nop | Ret;
@@ -145,7 +145,7 @@ OperationShift: rd=Register ',' rm=Register ',' const4=Const4OrLabel ',' sin=Num
 
 OperationWithOffset: rbx=Register ',' offset8=Offset8OrLabel;
 
-Expression: (numericValue+=Number | idValue+=ID) (OPERANDS Expression)?;//TODO: bug sem espaços
+Expression: (numericValue+=Number | idValue+=ID) (operand=OPERANDS expression=Expression)?;//TODO: bug sem espaços
 
 LowOrHight: '#' ('low' | 'high') '(' value=Expression ')' ;
 /******************************************************************************************/
@@ -165,7 +165,7 @@ terminal BIN returns ecore::EInt: SIGN? ('0' | '1')+ 'b';
 terminal CHAR returns ecore::EInt: SIGN? "'" ANY_OTHER "'";
 
 terminal SIGN : '-' | '+';
-terminal OPERANDS : SIGN | '*' | '/';
+terminal OPERANDS : '-' | '+' | '*' | '/';
 /******************************************************************************************/
 
 terminal ID : ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;

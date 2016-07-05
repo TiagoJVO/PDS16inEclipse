@@ -6,21 +6,11 @@ package org.pds16.pds16asm.ui.labeling
 import com.google.inject.Inject
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider
 import org.eclipse.xtext.ui.label.DefaultEObjectLabelProvider
-import org.pds16.pds16asm.pds16asm.Bss
-import org.pds16.pds16asm.pds16asm.Directive
 import org.pds16.pds16asm.pds16asm.Label
-import org.pds16.pds16asm.pds16asm.Data
-import org.pds16.pds16asm.pds16asm.End
-import org.pds16.pds16asm.pds16asm.Text
 import org.pds16.pds16asm.pds16asm.Equ
 import org.pds16.pds16asm.pds16asm.Org
 import org.pds16.pds16asm.pds16asm.Section
 import org.pds16.pds16asm.pds16asm.Set
-import org.pds16.pds16asm.pds16asm.Ascii
-import org.pds16.pds16asm.pds16asm.Asciiz
-import org.pds16.pds16asm.pds16asm.Byte
-import org.pds16.pds16asm.pds16asm.Word
-import org.pds16.pds16asm.pds16asm.Space
 
 /**
  * Provides labels for EObjects.
@@ -33,34 +23,13 @@ class Pds16asmLabelProvider extends DefaultEObjectLabelProvider {
 	new(AdapterFactoryLabelProvider delegate) {
 		super(delegate);
 	}
-
-	// Labels and icons can be computed like this:
 	
 	def text(Label l) {
-		l.labelName.substring(0, l.labelName.length-1)  
-	}
-
-	def text(Directive ele) {
-		var value = ele.value;
-		switch (value) {
-			 case value instanceof Bss : return 'Bss'
-			 case value instanceof Data : return 'Data'
-			 case value instanceof End : return 'End'
-			 case value instanceof Text : return 'Text'
-			 case value instanceof Equ : return text(value as Equ)
-			 case value instanceof Org : return text(value as Org)
-			 case value instanceof Section : return text(value as Section)
-			 case value instanceof Set : return text(value as Set)
-			 case value instanceof Ascii : return text(value as Ascii)
-			 case value instanceof Asciiz : return text(value as Asciiz)
-			 case value instanceof Byte : return text(value as Byte)
-			 case value instanceof Word : return text(value as Word)
-			 case value instanceof Space : return text(value as Space)
-		}
+		return 'Label: ' + l.labelName.substring(0, l.labelName.length-1)  
 	}
 	
 	def text(Equ ele){
-		return 'Equ ' + ele.value1
+		return 'Equ: ' + ele.id
 	}
 	
 	def text(Org ele){
@@ -68,31 +37,10 @@ class Pds16asmLabelProvider extends DefaultEObjectLabelProvider {
 	}
 	
 	def text(Section ele){
-		return 'Section ' + ele.value
+		return 'Section: ' + ele.id
 	}
 	
 	def text(Set ele){
-		return 'Set ' + ele.value1
+		return 'Set: ' + ele.id
 	}
-	
-	def text(Ascii ele){
-		return 'Ascii ' + ele.values
-	}
-	
-	def text(Asciiz ele){
-		return 'Ascizz ' + ele.values
-	}
-	
-	def text(Byte ele){
-		return 'Byte ' + ele.s
-	}
-	
-	def text(Word ele){
-		return 'Word ' + ele.values 
-	}
-	
-	def text(Space ele){
-		return 'Space ' + ele.size.value
-	}
-
 }

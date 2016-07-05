@@ -119,7 +119,7 @@ class Pds16asmValidator extends AbstractPds16asmValidator {
 			var item = list.get(i);
 				if(item.value < MIN_8BIT_WITH_SIGNAL  || item.value > MAX_8BIT_WITH_SIGNAL)
 					warning("One of the declared values isn't be between" + MIN_8BIT_WITH_SIGNAL + ' and ' + MAX_8BIT_WITH_SIGNAL, 
-						Pds16asmPackage.Literals.BYTE__TAG,
+						Pds16asmPackage.Literals.BYTE__NUMBERS,
 						"Invalid Number")
 		]	
 
@@ -136,7 +136,7 @@ class Pds16asmValidator extends AbstractPds16asmValidator {
 			var item = list.get(i);
 				if(item.value < MIN_16BIT_WITH_SIGNAL  || item.value > MAX_16BIT_WITH_SIGNAL)
 					warning("One of the declared values isn't be between" + MIN_16BIT_WITH_SIGNAL + ' and ' + MAX_16BIT_WITH_SIGNAL, 
-						Pds16asmPackage.Literals.WORD__TAG,
+						Pds16asmPackage.Literals.WORD__NUMBERS,
 						"Invalid Number")
 		]	
 

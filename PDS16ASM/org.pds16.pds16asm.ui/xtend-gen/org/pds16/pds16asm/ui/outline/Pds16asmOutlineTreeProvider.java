@@ -8,8 +8,16 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.xtext.ui.editor.outline.IOutlineNode;
 import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider;
+import org.pds16.pds16asm.pds16asm.Bss;
+import org.pds16.pds16asm.pds16asm.Data;
+import org.pds16.pds16asm.pds16asm.Directive;
+import org.pds16.pds16asm.pds16asm.End;
+import org.pds16.pds16asm.pds16asm.Equ;
+import org.pds16.pds16asm.pds16asm.Label;
+import org.pds16.pds16asm.pds16asm.Org;
+import org.pds16.pds16asm.pds16asm.Section;
+import org.pds16.pds16asm.pds16asm.Text;
 import org.pds16.pds16asm.pds16asm.impl.DirectiveImpl;
-import org.pds16.pds16asm.pds16asm.impl.LabelImpl;
 
 /**
  * Customization of the default outline structure.
@@ -20,14 +28,30 @@ import org.pds16.pds16asm.pds16asm.impl.LabelImpl;
 public class Pds16asmOutlineTreeProvider extends DefaultOutlineTreeProvider {
   @Override
   public void _createNode(final IOutlineNode parentNode, final EObject modelElement) {
-    Object text = this.textDispatcher.invoke(modelElement);
-    boolean isLeaf = (this.isLeafDispatcher.invoke(modelElement)).booleanValue();
-    if ((Objects.equal(text, null) && isLeaf)) {
+    if ((modelElement instanceof Label)) {
+      this.setOutline(parentNode, modelElement);
+    } else {
+      if ((modelElement instanceof Directive)) {
+        EObject element = ((DirectiveImpl) modelElement).getValue();
+        if ((((((((element instanceof Bss) || 
+          (element instanceof Data)) || 
+          (element instanceof End)) || 
+          (element instanceof Text)) || 
+          (element instanceof Equ)) || 
+          (element instanceof Org)) || 
+          (element instanceof Section))) {
+          this.setOutline(parentNode, element);
+        }
+      }
+    }
+  }
+  
+  public void setOutline(final IOutlineNode parentNode, final EObject obj) {
+    Object text = this.textDispatcher.invoke(obj);
+    if ((Objects.equal(text, null) && (this.isLeafDispatcher.invoke(obj)).booleanValue())) {
       return;
     }
-    if (((modelElement instanceof LabelImpl) || (modelElement instanceof DirectiveImpl))) {
-      Image image = this.imageDispatcher.invoke(modelElement);
-      this.createEObjectNode(parentNode, modelElement, image, text, true);
-    }
+    Image image = this.imageDispatcher.invoke(obj);
+    this.createEObjectNode(parentNode, obj, image, text, true);
   }
 }
