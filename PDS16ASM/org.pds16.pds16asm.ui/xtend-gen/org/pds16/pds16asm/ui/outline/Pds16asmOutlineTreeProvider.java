@@ -16,6 +16,7 @@ import org.pds16.pds16asm.pds16asm.Equ;
 import org.pds16.pds16asm.pds16asm.Label;
 import org.pds16.pds16asm.pds16asm.Org;
 import org.pds16.pds16asm.pds16asm.Section;
+import org.pds16.pds16asm.pds16asm.Set;
 import org.pds16.pds16asm.pds16asm.Text;
 import org.pds16.pds16asm.pds16asm.impl.DirectiveImpl;
 
@@ -33,11 +34,12 @@ public class Pds16asmOutlineTreeProvider extends DefaultOutlineTreeProvider {
     } else {
       if ((modelElement instanceof Directive)) {
         EObject element = ((DirectiveImpl) modelElement).getValue();
-        if ((((((((element instanceof Bss) || 
+        if (((((((((element instanceof Bss) || 
           (element instanceof Data)) || 
           (element instanceof End)) || 
           (element instanceof Text)) || 
           (element instanceof Equ)) || 
+          (element instanceof Set)) || 
           (element instanceof Org)) || 
           (element instanceof Section))) {
           this.setOutline(parentNode, element);

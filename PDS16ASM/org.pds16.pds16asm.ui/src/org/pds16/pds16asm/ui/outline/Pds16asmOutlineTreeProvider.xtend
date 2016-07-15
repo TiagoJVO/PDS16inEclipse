@@ -25,6 +25,7 @@ import org.pds16.pds16asm.pds16asm.Text
 import org.pds16.pds16asm.pds16asm.Equ
 import org.pds16.pds16asm.pds16asm.Org
 import org.pds16.pds16asm.pds16asm.Section
+import org.pds16.pds16asm.pds16asm.Set
 
 /**
  * Customization of the default outline structure.
@@ -46,6 +47,7 @@ class Pds16asmOutlineTreeProvider extends DefaultOutlineTreeProvider{
 				element instanceof End ||
 				element instanceof Text ||
 				element instanceof Equ ||
+				element instanceof Set ||
 				element instanceof Org ||
 				element instanceof Section){
 					setOutline(parentNode,element)
