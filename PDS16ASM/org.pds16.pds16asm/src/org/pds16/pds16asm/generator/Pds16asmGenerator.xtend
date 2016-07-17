@@ -91,7 +91,7 @@ class Pds16asmGenerator extends AbstractGenerator {
 		val String dasmPath = System.getenv(SYSTEM_ENV_DASM)
 		
 		//adding dasm.exe path to the command
-		command.add(dasmPath);
+		command.add(dasmPath)
 		
 		var resourceFullPath = ""
         val resourceRelativePath = resource.URI
@@ -106,7 +106,7 @@ class Pds16asmGenerator extends AbstractGenerator {
 		command.add(resourceFullPath)
 		
 		val ProcessBuilder builder = new ProcessBuilder(command)
-		val Process process = builder.start();
+		val Process process = builder.start()
 		
 		//waiting for termination
 		process.waitFor()

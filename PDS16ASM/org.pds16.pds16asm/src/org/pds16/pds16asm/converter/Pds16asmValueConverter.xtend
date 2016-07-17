@@ -23,7 +23,7 @@ class Pds16asmValueConverter extends DefaultTerminalConverters implements IValue
 	
 	@ValueConverter(rule = "HEX")
     def IValueConverter<Integer> getHexConverter() {
-        return hexValueConverter;
+        return hexValueConverter
 	}
 	
 	@ValueConverter(rule = "OCT")
