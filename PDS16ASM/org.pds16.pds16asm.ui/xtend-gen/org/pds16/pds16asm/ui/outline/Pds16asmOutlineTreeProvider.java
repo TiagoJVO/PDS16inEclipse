@@ -48,6 +48,13 @@ public class Pds16asmOutlineTreeProvider extends DefaultOutlineTreeProvider {
     }
   }
   
+  /**
+   * This method is used to create a new outline node and to the current element
+   * received by parameter
+   * 
+   * @param parentNode the parentNode is a node associated to the outline view
+   * @param obj the obj is a representation of an element of the grammar
+   */
   public void setOutline(final IOutlineNode parentNode, final EObject obj) {
     Object text = this.textDispatcher.invoke(obj);
     if ((Objects.equal(text, null) && (this.isLeafDispatcher.invoke(obj)).booleanValue())) {

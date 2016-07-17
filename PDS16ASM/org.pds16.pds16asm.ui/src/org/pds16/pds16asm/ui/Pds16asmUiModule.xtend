@@ -14,11 +14,11 @@ import org.eclipse.xtext.ui.editor.syntaxcoloring.IHighlightingConfiguration
 class Pds16asmUiModule extends AbstractPds16asmUiModule {
 
 	 def Class<? extends IHighlightingConfiguration> bindILexicalHighlightingConfiguration () {
- 		return Pds16asmHighlightingConfiguration;
+ 		return Pds16asmHighlightingConfiguration
  	 }
 	 
      def Class<? extends AbstractAntlrTokenToAttributeIdMapper> bindAbstractAntlrTokenAtributeIdMapper() {
-		 return Pds16asmTokenAtributeIdMapper;
+		 return Pds16asmTokenAtributeIdMapper
 	 }
 
 }

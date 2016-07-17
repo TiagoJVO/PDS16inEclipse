@@ -6,6 +6,15 @@ import org.pds16.pds16asm.ui.Pds16asmHighlightingConfiguration;
 
 @SuppressWarnings("all")
 public class Pds16asmTokenAtributeIdMapper extends DefaultAntlrTokenToAttributeIdMapper {
+  /**
+   * This method is called for each grammatical token
+   * to associate the tokens to the semantic highlighting style
+   * 
+   * @param tokenName the tokenName indicate the name of grammatical token
+   * @param tokenType the tokenType indicate the id of the grammatical token
+   * 
+   * @return the semantic highlighting style
+   */
   @Override
   public String calculateId(final String tokenName, final int tokenType) {
     switch (tokenType) {

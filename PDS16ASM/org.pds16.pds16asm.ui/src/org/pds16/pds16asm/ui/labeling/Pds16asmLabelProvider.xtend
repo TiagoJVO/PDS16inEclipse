@@ -24,23 +24,53 @@ class Pds16asmLabelProvider extends DefaultEObjectLabelProvider {
 		super(delegate);
 	}
 	
-	def text(Label l) {
-		return 'Label: ' + l.labelName.substring(0, l.labelName.length-1)  
+	/**
+	 * This method returns the name of the label 
+	 * to show on the outline
+	 * 
+	 * @param label the label represents the Label token of the grammar 
+	 */
+	def text(Label label) {
+		return 'Label: ' + label.labelName.substring(0, label.labelName.length-1)  
 	}
 	
-	def text(Equ ele){
-		return 'Equ: ' + ele.id
+	/**
+	 * This method returns the name of the label 
+	 * to show on the outline
+	 * 
+	 * @param equ the equ represents the Equ token of the grammar 
+	 */
+	def text(Equ equ){
+		return 'Equ: ' + equ.id
 	}
 	
-	def text(Org ele){
+	/**
+	 * This method returns the name of the label 
+	 * to show on the outline
+	 * 
+	 * @param org the org represents the Org token of the grammar 
+	 */
+	def text(Org org){
 		return 'Org '
 	}
 	
-	def text(Section ele){
-		return 'Section: ' + ele.id
+	/**
+	 * This method returns the name of the label 
+	 * to show on the outline
+	 * 
+	 * @param section the section represents the Section token of the grammar 
+	 */
+	def text(Section section){
+		return 'Section: ' + section.id
 	}
 	
-	def text(Set ele){
-		return 'Set: ' + ele.id
+	/**
+	 * This method returns the name of the label 
+	 * to show on the outline
+	 * 
+	 * @param set the set represents the Set token of the grammar 
+	 */
+	def text(Set set){
+		return 'Set: ' + set.id
 	}
 }

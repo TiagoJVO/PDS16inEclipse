@@ -4,7 +4,16 @@ import org.eclipse.xtext.ide.editor.syntaxcoloring.DefaultAntlrTokenToAttributeI
 import org.pds16.pds16asm.parser.antlr.lexer.InternalPds16asmLexer
 
 class Pds16asmTokenAtributeIdMapper extends DefaultAntlrTokenToAttributeIdMapper{
-
+	
+	/**
+	 * This method is called for each grammatical token
+	 * to associate the tokens to the semantic highlighting style
+	 * 
+	 * @param tokenName the tokenName indicate the name of grammatical token
+	 * @param tokenType the tokenType indicate the id of the grammatical token
+	 * 
+	 * @return the semantic highlighting style
+	 */
 	override String calculateId(String tokenName, int tokenType) {
 		switch(tokenType){
 			
@@ -149,7 +158,7 @@ class Pds16asmTokenAtributeIdMapper extends DefaultAntlrTokenToAttributeIdMapper
 			case InternalPds16asmLexer.Low:
 				return Pds16asmHighlightingConfiguration.TEXT			
 		}
-		return super.calculateId(tokenName,tokenType);
+		return super.calculateId(tokenName,tokenType)
 	}
 	
 }

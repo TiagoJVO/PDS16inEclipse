@@ -33,8 +33,7 @@ import org.pds16.pds16asm.pds16asm.Set
  * See https://www.eclipse.org/Xtext/documentation/304_ide_concepts.html#outline
  */
 class Pds16asmOutlineTreeProvider extends DefaultOutlineTreeProvider{
-	
-	
+
 	override _createNode(IOutlineNode parentNode, EObject modelElement){					
 		if (modelElement instanceof Label){
 			setOutline(parentNode,modelElement)
@@ -55,11 +54,18 @@ class Pds16asmOutlineTreeProvider extends DefaultOutlineTreeProvider{
 		}	
 	}	
 	
+	/**
+	 * This method is used to create a new outline node and to the current element
+	 * received by parameter
+	 * 
+	 * @param parentNode the parentNode is a node associated to the outline view
+	 * @param obj the obj is a representation of an element of the grammar
+	 */
 	def setOutline(IOutlineNode parentNode, EObject obj){
-		var Object text = textDispatcher.invoke(obj);
+		var Object text = textDispatcher.invoke(obj)
 		if (text == null && isLeafDispatcher.invoke(obj))
-			return;
-		var Image image = imageDispatcher.invoke(obj);
-		createEObjectNode(parentNode, obj, image, text, true);
+			return
+		var Image image = imageDispatcher.invoke(obj)
+		createEObjectNode(parentNode, obj, image, text, true)
 	}
 }

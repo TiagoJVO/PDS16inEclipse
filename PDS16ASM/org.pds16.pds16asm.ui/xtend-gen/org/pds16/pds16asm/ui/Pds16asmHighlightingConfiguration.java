@@ -18,6 +18,12 @@ public class Pds16asmHighlightingConfiguration extends DefaultHighlightingConfig
   
   public final static String TEXT = "Text";
   
+  /**
+   * This method is called by the framework and allows clients to register styles for
+   * the semantic highlighting stage.
+   * 
+   * @param acceptor the acceptor is used to announce the various default styles. It is never <code>null</code>.
+   */
   @Override
   public void configure(final IHighlightingConfigurationAcceptor acceptor) {
     this.addType(acceptor, Pds16asmHighlightingConfiguration.DIRECTIVES, 127, 0, 85, SWT.BOLD);
@@ -27,13 +33,23 @@ public class Pds16asmHighlightingConfiguration extends DefaultHighlightingConfig
     this.addType(acceptor, Pds16asmHighlightingConfiguration.TEXT, 42, 0, 255, SWT.NORMAL);
   }
   
-  public void addType(final IHighlightingConfigurationAcceptor acceptor, final String s, final int r, final int g, final int b, final int style) {
+  /**
+   * This method register a new style of the semantic highlighting
+   * 
+   * @param acceptor the acceptor is used to announce the various default styles. It is never <code>null</code>.
+   * @param str the str is used to indicate the id and name of the new style
+   * @param r the r is used to indicate the amount for the color red
+   * @param g the g is used to indicate the amount for the color green
+   * @param b the b is used to indicate the amount for the color brown
+   * @param style the style is used to indicate the style of the text
+   */
+  public void addType(final IHighlightingConfigurationAcceptor acceptor, final String str, final int r, final int g, final int b, final int style) {
     TextStyle textStyle = new TextStyle();
     RGB _rGB = new RGB(255, 255, 255);
     textStyle.setBackgroundColor(_rGB);
     RGB _rGB_1 = new RGB(r, g, b);
     textStyle.setColor(_rGB_1);
     textStyle.setStyle(style);
-    acceptor.acceptDefaultHighlighting(s, s, textStyle);
+    acceptor.acceptDefaultHighlighting(str, str, textStyle);
   }
 }

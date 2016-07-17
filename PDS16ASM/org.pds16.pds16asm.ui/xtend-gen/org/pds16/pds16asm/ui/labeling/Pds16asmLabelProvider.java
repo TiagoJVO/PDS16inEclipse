@@ -24,31 +24,61 @@ public class Pds16asmLabelProvider extends DefaultEObjectLabelProvider {
     super(delegate);
   }
   
-  public String text(final Label l) {
-    String _labelName = l.getLabelName();
-    String _labelName_1 = l.getLabelName();
+  /**
+   * This method returns the name of the label
+   * to show on the outline
+   * 
+   * @param label the label represents the Label token of the grammar
+   */
+  public String text(final Label label) {
+    String _labelName = label.getLabelName();
+    String _labelName_1 = label.getLabelName();
     int _length = _labelName_1.length();
     int _minus = (_length - 1);
     String _substring = _labelName.substring(0, _minus);
     return ("Label: " + _substring);
   }
   
-  public String text(final Equ ele) {
-    String _id = ele.getId();
+  /**
+   * This method returns the name of the label
+   * to show on the outline
+   * 
+   * @param equ the equ represents the Equ token of the grammar
+   */
+  public String text(final Equ equ) {
+    String _id = equ.getId();
     return ("Equ: " + _id);
   }
   
-  public String text(final Org ele) {
+  /**
+   * This method returns the name of the label
+   * to show on the outline
+   * 
+   * @param org the org represents the Org token of the grammar
+   */
+  public String text(final Org org) {
     return "Org ";
   }
   
-  public String text(final Section ele) {
-    String _id = ele.getId();
+  /**
+   * This method returns the name of the label
+   * to show on the outline
+   * 
+   * @param section the section represents the Section token of the grammar
+   */
+  public String text(final Section section) {
+    String _id = section.getId();
     return ("Section: " + _id);
   }
   
-  public String text(final Set ele) {
-    String _id = ele.getId();
+  /**
+   * This method returns the name of the label
+   * to show on the outline
+   * 
+   * @param set the set represents the Set token of the grammar
+   */
+  public String text(final Set set) {
+    String _id = set.getId();
     return ("Set: " + _id);
   }
 }
