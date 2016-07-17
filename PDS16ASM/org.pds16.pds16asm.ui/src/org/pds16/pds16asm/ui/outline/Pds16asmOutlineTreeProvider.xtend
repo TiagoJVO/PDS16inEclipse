@@ -35,12 +35,12 @@ import org.pds16.pds16asm.pds16asm.Set
 class Pds16asmOutlineTreeProvider extends DefaultOutlineTreeProvider{
 
 	override _createNode(IOutlineNode parentNode, EObject modelElement){					
-		if (modelElement instanceof Label){
+		if (modelElement instanceof Label)
 			setOutline(parentNode,modelElement)
-		}	
 		
 		else if (modelElement instanceof Directive){
 			var element = (modelElement as DirectiveImpl).value
+			//filter instances to show on outline
 			if(element instanceof Bss ||
 				element instanceof Data ||
 				element instanceof End ||
@@ -55,11 +55,11 @@ class Pds16asmOutlineTreeProvider extends DefaultOutlineTreeProvider{
 	}	
 	
 	/**
-	 * This method is used to create a new outline node and to the current element
+	 * Creates a new outline node and to the current element
 	 * received by parameter
 	 * 
-	 * @param parentNode the parentNode is a node associated to the outline view
-	 * @param obj the obj is a representation of an element of the grammar
+	 * @param parentNode node associated to the outline view
+	 * @param obj representation of an element of the grammar
 	 */
 	def setOutline(IOutlineNode parentNode, EObject obj){
 		var Object text = textDispatcher.invoke(obj)

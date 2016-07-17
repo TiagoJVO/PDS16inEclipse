@@ -10,8 +10,8 @@ public class Pds16asmTokenAtributeIdMapper extends DefaultAntlrTokenToAttributeI
    * This method is called for each grammatical token
    * to associate the tokens to the semantic highlighting style
    * 
-   * @param tokenName the tokenName indicate the name of grammatical token
-   * @param tokenType the tokenType indicate the id of the grammatical token
+   * @param tokenName name of grammatical token
+   * @param tokenType id of the grammatical token
    * 
    * @return the semantic highlighting style
    */

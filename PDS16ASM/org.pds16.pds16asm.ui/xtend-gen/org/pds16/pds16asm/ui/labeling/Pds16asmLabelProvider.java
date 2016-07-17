@@ -25,10 +25,10 @@ public class Pds16asmLabelProvider extends DefaultEObjectLabelProvider {
   }
   
   /**
-   * This method returns the name of the label
+   * Returns the name of the label
    * to show on the outline
    * 
-   * @param label the label represents the Label token of the grammar
+   * @param label represents the Label token of the grammar
    */
   public String text(final Label label) {
     String _labelName = label.getLabelName();
@@ -40,10 +40,10 @@ public class Pds16asmLabelProvider extends DefaultEObjectLabelProvider {
   }
   
   /**
-   * This method returns the name of the label
+   * Returns the name of the label
    * to show on the outline
    * 
-   * @param equ the equ represents the Equ token of the grammar
+   * @param equ represents the Equ token of the grammar
    */
   public String text(final Equ equ) {
     String _id = equ.getId();
@@ -51,20 +51,20 @@ public class Pds16asmLabelProvider extends DefaultEObjectLabelProvider {
   }
   
   /**
-   * This method returns the name of the label
+   * Returns the name of the label
    * to show on the outline
    * 
-   * @param org the org represents the Org token of the grammar
+   * @param org represents the Org token of the grammar
    */
   public String text(final Org org) {
     return "Org ";
   }
   
   /**
-   * This method returns the name of the label
+   * Returns the name of the label
    * to show on the outline
    * 
-   * @param section the section represents the Section token of the grammar
+   * @param section represents the Section token of the grammar
    */
   public String text(final Section section) {
     String _id = section.getId();
@@ -72,10 +72,10 @@ public class Pds16asmLabelProvider extends DefaultEObjectLabelProvider {
   }
   
   /**
-   * This method returns the name of the label
+   * Returns the name of the label
    * to show on the outline
    * 
-   * @param set the set represents the Set token of the grammar
+   * @param set represents the Set token of the grammar
    */
   public String text(final Set set) {
     String _id = set.getId();
