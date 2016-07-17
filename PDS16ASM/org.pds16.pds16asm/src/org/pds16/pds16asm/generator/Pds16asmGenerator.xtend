@@ -25,31 +25,48 @@ class Pds16asmGenerator extends AbstractGenerator {
 
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
 		
+		//Checking for ".end" on file, because if itsn't present there is no need to assemble code
 		if(!existsEnd(resource)){
 			val errors = new ArrayList<LinedError>()
+			//add new error to mark
 			errors.add(new LinedError("Missing '.end' at the end of file",1))
 			generateErrors(errors,resource)
 			return
 		}
 			
-		
+		//assembling
 		val InputStream output = executeDasm(resource)
 		
-		val List<LinedError> errors = DasmErrorParser.getErrorsFromStream(output);
+		//parsing errors from assembling output
+		val List<LinedError> errors = DasmErrorParser.getErrorsFromStream(output)
 		
-	    generateErrors(errors, resource);
+		//marking any errors
+	    generateErrors(errors, resource)
 	}
 	
+	/**
+	 * @param resource the Resource to search on
+	 * 
+	 * @return true if End exists in the given Resource
+	 */
 	def boolean existsEnd(Resource resource) {
 		resource.allContents.exists[elem|
 			elem.class.equals(EndImpl)
 		]
 	}
-	
+	/**
+	 * Marks each LinedError present on the 'errors' list in the given Resource
+	 * 
+	 * @param errors the List of LinedError
+	 * @param resource the Resource where the error will be marked
+	 */
 	def void generateErrors(List<LinedError> errors, Resource resource) {
 		if(!errors.isEmpty){
+			//getting relative uri of resource
 	    	var rel = resource.URI.toString().substring("platform:/resource".length)
-	    	val sharedFile = ResourcesPlugin.workspace.root.findMember(rel);
+	    	
+	    	//get an instance of IResource, where errors can be marked
+	    	val sharedFile = ResourcesPlugin.workspace.root.findMember(rel)
 	    	errors.forEach[error |
 	    		{
 		    		val marker = sharedFile.createMarker(IMarker.PROBLEM) 
@@ -60,28 +77,41 @@ class Pds16asmGenerator extends AbstractGenerator {
 	      	]
 	    }
 	}
-	
+
+	/**
+	 * Invoke DASM assembler on the given Resource
+	 * 
+	 * @param resouce the Resource instance
+	 * @return an InputStream containing the output of DASM execution
+	 */	
 	def InputStream executeDasm(Resource resource){
-		val List<String> command = new ArrayList<String>();
+		val List<String> command = new ArrayList<String>()
 		
-		val String dasmPath = System.getenv(SYSTEM_ENV_DASM)//system environment variable definida pelo utilizador com o path do dasm.exe
+		//system environment variable defined by user with DASM's path
+		val String dasmPath = System.getenv(SYSTEM_ENV_DASM)
 		
+		//adding dasm.exe path to the command
 		command.add(dasmPath);
 		
 		var resourceFullPath = ""
         val resourceRelativePath = resource.URI
-
+		
+		//Getting full path of Resource file
 		if (resourceRelativePath.isPlatform) 
 			resourceFullPath = ResourcesPlugin.workspace.root.getFile(new Path(resourceRelativePath.toPlatformString(true))).rawLocation.toOSString	
 		else 
 			resourceFullPath = resource.resourceSet.URIConverter.normalize(resourceRelativePath).toFileString
 		
+		//adding file location to command
 		command.add(resourceFullPath)
 		
-		val ProcessBuilder builder = new ProcessBuilder(command);
+		val ProcessBuilder builder = new ProcessBuilder(command)
 		val Process process = builder.start();
+		
+		//waiting for termination
 		process.waitFor()
-		return process.getInputStream();
+		
+		return process.getInputStream()
 	}
 }
 	

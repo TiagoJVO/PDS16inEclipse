@@ -17,8 +17,8 @@ public class BINValueConverter extends AbstractLexerBasedConverter<Integer> {
     try {
       int _length = string.length();
       int _minus = (_length - 1);
-      String _substring = string.substring(0, _minus);
-      int intValue = Integer.parseInt(_substring, 2);
+      String from = string.substring(0, _minus);
+      int intValue = Integer.parseInt(from, 2);
       return Integer.valueOf(intValue);
     } catch (final Throwable _t) {
       if (_t instanceof NumberFormatException) {
@@ -28,16 +28,5 @@ public class BINValueConverter extends AbstractLexerBasedConverter<Integer> {
         throw Exceptions.sneakyThrow(_t);
       }
     }
-  }
-  
-  @Override
-  public String toEscapedString(final Integer value) {
-    String _binaryString = Integer.toBinaryString((value).intValue());
-    return (_binaryString + "b");
-  }
-  
-  @Override
-  public void assertValidValue(final Integer value) {
-    super.assertValidValue(value);
   }
 }

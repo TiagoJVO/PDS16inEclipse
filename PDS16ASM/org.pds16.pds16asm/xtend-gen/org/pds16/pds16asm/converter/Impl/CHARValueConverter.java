@@ -28,7 +28,15 @@ public class CHARValueConverter extends AbstractLexerBasedConverter<Integer> {
         char _charAt_1 = string.charAt(2);
         intValue = _charAt_1;
         this.checkIfIsAscii(intValue, node);
-        intValue = (-intValue);
+        int _xifexpression = (int) 0;
+        char _charAt_2 = string.charAt(0);
+        boolean _equals_1 = Character.valueOf(_charAt_2).equals("-");
+        if (_equals_1) {
+          _xifexpression = (-intValue);
+        } else {
+          _xifexpression = intValue;
+        }
+        intValue = _xifexpression;
       }
       return Integer.valueOf(intValue);
     } catch (final Throwable _t) {
@@ -45,16 +53,5 @@ public class CHARValueConverter extends AbstractLexerBasedConverter<Integer> {
     if (((a < 0) || (a >= this.CHAR_MAX))) {
       throw new ValueConverterException("Couldn\'t convert string to an ascii value.", node, null);
     }
-  }
-  
-  @Override
-  public String toEscapedString(final Integer value) {
-    String _octalString = Integer.toOctalString((value).intValue());
-    return ("0" + _octalString);
-  }
-  
-  @Override
-  public void assertValidValue(final Integer value) {
-    super.assertValidValue(value);
   }
 }

@@ -8,22 +8,22 @@ import org.eclipse.xtext.util.Strings
 class BINValueConverter extends AbstractLexerBasedConverter<Integer> {
 	
 	override toValue(String string, INode node) throws ValueConverterException {
+		
 		if (Strings.isEmpty(string))
-			throw new ValueConverterException("Couldn't convert empty string to an binary value.", node, null);
+			throw new ValueConverterException("Couldn't convert empty string to an binary value.", node, null)
+		
 		try {
-			var int intValue = Integer.parseInt(string.substring(0, string.length()-1), 2);
-			return Integer.valueOf(intValue);
+			//removing 'b' character from the end of the string
+			var String from = string.substring(0, string.length()-1)
+			
+			//parsing the string 'from' to a base 2 number (binary)
+			var int intValue = Integer.parseInt(from, 2)
+			
+			//return an Integer object, not int
+			return Integer.valueOf(intValue)
 		} catch (NumberFormatException e) {
-			throw new ValueConverterException("Couldn't convert '" + string + "' to an binary value.", node, e);
+			throw new ValueConverterException("Couldn't convert '" + string + "' to an binary value.", node, e)
 		}
 		
-	}
-	
-	override String toEscapedString(Integer value) {
-		return Integer.toBinaryString(value) + "b"
-	}
-	
-	override void assertValidValue(Integer value) {
-		super.assertValidValue(value);
 	}
 }
