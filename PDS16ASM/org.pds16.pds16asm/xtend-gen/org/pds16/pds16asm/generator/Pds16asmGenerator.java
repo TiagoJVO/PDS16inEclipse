@@ -60,6 +60,11 @@ public class Pds16asmGenerator extends AbstractGenerator {
     }
   }
   
+  /**
+   * @param resource the Resource to search on
+   * 
+   * @return true if End exists in the given Resource
+   */
   public boolean existsEnd(final Resource resource) {
     TreeIterator<EObject> _allContents = resource.getAllContents();
     final Function1<EObject, Boolean> _function = (EObject elem) -> {
@@ -69,6 +74,12 @@ public class Pds16asmGenerator extends AbstractGenerator {
     return IteratorExtensions.<EObject>exists(_allContents, _function);
   }
   
+  /**
+   * Marks each LinedError present on the 'errors' list in the given Resource
+   * 
+   * @param errors the List of LinedError
+   * @param resource the Resource where the error will be marked
+   */
   public void generateErrors(final List<LinedError> errors, final Resource resource) {
     boolean _isEmpty = errors.isEmpty();
     boolean _not = (!_isEmpty);
@@ -96,6 +107,12 @@ public class Pds16asmGenerator extends AbstractGenerator {
     }
   }
   
+  /**
+   * Invoke DASM assembler on the given Resource
+   * 
+   * @param resouce the Resource instance
+   * @return an InputStream containing the output of DASM execution
+   */
   public InputStream executeDasm(final Resource resource) {
     try {
       final List<String> command = new ArrayList<String>();

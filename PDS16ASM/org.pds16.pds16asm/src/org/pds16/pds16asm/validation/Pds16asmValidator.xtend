@@ -29,17 +29,22 @@ class Pds16asmValidator extends AbstractPds16asmValidator {
 	
 	val MIN_16BIT_WITH_SIGNAL = -32768;
 	val MAX_16BIT_WITH_SIGNAL = 32767;
+	
 	val MIN_8BIT_WITH_SIGNAL = -128;
 	val MAX_8BIT_WITH_SIGNAL = 127;
 	
 	val MAX_8BIT_NO_SIGNAL = 255;
+	
 	val MAX_7BIT_NO_SIGNAL = 127;
+	
 	val MAX_4BIT_NO_SIGNAL = 15;
+	
 	val MAX_3BIT_NO_SIGNAL = 7;
 	
 	@Check
 	def checkShift(PDS16ASM general){
-		ResourcesPlugin.workspace.root.deleteMarkers(IMarker.PROBLEM,true,IResource.DEPTH_INFINITE)//TODO: nao apagar todas as marcas
+		//deletes all markers on the resource file, since PDS16ASM its the base of the AST 
+		ResourcesPlugin.workspace.root.deleteMarkers(IMarker.PROBLEM,true,IResource.DEPTH_INFINITE)
 	}
 	
 	@Check
@@ -54,7 +59,7 @@ class Pds16asmValidator extends AbstractPds16asmValidator {
 	
 	@Check
 	def checkImmediate8(Immediate8OrLabel i){
-		if(i.number == null)
+		if(i.number == null)//in case of this instance has the value from a label
 			return;
 		var Integer value = i.number.value;
 		if(value < 0 || value > MAX_8BIT_NO_SIGNAL )
@@ -66,7 +71,7 @@ class Pds16asmValidator extends AbstractPds16asmValidator {
 	
 	@Check
 	def checkDirect7(DirectOrLabel d){
-		if(d.number == null)
+		if(d.number == null)//in case of this instance has the value from a label
 			return;
 		var Integer value = d.number.value;
 		if(value < 0  || value > MAX_7BIT_NO_SIGNAL)
@@ -77,7 +82,7 @@ class Pds16asmValidator extends AbstractPds16asmValidator {
 	
 	@Check
 	def checkConst4(Const4OrLabel c){
-		if(c.number == null)
+		if(c.number == null)//in case of this instance has the value from a label
 			return;		
 		var Integer value = c.number.value;
 		if(value < 0  || value > MAX_4BIT_NO_SIGNAL)
@@ -88,7 +93,7 @@ class Pds16asmValidator extends AbstractPds16asmValidator {
 
 	@Check
 	def checkIdx3(Idx3OrLabel i){
-		if(i.number == null)
+		if(i.number == null)//in case of this instance has the value from a label
 			return;	
 		var Integer value = i.number.value;
 		if(value < 0  || value > MAX_3BIT_NO_SIGNAL)
@@ -99,7 +104,7 @@ class Pds16asmValidator extends AbstractPds16asmValidator {
 
 	@Check
 	def checkOffset8(Offset8OrLabel o){
-		if(o.number == null)
+		if(o.number == null)//in case of this instance has the value from a label
 			return;
 		var Integer value = o.number.value;
 		if(value < MIN_8BIT_WITH_SIGNAL  || value > MAX_8BIT_WITH_SIGNAL)
@@ -110,7 +115,7 @@ class Pds16asmValidator extends AbstractPds16asmValidator {
 	
 	@Check
 	def checkByte(Byte b){
-		if(b.numbers == null)
+		if(b.numbers == null)//if numbers list hasn't been defined
 			return;
 		val list = b.numbers;
 		var int size = list.size();
@@ -127,7 +132,7 @@ class Pds16asmValidator extends AbstractPds16asmValidator {
 	
 	@Check
 	def checkWord(Word w){
-		if(w.numbers == null)
+		if(w.numbers == null)//if numbers list hasn't been defined
 			return;
 		val list = w.numbers;
 		var int size = list.size();

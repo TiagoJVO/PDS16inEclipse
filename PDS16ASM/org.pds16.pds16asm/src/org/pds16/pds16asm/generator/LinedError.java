@@ -8,9 +8,19 @@ public class LinedError {
 		this.description = description;
 		this.line = line;
 	}
+	
+	/**
+	 * 
+	 * @return this LinedError description
+	 */
 	public String getDescription() {
 		return description;
 	}
+	
+	/**
+	 * 
+	 * @return this LinedError line
+	 */
 	public int getLine() {
 		return line;
 	}

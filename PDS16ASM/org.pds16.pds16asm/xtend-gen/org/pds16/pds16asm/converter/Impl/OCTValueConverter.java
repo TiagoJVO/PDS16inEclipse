@@ -26,15 +26,4 @@ public class OCTValueConverter extends AbstractLexerBasedConverter<Integer> {
       }
     }
   }
-  
-  @Override
-  public String toEscapedString(final Integer value) {
-    String _octalString = Integer.toOctalString((value).intValue());
-    return ("0" + _octalString);
-  }
-  
-  @Override
-  public void assertValidValue(final Integer value) {
-    super.assertValidValue(value);
-  }
 }
