@@ -27,19 +27,19 @@ import org.eclipse.emf.common.util.EList
  */
 class Pds16asmValidator extends AbstractPds16asmValidator {
 	
-	val MIN_16BIT_WITH_SIGNAL = -32768;
-	val MAX_16BIT_WITH_SIGNAL = 32767;
+	val MIN_16BIT_WITH_SIGNAL = -32768
+	val MAX_16BIT_WITH_SIGNAL = 32767
 	
-	val MIN_8BIT_WITH_SIGNAL = -128;
-	val MAX_8BIT_WITH_SIGNAL = 127;
+	val MIN_8BIT_WITH_SIGNAL = -128
+	val MAX_8BIT_WITH_SIGNAL = 127
 	
-	val MAX_8BIT_NO_SIGNAL = 255;
+	val MAX_8BIT_NO_SIGNAL = 255
 	
-	val MAX_7BIT_NO_SIGNAL = 127;
+	val MAX_7BIT_NO_SIGNAL = 127
 	
-	val MAX_4BIT_NO_SIGNAL = 15;
+	val MAX_4BIT_NO_SIGNAL = 15
 	
-	val MAX_3BIT_NO_SIGNAL = 7;
+	val MAX_3BIT_NO_SIGNAL = 7
 	
 	@Check
 	def checkShift(PDS16ASM general){

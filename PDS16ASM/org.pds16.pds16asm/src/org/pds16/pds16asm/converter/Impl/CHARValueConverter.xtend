@@ -6,7 +6,7 @@ import org.eclipse.xtext.conversion.ValueConverterException
 import org.eclipse.xtext.util.Strings
 
 class CHARValueConverter extends AbstractLexerBasedConverter<Integer> {
-	private val CHAR_MAX = 256;
+	private val CHAR_MAX = 256
 	
 	override toValue(String string, INode node) throws ValueConverterException {
 		if (Strings.isEmpty(string))
@@ -31,7 +31,7 @@ class CHARValueConverter extends AbstractLexerBasedConverter<Integer> {
 			}
 			
 			//return an Integer object, not int
-			return Integer.valueOf(intValue);
+			return Integer.valueOf(intValue)
 		} catch (NumberFormatException e) {
 			throw new ValueConverterException("Couldn't convert '" + string + "' to an ascii value.", node, e)
 		}

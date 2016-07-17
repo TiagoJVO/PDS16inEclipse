@@ -13,7 +13,7 @@ class HEXValueConverter extends AbstractLexerBasedConverter<Integer>{
 		
 		try {
 			//removing "0x" from the string
-			var cut = "";
+			var cut = ""
 			if (string.startsWith("-") || string.startsWith("+")) //if has signal character
 				cut = string.charAt(0) + string.substring(3,string.length)
 			else //if its just the hexa number
