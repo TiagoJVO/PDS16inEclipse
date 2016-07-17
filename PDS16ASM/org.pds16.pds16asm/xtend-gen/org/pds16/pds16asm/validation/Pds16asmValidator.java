@@ -22,6 +22,7 @@ import org.pds16.pds16asm.pds16asm.Offset8OrLabel;
 import org.pds16.pds16asm.pds16asm.OperationShift;
 import org.pds16.pds16asm.pds16asm.PDS16ASM;
 import org.pds16.pds16asm.pds16asm.Pds16asmPackage;
+import org.pds16.pds16asm.pds16asm.Space;
 import org.pds16.pds16asm.pds16asm.Word;
 import org.pds16.pds16asm.validation.AbstractPds16asmValidator;
 
@@ -49,7 +50,7 @@ public class Pds16asmValidator extends AbstractPds16asmValidator {
   private final int MAX_3BIT_NO_SIGNAL = 7;
   
   @Check
-  public void checkShift(final PDS16ASM general) {
+  public void checkGeneral(final PDS16ASM general) {
     try {
       IWorkspace _workspace = ResourcesPlugin.getWorkspace();
       IWorkspaceRoot _root = _workspace.getRoot();
@@ -146,6 +147,22 @@ public class Pds16asmValidator extends AbstractPds16asmValidator {
     if ((((value).intValue() < this.MIN_8BIT_WITH_SIGNAL) || ((value).intValue() > this.MAX_8BIT_WITH_SIGNAL))) {
       this.warning(((("Number should be between" + Integer.valueOf(this.MIN_8BIT_WITH_SIGNAL)) + " and ") + Integer.valueOf(this.MAX_8BIT_WITH_SIGNAL)), 
         Pds16asmPackage.Literals.OFFSET8_OR_LABEL__NUMBER, 
+        "Invalid Number");
+    }
+  }
+  
+  @Check
+  public void checkSpace(final Space s) {
+    org.pds16.pds16asm.pds16asm.Number _byteValue = s.getByteValue();
+    boolean _equals = Objects.equal(_byteValue, null);
+    if (_equals) {
+      return;
+    }
+    org.pds16.pds16asm.pds16asm.Number _byteValue_1 = s.getByteValue();
+    Integer value = Integer.valueOf(_byteValue_1.getValue());
+    if ((((value).intValue() < this.MIN_8BIT_WITH_SIGNAL) || ((value).intValue() > this.MAX_8BIT_NO_SIGNAL))) {
+      this.warning(((((("Number should be between" + Integer.valueOf(this.MIN_8BIT_WITH_SIGNAL)) + " and ") + Integer.valueOf(this.MAX_8BIT_WITH_SIGNAL)) + "or 0 and ") + Integer.valueOf(this.MAX_8BIT_NO_SIGNAL)), 
+        Pds16asmPackage.Literals.SPACE__BYTE_VALUE, 
         "Invalid Number");
     }
   }

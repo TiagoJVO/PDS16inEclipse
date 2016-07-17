@@ -8,6 +8,22 @@ import org.eclipse.xtext.xbase.lib.Exceptions;
 
 @SuppressWarnings("all")
 public class OCTValueConverter extends AbstractLexerBasedConverter<Integer> {
+  /**
+   * <p>Creates a value from the given input. The input is conformant
+   * to a data type or terminal rule.</p>
+   * 
+   * <p>The given <code>string</code>
+   * or <code>node</code> may be null but not both of them.</p>
+   * 
+   * @param string the string that was inferred from the node. Usually the node's text
+   * but may be reduced to the parts of the node that are not
+   * {@link org.eclipse.xtext.nodemodel.ILeafNode#isHidden() hidden}.
+   * 
+   * @param node the parsed node including hidden parts.
+   * @return the new value
+   * @throws ValueConverterException indicates that the string or node did not fulfil
+   * the expected format.
+   */
   @Override
   public Integer toValue(final String string, final INode node) throws ValueConverterException {
     boolean _isEmpty = Strings.isEmpty(string);

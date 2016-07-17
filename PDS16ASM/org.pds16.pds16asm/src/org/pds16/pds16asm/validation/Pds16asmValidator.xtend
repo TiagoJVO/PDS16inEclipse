@@ -19,6 +19,7 @@ import org.eclipse.core.resources.ResourcesPlugin
 import org.eclipse.core.resources.IMarker
 import org.eclipse.core.resources.IResource
 import org.eclipse.emf.common.util.EList
+import org.pds16.pds16asm.pds16asm.Space
 
 /**
  * This class contains custom validation rules. 
@@ -42,7 +43,7 @@ class Pds16asmValidator extends AbstractPds16asmValidator {
 	val MAX_3BIT_NO_SIGNAL = 7
 	
 	@Check
-	def checkShift(PDS16ASM general){
+	def checkGeneral(PDS16ASM general){
 		//deletes all markers on the resource file, since PDS16ASM its the base of the AST 
 		ResourcesPlugin.workspace.root.deleteMarkers(IMarker.PROBLEM,true,IResource.DEPTH_INFINITE)
 	}
@@ -110,6 +111,17 @@ class Pds16asmValidator extends AbstractPds16asmValidator {
 		if(value < MIN_8BIT_WITH_SIGNAL  || value > MAX_8BIT_WITH_SIGNAL)
 			warning('Number should be between' + MIN_8BIT_WITH_SIGNAL + ' and ' + MAX_8BIT_WITH_SIGNAL, 
 					Pds16asmPackage.Literals.OFFSET8_OR_LABEL__NUMBER,
+					"Invalid Number")
+	}
+	
+	@Check
+	def checkSpace(Space s){
+		if(s.byteValue == null)
+			return;
+		var Integer value = s.byteValue.value;
+		if(value < MIN_8BIT_WITH_SIGNAL  || value > MAX_8BIT_NO_SIGNAL)
+			warning('Number should be between' + MIN_8BIT_WITH_SIGNAL + ' and ' + MAX_8BIT_WITH_SIGNAL + "or 0 and " + MAX_8BIT_NO_SIGNAL, 
+					Pds16asmPackage.Literals.SPACE__BYTE_VALUE,
 					"Invalid Number")
 	}
 	
