@@ -1,0 +1,184 @@
+grammar org.pds16.pds16asm.Pds16asm hidden(WS, ML_COMMENT, SL_COMMENT)
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+generate pds16asm "http://www.pds16.org/pds16asm/Pds16asm"
+
+PDS16ASM:
+	instuctions+=Statement*;
+
+Statement:
+	Instructions | Label | Directive;
+
+Label:
+	labelName=IDLABEL value=(Label | LabelDirective | Instructions);
+
+Directive:
+	value =(Bss | Data | End | Text | Equ | Org | Section | Set | LabelDirective);
+
+LabelDirective: Ascii | Asciiz | Byte | Word | Space;
+		
+Bss: tag='.bss';
+
+Data: tag='.data';
+
+End: tag='.end';
+
+Text: tag='.text';		
+
+Ascii:	tag='.ascii' (values+=STRING (',' values+=STRING)*)?;
+
+Asciiz:	tag='.asciiz' (values+=STRING (',' values+=STRING)*)?;
+
+Byte:	tag='.byte' ((values+=ID | numbers+=Number)  (',' (values+= ID | numbers+=Number))*)?;
+					
+Word:	tag='.word' ((values+=ID | numbers+=Number)  (',' (values+= ID | numbers+=Number))*)?;
+
+Space:	tag='.space' size=Number (',' byteValue=Number)?;
+
+Set:    tag='.set' id=ID ',' value=Expression;
+
+Section: tag='.section' id=ID;
+
+Org:    tag='.org' value=Expression;
+
+Equ:    tag='.equ' id=ID ',' value=Expression;
+
+Instructions:
+	Load | Store | Aritmetica | Logica | Jump | Nop | Ret;
+
+Load: LdImmediate | LdDirect | LdIndexed | LdBasedIndexed ;
+Store: StDirect | StIndexed | StBasedIndexed;
+Aritmetica: Add | Sub;
+Logica: Anl | Orl | Xrl | Not | Shl | Shr | Rr | Rc;
+Jump: JumpOp;
+
+/**************************************Load************************************************/
+LdImmediate: ('ldi' |'ldih')  Immediate;
+
+LdDirect: ('ld' | 'ldb') Direct;
+
+LdIndexed: ('ld' | 'ldb') Indexed;
+
+LdBasedIndexed: ('ld' | 'ldb') BasedIndexed;
+/******************************************************************************************/
+
+/****************************************Store ********************************************/
+StDirect: ('st' | 'stb') Direct ;
+
+StIndexed: ('st' | 'stb') Indexed;
+
+StBasedIndexed: ('st' | 'stb') BasedIndexed ;
+/******************************************************************************************/
+
+/******************************************* Aritmetica ***********************************/
+Add: ('add' | 'addf' | 'adc' | 'adcf') 
+		(OperationsWithConstant | OperationsWithThreeRegisters)
+	 | ('inc' | 'incf') Register;
+		
+Sub: (('sub' | 'subf' | 'sbb' | 'sbbf') 
+		(OperationsWithConstant | OperationsWithThreeRegisters))
+	 | 'subr' OperationsWithThreeRegisters
+	 |  ('dec' | 'decf') Register ;
+/******************************************************************************************/
+
+/******************************************* Logica ***************************************/
+Anl: ('anl' | 'anlf') OperationsWithThreeRegisters;
+
+Orl: ('orl' | 'orlf') OperationsWithThreeRegisters
+	  | ('mov' | 'movf') OperationWithTwoRegisters ;
+
+Xrl: ('xrl' | 'xrlf') OperationsWithThreeRegisters;
+
+Not: ('not' | 'notf') OperationWithTwoRegisters;
+
+Shl: 'shl' OperationShift;
+
+Shr: 'shr' OperationShift;
+
+Rr: ('rrl' | 'rrm') OperationsWithConstant;
+
+Rc: ('rcr' | 'rcl') OperationWithTwoRegisters;
+/******************************************************************************************/
+
+/************************************** Jump **********************************************/
+JumpOp: 
+	tag=('jz' | 'je' | 'jnz' | 'jne' | 'jc' | 'jbl' | 'jnc' | 'jae' | 'jmp' | 'jmpl')
+		(opOff=OperationWithOffset | opId=ID | '$');
+/******************************************************************************************/
+
+/*************************** Others Instuctions *******************************************/
+Nop: instruction='nop';
+
+Ret: instruction=('ret' | 'iret') ;
+/******************************************************************************************/
+
+
+/************************************Type Operations***************************************/
+Immediate: register=Register ',' (immediate8= Immediate8OrLabel | lowORhigh= LowOrHight) ;
+
+Direct: register=Register ',' direct7=DirectOrLabel;
+
+Indexed:
+	rd=Register ',''[' rbx=Register ',' idx3=Idx3OrLabel ']' ;
+	
+BasedIndexed: 
+	Register ',' '[' rbx=Register ',' rix=Register ']';
+
+DirectOrLabel: number=Number | label=ID;
+
+Immediate8OrLabel: '#'( number=Number | label=ID);
+
+Idx3OrLabel: '#'( number=Number | label=ID);
+
+Const4OrLabel: '#'( number=Number | label=ID);
+
+Offset8OrLabel: '#'( number=Number | label=ID);
+
+OperationWithTwoRegisters: rd=Register ',' rm=Register;
+
+OperationsWithThreeRegisters: rd=Register ',' rm=Register ',' rn=Register ;
+
+OperationsWithConstant: rd=Register ',' rm=Register ',' const4=Const4OrLabel;
+
+OperationShift: rd=Register ',' rm=Register ',' const4=Const4OrLabel ',' sin=Number;
+
+OperationWithOffset: rbx=Register ',' offset8=Offset8OrLabel;
+
+Expression: (numericValue+=Number | idValue+=ID) (operand=OPERANDS expression=Expression)?;//TODO: bug sem espaços
+
+LowOrHight: '#' ('low' | 'high') '(' value=Expression ')' ;
+/******************************************************************************************/
+
+/***********************************************Utils**************************************/
+Register:
+			value=('r0' | 'r1' | 'r2' | 'r3' | 'r4' | 'r5' | 'r6' | 'r7' | 'LR' |'PSW' |'PC');
+
+Number : value= (INT | HEX | OCT | BIN | CHAR);
+
+terminal HEX returns ecore::EInt: SIGN? ('0x'|'0X')(('0'..'9')|('a'..'f')|('A'..'F'))+;
+
+terminal OCT returns ecore::EInt: SIGN? '0' ('0'..'7')+; 
+
+terminal BIN returns ecore::EInt: SIGN? ('0' | '1')+ 'b';
+
+terminal CHAR returns ecore::EInt: SIGN? "'" ANY_OTHER "'";
+
+terminal SIGN : '-' | '+';
+terminal OPERANDS : '-' | '+' | '*' | '/';
+/******************************************************************************************/
+
+terminal ID : ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+terminal IDLABEL : ('a'..'z'|'A'..'Z'|'_'|'0'..'9')+ ':' ;
+terminal INT returns ecore::EInt: SIGN? ('0'..'9')+;
+terminal STRING	: 
+			'"' ( '\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('\\'|'"') )* '"' |
+			"'" ( '\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('\\'|"'") )* "'"
+		;
+terminal ML_COMMENT	: '/*' -> '*/';
+terminal SL_COMMENT 	: ';' -> '\n';
+
+terminal WS			: (' '|'\t'|'\r'|'\n')+;
+
+terminal ANY_OTHER: .;
+
