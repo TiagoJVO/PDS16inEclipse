@@ -1,1 +1,7 @@
-escrever a organização
+Este media contém todos os ficheiros referentes ao Projeto Final denominado de “PDS16inEclipse”, sendo estes:
+Ficheiro “cs.pdf” – Cartaz da Versão Vinal do Vrojeto;
+-> Ficheiro “rfs.pdf” – Relatório Vinal do Vrojeto;
+-> Ficheiro “rs.pdf” – Resumo do Projeto;
+-> Ficheiro “Fork on GitHub” – Hiperligação para a página do projeto no GitHub;
+-> Pasta “Código Fonte” – contém o código fonte e todas as implementações deste projeto;
+-> Pasta “PDS16inEclipse-ficheiros de instalação” – contém os ficheiros da versão final do plug-in, necessários para a instalação no IDE Eclipse.
