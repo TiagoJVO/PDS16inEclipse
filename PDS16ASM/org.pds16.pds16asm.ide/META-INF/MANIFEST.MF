@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: org.pds16.pds16asm.ide
 Bundle-Vendor: My Company
-Bundle-Version: 1.0.6
+Bundle-Version: 1.1.0
 Bundle-SymbolicName: org.pds16.pds16asm.ide; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.pds16.pds16asm,

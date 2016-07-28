@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/Pds16_ASM_Features_1.2.1.jar" id="Pds16_ASM_Features" version="1.2.1">
+   <feature url="features/Pds16_ASM_Features_1.2.4.jar" id="Pds16_ASM_Features" version="1.2.4">
       <category name="plugin"/>
    </feature>
    <category-def name="plugin" label="Pds16inEclipse"/>
